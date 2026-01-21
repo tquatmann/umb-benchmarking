@@ -1,0 +1,78 @@
+dtmc
+const double PF = 4/5;
+const double badC = 91/1000;
+const int TotalRuns = 5;
+const int CrowdSize = 20;
+const int MaxGood = 20;
+
+
+
+module crowds
+	launch: bool init true;
+	new: bool init false;
+	start: bool init false;
+	run: bool init false;
+	good: bool init false;
+	bad: bool init false;
+	recordLast: bool init false;
+	badObserve: bool init false;
+	deliver: bool init false;
+	done: bool init false;
+	runCount: [0..TotalRuns] init TotalRuns;
+	lastSeen: [0..MaxGood] init MaxGood;
+	observe0: [0..TotalRuns] init 0;
+	observe1: [0..TotalRuns] init 0;
+	observe2: [0..TotalRuns] init 0;
+	observe3: [0..TotalRuns] init 0;
+	observe4: [0..TotalRuns] init 0;
+	observe5: [0..TotalRuns] init 0;
+	observe6: [0..TotalRuns] init 0;
+	observe7: [0..TotalRuns] init 0;
+	observe8: [0..TotalRuns] init 0;
+	observe9: [0..TotalRuns] init 0;
+	observe10: [0..TotalRuns] init 0;
+	observe11: [0..TotalRuns] init 0;
+	observe12: [0..TotalRuns] init 0;
+	observe13: [0..TotalRuns] init 0;
+	observe14: [0..TotalRuns] init 0;
+	observe15: [0..TotalRuns] init 0;
+	observe16: [0..TotalRuns] init 0;
+	observe17: [0..TotalRuns] init 0;
+	observe18: [0..TotalRuns] init 0;
+	observe19: [0..TotalRuns] init 0;
+	[] launch -> 1 : (launch' = false) & (new' = true) & (runCount' = TotalRuns);
+	[] (new & (runCount > 0)) -> 1 : (new' = false) & (start' = true) & (runCount' = (runCount - 1));
+	[] start -> 1 : (start' = false) & (run' = true) & (deliver' = false) & (lastSeen' = 0);
+	[] (((!(good) & !(bad)) & !(deliver)) & run) -> (1 - badC) : (run' = false) & (good' = true) & (recordLast' = true) + badC : (run' = false) & (bad' = true) & (badObserve' = true);
+	[] ((good & !(deliver)) & run) -> PF : (good' = false) + (1 - PF) : (deliver' = true);
+	[] (recordLast & (CrowdSize = 2)) -> (1 / 2) : (run' = true) & (recordLast' = false) & (lastSeen' = 0) + (1 / 2) : (run' = true) & (recordLast' = false) & (lastSeen' = 1);
+	[] (recordLast & (CrowdSize = 4)) -> (1 / 4) : (run' = true) & (recordLast' = false) & (lastSeen' = 0) + (1 / 4) : (run' = true) & (recordLast' = false) & (lastSeen' = 1) + (1 / 4) : (run' = true) & (recordLast' = false) & (lastSeen' = 2) + (1 / 4) : (run' = true) & (recordLast' = false) & (lastSeen' = 3);
+	[] (recordLast & (CrowdSize = 5)) -> (1 / 5) : (run' = true) & (recordLast' = false) & (lastSeen' = 0) + (1 / 5) : (run' = true) & (recordLast' = false) & (lastSeen' = 1) + (1 / 5) : (run' = true) & (recordLast' = false) & (lastSeen' = 2) + (1 / 5) : (run' = true) & (recordLast' = false) & (lastSeen' = 3) + (1 / 5) : (run' = true) & (recordLast' = false) & (lastSeen' = 4);
+	[] (recordLast & (CrowdSize = 10)) -> (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 0) + (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 1) + (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 2) + (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 3) + (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 4) + (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 5) + (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 6) + (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 7) + (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 8) + (1 / 10) : (run' = true) & (recordLast' = false) & (lastSeen' = 9);
+	[] (recordLast & (CrowdSize = 15)) -> (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 0) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 1) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 2) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 3) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 4) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 5) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 6) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 7) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 8) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 9) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 10) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 11) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 12) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 13) + (1 / 15) : (run' = true) & (recordLast' = false) & (lastSeen' = 14);
+	[] (recordLast & (CrowdSize = 20)) -> (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 0) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 1) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 2) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 3) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 4) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 5) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 6) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 7) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 8) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 9) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 10) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 11) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 12) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 13) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 14) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 15) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 16) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 17) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 18) + (1 / 20) : (run' = true) & (recordLast' = false) & (lastSeen' = 19);
+	[] (((lastSeen = 0) & badObserve) & (observe0 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe0' = (observe0 + 1));
+	[] (((lastSeen = 1) & badObserve) & (observe1 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe1' = (observe1 + 1));
+	[] (((lastSeen = 2) & badObserve) & (observe2 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe2' = (observe2 + 1));
+	[] (((lastSeen = 3) & badObserve) & (observe3 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe3' = (observe3 + 1));
+	[] (((lastSeen = 4) & badObserve) & (observe4 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe4' = (observe4 + 1));
+	[] (((lastSeen = 5) & badObserve) & (observe5 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe5' = (observe5 + 1));
+	[] (((lastSeen = 6) & badObserve) & (observe6 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe6' = (observe6 + 1));
+	[] (((lastSeen = 7) & badObserve) & (observe7 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe7' = (observe7 + 1));
+	[] (((lastSeen = 8) & badObserve) & (observe8 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe8' = (observe8 + 1));
+	[] (((lastSeen = 9) & badObserve) & (observe9 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe9' = (observe9 + 1));
+	[] (((lastSeen = 10) & badObserve) & (observe10 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe10' = (observe10 + 1));
+	[] (((lastSeen = 11) & badObserve) & (observe11 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe11' = (observe11 + 1));
+	[] (((lastSeen = 12) & badObserve) & (observe12 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe12' = (observe12 + 1));
+	[] (((lastSeen = 13) & badObserve) & (observe13 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe13' = (observe13 + 1));
+	[] (((lastSeen = 14) & badObserve) & (observe14 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe14' = (observe14 + 1));
+	[] (((lastSeen = 15) & badObserve) & (observe15 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe15' = (observe15 + 1));
+	[] (((lastSeen = 16) & badObserve) & (observe16 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe16' = (observe16 + 1));
+	[] (((lastSeen = 17) & badObserve) & (observe17 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe17' = (observe17 + 1));
+	[] (((lastSeen = 18) & badObserve) & (observe18 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe18' = (observe18 + 1));
+	[] (((lastSeen = 19) & badObserve) & (observe19 < TotalRuns)) -> 1 : (run' = true) & (badObserve' = false) & (deliver' = true) & (observe19' = (observe19 + 1));
+	[] (deliver & run) -> 1 : (run' = false) & (good' = false) & (bad' = false) & (deliver' = false) & (done' = true);
+	[] done -> 1 : (new' = true) & (run' = false) & (done' = false) & (lastSeen' = MaxGood);
+endmodule
+
+

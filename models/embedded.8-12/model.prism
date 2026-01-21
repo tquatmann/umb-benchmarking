@@ -1,0 +1,78 @@
+ctmc
+const int MAX_COUNT = 8;
+const int MIN_SENSORS = 2;
+const int MIN_ACTUATORS = 1;
+const double T = 12;
+const double lambda_p = (1 / (((365 * 24) * 60) * 60));
+const double lambda_s = (1 / (((30 * 24) * 60) * 60));
+const double lambda_a = (1 / ((((2 * 30) * 24) * 60) * 60));
+const double tau = (1 / 60);
+const double delta_f = (1 / ((24 * 60) * 60));
+const double delta_r = (1 / 30);
+
+
+formula down = (((((i = 2) & (s < MIN_SENSORS)) | (count = (MAX_COUNT + 1))) | ((o = 2) & (a < MIN_ACTUATORS))) | (m = 0));
+formula danger = (!(down) & ((i = 1) | (o = 1)));
+formula up = (!(down) & !(danger));
+
+module sensors
+	s: [0..3] init 3;
+	<> (s > 1) -> (s * lambda_s) : (s' = (s - 1));
+endmodule
+
+module proci
+	i: [0..2] init 2;
+	<> ((i > 0) & (s >= MIN_SENSORS)) -> lambda_p : (i' = 0);
+	<> ((i = 2) & (s >= MIN_SENSORS)) -> delta_f : (i' = 1);
+	<input_reboot> ((i = 1) & (s >= MIN_SENSORS)) -> delta_r : (i' = 2);
+endmodule
+
+module actuators
+	a: [0..2] init 2;
+	<> (a > 0) -> (a * lambda_a) : (a' = (a - 1));
+endmodule
+
+module proco
+	o: [0..2] init 2;
+	<> ((o > 0) & (a >= MIN_ACTUATORS)) -> lambda_p : (o' = 0);
+	<> ((o = 2) & (a >= MIN_ACTUATORS)) -> delta_f : (o' = 1);
+	<output_reboot> ((o = 1) & (a >= MIN_ACTUATORS)) -> delta_r : (o' = 2);
+endmodule
+
+module procm
+	m: [0..1] init 1;
+	count: [0..(MAX_COUNT + 1)] init 0;
+	<> (m = 1) -> lambda_p : (m' = 0);
+	<timeout> comp -> tau : (count' = 0);
+	<timeout> !(comp) -> tau : (count' = (min((count + 1), (MAX_COUNT + 1))));
+endmodule
+
+module bus
+	comp: bool init true;
+	reqi: bool init true;
+	reqo: bool init false;
+	<input_reboot> true -> 1 : (comp' = (comp | ((m = 1) & !(reqo)))) & (reqi' = true) & (reqo' = (!(((o = 2) & (a >= 1))) & (reqo | (m = 1))));
+	<output_reboot> true -> 1 : (comp' = (comp | (reqi & (m = 1)))) & (reqi' = (((i = 2) & (s >= 2)) | (reqi & (m = 0)))) & (reqo' = false);
+	<timeout> true -> 1 : (comp' = ((reqi & !(reqo)) & (m = 1))) & (reqi' = (((i = 2) & (s >= 2)) | (reqi & (reqo | (m = 0))))) & (reqo' = (!(((o = 2) & (a >= 1))) & (reqo | (reqi & (m = 1)))));
+endmodule
+
+rewards "up"
+	up: (1 / 3600);
+endrewards
+
+rewards "danger"
+	danger: (1 / 3600);
+endrewards
+
+rewards "down"
+	down: (1 / 3600);
+endrewards
+
+label "fail_sensors" = ((i = 2) & (s < MIN_SENSORS));
+label "fail_actuators" = ((o = 2) & (a < MIN_ACTUATORS));
+label "fail_io" = (count = (MAX_COUNT + 1));
+label "fail_main" = (m = 0);
+label "down" = (((((i = 2) & (s < MIN_SENSORS)) | (count = (MAX_COUNT + 1))) | ((o = 2) & (a < MIN_ACTUATORS))) | (m = 0));
+label "danger" = (!(down) & ((i = 1) | (o = 1)));
+label "up" = (!(down) & !(danger));
+

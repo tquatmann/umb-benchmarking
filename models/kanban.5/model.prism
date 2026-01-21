@@ -1,0 +1,87 @@
+ctmc
+const int t = 5;
+const double in1 = 1;
+const double out4 = 9/10;
+const double synch123 = 2/5;
+const double synch234 = 1/2;
+const double back = 3/10;
+const double redo1 = 9/25;
+const double redo2 = 21/50;
+const double redo3 = 39/100;
+const double redo4 = 33/100;
+const double ok1 = 21/25;
+const double ok2 = 49/50;
+const double ok3 = 91/100;
+const double ok4 = 77/100;
+
+
+
+module k1
+	w1: [0..t] init 0;
+	x1: [0..t] init 0;
+	y1: [0..t] init 0;
+	z1: [0..t] init 0;
+	<in> ((w1 < t) & (x1 < t)) -> in1 : (w1' = (w1 + 1)) & (x1' = (x1 + 1));
+	<> ((x1 > 0) & (y1 < t)) -> redo1 : (x1' = (x1 - 1)) & (y1' = (y1 + 1));
+	<> ((x1 > 0) & (z1 < t)) -> ok1 : (x1' = (x1 - 1)) & (z1' = (z1 + 1));
+	<> ((y1 > 0) & (x1 < t)) -> back : (x1' = (x1 + 1)) & (y1' = (y1 - 1));
+	<s1> ((z1 > 0) & (w1 > 0)) -> synch123 : (w1' = (w1 - 1)) & (z1' = (z1 - 1));
+endmodule
+
+module k2
+	w2: [0..t] init 0;
+	x2: [0..t] init 0;
+	y2: [0..t] init 0;
+	z2: [0..t] init 0;
+	<s1> ((w2 < t) & (x2 < t)) -> 1 : (w2' = (w2 + 1)) & (x2' = (x2 + 1));
+	<> ((x2 > 0) & (y2 < t)) -> redo2 : (x2' = (x2 - 1)) & (y2' = (y2 + 1));
+	<> ((x2 > 0) & (z2 < t)) -> ok2 : (x2' = (x2 - 1)) & (z2' = (z2 + 1));
+	<> ((y2 > 0) & (x2 < t)) -> back : (x2' = (x2 + 1)) & (y2' = (y2 - 1));
+	<s2> ((z2 > 0) & (w2 > 0)) -> 1 : (w2' = (w2 - 1)) & (z2' = (z2 - 1));
+endmodule
+
+module k3
+	w3: [0..t] init 0;
+	x3: [0..t] init 0;
+	y3: [0..t] init 0;
+	z3: [0..t] init 0;
+	<s1> ((w3 < t) & (x3 < t)) -> 1 : (w3' = (w3 + 1)) & (x3' = (x3 + 1));
+	<> ((x3 > 0) & (y3 < t)) -> redo3 : (x3' = (x3 - 1)) & (y3' = (y3 + 1));
+	<> ((x3 > 0) & (z3 < t)) -> ok3 : (x3' = (x3 - 1)) & (z3' = (z3 + 1));
+	<> ((y3 > 0) & (x3 < t)) -> back : (x3' = (x3 + 1)) & (y3' = (y3 - 1));
+	<s2> ((z3 > 0) & (w3 > 0)) -> 1 : (w3' = (w3 - 1)) & (z3' = (z3 - 1));
+endmodule
+
+module k4
+	w4: [0..t] init 0;
+	x4: [0..t] init 0;
+	y4: [0..t] init 0;
+	z4: [0..t] init 0;
+	<s2> ((w4 < t) & (x4 < t)) -> synch234 : (w4' = (w4 + 1)) & (x4' = (x4 + 1));
+	<> ((x4 > 0) & (y4 < t)) -> redo4 : (x4' = (x4 - 1)) & (y4' = (y4 + 1));
+	<> ((x4 > 0) & (z4 < t)) -> ok4 : (x4' = (x4 - 1)) & (z4' = (z4 + 1));
+	<> ((y4 > 0) & (x4 < t)) -> back : (x4' = (x4 + 1)) & (y4' = (y4 - 1));
+	<> ((z4 > 0) & (w4 > 0)) -> out4 : (w4' = (w4 - 1)) & (z4' = (z4 - 1));
+endmodule
+
+rewards "tokens_cell1"
+	true: ((x1 + y1) + z1);
+endrewards
+
+rewards "tokens_cell2"
+	true: ((x2 + y2) + z2);
+endrewards
+
+rewards "tokens_cell3"
+	true: ((x3 + y3) + z3);
+endrewards
+
+rewards "tokens_cell4"
+	true: ((x4 + y4) + z4);
+endrewards
+
+rewards "throughput"
+	[in] true: 1;
+endrewards
+
+

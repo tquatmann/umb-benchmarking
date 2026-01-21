@@ -1,0 +1,81 @@
+dtmc
+const int phase = 4096;
+const int maxr = 127;
+const int mrep = 128;
+const int mrec = 1;
+const int k = 1;
+const int T = 0;
+
+
+formula swap = ((((((((c = 2) | (c = 4)) | (c = 6)) | (c = 8)) | (c = 10)) | (c = 12)) | (c = 14)) | (c = 16));
+formula swap2 = ((((((((((c = 2) | (c = 4)) | (c = 6)) | (c = 8)) | (c = 10)) | (c = 12)) | (c = 14)) & (freq = (c + 1))) | ((c = 16) & (freq = 1))) | (((((((((c = 1) | (c = 3)) | (c = 5)) | (c = 7)) | (c = 9)) | (c = 11)) | (c = 13)) | (c = 15)) & (freq != (c + 1))));
+formula sleep = ((receiver = 0) & (y1 = 1));
+formula hear = (((freq1 = freq) & (train1 = train)) & (send = 1));
+formula success = (((((((((rep < mrep) & (((t1 = ((freq <= c) ? train : (1 - train))) & (f1 <= c)) | ((t1 = ((freq <= c) ? (1 - train) : train)) & (f1 > c)))) | (((rep = mrep) & (((send = 1) & (freq <= f1)) | ((send > 1) & (freq < f1)))) & (((t1 = ((freq <= c) ? train : (1 - train))) & (f1 <= c)) | ((t1 = ((freq <= c) ? (1 - train) : train)) & (f1 > c))))) | (((((rep = (mrep - 1)) & (c < 16)) & swap) & (((t1 = ((freq <= c) ? train : (1 - train))) & (f1 <= (c + 1))) | ((t1 = ((freq <= c) ? (1 - train) : train)) & (f1 > (c + 1))))) & (((f1 = 1) & (freq >= 15)) | ((f1 = 2) & (freq = 16))))) | (((((rep = (mrep - 1)) & (c < 16)) & !(swap)) & (((t1 = ((freq <= c) ? (1 - train) : train)) & (f1 <= (c + 1))) | ((t1 = ((freq <= c) ? train : (1 - train))) & (f1 > (c + 1))))) & (((f1 = 1) & (freq >= 15)) | ((f1 = 2) & (freq = 16))))) | ((((rep = (mrep - 1)) & (c = 16)) & (t1 = ((f1 = 1) ? (1 - train) : train))) & (((f1 = 1) & (freq >= 15)) | ((f1 = 2) & (freq = 16))))) | (((((rep = mrep) & (c < 16)) & swap) & (((t1 = ((freq <= c) ? train : (1 - train))) & (f1 <= (c + 1))) | ((t1 = ((freq <= c) ? (1 - train) : train)) & (f1 > (c + 1))))) & (f1 <= (freq + 2)))) | (((((rep = mrep) & (c < 16)) & !(swap)) & (((t1 = ((freq <= c) ? (1 - train) : train)) & (f1 <= (c + 1))) | ((t1 = ((freq <= c) ? train : (1 - train))) & (f1 > (c + 1))))) & (f1 <= (freq + 2)))) | (((((rep = mrep) & (c = 16)) & (t1 = ((f1 = 1) ? (1 - train) : train))) & (f1 <= (freq + 2))) & (c = 16)));
+
+module receiver1
+	y1: [0..((2 * maxr) + 1)];
+	receiver: [0..3];
+	freq1: [0..16];
+	train1: [0..1];
+	[time] ((receiver = 0) & (y1 = 1)) -> 1 : (y1' = (y1 - 1));
+	[] (((receiver = 0) & (y1 = 0)) & success) -> 1 : (receiver' = 1) & (freq1' = f1) & (train1' = t1);
+	[] (((receiver = 0) & (y1 = 0)) & !(success)) -> 1 : (y1' = 1) & (receiver' = 0);
+	[time] ((receiver = 1) & !(hear)) -> 1 : (y1' = y1);
+	[] ((receiver = 1) & hear) -> 1 : (y1' = 2) & (receiver' = 2) & (freq1' = 0) & (train1' = 0);
+	[time] ((receiver = 2) & (y1 > 0)) -> 1 : (y1' = (y1 - 1));
+	[reply] ((receiver = 2) & (y1 = 0)) -> (1 / (maxr + 1)) : (y1' = 0) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 1)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 2)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 3)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 4)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 5)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 6)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 7)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 8)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 9)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 10)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 11)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 12)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 13)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 14)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 15)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 16)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 17)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 18)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 19)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 20)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 21)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 22)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 23)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 24)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 25)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 26)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 27)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 28)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 29)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 30)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 31)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 32)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 33)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 34)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 35)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 36)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 37)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 38)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 39)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 40)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 41)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 42)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 43)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 44)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 45)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 46)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 47)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 48)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 49)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 50)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 51)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 52)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 53)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 54)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 55)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 56)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 57)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 58)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 59)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 60)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 61)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 62)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 63)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 64)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 65)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 66)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 67)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 68)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 69)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 70)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 71)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 72)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 73)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 74)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 75)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 76)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 77)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 78)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 79)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 80)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 81)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 82)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 83)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 84)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 85)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 86)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 87)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 88)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 89)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 90)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 91)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 92)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 93)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 94)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 95)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 96)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 97)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 98)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 99)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 100)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 101)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 102)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 103)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 104)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 105)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 106)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 107)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 108)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 109)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 110)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 111)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 112)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 113)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 114)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 115)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 116)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 117)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 118)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 119)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 120)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 121)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 122)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 123)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 124)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 125)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 126)) & (receiver' = 3) + (1 / (maxr + 1)) : (y1' = (2 * 127)) & (receiver' = 3);
+	[time] ((receiver = 3) & (y1 > 0)) -> 1 : (y1' = (y1 - 1));
+	[] (((receiver = 3) & (y1 = 0)) & success) -> 1 : (receiver' = 1) & (freq1' = f1) & (train1' = t1);
+	[] (((receiver = 3) & (y1 = 0)) & !(success)) -> 1 : (y1' = 1) & (receiver' = 0);
+endmodule
+
+module frequency1
+	z1: [1..phase];
+	f1: [1..16];
+	t1: [0..1];
+	[time] (!(sleep) & (z1 < phase)) -> 1 : (z1' = (z1 + 1));
+	[time] ((!(sleep) & (z1 = phase)) & (f1 < 16)) -> 1 : (z1' = 1) & (f1' = (f1 + 1));
+	[time] ((!(sleep) & (z1 = phase)) & (f1 = 16)) -> 1 : (z1' = 1) & (f1' = 1) & (t1' = (1 - t1));
+	[time] (sleep & (z1 <= 2048)) -> 1 : (z1' = (z1 + 2048));
+	[time] ((sleep & (z1 > 2048)) & (f1 < 16)) -> 1 : (z1' = (z1 - 2048)) & (f1' = (f1 + 1));
+	[time] ((sleep & (z1 > 2048)) & (f1 = 16)) -> 1 : (z1' = (z1 - 2048)) & (f1' = 1) & (t1' = (1 - t1));
+	[reply] true -> 1 : (f1' = ((f1 < 16) ? (f1 + 1) : 1)) & (t1' = ((f1 < 16) ? t1 : (1 - t1)));
+endmodule
+
+module sender_frequency
+	send: [1..3];
+	freq: [1..16];
+	train: [0..1];
+	c: [1..16];
+	rep: [1..mrep];
+	[time] (((!(sleep) & (send = 1)) & ((((((((freq = 1) | (freq = 3)) | (freq = 5)) | (freq = 7)) | (freq = 9)) | (freq = 11)) | (freq = 13)) | (freq = 15))) & (freq != c)) -> 1 : (freq' = (freq + 1));
+	[time] (((!(sleep) & (send = 1)) & ((((((((freq = 1) | (freq = 3)) | (freq = 5)) | (freq = 7)) | (freq = 9)) | (freq = 11)) | (freq = 13)) | (freq = 15))) & (freq = c)) -> 1 : (freq' = (freq + 1)) & (train' = (1 - train));
+	[time] ((!(sleep) & (send = 1)) & ((((((((freq = 2) | (freq = 4)) | (freq = 6)) | (freq = 8)) | (freq = 10)) | (freq = 12)) | (freq = 14)) | (freq = 16))) -> 1 : (send' = 2);
+	[time] (!(sleep) & (send = 2)) -> 1 : (send' = 3);
+	[time] (((!(sleep) & (send = 3)) & (freq < 16)) & (freq != c)) -> 1 : (send' = 1) & (freq' = (freq + 1));
+	[time] (((!(sleep) & (send = 3)) & (freq < 16)) & (freq = c)) -> 1 : (send' = 1) & (freq' = (freq + 1)) & (train' = (1 - train));
+	[time] ((((!(sleep) & (send = 3)) & (freq = 16)) & (rep < mrep)) & (c != 16)) -> 1 : (send' = 1) & (freq' = 1) & (train' = (1 - train)) & (rep' = (rep + 1));
+	[time] ((((!(sleep) & (send = 3)) & (freq = 16)) & (rep < mrep)) & (c = 16)) -> 1 : (send' = 1) & (freq' = 1) & (rep' = (rep + 1));
+	[time] (((!(sleep) & (send = 3)) & (freq = 16)) & (rep = mrep)) -> 1 : (send' = 1) & (freq' = 1) & (train' = (swap ? (1 - train) : train)) & (c' = ((c = 16) ? 1 : (c + 1))) & (rep' = 1);
+	[time] (sleep & (rep <= 64)) -> 1 : (rep' = (rep + 64));
+	[time] (sleep & (rep > 64)) -> 1 : (train' = (swap2 ? (1 - train) : train)) & (c' = ((c = 16) ? 1 : (c + 1))) & (rep' = (rep - 64));
+endmodule
+
+module replies
+	rec: [0..mrec];
+	[time] (rec < mrec) -> 1 : (rec' = rec);
+	[reply] (rec < mrec) -> 1 : (rec' = (min((rec + 1), mrec)));
+	[] (rec = mrec) -> 1 : (rec' = rec);
+endmodule
+
+rewards "time"
+	[time] ((receiver = 0) & (y1 = 1)): 2048;
+	[time] (receiver > 0): 1;
+endrewards
+
+init 
+	((((((((receiver = 0) & (y1 = 0)) & (freq1 = 0)) & (train1 = 0)) & (rec = 0)) & (f1 = k)) & (t1 = T)) & ((send = 1) | ((((((((freq = 2) | (freq = 4)) | (freq = 6)) | (freq = 8)) | (freq = 10)) | (freq = 12)) | (freq = 14)) | (freq = 16))))
+endinit
+
+

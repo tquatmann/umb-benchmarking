@@ -1,0 +1,2 @@
+"actuators": P=? [ !"down" U "fail_actuators" ];
+"actuators_T": P=? [ !"down" U<=(T*3600) "fail_sensors" ];
