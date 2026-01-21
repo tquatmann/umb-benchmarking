@@ -3,9 +3,10 @@ import sys
 import json
 from collections import OrderedDict
 
-def save_json(json_data, path : str):
+def save_invjson(inv_json, path : str):
     with open(path, 'w') as json_file:
-        json.dump(json_data, json_file, ensure_ascii=False, indent='\t')
+        json.dump(inv_json, json_file, ensure_ascii=False, indent='\t')
+    print("Saved {} invocations to '{}'.".format(len(inv_json), path))
 
 def ensure_directory(path : str):
     if not os.path.exists(path):
@@ -46,7 +47,9 @@ def storm_command(input_format : str, output_format : str, configuration : str) 
     else:
         raise AssertionError("Unsupported input format: " + input_format)
     # output
-    if output_format == UMB:
+    if output_format == "":
+        pass # nothing to add
+    elif output_format == UMB:
         cmd += "--exportbuild %outdir/model.umb --compression none "
     elif output_format == UMB_XZ:
         cmd += "--exportbuild %outdir/model.xz.umb --compression xz "
@@ -99,52 +102,72 @@ if __name__ == "__main__":
             models.append(model)
     print("Found {} models in input directory:\n\t{}".format(len(models), "\n\t".join(models)))
 
-    # Generate command templates
-    command_templates = OrderedDict()
-    def add_cmd_template(tool : str, input_format : str, output_format : str, configuration : str):
+    def add_cmd_template(templates : OrderedDict,tool : str, input_format : str, output_format : str, configuration : str):
         for s in [tool, input_format, output_format, configuration]:
             # we use underscores as separators, so they are not allowed in identifiers
             assert "_" not in s, "Underscores are not allowed in template identifiers."
-        template_id = f"{tool}_{input_format}_{output_format}_{configuration}"
+        template_id = f"{tool}_{input_format}_{output_format if len(output_format) > 0 else 'none'}_{configuration}"
         if tool == STORM:
-            command_templates[template_id] = storm_command(input_format, output_format, configuration)
+            templates[template_id] = storm_command(input_format, output_format, configuration)
         else:
             raise AssertionError("Unsupported tool: " + tool)
-    add_cmd_template(STORM, SYMB, UMB, "labs")
-    add_cmd_template(STORM, SYMB, UMB, "labs-cudd")
-    add_cmd_template(STORM, SYMB, UMB, "labs-sylvan")
-    add_cmd_template(STORM, SYMB, UMB_XZ, "labs")
-    add_cmd_template(STORM, SYMB, UMB_GZ, "labs")
-    add_cmd_template(STORM, SYMB, DRN, "labs")
+    def generate_invocations(cmd_templates):
+        invocations = []
+        for cmd_id in cmd_templates:
+            print("Command template '{}':\n\t{}".format(cmd_id, cmd_templates[cmd_id]))
+            for model in os.listdir(input_directory):
+                model_input_dir = os.path.join(input_directory, model)
+                model_output_dir = os.path.join(output_directory, cmd_id, model)
+                ensure_directory(model_output_dir)
+                invocation_id = f"{cmd_id}_{model}"
+                command = cmd_templates[cmd_id]
+                command = command.replace("%indir", model_input_dir)
+                command = command.replace("%outdir", model_output_dir)
+                command = command.replace("%storm", os.path.join(bin_directory, STORM))
 
+                invocation = OrderedDict()
+                invocation["id"] = invocation_id
+                invocation["commands"] = [command]
+                invocation["time-limit"] = time_limit
+                invocation["log-dir"] = logs_directory
+                invocation["log"] = f"{invocation_id}.log"
+                invocations.append(invocation)
+        return invocations
 
-# Generate invocations
-    invocations = []
-    for cmd_id in command_templates:
-        print("Command template '{}':\n\t{}".format(cmd_id, command_templates[cmd_id]))
-        cmd_invs = []
-        for model in os.listdir(input_directory):
-            model_input_dir = os.path.join(input_directory, model)
-            model_output_dir = os.path.join(output_directory, cmd_id, model)
-            ensure_directory(model_output_dir)
-            invocation_id = f"{cmd_id}_{model}"
-            command = command_templates[cmd_id]
-            command = command.replace("%indir", model_input_dir)
-            command = command.replace("%outdir", model_output_dir)
-            command = command.replace("%storm", os.path.join(bin_directory, STORM))
+    all_invocations = []
 
-            invocation = OrderedDict()
-            invocation["id"] = invocation_id
-            invocation["commands"] = [command]
-            invocation["time-limit"] = time_limit
-            invocation["log-dir"] = logs_directory
-            invocation["log"] = f"{invocation_id}.log"
-            cmd_invs.append(invocation)
-        cmd_inv_file =  f"inv_{cmd_id}.json"
-        save_json(cmd_invs, cmd_inv_file)
-        print("\tSaved {} invocations to '{}'.".format(len(cmd_invs), cmd_inv_file))
-        invocations += cmd_invs
-    # Save invocations to JSON file
-    inv_file = "inv.json"
-    save_json(invocations, os.path.join(os.getcwd(), inv_file))
-    print("Saved {} invocations to '{}'.".format(len(invocations), inv_file))
+    storm_symb_exprt_templates = OrderedDict()
+    add_cmd_template(storm_symb_exprt_templates, STORM, SYMB, UMB, "labs")
+    add_cmd_template(storm_symb_exprt_templates, STORM, SYMB, UMB, "labs-cudd")
+    add_cmd_template(storm_symb_exprt_templates, STORM, SYMB, UMB, "labs-sylvan")
+    add_cmd_template(storm_symb_exprt_templates, STORM, SYMB, UMB_XZ, "labs")
+    add_cmd_template(storm_symb_exprt_templates, STORM, SYMB, UMB_GZ, "labs")
+    add_cmd_template(storm_symb_exprt_templates, STORM, SYMB, DRN, "labs")
+    storm_symb_exprt_invs = generate_invocations(storm_symb_exprt_templates)
+    all_invocations += storm_symb_exprt_invs
+    save_invjson(storm_symb_exprt_invs, "inv_storm_symb_exprt.json")
+
+    storm_symb_templates = OrderedDict()
+    add_cmd_template(storm_symb_templates, STORM, SYMB, "", "labs")
+    add_cmd_template(storm_symb_templates, STORM, SYMB, "", "labs-cudd")
+    add_cmd_template(storm_symb_templates, STORM, SYMB, "", "labs-sylvan")
+    storm_symb_invs = generate_invocations(storm_symb_templates)
+    all_invocations += storm_symb_invs
+    save_invjson(storm_symb_invs, "inv_storm_symb.json")
+
+    storm_drn_templates = OrderedDict()
+    add_cmd_template(storm_drn_templates, STORM, DRN, "", "labs")
+    storm_drn_invs = generate_invocations(storm_drn_templates)
+    all_invocations += storm_drn_invs
+    save_invjson(storm_drn_invs, "inv_storm_drn.json")
+
+    storm_umb_templates = OrderedDict()
+    add_cmd_template(storm_umb_templates, STORM, UMB, "", "labs")
+    add_cmd_template(storm_umb_templates, STORM, UMB_XZ, "", "labs")
+    add_cmd_template(storm_umb_templates, STORM, UMB_GZ, "", "labs")
+    storm_umb_invs = generate_invocations(storm_umb_templates)
+    all_invocations += storm_umb_invs
+    save_invjson(storm_umb_invs, "inv_storm_umb.json")
+
+    save_invjson(all_invocations, "inv_all.json")
+
