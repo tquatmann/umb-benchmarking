@@ -1,1 +1,1 @@
-"steps_min": R{"steps"}min=? [ F "finished" ];
+"disagree": Pmax=? [ F "finished"&!"agree" ];
