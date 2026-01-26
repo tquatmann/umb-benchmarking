@@ -101,6 +101,18 @@ def run_invocation(inv : json, overwrite_time_limit = None):
     output, walltime, ret = execute_command_lines(commands, time_limits)
     log = "Command(s):\n{}\nWallclock time: {:.3f} seconds\nReturn code: {}{}\n".format("\n".join(commands), walltime, ret, " (timeout)" if ret is None else "")
     log += "#"*30 + "\n" + output
+    if "output-files" in inv:
+        log += "\n" + "#"*30 + " Output files " + "#"*30 + "\n"
+        for outfile in inv["output-files"]:
+            log += f"{outfile}:\t"
+            if os.path.exists(outfile):
+                log += "Size of output file is {} bytes\n".format(os.path.getsize(outfile))
+                if inv["repetition"] > 1:
+                    # remove output file to save space
+                    log += "Removing output file to save space for repetition #{}\n".format(inv["repetition"])
+                    os.remove(outfile)
+            else:
+                log += "File does not exist.\n"
     # save logfile
     with open(os.path.join(inv["log-dir"], inv["log"]), 'w', encoding="utf-8") as logfile:
         logfile.write(log)

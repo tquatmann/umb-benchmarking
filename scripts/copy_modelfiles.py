@@ -9,7 +9,7 @@ if __name__ == "__main__":
     file_dir = sys.argv[1]
     model_dir = sys.argv[2]
     cfgs_prioritized = [
-        "storm_symb_drn_labs", # drn
+        "storm_from-prism_to-jani_sparse",
         "storm_symb_umb-gz_labs", # umb gz
         "storm_symb_umb-xz_labs", # umb xz
         "storm_symb_umb_labs", "storm_symb_umb_labs-cudd", "storm_symb_umb_labs-sylvan" # umb
@@ -21,13 +21,14 @@ if __name__ == "__main__":
     cfgs = []
     for cfg in cfgs_prioritized:
         if cfg in os.listdir(file_dir):
+            print("Found config folder {}".format(cfg))
             cfgs.append(cfg)
 
 
     for model in os.listdir(model_dir):
         for cfg in cfgs:
             source_path = os.path.join(file_dir, cfg, model)
-            for file_name in ["model.umb", "model.xz.umb", "model.gz.umb", "model.drn"]:
+            for file_name in ["model.umb", "model.umb.xz", "model.umb.gz", "model.drn", "model.drn.xz", "model.drn.gz", "model.jani"]:
                 file_path = os.path.join(source_path, file_name)
                 dest_path = os.path.join(model_dir, model, file_name)
                 if os.path.exists(file_path) and not os.path.exists(dest_path):
