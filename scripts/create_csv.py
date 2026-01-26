@@ -26,7 +26,31 @@ def parse_float(text : str, before : str, after : str):
     except:
         return None
 
+def parse_prism_log(log : str, what : str):
+    if "Return code: None (timeout)" in log:
+        return "TO"
+    memouts = ["java.lang.OutOfMemoryError"]
+    if any(memout in log for memout in memouts):
+        return "MO"
+    assert "File does not exist." not in log, "Log indicates missing file: {}".format(log)
+
+def parse_modest_log(log : str, what : str):
+    if "Return code: None (timeout)" in log:
+        return "TO"
+    memouts = ["Maximum memory exceeded."]
+    if any(memout in log for memout in memouts):
+        return "MO"
+    if "System.InvalidOperationException: Stack empty." in log: return None # TODO
+    if ".AmbiguousMatchException: Ambiguous match found for" in log: return None # TODO
+    assert "File does not exist." not in log, "Log indicates missing file: {}".format(log)
+
+
 def parse_storm_log(log : str, what : str):
+    if "Return code: None (timeout)" in log:
+        return "TO"
+    memouts = ["Maximum memory exceeded."]
+    if any(memout in log for memout in memouts):
+        return "MO"
     symb_parsing = parse_float(log, "Time for model input parsing: ", "s.\n")
     construction = parse_float(log, "Time for model construction: ", "s.\n")
     preprocessing = parse_float(log, "Time for model preprocessing: ", "s.\n")
@@ -49,22 +73,35 @@ def create_csv(log_dir : str, what : str, not_available_str : str = "N/A"):
         with open(log_path, "r") as f:
             log_content = f.read()
         parts = logfile[:-4].split("_")
-        if len(parts) != 5:
+        if len(parts) != 6:
             print("Warning: unexpected log file name format: {}".format(logfile))
             continue
         column = "_".join(parts[0:4])
+        tool = parts[0]
         row = parts[4]
+        rep = int(parts[5].replace("rep", ""))
         if row not in row_headers:
             row_headers.append(row)
         if column not in column_headers:
             column_headers.append(column)
         if row not in contents:
             contents[row] = dict()
-        value = parse_storm_log(log_content, what)
-        if value is None:
-            contents[row][column] = not_available_str
+        if column not in contents[row]:
+            contents[row][column] = []
+        while len(contents[row][column]) <= rep:
+            contents[row][column].append("")
+        if tool == "storm":
+            value = parse_storm_log(log_content, what)
+        elif tool == "prism":
+            value = parse_prism_log(log_content, what)
+        elif tool == "modest":
+            value = parse_modest_log(log_content, what)
         else:
-            contents[row][column] = value
+            raise AssertionError("Unexpected tool: {}".format(tool))
+        if value is None:
+            contents[row][column][rep] = not_available_str
+        else:
+            contents[row][column][rep] = value
     column_headers.sort()
     row_headers.sort()
     csv_lines = [["Model"] + column_headers]

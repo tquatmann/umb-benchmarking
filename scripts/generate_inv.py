@@ -275,7 +275,7 @@ if __name__ == "__main__":
                     ensure_directory(model_output_dir)
                     outfiles = []
                     for outfilestring in command.split("%outdir/")[1:]:
-                        outfilename = outfilestring.split(" ")[0]
+                        outfilename = outfilestring.split(" ")[0].split(":")[0]
                         outfiles.append(os.path.join(model_output_dir, outfilename))
                     invocation["output-files"] = outfiles
                     command = command.replace("%outdir", model_output_dir)
