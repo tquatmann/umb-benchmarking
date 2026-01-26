@@ -1,1 +1,1 @@
-"below_min": R{"time_not_min"}=? [ C<=T ];
+"qos1": P=? [ F<=T !"minimum" ];

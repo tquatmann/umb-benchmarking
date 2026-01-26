@@ -93,10 +93,6 @@ const int k = floor(0.75*N);
 formula minimum = (left_n>=k & toleft_n) | 
                   (right_n>=k & toright_n) | 
                   ((left_n+right_n)>=k & toleft_n & line_n & toright_n);
+label "minimum" = (left_n>=k & toleft_n) | (right_n>=k & toright_n) | ((left_n+right_n)>=k & toleft_n & line_n & toright_n);
 
-// Reward structures
 
-// Time that the system is not delivering at least minimum QoS
-rewards "time_not_min"
-	!minimum : 1; 
-endrewards
