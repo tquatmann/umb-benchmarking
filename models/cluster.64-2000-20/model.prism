@@ -3,9 +3,9 @@
 
 ctmc
 
-const int N; // Number of workstations in each cluster
-const double T;
-const double t;
+const int N = 64; // Number of workstations in each cluster
+const double T = 2000;
+const double t = 20;
 
 const int left_mx = N; // Number of work stations in left cluster
 const int right_mx = N; // Number of work stations in right cluster

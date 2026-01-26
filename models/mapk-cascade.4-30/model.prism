@@ -5,13 +5,13 @@
 // gxn/dxp 19/12/07
 
 ctmc
-const double T;
+const double T =30;
 
 // constants (number of elements of each species)
 const int E1=1; // initial amount of E1
 const int E2=1; // initial amount of E2
 const int M=1;  // initial amount of MAPK phosphatase and MAPKK phosphatase
-const int N;  // initial amount of MAPK/MAPKK and MAPKKK
+const int N=4;  // initial amount of MAPK/MAPKK and MAPKKK
 
 // reaction rates (suppose volume proportional to the number of elements of MAPK)
 const double a1=1/N;

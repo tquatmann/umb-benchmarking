@@ -1,5 +1,5 @@
 mdp
-const int B;
+const int B=13;
 
 formula localFailure = loc_1=crit&t_1=0&failure_1;
 formula noLocalFailure = !((loc_1=crit&t_1=0&failure_1));
@@ -13,7 +13,7 @@ formula process_6_finishes = (loc_6=crit&t_6=0);
 
 label "emptyBattery" = ((battery_load=0));
 
-const int energy_capacity;
+const int energy_capacity = 300;
 const int t_max = 9;
 const int undef = 0;
 const int ncrit = 2;

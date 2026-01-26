@@ -5,9 +5,9 @@ const int HEIGHT = 5;
 const int XINIT = 3;
 const int YINIT = 1;
 
-const int GOLD_TO_COLLECT; // Set to 0 to avoid unfolding
-const int GEM_TO_COLLECT; // Set to 0 to avoid unfolding
-const int B;
+const int GOLD_TO_COLLECT=100; // Set to 0 to avoid unfolding
+const int GEM_TO_COLLECT=100; // Set to 0 to avoid unfolding
+const int B=1300;
 
 const double pAttack = 1/10;
 

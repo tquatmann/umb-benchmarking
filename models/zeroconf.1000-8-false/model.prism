@@ -50,10 +50,10 @@ mdp
 //-------------------------------------------------------------
 // VARIABLES
 // reset or noreset model
-const bool reset;
+const bool reset = false;
 
-const int N; // number of abstract hosts
-const int K; // number of probes to send
+const int N=1000; // number of abstract hosts
+const int K=8; // number of probes to send
 const double loss = 0.1; // probability of message loss
 
 // PROBABILITIES

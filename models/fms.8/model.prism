@@ -3,7 +3,7 @@
 
 ctmc // model is a ctmc
 
-const int n; // number of tokens
+const int n=8; // number of tokens
 
 // rates from Pi equal #(Pi) * min(1, np/r)
 // where np = (3n)/2 and r = P1+P2+P3+P12

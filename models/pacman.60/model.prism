@@ -13,7 +13,7 @@ mdp
 const xSize = 11;
 const ySize = 7;
 
-const MAXSTEPS;
+const MAXSTEPS=60;
 
 formula deactive0 = (xG0 = 0);
 formula deactive1 = (xG1 = 0);

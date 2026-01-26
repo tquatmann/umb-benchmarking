@@ -22,8 +22,8 @@ dtmc
 
 // currently, this model only works for N up to 20
 
-const int N; // number of pairs of secrets the party sends
-const int L; // number of bits in each secret
+const int N=10; // number of pairs of secrets the party sends
+const int L=2; // number of bits in each secret
 
 module counter
 	

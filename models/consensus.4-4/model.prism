@@ -5,7 +5,7 @@ mdp
 
 // constants
 const int N=4;
-const int K;
+const int K = 4;
 const int range = 2*(K+1)*N;
 const int counter_init = (K+1)*N;
 const int left = N;

@@ -1,5 +1,5 @@
 ctmc
-const int T;
+const int T=2100;
 
 module S1_def
   S1 : [0..250] init 200;

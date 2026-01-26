@@ -5,7 +5,7 @@
 mdp
 
 // COLLISIONS
-const int COL; // maximum number of collisions
+const int COL=0; // maximum number of collisions
 
 // TIMING CONSTRAINTS
 // we have used the FHSS parameters

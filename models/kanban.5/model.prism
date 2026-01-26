@@ -4,7 +4,7 @@
 ctmc
 
 // number of tokens 
-const int t; 
+const int t = 5;
 
 // rates
 const double in1      = 1.0;

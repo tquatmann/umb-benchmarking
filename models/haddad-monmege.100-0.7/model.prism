@@ -3,8 +3,8 @@
 
 dtmc
 
-const int N;
-const double p;
+const int N=100;
+const double p=0.7;
 const double q = 0.5;
 
 module main

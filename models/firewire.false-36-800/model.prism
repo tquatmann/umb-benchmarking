@@ -8,7 +8,7 @@ mdp
 // y1 and y2 (z1 and z2) clocks for wire12 (wire21)
 
 // deadline
-const int deadline;
+const int deadline=800;
 
 // maximum and minimum delays
 // fast
@@ -18,7 +18,7 @@ const int rc_fast_min = 76;
 const int rc_slow_max = 167;
 const int rc_slow_min = 159;
 // delay caused by the wire length
-const int delay;
+const int delay = 36;
 // probability of choosing fast
 const double fast = 0.5;
 const double slow=1-fast;
