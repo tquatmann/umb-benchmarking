@@ -1,2 +1,0 @@
-//the expected number of reactions between MAPK and MAKK by time T
-"reactions": R{"reactions"}=? [ C<=T ];
