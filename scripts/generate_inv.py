@@ -96,7 +96,7 @@ def modest_command(input_format : str, task : str, configuration : str) -> str:
         raise AssertionError("Unsupported task/output format: " + task)
     # configuration
     assert configuration in modest_configurations, "Unknown Modest configuration: " + configuration
-    cmd += " " + modest_configurations[configuration] + " -Y -D" # -Y for overwriting output, -D for detailed output
+    cmd += " " + modest_configurations[configuration] + " -D" # -D for detailed output
     return cmd
 
 # PRISM
