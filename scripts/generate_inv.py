@@ -106,8 +106,8 @@ prism_configurations["default"] = ""
 prism_configurations["ex"] = "-ex"
 prism_configurations["norewards"] = ""
 
-PRISM_INPUT_FORMATS = [PRISM_LANGUAGE, UMB, UMB_GZ]
-PRISM_OUTPUT_FORMATS = [UMB, UMB_GZ]
+PRISM_INPUT_FORMATS = [PRISM_LANGUAGE, UMB, UMB_GZ, TRA]
+PRISM_OUTPUT_FORMATS = [UMB, UMB_GZ, TRA]
 
 def prism_command(input_format : str, task : str, configuration : str) -> str:
     cmd = "%prism"
