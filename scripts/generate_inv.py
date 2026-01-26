@@ -71,27 +71,27 @@ MODEST_INPUT_FORMATS = [JANI, UMB, UMB_XZ, UMB_GZ]
 MODEST_OUTPUT_FORMATS = [UMB, UMB_XZ, UMB_GZ]
 
 def modest_command(input_format : str, task : str, configuration : str) -> str:
-    cmd = "%modest"
+    cmd = "%modest mcsta"
     # input
     if input_format == JANI:
         cmd += " %indir/model.jani"
     elif input_format == UMB:
-        cmd += " %indir/model.umb %indir/modest.properties.txt"
+        cmd += " %indir/modest.model.umb %indir/modest.umb.properties.txt"
     elif input_format == UMB_XZ:
-        cmd += " %indir/model.umb.xz %indir/modest-umbxz.properties.txt -I UMB"
+        cmd += " %indir/modest.model.umb.xz %indir/modest.umbxz.properties.txt -I UMB"
     elif input_format == UMB_GZ:
-        cmd += " %indir/model.umb.gz %indir/modest-umbgz.properties.txt -I UMB"
+        cmd += " %indir/modest.model.umb.gz %indir/modest.umbgz.properties.txt -I UMB"
     else:
         raise AssertionError("Unsupported input format: " + input_format)
     # task / output
     if task == TASK_CHECK:
         cmd += ""
     elif task == UMB:
-        cmd += " --umb %outdir/model.umb %outdir/modest-umb.properties.txt"
+        cmd += " --umb %outdir/model.umb %outdir/umb.properties.txt"
     elif task == UMB_XZ:
-        cmd += " --umb %outdir/model.umb.xz %outdir/modest-umbxz.properties.txt --umb-compress XZ"
+        cmd += " --umb %outdir/model.umb.xz %outdir/umbxz.properties.txt --umb-compress XZ"
     elif task == UMB_GZ:
-        cmd += " --umb %outdir/model.umb.gz %outdir/modest-umbgz.properties.txt --umb-compress GZIP"
+        cmd += " --umb %outdir/model.umb.gz %outdir/umbgz.properties.txt --umb-compress GZIP"
     else:
         raise AssertionError("Unsupported task/output format: " + task)
     # configuration
@@ -120,11 +120,11 @@ def prism_command(input_format : str, task : str, configuration : str) -> str:
     if input_format == PRISM_LANGUAGE:
         cmd += " %indir/model.prism"
     elif input_format == UMB:
-        cmd += " -importmodel %indir/model.umb"
+        cmd += " -importmodel %indir/prism.model.umb"
     elif input_format == UMB_GZ:
-        cmd += " -importmodel %indir/model.umb.gz:format=umb"
+        cmd += " -importmodel %indir/prism.model.umb.gz:format=umb"
     elif input_format == TRA:
-        cmd += f" -importmodel %indir/model.tra,lab{',rew' if enable_rewards else ''}:format=explicit"
+        cmd += f" -importmodel %indir/prism.model.tra,lab{',rew' if enable_rewards else ''}:format=explicit"
     else:
         raise AssertionError("Unsupported input format for PRISM: " + input_format)
     # task / output
@@ -162,17 +162,17 @@ def storm_command(input_format : str, task : str, configuration : str) -> str:
     elif input_format == JANI:
         cmd += "--jani %indir/model.jani "
     elif input_format == UMB:
-        cmd += "--explicit-umb %indir/model.umb "
+        cmd += "--explicit-umb %indir/storm.model.umb "
     elif input_format == UMB_XZ:
-        cmd += "--explicit-umb %indir/model.umb.xz "
+        cmd += "--explicit-umb %indir/storm.model.umb.xz "
     elif input_format == UMB_GZ:
-        cmd += "--explicit-umb %indir/model.umb.gz "
+        cmd += "--explicit-umb %indir/storm.model.umb.gz "
     elif input_format == DRN:
-        cmd += "--explicit-drn %indir/model.drn --digits 17"
+        cmd += "--explicit-drn %indir/storm.model.drn --digits 17"
     elif input_format == DRN_XZ:
-        cmd += "--explicit-drn %indir/model.drn.xz  --digits 17"
+        cmd += "--explicit-drn %indir/storm.model.drn.xz  --digits 17"
     elif input_format == DRN_GZ:
-        cmd += "--explicit-drn %indir/model.drn.gz  --digits 17"
+        cmd += "--explicit-drn %indir/storm.model.drn.gz  --digits 17"
     else:
         raise AssertionError("Unsupported input format: " + input_format)
 
@@ -330,6 +330,7 @@ if __name__ == "__main__":
     print("\n" + "#" * 40 + "\nGenerating Storm export invocations...\n" + "#" * 40)
     storm_exprt_templates = OrderedDict()
     for out_format in STORM_OUTPUT_FORMATS:
+        if out_format == JANI: continue
         add_cmd_template(storm_exprt_templates, STORM, JANI, out_format, "sparse")
     add_cmd_template(storm_exprt_templates, STORM, JANI, UMB, "cudd")
     storm_exprt_invs = generate_invocations(storm_exprt_templates)
