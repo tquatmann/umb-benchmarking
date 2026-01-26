@@ -1,1 +1,1 @@
-"cost_min": R{"cost"}min=? [ F "target" ];
+"sent": P>=1 [ F "target" ];

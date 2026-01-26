@@ -121,12 +121,7 @@ module station4=station1[s1=s4,x1=x4,cd1=cd4,bc1=bc4,send1=send4,busy1=busy4,end
 
 //----------------------------------------------------------------------------------------------------------------------------
 
-// reward structure for expected time
-rewards "time"
-	[time] true : 1;
-endrewards
-
-//----------------------------------------------------------------------------------------------------------------------------
-
 // labels/formulae
 label "all_delivered" = s1=4&s2=4&s3=4&s4=4;
+label "collision_max_backoff" = (cd1=K & s1=1 & b=2)|(cd2=K & s2=1 & b=2)|(cd3=K & s3=1 & b=2)|(cd4=K & s4=1 & b=2);
+

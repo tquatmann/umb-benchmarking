@@ -1,1 +1,1 @@
-"up_time": R{"up"}=? [ F "down" ];
+"actuators": P=? [ !"down" U "fail_actuators" ];

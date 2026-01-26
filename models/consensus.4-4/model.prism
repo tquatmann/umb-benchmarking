@@ -51,9 +51,4 @@ module process4 = process1[pc1=pc4,coin1=coin4] endmodule
 
 // labels
 label "finished" = pc1=3 & pc2=3 & pc3=3 & pc4=3 ;
-
-// rewards
-rewards "steps"
-	true : 1;
-endrewards
-
+label "agree" = coin1=coin2 & coin2=coin3 & coin3=coin4 ;

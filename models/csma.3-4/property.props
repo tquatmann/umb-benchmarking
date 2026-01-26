@@ -1,1 +1,1 @@
-"time_max": R{"time"}max=? [ F "all_delivered" ];
+"all_before_max": Pmax=? [ !"collision_max_backoff" U "all_delivered" ];

@@ -184,8 +184,8 @@ endmodule
 //------------------------------------------------------------------------------
 // reward structures
 
-rewards "reactions" // reactions between mapk and mapkk
-	[a_k_kk] true : 1;
-	[d_k_kk] true : 1;
-	[k_k_kk] true : 1;
+rewards "time" // time
+	true : 1;
 endrewards
+
+label "target" = kpp=N;
