@@ -1,2 +1,2 @@
 // Minimum probability of completing within deadline
-"deadline": Pmin=? [ F^{rew{"time"}<=deadline} "done"];
+"deadline": Pmin=? [ F^{rew{"time"}<=800} "done"];

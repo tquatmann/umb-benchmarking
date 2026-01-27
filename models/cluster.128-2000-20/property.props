@@ -1,1 +1,1 @@
-"qos1": P=? [ F<=T !"minimum" ];
+"qos1": P=? [ F<=2000 !"minimum" ];

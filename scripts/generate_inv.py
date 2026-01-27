@@ -133,7 +133,7 @@ prism_configurations["default"] = ""
 prism_configurations["ex"] = "-ex"
 prism_configurations["norewards"] = ""
 
-PRISM_INPUT_FORMATS = [PRISM_LANGUAGE, UMB, UMB_GZ, TRA]
+PRISM_INPUT_FORMATS = [PRISM_LANGUAGE, UMB]
 PRISM_OUTPUT_FORMATS = [UMB, UMB_GZ, TRA]
 
 def prism_command(input_format : str, task : str, configuration : str) -> str:
@@ -197,11 +197,11 @@ def storm_command(input_format : str, task : str, configuration : str) -> str:
     elif input_format == UMB_GZ:
         cmd += f"--explicit-umb %indir/storm.model{exact}.umb.gz "
     elif input_format == DRN:
-        cmd += f"--explicit-drn %indir/storm.model{exact}.drn --digits 17"
+        cmd += f"--explicit-drn %indir/storm.model{exact}.drn --digits 17 "
     elif input_format == DRN_XZ:
-        cmd += f"--explicit-drn %indir/storm.model{exact}.drn.xz --digits 17"
+        cmd += f"--explicit-drn %indir/storm.model{exact}.drn.xz --digits 17 "
     elif input_format == DRN_GZ:
-        cmd += f"--explicit-drn %indir/storm.model{exact}.drn.gz --digits 17"
+        cmd += f"--explicit-drn %indir/storm.model{exact}.drn.gz --digits 17 "
     else:
         raise AssertionError("Unsupported input format: " + input_format)
 
@@ -231,7 +231,7 @@ def storm_command(input_format : str, task : str, configuration : str) -> str:
         raise AssertionError("Unsupported task/output format: " + task)
     # configuration
     assert configuration in storm_configurations, "Unknown Storm configuration: " + configuration
-    cmd += storm_configurations[configuration]
+    cmd += " " + storm_configurations[configuration]
     return cmd
 
 
