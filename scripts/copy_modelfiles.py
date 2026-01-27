@@ -53,6 +53,9 @@ if __name__ == "__main__":
             print("Found config folder {}".format(cfg))
             cfgs.append(cfg)
 
+    def file_exists(path):
+        return os.path.exists(path) and os.path.getsize(path) > 0
+
 
     for model in os.listdir(model_dir):
         for cfg in cfgs:
@@ -65,7 +68,7 @@ if __name__ == "__main__":
                               "model.aut", "model.mrm"
                               "model.jani"]:
                 file_path = os.path.join(source_path, file_name)
-                if os.path.exists(file_path):
+                if os.path.exists(file_exists):
                     if file_name == "model.tra":
                         file_name = "model.tra.tar"
                     dest_path = os.path.join(model_dir, model, tool + "." + file_name)
