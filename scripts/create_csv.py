@@ -85,6 +85,8 @@ def parse_modest_log(log : str, what : str):
         return importtime
     elif what == EXPORT_TIME:
         start_pos = log.find("+ UMB export")
+        if start_pos == -1:
+            start_pos = log.find("+ Export to ")
         assert start_pos != -1, "Unexpected modest log format: {}".format(log)
         sublog = log[start_pos:]
         exporttime = parse_float(sublog, "Time: ", " s")
