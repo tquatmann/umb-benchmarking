@@ -69,16 +69,16 @@ def bcgio_command(input_format : str, task : str, configuration : str) -> str:
     cmd = "%bcgio"
     # input
     if input_format == AUT:
-        cmd += " %indir/model.aut"
+        cmd += " %indir/modest.model.aut"
     else:
         raise AssertionError("Unsupported input format for bcg-io: " + input_format)
     # task / output
     if task == BCG:
-        cmd += " %outdir/model.bcg"
+        cmd += " %outdir/bcgio.model.bcg"
     else:
         raise AssertionError("Unsupported task/output format for bcg-io: " + task)
     # configuration not used
-    cmd += " ; xz -c %outdir/model.bcg > %outdir/model.bcg.xz ; gzip -c %outdir/model.bcg > %outdir/model.bcg.gz"
+    cmd += " ; xz -c %outdir/bcgio.model.bcg > %outdir/bcgio.model.bcg.xz ; gzip -c %outdir/bcgio.model.bcg > %outdir/bcgio.model.bcg.gz"
     return cmd
 
 
