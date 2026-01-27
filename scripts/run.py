@@ -124,6 +124,7 @@ if __name__ == "__main__":
         print("Invalid number of arguments.")
         sys.exit(1)
     invs = load_json(sys.argv[1])
+    print("Loaded invocations file with {} invocations.".format(len(invs)))
     indices = [int(sys.argv[2])] if sys.argv[2] != "all" else range(len(invs))
     overwrite_time_limit = None
     if len(sys.argv) == 4:
