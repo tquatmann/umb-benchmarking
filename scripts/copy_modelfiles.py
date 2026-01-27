@@ -65,7 +65,7 @@ if __name__ == "__main__":
                               "model.drn", "model.drn.xz", "model.drn.gz", "model.exact.drn", "model.exact.drn.xz", "model.exact.drn.gz",
                               "model.tra",
                               "umb.properties.txt", "umbxz.properties.txt", "umbgz.properties.txt",
-                              "model.aut", "model.mrm"
+                              "model.aut", "model.mrm",
                               "model.jani"]:
                 file_path = os.path.join(source_path, file_name)
                 if file_exists(file_path):
