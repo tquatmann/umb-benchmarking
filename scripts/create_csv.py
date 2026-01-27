@@ -39,7 +39,11 @@ def parse_prism_log(log : str, what : str):
         return "MO"
     if "Error: Currently, the sparse engine cannot handle models with more than 2147483647 states," in log:
         return "ERR"
-    assert "File does not exist." not in log, "Log indicates missing file: {}".format(log)
+    err_pos = log.find("File does not exist.")
+    if err_pos > 0:
+        other_pos = log.find("rew:\tFile does not exist.")
+        if other_pos == -1 or other_pos > err_pos:
+            raise AssertionError("File does not exist." not in log, "Log indicates missing file: {}".format(log))
     if what == IMPORT_TIME:
         return parse_float(log, "Time for model construction: ", "seconds.")
     elif what == EXPORT_TIME:
@@ -67,6 +71,8 @@ def parse_modest_log(log : str, what : str):
         return "ERR" # special case for known issue
     if "fms" in log and "Return code: -6" in log:
         return "ERR" # special case for known issue
+    if "pacman.100" in log and "Return code: -9" in log:
+        return "MO" # special case for known mem out
     if "Complex initial states specifications are not yet supported." in log:
         return "ERR"
     assert "File does not exist." not in log, "Log indicates missing file: {}".format(log)
@@ -90,7 +96,7 @@ def parse_modest_log(log : str, what : str):
             size += parse_float(sublog, "Size of output file is ", " bytes")
             sublog = sublog[sublog.find("Size of output file is ") + 1:]
         return size
-    assert False, "Log parsing for modest not yet implemented: {}".format(log)
+    assert False, "Log parsing for modest not successful: {}".format(log)
 
 
 def parse_storm_log(log : str, what : str):
@@ -99,7 +105,7 @@ def parse_storm_log(log : str, what : str):
     memouts = ["Maximum memory exceeded.", "The message of this exception is: std::bad_alloc"]
     if any(memout in log for memout in memouts):
         return "MO"
-    if "Return code: -9" in log and "bluetooth.1" in log:
+    if "Return code: -9" in log and ("bluetooth.1" in log or "rabin.10" in log or "pnueli-zuck.10" in log):
         return "MO"
     assert "File does not exist." not in log, "Log indicates missing file: {}".format(log)
     jani_parsing = parse_float(log, "Time for model input parsing: ", "s.\n")

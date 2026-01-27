@@ -10,18 +10,15 @@ if __name__ == "__main__":
     file_dir = sys.argv[1]
     model_dir = sys.argv[2]
     cfgs_prioritized = [
+        "bcgio_from-aut_to-bcg_default",
+        "modest_from-jani_to-aut_default",
+        "modest_from-jani_to-imca_default",
         "modest_from-jani_to-umb-gz_default",
         "modest_from-jani_to-umb-gz_memory",
-        "modest_from-jani_to-umb-gz_unsafe",
-        "modest_from-jani_to-umb-gz_unsafe-memory",
         "modest_from-jani_to-umb-xz_default",
         "modest_from-jani_to-umb-xz_memory",
-        "modest_from-jani_to-umb-xz_unsafe",
-        "modest_from-jani_to-umb-xz_unsafe-memory",
         "modest_from-jani_to-umb_default",
         "modest_from-jani_to-umb_memory",
-        "modest_from-jani_to-umb_unsafe",
-        "modest_from-jani_to-umb_unsafe-memory",
         "prism_from-prism_to-tra_ex",
         "prism_from-prism_to-tra_default",
         "prism_from-prism_to-tra_norewards",
@@ -32,12 +29,18 @@ if __name__ == "__main__":
         "prism_from-prism_to-umb_default",
         "prism_from-prism_to-umb_norewards",
         "storm_from-jani_to-drn-gz_sparse",
+        "storm_from-jani_to-drn-gz_exact",
         "storm_from-jani_to-drn-xz_sparse",
+        "storm_from-jani_to-drn-xz_exact",
         "storm_from-jani_to-drn_sparse",
+        "storm_from-jani_to-drn_exact",
         "storm_from-jani_to-umb-gz_sparse",
+        "storm_from-jani_to-umb-gz_exact",
         "storm_from-jani_to-umb-xz_sparse",
+        "storm_from-jani_to-umb-xz_exact",
         "storm_from-jani_to-umb_sparse",
         "storm_from-jani_to-umb_cudd",
+        "storm_from-jani_to-umb_exact",
         "storm_from-prism_to-jani_sparse"
     ]
     for cfg in os.listdir(file_dir):
