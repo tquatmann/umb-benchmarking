@@ -1,1 +1,1 @@
-"actuators": P=? [ !"down" U "fail_actuators" ];
+"actuators": P=? [ !"l_down" U "fail_actuators" ];

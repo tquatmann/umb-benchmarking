@@ -135,7 +135,7 @@ def parse_storm_log(log : str, what : str):
         if "Time for model checking" in log:
             return parse_walltime(log)
     elif what == IMPORT_TIME:
-        if construction is None:
+        if construction is None or "(sparse)" not in log:
             return None
         else:
             return jani_parsing + construction + preprocessing

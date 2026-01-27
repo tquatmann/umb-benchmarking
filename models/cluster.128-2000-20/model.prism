@@ -90,8 +90,5 @@ const int k = floor(0.75*N);
 // right_operational_i : right_n>=i & toright_n
 // operational_i : (left_n+right_n)>=i & toleft_n & line_n & toright_n
 // minimum_k : left_operational_k | right_operational_k | operational_k
-formula minimum = (left_n>=k & toleft_n) | 
-                  (right_n>=k & toright_n) | 
-                  ((left_n+right_n)>=k & toleft_n & line_n & toright_n);
 label "minimum" = (left_n>=k & toleft_n) | (right_n>=k & toright_n) | ((left_n+right_n)>=k & toleft_n & line_n & toright_n);
 // premium = minimum_N

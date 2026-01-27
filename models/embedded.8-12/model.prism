@@ -129,4 +129,4 @@ formula up = !down & !danger;
 // causes of failues
 label "fail_actuators" = o=2&a<MIN_ACTUATORS; // actuators have failed
 // system status
-label "down" = (i=2&s<MIN_SENSORS)|(count=MAX_COUNT+1)|(o=2&a<MIN_ACTUATORS)|(m=0); // system has shutdown
+label "l_down" = (i=2&s<MIN_SENSORS)|(count=MAX_COUNT+1)|(o=2&a<MIN_ACTUATORS)|(m=0); // system has shutdown

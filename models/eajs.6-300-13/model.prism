@@ -3,7 +3,6 @@ const int B=13;
 
 formula localFailure = loc_1=crit&t_1=0&failure_1;
 formula noLocalFailure = !((loc_1=crit&t_1=0&failure_1));
-formula emptyBattery = battery_load=0;
 formula process_1_finishes = (loc_1=crit&t_1=0);
 formula process_2_finishes = (loc_2=crit&t_2=0);
 formula process_3_finishes = (loc_3=crit&t_3=0);
