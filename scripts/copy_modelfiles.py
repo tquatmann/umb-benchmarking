@@ -68,19 +68,19 @@ if __name__ == "__main__":
                               "model.aut", "model.mrm"
                               "model.jani"]:
                 file_path = os.path.join(source_path, file_name)
-                if os.path.exists(file_exists):
+                if file_exists(file_path):
                     if file_name == "model.tra":
                         file_name = "model.tra.tar"
                     dest_path = os.path.join(model_dir, model, tool + "." + file_name)
-                    if not os.path.exists(dest_path):
+                    if not file_exists(dest_path):
                         if file_name == "model.tra.tar":
                             print("Creating tar archive for {} to ".format(file_path, dest_path))
                             with tarfile.open(dest_path, "w") as tar:
                                 tar.add(file_path, arcname="model.tra")
                                 tar.add(file_path[:-3] + "lab", arcname="model.lab")
-                                if os.path.exists(file_path[:-3] + "srew"):
+                                if file_exists(file_path[:-3] + "srew"):
                                     tar.add(file_path[:-3] + "srew", arcname="model.srew")
-                                if os.path.exists(file_path[:-3] + "trew"):
+                                if file_exists(file_path[:-3] + "trew"):
                                     tar.add(file_path[:-3] + "trew", arcname="model.trew")
                         else:
                             print("Copying {} to {}".format(file_path, dest_path))
