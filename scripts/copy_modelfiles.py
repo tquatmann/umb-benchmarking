@@ -55,7 +55,12 @@ if __name__ == "__main__":
         for cfg in cfgs:
             tool = cfg.split("_")[0]
             source_path = os.path.join(file_dir, cfg, model)
-            for file_name in ["model.umb", "model.umb.xz", "model.umb.gz", "model.drn", "model.drn.xz", "model.drn.gz", "model.tra", "umb.properties.txt", "umbxz.properties.txt", "umbgz.properties.txt", "model.jani"]:
+            for file_name in ["model.umb", "model.umb.xz", "model.umb.gz", "model.exact.umb", "model.exact.umb.xz", "model.exact.umb.gz",
+                              "model.drn", "model.drn.xz", "model.drn.gz", "model.exact.drn", "model.exact.drn.xz", "model.exact.drn.gz",
+                              "model.tra",
+                              "umb.properties.txt", "umbxz.properties.txt", "umbgz.properties.txt",
+                              "model.aut", "model.mrm"
+                              "model.jani"]:
                 file_path = os.path.join(source_path, file_name)
                 if os.path.exists(file_path):
                     if file_name == "model.tra":

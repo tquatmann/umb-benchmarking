@@ -406,6 +406,6 @@ if __name__ == "__main__":
     save_invjson(storm_exprt_invs, repetitions, "inv_storm_exprt.json")
     save_invjson(storm_import_invs, repetitions, "inv_storm_import.json")
     save_invjson(all_export, repetitions, "inv_export.json")
-    save_invjson(all_export, repetitions, "inv_import.json")
+    save_invjson(all_import, repetitions, "inv_import.json")
     save_invjson(all_export + all_import, repetitions, "inv_all.json")
 

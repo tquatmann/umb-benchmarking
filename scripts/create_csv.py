@@ -28,6 +28,9 @@ def parse_float(text : str, before : str, after : str):
     except:
         return None
 
+def parse_walltime(log : str):
+    return parse_float(log, "Wallclock time: ", " seconds")
+
 def parse_prism_log(log : str, what : str):
     if "Return code: None (timeout)" in log:
         return "TO"
@@ -36,8 +39,19 @@ def parse_prism_log(log : str, what : str):
         return "MO"
     if "Error: Currently, the sparse engine cannot handle models with more than 2147483647 states," in log:
         return "ERR"
-    if "tra,lab" in log: return "ASDF" # todo
     assert "File does not exist." not in log, "Log indicates missing file: {}".format(log)
+    if what == IMPORT_TIME:
+        return parse_float(log, "Time for model construction: ", "seconds.")
+    elif what == EXPORT_TIME:
+        return parse_float(log, "Time for exporting: ", "seconds.")
+    elif what == EXPORT_SIZE:
+        sublog = log
+        size = 0
+        while "Size of output file is " in sublog:
+            size += parse_float(sublog, "Size of output file is ", " bytes")
+            sublog = sublog[sublog.find("Size of output file is ") + 1:]
+        return size
+    assert False, "Log parsing for {} in  prism not successful: {}".format(what, log)
 
 def parse_modest_log(log : str, what : str):
     if "Return code: None (timeout)" in log:
@@ -55,13 +69,27 @@ def parse_modest_log(log : str, what : str):
         return "ERR" # special case for known issue
     if "Complex initial states specifications are not yet supported." in log:
         return "ERR"
-    if "cluster.64-2000-20" in log: return "ASDF" # todo
     assert "File does not exist." not in log, "Log indicates missing file: {}".format(log)
     if what == IMPORT_TIME:
         assert "+ State space exploration" in log, "Unexpected modest log format: {}".format(log)
         sublog = log[log.find("+ State space exploration"):]
-        sublog = sublog[sublog.find("\n\n")]
-
+        sublog = sublog[:sublog.find("\n\n")]
+        importtime = parse_float(sublog, "Time (exploration): ", " s")
+        importtime += parse_float(sublog, "Time (merging): ", " s")
+        return importtime
+    elif what == EXPORT_TIME:
+        start_pos = log.find("+ UMB export")
+        assert start_pos != -1, "Unexpected modest log format: {}".format(log)
+        sublog = log[start_pos:]
+        exporttime = parse_float(sublog, "Time: ", " s")
+        return exporttime
+    elif what == EXPORT_SIZE:
+        sublog = log
+        size = 0
+        while "Size of output file is " in sublog:
+            size += parse_float(sublog, "Size of output file is ", " bytes")
+            sublog = sublog[sublog.find("Size of output file is ") + 1:]
+        return size
     assert False, "Log parsing for modest not yet implemented: {}".format(log)
 
 
@@ -73,7 +101,6 @@ def parse_storm_log(log : str, what : str):
         return "MO"
     if "Return code: -9" in log and "bluetooth.1" in log:
         return "MO"
-    if " does not have an extension to determine the model export format" in log: return "ASDF" # todo
     assert "File does not exist." not in log, "Log indicates missing file: {}".format(log)
     jani_parsing = parse_float(log, "Time for model input parsing: ", "s.\n")
     construction = parse_float(log, "Time for model construction: ", "s.\n")
@@ -85,6 +112,13 @@ def parse_storm_log(log : str, what : str):
         return construction + (preprocessing if preprocessing is not None else 0.0) + (jani_parsing if jani_parsing is not None else 0.0)
     elif what == EXPORT_TIME:
         return export
+    elif what == EXPORT_SIZE:
+        sublog = log
+        size = 0
+        while "Size of output file is " in sublog:
+            size += parse_float(sublog, "Size of output file is ", " bytes")
+            sublog = sublog[sublog.find("Size of output file is ") + 1:]
+        return size
 
 def create_csv(log_dir : str, what : str, not_available_str : str = "N/A"):
     row_headers = []
@@ -101,9 +135,9 @@ def create_csv(log_dir : str, what : str, not_available_str : str = "N/A"):
         src_format = parts[1]
         task = parts[2]
         cfg = parts[3]
-        if what == IMPORT_TIME and task.startswith("to-"):
+        if what in [IMPORT_TIME, WALL_TIME] and task.startswith("to-"):
             continue
-        if what == EXPORT_TIME and not task.startswith("to-"):
+        if what in [EXPORT_TIME, EXPORT_SIZE] and not task.startswith("to-"):
             continue
         column = "_".join(parts[0:4])
         row = parts[4]
@@ -120,7 +154,9 @@ def create_csv(log_dir : str, what : str, not_available_str : str = "N/A"):
             contents[row][column].append("")
         with open(os.path.join(log_dir, logfile), "r") as f:
             log_content = f.read()
-        if tool == "storm":
+        if what == WALL_TIME:
+            value = parse_walltime(log_content)
+        elif tool == "storm":
             value = parse_storm_log(log_content, what)
         elif tool == "prism":
             value = parse_prism_log(log_content, what)
@@ -154,8 +190,13 @@ if __name__ == "__main__":
 
     import_csv = create_csv(log_dir, IMPORT_TIME)
     save_csv(import_csv, "import_times.csv")
+    import_csv = create_csv(log_dir, WALL_TIME)
+    save_csv(import_csv, "wall_times.csv")
     export_csv = create_csv(log_dir, EXPORT_TIME)
     save_csv(export_csv, "export_times.csv")
+    export_csv = create_csv(log_dir, EXPORT_SIZE)
+    save_csv(export_csv, "export_sizes.csv")
+
 
 
 
