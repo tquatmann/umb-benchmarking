@@ -116,9 +116,9 @@ def modest_command(input_format : str, task : str, configuration : str) -> str:
     elif task == UMB_GZ:
         cmd += " --umb %outdir/model.umb.gz %outdir/umbgz.properties.txt --umb-compress GZIP"
     elif task == AUT:
-        cmd += " --statespace %outdir/model.aut"
+        cmd += " --statespace %outdir/model.aut AUT"
     elif task == IMCA:
-        cmd += " --statespace %outdir/model.mrm"
+        cmd += " --statespace %outdir/model.mrm IMCA"
     else:
         raise AssertionError("Unsupported task/output format: " + task)
     # configuration
