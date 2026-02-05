@@ -6,37 +6,52 @@ EXPORT_TIME = "export_time"
 EXPORT_SIZE = "export_size"
 FULL_TIME = "full_time"
 
+def is_number(value):
+    try:
+        float(value)
+        return True
+    except:
+        return False
+
 def save_csv(csv, name : str):
+    CSV_SEPARATOR="\t"
     with open(name + ".csv", 'w') as csv_file:
         for line in csv:
-            line_strs = [str(x) for x in line]
-            csv_file.write("\t".join(line_strs) + "\n")
+            line_strs = []
+            for cell in line:
+                if isinstance(cell, list):
+                    line_strs.append("[{}]".format(", ".join(str(y) for y in cell)))
+                else:
+                    line_strs.append(str(cell))
+            csv_file.write(CSV_SEPARATOR.join(line_strs) + "\n")
     print("Saved results invocations to '{}'.".format(name + ".csv"))
 
-def avg_csv(csv, name : str):
+def median_csv(csv, name : str):
     a = [csv[0]]  # header
     for row in csv[1:]:
         new_row = [row[0]]  # first column is the model name
         for entry in row[1:]:
-            if entry == "N/A":
-                new_row.append("")
+            if not isinstance(entry, list):
+                new_row.append("nan")
             else:
-                values = [float(x) for x in entry if x != "N/A"]
+                values = [float(x) for x in entry if is_number(x)]
                 if len(values) == 0:
-                    new_row.append("")
+                    new_row.append("nan")
                 else:
-                    avg_value = sum(values) / len(values)
-                    new_row.append(avg_value)
+                    values = sorted(values)
+                    median = values[len(values) // 2] if len(values) % 2 == 1 else (values[len(values) // 2 - 1] + values[len(values) // 2]) / 2
+                    new_row.append(median)
         a.append(new_row)
-    save_csv(a, name + "_avg")
+    save_csv(a, name + "_median")
     return a
 
 def quantile_csv(csv, name : str, min_value : float = 0.1):
     columns = [[]] * len(csv[0][1:])
     for row in csv[1:]:
         for i, entry in enumerate(row[1:]):
-            if entry == "":
+            if entry == "" or entry == "nan":
                 continue
+            assert isinstance(entry, float), "Unexpected entry type: {}".format(entry)
             columns[i] = columns[i] + [entry]
     for i in range(len(columns)):
         columns[i].sort()
@@ -70,6 +85,37 @@ def parse_float_or_zero(text : str, before : str, after : str):
     if value is None:
         return 0.0
     return value
+
+def is_timeout(log : str):
+    return "Return code: None (timeout)" in log
+
+def is_memout(log : str):
+    messages = [
+        "Return code: -9" # storm
+    ]
+    return any(m in log for m in messages)
+
+def is_not_supported(log : str):
+    messages = [
+        "Complex initial states specifications are not yet supported" # mcsta
+    ]
+    return any(m in log for m in messages)
+
+def is_input_file_not_found(log : str):
+    # mcsta
+    pos = log.find("##############################Output to stderr##############################\nFile \"models/")
+    if pos != -1 and "not found" in log[pos:]:
+        return True
+    # storm
+    if "Unable to read from non-existing file " in log:
+        return True
+    pos = log.find("The given path '\"models/")
+    if pos != -1 and "does not exist." in log[pos:log.find("\n",pos)]:
+        return True
+    # prism
+    if "Error: Error importing from UMB: Could not open UMB file:" in log:
+        return True
+    return False
 
 def parse_walltime(log : str):
     return parse_float(log, "Wallclock time: ", " seconds")
@@ -149,11 +195,11 @@ def parse_storm_log(log : str, what : str):
             sublog = sublog[sublog.find("Size of output file is ") + 1:]
         return size if size > 0 else None
 
-def create_csv(log_dir : str, what : str, not_available_str : str = "N/A"):
+def create_csv(log_dir : str, what : str):
     row_headers = []
     column_headers = []
     contents = dict() # rows -> columns --> values
-    for logfile in os.listdir(log_dir):
+    for logfile in sorted(os.listdir(log_dir)):
         if not logfile.endswith(".log"):
             continue
         parts = logfile[:-4].split("_")
@@ -192,7 +238,16 @@ def create_csv(log_dir : str, what : str, not_available_str : str = "N/A"):
         else:
             raise AssertionError("Unexpected tool: {}".format(tool))
         if value is None:
-            contents[row][column][rep] = not_available_str
+            if is_timeout(log_content):
+                contents[row][column][rep] = "TO"
+            elif is_memout(log_content):
+                contents[row][column][rep] = "MO"
+            elif is_input_file_not_found(log_content):
+                contents[row][column][rep] = ""
+            elif is_not_supported(log_content):
+                contents[row][column][rep] = "NS"
+            else:
+                contents[row][column][rep] = "ERR"
         else:
             contents[row][column][rep] = value
     column_headers.sort()
@@ -204,7 +259,7 @@ def create_csv(log_dir : str, what : str, not_available_str : str = "N/A"):
             if row in contents and column in contents[row]:
                 line.append(contents[row][column])
             else:
-                line.append(not_available_str)
+                line.append("")
         csv_lines.append(line)
     return csv_lines
 
@@ -218,16 +273,16 @@ if __name__ == "__main__":
     # raw data
     import_csv = create_csv(log_dir, IMPORT_TIME)
     save_csv(import_csv, IMPORT_TIME)
-    imp_t = avg_csv(import_csv, IMPORT_TIME)
+    imp_t = median_csv(import_csv, IMPORT_TIME)
     full_csv = create_csv(log_dir, FULL_TIME)
     save_csv(full_csv, FULL_TIME)
-    full_t = avg_csv(full_csv, FULL_TIME)
+    full_t = median_csv(full_csv, FULL_TIME)
     export_csv = create_csv(log_dir, EXPORT_TIME)
     save_csv(export_csv, EXPORT_TIME)
-    exp_t = avg_csv(export_csv, EXPORT_TIME)
+    exp_t = median_csv(export_csv, EXPORT_TIME)
     size_csv = create_csv(log_dir, EXPORT_SIZE)
     save_csv(size_csv, EXPORT_SIZE)
-    size = avg_csv(size_csv, EXPORT_SIZE)
+    size = median_csv(size_csv, EXPORT_SIZE)
 
     # quantile
     quantile_csv(imp_t, IMPORT_TIME)
