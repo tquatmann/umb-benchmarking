@@ -1,0 +1,264 @@
+# Log files for modest_from-jani_check_unsafe on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+
+Parsed values: `[0.9, 0.9, 0.9, 1.0, 1.1]`
+
+
+
+### Log file: modest_from-jani_check_unsafe_cluster.64-2000-20_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+Wallclock time: 1306.579 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 151060 states.
+
+Peak memory usage: 139 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             151060
+  Choices:            151060
+  Branches:           733216
+  Rate:               186955 states/s
+  Peak memory:        85.01 MB
+  Final size:         12.34 MB
+  Size on disk:       3.59 MB
+  Time (exploration): 0.8 s
+  Time (merging):     0.1 s
+
++ Property qos1
+  Probability: 0.0010695396728838996
+  Bounds:      [0.0010445396728838941, 0.0010945396728839051]
+  Time:        1305.5 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             1305.5 s
+    Max. exit rate:   50.252
+    Iterations:       1
+    Final unif. rate: 50.252
+
+```
+
+
+
+### Log file: modest_from-jani_check_unsafe_cluster.64-2000-20_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+Wallclock time: 1358.761 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 151060 states.
+
+Peak memory usage: 140 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             151060
+  Choices:            151060
+  Branches:           733216
+  Rate:               184444 states/s
+  Peak memory:        85.02 MB
+  Final size:         12.34 MB
+  Size on disk:       3.59 MB
+  Time (exploration): 0.8 s
+  Time (merging):     0.1 s
+
++ Property qos1
+  Probability: 0.0010695396728838996
+  Bounds:      [0.0010445396728838941, 0.0010945396728839051]
+  Time:        1357.6 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             1357.6 s
+    Max. exit rate:   50.252
+    Iterations:       1
+    Final unif. rate: 50.252
+
+```
+
+
+
+### Log file: modest_from-jani_check_unsafe_cluster.64-2000-20_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+Wallclock time: 1274.996 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 151060 states.
+
+Peak memory usage: 143 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             151060
+  Choices:            151060
+  Branches:           733216
+  Rate:               182220 states/s
+  Peak memory:        85.02 MB
+  Final size:         12.34 MB
+  Size on disk:       3.59 MB
+  Time (exploration): 0.8 s
+  Time (merging):     0.1 s
+
++ Property qos1
+  Probability: 0.0010695396728838996
+  Bounds:      [0.0010445396728838941, 0.0010945396728839051]
+  Time:        1273.8 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             1273.8 s
+    Max. exit rate:   50.252
+    Iterations:       1
+    Final unif. rate: 50.252
+
+```
+
+
+
+### Log file: modest_from-jani_check_unsafe_cluster.64-2000-20_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+Wallclock time: 1630.289 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 151060 states.
+
+Peak memory usage: 142 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             151060
+  Choices:            151060
+  Branches:           733216
+  Rate:               167658 states/s
+  Peak memory:        85.02 MB
+  Final size:         12.34 MB
+  Size on disk:       3.59 MB
+  Time (exploration): 0.9 s
+  Time (merging):     0.1 s
+
++ Property qos1
+  Probability: 0.0010695396728838996
+  Bounds:      [0.0010445396728838941, 0.0010945396728839051]
+  Time:        1629.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             1629.0 s
+    Max. exit rate:   50.252
+    Iterations:       1
+    Final unif. rate: 50.252
+
+```
+
+
+
+### Log file: modest_from-jani_check_unsafe_cluster.64-2000-20_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+Wallclock time: 1493.891 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/cluster.64-2000-20/model.jani --unsafe -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 151060 states.
+
+Peak memory usage: 140 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             151060
+  Choices:            151060
+  Branches:           733216
+  Rate:               155252 states/s
+  Peak memory:        85.01 MB
+  Final size:         12.34 MB
+  Size on disk:       3.59 MB
+  Time (exploration): 1.0 s
+  Time (merging):     0.1 s
+
++ Property qos1
+  Probability: 0.0010695396728838996
+  Bounds:      [0.0010445396728838941, 0.0010945396728839051]
+  Time:        1492.6 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             1492.6 s
+    Max. exit rate:   50.252
+    Iterations:       1
+    Final unif. rate: 50.252
+
+```
+

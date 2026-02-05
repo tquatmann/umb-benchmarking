@@ -1,0 +1,288 @@
+# Log files for modest_from-jani_to-imca_default on model [nand.40-4](../../models/nand.40-4)
+
+Parsed values: `[1.2, 1.5, 1.3, 1.4, 1.4]`
+
+
+
+### Log file: modest_from-jani_to-imca_default_nand.40-4_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model.mrm IMCA  -D --exhaustive
+Wallclock time: 6.359 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model.mrm IMCA -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-imca_default/nand.40-4/model.mrm".
+
+Peak memory usage: 427 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               919219 states/s
+  Peak memory:        134.67 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 4.4 s
+  Time (merging):     0.5 s
+
++ Export to IMCA
+  Time:      1.2 s
+  File size: 143.61 MB
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-imca_default/nand.40-4/model.mrm:	Size of output file is 150583740 bytes
+```
+
+
+
+### Log file: modest_from-jani_to-imca_default_nand.40-4_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model_rep2.mrm IMCA  -D --exhaustive
+Wallclock time: 7.910 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model_rep2.mrm IMCA -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-imca_default/nand.40-4/model_rep2.mrm".
+
+Peak memory usage: 426 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               730506 states/s
+  Peak memory:        153.79 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 5.5 s
+  Time (merging):     0.6 s
+
++ Export to IMCA
+  Time:      1.5 s
+  File size: 143.61 MB
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-imca_default/nand.40-4/model_rep2.mrm:	Size of output file is 150583740 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: modest_from-jani_to-imca_default_nand.40-4_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model_rep3.mrm IMCA  -D --exhaustive
+Wallclock time: 7.133 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model_rep3.mrm IMCA -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-imca_default/nand.40-4/model_rep3.mrm".
+
+Peak memory usage: 427 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               815231 states/s
+  Peak memory:        134.68 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 4.9 s
+  Time (merging):     0.5 s
+
++ Export to IMCA
+  Time:      1.3 s
+  File size: 143.61 MB
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-imca_default/nand.40-4/model_rep3.mrm:	Size of output file is 150583740 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: modest_from-jani_to-imca_default_nand.40-4_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model_rep4.mrm IMCA  -D --exhaustive
+Wallclock time: 7.892 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model_rep4.mrm IMCA -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-imca_default/nand.40-4/model_rep4.mrm".
+
+Peak memory usage: 426 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               731441 states/s
+  Peak memory:        153.79 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 5.5 s
+  Time (merging):     0.6 s
+
++ Export to IMCA
+  Time:      1.4 s
+  File size: 143.61 MB
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-imca_default/nand.40-4/model_rep4.mrm:	Size of output file is 150583740 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: modest_from-jani_to-imca_default_nand.40-4_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model_rep5.mrm IMCA  -D --exhaustive
+Wallclock time: 7.386 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani --statespace out/modest_from-jani_to-imca_default/nand.40-4/model_rep5.mrm IMCA -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-imca_default/nand.40-4/model_rep5.mrm".
+
+Peak memory usage: 426 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               787773 states/s
+  Peak memory:        153.78 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 5.1 s
+  Time (merging):     0.6 s
+
++ Export to IMCA
+  Time:      1.4 s
+  File size: 143.61 MB
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-imca_default/nand.40-4/model_rep5.mrm:	Size of output file is 150583740 bytes
+Removing output file to save space for repetition #5
+```
+

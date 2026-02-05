@@ -1,0 +1,224 @@
+# Log files for modest_from-umb-xz_check_default on model [majority.2100](../../models/majority.2100)
+
+Parsed values: `[487.641, 427.05, 465.426, 437.789, 467.854]`
+
+
+
+### Log file: modest_from-umb-xz_check_default_majority.2100_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB  -D --exhaustive
+Wallclock time: 487.641 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB -D --exhaustive
+
+
+
+
+Peak memory usage: 135 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            192000
+  Choices:           192000
+  Branches:          1961600
+  Time (decompress): 0.5 s
+  Time (validate):   0.5 s
+  Time (load):       0.5 s
+
++ Property change_state
+  Probability: 0.054324193162944165
+  Bounds:      [0.05429919316294412, 0.05434919316294422]
+  Time:        487.0 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             487.0 s
+    Max. exit rate:   3.222771171745222
+    Iterations:       1
+    Final unif. rate: 3.222771171745222
+
+```
+
+
+
+### Log file: modest_from-umb-xz_check_default_majority.2100_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB  -D --exhaustive
+Wallclock time: 427.050 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB -D --exhaustive
+
+
+
+
+Peak memory usage: 132 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            192000
+  Choices:           192000
+  Branches:          1961600
+  Time (decompress): 0.4 s
+  Time (validate):   0.4 s
+  Time (load):       0.4 s
+
++ Property change_state
+  Probability: 0.054324193162944165
+  Bounds:      [0.05429919316294412, 0.05434919316294422]
+  Time:        426.5 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             426.5 s
+    Max. exit rate:   3.222771171745222
+    Iterations:       1
+    Final unif. rate: 3.222771171745222
+
+```
+
+
+
+### Log file: modest_from-umb-xz_check_default_majority.2100_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB  -D --exhaustive
+Wallclock time: 465.426 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB -D --exhaustive
+
+
+
+
+Peak memory usage: 134 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            192000
+  Choices:           192000
+  Branches:          1961600
+  Time (decompress): 0.4 s
+  Time (validate):   0.4 s
+  Time (load):       0.4 s
+
++ Property change_state
+  Probability: 0.054324193162944165
+  Bounds:      [0.05429919316294412, 0.05434919316294422]
+  Time:        464.8 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             464.8 s
+    Max. exit rate:   3.222771171745222
+    Iterations:       1
+    Final unif. rate: 3.222771171745222
+
+```
+
+
+
+### Log file: modest_from-umb-xz_check_default_majority.2100_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB  -D --exhaustive
+Wallclock time: 437.789 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB -D --exhaustive
+
+
+
+
+Peak memory usage: 134 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            192000
+  Choices:           192000
+  Branches:          1961600
+  Time (decompress): 0.4 s
+  Time (validate):   0.4 s
+  Time (load):       0.4 s
+
++ Property change_state
+  Probability: 0.054324193162944165
+  Bounds:      [0.05429919316294412, 0.05434919316294422]
+  Time:        437.3 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             437.3 s
+    Max. exit rate:   3.222771171745222
+    Iterations:       1
+    Final unif. rate: 3.222771171745222
+
+```
+
+
+
+### Log file: modest_from-umb-xz_check_default_majority.2100_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB  -D --exhaustive
+Wallclock time: 467.854 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/majority.2100/modest.model.umb.xz models/majority.2100/modest.umbxz.properties.txt -I UMB -D --exhaustive
+
+
+
+
+Peak memory usage: 137 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            192000
+  Choices:           192000
+  Branches:          1961600
+  Time (decompress): 0.4 s
+  Time (validate):   0.5 s
+  Time (load):       0.5 s
+
++ Property change_state
+  Probability: 0.054324193162944165
+  Bounds:      [0.05429919316294412, 0.05434919316294422]
+  Time:        467.2 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+
+  + Unif+
+    Time:             467.2 s
+    Max. exit rate:   3.222771171745222
+    Iterations:       1
+    Final unif. rate: 3.222771171745222
+
+```
+

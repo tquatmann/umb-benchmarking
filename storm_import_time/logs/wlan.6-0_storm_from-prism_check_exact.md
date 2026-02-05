@@ -1,0 +1,224 @@
+# Log files for storm_from-prism_check_exact on model [wlan.6-0](../../models/wlan.6-0)
+
+Parsed values: `[32.165, 37.123, 36.977, 35.893, 31.129]`
+
+
+
+### Log file: storm_from-prism_check_exact_wlan.6-0_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Wallclock time: 37.491 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:22:26 2026
+Command line arguments: --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.038s.
+
+Time for model construction: 32.127s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": P>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 4.680s.
+
+Performance statistics:
+  * peak memory usage: 2936MB
+  * CPU time: 36.321s
+  * wallclock time: 37.087s
+```
+
+
+
+### Log file: storm_from-prism_check_exact_wlan.6-0_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Wallclock time: 44.512 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:29:04 2026
+Command line arguments: --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.034s.
+
+Time for model construction: 37.089s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": P>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 5.092s.
+
+Performance statistics:
+  * peak memory usage: 2935MB
+  * CPU time: 41.449s
+  * wallclock time: 42.455s
+```
+
+
+
+### Log file: storm_from-prism_check_exact_wlan.6-0_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Wallclock time: 42.730 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:06 2026
+Command line arguments: --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.019s.
+
+Time for model construction: 36.958s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": P>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 5.072s.
+
+Performance statistics:
+  * peak memory usage: 2934MB
+  * CPU time: 41.310s
+  * wallclock time: 42.294s
+```
+
+
+
+### Log file: storm_from-prism_check_exact_wlan.6-0_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Wallclock time: 41.336 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 03:12:48 2026
+Command line arguments: --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.042s.
+
+Time for model construction: 35.851s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": P>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 4.788s.
+
+Performance statistics:
+  * peak memory usage: 2935MB
+  * CPU time: 40.039s
+  * wallclock time: 40.918s
+```
+
+
+
+### Log file: storm_from-prism_check_exact_wlan.6-0_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Wallclock time: 36.457 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 01:04:02 2026
+Command line arguments: --timemem --buildfull --prism models/wlan.6-0/model.prism --prismcompat --prop models/wlan.6-0/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.027s.
+
+Time for model construction: 31.102s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": P>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 4.701s.
+
+Performance statistics:
+  * peak memory usage: 2935MB
+  * CPU time: 35.241s
+  * wallclock time: 36.069s
+```
+

@@ -1,0 +1,219 @@
+# Log files for storm_from-umb-gz_check_exact on model [majority.2100](../../models/majority.2100)
+
+Parsed values: `[2.055, 2.244, 8.735, 2.179, 2.259]`
+
+
+
+### Log file: storm_from-umb-gz_check_exact_majority.2100_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Wallclock time: 2.156 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:28:09 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.022s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.239s seconds.
+Time for model construction: 2.055s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	192000
+Transitions: 	1961600
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 3000 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 324MB
+  * CPU time: 1.968s
+  * wallclock time: 2.089s
+```
+
+
+
+### Log file: storm_from-umb-gz_check_exact_majority.2100_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Wallclock time: 2.485 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 02:53:48 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.019s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.296s seconds.
+Time for model construction: 2.244s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	192000
+Transitions: 	1961600
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 3000 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 324MB
+  * CPU time: 2.102s
+  * wallclock time: 2.333s
+```
+
+
+
+### Log file: storm_from-umb-gz_check_exact_majority.2100_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Wallclock time: 9.125 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:36:37 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.026s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.889s seconds.
+Time for model construction: 8.735s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	192000
+Transitions: 	1961600
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 3000 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 324MB
+  * CPU time: 8.570s
+  * wallclock time: 8.870s
+```
+
+
+
+### Log file: storm_from-umb-gz_check_exact_majority.2100_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Wallclock time: 2.363 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:07 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.008s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.285s seconds.
+Time for model construction: 2.179s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	192000
+Transitions: 	1961600
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 3000 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 324MB
+  * CPU time: 1.994s
+  * wallclock time: 2.280s
+```
+
+
+
+### Log file: storm_from-umb-gz_check_exact_majority.2100_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Wallclock time: 2.382 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:18:00 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/majority.2100/storm.model.exact.umb.gz --prop models/majority.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.018s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.282s seconds.
+Time for model construction: 2.259s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	192000
+Transitions: 	1961600
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 3000 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 324MB
+  * CPU time: 2.165s
+  * wallclock time: 2.310s
+```
+

@@ -1,0 +1,226 @@
+# Log files for modest_from-jani_to-umb_memory on model [wlan.5-0](../../models/wlan.5-0)
+
+Parsed values: `[70747676.0, 70747676.0, 70747676.0, 70747676.0, 70747676.0]`
+
+
+
+### Log file: modest_from-jani_to-umb_memory_wlan.5-0_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties.txt -S Memory -D --exhaustive
+Wallclock time: 0.200 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "s1" into 12 locations in automaton "station1".
+model.jani:variables[4]: info: Expanding variable "s2" into 12 locations in automaton "station2".
+model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb_memory/wlan.5-0/model.umb" already exists.
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/wlan.5-0/model.umb:	Size of output file is 70747648 bytes
+out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties.txt:	Size of output file is 28 bytes
+```
+
+
+
+### Log file: modest_from-jani_to-umb_memory_wlan.5-0_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep2.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep2.txt -S Memory -D --exhaustive
+Wallclock time: 1.862 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep2.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep2.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "s1" into 12 locations in automaton "station1".
+model.jani:variables[4]: info: Expanding variable "s2" into 12 locations in automaton "station2".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 1295218 states.
+
+Peak memory usage: 486 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             1295218
+  Choices:            1646074
+  Branches:           2929960
+  Rate:               935175 states/s
+  Peak memory:        180.79 MB
+  Final size:         10.04 MB
+  Time (exploration): 1.4 s
+  Time (merging):     0.0 s
+
++ UMB export
+  Time:        0.1 s
+  File size:   67.47 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep2.umb:	Size of output file is 70747648 bytes
+Removing output file to save space for repetition #2
+out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep2.txt:	Size of output file is 28 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: modest_from-jani_to-umb_memory_wlan.5-0_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep3.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep3.txt -S Memory -D --exhaustive
+Wallclock time: 1.779 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep3.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep3.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "s1" into 12 locations in automaton "station1".
+model.jani:variables[4]: info: Expanding variable "s2" into 12 locations in automaton "station2".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 1295218 states.
+
+Peak memory usage: 487 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             1295218
+  Choices:            1646074
+  Branches:           2929960
+  Rate:               939926 states/s
+  Peak memory:        180.80 MB
+  Final size:         10.04 MB
+  Time (exploration): 1.4 s
+  Time (merging):     0.0 s
+
++ UMB export
+  Time:        0.1 s
+  File size:   67.47 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep3.umb:	Size of output file is 70747648 bytes
+Removing output file to save space for repetition #3
+out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep3.txt:	Size of output file is 28 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: modest_from-jani_to-umb_memory_wlan.5-0_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep4.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep4.txt -S Memory -D --exhaustive
+Wallclock time: 1.765 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep4.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep4.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "s1" into 12 locations in automaton "station1".
+model.jani:variables[4]: info: Expanding variable "s2" into 12 locations in automaton "station2".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 1295218 states.
+
+Peak memory usage: 489 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             1295218
+  Choices:            1646074
+  Branches:           2929960
+  Rate:               997089 states/s
+  Peak memory:        180.80 MB
+  Final size:         10.04 MB
+  Time (exploration): 1.3 s
+  Time (merging):     0.0 s
+
++ UMB export
+  Time:        0.1 s
+  File size:   67.47 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep4.umb:	Size of output file is 70747648 bytes
+Removing output file to save space for repetition #4
+out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep4.txt:	Size of output file is 28 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: modest_from-jani_to-umb_memory_wlan.5-0_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep5.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep5.txt -S Memory -D --exhaustive
+Wallclock time: 1.734 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/wlan.5-0/model.jani --umb out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep5.umb out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep5.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "s1" into 12 locations in automaton "station1".
+model.jani:variables[4]: info: Expanding variable "s2" into 12 locations in automaton "station2".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 1295218 states.
+
+Peak memory usage: 487 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             1295218
+  Choices:            1646074
+  Branches:           2929960
+  Rate:               977523 states/s
+  Peak memory:        180.81 MB
+  Final size:         10.04 MB
+  Time (exploration): 1.3 s
+  Time (merging):     0.0 s
+
++ UMB export
+  Time:        0.1 s
+  File size:   67.47 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/wlan.5-0/model_rep5.umb:	Size of output file is 70747648 bytes
+Removing output file to save space for repetition #5
+out/modest_from-jani_to-umb_memory/wlan.5-0/umb.properties_rep5.txt:	Size of output file is 28 bytes
+Removing output file to save space for repetition #5
+```
+

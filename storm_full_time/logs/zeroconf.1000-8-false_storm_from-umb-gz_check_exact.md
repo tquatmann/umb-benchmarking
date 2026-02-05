@@ -1,0 +1,209 @@
+# Log files for storm_from-umb-gz_check_exact on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+
+Parsed values: `[TO, TO, TO, TO, TO]`
+
+
+
+### Log file: storm_from-umb-gz_check_exact_zeroconf.1000-8-false_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Wallclock time: 7203.025 seconds
+Return code: None (timeout)
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:47:23 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.015s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.318s seconds.
+Time for model construction: 2.517s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	1870338
+Transitions: 	4245554
+Choices: 	3443961
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 16523 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "correct_max": Pmax=? [F "target"] ...
+
+##############################Output to stderr##############################
+ERROR: The program received signal 15 and will be aborted in 3s.
+Received signal 14
+```
+
+
+
+### Log file: storm_from-umb-gz_check_exact_zeroconf.1000-8-false_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Wallclock time: 7203.045 seconds
+Return code: None (timeout)
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:29:07 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.003s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.304s seconds.
+Time for model construction: 2.111s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	1870338
+Transitions: 	4245554
+Choices: 	3443961
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 16523 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "correct_max": Pmax=? [F "target"] ...
+
+##############################Output to stderr##############################
+ERROR: The program received signal 15 and will be aborted in 3s.
+Received signal 14
+```
+
+
+
+### Log file: storm_from-umb-gz_check_exact_zeroconf.1000-8-false_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Wallclock time: 7203.148 seconds
+Return code: None (timeout)
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 01:08:07 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.017s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.274s seconds.
+Time for model construction: 2.176s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	1870338
+Transitions: 	4245554
+Choices: 	3443961
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 16523 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "correct_max": Pmax=? [F "target"] ...
+
+##############################Output to stderr##############################
+ERROR: The program received signal 15 and will be aborted in 3s.
+Received signal 14
+```
+
+
+
+### Log file: storm_from-umb-gz_check_exact_zeroconf.1000-8-false_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Wallclock time: 7203.106 seconds
+Return code: None (timeout)
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 03:14:19 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.012s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.336s seconds.
+Time for model construction: 2.324s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	1870338
+Transitions: 	4245554
+Choices: 	3443961
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 16523 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "correct_max": Pmax=? [F "target"] ...
+
+##############################Output to stderr##############################
+ERROR: The program received signal 15 and will be aborted in 3s.
+Received signal 14
+```
+
+
+
+### Log file: storm_from-umb-gz_check_exact_zeroconf.1000-8-false_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Wallclock time: 7203.024 seconds
+Return code: None (timeout)
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 02:50:43 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/zeroconf.1000-8-false/storm.model.exact.umb.gz --prop models/zeroconf.1000-8-false/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.009s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.252s seconds.
+Time for model construction: 2.035s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	1870338
+Transitions: 	4245554
+Choices: 	3443961
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 16523 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "correct_max": Pmax=? [F "target"] ...
+
+##############################Output to stderr##############################
+ERROR: The program received signal 15 and will be aborted in 3s.
+Received signal 14
+```
+

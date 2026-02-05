@@ -1,0 +1,220 @@
+# Log files for modest_from-jani_to-umb-xz_default on model [egl.10-2](../../models/egl.10-2)
+
+Parsed values: `[ERR, 223.7, 263.1, 236.9, 242.9]`
+
+
+
+### Log file: modest_from-jani_to-umb-xz_default_egl.10-2_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties.txt --umb-compress XZ  -D --exhaustive
+Wallclock time: 0.612 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties.txt --umb-compress XZ -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb.xz" already exists.
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb.xz:	Size of output file is 32370812 bytes
+out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties.txt:	Size of output file is 26 bytes
+```
+
+
+
+### Log file: modest_from-jani_to-umb-xz_default_egl.10-2_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep2.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep2.txt --umb-compress XZ  -D --exhaustive
+Wallclock time: 331.064 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep2.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep2.txt --umb-compress XZ -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani: info: Need 88 bytes per state.
+model.jani: info: Explored 66060286 states.
+
+Peak memory usage: 9142 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         88 bytes
+  States:             66060286
+  Choices:            66060286
+  Branches:           67108861
+  Rate:               646180 states/s
+  Peak memory:        6941.97 MB
+  Final size:         1528.00 MB
+  Size on disk:       255.83 MB
+  Time (exploration): 102.2 s
+  Time (merging):     4.7 s
+
++ UMB export
+  Time:        223.7 s
+  File size:   30.87 MB
+  Compression: XZ (Optimal)
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep2.xz:	Size of output file is 32373976 bytes
+Removing output file to save space for repetition #2
+out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep2.txt:	Size of output file is 26 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: modest_from-jani_to-umb-xz_default_egl.10-2_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep3.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep3.txt --umb-compress XZ  -D --exhaustive
+Wallclock time: 379.524 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep3.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep3.txt --umb-compress XZ -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani: info: Need 88 bytes per state.
+model.jani: info: Explored 66060286 states.
+
+Peak memory usage: 9143 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         88 bytes
+  States:             66060286
+  Choices:            66060286
+  Branches:           67108861
+  Rate:               595653 states/s
+  Peak memory:        6942.24 MB
+  Final size:         1528.00 MB
+  Size on disk:       255.83 MB
+  Time (exploration): 110.9 s
+  Time (merging):     5.1 s
+
++ UMB export
+  Time:        263.1 s
+  File size:   30.88 MB
+  Compression: XZ (Optimal)
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep3.xz:	Size of output file is 32378216 bytes
+Removing output file to save space for repetition #3
+out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep3.txt:	Size of output file is 26 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: modest_from-jani_to-umb-xz_default_egl.10-2_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep4.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep4.txt --umb-compress XZ  -D --exhaustive
+Wallclock time: 354.745 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep4.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep4.txt --umb-compress XZ -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani: info: Need 88 bytes per state.
+model.jani: info: Explored 66060286 states.
+
+Peak memory usage: 9144 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         88 bytes
+  States:             66060286
+  Choices:            66060286
+  Branches:           67108861
+  Rate:               590346 states/s
+  Peak memory:        6942.26 MB
+  Final size:         1528.00 MB
+  Size on disk:       255.83 MB
+  Time (exploration): 111.9 s
+  Time (merging):     5.4 s
+
++ UMB export
+  Time:        236.9 s
+  File size:   30.87 MB
+  Compression: XZ (Optimal)
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep4.xz:	Size of output file is 32373724 bytes
+Removing output file to save space for repetition #4
+out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep4.txt:	Size of output file is 26 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: modest_from-jani_to-umb-xz_default_egl.10-2_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep5.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep5.txt --umb-compress XZ  -D --exhaustive
+Wallclock time: 363.407 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/egl.10-2/model.jani --umb out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep5.xz out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep5.txt --umb-compress XZ -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani: info: Need 88 bytes per state.
+model.jani: info: Explored 66060286 states.
+
+Peak memory usage: 9143 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         88 bytes
+  States:             66060286
+  Choices:            66060286
+  Branches:           67108861
+  Rate:               576744 states/s
+  Peak memory:        6942.37 MB
+  Final size:         1528.00 MB
+  Size on disk:       255.83 MB
+  Time (exploration): 114.6 s
+  Time (merging):     5.6 s
+
++ UMB export
+  Time:        242.9 s
+  File size:   30.87 MB
+  Compression: XZ (Optimal)
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_default/egl.10-2/model.umb_rep5.xz:	Size of output file is 32373172 bytes
+Removing output file to save space for repetition #5
+out/modest_from-jani_to-umb-xz_default/egl.10-2/umbxz.properties_rep5.txt:	Size of output file is 26 bytes
+Removing output file to save space for repetition #5
+```
+

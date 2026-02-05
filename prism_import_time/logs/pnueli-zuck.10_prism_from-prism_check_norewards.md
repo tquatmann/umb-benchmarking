@@ -1,0 +1,369 @@
+# Log files for prism_from-prism_check_norewards on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+
+Parsed values: `[0.832, 0.804, 0.672, 1.168, 0.868]`
+
+
+
+### Log file: prism_from-prism_check_norewards_pnueli-zuck.10_rep1.log
+
+```
+Command(s):
+../bin/prism  models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+Wallclock time: 9.193 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:43:12 GMT+01:00 2026
+Hostname: n23m0288.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Parsing properties file "models/pnueli-zuck.10/property.props"...
+
+1 property:
+(1) "live": Pmax=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "live": Pmax=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.75 seconds (average 0.010274, setup 0.00)
+
+Time for model construction: 0.832 seconds.
+
+Type:        MDP
+States:      69994757110 (1 initial)
+Transitions: 891923978050
+
+Transition matrix: 22186 nodes (3 terminal), 891923978050 minterms, vars: 40r/40c/10nd
+
+Warning: Switching to MTBDD engine, as number of states is too large for Hybrid engine.
+
+Prob0A: 90 iterations in 3.72 seconds (average 0.041333, setup 0.00)
+
+Prob1E: 91 iterations in 3.98 seconds (average 0.043736, setup 0.00)
+
+yes = 69994757110, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 7.723 seconds.
+
+Result: 1.0 (exact floating point)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_norewards_pnueli-zuck.10_rep2.log
+
+```
+Command(s):
+../bin/prism  models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+Wallclock time: 9.843 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 22:08:07 GMT+01:00 2026
+Hostname: r23m0175.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Parsing properties file "models/pnueli-zuck.10/property.props"...
+
+1 property:
+(1) "live": Pmax=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "live": Pmax=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.65 seconds (average 0.008904, setup 0.00)
+
+Time for model construction: 0.804 seconds.
+
+Type:        MDP
+States:      69994757110 (1 initial)
+Transitions: 891923978050
+
+Transition matrix: 22186 nodes (3 terminal), 891923978050 minterms, vars: 40r/40c/10nd
+
+Warning: Switching to MTBDD engine, as number of states is too large for Hybrid engine.
+
+Prob0A: 90 iterations in 3.23 seconds (average 0.035889, setup 0.00)
+
+Prob1E: 91 iterations in 3.47 seconds (average 0.038132, setup 0.00)
+
+yes = 69994757110, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 6.752 seconds.
+
+Result: 1.0 (exact floating point)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_norewards_pnueli-zuck.10_rep3.log
+
+```
+Command(s):
+../bin/prism  models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+Wallclock time: 8.064 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:38:21 GMT+01:00 2026
+Hostname: r23m0152.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Parsing properties file "models/pnueli-zuck.10/property.props"...
+
+1 property:
+(1) "live": Pmax=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "live": Pmax=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.59 seconds (average 0.008082, setup 0.00)
+
+Time for model construction: 0.672 seconds.
+
+Type:        MDP
+States:      69994757110 (1 initial)
+Transitions: 891923978050
+
+Transition matrix: 22186 nodes (3 terminal), 891923978050 minterms, vars: 40r/40c/10nd
+
+Warning: Switching to MTBDD engine, as number of states is too large for Hybrid engine.
+
+Prob0A: 90 iterations in 3.26 seconds (average 0.036222, setup 0.00)
+
+Prob1E: 91 iterations in 3.42 seconds (average 0.037582, setup 0.00)
+
+yes = 69994757110, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 6.723 seconds.
+
+Result: 1.0 (exact floating point)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_norewards_pnueli-zuck.10_rep4.log
+
+```
+Command(s):
+../bin/prism  models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+Wallclock time: 11.288 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 00:52:29 GMT+01:00 2026
+Hostname: r23m0198.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Parsing properties file "models/pnueli-zuck.10/property.props"...
+
+1 property:
+(1) "live": Pmax=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "live": Pmax=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 1.05 seconds (average 0.014384, setup 0.00)
+
+Time for model construction: 1.168 seconds.
+
+Type:        MDP
+States:      69994757110 (1 initial)
+Transitions: 891923978050
+
+Transition matrix: 22186 nodes (3 terminal), 891923978050 minterms, vars: 40r/40c/10nd
+
+Warning: Switching to MTBDD engine, as number of states is too large for Hybrid engine.
+
+Prob0A: 90 iterations in 4.66 seconds (average 0.051778, setup 0.00)
+
+Prob1E: 91 iterations in 4.66 seconds (average 0.051209, setup 0.00)
+
+yes = 69994757110, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 9.352 seconds.
+
+Result: 1.0 (exact floating point)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_norewards_pnueli-zuck.10_rep5.log
+
+```
+Command(s):
+../bin/prism  models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+Wallclock time: 9.993 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:05:34 GMT+01:00 2026
+Hostname: n23m0251.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pnueli-zuck.10/model.prism models/pnueli-zuck.10/property.props
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Parsing properties file "models/pnueli-zuck.10/property.props"...
+
+1 property:
+(1) "live": Pmax=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "live": Pmax=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.78 seconds (average 0.010685, setup 0.00)
+
+Time for model construction: 0.868 seconds.
+
+Type:        MDP
+States:      69994757110 (1 initial)
+Transitions: 891923978050
+
+Transition matrix: 22186 nodes (3 terminal), 891923978050 minterms, vars: 40r/40c/10nd
+
+Warning: Switching to MTBDD engine, as number of states is too large for Hybrid engine.
+
+Prob0A: 90 iterations in 4.07 seconds (average 0.045222, setup 0.00)
+
+Prob1E: 91 iterations in 4.37 seconds (average 0.048022, setup 0.00)
+
+yes = 69994757110, no = 0, maybe = 0
+
+Value in the initial state: 1.0
+
+Time for model checking: 8.473 seconds.
+
+Result: 1.0 (exact floating point)
+
+---------------------------------------------------------------------
+
+Note: There was 1 warning during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+

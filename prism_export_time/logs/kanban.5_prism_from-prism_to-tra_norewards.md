@@ -1,0 +1,282 @@
+# Log files for prism_from-prism_to-tra_norewards on model [kanban.5](../../models/kanban.5)
+
+Parsed values: `[16.044, 16.789, 15.892, 20.596, 18.248]`
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_kanban.5_rep1.log
+
+```
+Command(s):
+../bin/prism  models/kanban.5/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/kanban.5/model.tra,lab:precision=17
+Wallclock time: 16.699 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:42:36 GMT+01:00 2026
+Hostname: r23m0088.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/kanban.5/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/kanban.5/model.tra,lab:precision=17'
+
+Parsing PRISM model file "models/kanban.5/model.prism"...
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4
+Actions:     [] [in] [s1] [s2]
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4
+Rewards:     "throughput"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 71 iterations in 0.10 seconds (average 0.001408, setup 0.00)
+
+Time for model construction: 0.118 seconds.
+
+Type:        CTMC
+States:      2546432 (1 initial)
+Transitions: 24460016
+
+Rate matrix: 6308 nodes (14 terminal), 24460016 minterms, vars: 48r/48c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model.lab"...
+Time for exporting: 16.044 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/kanban.5/model.tra:	Size of output file is 828977159 bytes
+out/prism_from-prism_to-tra_norewards/kanban.5/model.lab:	Size of output file is 27 bytes
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_kanban.5_rep2.log
+
+```
+Command(s):
+../bin/prism  models/kanban.5/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/kanban.5/model_rep2.tra,lab:precision=17
+Wallclock time: 17.580 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:52 GMT+01:00 2026
+Hostname: n23m0133.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/kanban.5/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/kanban.5/model_rep2.tra,lab:precision=17'
+
+Parsing PRISM model file "models/kanban.5/model.prism"...
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4
+Actions:     [] [in] [s1] [s2]
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4
+Rewards:     "throughput"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 71 iterations in 0.09 seconds (average 0.001268, setup 0.00)
+
+Time for model construction: 0.143 seconds.
+
+Type:        CTMC
+States:      2546432 (1 initial)
+Transitions: 24460016
+
+Rate matrix: 6308 nodes (14 terminal), 24460016 minterms, vars: 48r/48c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model_rep2.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model_rep2.lab"...
+Time for exporting: 16.789 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/kanban.5/model_rep2.tra:	Size of output file is 828977159 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_norewards/kanban.5/model_rep2.lab:	Size of output file is 27 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_kanban.5_rep3.log
+
+```
+Command(s):
+../bin/prism  models/kanban.5/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/kanban.5/model_rep3.tra,lab:precision=17
+Wallclock time: 16.515 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:36:50 GMT+01:00 2026
+Hostname: n23m0313.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/kanban.5/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/kanban.5/model_rep3.tra,lab:precision=17'
+
+Parsing PRISM model file "models/kanban.5/model.prism"...
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4
+Actions:     [] [in] [s1] [s2]
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4
+Rewards:     "throughput"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 71 iterations in 0.10 seconds (average 0.001408, setup 0.00)
+
+Time for model construction: 0.11 seconds.
+
+Type:        CTMC
+States:      2546432 (1 initial)
+Transitions: 24460016
+
+Rate matrix: 6308 nodes (14 terminal), 24460016 minterms, vars: 48r/48c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model_rep3.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model_rep3.lab"...
+Time for exporting: 15.892 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/kanban.5/model_rep3.tra:	Size of output file is 828977159 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_norewards/kanban.5/model_rep3.lab:	Size of output file is 27 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_kanban.5_rep4.log
+
+```
+Command(s):
+../bin/prism  models/kanban.5/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/kanban.5/model_rep4.tra,lab:precision=17
+Wallclock time: 21.578 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:10 GMT+01:00 2026
+Hostname: n23m0079.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/kanban.5/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/kanban.5/model_rep4.tra,lab:precision=17'
+
+Parsing PRISM model file "models/kanban.5/model.prism"...
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4
+Actions:     [] [in] [s1] [s2]
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4
+Rewards:     "throughput"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 71 iterations in 0.11 seconds (average 0.001549, setup 0.00)
+
+Time for model construction: 0.159 seconds.
+
+Type:        CTMC
+States:      2546432 (1 initial)
+Transitions: 24460016
+
+Rate matrix: 6308 nodes (14 terminal), 24460016 minterms, vars: 48r/48c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model_rep4.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model_rep4.lab"...
+Time for exporting: 20.596 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/kanban.5/model_rep4.tra:	Size of output file is 828977159 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_norewards/kanban.5/model_rep4.lab:	Size of output file is 27 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_kanban.5_rep5.log
+
+```
+Command(s):
+../bin/prism  models/kanban.5/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/kanban.5/model_rep5.tra,lab:precision=17
+Wallclock time: 19.016 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:26:56 GMT+01:00 2026
+Hostname: n23m0252.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/kanban.5/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/kanban.5/model_rep5.tra,lab:precision=17'
+
+Parsing PRISM model file "models/kanban.5/model.prism"...
+
+Type:        CTMC
+Modules:     k1 k2 k3 k4
+Actions:     [] [in] [s1] [s2]
+Variables:   w1 x1 y1 z1 w2 x2 y2 z2 w3 x3 y3 z3 w4 x4 y4 z4
+Rewards:     "throughput"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 71 iterations in 0.10 seconds (average 0.001408, setup 0.00)
+
+Time for model construction: 0.129 seconds.
+
+Type:        CTMC
+States:      2546432 (1 initial)
+Transitions: 24460016
+
+Rate matrix: 6308 nodes (14 terminal), 24460016 minterms, vars: 48r/48c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model_rep5.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/kanban.5/model_rep5.lab"...
+Time for exporting: 18.248 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/kanban.5/model_rep5.tra:	Size of output file is 828977159 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_norewards/kanban.5/model_rep5.lab:	Size of output file is 27 bytes
+Removing output file to save space for repetition #5
+```
+

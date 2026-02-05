@@ -1,0 +1,294 @@
+# Log files for storm_from-jani_check_cudd on model [eajs.6-300-13](../../models/eajs.6-300-13)
+
+Parsed values: `[30.734, 33.328, 27.87, 27.969, 27.617]`
+
+
+
+### Log file: storm_from-jani_check_cudd_eajs.6-300-13_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 30.734 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 08:02:37 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.368s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	7901694 (4897 nodes)
+Transitions: 	19722777 (43029 nodes)
+Choices: 	11897412
+Reward Models:  utilityLocal
+Variables: 	rows: 24 meta variables (58 DD variables), columns: 24 meta variables (58 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (59 nodes)
+   * emptyBattery
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 28.420s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	12068996
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * emptyBattery -> 28620 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): inf
+Time for model checking: 1.837s.
+
+Performance statistics:
+  * peak memory usage: 1169MB
+  * CPU time: 29.692s
+  * wallclock time: 30.687s
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_eajs.6-300-13_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 33.328 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:08 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.014s.
+
+Time for model construction: 0.274s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	7901694 (4897 nodes)
+Transitions: 	19722777 (43029 nodes)
+Choices: 	11897412
+Reward Models:  utilityLocal
+Variables: 	rows: 24 meta variables (58 DD variables), columns: 24 meta variables (58 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (59 nodes)
+   * emptyBattery
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 30.089s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	12068996
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * emptyBattery -> 28620 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): inf
+Time for model checking: 1.617s.
+
+Performance statistics:
+  * peak memory usage: 1169MB
+  * CPU time: 31.607s
+  * wallclock time: 32.046s
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_eajs.6-300-13_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 27.870 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:55:32 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 0.278s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	7901694 (4897 nodes)
+Transitions: 	19722777 (43029 nodes)
+Choices: 	11897412
+Reward Models:  utilityLocal
+Variables: 	rows: 24 meta variables (58 DD variables), columns: 24 meta variables (58 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (59 nodes)
+   * emptyBattery
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 25.915s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	12068996
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * emptyBattery -> 28620 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): inf
+Time for model checking: 1.581s.
+
+Performance statistics:
+  * peak memory usage: 1169MB
+  * CPU time: 27.454s
+  * wallclock time: 27.829s
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_eajs.6-300-13_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 27.969 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:07:16 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.028s.
+
+Time for model construction: 0.254s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	7901694 (4897 nodes)
+Transitions: 	19722777 (43029 nodes)
+Choices: 	11897412
+Reward Models:  utilityLocal
+Variables: 	rows: 24 meta variables (58 DD variables), columns: 24 meta variables (58 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (59 nodes)
+   * emptyBattery
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 25.964s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	12068996
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * emptyBattery -> 28620 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): inf
+Time for model checking: 1.523s.
+
+Performance statistics:
+  * peak memory usage: 1169MB
+  * CPU time: 27.410s
+  * wallclock time: 27.818s
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_eajs.6-300-13_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 27.617 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:55:32 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.6-300-13/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.267s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	7901694 (4897 nodes)
+Transitions: 	19722777 (43029 nodes)
+Choices: 	11897412
+Reward Models:  utilityLocal
+Variables: 	rows: 24 meta variables (58 DD variables), columns: 24 meta variables (58 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (59 nodes)
+   * emptyBattery
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 25.689s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	12068996
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * emptyBattery -> 28620 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): inf
+Time for model checking: 1.573s.
+
+Performance statistics:
+  * peak memory usage: 1169MB
+  * CPU time: 27.244s
+  * wallclock time: 27.583s
+```
+

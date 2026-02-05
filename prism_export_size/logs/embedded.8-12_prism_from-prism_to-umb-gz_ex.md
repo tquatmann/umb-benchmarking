@@ -1,0 +1,258 @@
+# Log files for prism_from-prism_to-umb-gz_ex on model [embedded.8-12](../../models/embedded.8-12)
+
+Parsed values: `[1246405.0, 1246405.0, 1246405.0, 1246405.0, 1246405.0]`
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_embedded.8-12_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/embedded.8-12/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.255 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 07:41:38 GMT+01:00 2026
+Hostname: r23m0130.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/embedded.8-12/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/embedded.8-12/model.prism"...
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus
+Actions:     [] [input_reboot] [output_reboot] [timeout]
+Variables:   s i a o m count comp reqi reqo
+Labels:      "fail_actuators" "l_down"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 8548 states
+Reachable states exploration and model construction done in 0.093 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.135 seconds.
+
+Type:        CTMC
+States:      8548 (1 initial)
+Transitions: 36041
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb.gz"...
+Time for exporting: 0.172 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb.gz:	Size of output file is 1246405 bytes
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_embedded.8-12_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/embedded.8-12/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.426 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:40 GMT+01:00 2026
+Hostname: n23m0120.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/embedded.8-12/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/embedded.8-12/model.prism"...
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus
+Actions:     [] [input_reboot] [output_reboot] [timeout]
+Variables:   s i a o m count comp reqi reqo
+Labels:      "fail_actuators" "l_down"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 8548 states
+Reachable states exploration and model construction done in 0.1 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.172 seconds.
+
+Type:        CTMC
+States:      8548 (1 initial)
+Transitions: 36041
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep2.gz"...
+Time for exporting: 0.191 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep2.gz:	Size of output file is 1246405 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_embedded.8-12_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/embedded.8-12/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.277 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:55:19 GMT+01:00 2026
+Hostname: n23m0109.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/embedded.8-12/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/embedded.8-12/model.prism"...
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus
+Actions:     [] [input_reboot] [output_reboot] [timeout]
+Variables:   s i a o m count comp reqi reqo
+Labels:      "fail_actuators" "l_down"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 8548 states
+Reachable states exploration and model construction done in 0.094 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.126 seconds.
+
+Type:        CTMC
+States:      8548 (1 initial)
+Transitions: 36041
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep3.gz"...
+Time for exporting: 0.171 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep3.gz:	Size of output file is 1246405 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_embedded.8-12_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/embedded.8-12/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.296 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:15:29 GMT+01:00 2026
+Hostname: n23m0344.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/embedded.8-12/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/embedded.8-12/model.prism"...
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus
+Actions:     [] [input_reboot] [output_reboot] [timeout]
+Variables:   s i a o m count comp reqi reqo
+Labels:      "fail_actuators" "l_down"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 8548 states
+Reachable states exploration and model construction done in 0.102 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.14 seconds.
+
+Type:        CTMC
+States:      8548 (1 initial)
+Transitions: 36041
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep4.gz"...
+Time for exporting: 0.188 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep4.gz:	Size of output file is 1246405 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_embedded.8-12_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/embedded.8-12/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.236 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:01:54 GMT+01:00 2026
+Hostname: n23m0313.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/embedded.8-12/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/embedded.8-12/model.prism"...
+
+Type:        CTMC
+Modules:     sensors proci actuators proco procm bus
+Actions:     [] [input_reboot] [output_reboot] [timeout]
+Variables:   s i a o m count comp reqi reqo
+Labels:      "fail_actuators" "l_down"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 8548 states
+Reachable states exploration and model construction done in 0.083 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.113 seconds.
+
+Type:        CTMC
+States:      8548 (1 initial)
+Transitions: 36041
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep5.gz"...
+Time for exporting: 0.151 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/embedded.8-12/model.umb_rep5.gz:	Size of output file is 1246405 bytes
+Removing output file to save space for repetition #5
+```
+

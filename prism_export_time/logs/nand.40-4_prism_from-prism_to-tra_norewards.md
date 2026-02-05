@@ -1,0 +1,282 @@
+# Log files for prism_from-prism_to-tra_norewards on model [nand.40-4](../../models/nand.40-4)
+
+Parsed values: `[3.504, 3.783, 3.547, 3.283, 3.117]`
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_nand.40-4_rep1.log
+
+```
+Command(s):
+../bin/prism  models/nand.40-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/nand.40-4/model.tra,lab:precision=17
+Wallclock time: 7.031 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:33:32 GMT+01:00 2026
+Hostname: r23m0129.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/nand.40-4/model.tra,lab:precision=17'
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 2.85 seconds (average 0.001976, setup 0.00)
+
+Time for model construction: 2.963 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model.lab"...
+Time for exporting: 3.504 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/nand.40-4/model.tra:	Size of output file is 165905789 bytes
+out/prism_from-prism_to-tra_norewards/nand.40-4/model.lab:	Size of output file is 82 bytes
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_nand.40-4_rep2.log
+
+```
+Command(s):
+../bin/prism  models/nand.40-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep2.tra,lab:precision=17
+Wallclock time: 8.321 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:20:39 GMT+01:00 2026
+Hostname: r23m0204.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep2.tra,lab:precision=17'
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 3.53 seconds (average 0.002448, setup 0.00)
+
+Time for model construction: 3.695 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep2.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep2.lab"...
+Time for exporting: 3.783 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep2.tra:	Size of output file is 165905789 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep2.lab:	Size of output file is 82 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_nand.40-4_rep3.log
+
+```
+Command(s):
+../bin/prism  models/nand.40-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep3.tra,lab:precision=17
+Wallclock time: 8.568 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:26 GMT+01:00 2026
+Hostname: n23m0362.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep3.tra,lab:precision=17'
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 2.76 seconds (average 0.001914, setup 0.00)
+
+Time for model construction: 2.895 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep3.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep3.lab"...
+Time for exporting: 3.547 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep3.tra:	Size of output file is 165905789 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep3.lab:	Size of output file is 82 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_nand.40-4_rep4.log
+
+```
+Command(s):
+../bin/prism  models/nand.40-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep4.tra,lab:precision=17
+Wallclock time: 6.643 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:34:04 GMT+01:00 2026
+Hostname: r23m0016.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep4.tra,lab:precision=17'
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 2.61 seconds (average 0.001810, setup 0.00)
+
+Time for model construction: 2.736 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep4.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep4.lab"...
+Time for exporting: 3.283 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep4.tra:	Size of output file is 165905789 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep4.lab:	Size of output file is 82 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_nand.40-4_rep5.log
+
+```
+Command(s):
+../bin/prism  models/nand.40-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep5.tra,lab:precision=17
+Wallclock time: 6.380 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:54:48 GMT+01:00 2026
+Hostname: n23m0279.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep5.tra,lab:precision=17'
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 2.56 seconds (average 0.001775, setup 0.00)
+
+Time for model construction: 2.671 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep5.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep5.lab"...
+Time for exporting: 3.117 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep5.tra:	Size of output file is 165905789 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_norewards/nand.40-4/model_rep5.lab:	Size of output file is 82 bytes
+Removing output file to save space for repetition #5
+```
+

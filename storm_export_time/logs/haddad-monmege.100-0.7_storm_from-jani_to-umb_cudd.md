@@ -1,0 +1,303 @@
+# Log files for storm_from-jani_to-umb_cudd on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+
+Parsed values: `[0.002, 0.002, 0.002, 0.002, 0.002]`
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_haddad-monmege.100-0.7_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.076 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:31:27 2026
+Command line arguments: --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.016s.
+
+Time for model construction: 0.014s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	201 (10 nodes)
+Transitions: 	400 (133 nodes)
+Reward Models:  none
+Variables: 	rows: 2 meta variables (9 DD variables), columns: 2 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (10 nodes)
+   * Target
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * Target -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model.umb'.
+Time for model export: 0.002s.
+
+
+Performance statistics:
+  * peak memory usage: 39MB
+  * CPU time: 0.031s
+  * wallclock time: 0.035s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model.umb:	Size of output file is 20480 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_haddad-monmege.100-0.7_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep2.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.081 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:30:00 2026
+Command line arguments: --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep2.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.009s.
+
+Time for model construction: 0.013s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	201 (10 nodes)
+Transitions: 	400 (133 nodes)
+Reward Models:  none
+Variables: 	rows: 2 meta variables (9 DD variables), columns: 2 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (10 nodes)
+   * Target
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * Target -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep2.umb'.
+Time for model export: 0.002s.
+
+
+Performance statistics:
+  * peak memory usage: 39MB
+  * CPU time: 0.046s
+  * wallclock time: 0.028s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep2.umb:	Size of output file is 20480 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_haddad-monmege.100-0.7_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep3.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.058 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:39 2026
+Command line arguments: --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep3.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.001s.
+
+Time for model construction: 0.013s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	201 (10 nodes)
+Transitions: 	400 (133 nodes)
+Reward Models:  none
+Variables: 	rows: 2 meta variables (9 DD variables), columns: 2 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (10 nodes)
+   * Target
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * Target -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep3.umb'.
+Time for model export: 0.002s.
+
+
+Performance statistics:
+  * peak memory usage: 38MB
+  * CPU time: 0.039s
+  * wallclock time: 0.020s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep3.umb:	Size of output file is 20480 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_haddad-monmege.100-0.7_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep4.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.066 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:15:26 2026
+Command line arguments: --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep4.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.001s.
+
+Time for model construction: 0.016s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	201 (10 nodes)
+Transitions: 	400 (133 nodes)
+Reward Models:  none
+Variables: 	rows: 2 meta variables (9 DD variables), columns: 2 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (10 nodes)
+   * Target
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * Target -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep4.umb'.
+Time for model export: 0.002s.
+
+
+Performance statistics:
+  * peak memory usage: 39MB
+  * CPU time: 0.035s
+  * wallclock time: 0.023s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep4.umb:	Size of output file is 20480 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_haddad-monmege.100-0.7_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep5.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.052 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:59:52 2026
+Command line arguments: --timemem --buildfull --jani models/haddad-monmege.100-0.7/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep5.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.000s.
+
+Time for model construction: 0.012s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (symbolic)
+States: 	201 (10 nodes)
+Transitions: 	400 (133 nodes)
+Reward Models:  none
+Variables: 	rows: 2 meta variables (9 DD variables), columns: 2 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (10 nodes)
+   * Target
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.000s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	201
+Transitions: 	400
+Reward Models:  none
+State Labels: 	3 labels
+   * Target -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep5.umb'.
+Time for model export: 0.002s.
+
+
+Performance statistics:
+  * peak memory usage: 39MB
+  * CPU time: 0.029s
+  * wallclock time: 0.017s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/haddad-monmege.100-0.7/model_rep5.umb:	Size of output file is 20480 bytes
+Removing output file to save space for repetition #5
+```
+

@@ -1,0 +1,289 @@
+# Log files for prism_from-prism_to-tra_default on model [bluetooth.1](../../models/bluetooth.1)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-tra_default_bluetooth.1_rep1.log
+
+```
+Command(s):
+../bin/prism  models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-tra_default/bluetooth.1/model.tra,lab,rew:precision=17
+Wallclock time: 6.807 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:34:06 GMT+01:00 2026
+Hostname: n23m0389.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/bluetooth.1/model.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 50 iterations in 0.12 seconds (average 0.002400, setup 0.00)
+
+Time for model construction: 4.735 seconds.
+
+Type:        DTMC
+States:      3411945339 (536870912 initial)
+Transitions: 5035263739
+
+Transition matrix: 14727 nodes (4 terminal), 5035263739 minterms, vars: 52r/52c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/bluetooth.1/model.tra"...
+
+Error: Currently, the sparse engine cannot handle models with more than 2147483647 states, have 3411945339 states.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/bluetooth.1/model.tra:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model.lab:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_default_bluetooth.1_rep2.log
+
+```
+Command(s):
+../bin/prism  models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-tra_default/bluetooth.1/model_rep2.tra,lab,rew:precision=17
+Wallclock time: 3.408 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:25:13 GMT+01:00 2026
+Hostname: n23m0036.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/bluetooth.1/model_rep2.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 50 iterations in 0.09 seconds (average 0.001800, setup 0.00)
+
+Time for model construction: 2.844 seconds.
+
+Type:        DTMC
+States:      3411945339 (536870912 initial)
+Transitions: 5035263739
+
+Transition matrix: 14727 nodes (4 terminal), 5035263739 minterms, vars: 52r/52c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/bluetooth.1/model_rep2.tra"...
+
+Error: Currently, the sparse engine cannot handle models with more than 2147483647 states, have 3411945339 states.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep2.tra:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep2.lab:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep2.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep2.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_default_bluetooth.1_rep3.log
+
+```
+Command(s):
+../bin/prism  models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-tra_default/bluetooth.1/model_rep3.tra,lab,rew:precision=17
+Wallclock time: 3.390 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:55:49 GMT+01:00 2026
+Hostname: r23m0016.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/bluetooth.1/model_rep3.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 50 iterations in 0.09 seconds (average 0.001800, setup 0.00)
+
+Time for model construction: 2.834 seconds.
+
+Type:        DTMC
+States:      3411945339 (536870912 initial)
+Transitions: 5035263739
+
+Transition matrix: 14727 nodes (4 terminal), 5035263739 minterms, vars: 52r/52c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/bluetooth.1/model_rep3.tra"...
+
+Error: Currently, the sparse engine cannot handle models with more than 2147483647 states, have 3411945339 states.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep3.tra:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep3.lab:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep3.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep3.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_default_bluetooth.1_rep4.log
+
+```
+Command(s):
+../bin/prism  models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-tra_default/bluetooth.1/model_rep4.tra,lab,rew:precision=17
+Wallclock time: 5.847 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:28:17 GMT+01:00 2026
+Hostname: r23m0212.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/bluetooth.1/model_rep4.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 50 iterations in 0.10 seconds (average 0.002000, setup 0.00)
+
+Time for model construction: 5.119 seconds.
+
+Type:        DTMC
+States:      3411945339 (536870912 initial)
+Transitions: 5035263739
+
+Transition matrix: 14727 nodes (4 terminal), 5035263739 minterms, vars: 52r/52c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/bluetooth.1/model_rep4.tra"...
+
+Error: Currently, the sparse engine cannot handle models with more than 2147483647 states, have 3411945339 states.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep4.tra:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep4.lab:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep4.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep4.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_default_bluetooth.1_rep5.log
+
+```
+Command(s):
+../bin/prism  models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-tra_default/bluetooth.1/model_rep5.tra,lab,rew:precision=17
+Wallclock time: 3.391 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:31:20 GMT+01:00 2026
+Hostname: n23m0379.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/bluetooth.1/model_rep5.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 50 iterations in 0.08 seconds (average 0.001600, setup 0.00)
+
+Time for model construction: 2.861 seconds.
+
+Type:        DTMC
+States:      3411945339 (536870912 initial)
+Transitions: 5035263739
+
+Transition matrix: 14727 nodes (4 terminal), 5035263739 minterms, vars: 52r/52c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/bluetooth.1/model_rep5.tra"...
+
+Error: Currently, the sparse engine cannot handle models with more than 2147483647 states, have 3411945339 states.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep5.tra:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep5.lab:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep5.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/bluetooth.1/model_rep5.trew:	File does not exist.
+```
+

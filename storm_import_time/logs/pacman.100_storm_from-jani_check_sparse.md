@@ -1,0 +1,219 @@
+# Log files for storm_from-jani_check_sparse on model [pacman.100](../../models/pacman.100)
+
+Parsed values: `[649.964, 650.4060000000001, 656.2869999999999, 654.776, 673.299]`
+
+
+
+### Log file: storm_from-jani_check_sparse_pacman.100_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Wallclock time: 702.531 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:54:06 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.056s.
+
+Time for model construction: 649.908s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * Crash -> 3641587 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 52.478s.
+
+Performance statistics:
+  * peak memory usage: 11321MB
+  * CPU time: 698.164s
+  * wallclock time: 702.461s
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_pacman.100_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Wallclock time: 701.953 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:37:31 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.022s.
+
+Time for model construction: 650.384s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * Crash -> 3641587 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 51.453s.
+
+Performance statistics:
+  * peak memory usage: 11321MB
+  * CPU time: 698.133s
+  * wallclock time: 701.878s
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_pacman.100_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Wallclock time: 710.386 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 03:05:35 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.021s.
+
+Time for model construction: 656.266s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * Crash -> 3641587 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 53.958s.
+
+Performance statistics:
+  * peak memory usage: 11321MB
+  * CPU time: 705.504s
+  * wallclock time: 710.262s
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_pacman.100_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Wallclock time: 702.650 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:38:11 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.021s.
+
+Time for model construction: 654.755s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * Crash -> 3641587 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 47.786s.
+
+Performance statistics:
+  * peak memory usage: 11320MB
+  * CPU time: 698.148s
+  * wallclock time: 702.580s
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_pacman.100_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Wallclock time: 726.328 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 03:02:32 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.052s.
+
+Time for model construction: 673.247s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * Crash -> 3641587 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 52.938s.
+
+Performance statistics:
+  * peak memory usage: 11320MB
+  * CPU time: 721.623s
+  * wallclock time: 726.255s
+```
+

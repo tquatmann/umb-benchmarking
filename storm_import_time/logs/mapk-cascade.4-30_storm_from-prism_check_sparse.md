@@ -1,0 +1,294 @@
+# Log files for storm_from-prism_check_sparse on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+
+Parsed values: `[1.137, 1.029, 1.021, 1.065, 1.24]`
+
+
+
+### Log file: storm_from-prism_check_sparse_mapk-cascade.4-30_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Wallclock time: 1.546 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:52:02 2026
+Command line arguments: --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+WARN  (Program.cpp:238): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.017s.
+
+WARN  (FormulaParserGrammar.cpp:346): Identifier `T' coincides with a reserved keyword or operator. Property expressions using the variable or constant 'T' might not be parsed correctly.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 1.120s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	99535
+Transitions: 	910872
+Reward Models:  time
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1461 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "activated_time": R{"time"}=? [F "target"] ...
+Result (for initial states): 40.67650519
+Time for model checking: 0.363s.
+
+Performance statistics:
+  * peak memory usage: 180MB
+  * CPU time: 1.479s
+  * wallclock time: 1.506s
+```
+
+
+
+### Log file: storm_from-prism_check_sparse_mapk-cascade.4-30_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Wallclock time: 1.418 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:21:33 2026
+Command line arguments: --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+WARN  (Program.cpp:238): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.024s.
+
+WARN  (FormulaParserGrammar.cpp:346): Identifier `T' coincides with a reserved keyword or operator. Property expressions using the variable or constant 'T' might not be parsed correctly.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 1.005s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	99535
+Transitions: 	910872
+Reward Models:  time
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1461 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "activated_time": R{"time"}=? [F "target"] ...
+Result (for initial states): 40.67650519
+Time for model checking: 0.345s.
+
+Performance statistics:
+  * peak memory usage: 180MB
+  * CPU time: 1.337s
+  * wallclock time: 1.380s
+```
+
+
+
+### Log file: storm_from-prism_check_sparse_mapk-cascade.4-30_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Wallclock time: 1.402 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:16:28 2026
+Command line arguments: --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+WARN  (Program.cpp:238): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.010s.
+
+WARN  (FormulaParserGrammar.cpp:346): Identifier `T' coincides with a reserved keyword or operator. Property expressions using the variable or constant 'T' might not be parsed correctly.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 1.011s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	99535
+Transitions: 	910872
+Reward Models:  time
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1461 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "activated_time": R{"time"}=? [F "target"] ...
+Result (for initial states): 40.67650519
+Time for model checking: 0.339s.
+
+Performance statistics:
+  * peak memory usage: 179MB
+  * CPU time: 1.337s
+  * wallclock time: 1.365s
+```
+
+
+
+### Log file: storm_from-prism_check_sparse_mapk-cascade.4-30_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Wallclock time: 1.474 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 03:06:37 2026
+Command line arguments: --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+WARN  (Program.cpp:238): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.055s.
+
+WARN  (FormulaParserGrammar.cpp:346): Identifier `T' coincides with a reserved keyword or operator. Property expressions using the variable or constant 'T' might not be parsed correctly.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 1.010s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	99535
+Transitions: 	910872
+Reward Models:  time
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1461 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "activated_time": R{"time"}=? [F "target"] ...
+Result (for initial states): 40.67650519
+Time for model checking: 0.355s.
+
+Performance statistics:
+  * peak memory usage: 180MB
+  * CPU time: 1.358s
+  * wallclock time: 1.438s
+```
+
+
+
+### Log file: storm_from-prism_check_sparse_mapk-cascade.4-30_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Wallclock time: 1.684 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:14:55 2026
+Command line arguments: --timemem --buildfull --prism models/mapk-cascade.4-30/model.prism --prismcompat --prop models/mapk-cascade.4-30/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+WARN  (Program.cpp:238): The input model is a CTMC, but uses probabilistic commands like they are used in PRISM. Consider rewriting the commands to use Markovian commands instead.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model input parsing: 0.023s.
+
+WARN  (FormulaParserGrammar.cpp:346): Identifier `T' coincides with a reserved keyword or operator. Property expressions using the variable or constant 'T' might not be parsed correctly.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+WARN  (Program.cpp:1654): The model uses synchronizing Markovian commands. This may lead to unexpected verification results, because of unclear semantics.
+Time for model construction: 1.217s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	99535
+Transitions: 	910872
+Reward Models:  time
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1461 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "activated_time": R{"time"}=? [F "target"] ...
+Result (for initial states): 40.67650519
+Time for model checking: 0.396s.
+
+Performance statistics:
+  * peak memory usage: 180MB
+  * CPU time: 1.611s
+  * wallclock time: 1.643s
+```
+

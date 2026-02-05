@@ -1,0 +1,224 @@
+# Log files for storm_from-umb-gz_check_sparse on model [polling.18-16](../../models/polling.18-16)
+
+Parsed values: `[2.804, 2.663, 2.881, 3.009, 2.657]`
+
+
+
+### Log file: storm_from-umb-gz_check_sparse_polling.18-16_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Wallclock time: 12.730 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:25:00 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.017s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 1.915s seconds.
+Time for model construction: 2.804s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * serve_s1 -> 131072 item(s)
+   * deadlock -> 0 item(s)
+   * serve_s2 -> 131072 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "s1_before_s2": P=? [(!"serve_s2") U "serve_s1"] ...
+Result (for initial states): 0.539005252
+Time for model checking: 9.868s.
+
+Performance statistics:
+  * peak memory usage: 5732MB
+  * CPU time: 11.775s
+  * wallclock time: 12.677s
+```
+
+
+
+### Log file: storm_from-umb-gz_check_sparse_polling.18-16_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Wallclock time: 13.376 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 03:01:31 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.014s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 1.749s seconds.
+Time for model construction: 2.663s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * serve_s1 -> 131072 item(s)
+   * deadlock -> 0 item(s)
+   * serve_s2 -> 131072 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "s1_before_s2": P=? [(!"serve_s2") U "serve_s1"] ...
+Result (for initial states): 0.539005252
+Time for model checking: 10.670s.
+
+Performance statistics:
+  * peak memory usage: 5730MB
+  * CPU time: 12.271s
+  * wallclock time: 13.339s
+```
+
+
+
+### Log file: storm_from-umb-gz_check_sparse_polling.18-16_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Wallclock time: 13.251 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:04 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.020s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 1.942s seconds.
+Time for model construction: 2.881s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * serve_s1 -> 131072 item(s)
+   * deadlock -> 0 item(s)
+   * serve_s2 -> 131072 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "s1_before_s2": P=? [(!"serve_s2") U "serve_s1"] ...
+Result (for initial states): 0.539005252
+Time for model checking: 10.319s.
+
+Performance statistics:
+  * peak memory usage: 5731MB
+  * CPU time: 12.261s
+  * wallclock time: 13.206s
+```
+
+
+
+### Log file: storm_from-umb-gz_check_sparse_polling.18-16_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Wallclock time: 13.848 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:37:31 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.011s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 2.038s seconds.
+Time for model construction: 3.009s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * serve_s1 -> 131072 item(s)
+   * deadlock -> 0 item(s)
+   * serve_s2 -> 131072 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "s1_before_s2": P=? [(!"serve_s2") U "serve_s1"] ...
+Result (for initial states): 0.539005252
+Time for model checking: 10.792s.
+
+Performance statistics:
+  * peak memory usage: 5731MB
+  * CPU time: 12.799s
+  * wallclock time: 13.807s
+```
+
+
+
+### Log file: storm_from-umb-gz_check_sparse_polling.18-16_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Wallclock time: 13.563 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:29:26 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/polling.18-16/storm.model.umb.gz --prop models/polling.18-16/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.017s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 1.749s seconds.
+Time for model construction: 2.657s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * serve_s1 -> 131072 item(s)
+   * deadlock -> 0 item(s)
+   * serve_s2 -> 131072 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "s1_before_s2": P=? [(!"serve_s2") U "serve_s1"] ...
+Result (for initial states): 0.539005252
+Time for model checking: 9.991s.
+
+Performance statistics:
+  * peak memory usage: 5731MB
+  * CPU time: 11.722s
+  * wallclock time: 12.656s
+```
+

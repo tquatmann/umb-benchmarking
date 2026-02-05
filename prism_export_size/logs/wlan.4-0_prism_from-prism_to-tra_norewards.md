@@ -1,0 +1,282 @@
+# Log files for prism_from-prism_to-tra_norewards on model [wlan.4-0](../../models/wlan.4-0)
+
+Parsed values: `[15199323.0, 15199323.0, 15199323.0, 15199323.0, 15199323.0]`
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_wlan.4-0_rep1.log
+
+```
+Command(s):
+../bin/prism  models/wlan.4-0/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/wlan.4-0/model.tra,lab:precision=17
+Wallclock time: 1.863 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:46:50 GMT+01:00 2026
+Hostname: r23m0045.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.4-0/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/wlan.4-0/model.tra,lab:precision=17'
+
+Parsing PRISM model file "models/wlan.4-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 145 iterations in 0.26 seconds (average 0.001793, setup 0.00)
+
+Time for model construction: 0.376 seconds.
+
+Type:        MDP
+States:      345000 (1 initial)
+Transitions: 762252
+
+Transition matrix: 14365 nodes (6 terminal), 762252 minterms, vars: 43r/43c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model.lab"...
+Time for exporting: 0.729 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model.tra:	Size of output file is 15199275 bytes
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model.lab:	Size of output file is 48 bytes
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_wlan.4-0_rep2.log
+
+```
+Command(s):
+../bin/prism  models/wlan.4-0/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep2.tra,lab:precision=17
+Wallclock time: 2.065 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:26:44 GMT+01:00 2026
+Hostname: r23m0055.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.4-0/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep2.tra,lab:precision=17'
+
+Parsing PRISM model file "models/wlan.4-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 145 iterations in 0.17 seconds (average 0.001172, setup 0.00)
+
+Time for model construction: 0.261 seconds.
+
+Type:        MDP
+States:      345000 (1 initial)
+Transitions: 762252
+
+Transition matrix: 14365 nodes (6 terminal), 762252 minterms, vars: 43r/43c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep2.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep2.lab"...
+Time for exporting: 0.706 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep2.tra:	Size of output file is 15199275 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep2.lab:	Size of output file is 48 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_wlan.4-0_rep3.log
+
+```
+Command(s):
+../bin/prism  models/wlan.4-0/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep3.tra,lab:precision=17
+Wallclock time: 1.314 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:52:47 GMT+01:00 2026
+Hostname: n23m0379.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.4-0/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep3.tra,lab:precision=17'
+
+Parsing PRISM model file "models/wlan.4-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 145 iterations in 0.15 seconds (average 0.001034, setup 0.00)
+
+Time for model construction: 0.197 seconds.
+
+Type:        MDP
+States:      345000 (1 initial)
+Transitions: 762252
+
+Transition matrix: 14365 nodes (6 terminal), 762252 minterms, vars: 43r/43c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep3.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep3.lab"...
+Time for exporting: 0.597 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep3.tra:	Size of output file is 15199275 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep3.lab:	Size of output file is 48 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_wlan.4-0_rep4.log
+
+```
+Command(s):
+../bin/prism  models/wlan.4-0/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep4.tra,lab:precision=17
+Wallclock time: 1.320 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:11:59 GMT+01:00 2026
+Hostname: n23m0043.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.4-0/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep4.tra,lab:precision=17'
+
+Parsing PRISM model file "models/wlan.4-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 145 iterations in 0.15 seconds (average 0.001034, setup 0.00)
+
+Time for model construction: 0.181 seconds.
+
+Type:        MDP
+States:      345000 (1 initial)
+Transitions: 762252
+
+Transition matrix: 14365 nodes (6 terminal), 762252 minterms, vars: 43r/43c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep4.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep4.lab"...
+Time for exporting: 0.608 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep4.tra:	Size of output file is 15199275 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep4.lab:	Size of output file is 48 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_wlan.4-0_rep5.log
+
+```
+Command(s):
+../bin/prism  models/wlan.4-0/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep5.tra,lab:precision=17
+Wallclock time: 1.890 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:31:20 GMT+01:00 2026
+Hostname: r23m0204.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.4-0/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep5.tra,lab:precision=17'
+
+Parsing PRISM model file "models/wlan.4-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 145 iterations in 0.18 seconds (average 0.001241, setup 0.00)
+
+Time for model construction: 0.29 seconds.
+
+Type:        MDP
+States:      345000 (1 initial)
+Transitions: 762252
+
+Transition matrix: 14365 nodes (6 terminal), 762252 minterms, vars: 43r/43c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep5.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep5.lab"...
+Time for exporting: 0.707 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep5.tra:	Size of output file is 15199275 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_norewards/wlan.4-0/model_rep5.lab:	Size of output file is 48 bytes
+Removing output file to save space for repetition #5
+```
+

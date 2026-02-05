@@ -1,0 +1,238 @@
+# Log files for storm_from-jani_to-drn-gz_exact on model [wlan.4-0](../../models/wlan.4-0)
+
+Parsed values: `[3043685.0, 3043691.0, 3043691.0, 3043691.0, 3043691.0]`
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_wlan.4-0_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn.gz drn --compression gzip  --exact
+Wallclock time: 2.745 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:49:27 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 2.134s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn.gz'.
+Time for model export: 0.520s.
+
+
+Performance statistics:
+  * peak memory usage: 196MB
+  * CPU time: 2.637s
+  * wallclock time: 2.678s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn.gz:	Size of output file is 3043685 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_wlan.4-0_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep2.gz drn --compression gzip  --exact
+Wallclock time: 3.510 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:37:35 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep2.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.059s.
+
+Time for model construction: 2.447s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep2.gz'.
+Time for model export: 0.597s.
+
+
+Performance statistics:
+  * peak memory usage: 196MB
+  * CPU time: 3.010s
+  * wallclock time: 3.122s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep2.gz:	Size of output file is 3043691 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_wlan.4-0_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep3.gz drn --compression gzip  --exact
+Wallclock time: 3.201 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:27:10 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep3.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 2.504s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep3.gz'.
+Time for model export: 0.606s.
+
+
+Performance statistics:
+  * peak memory usage: 196MB
+  * CPU time: 3.093s
+  * wallclock time: 3.135s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep3.gz:	Size of output file is 3043691 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_wlan.4-0_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep4.gz drn --compression gzip  --exact
+Wallclock time: 3.288 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:34 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep4.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 2.575s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep4.gz'.
+Time for model export: 0.627s.
+
+
+Performance statistics:
+  * peak memory usage: 198MB
+  * CPU time: 3.177s
+  * wallclock time: 3.228s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep4.gz:	Size of output file is 3043691 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_wlan.4-0_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep5.gz drn --compression gzip  --exact
+Wallclock time: 2.707 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:42:38 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep5.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 2.096s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep5.gz'.
+Time for model export: 0.530s.
+
+
+Performance statistics:
+  * peak memory usage: 197MB
+  * CPU time: 2.619s
+  * wallclock time: 2.647s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/wlan.4-0/model.exact.drn_rep5.gz:	Size of output file is 3043691 bytes
+Removing output file to save space for repetition #5
+```
+

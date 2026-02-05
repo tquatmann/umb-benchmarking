@@ -1,0 +1,179 @@
+# Log files for storm_from-jani_check_cudd on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: storm_from-jani_check_cudd_pnueli-zuck.10_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.462 seconds
+Return code: 2
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:54:38 2026
+Command line arguments: --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.020s.
+
+Time for model construction: 0.372s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	69994757110 (329 nodes)
+Transitions: 	891923978050 (22554 nodes)
+Choices: 	827929876290
+Reward Models:  none
+Variables: 	rows: 20 meta variables (50 DD variables), columns: 20 meta variables (50 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (51 nodes)
+   * target
+-------------------------------------------------------------- 
+ERROR (storm-cli.cpp:52): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_pnueli-zuck.10_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.634 seconds
+Return code: 2
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:07:35 2026
+Command line arguments: --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.023s.
+
+Time for model construction: 0.539s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	69994757110 (329 nodes)
+Transitions: 	891923978050 (22554 nodes)
+Choices: 	827929876290
+Reward Models:  none
+Variables: 	rows: 20 meta variables (50 DD variables), columns: 20 meta variables (50 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (51 nodes)
+   * target
+-------------------------------------------------------------- 
+ERROR (storm-cli.cpp:52): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_pnueli-zuck.10_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.492 seconds
+Return code: 2
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 02:59:58 2026
+Command line arguments: --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.036s.
+
+Time for model construction: 0.388s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	69994757110 (329 nodes)
+Transitions: 	891923978050 (22554 nodes)
+Choices: 	827929876290
+Reward Models:  none
+Variables: 	rows: 20 meta variables (50 DD variables), columns: 20 meta variables (50 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (51 nodes)
+   * target
+-------------------------------------------------------------- 
+ERROR (storm-cli.cpp:52): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_pnueli-zuck.10_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.575 seconds
+Return code: 2
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 21:21:40 2026
+Command line arguments: --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.027s.
+
+Time for model construction: 0.429s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	69994757110 (329 nodes)
+Transitions: 	891923978050 (22554 nodes)
+Choices: 	827929876290
+Reward Models:  none
+Variables: 	rows: 20 meta variables (50 DD variables), columns: 20 meta variables (50 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (51 nodes)
+   * target
+-------------------------------------------------------------- 
+ERROR (storm-cli.cpp:52): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_pnueli-zuck.10_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.538 seconds
+Return code: 2
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 03:05:35 2026
+Command line arguments: --timemem --buildfull --jani models/pnueli-zuck.10/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.025s.
+
+Time for model construction: 0.417s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	69994757110 (329 nodes)
+Transitions: 	891923978050 (22554 nodes)
+Choices: 	827929876290
+Reward Models:  none
+Variables: 	rows: 20 meta variables (50 DD variables), columns: 20 meta variables (50 DD variables), nondeterminism: 5 meta variables (5 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (51 nodes)
+   * target
+-------------------------------------------------------------- 
+ERROR (storm-cli.cpp:52): An unexpected exception occurred and caused Storm to terminate. The message of this exception is: std::bad_alloc
+```
+

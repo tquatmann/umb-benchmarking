@@ -1,0 +1,429 @@
+# Log files for prism_from-prism_check_norewards on model [eajs.6-300-13](../../models/eajs.6-300-13)
+
+Parsed values: `[37.179, 37.862, 40.713, 39.13, 42.707]`
+
+
+
+### Log file: prism_from-prism_check_norewards_eajs.6-300-13_rep1.log
+
+```
+Command(s):
+../bin/prism  models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+Wallclock time: 37.179 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 08:01:35 GMT+01:00 2026
+Hostname: r23m0131.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+
+Parsing PRISM model file "models/eajs.6-300-13/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_4 Process_6 Process_5
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 t_4 loc_4 loc_6 t_6 t_5 loc_5
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.6-300-13/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 89 iterations in 0.15 seconds (average 0.001685, setup 0.00)
+
+Time for model construction: 0.46 seconds.
+
+Type:        MDP
+States:      7901694 (1 initial)
+Transitions: 19722777
+
+Transition matrix: 38911 nodes (7 terminal), 19722777 minterms, vars: 50r/50c/5nd
+
+Prob0E: 300 iterations in 0.36 seconds (average 0.001200, setup 0.00)
+
+Prob1A: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 28620, inf = 0, maybe = 7873074
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=7901694, nc=11854302, nnz=19651307, k=12] [300.3 MB]
+Building sparse matrix (transition rewards)... [n=7901694, nc=11854302, nnz=257760, k=12] [78.3 MB]
+Creating vector for state rewards... [60.3 MB]
+Creating vector for inf... [60.3 MB]
+Allocating iteration vectors... [2 x 60.3 MB]
+TOTAL: [619.7 MB]
+
+Starting iterations...
+Iteration 63: max relative diff=0.047887, 5.06 sec so far
+Iteration 127: max relative diff=0.014911, 10.15 sec so far
+
+Iterative method: 153 iterations in 35.69 seconds (average 0.079739, setup 23.49)
+
+Value in the initial state: 12.05111075489705
+
+Time for model checking: 36.139 seconds.
+
+Result: 12.05111075489705 (+/- 7.207650548638103E-5 estimated; rel err 5.9809014249655175E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_norewards_eajs.6-300-13_rep2.log
+
+```
+Command(s):
+../bin/prism  models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+Wallclock time: 37.862 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:37:03 GMT+01:00 2026
+Hostname: r23m0204.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+
+Parsing PRISM model file "models/eajs.6-300-13/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_4 Process_6 Process_5
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 t_4 loc_4 loc_6 t_6 t_5 loc_5
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.6-300-13/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 89 iterations in 0.18 seconds (average 0.002022, setup 0.00)
+
+Time for model construction: 0.554 seconds.
+
+Type:        MDP
+States:      7901694 (1 initial)
+Transitions: 19722777
+
+Transition matrix: 38911 nodes (7 terminal), 19722777 minterms, vars: 50r/50c/5nd
+
+Prob0E: 300 iterations in 0.43 seconds (average 0.001433, setup 0.00)
+
+Prob1A: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 28620, inf = 0, maybe = 7873074
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=7901694, nc=11854302, nnz=19651307, k=12] [300.3 MB]
+Building sparse matrix (transition rewards)... [n=7901694, nc=11854302, nnz=257760, k=12] [78.3 MB]
+Creating vector for state rewards... [60.3 MB]
+Creating vector for inf... [60.3 MB]
+Allocating iteration vectors... [2 x 60.3 MB]
+TOTAL: [619.7 MB]
+
+Starting iterations...
+Iteration 66: max relative diff=0.044805, 5.02 sec so far
+Iteration 131: max relative diff=0.013177, 10.03 sec so far
+
+Iterative method: 153 iterations in 36.16 seconds (average 0.076732, setup 24.42)
+
+Value in the initial state: 12.05111075489705
+
+Time for model checking: 36.694 seconds.
+
+Result: 12.05111075489705 (+/- 7.207650548638103E-5 estimated; rel err 5.9809014249655175E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_norewards_eajs.6-300-13_rep3.log
+
+```
+Command(s):
+../bin/prism  models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+Wallclock time: 40.713 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 00:54:00 GMT+01:00 2026
+Hostname: r23m0198.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+
+Parsing PRISM model file "models/eajs.6-300-13/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_4 Process_6 Process_5
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 t_4 loc_4 loc_6 t_6 t_5 loc_5
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.6-300-13/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 89 iterations in 0.21 seconds (average 0.002360, setup 0.00)
+
+Time for model construction: 0.751 seconds.
+
+Type:        MDP
+States:      7901694 (1 initial)
+Transitions: 19722777
+
+Transition matrix: 38911 nodes (7 terminal), 19722777 minterms, vars: 50r/50c/5nd
+
+Prob0E: 300 iterations in 0.45 seconds (average 0.001500, setup 0.00)
+
+Prob1A: 1 iterations in 0.01 seconds (average 0.010000, setup 0.00)
+
+goal = 28620, inf = 0, maybe = 7873074
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=7901694, nc=11854302, nnz=19651307, k=12] [300.3 MB]
+Building sparse matrix (transition rewards)... [n=7901694, nc=11854302, nnz=257760, k=12] [78.3 MB]
+Creating vector for state rewards... [60.3 MB]
+Creating vector for inf... [60.3 MB]
+Allocating iteration vectors... [2 x 60.3 MB]
+TOTAL: [619.7 MB]
+
+Starting iterations...
+Iteration 59: max relative diff=0.048608, 5.04 sec so far
+Iteration 117: max relative diff=0.017565, 10.05 sec so far
+
+Iterative method: 153 iterations in 38.71 seconds (average 0.086536, setup 25.47)
+
+Value in the initial state: 12.05111075489705
+
+Time for model checking: 39.272 seconds.
+
+Result: 12.05111075489705 (+/- 7.207650548638103E-5 estimated; rel err 5.9809014249655175E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_norewards_eajs.6-300-13_rep4.log
+
+```
+Command(s):
+../bin/prism  models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+Wallclock time: 39.130 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:29:08 GMT+01:00 2026
+Hostname: r23m0169.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+
+Parsing PRISM model file "models/eajs.6-300-13/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_4 Process_6 Process_5
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 t_4 loc_4 loc_6 t_6 t_5 loc_5
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.6-300-13/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 89 iterations in 0.15 seconds (average 0.001685, setup 0.00)
+
+Time for model construction: 0.447 seconds.
+
+Type:        MDP
+States:      7901694 (1 initial)
+Transitions: 19722777
+
+Transition matrix: 38911 nodes (7 terminal), 19722777 minterms, vars: 50r/50c/5nd
+
+Prob0E: 300 iterations in 0.35 seconds (average 0.001167, setup 0.00)
+
+Prob1A: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 28620, inf = 0, maybe = 7873074
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=7901694, nc=11854302, nnz=19651307, k=12] [300.3 MB]
+Building sparse matrix (transition rewards)... [n=7901694, nc=11854302, nnz=257760, k=12] [78.3 MB]
+Creating vector for state rewards... [60.3 MB]
+Creating vector for inf... [60.3 MB]
+Allocating iteration vectors... [2 x 60.3 MB]
+TOTAL: [619.7 MB]
+
+Starting iterations...
+Iteration 67: max relative diff=0.044805, 5.03 sec so far
+Iteration 134: max relative diff=0.012960, 10.09 sec so far
+
+Iterative method: 153 iterations in 34.18 seconds (average 0.075294, setup 22.66)
+
+Value in the initial state: 12.05111075489705
+
+Time for model checking: 34.604 seconds.
+
+Result: 12.05111075489705 (+/- 7.207650548638103E-5 estimated; rel err 5.9809014249655175E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_norewards_eajs.6-300-13_rep5.log
+
+```
+Command(s):
+../bin/prism  models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+Wallclock time: 42.707 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 21:24:19 GMT+01:00 2026
+Hostname: n23m0242.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.6-300-13/model.prism models/eajs.6-300-13/property.props
+
+Parsing PRISM model file "models/eajs.6-300-13/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_4 Process_6 Process_5
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 t_4 loc_4 loc_6 t_6 t_5 loc_5
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.6-300-13/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 89 iterations in 0.20 seconds (average 0.002247, setup 0.00)
+
+Time for model construction: 0.713 seconds.
+
+Type:        MDP
+States:      7901694 (1 initial)
+Transitions: 19722777
+
+Transition matrix: 38911 nodes (7 terminal), 19722777 minterms, vars: 50r/50c/5nd
+
+Prob0E: 300 iterations in 0.47 seconds (average 0.001567, setup 0.00)
+
+Prob1A: 1 iterations in 0.01 seconds (average 0.010000, setup 0.00)
+
+goal = 28620, inf = 0, maybe = 7873074
+
+Computing remaining rewards...
+Switching engine since hybrid engine does yet support this computation...
+Engine: Sparse
+
+Building sparse matrix (transitions)... [n=7901694, nc=11854302, nnz=19651307, k=12] [300.3 MB]
+Building sparse matrix (transition rewards)... [n=7901694, nc=11854302, nnz=257760, k=12] [78.3 MB]
+Creating vector for state rewards... [60.3 MB]
+Creating vector for inf... [60.3 MB]
+Allocating iteration vectors... [2 x 60.3 MB]
+TOTAL: [619.7 MB]
+
+Starting iterations...
+Iteration 54: max relative diff=0.064945, 5.01 sec so far
+Iteration 108: max relative diff=0.018266, 10.03 sec so far
+
+Iterative method: 153 iterations in 40.63 seconds (average 0.092745, setup 26.44)
+
+Value in the initial state: 12.05111075489705
+
+Time for model checking: 41.256 seconds.
+
+Result: 12.05111075489705 (+/- 7.207650548638103E-5 estimated; rel err 5.9809014249655175E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+

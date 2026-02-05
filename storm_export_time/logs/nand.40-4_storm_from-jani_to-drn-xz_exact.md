@@ -1,0 +1,233 @@
+# Log files for storm_from-jani_to-drn-xz_exact on model [nand.40-4](../../models/nand.40-4)
+
+Parsed values: `[68.802, 57.463, 57.024, 59.841, 59.81]`
+
+
+
+### Log file: storm_from-jani_to-drn-xz_exact_nand.40-4_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn.xz drn --compression xz  --exact
+Wallclock time: 83.539 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:22:45 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn.xz drn --compression xz --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.001s.
+
+Time for model construction: 14.476s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn.xz'.
+Time for model export: 68.802s.
+
+
+Performance statistics:
+  * peak memory usage: 1250MB
+  * CPU time: 82.829s
+  * wallclock time: 83.380s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn.xz:	Size of output file is 7886892 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-drn-xz_exact_nand.40-4_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep2.xz drn --compression xz  --exact
+Wallclock time: 71.672 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:15:03 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep2.xz drn --compression xz --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.012s.
+
+Time for model construction: 13.689s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep2.xz'.
+Time for model export: 57.463s.
+
+
+Performance statistics:
+  * peak memory usage: 1250MB
+  * CPU time: 70.829s
+  * wallclock time: 71.250s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep2.xz:	Size of output file is 7892172 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-drn-xz_exact_nand.40-4_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep3.xz drn --compression xz  --exact
+Wallclock time: 70.870 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:22:39 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep3.xz drn --compression xz --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.015s.
+
+Time for model construction: 13.615s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep3.xz'.
+Time for model export: 57.024s.
+
+
+Performance statistics:
+  * peak memory usage: 1248MB
+  * CPU time: 70.370s
+  * wallclock time: 70.739s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep3.xz:	Size of output file is 7884588 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-drn-xz_exact_nand.40-4_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep4.xz drn --compression xz  --exact
+Wallclock time: 74.664 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:37:51 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep4.xz drn --compression xz --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.016s.
+
+Time for model construction: 14.546s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep4.xz'.
+Time for model export: 59.841s.
+
+
+Performance statistics:
+  * peak memory usage: 1248MB
+  * CPU time: 74.038s
+  * wallclock time: 74.494s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep4.xz:	Size of output file is 7895044 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-drn-xz_exact_nand.40-4_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep5.xz drn --compression xz  --exact
+Wallclock time: 74.424 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:39:06 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep5.xz drn --compression xz --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.019s.
+
+Time for model construction: 14.345s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep5.xz'.
+Time for model export: 59.810s.
+
+
+Performance statistics:
+  * peak memory usage: 1248MB
+  * CPU time: 73.765s
+  * wallclock time: 74.262s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_exact/nand.40-4/model.exact.drn_rep5.xz:	Size of output file is 7895044 bytes
+Removing output file to save space for repetition #5
+```
+

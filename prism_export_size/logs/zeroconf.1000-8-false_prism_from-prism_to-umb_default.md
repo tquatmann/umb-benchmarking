@@ -1,0 +1,419 @@
+# Log files for prism_from-prism_to-umb_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-umb_default_zeroconf.1000-8-false_rep1.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 88.337 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:37:19 GMT+01:00 2026
+Hostname: n23m0137.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 39.97 seconds (average 0.067517, setup 0.00)
+
+Time for model construction: 40.423 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at jdd.JDDNode.getElse(JDDNode.java:139)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:497)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:516)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_default_zeroconf.1000-8-false_rep2.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep2.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 83.770 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:37:05 GMT+01:00 2026
+Hostname: r23m0196.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep2.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 37.89 seconds (average 0.064003, setup 0.00)
+
+Time for model construction: 38.34 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep2.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at odd.ODDNode.getThen(ODDNode.java:71)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep2.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_default_zeroconf.1000-8-false_rep3.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep3.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 120.024 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:35 GMT+01:00 2026
+Hostname: n23m0350.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep3.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 59.37 seconds (average 0.100287, setup 0.00)
+
+Time for model construction: 60.164 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep3.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at jdd.JDDNode.getElse(JDDNode.java:139)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:497)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:516)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep3.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_default_zeroconf.1000-8-false_rep4.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep4.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 101.710 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:36:38 GMT+01:00 2026
+Hostname: n23m0402.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep4.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 51.03 seconds (average 0.086199, setup 0.00)
+
+Time for model construction: 51.635 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep4.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at jdd.JDDNode.getElse(JDDNode.java:139)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:497)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:516)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep4.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_default_zeroconf.1000-8-false_rep5.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep5.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 97.434 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:15:26 GMT+01:00 2026
+Hostname: n23m0256.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep5.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 52.06 seconds (average 0.087939, setup 0.00)
+
+Time for model construction: 52.63 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep5.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at odd.ODDNode.getThen(ODDNode.java:71)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:515)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:514)
+	at symbolic.build.MTBDD2ExplicitModel.traverseMatrixDD(MTBDD2ExplicitModel.java:517)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_default/zeroconf.1000-8-false/model_rep5.umb:	File does not exist.
+```
+

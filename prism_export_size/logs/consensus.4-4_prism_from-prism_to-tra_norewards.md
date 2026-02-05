@@ -1,0 +1,282 @@
+# Log files for prism_from-prism_to-tra_norewards on model [consensus.4-4](../../models/consensus.4-4)
+
+Parsed values: `[2430647.0, 2430647.0, 2430647.0, 2430647.0, 2430647.0]`
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_consensus.4-4_rep1.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/consensus.4-4/model.tra,lab:precision=17
+Wallclock time: 0.640 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:43:39 GMT+01:00 2026
+Hostname: r23m0066.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/consensus.4-4/model.tra,lab:precision=17'
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.02 seconds (average 0.000103, setup 0.00)
+
+Time for model construction: 0.038 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model.lab"...
+Time for exporting: 0.081 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model.tra:	Size of output file is 2350318 bytes
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model.lab:	Size of output file is 80329 bytes
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_consensus.4-4_rep2.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep2.tra,lab:precision=17
+Wallclock time: 0.621 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:19:07 GMT+01:00 2026
+Hostname: n23m0313.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep2.tra,lab:precision=17'
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.01 seconds (average 0.000051, setup 0.00)
+
+Time for model construction: 0.037 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep2.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep2.lab"...
+Time for exporting: 0.081 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep2.tra:	Size of output file is 2350318 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep2.lab:	Size of output file is 80329 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_consensus.4-4_rep3.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep3.tra,lab:precision=17
+Wallclock time: 0.771 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:40:38 GMT+01:00 2026
+Hostname: n23m0396.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep3.tra,lab:precision=17'
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.02 seconds (average 0.000103, setup 0.00)
+
+Time for model construction: 0.044 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep3.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep3.lab"...
+Time for exporting: 0.093 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep3.tra:	Size of output file is 2350318 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep3.lab:	Size of output file is 80329 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_consensus.4-4_rep4.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep4.tra,lab:precision=17
+Wallclock time: 0.841 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:40 GMT+01:00 2026
+Hostname: n23m0344.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep4.tra,lab:precision=17'
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.02 seconds (average 0.000103, setup 0.00)
+
+Time for model construction: 0.051 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep4.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep4.lab"...
+Time for exporting: 0.101 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep4.tra:	Size of output file is 2350318 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep4.lab:	Size of output file is 80329 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_consensus.4-4_rep5.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep5.tra,lab:precision=17
+Wallclock time: 1.240 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:10 GMT+01:00 2026
+Hostname: n23m0160.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep5.tra,lab:precision=17'
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.02 seconds (average 0.000103, setup 0.00)
+
+Time for model construction: 0.069 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep5.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep5.lab"...
+Time for exporting: 0.106 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep5.tra:	Size of output file is 2350318 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_norewards/consensus.4-4/model_rep5.lab:	Size of output file is 80329 bytes
+Removing output file to save space for repetition #5
+```
+

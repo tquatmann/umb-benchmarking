@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Benchmark results</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
+
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
+
+      <script>
+        $(document).ready(function() {
+          // Set correct file
+          $("#content").load("data.html");
+        } );
+
+        function updateBest(table) {
+          // Remove old best ones
+          table.cells().every( function() {
+            $(this.node()).removeClass("best");
+          });
+          table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+              var bestValue = -1
+              var bestIndex = -1
+              $.each( this.data(), function( index, value ){
+                if (index >= 1 && table.column(index).visible()) {
+    			    var text = $(value).text()
+    	            if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
+    				    var number = parseFloat(text);
+    	                if (bestValue == -1 || bestValue > number) {
+    	                  // New best value
+    	                  bestValue = number;
+    	                  bestIndex = index;
+    	                }
+    				  }
+    			  }
+              });
+              // Set new best
+              if (bestIndex >= 0) {
+                $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+              }
+          } );
+      }
+      </script>
+    </head>
+    <body>
+<div>
+	<table id="table" class="display">
+		<thead>
+			<tr>
+				<th>Model</th>
+				<th>storm_from-jani_to-drn-gz_exact</th>
+				<th>storm_from-jani_to-drn-gz_sparse</th>
+				<th>storm_from-jani_to-drn-xz_exact</th>
+				<th>storm_from-jani_to-drn-xz_sparse</th>
+				<th>storm_from-jani_to-drn_exact</th>
+				<th>storm_from-jani_to-drn_sparse</th>
+				<th>storm_from-jani_to-umb-gz_exact</th>
+				<th>storm_from-jani_to-umb-gz_sparse</th>
+				<th>storm_from-jani_to-umb-xz_exact</th>
+				<th>storm_from-jani_to-umb-xz_sparse</th>
+				<th>storm_from-jani_to-umb_cudd</th>
+				<th>storm_from-jani_to-umb_exact</th>
+				<th>storm_from-jani_to-umb_sparse</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="../models/bluetooth.1" target="_blank">bluetooth.1</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-drn-gz_exact.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-drn-gz_sparse.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-drn-xz_exact.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-drn-xz_sparse.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-drn_exact.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-drn_sparse.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-umb-gz_exact.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-umb-gz_sparse.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-umb-xz_exact.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-umb-xz_sparse.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-umb_cudd.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-umb_exact.md" target="_blank" class='timeout'>TO</a></td>
+				<td><a href="logs/bluetooth.1_storm_from-jani_to-umb_sparse.md" target="_blank" class='timeout'>TO</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/cluster.128-2000-20" target="_blank">cluster.128-2000-20</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-drn-gz_exact.md" target="_blank" >3.54 (±0.54)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >2.49 (±9.22)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-drn-xz_exact.md" target="_blank" >30.46 (±1.80)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >37.42 (±9.89)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-drn_exact.md" target="_blank" >1.31 (±0.22)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-drn_sparse.md" target="_blank" >1.18 (±0.16)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-umb-gz_exact.md" target="_blank" >3.50 (±0.47)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >1.19 (±0.14)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-umb-xz_exact.md" target="_blank" >24.52 (±3.04)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >13.72 (±1.84)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-umb_cudd.md" target="_blank" >0.08 (±0.01)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-umb_exact.md" target="_blank" >1.95 (±6.65)</a></td>
+				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-umb_sparse.md" target="_blank" >0.09 (±0.02)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/cluster.64-2000-20" target="_blank">cluster.64-2000-20</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-drn-gz_exact.md" target="_blank" >0.84 (±0.12)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >0.73 (±0.10)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-drn-xz_exact.md" target="_blank" >7.78 (±0.62)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >7.21 (±4.22)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-drn_exact.md" target="_blank" >0.40 (±0.07)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-drn_sparse.md" target="_blank" >0.27 (±0.04)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-umb-gz_exact.md" target="_blank" >0.83 (±0.20)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >0.29 (±0.03)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-umb-xz_exact.md" target="_blank" >5.46 (±1.16)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >3.36 (±0.46)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-umb_cudd.md" target="_blank" >0.02 (±0.00)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-umb_exact.md" target="_blank" >0.49 (±0.08)</a></td>
+				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-umb_sparse.md" target="_blank" >0.02 (±0.02)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/consensus.4-4" target="_blank">consensus.4-4</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-drn-gz_exact.md" target="_blank" >0.12 (±0.02)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >0.12 (±0.02)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-drn-xz_exact.md" target="_blank" >1.39 (±0.15)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >1.58 (±0.36)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-drn_exact.md" target="_blank" >0.07 (±0.21)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-drn_sparse.md" target="_blank" >0.05 (±0.01)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-umb-gz_exact.md" target="_blank" >0.19 (±0.02)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >0.14 (±0.02)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-umb-xz_exact.md" target="_blank" >0.78 (±0.08)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >0.70 (±0.12)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-umb_cudd.md" target="_blank" >0.01 (±0.00)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-umb_exact.md" target="_blank" >0.06 (±0.01)</a></td>
+				<td><a href="logs/consensus.4-4_storm_from-jani_to-umb_sparse.md" target="_blank" >0.01 (±0.00)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/consensus.6-2" target="_blank">consensus.6-2</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-drn-gz_exact.md" target="_blank" >5.64 (±0.43)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >5.88 (±0.85)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-drn-xz_exact.md" target="_blank" >68.73 (±33.44)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >63.49 (±20.21)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-drn_exact.md" target="_blank" >2.48 (±0.38)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-drn_sparse.md" target="_blank" >2.22 (±0.28)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-umb-gz_exact.md" target="_blank" >8.15 (±25.10)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >5.00 (±0.25)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-umb-xz_exact.md" target="_blank" >40.28 (±5.18)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >35.95 (±4.65)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-umb_cudd.md" target="_blank" >0.23 (±0.06)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-umb_exact.md" target="_blank" >2.75 (±1.06)</a></td>
+				<td><a href="logs/consensus.6-2_storm_from-jani_to-umb_sparse.md" target="_blank" >0.23 (±0.04)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/crowds.5-20" target="_blank">crowds.5-20</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-drn-gz_exact.md" target="_blank" >3.91 (±0.93)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >3.33 (±0.42)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-drn-xz_exact.md" target="_blank" >55.93 (±18.06)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >34.87 (±1.76)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-drn_exact.md" target="_blank" >2.81 (±0.11)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-drn_sparse.md" target="_blank" >2.30 (±0.44)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-umb-gz_exact.md" target="_blank" >5.35 (±0.71)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >2.51 (±0.28)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-umb-xz_exact.md" target="_blank" >20.54 (±4.02)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >12.69 (±4.16)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-umb_cudd.md" target="_blank" >0.20 (±0.08)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-umb_exact.md" target="_blank" >3.27 (±0.72)</a></td>
+				<td><a href="logs/crowds.5-20_storm_from-jani_to-umb_sparse.md" target="_blank" >0.17 (±0.06)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/crowds.6-20" target="_blank">crowds.6-20</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-drn-gz_exact.md" target="_blank" >22.57 (±2.35)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >16.79 (±2.45)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-drn-xz_exact.md" target="_blank" >182.90 (±82.89)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >176.41 (±43.27)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-drn_exact.md" target="_blank" >15.82 (±1.74)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-drn_sparse.md" target="_blank" >12.59 (±41.95)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-umb-gz_exact.md" target="_blank" >27.47 (±5.11)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >11.50 (±2.32)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-umb-xz_exact.md" target="_blank" >103.22 (±277.56)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >68.51 (±5.08)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-umb_cudd.md" target="_blank" >0.90 (±0.27)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-umb_exact.md" target="_blank" >17.17 (±2.08)</a></td>
+				<td><a href="logs/crowds.6-20_storm_from-jani_to-umb_sparse.md" target="_blank" >0.93 (±0.08)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/csma.3-4" target="_blank">csma.3-4</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-drn-gz_exact.md" target="_blank" >1.92 (±0.23)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >1.57 (±0.14)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-drn-xz_exact.md" target="_blank" >22.91 (±12.24)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >21.54 (±3.26)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-drn_exact.md" target="_blank" >1.20 (±0.17)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-drn_sparse.md" target="_blank" >0.89 (±0.15)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-umb-gz_exact.md" target="_blank" >2.96 (±0.46)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >1.98 (±0.45)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-umb-xz_exact.md" target="_blank" >10.87 (±0.48)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >9.92 (±1.57)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-umb_cudd.md" target="_blank" >0.10 (±0.03)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-umb_exact.md" target="_blank" >1.04 (±0.09)</a></td>
+				<td><a href="logs/csma.3-4_storm_from-jani_to-umb_sparse.md" target="_blank" >0.08 (±0.10)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/csma.4-2" target="_blank">csma.4-2</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-drn-gz_exact.md" target="_blank" >1.10 (±0.27)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >1.01 (±0.13)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-drn-xz_exact.md" target="_blank" >15.44 (±4.36)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >12.37 (±6.55)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-drn_exact.md" target="_blank" >0.66 (±0.10)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-drn_sparse.md" target="_blank" >0.48 (±0.07)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-umb-gz_exact.md" target="_blank" >1.65 (±0.21)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >1.16 (±0.10)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-umb-xz_exact.md" target="_blank" >7.55 (±1.08)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >7.30 (±1.65)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-umb_cudd.md" target="_blank" >0.07 (±0.03)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-umb_exact.md" target="_blank" >0.58 (±0.07)</a></td>
+				<td><a href="logs/csma.4-2_storm_from-jani_to-umb_sparse.md" target="_blank" >0.07 (±0.02)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/eajs.5-250-11" target="_blank">eajs.5-250-11</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-drn-gz_exact.md" target="_blank" >9.31 (±3.26)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >5.97 (±0.65)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-drn-xz_exact.md" target="_blank" >78.35 (±5.43)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >77.97 (±25.31)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-drn_exact.md" target="_blank" >6.76 (±15.17)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-drn_sparse.md" target="_blank" >3.54 (±0.22)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-umb-gz_exact.md" target="_blank" >11.74 (±1.62)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >5.16 (±0.83)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-umb-xz_exact.md" target="_blank" >42.36 (±9.83)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >31.98 (±3.84)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-umb_cudd.md" target="_blank" >0.32 (±0.10)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-umb_exact.md" target="_blank" >5.97 (±0.19)</a></td>
+				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-umb_sparse.md" target="_blank" >0.31 (±0.72)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/eajs.6-300-13" target="_blank">eajs.6-300-13</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-drn-gz_exact.md" target="_blank" >25.55 (±6.28)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >18.40 (±1.41)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-drn-xz_exact.md" target="_blank" >235.87 (±25.57)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >201.40 (±43.89)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-drn_exact.md" target="_blank" >16.36 (±0.56)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-drn_sparse.md" target="_blank" >9.77 (±34.17)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-umb-gz_exact.md" target="_blank" >29.67 (±2.67)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >16.89 (±1.89)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-umb-xz_exact.md" target="_blank" >109.64 (±13.31)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >77.42 (±26.36)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-umb_cudd.md" target="_blank" >0.76 (±0.13)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-umb_exact.md" target="_blank" >15.39 (±2.20)</a></td>
+				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-umb_sparse.md" target="_blank" >0.80 (±0.07)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/egl.10-2" target="_blank">egl.10-2</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-drn-gz_exact.md" target="_blank" >54.27 (±7.09)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >46.21 (±1.41)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-drn-xz_exact.md" target="_blank" >770.73 (±74.53)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >817.70 (±198.41)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-drn_exact.md" target="_blank" >39.94 (±1.91)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-drn_sparse.md" target="_blank" >35.49 (±5.65)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-umb-gz_exact.md" target="_blank" >87.49 (±6.88)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >54.82 (±4.53)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-umb-xz_exact.md" target="_blank" >283.40 (±77.59)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >242.31 (±47.51)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-umb_cudd.md" target="_blank" >2.49 (±0.16)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-umb_exact.md" target="_blank" >30.50 (±2.73)</a></td>
+				<td><a href="logs/egl.10-2_storm_from-jani_to-umb_sparse.md" target="_blank" >2.50 (±0.26)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/egl.10-8" target="_blank">egl.10-8</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-drn-gz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-drn-gz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-drn-xz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-drn-xz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-drn_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-drn_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-umb-gz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-umb-gz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-umb-xz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-umb-xz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-umb_cudd.md" target="_blank" >11.57 (±4.77)</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-umb_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_storm_from-jani_to-umb_sparse.md" target="_blank" class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/embedded.8-12" target="_blank">embedded.8-12</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-drn-gz_exact.md" target="_blank" >0.04 (±0.01)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >0.04 (±0.00)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-drn-xz_exact.md" target="_blank" >0.36 (±1.09)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >0.38 (±0.04)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-drn_exact.md" target="_blank" >0.02 (±0.01)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-drn_sparse.md" target="_blank" >0.02 (±0.00)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-umb-gz_exact.md" target="_blank" >0.05 (±0.00)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >0.02 (±0.00)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-umb-xz_exact.md" target="_blank" >0.21 (±0.03)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >0.14 (±0.04)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-umb_cudd.md" target="_blank" >0.00</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-umb_exact.md" target="_blank" >0.03 (±0.08)</a></td>
+				<td><a href="logs/embedded.8-12_storm_from-jani_to-umb_sparse.md" target="_blank" >0.00</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/firewire.false-36-800" target="_blank">firewire.false-36-800</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-drn-gz_exact.md" target="_blank" >0.55 (±0.05)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >0.44 (±0.06)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-drn-xz_exact.md" target="_blank" >7.26 (±2.64)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >7.52 (±3.93)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-drn_exact.md" target="_blank" >0.37 (±0.03)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-drn_sparse.md" target="_blank" >0.29 (±0.05)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-umb-gz_exact.md" target="_blank" >0.86 (±0.19)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >0.50 (±0.06)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-umb-xz_exact.md" target="_blank" >3.59 (±0.48)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >2.82 (±8.17)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-umb_cudd.md" target="_blank" >0.03 (±0.00)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-umb_exact.md" target="_blank" >0.41 (±1.37)</a></td>
+				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-umb_sparse.md" target="_blank" >0.03 (±0.01)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/fms.8" target="_blank">fms.8</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-drn-gz_exact.md" target="_blank" >42.68 (±6.92)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >40.58 (±6.39)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-drn-xz_exact.md" target="_blank" >498.03 (±236.04)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >556.68 (±162.03)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-drn_exact.md" target="_blank" >21.05 (±3.34)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-drn_sparse.md" target="_blank" >13.46 (±49.47)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-umb-gz_exact.md" target="_blank" >47.51 (±1.86)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >19.24 (±2.89)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-umb-xz_exact.md" target="_blank" >228.47 (±84.97)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >167.80 (±65.72)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-umb_cudd.md" target="_blank" >0.94 (±0.10)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-umb_exact.md" target="_blank" >24.89 (±3.22)</a></td>
+				<td><a href="logs/fms.8_storm_from-jani_to-umb_sparse.md" target="_blank" >1.00 (±0.11)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/haddad-monmege.100-0.7" target="_blank">haddad-monmege.100-0.7</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-drn-gz_exact.md" target="_blank" >0.00</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >0.00</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-drn-xz_exact.md" target="_blank" >0.01 (±0.02)</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >0.01 (±0.00)</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-drn_exact.md" target="_blank" >0.00</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-drn_sparse.md" target="_blank" >0.00</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-umb-gz_exact.md" target="_blank" >0.00</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >0.00</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-umb-xz_exact.md" target="_blank" >0.01 (±0.00)</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >0.01 (±0.00)</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-umb_cudd.md" target="_blank" >0.00</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-umb_exact.md" target="_blank" >0.00</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-umb_sparse.md" target="_blank" >0.00</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/herman.15" target="_blank">herman.15</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-drn-gz_exact.md" target="_blank" >8.25 (±1.63)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >6.86 (±1.21)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-drn-xz_exact.md" target="_blank" >55.76 (±4.98)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >59.87 (±14.18)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-drn_exact.md" target="_blank" >5.09 (±0.54)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-drn_sparse.md" target="_blank" >4.07 (±0.36)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-umb-gz_exact.md" target="_blank" >9.22 (±2.20)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >3.55 (±1.02)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-umb-xz_exact.md" target="_blank" >30.39 (±5.41)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >20.38 (±3.05)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-umb_cudd.md" target="_blank" >0.29 (±0.03)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-umb_exact.md" target="_blank" >5.86 (±0.57)</a></td>
+				<td><a href="logs/herman.15_storm_from-jani_to-umb_sparse.md" target="_blank" >0.31 (±0.08)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/kanban.5" target="_blank">kanban.5</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-drn-gz_exact.md" target="_blank" >24.54 (±5.22)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >20.60 (±0.09)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-drn-xz_exact.md" target="_blank" >273.62 (±43.49)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >301.01 (±147.73)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-drn_exact.md" target="_blank" >11.22 (±0.97)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-drn_sparse.md" target="_blank" >7.55 (±0.47)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-umb-gz_exact.md" target="_blank" >37.95 (±3.29)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >13.10 (±2.88)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-umb-xz_exact.md" target="_blank" >212.87 (±49.12)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >138.91 (±42.07)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-umb_cudd.md" target="_blank" >0.61 (±0.06)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-umb_exact.md" target="_blank" >17.06 (±3.10)</a></td>
+				<td><a href="logs/kanban.5_storm_from-jani_to-umb_sparse.md" target="_blank" >0.59 (±0.29)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/majority.2100" target="_blank">majority.2100</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-drn-gz_exact.md" target="_blank" >2.42 (±0.34)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >1.65 (±0.06)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-drn-xz_exact.md" target="_blank" >25.38 (±8.26)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >20.61 (±6.30)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-drn_exact.md" target="_blank" >0.92 (±0.11)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-drn_sparse.md" target="_blank" >0.69 (±0.07)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-umb-gz_exact.md" target="_blank" >3.23 (±0.23)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >1.07 (±0.16)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-umb-xz_exact.md" target="_blank" >22.78 (±7.39)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >8.51 (±0.83)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-umb_cudd.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-umb_exact.md" target="_blank" >1.65 (±0.10)</a></td>
+				<td><a href="logs/majority.2100_storm_from-jani_to-umb_sparse.md" target="_blank" >0.07 (±0.02)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/mapk-cascade.4-30" target="_blank">mapk-cascade.4-30</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-drn-gz_exact.md" target="_blank" >0.98 (±0.12)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >0.76 (±0.10)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-drn-xz_exact.md" target="_blank" >10.47 (±2.80)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >6.99 (±2.95)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-drn_exact.md" target="_blank" >0.41 (±0.04)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-drn_sparse.md" target="_blank" >0.32 (±0.03)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-umb-gz_exact.md" target="_blank" >1.18 (±0.15)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >0.46 (±0.08)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-umb-xz_exact.md" target="_blank" >6.17 (±0.94)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >3.95 (±0.47)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-umb_cudd.md" target="_blank" >0.48 (±0.05)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-umb_exact.md" target="_blank" >0.58 (±0.09)</a></td>
+				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-umb_sparse.md" target="_blank" >0.02 (±0.00)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/models" target="_blank">models</a></td>
+				<td><a href="logs/models_storm_from-jani_to-drn-gz_exact.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-drn-xz_exact.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-drn_exact.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-drn_sparse.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-umb-gz_exact.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-umb-xz_exact.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-umb_cudd.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-umb_exact.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_storm_from-jani_to-umb_sparse.md" target="_blank" >-</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/nand.40-4" target="_blank">nand.40-4</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-drn-gz_exact.md" target="_blank" >4.57 (±0.48)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >4.31 (±0.53)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-drn-xz_exact.md" target="_blank" >59.81 (±8.99)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >59.58 (±20.21)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-drn_exact.md" target="_blank" >2.75 (±0.26)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-drn_sparse.md" target="_blank" >2.65 (±0.32)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-umb-gz_exact.md" target="_blank" >5.92 (±2.10)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >3.40 (±0.72)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-umb-xz_exact.md" target="_blank" >25.38 (±3.56)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >21.32 (±2.32)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-umb_cudd.md" target="_blank" >0.20 (±0.51)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-umb_exact.md" target="_blank" >2.58 (±8.88)</a></td>
+				<td><a href="logs/nand.40-4_storm_from-jani_to-umb_sparse.md" target="_blank" >0.21 (±0.04)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/nand.60-4" target="_blank">nand.60-4</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-drn-gz_exact.md" target="_blank" >25.05 (±3.84)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >18.45 (±1.45)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-drn-xz_exact.md" target="_blank" >287.06 (±29.59)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >302.49 (±29.69)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-drn_exact.md" target="_blank" >13.93 (±0.98)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-drn_sparse.md" target="_blank" >11.26 (±2.01)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-umb-gz_exact.md" target="_blank" >27.37 (±4.76)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >16.48 (±2.51)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-umb-xz_exact.md" target="_blank" >117.88 (±20.13)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >92.96 (±17.32)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-umb_cudd.md" target="_blank" >0.82 (±0.26)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-umb_exact.md" target="_blank" >13.08 (±1.31)</a></td>
+				<td><a href="logs/nand.60-4_storm_from-jani_to-umb_sparse.md" target="_blank" >0.96 (±0.16)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/oscillators.8-10-0.1-1-0.1-1.0" target="_blank">oscillators.8-10-0.1-1-0.1-1.0</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-drn-gz_exact.md" target="_blank" >0.16 (±0.04)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >0.07 (±0.01)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-drn-xz_exact.md" target="_blank" >0.84 (±0.08)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >0.75 (±0.09)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-drn_exact.md" target="_blank" >0.06 (±0.02)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-drn_sparse.md" target="_blank" >0.04 (±0.00)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-umb-gz_exact.md" target="_blank" >0.14 (±0.03)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >0.04 (±0.01)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-umb-xz_exact.md" target="_blank" >0.46 (±0.05)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >0.26 (±0.83)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-umb_cudd.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-umb_exact.md" target="_blank" >0.08 (±0.07)</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-umb_sparse.md" target="_blank" >0.01 (±0.00)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/pacman.100" target="_blank">pacman.100</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-drn-gz_exact.md" target="_blank" >99.17 (±12.68)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >94.06 (±10.05)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-drn-xz_exact.md" target="_blank" >1077.55 (±355.94)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >984.45 (±106.15)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-drn_exact.md" target="_blank" >53.53 (±7.47)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-drn_sparse.md" target="_blank" >45.36 (±4.29)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-umb-gz_exact.md" target="_blank" >168.47 (±24.16)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >135.43 (±17.76)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-umb-xz_exact.md" target="_blank" >799.09 (±122.22)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >708.24 (±122.73)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-umb_cudd.md" target="_blank" >4.25 (±0.84)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-umb_exact.md" target="_blank" >53.23 (±155.15)</a></td>
+				<td><a href="logs/pacman.100_storm_from-jani_to-umb_sparse.md" target="_blank" >4.54 (±3.32)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/pacman.60" target="_blank">pacman.60</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-drn-gz_exact.md" target="_blank" >51.14 (±8.20)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >41.88 (±7.24)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-drn-xz_exact.md" target="_blank" >554.20 (±189.75)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >621.00 (±189.23)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-drn_exact.md" target="_blank" >28.55 (±6.36)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-drn_sparse.md" target="_blank" >22.32 (±2.14)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-umb-gz_exact.md" target="_blank" >84.47 (±8.17)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >57.85 (±12.41)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-umb-xz_exact.md" target="_blank" >384.98 (±48.31)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >289.99 (±107.96)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-umb_cudd.md" target="_blank" >2.56 (±0.32)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-umb_exact.md" target="_blank" >25.62 (±1.92)</a></td>
+				<td><a href="logs/pacman.60_storm_from-jani_to-umb_sparse.md" target="_blank" >2.46 (±0.53)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/pnueli-zuck.10" target="_blank">pnueli-zuck.10</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-drn-gz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-drn-gz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-drn-xz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-drn-xz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-drn_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-drn_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-umb-gz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-umb-gz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-umb-xz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-umb-xz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-umb_cudd.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-umb_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-umb_sparse.md" target="_blank" class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/pnueli-zuck.5" target="_blank">pnueli-zuck.5</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-drn-gz_exact.md" target="_blank" >2.45 (±0.27)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >2.07 (±0.36)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-drn-xz_exact.md" target="_blank" >30.10 (±8.69)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >25.11 (±75.94)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-drn_exact.md" target="_blank" >1.12 (±0.18)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-drn_sparse.md" target="_blank" >0.78 (±0.15)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-umb-gz_exact.md" target="_blank" >3.02 (±11.09)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >2.32 (±0.29)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-umb-xz_exact.md" target="_blank" >15.42 (±3.94)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >12.24 (±1.48)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-umb_cudd.md" target="_blank" >0.11 (±0.03)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-umb_exact.md" target="_blank" >1.06 (±0.18)</a></td>
+				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-umb_sparse.md" target="_blank" >0.08 (±0.24)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/polling.18-16" target="_blank">polling.18-16</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-drn-gz_exact.md" target="_blank" >47.77 (±11.39)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >47.04 (±3.01)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-drn-xz_exact.md" target="_blank" >595.78 (±129.72)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >867.11 (±244.05)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-drn_exact.md" target="_blank" >26.30 (±0.78)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-drn_sparse.md" target="_blank" >22.60 (±4.85)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-umb-gz_exact.md" target="_blank" >68.30 (±1.68)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >27.87 (±6.79)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-umb-xz_exact.md" target="_blank" >289.88 (±121.90)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >204.21 (±72.42)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-umb_cudd.md" target="_blank" >1.83 (±0.42)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-umb_exact.md" target="_blank" >42.31 (±3.49)</a></td>
+				<td><a href="logs/polling.18-16_storm_from-jani_to-umb_sparse.md" target="_blank" >1.78 (±0.27)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/rabin.10" target="_blank">rabin.10</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-drn-gz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-drn-gz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-drn-xz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-drn-xz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-drn_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-drn_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-umb-gz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-umb-gz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-umb-xz_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-umb-xz_sparse.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-umb_cudd.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-umb_exact.md" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_storm_from-jani_to-umb_sparse.md" target="_blank" class='memout'>MO</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/resource-gathering.1300-100-100" target="_blank">resource-gathering.1300-100-100</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-drn-gz_exact.md" target="_blank" >2.77 (±0.13)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >2.64 (±0.24)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-drn-xz_exact.md" target="_blank" >43.50 (±15.16)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >43.06 (±109.57)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-drn_exact.md" target="_blank" >1.50 (±0.19)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-drn_sparse.md" target="_blank" >1.16 (±0.14)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-umb-gz_exact.md" target="_blank" >3.88 (±0.07)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >2.75 (±0.31)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-umb-xz_exact.md" target="_blank" >22.04 (±58.93)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >17.00 (±2.81)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-umb_cudd.md" target="_blank" >0.14 (±0.09)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-umb_exact.md" target="_blank" >1.47 (±0.23)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-umb_sparse.md" target="_blank" >0.14 (±0.32)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/speed-ind.2100" target="_blank">speed-ind.2100</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-drn-gz_exact.md" target="_blank" >10.95 (±1.32)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >8.62 (±1.18)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-drn-xz_exact.md" target="_blank" >155.10 (±38.80)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >102.72 (±34.48)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-drn_exact.md" target="_blank" >3.78 (±0.65)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-drn_sparse.md" target="_blank" >2.92 (±0.56)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-umb-gz_exact.md" target="_blank" >16.30 (±2.47)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >5.61 (±0.72)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-umb-xz_exact.md" target="_blank" >191.91 (±24.64)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >50.92 (±130.31)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-umb_cudd.md" target="_blank" >0.23 (±0.06)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-umb_exact.md" target="_blank" >8.81 (±1.29)</a></td>
+				<td><a href="logs/speed-ind.2100_storm_from-jani_to-umb_sparse.md" target="_blank" >0.22 (±0.02)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/wlan.4-0" target="_blank">wlan.4-0</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-drn-gz_exact.md" target="_blank" >0.60 (±0.08)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >0.49 (±0.08)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-drn-xz_exact.md" target="_blank" >12.25 (±21.82)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >10.10 (±3.42)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-drn_exact.md" target="_blank" >0.40 (±0.09)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-drn_sparse.md" target="_blank" >0.27 (±0.03)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-umb-gz_exact.md" target="_blank" >0.96 (±0.15)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >0.62 (±0.11)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-umb-xz_exact.md" target="_blank" >3.79 (±8.98)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >2.71 (±0.66)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-umb_cudd.md" target="_blank" >0.03 (±0.00)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-umb_exact.md" target="_blank" >0.35 (±0.04)</a></td>
+				<td><a href="logs/wlan.4-0_storm_from-jani_to-umb_sparse.md" target="_blank" >0.03 (±0.00)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/wlan.5-0" target="_blank">wlan.5-0</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-drn-gz_exact.md" target="_blank" >2.27 (±0.23)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >1.71 (±0.17)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-drn-xz_exact.md" target="_blank" >29.32 (±7.93)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >26.18 (±3.69)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-drn_exact.md" target="_blank" >1.40 (±0.24)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-drn_sparse.md" target="_blank" >1.15 (±0.16)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-umb-gz_exact.md" target="_blank" >3.64 (±0.42)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >2.23 (±0.35)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-umb-xz_exact.md" target="_blank" >17.74 (±3.33)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >13.11 (±1.71)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-umb_cudd.md" target="_blank" >0.10 (±0.04)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-umb_exact.md" target="_blank" >1.25 (±0.24)</a></td>
+				<td><a href="logs/wlan.5-0_storm_from-jani_to-umb_sparse.md" target="_blank" >0.10 (±0.25)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/wlan.6-0" target="_blank">wlan.6-0</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-drn-gz_exact.md" target="_blank" >8.32 (±0.89)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >6.16 (±0.52)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-drn-xz_exact.md" target="_blank" >112.66 (±61.26)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >115.26 (±62.58)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-drn_exact.md" target="_blank" >6.09 (±0.66)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-drn_sparse.md" target="_blank" >4.33 (±0.61)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-umb-gz_exact.md" target="_blank" >14.35 (±1.78)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >9.03 (±1.32)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-umb-xz_exact.md" target="_blank" >59.72 (±12.10)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >59.53 (±11.94)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-umb_cudd.md" target="_blank" >0.37 (±0.13)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-umb_exact.md" target="_blank" >5.50 (±0.74)</a></td>
+				<td><a href="logs/wlan.6-0_storm_from-jani_to-umb_sparse.md" target="_blank" >0.38 (±0.10)</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/zeroconf.1000-8-false" target="_blank">zeroconf.1000-8-false</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-drn-gz_exact.md" target="_blank" >3.71 (±0.80)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-drn-gz_sparse.md" target="_blank" >3.37 (±0.43)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-drn-xz_exact.md" target="_blank" >58.52 (±8.73)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-drn-xz_sparse.md" target="_blank" >47.94 (±4.49)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-drn_exact.md" target="_blank" >1.80 (±0.39)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-drn_sparse.md" target="_blank" >1.74 (±0.29)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-umb-gz_exact.md" target="_blank" >5.30 (±1.68)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-umb-gz_sparse.md" target="_blank" >3.96 (±0.52)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-umb-xz_exact.md" target="_blank" >27.49 (±1.72)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-umb-xz_sparse.md" target="_blank" >23.90 (±1.80)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-umb_cudd.md" target="_blank" >0.16 (±0.02)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-umb_exact.md" target="_blank" >1.69 (±0.23)</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-umb_sparse.md" target="_blank" >0.18 (±0.04)</a></td>
+			</tr>
+		</tbody>
+</table>
+<script>
+	var table = $("#table").DataTable( {
+		"paging": false,
+		"autoWidth": false,
+		"info": false,
+		fixedHeader: {
+			"header": true,
+		},
+		"dom": "Bfrtip",
+		buttons: [
+			{
+				extend: "columnsToggle",
+				columns: [1],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [2],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [3],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [4],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [5],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [6],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [7],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [8],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [9],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [10],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [11],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [12],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [13],
+			},
+			{
+				extend: "colvisGroup",
+				text: "Show all",
+				show: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+				hide: []
+			},
+			{
+				extend: "colvisGroup",
+				text: "Hide all",
+				show: [],
+				hide: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+			},
+		],
+	});
+
+	table.on("column-sizing.dt", function (e, settings) {
+		updateBest(table);
+	} );
+
+	updateBest(table);
+</script>
+</div>
+</body>
+</html>

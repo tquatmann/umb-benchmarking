@@ -1,0 +1,258 @@
+# Log files for prism_from-prism_to-umb-gz_ex on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+
+Parsed values: `[0.044, 0.177, 0.073, 0.031, 0.11]`
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_haddad-monmege.100-0.7_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.305 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:49:27 GMT+01:00 2026
+Hostname: r23m0045.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/haddad-monmege.100-0.7/model.prism"...
+
+Type:        DTMC
+Modules:     main
+Actions:     []
+Variables:   x
+Labels:      "Target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 201 states
+Reachable states exploration and model construction done in 0.015 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.033 seconds.
+
+Type:        DTMC
+States:      201 (1 initial)
+Transitions: 400
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb.gz"...
+Time for exporting: 0.044 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb.gz:	Size of output file is 4474 bytes
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_haddad-monmege.100-0.7_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 2.188 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:32:22 GMT+01:00 2026
+Hostname: n23m0328.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/haddad-monmege.100-0.7/model.prism"...
+
+Type:        DTMC
+Modules:     main
+Actions:     []
+Variables:   x
+Labels:      "Target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 201 states
+Reachable states exploration and model construction done in 0.016 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.193 seconds.
+
+Type:        DTMC
+States:      201 (1 initial)
+Transitions: 400
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep2.gz"...
+Time for exporting: 0.177 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep2.gz:	Size of output file is 4474 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_haddad-monmege.100-0.7_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.238 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:27:29 GMT+01:00 2026
+Hostname: n23m0379.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/haddad-monmege.100-0.7/model.prism"...
+
+Type:        DTMC
+Modules:     main
+Actions:     []
+Variables:   x
+Labels:      "Target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 201 states
+Reachable states exploration and model construction done in 0.01 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.025 seconds.
+
+Type:        DTMC
+States:      201 (1 initial)
+Transitions: 400
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep3.gz"...
+Time for exporting: 0.073 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep3.gz:	Size of output file is 4474 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_haddad-monmege.100-0.7_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.294 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:02:25 GMT+01:00 2026
+Hostname: r23m0195.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/haddad-monmege.100-0.7/model.prism"...
+
+Type:        DTMC
+Modules:     main
+Actions:     []
+Variables:   x
+Labels:      "Target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 201 states
+Reachable states exploration and model construction done in 0.013 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.029 seconds.
+
+Type:        DTMC
+States:      201 (1 initial)
+Transitions: 400
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep4.gz"...
+Time for exporting: 0.031 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep4.gz:	Size of output file is 4474 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_haddad-monmege.100-0.7_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.285 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:24:54 GMT+01:00 2026
+Hostname: n23m0041.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/haddad-monmege.100-0.7/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/haddad-monmege.100-0.7/model.prism"...
+
+Type:        DTMC
+Modules:     main
+Actions:     []
+Variables:   x
+Labels:      "Target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 201 states
+Reachable states exploration and model construction done in 0.013 secs.
+Sorting reachable states list...
+
+Time for model construction: 0.029 seconds.
+
+Type:        DTMC
+States:      201 (1 initial)
+Transitions: 400
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep5.gz"...
+Time for exporting: 0.11 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/haddad-monmege.100-0.7/model.umb_rep5.gz:	Size of output file is 4474 bytes
+Removing output file to save space for repetition #5
+```
+

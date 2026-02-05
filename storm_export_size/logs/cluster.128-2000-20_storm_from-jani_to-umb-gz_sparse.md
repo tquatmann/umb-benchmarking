@@ -1,0 +1,233 @@
+# Log files for storm_from-jani_to-umb-gz_sparse on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+
+Parsed values: `[10527754.0, 10527759.0, 10527755.0, 10527755.0, 10527745.0]`
+
+
+
+### Log file: storm_from-jani_to-umb-gz_sparse_cluster.128-2000-20_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb.gz umb --compression gzip
+Wallclock time: 3.666 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 07:43:11 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb.gz umb --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 2.429s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	597012
+Transitions: 	2908192
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * minimum -> 141117 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb.gz'.
+Time for model export: 1.194s.
+
+
+Performance statistics:
+  * peak memory usage: 160MB
+  * CPU time: 3.602s
+  * wallclock time: 3.628s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb.gz:	Size of output file is 10527754 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-umb-gz_sparse_cluster.128-2000-20_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep2.gz umb --compression gzip
+Wallclock time: 4.140 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:20:38 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep2.gz umb --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.023s.
+
+Time for model construction: 2.727s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	597012
+Transitions: 	2908192
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * minimum -> 141117 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep2.gz'.
+Time for model export: 1.338s.
+
+
+Performance statistics:
+  * peak memory usage: 161MB
+  * CPU time: 4.031s
+  * wallclock time: 4.091s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep2.gz:	Size of output file is 10527759 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-umb-gz_sparse_cluster.128-2000-20_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep3.gz umb --compression gzip
+Wallclock time: 3.931 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:35:04 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep3.gz umb --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.001s.
+
+Time for model construction: 2.577s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	597012
+Transitions: 	2908192
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * minimum -> 141117 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep3.gz'.
+Time for model export: 1.304s.
+
+
+Performance statistics:
+  * peak memory usage: 161MB
+  * CPU time: 3.852s
+  * wallclock time: 3.885s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep3.gz:	Size of output file is 10527755 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-umb-gz_sparse_cluster.128-2000-20_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep4.gz umb --compression gzip
+Wallclock time: 3.506 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:29:15 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep4.gz umb --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 2.307s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	597012
+Transitions: 	2908192
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * minimum -> 141117 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep4.gz'.
+Time for model export: 1.135s.
+
+
+Performance statistics:
+  * peak memory usage: 160MB
+  * CPU time: 3.425s
+  * wallclock time: 3.470s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep4.gz:	Size of output file is 10527755 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-umb-gz_sparse_cluster.128-2000-20_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep5.gz umb --compression gzip
+Wallclock time: 3.612 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:02:55 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.128-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep5.gz umb --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 2.368s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	597012
+Transitions: 	2908192
+Reward Models:  none
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * minimum -> 141117 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep5.gz'.
+Time for model export: 1.183s.
+
+
+Performance statistics:
+  * peak memory usage: 160MB
+  * CPU time: 3.536s
+  * wallclock time: 3.558s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_sparse/cluster.128-2000-20/model.umb_rep5.gz:	Size of output file is 10527745 bytes
+Removing output file to save space for repetition #5
+```
+

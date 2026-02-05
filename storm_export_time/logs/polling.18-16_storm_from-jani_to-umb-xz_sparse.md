@@ -1,0 +1,238 @@
+# Log files for storm_from-jani_to-umb-xz_sparse on model [polling.18-16](../../models/polling.18-16)
+
+Parsed values: `[204.213, 203.192, 203.091, 276.633, 217.101]`
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_polling.18-16_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb.xz umb --compression xz
+Wallclock time: 264.490 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:44:11 2026
+Command line arguments: --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 60.220s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * serve_s2 -> 131072 item(s)
+   * serve_s1 -> 131072 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb.xz'.
+Time for model export: 204.213s.
+
+
+Performance statistics:
+  * peak memory usage: 2505MB
+  * CPU time: 263.280s
+  * wallclock time: 264.444s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb.xz:	Size of output file is 48551484 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_polling.18-16_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep2.xz umb --compression xz
+Wallclock time: 263.591 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:59:22 2026
+Command line arguments: --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep2.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.017s.
+
+Time for model construction: 60.226s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * serve_s2 -> 131072 item(s)
+   * serve_s1 -> 131072 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep2.xz'.
+Time for model export: 203.192s.
+
+
+Performance statistics:
+  * peak memory usage: 2506MB
+  * CPU time: 262.109s
+  * wallclock time: 263.441s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep2.xz:	Size of output file is 48385192 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_polling.18-16_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep3.xz umb --compression xz
+Wallclock time: 263.434 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:54:48 2026
+Command line arguments: --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep3.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.020s.
+
+Time for model construction: 60.274s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * serve_s2 -> 131072 item(s)
+   * serve_s1 -> 131072 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep3.xz'.
+Time for model export: 203.091s.
+
+
+Performance statistics:
+  * peak memory usage: 2505MB
+  * CPU time: 261.710s
+  * wallclock time: 263.390s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep3.xz:	Size of output file is 48325428 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_polling.18-16_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep4.xz umb --compression xz
+Wallclock time: 347.524 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:21:39 2026
+Command line arguments: --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep4.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 70.833s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * serve_s2 -> 131072 item(s)
+   * serve_s1 -> 131072 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep4.xz'.
+Time for model export: 276.633s.
+
+
+Performance statistics:
+  * peak memory usage: 2506MB
+  * CPU time: 345.068s
+  * wallclock time: 347.478s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep4.xz:	Size of output file is 48325424 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_polling.18-16_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep5.xz umb --compression xz
+Wallclock time: 279.096 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:30:19 2026
+Command line arguments: --timemem --buildfull --jani models/polling.18-16/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep5.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.031s.
+
+Time for model construction: 61.901s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	7077888
+Transitions: 	69599232
+Reward Models:  none
+State Labels: 	4 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * serve_s2 -> 131072 item(s)
+   * serve_s1 -> 131072 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep5.xz'.
+Time for model export: 217.101s.
+
+
+Performance statistics:
+  * peak memory usage: 2506MB
+  * CPU time: 277.517s
+  * wallclock time: 279.040s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/polling.18-16/model.umb_rep5.xz:	Size of output file is 48607520 bytes
+Removing output file to save space for repetition #5
+```
+

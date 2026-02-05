@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Benchmark results</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
+
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
+
+      <script>
+        $(document).ready(function() {
+          // Set correct file
+          $("#content").load("data.html");
+        } );
+
+        function updateBest(table) {
+          // Remove old best ones
+          table.cells().every( function() {
+            $(this.node()).removeClass("best");
+          });
+          table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+              var bestValue = -1
+              var bestIndex = -1
+              $.each( this.data(), function( index, value ){
+                if (index >= 1 && table.column(index).visible()) {
+    			    var text = $(value).text()
+    	            if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
+    				    var number = parseFloat(text);
+    	                if (bestValue == -1 || bestValue > number) {
+    	                  // New best value
+    	                  bestValue = number;
+    	                  bestIndex = index;
+    	                }
+    				  }
+    			  }
+              });
+              // Set new best
+              if (bestIndex >= 0) {
+                $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+              }
+          } );
+      }
+      </script>
+    </head>
+    <body>
+<div>
+	<table id="table" class="display">
+		<thead>
+			<tr>
+				<th>Model</th>
+				<th>modest_from-jani_to-aut_default</th>
+				<th>modest_from-jani_to-imca_default</th>
+				<th>modest_from-jani_to-umb-gz_default</th>
+				<th>modest_from-jani_to-umb-gz_memory</th>
+				<th>modest_from-jani_to-umb-xz_default</th>
+				<th>modest_from-jani_to-umb-xz_memory</th>
+				<th>modest_from-jani_to-umb_default</th>
+				<th>modest_from-jani_to-umb_memory</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="../models/bluetooth.1" target="_blank">bluetooth.1</a></td>
+				<td><a href="logs/bluetooth.1_modest_from-jani_to-aut_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/bluetooth.1_modest_from-jani_to-imca_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/bluetooth.1_modest_from-jani_to-umb-gz_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/bluetooth.1_modest_from-jani_to-umb-gz_memory.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/bluetooth.1_modest_from-jani_to-umb-xz_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/bluetooth.1_modest_from-jani_to-umb-xz_memory.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/bluetooth.1_modest_from-jani_to-umb_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/bluetooth.1_modest_from-jani_to-umb_memory.md" target="_blank" class='unsupported'>NS</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/cluster.128-2000-20" target="_blank">cluster.128-2000-20</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-aut_default.md" target="_blank" >75.66 MB</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-imca_default.md" target="_blank" >52.33 MB</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-umb-gz_default.md" target="_blank" >9.76 MB</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-umb-gz_memory.md" target="_blank" >9.76 MB</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-umb-xz_default.md" target="_blank" >4.74 MB</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-umb-xz_memory.md" target="_blank" >4.75 MB (±1%)</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-umb_default.md" target="_blank" >53.64 MB</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-umb_memory.md" target="_blank" >53.64 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/cluster.64-2000-20" target="_blank">cluster.64-2000-20</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-aut_default.md" target="_blank" >18.25 MB</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-imca_default.md" target="_blank" >12.62 MB</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-umb-gz_default.md" target="_blank" >2.40 MB</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-umb-gz_memory.md" target="_blank" >2.40 MB</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-umb-xz_default.md" target="_blank" >1.24 MB</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-umb-xz_memory.md" target="_blank" >1.24 MB (±1%)</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-umb_default.md" target="_blank" >13.54 MB</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-umb_memory.md" target="_blank" >13.54 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/consensus.4-4" target="_blank">consensus.4-4</a></td>
+				<td><a href="logs/consensus.4-4_modest_from-jani_to-aut_default.md" target="_blank" >5.05 MB</a></td>
+				<td><a href="logs/consensus.4-4_modest_from-jani_to-imca_default.md" target="_blank" >2.50 MB</a></td>
+				<td><a href="logs/consensus.4-4_modest_from-jani_to-umb-gz_default.md" target="_blank" >0.48 MB</a></td>
+				<td><a href="logs/consensus.4-4_modest_from-jani_to-umb-gz_memory.md" target="_blank" >0.48 MB</a></td>
+				<td><a href="logs/consensus.4-4_modest_from-jani_to-umb-xz_default.md" target="_blank" >0.20 MB (±1%)</a></td>
+				<td><a href="logs/consensus.4-4_modest_from-jani_to-umb-xz_memory.md" target="_blank" >0.20 MB</a></td>
+				<td><a href="logs/consensus.4-4_modest_from-jani_to-umb_default.md" target="_blank" >3.44 MB</a></td>
+				<td><a href="logs/consensus.4-4_modest_from-jani_to-umb_memory.md" target="_blank" >3.44 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/consensus.6-2" target="_blank">consensus.6-2</a></td>
+				<td><a href="logs/consensus.6-2_modest_from-jani_to-aut_default.md" target="_blank" >249.31 MB</a></td>
+				<td><a href="logs/consensus.6-2_modest_from-jani_to-imca_default.md" target="_blank" >122.97 MB</a></td>
+				<td><a href="logs/consensus.6-2_modest_from-jani_to-umb-gz_default.md" target="_blank" >20.69 MB</a></td>
+				<td><a href="logs/consensus.6-2_modest_from-jani_to-umb-gz_memory.md" target="_blank" >20.69 MB</a></td>
+				<td><a href="logs/consensus.6-2_modest_from-jani_to-umb-xz_default.md" target="_blank" >8.62 MB (±1%)</a></td>
+				<td><a href="logs/consensus.6-2_modest_from-jani_to-umb-xz_memory.md" target="_blank" >8.62 MB (±1%)</a></td>
+				<td><a href="logs/consensus.6-2_modest_from-jani_to-umb_default.md" target="_blank" >143.29 MB</a></td>
+				<td><a href="logs/consensus.6-2_modest_from-jani_to-umb_memory.md" target="_blank" >143.29 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/crowds.5-20" target="_blank">crowds.5-20</a></td>
+				<td><a href="logs/crowds.5-20_modest_from-jani_to-aut_default.md" target="_blank" >178.76 MB</a></td>
+				<td><a href="logs/crowds.5-20_modest_from-jani_to-imca_default.md" target="_blank" >118.50 MB</a></td>
+				<td><a href="logs/crowds.5-20_modest_from-jani_to-umb-gz_default.md" target="_blank" >7.97 MB</a></td>
+				<td><a href="logs/crowds.5-20_modest_from-jani_to-umb-gz_memory.md" target="_blank" >7.97 MB</a></td>
+				<td><a href="logs/crowds.5-20_modest_from-jani_to-umb-xz_default.md" target="_blank" >2.11 MB (±1%)</a></td>
+				<td><a href="logs/crowds.5-20_modest_from-jani_to-umb-xz_memory.md" target="_blank" >2.11 MB</a></td>
+				<td><a href="logs/crowds.5-20_modest_from-jani_to-umb_default.md" target="_blank" >128.77 MB</a></td>
+				<td><a href="logs/crowds.5-20_modest_from-jani_to-umb_memory.md" target="_blank" >128.77 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/crowds.6-20" target="_blank">crowds.6-20</a></td>
+				<td><a href="logs/crowds.6-20_modest_from-jani_to-aut_default.md" target="_blank" >970.58 MB</a></td>
+				<td><a href="logs/crowds.6-20_modest_from-jani_to-imca_default.md" target="_blank" >647.05 MB</a></td>
+				<td><a href="logs/crowds.6-20_modest_from-jani_to-umb-gz_default.md" target="_blank" >41.50 MB</a></td>
+				<td><a href="logs/crowds.6-20_modest_from-jani_to-umb-gz_memory.md" target="_blank" >41.50 MB</a></td>
+				<td><a href="logs/crowds.6-20_modest_from-jani_to-umb-xz_default.md" target="_blank" >11.49 MB (±1%)</a></td>
+				<td><a href="logs/crowds.6-20_modest_from-jani_to-umb-xz_memory.md" target="_blank" >11.52 MB (±3%)</a></td>
+				<td><a href="logs/crowds.6-20_modest_from-jani_to-umb_default.md" target="_blank" >667.50 MB</a></td>
+				<td><a href="logs/crowds.6-20_modest_from-jani_to-umb_memory.md" target="_blank" >667.50 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/csma.3-4" target="_blank">csma.3-4</a></td>
+				<td><a href="logs/csma.3-4_modest_from-jani_to-aut_default.md" target="_blank" >90.21 MB</a></td>
+				<td><a href="logs/csma.3-4_modest_from-jani_to-imca_default.md" target="_blank" >46.03 MB</a></td>
+				<td><a href="logs/csma.3-4_modest_from-jani_to-umb-gz_default.md" target="_blank" >7.82 MB</a></td>
+				<td><a href="logs/csma.3-4_modest_from-jani_to-umb-gz_memory.md" target="_blank" >7.82 MB</a></td>
+				<td><a href="logs/csma.3-4_modest_from-jani_to-umb-xz_default.md" target="_blank" >1.82 MB (±2%)</a></td>
+				<td><a href="logs/csma.3-4_modest_from-jani_to-umb-xz_memory.md" target="_blank" >1.84 MB (±1%)</a></td>
+				<td><a href="logs/csma.3-4_modest_from-jani_to-umb_default.md" target="_blank" >59.47 MB</a></td>
+				<td><a href="logs/csma.3-4_modest_from-jani_to-umb_memory.md" target="_blank" >59.47 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/csma.4-2" target="_blank">csma.4-2</a></td>
+				<td><a href="logs/csma.4-2_modest_from-jani_to-aut_default.md" target="_blank" >47.87 MB</a></td>
+				<td><a href="logs/csma.4-2_modest_from-jani_to-imca_default.md" target="_blank" >24.04 MB</a></td>
+				<td><a href="logs/csma.4-2_modest_from-jani_to-umb-gz_default.md" target="_blank" >4.38 MB</a></td>
+				<td><a href="logs/csma.4-2_modest_from-jani_to-umb-gz_memory.md" target="_blank" >4.38 MB</a></td>
+				<td><a href="logs/csma.4-2_modest_from-jani_to-umb-xz_default.md" target="_blank" >1.43 MB (±3%)</a></td>
+				<td><a href="logs/csma.4-2_modest_from-jani_to-umb-xz_memory.md" target="_blank" >1.42 MB (±3%)</a></td>
+				<td><a href="logs/csma.4-2_modest_from-jani_to-umb_default.md" target="_blank" >32.65 MB</a></td>
+				<td><a href="logs/csma.4-2_modest_from-jani_to-umb_memory.md" target="_blank" >32.65 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/eajs.5-250-11" target="_blank">eajs.5-250-11</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-aut_default.md" target="_blank" >335.26 MB</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-imca_default.md" target="_blank" >211.95 MB</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-umb-gz_default.md" target="_blank" >19.58 MB</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-umb-gz_memory.md" target="_blank" >19.58 MB</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-umb-xz_default.md" target="_blank" >5.81 MB (±1%)</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-umb-xz_memory.md" target="_blank" >5.81 MB</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-umb_default.md" target="_blank" >216.19 MB</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-umb_memory.md" target="_blank" >216.19 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/eajs.6-300-13" target="_blank">eajs.6-300-13</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-aut_default.md" target="_blank" >980.44 MB</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-imca_default.md" target="_blank" >608.77 MB</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-umb-gz_default.md" target="_blank" >53.15 MB</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-umb-gz_memory.md" target="_blank" >53.15 MB</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-umb-xz_default.md" target="_blank" >14.49 MB (±1%)</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-umb-xz_memory.md" target="_blank" >14.49 MB</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-umb_default.md" target="_blank" >604.37 MB</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-umb_memory.md" target="_blank" >604.37 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/egl.10-2" target="_blank">egl.10-2</a></td>
+				<td><a href="logs/egl.10-2_modest_from-jani_to-aut_default.md" target="_blank" >1768.75 MB</a></td>
+				<td><a href="logs/egl.10-2_modest_from-jani_to-imca_default.md" target="_blank" >1643.06 MB</a></td>
+				<td><a href="logs/egl.10-2_modest_from-jani_to-umb-gz_default.md" target="_blank" >192.87 MB</a></td>
+				<td><a href="logs/egl.10-2_modest_from-jani_to-umb-gz_memory.md" target="_blank" >192.87 MB</a></td>
+				<td><a href="logs/egl.10-2_modest_from-jani_to-umb-xz_default.md" target="_blank" >30.87 MB</a></td>
+				<td><a href="logs/egl.10-2_modest_from-jani_to-umb-xz_memory.md" target="_blank" >30.88 MB</a></td>
+				<td><a href="logs/egl.10-2_modest_from-jani_to-umb_default.md" target="_blank" >1543.76 MB</a></td>
+				<td><a href="logs/egl.10-2_modest_from-jani_to-umb_memory.md" target="_blank" >1543.76 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/egl.10-8" target="_blank">egl.10-8</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-aut_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-imca_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-gz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-gz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-xz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-xz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb_memory.md" target="_blank" class='error'>ERR</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/embedded.8-12" target="_blank">embedded.8-12</a></td>
+				<td><a href="logs/embedded.8-12_modest_from-jani_to-aut_default.md" target="_blank" >1.30 MB</a></td>
+				<td><a href="logs/embedded.8-12_modest_from-jani_to-imca_default.md" target="_blank" >0.40 MB</a></td>
+				<td><a href="logs/embedded.8-12_modest_from-jani_to-umb-gz_default.md" target="_blank" >0.09 MB</a></td>
+				<td><a href="logs/embedded.8-12_modest_from-jani_to-umb-gz_memory.md" target="_blank" >0.09 MB</a></td>
+				<td><a href="logs/embedded.8-12_modest_from-jani_to-umb-xz_default.md" target="_blank" >0.05 MB</a></td>
+				<td><a href="logs/embedded.8-12_modest_from-jani_to-umb-xz_memory.md" target="_blank" >0.05 MB</a></td>
+				<td><a href="logs/embedded.8-12_modest_from-jani_to-umb_default.md" target="_blank" >0.70 MB</a></td>
+				<td><a href="logs/embedded.8-12_modest_from-jani_to-umb_memory.md" target="_blank" >0.70 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/firewire.false-36-800" target="_blank">firewire.false-36-800</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-aut_default.md" target="_blank" >19.55 MB</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-imca_default.md" target="_blank" >9.48 MB</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-umb-gz_default.md" target="_blank" >1.81 MB</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-umb-gz_memory.md" target="_blank" >1.81 MB</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-umb-xz_default.md" target="_blank" >0.43 MB (±6%)</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-umb-xz_memory.md" target="_blank" >0.43 MB (±3%)</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-umb_default.md" target="_blank" >16.36 MB</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-umb_memory.md" target="_blank" >16.36 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/fms.8" target="_blank">fms.8</a></td>
+				<td><a href="logs/fms.8_modest_from-jani_to-aut_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/fms.8_modest_from-jani_to-imca_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/fms.8_modest_from-jani_to-umb-gz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/fms.8_modest_from-jani_to-umb-gz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/fms.8_modest_from-jani_to-umb-xz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/fms.8_modest_from-jani_to-umb-xz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/fms.8_modest_from-jani_to-umb_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/fms.8_modest_from-jani_to-umb_memory.md" target="_blank" class='error'>ERR</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/haddad-monmege.100-0.7" target="_blank">haddad-monmege.100-0.7</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-aut_default.md" target="_blank" >0.01 MB</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-imca_default.md" target="_blank" >0.00 MB</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-umb-gz_default.md" target="_blank" >0.00 MB (±1%)</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-umb-gz_memory.md" target="_blank" >0.00 MB (±1%)</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-umb-xz_default.md" target="_blank" >0.00 MB (±4%)</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-umb-xz_memory.md" target="_blank" >0.00 MB (±1%)</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-umb_default.md" target="_blank" >0.02 MB</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-umb_memory.md" target="_blank" >0.02 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/herman.15" target="_blank">herman.15</a></td>
+				<td><a href="logs/herman.15_modest_from-jani_to-aut_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/herman.15_modest_from-jani_to-imca_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/herman.15_modest_from-jani_to-umb-gz_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/herman.15_modest_from-jani_to-umb-gz_memory.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/herman.15_modest_from-jani_to-umb-xz_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/herman.15_modest_from-jani_to-umb-xz_memory.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/herman.15_modest_from-jani_to-umb_default.md" target="_blank" class='unsupported'>NS</a></td>
+				<td><a href="logs/herman.15_modest_from-jani_to-umb_memory.md" target="_blank" class='unsupported'>NS</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/kanban.5" target="_blank">kanban.5</a></td>
+				<td><a href="logs/kanban.5_modest_from-jani_to-aut_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/kanban.5_modest_from-jani_to-imca_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/kanban.5_modest_from-jani_to-umb-gz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/kanban.5_modest_from-jani_to-umb-gz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/kanban.5_modest_from-jani_to-umb-xz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/kanban.5_modest_from-jani_to-umb-xz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/kanban.5_modest_from-jani_to-umb_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/kanban.5_modest_from-jani_to-umb_memory.md" target="_blank" class='error'>ERR</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/majority.2100" target="_blank">majority.2100</a></td>
+				<td><a href="logs/majority.2100_modest_from-jani_to-aut_default.md" target="_blank" >65.41 MB</a></td>
+				<td><a href="logs/majority.2100_modest_from-jani_to-imca_default.md" target="_blank" >47.48 MB</a></td>
+				<td><a href="logs/majority.2100_modest_from-jani_to-umb-gz_default.md" target="_blank" >12.11 MB</a></td>
+				<td><a href="logs/majority.2100_modest_from-jani_to-umb-gz_memory.md" target="_blank" >12.11 MB</a></td>
+				<td><a href="logs/majority.2100_modest_from-jani_to-umb-xz_default.md" target="_blank" >7.02 MB</a></td>
+				<td><a href="logs/majority.2100_modest_from-jani_to-umb-xz_memory.md" target="_blank" >7.02 MB</a></td>
+				<td><a href="logs/majority.2100_modest_from-jani_to-umb_default.md" target="_blank" >32.92 MB</a></td>
+				<td><a href="logs/majority.2100_modest_from-jani_to-umb_memory.md" target="_blank" >32.92 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/mapk-cascade.4-30" target="_blank">mapk-cascade.4-30</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-aut_default.md" target="_blank" >20.45 MB</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-imca_default.md" target="_blank" >11.65 MB</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-umb-gz_default.md" target="_blank" >2.53 MB</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-umb-gz_memory.md" target="_blank" >2.53 MB</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-umb-xz_default.md" target="_blank" >1.29 MB</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-umb-xz_memory.md" target="_blank" >1.29 MB</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-umb_default.md" target="_blank" >22.41 MB</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-umb_memory.md" target="_blank" >22.41 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/models" target="_blank">models</a></td>
+				<td><a href="logs/models_modest_from-jani_to-aut_default.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_modest_from-jani_to-imca_default.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_modest_from-jani_to-umb-gz_default.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_modest_from-jani_to-umb-gz_memory.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_modest_from-jani_to-umb-xz_default.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_modest_from-jani_to-umb-xz_memory.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_modest_from-jani_to-umb_default.md" target="_blank" >-</a></td>
+				<td><a href="logs/models_modest_from-jani_to-umb_memory.md" target="_blank" >-</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/nand.40-4" target="_blank">nand.40-4</a></td>
+				<td><a href="logs/nand.40-4_modest_from-jani_to-aut_default.md" target="_blank" >172.45 MB</a></td>
+				<td><a href="logs/nand.40-4_modest_from-jani_to-imca_default.md" target="_blank" >143.61 MB</a></td>
+				<td><a href="logs/nand.40-4_modest_from-jani_to-umb-gz_default.md" target="_blank" >14.76 MB</a></td>
+				<td><a href="logs/nand.40-4_modest_from-jani_to-umb-gz_memory.md" target="_blank" >14.76 MB</a></td>
+				<td><a href="logs/nand.40-4_modest_from-jani_to-umb-xz_default.md" target="_blank" >3.35 MB (±1%)</a></td>
+				<td><a href="logs/nand.40-4_modest_from-jani_to-umb-xz_memory.md" target="_blank" >3.37 MB (±2%)</a></td>
+				<td><a href="logs/nand.40-4_modest_from-jani_to-umb_default.md" target="_blank" >127.44 MB</a></td>
+				<td><a href="logs/nand.40-4_modest_from-jani_to-umb_memory.md" target="_blank" >127.44 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/nand.60-4" target="_blank">nand.60-4</a></td>
+				<td><a href="logs/nand.60-4_modest_from-jani_to-aut_default.md" target="_blank" >862.96 MB</a></td>
+				<td><a href="logs/nand.60-4_modest_from-jani_to-imca_default.md" target="_blank" >718.39 MB</a></td>
+				<td><a href="logs/nand.60-4_modest_from-jani_to-umb-gz_default.md" target="_blank" >68.07 MB</a></td>
+				<td><a href="logs/nand.60-4_modest_from-jani_to-umb-gz_memory.md" target="_blank" >68.07 MB</a></td>
+				<td><a href="logs/nand.60-4_modest_from-jani_to-umb-xz_default.md" target="_blank" >14.91 MB (±1%)</a></td>
+				<td><a href="logs/nand.60-4_modest_from-jani_to-umb-xz_memory.md" target="_blank" >14.77 MB (±2%)</a></td>
+				<td><a href="logs/nand.60-4_modest_from-jani_to-umb_default.md" target="_blank" >602.42 MB</a></td>
+				<td><a href="logs/nand.60-4_modest_from-jani_to-umb_memory.md" target="_blank" >602.42 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/oscillators.8-10-0.1-1-0.1-1.0" target="_blank">oscillators.8-10-0.1-1-0.1-1.0</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-aut_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-imca_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-umb-gz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-umb-gz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-umb-xz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-umb-xz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-umb_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-umb_memory.md" target="_blank" class='error'>ERR</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/pacman.100" target="_blank">pacman.100</a></td>
+				<td><a href="logs/pacman.100_modest_from-jani_to-aut_default.md" target="_blank" >5372.51 MB</a></td>
+				<td><a href="logs/pacman.100_modest_from-jani_to-imca_default.md" target="_blank" >2655.38 MB</a></td>
+				<td><a href="logs/pacman.100_modest_from-jani_to-umb-gz_default.md" target="_blank" >461.30 MB</a></td>
+				<td><a href="logs/pacman.100_modest_from-jani_to-umb-gz_memory.md" target="_blank" >461.30 MB</a></td>
+				<td><a href="logs/pacman.100_modest_from-jani_to-umb-xz_default.md" target="_blank" >133.16 MB</a></td>
+				<td><a href="logs/pacman.100_modest_from-jani_to-umb-xz_memory.md" target="_blank" >133.27 MB</a></td>
+				<td><a href="logs/pacman.100_modest_from-jani_to-umb_default.md" target="_blank" >3067.54 MB</a></td>
+				<td><a href="logs/pacman.100_modest_from-jani_to-umb_memory.md" target="_blank" >3067.54 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/pacman.60" target="_blank">pacman.60</a></td>
+				<td><a href="logs/pacman.60_modest_from-jani_to-aut_default.md" target="_blank" >2530.16 MB</a></td>
+				<td><a href="logs/pacman.60_modest_from-jani_to-imca_default.md" target="_blank" >1281.89 MB</a></td>
+				<td><a href="logs/pacman.60_modest_from-jani_to-umb-gz_default.md" target="_blank" >225.02 MB</a></td>
+				<td><a href="logs/pacman.60_modest_from-jani_to-umb-gz_memory.md" target="_blank" >225.02 MB</a></td>
+				<td><a href="logs/pacman.60_modest_from-jani_to-umb-xz_default.md" target="_blank" >65.38 MB</a></td>
+				<td><a href="logs/pacman.60_modest_from-jani_to-umb-xz_memory.md" target="_blank" >65.26 MB</a></td>
+				<td><a href="logs/pacman.60_modest_from-jani_to-umb_default.md" target="_blank" >1497.06 MB</a></td>
+				<td><a href="logs/pacman.60_modest_from-jani_to-umb_memory.md" target="_blank" >1497.06 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/pnueli-zuck.10" target="_blank">pnueli-zuck.10</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-aut_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-imca_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-gz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-gz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-xz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-xz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb_memory.md" target="_blank" class='error'>ERR</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/pnueli-zuck.5" target="_blank">pnueli-zuck.5</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-aut_default.md" target="_blank" >103.51 MB</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-imca_default.md" target="_blank" >49.96 MB</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-umb-gz_default.md" target="_blank" >8.91 MB</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-umb-gz_memory.md" target="_blank" >8.91 MB</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-umb-xz_default.md" target="_blank" >3.32 MB</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-umb-xz_memory.md" target="_blank" >3.32 MB</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-umb_default.md" target="_blank" >58.89 MB</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-umb_memory.md" target="_blank" >58.89 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/polling.18-16" target="_blank">polling.18-16</a></td>
+				<td><a href="logs/polling.18-16_modest_from-jani_to-aut_default.md" target="_blank" >2679.53 MB</a></td>
+				<td><a href="logs/polling.18-16_modest_from-jani_to-imca_default.md" target="_blank" >1915.45 MB</a></td>
+				<td><a href="logs/polling.18-16_modest_from-jani_to-umb-gz_default.md" target="_blank" >148.79 MB</a></td>
+				<td><a href="logs/polling.18-16_modest_from-jani_to-umb-gz_memory.md" target="_blank" >148.79 MB</a></td>
+				<td><a href="logs/polling.18-16_modest_from-jani_to-umb-xz_default.md" target="_blank" >46.69 MB</a></td>
+				<td><a href="logs/polling.18-16_modest_from-jani_to-umb-xz_memory.md" target="_blank" >46.74 MB</a></td>
+				<td><a href="logs/polling.18-16_modest_from-jani_to-umb_default.md" target="_blank" >1172.55 MB</a></td>
+				<td><a href="logs/polling.18-16_modest_from-jani_to-umb_memory.md" target="_blank" >1172.55 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/rabin.10" target="_blank">rabin.10</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-aut_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-imca_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb-gz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb-gz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb-xz_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb-xz_memory.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb_default.md" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb_memory.md" target="_blank" class='error'>ERR</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/resource-gathering.1300-100-100" target="_blank">resource-gathering.1300-100-100</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-aut_default.md" target="_blank" >138.83 MB</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-imca_default.md" target="_blank" >66.79 MB</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-umb-gz_default.md" target="_blank" >10.90 MB</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-umb-gz_memory.md" target="_blank" >10.90 MB</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-umb-xz_default.md" target="_blank" >3.86 MB (±1%)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-umb-xz_memory.md" target="_blank" >3.86 MB (±1%)</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-umb_default.md" target="_blank" >81.02 MB</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-umb_memory.md" target="_blank" >81.02 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/speed-ind.2100" target="_blank">speed-ind.2100</a></td>
+				<td><a href="logs/speed-ind.2100_modest_from-jani_to-aut_default.md" target="_blank" >325.95 MB</a></td>
+				<td><a href="logs/speed-ind.2100_modest_from-jani_to-imca_default.md" target="_blank" >233.88 MB</a></td>
+				<td><a href="logs/speed-ind.2100_modest_from-jani_to-umb-gz_default.md" target="_blank" >68.91 MB</a></td>
+				<td><a href="logs/speed-ind.2100_modest_from-jani_to-umb-gz_memory.md" target="_blank" >68.91 MB</a></td>
+				<td><a href="logs/speed-ind.2100_modest_from-jani_to-umb-xz_default.md" target="_blank" >48.55 MB</a></td>
+				<td><a href="logs/speed-ind.2100_modest_from-jani_to-umb-xz_memory.md" target="_blank" >48.51 MB</a></td>
+				<td><a href="logs/speed-ind.2100_modest_from-jani_to-umb_default.md" target="_blank" >156.77 MB</a></td>
+				<td><a href="logs/speed-ind.2100_modest_from-jani_to-umb_memory.md" target="_blank" >156.77 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/wlan.4-0" target="_blank">wlan.4-0</a></td>
+				<td><a href="logs/wlan.4-0_modest_from-jani_to-aut_default.md" target="_blank" >26.44 MB</a></td>
+				<td><a href="logs/wlan.4-0_modest_from-jani_to-imca_default.md" target="_blank" >13.87 MB</a></td>
+				<td><a href="logs/wlan.4-0_modest_from-jani_to-umb-gz_default.md" target="_blank" >2.40 MB</a></td>
+				<td><a href="logs/wlan.4-0_modest_from-jani_to-umb-gz_memory.md" target="_blank" >2.40 MB</a></td>
+				<td><a href="logs/wlan.4-0_modest_from-jani_to-umb-xz_default.md" target="_blank" >0.38 MB (±2%)</a></td>
+				<td><a href="logs/wlan.4-0_modest_from-jani_to-umb-xz_memory.md" target="_blank" >0.38 MB (±3%)</a></td>
+				<td><a href="logs/wlan.4-0_modest_from-jani_to-umb_default.md" target="_blank" >17.72 MB</a></td>
+				<td><a href="logs/wlan.4-0_modest_from-jani_to-umb_memory.md" target="_blank" >17.72 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/wlan.5-0" target="_blank">wlan.5-0</a></td>
+				<td><a href="logs/wlan.5-0_modest_from-jani_to-aut_default.md" target="_blank" >107.32 MB</a></td>
+				<td><a href="logs/wlan.5-0_modest_from-jani_to-imca_default.md" target="_blank" >55.11 MB</a></td>
+				<td><a href="logs/wlan.5-0_modest_from-jani_to-umb-gz_default.md" target="_blank" >9.21 MB</a></td>
+				<td><a href="logs/wlan.5-0_modest_from-jani_to-umb-gz_memory.md" target="_blank" >9.21 MB</a></td>
+				<td><a href="logs/wlan.5-0_modest_from-jani_to-umb-xz_default.md" target="_blank" >1.54 MB (±4%)</a></td>
+				<td><a href="logs/wlan.5-0_modest_from-jani_to-umb-xz_memory.md" target="_blank" >1.54 MB (±9%)</a></td>
+				<td><a href="logs/wlan.5-0_modest_from-jani_to-umb_default.md" target="_blank" >67.47 MB</a></td>
+				<td><a href="logs/wlan.5-0_modest_from-jani_to-umb_memory.md" target="_blank" >67.47 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/wlan.6-0" target="_blank">wlan.6-0</a></td>
+				<td><a href="logs/wlan.6-0_modest_from-jani_to-aut_default.md" target="_blank" >433.07 MB</a></td>
+				<td><a href="logs/wlan.6-0_modest_from-jani_to-imca_default.md" target="_blank" >226.94 MB</a></td>
+				<td><a href="logs/wlan.6-0_modest_from-jani_to-umb-gz_default.md" target="_blank" >36.07 MB</a></td>
+				<td><a href="logs/wlan.6-0_modest_from-jani_to-umb-gz_memory.md" target="_blank" >36.07 MB</a></td>
+				<td><a href="logs/wlan.6-0_modest_from-jani_to-umb-xz_default.md" target="_blank" >5.69 MB (±1%)</a></td>
+				<td><a href="logs/wlan.6-0_modest_from-jani_to-umb-xz_memory.md" target="_blank" >5.73 MB (±4%)</a></td>
+				<td><a href="logs/wlan.6-0_modest_from-jani_to-umb_default.md" target="_blank" >262.97 MB</a></td>
+				<td><a href="logs/wlan.6-0_modest_from-jani_to-umb_memory.md" target="_blank" >262.97 MB</a></td>
+			</tr>
+			<tr>
+				<td><a href="../models/zeroconf.1000-8-false" target="_blank">zeroconf.1000-8-false</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-aut_default.md" target="_blank" >172.81 MB</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-imca_default.md" target="_blank" >86.69 MB</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-umb-gz_default.md" target="_blank" >16.29 MB</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-umb-gz_memory.md" target="_blank" >16.29 MB</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-umb-xz_default.md" target="_blank" >6.78 MB</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-umb-xz_memory.md" target="_blank" >6.78 MB</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-umb_default.md" target="_blank" >105.39 MB</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-umb_memory.md" target="_blank" >105.39 MB</a></td>
+			</tr>
+		</tbody>
+</table>
+<script>
+	var table = $("#table").DataTable( {
+		"paging": false,
+		"autoWidth": false,
+		"info": false,
+		fixedHeader: {
+			"header": true,
+		},
+		"dom": "Bfrtip",
+		buttons: [
+			{
+				extend: "columnsToggle",
+				columns: [1],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [2],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [3],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [4],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [5],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [6],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [7],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [8],
+			},
+			{
+				extend: "colvisGroup",
+				text: "Show all",
+				show: [1, 2, 3, 4, 5, 6, 7, 8],
+				hide: []
+			},
+			{
+				extend: "colvisGroup",
+				text: "Hide all",
+				show: [],
+				hide: [1, 2, 3, 4, 5, 6, 7, 8]
+			},
+		],
+	});
+
+	table.on("column-sizing.dt", function (e, settings) {
+		updateBest(table);
+	} );
+
+	updateBest(table);
+</script>
+</div>
+</body>
+</html>

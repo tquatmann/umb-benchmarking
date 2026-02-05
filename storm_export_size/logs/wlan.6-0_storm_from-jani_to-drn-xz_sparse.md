@@ -1,0 +1,238 @@
+# Log files for storm_from-jani_to-drn-xz_sparse on model [wlan.6-0](../../models/wlan.6-0)
+
+Parsed values: `[9171152.0, 8903212.0, 8976380.0, 9681668.0, 8976380.0]`
+
+
+
+### Log file: storm_from-jani_to-drn-xz_sparse_wlan.6-0_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn.xz drn --compression xz
+Wallclock time: 121.622 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:23:16 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn.xz drn --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.007s.
+
+Time for model construction: 16.188s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn.xz'.
+Time for model export: 105.378s.
+
+
+Performance statistics:
+  * peak memory usage: 1076MB
+  * CPU time: 121.011s
+  * wallclock time: 121.579s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn.xz:	Size of output file is 9171152 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-drn-xz_sparse_wlan.6-0_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep2.xz drn --compression xz
+Wallclock time: 198.333 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:01:24 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep2.xz drn --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.035s.
+
+Time for model construction: 20.347s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep2.xz'.
+Time for model export: 177.834s.
+
+
+Performance statistics:
+  * peak memory usage: 1064MB
+  * CPU time: 197.166s
+  * wallclock time: 198.225s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep2.xz:	Size of output file is 8903212 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-drn-xz_sparse_wlan.6-0_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep3.xz drn --compression xz
+Wallclock time: 117.722 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:34:34 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep3.xz drn --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.006s.
+
+Time for model construction: 16.553s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep3.xz'.
+Time for model export: 101.111s.
+
+
+Performance statistics:
+  * peak memory usage: 1064MB
+  * CPU time: 117.235s
+  * wallclock time: 117.675s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep3.xz:	Size of output file is 8976380 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-drn-xz_sparse_wlan.6-0_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep4.xz drn --compression xz
+Wallclock time: 134.425 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:27:10 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep4.xz drn --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.009s.
+
+Time for model construction: 19.099s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep4.xz'.
+Time for model export: 115.257s.
+
+
+Performance statistics:
+  * peak memory usage: 1064MB
+  * CPU time: 133.686s
+  * wallclock time: 134.372s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep4.xz:	Size of output file is 9681668 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-drn-xz_sparse_wlan.6-0_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep5.xz drn --compression xz
+Wallclock time: 159.681 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:37:09 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.6-0/model.jani --exportbuild out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep5.xz drn --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.007s.
+
+Time for model construction: 19.368s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	5007548
+Transitions: 	11475748
+Choices: 	6350470
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep5.xz'.
+Time for model export: 140.251s.
+
+
+Performance statistics:
+  * peak memory usage: 1064MB
+  * CPU time: 158.792s
+  * wallclock time: 159.632s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-xz_sparse/wlan.6-0/model.drn_rep5.xz:	Size of output file is 8976380 bytes
+Removing output file to save space for repetition #5
+```
+

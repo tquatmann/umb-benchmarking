@@ -1,0 +1,287 @@
+# Log files for prism_from-prism_to-tra_norewards on model [eajs.5-250-11](../../models/eajs.5-250-11)
+
+Parsed values: `[10.937, 9.128, 9.261, 43.367, 9.151]`
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_eajs.5-250-11_rep1.log
+
+```
+Command(s):
+../bin/prism  models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model.tra,lab:precision=17
+Wallclock time: 12.839 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 07:42:41 GMT+01:00 2026
+Hostname: r23m0015.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model.tra,lab:precision=17'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.14 seconds (average 0.001918, setup 0.00)
+
+Time for model construction: 0.632 seconds.
+
+Type:        MDP
+States:      3049471 (1 initial)
+Transitions: 6977654
+
+Transition matrix: 25363 nodes (7 terminal), 6977654 minterms, vars: 43r/43c/5nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model.lab"...
+Time for exporting: 10.937 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model.tra:	Size of output file is 265797862 bytes
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model.lab:	Size of output file is 110224 bytes
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_eajs.5-250-11_rep2.log
+
+```
+Command(s):
+../bin/prism  models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep2.tra,lab:precision=17
+Wallclock time: 9.935 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:34:33 GMT+01:00 2026
+Hostname: n23m0313.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep2.tra,lab:precision=17'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.08 seconds (average 0.001096, setup 0.00)
+
+Time for model construction: 0.26 seconds.
+
+Type:        MDP
+States:      3049471 (1 initial)
+Transitions: 6977654
+
+Transition matrix: 25363 nodes (7 terminal), 6977654 minterms, vars: 43r/43c/5nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep2.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep2.lab"...
+Time for exporting: 9.128 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep2.tra:	Size of output file is 265797862 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep2.lab:	Size of output file is 110224 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_eajs.5-250-11_rep3.log
+
+```
+Command(s):
+../bin/prism  models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep3.tra,lab:precision=17
+Wallclock time: 10.205 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:15:02 GMT+01:00 2026
+Hostname: n23m0287.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep3.tra,lab:precision=17'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.10 seconds (average 0.001370, setup 0.00)
+
+Time for model construction: 0.345 seconds.
+
+Type:        MDP
+States:      3049471 (1 initial)
+Transitions: 6977654
+
+Transition matrix: 25363 nodes (7 terminal), 6977654 minterms, vars: 43r/43c/5nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep3.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep3.lab"...
+Time for exporting: 9.261 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep3.tra:	Size of output file is 265797862 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep3.lab:	Size of output file is 110224 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_eajs.5-250-11_rep4.log
+
+```
+Command(s):
+../bin/prism  models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep4.tra,lab:precision=17
+Wallclock time: 46.590 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:54:56 GMT+01:00 2026
+Hostname: r23m0215.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep4.tra,lab:precision=17'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.39 seconds (average 0.005342, setup 0.00)
+
+Time for model construction: 1.175 seconds.
+
+Type:        MDP
+States:      3049471 (1 initial)
+Transitions: 6977654
+
+Transition matrix: 25363 nodes (7 terminal), 6977654 minterms, vars: 43r/43c/5nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep4.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep4.lab"...
+Time for exporting: 43.367 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep4.tra:	Size of output file is 265797862 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep4.lab:	Size of output file is 110224 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: prism_from-prism_to-tra_norewards_eajs.5-250-11_rep5.log
+
+```
+Command(s):
+../bin/prism  models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep5.tra,lab:precision=17
+Wallclock time: 9.920 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:26:07 GMT+01:00 2026
+Hostname: n23m0192.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep5.tra,lab:precision=17'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 73 iterations in 0.08 seconds (average 0.001096, setup 0.00)
+
+Time for model construction: 0.256 seconds.
+
+Type:        MDP
+States:      3049471 (1 initial)
+Transitions: 6977654
+
+Transition matrix: 25363 nodes (7 terminal), 6977654 minterms, vars: 43r/43c/5nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep5.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep5.lab"...
+Time for exporting: 9.151 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep5.tra:	Size of output file is 265797862 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_norewards/eajs.5-250-11/model_rep5.lab:	Size of output file is 110224 bytes
+Removing output file to save space for repetition #5
+```
+

@@ -1,0 +1,294 @@
+# Log files for prism_from-prism_check_ex on model [wlan.6-0](../../models/wlan.6-0)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_check_ex_wlan.6-0_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+Wallclock time: 22.440 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:21:51 GMT+01:00 2026
+Hostname: r23m0127.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Parsing properties file "models/wlan.6-0/property.props"...
+
+1 property:
+(1) "sent": P>=1 [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "sent": P>=1 [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 603292 1323196 1623389 1631008 1631978 1632440
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.MDPSimple.addStates(MDPSimple.java:244)
+	at explicit.MDPSimple.addState(MDPSimple.java:236)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:302)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_wlan.6-0_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+Wallclock time: 20.032 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:38:22 GMT+01:00 2026
+Hostname: r23m0133.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Parsing properties file "models/wlan.6-0/property.props"...
+
+1 property:
+(1) "sent": P>=1 [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "sent": P>=1 [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 572128 1219527 1623572 1631256 1632457
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.TreeMap.addEntry(TreeMap.java:801)
+	at java.base/java.util.TreeMap.put(TreeMap.java:864)
+	at java.base/java.util.TreeMap.put(TreeMap.java:570)
+	at explicit.IndexedSet.add(IndexedSet.java:72)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:297)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_wlan.6-0_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+Wallclock time: 19.508 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 03:14:49 GMT+01:00 2026
+Hostname: n23m0399.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Parsing properties file "models/wlan.6-0/property.props"...
+
+1 property:
+(1) "sent": P>=1 [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "sent": P>=1 [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 643153 1428713 1627037 1631308 1632278
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:238)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:132)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_wlan.6-0_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+Wallclock time: 19.702 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:11:12 GMT+01:00 2026
+Hostname: n23m0319.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Parsing properties file "models/wlan.6-0/property.props"...
+
+1 property:
+(1) "sent": P>=1 [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "sent": P>=1 [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 673689 1525396 1628900 1631753 1632430
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.MDPSimple.addStates(MDPSimple.java:244)
+	at explicit.MDPSimple.addState(MDPSimple.java:236)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:302)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_wlan.6-0_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+Wallclock time: 20.232 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:37:03 GMT+01:00 2026
+Hostname: n23m0237.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism models/wlan.6-0/property.props
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Parsing properties file "models/wlan.6-0/property.props"...
+
+1 property:
+(1) "sent": P>=1 [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "sent": P>=1 [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 647184 1455904 1627637 1631488 1632245
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:238)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:132)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+

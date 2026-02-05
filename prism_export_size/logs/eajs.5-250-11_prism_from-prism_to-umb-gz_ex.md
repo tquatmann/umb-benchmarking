@@ -1,0 +1,293 @@
+# Log files for prism_from-prism_to-umb-gz_ex on model [eajs.5-250-11](../../models/eajs.5-250-11)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_eajs.5-250-11_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 36.226 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 07:41:38 GMT+01:00 2026
+Hostname: r23m0129.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 518204 1034581 1411771 1452914 1470127 1477368 1480975 1482520 1484166 1485397
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:133)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.calculateTransitions(Updater.java:216)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb.gz:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_eajs.5-250-11_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 45.652 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:34 GMT+01:00 2026
+Hostname: r23m0177.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 444127 893939 1329311 1431636 1454086 1467632 1475244 1478599 1481442 1482604 1483514 1484701 1485463
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:133)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.processUpdatesAndAddToProduct(Updater.java:416)
+	at simulator.Updater.calculateTransitions(Updater.java:224)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep2.gz:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_eajs.5-250-11_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 42.271 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:21:38 GMT+01:00 2026
+Hostname: n23m0127.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 413695 833803 1256293 1419343 1447640 1466035 1474892 1479083 1481748 1482757 1484015 1485223
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:133)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.processUpdatesAndAddToProduct(Updater.java:416)
+	at simulator.Updater.calculateTransitions(Updater.java:224)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep3.gz:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_eajs.5-250-11_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 42.283 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:56:53 GMT+01:00 2026
+Hostname: n23m0142.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 465411 927811 1339285 1438880 1461413 1473003 1477860 1481629 1482957 1483731 1485050
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:238)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.productWith(ChoiceListFlexi.java:177)
+	at simulator.Updater.processUpdatesAndAddToProduct(Updater.java:418)
+	at simulator.Updater.calculateTransitions(Updater.java:224)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep4.gz:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_eajs.5-250-11_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 35.415 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:36:00 GMT+01:00 2026
+Hostname: r23m0197.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 494342 994162 1392222 1444304 1466613 1475298 1479814 1482320 1483350 1485077
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.ChoiceActionsSimple.setAction(ChoiceActionsSimple.java:152)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:331)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:353)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/eajs.5-250-11/model.umb_rep5.gz:	File does not exist.
+```
+

@@ -1,0 +1,922 @@
+# Log files for prism_from-prism_to-tra_default on model [egl.10-8](../../models/egl.10-8)
+
+Parsed values: `[12113298735.0, 12113298735.0, 12113298735.0, 12113298735.0, 12113298735.0]`
+
+
+
+### Log file: prism_from-prism_to-tra_default_egl.10-8_rep1.log
+
+```
+Command(s):
+../bin/prism  models/egl.10-8/model.prism -exportmodel out/prism_from-prism_to-tra_default/egl.10-8/model.tra,lab,rew:precision=17
+Wallclock time: 2858.588 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:32:31 GMT+01:00 2026
+Hostname: n23m0120.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/egl.10-8/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/egl.10-8/model.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Building model (engine:symbolic)...
+
+Warning: Guard for command 11 of module "partyA" is never satisfied.
+
+Warning: Guard for command 12 of module "partyA" is never satisfied.
+
+Warning: Guard for command 13 of module "partyA" is never satisfied.
+
+Warning: Guard for command 14 of module "partyA" is never satisfied.
+
+Warning: Guard for command 15 of module "partyA" is never satisfied.
+
+Warning: Guard for command 16 of module "partyA" is never satisfied.
+
+Warning: Guard for command 17 of module "partyA" is never satisfied.
+
+Warning: Guard for command 18 of module "partyA" is never satisfied.
+
+Warning: Guard for command 19 of module "partyA" is never satisfied.
+
+Warning: Guard for command 20 of module "partyA" is never satisfied.
+
+Warning: Guard for command 31 of module "partyA" is never satisfied.
+
+Warning: Guard for command 32 of module "partyA" is never satisfied.
+
+Warning: Guard for command 33 of module "partyA" is never satisfied.
+
+Warning: Guard for command 34 of module "partyA" is never satisfied.
+
+Warning: Guard for command 35 of module "partyA" is never satisfied.
+
+Warning: Guard for command 36 of module "partyA" is never satisfied.
+
+Warning: Guard for command 37 of module "partyA" is never satisfied.
+
+Warning: Guard for command 38 of module "partyA" is never satisfied.
+
+Warning: Guard for command 39 of module "partyA" is never satisfied.
+
+Warning: Guard for command 40 of module "partyA" is never satisfied.
+
+Warning: Guard for command 51 of module "partyA" is never satisfied.
+
+Warning: Guard for command 52 of module "partyA" is never satisfied.
+
+Warning: Guard for command 53 of module "partyA" is never satisfied.
+
+Warning: Guard for command 54 of module "partyA" is never satisfied.
+
+Warning: Guard for command 55 of module "partyA" is never satisfied.
+
+Warning: Guard for command 56 of module "partyA" is never satisfied.
+
+Warning: Guard for command 57 of module "partyA" is never satisfied.
+
+Warning: Guard for command 58 of module "partyA" is never satisfied.
+
+Warning: Guard for command 59 of module "partyA" is never satisfied.
+
+Warning: Guard for command 60 of module "partyA" is never satisfied.
+
+Warning: Guard for command 11 of module "partyB" is never satisfied.
+
+Warning: Guard for command 12 of module "partyB" is never satisfied.
+
+Warning: Guard for command 13 of module "partyB" is never satisfied.
+
+Warning: Guard for command 14 of module "partyB" is never satisfied.
+
+Warning: Guard for command 15 of module "partyB" is never satisfied.
+
+Warning: Guard for command 16 of module "partyB" is never satisfied.
+
+Warning: Guard for command 17 of module "partyB" is never satisfied.
+
+Warning: Guard for command 18 of module "partyB" is never satisfied.
+
+Warning: Guard for command 19 of module "partyB" is never satisfied.
+
+Warning: Guard for command 20 of module "partyB" is never satisfied.
+
+Warning: Guard for command 31 of module "partyB" is never satisfied.
+
+Warning: Guard for command 32 of module "partyB" is never satisfied.
+
+Warning: Guard for command 33 of module "partyB" is never satisfied.
+
+Warning: Guard for command 34 of module "partyB" is never satisfied.
+
+Warning: Guard for command 35 of module "partyB" is never satisfied.
+
+Warning: Guard for command 36 of module "partyB" is never satisfied.
+
+Warning: Guard for command 37 of module "partyB" is never satisfied.
+
+Warning: Guard for command 38 of module "partyB" is never satisfied.
+
+Warning: Guard for command 39 of module "partyB" is never satisfied.
+
+Warning: Guard for command 40 of module "partyB" is never satisfied.
+
+Warning: Guard for command 51 of module "partyB" is never satisfied.
+
+Warning: Guard for command 52 of module "partyB" is never satisfied.
+
+Warning: Guard for command 53 of module "partyB" is never satisfied.
+
+Warning: Guard for command 54 of module "partyB" is never satisfied.
+
+Warning: Guard for command 55 of module "partyB" is never satisfied.
+
+Warning: Guard for command 56 of module "partyB" is never satisfied.
+
+Warning: Guard for command 57 of module "partyB" is never satisfied.
+
+Warning: Guard for command 58 of module "partyB" is never satisfied.
+
+Warning: Guard for command 59 of module "partyB" is never satisfied.
+
+Warning: Guard for command 60 of module "partyB" is never satisfied.
+
+Computing reachable states...
+
+Reachability (BFS): 341 iterations in 1.87 seconds (average 0.005484, setup 0.00)
+
+Time for model construction: 2.33 seconds.
+
+Type:        DTMC
+States:      317718526 (1 initial)
+Transitions: 318767101
+
+Transition matrix: 120213 nodes (3 terminal), 318767101 minterms, vars: 331r/331c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model.trew"...
+Time for exporting: 2854.659 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 60 warnings during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/egl.10-8/model.tra:	Size of output file is 9662703574 bytes
+out/prism_from-prism_to-tra_default/egl.10-8/model.lab:	Size of output file is 2450595161 bytes
+out/prism_from-prism_to-tra_default/egl.10-8/model.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/egl.10-8/model.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_default_egl.10-8_rep2.log
+
+```
+Command(s):
+../bin/prism  models/egl.10-8/model.prism -exportmodel out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.tra,lab,rew:precision=17
+Wallclock time: 3410.919 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:55 GMT+01:00 2026
+Hostname: n23m0344.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/egl.10-8/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Building model (engine:symbolic)...
+
+Warning: Guard for command 11 of module "partyA" is never satisfied.
+
+Warning: Guard for command 12 of module "partyA" is never satisfied.
+
+Warning: Guard for command 13 of module "partyA" is never satisfied.
+
+Warning: Guard for command 14 of module "partyA" is never satisfied.
+
+Warning: Guard for command 15 of module "partyA" is never satisfied.
+
+Warning: Guard for command 16 of module "partyA" is never satisfied.
+
+Warning: Guard for command 17 of module "partyA" is never satisfied.
+
+Warning: Guard for command 18 of module "partyA" is never satisfied.
+
+Warning: Guard for command 19 of module "partyA" is never satisfied.
+
+Warning: Guard for command 20 of module "partyA" is never satisfied.
+
+Warning: Guard for command 31 of module "partyA" is never satisfied.
+
+Warning: Guard for command 32 of module "partyA" is never satisfied.
+
+Warning: Guard for command 33 of module "partyA" is never satisfied.
+
+Warning: Guard for command 34 of module "partyA" is never satisfied.
+
+Warning: Guard for command 35 of module "partyA" is never satisfied.
+
+Warning: Guard for command 36 of module "partyA" is never satisfied.
+
+Warning: Guard for command 37 of module "partyA" is never satisfied.
+
+Warning: Guard for command 38 of module "partyA" is never satisfied.
+
+Warning: Guard for command 39 of module "partyA" is never satisfied.
+
+Warning: Guard for command 40 of module "partyA" is never satisfied.
+
+Warning: Guard for command 51 of module "partyA" is never satisfied.
+
+Warning: Guard for command 52 of module "partyA" is never satisfied.
+
+Warning: Guard for command 53 of module "partyA" is never satisfied.
+
+Warning: Guard for command 54 of module "partyA" is never satisfied.
+
+Warning: Guard for command 55 of module "partyA" is never satisfied.
+
+Warning: Guard for command 56 of module "partyA" is never satisfied.
+
+Warning: Guard for command 57 of module "partyA" is never satisfied.
+
+Warning: Guard for command 58 of module "partyA" is never satisfied.
+
+Warning: Guard for command 59 of module "partyA" is never satisfied.
+
+Warning: Guard for command 60 of module "partyA" is never satisfied.
+
+Warning: Guard for command 11 of module "partyB" is never satisfied.
+
+Warning: Guard for command 12 of module "partyB" is never satisfied.
+
+Warning: Guard for command 13 of module "partyB" is never satisfied.
+
+Warning: Guard for command 14 of module "partyB" is never satisfied.
+
+Warning: Guard for command 15 of module "partyB" is never satisfied.
+
+Warning: Guard for command 16 of module "partyB" is never satisfied.
+
+Warning: Guard for command 17 of module "partyB" is never satisfied.
+
+Warning: Guard for command 18 of module "partyB" is never satisfied.
+
+Warning: Guard for command 19 of module "partyB" is never satisfied.
+
+Warning: Guard for command 20 of module "partyB" is never satisfied.
+
+Warning: Guard for command 31 of module "partyB" is never satisfied.
+
+Warning: Guard for command 32 of module "partyB" is never satisfied.
+
+Warning: Guard for command 33 of module "partyB" is never satisfied.
+
+Warning: Guard for command 34 of module "partyB" is never satisfied.
+
+Warning: Guard for command 35 of module "partyB" is never satisfied.
+
+Warning: Guard for command 36 of module "partyB" is never satisfied.
+
+Warning: Guard for command 37 of module "partyB" is never satisfied.
+
+Warning: Guard for command 38 of module "partyB" is never satisfied.
+
+Warning: Guard for command 39 of module "partyB" is never satisfied.
+
+Warning: Guard for command 40 of module "partyB" is never satisfied.
+
+Warning: Guard for command 51 of module "partyB" is never satisfied.
+
+Warning: Guard for command 52 of module "partyB" is never satisfied.
+
+Warning: Guard for command 53 of module "partyB" is never satisfied.
+
+Warning: Guard for command 54 of module "partyB" is never satisfied.
+
+Warning: Guard for command 55 of module "partyB" is never satisfied.
+
+Warning: Guard for command 56 of module "partyB" is never satisfied.
+
+Warning: Guard for command 57 of module "partyB" is never satisfied.
+
+Warning: Guard for command 58 of module "partyB" is never satisfied.
+
+Warning: Guard for command 59 of module "partyB" is never satisfied.
+
+Warning: Guard for command 60 of module "partyB" is never satisfied.
+
+Computing reachable states...
+
+Reachability (BFS): 341 iterations in 5.36 seconds (average 0.015718, setup 0.00)
+
+Time for model construction: 6.062 seconds.
+
+Type:        DTMC
+States:      317718526 (1 initial)
+Transitions: 318767101
+
+Transition matrix: 120213 nodes (3 terminal), 318767101 minterms, vars: 331r/331c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.trew"...
+Time for exporting: 3404.006 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 60 warnings during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.tra:	Size of output file is 9662703574 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.lab:	Size of output file is 2450595161 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep2.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_default_egl.10-8_rep3.log
+
+```
+Command(s):
+../bin/prism  models/egl.10-8/model.prism -exportmodel out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.tra,lab,rew:precision=17
+Wallclock time: 2871.912 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:57:52 GMT+01:00 2026
+Hostname: n23m0063.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/egl.10-8/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Building model (engine:symbolic)...
+
+Warning: Guard for command 11 of module "partyA" is never satisfied.
+
+Warning: Guard for command 12 of module "partyA" is never satisfied.
+
+Warning: Guard for command 13 of module "partyA" is never satisfied.
+
+Warning: Guard for command 14 of module "partyA" is never satisfied.
+
+Warning: Guard for command 15 of module "partyA" is never satisfied.
+
+Warning: Guard for command 16 of module "partyA" is never satisfied.
+
+Warning: Guard for command 17 of module "partyA" is never satisfied.
+
+Warning: Guard for command 18 of module "partyA" is never satisfied.
+
+Warning: Guard for command 19 of module "partyA" is never satisfied.
+
+Warning: Guard for command 20 of module "partyA" is never satisfied.
+
+Warning: Guard for command 31 of module "partyA" is never satisfied.
+
+Warning: Guard for command 32 of module "partyA" is never satisfied.
+
+Warning: Guard for command 33 of module "partyA" is never satisfied.
+
+Warning: Guard for command 34 of module "partyA" is never satisfied.
+
+Warning: Guard for command 35 of module "partyA" is never satisfied.
+
+Warning: Guard for command 36 of module "partyA" is never satisfied.
+
+Warning: Guard for command 37 of module "partyA" is never satisfied.
+
+Warning: Guard for command 38 of module "partyA" is never satisfied.
+
+Warning: Guard for command 39 of module "partyA" is never satisfied.
+
+Warning: Guard for command 40 of module "partyA" is never satisfied.
+
+Warning: Guard for command 51 of module "partyA" is never satisfied.
+
+Warning: Guard for command 52 of module "partyA" is never satisfied.
+
+Warning: Guard for command 53 of module "partyA" is never satisfied.
+
+Warning: Guard for command 54 of module "partyA" is never satisfied.
+
+Warning: Guard for command 55 of module "partyA" is never satisfied.
+
+Warning: Guard for command 56 of module "partyA" is never satisfied.
+
+Warning: Guard for command 57 of module "partyA" is never satisfied.
+
+Warning: Guard for command 58 of module "partyA" is never satisfied.
+
+Warning: Guard for command 59 of module "partyA" is never satisfied.
+
+Warning: Guard for command 60 of module "partyA" is never satisfied.
+
+Warning: Guard for command 11 of module "partyB" is never satisfied.
+
+Warning: Guard for command 12 of module "partyB" is never satisfied.
+
+Warning: Guard for command 13 of module "partyB" is never satisfied.
+
+Warning: Guard for command 14 of module "partyB" is never satisfied.
+
+Warning: Guard for command 15 of module "partyB" is never satisfied.
+
+Warning: Guard for command 16 of module "partyB" is never satisfied.
+
+Warning: Guard for command 17 of module "partyB" is never satisfied.
+
+Warning: Guard for command 18 of module "partyB" is never satisfied.
+
+Warning: Guard for command 19 of module "partyB" is never satisfied.
+
+Warning: Guard for command 20 of module "partyB" is never satisfied.
+
+Warning: Guard for command 31 of module "partyB" is never satisfied.
+
+Warning: Guard for command 32 of module "partyB" is never satisfied.
+
+Warning: Guard for command 33 of module "partyB" is never satisfied.
+
+Warning: Guard for command 34 of module "partyB" is never satisfied.
+
+Warning: Guard for command 35 of module "partyB" is never satisfied.
+
+Warning: Guard for command 36 of module "partyB" is never satisfied.
+
+Warning: Guard for command 37 of module "partyB" is never satisfied.
+
+Warning: Guard for command 38 of module "partyB" is never satisfied.
+
+Warning: Guard for command 39 of module "partyB" is never satisfied.
+
+Warning: Guard for command 40 of module "partyB" is never satisfied.
+
+Warning: Guard for command 51 of module "partyB" is never satisfied.
+
+Warning: Guard for command 52 of module "partyB" is never satisfied.
+
+Warning: Guard for command 53 of module "partyB" is never satisfied.
+
+Warning: Guard for command 54 of module "partyB" is never satisfied.
+
+Warning: Guard for command 55 of module "partyB" is never satisfied.
+
+Warning: Guard for command 56 of module "partyB" is never satisfied.
+
+Warning: Guard for command 57 of module "partyB" is never satisfied.
+
+Warning: Guard for command 58 of module "partyB" is never satisfied.
+
+Warning: Guard for command 59 of module "partyB" is never satisfied.
+
+Warning: Guard for command 60 of module "partyB" is never satisfied.
+
+Computing reachable states...
+
+Reachability (BFS): 341 iterations in 4.56 seconds (average 0.013372, setup 0.00)
+
+Time for model construction: 5.293 seconds.
+
+Type:        DTMC
+States:      317718526 (1 initial)
+Transitions: 318767101
+
+Transition matrix: 120213 nodes (3 terminal), 318767101 minterms, vars: 331r/331c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.trew"...
+Time for exporting: 2865.885 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 60 warnings during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.tra:	Size of output file is 9662703574 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.lab:	Size of output file is 2450595161 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep3.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_default_egl.10-8_rep4.log
+
+```
+Command(s):
+../bin/prism  models/egl.10-8/model.prism -exportmodel out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.tra,lab,rew:precision=17
+Wallclock time: 2831.629 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:27:28 GMT+01:00 2026
+Hostname: n23m0341.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/egl.10-8/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Building model (engine:symbolic)...
+
+Warning: Guard for command 11 of module "partyA" is never satisfied.
+
+Warning: Guard for command 12 of module "partyA" is never satisfied.
+
+Warning: Guard for command 13 of module "partyA" is never satisfied.
+
+Warning: Guard for command 14 of module "partyA" is never satisfied.
+
+Warning: Guard for command 15 of module "partyA" is never satisfied.
+
+Warning: Guard for command 16 of module "partyA" is never satisfied.
+
+Warning: Guard for command 17 of module "partyA" is never satisfied.
+
+Warning: Guard for command 18 of module "partyA" is never satisfied.
+
+Warning: Guard for command 19 of module "partyA" is never satisfied.
+
+Warning: Guard for command 20 of module "partyA" is never satisfied.
+
+Warning: Guard for command 31 of module "partyA" is never satisfied.
+
+Warning: Guard for command 32 of module "partyA" is never satisfied.
+
+Warning: Guard for command 33 of module "partyA" is never satisfied.
+
+Warning: Guard for command 34 of module "partyA" is never satisfied.
+
+Warning: Guard for command 35 of module "partyA" is never satisfied.
+
+Warning: Guard for command 36 of module "partyA" is never satisfied.
+
+Warning: Guard for command 37 of module "partyA" is never satisfied.
+
+Warning: Guard for command 38 of module "partyA" is never satisfied.
+
+Warning: Guard for command 39 of module "partyA" is never satisfied.
+
+Warning: Guard for command 40 of module "partyA" is never satisfied.
+
+Warning: Guard for command 51 of module "partyA" is never satisfied.
+
+Warning: Guard for command 52 of module "partyA" is never satisfied.
+
+Warning: Guard for command 53 of module "partyA" is never satisfied.
+
+Warning: Guard for command 54 of module "partyA" is never satisfied.
+
+Warning: Guard for command 55 of module "partyA" is never satisfied.
+
+Warning: Guard for command 56 of module "partyA" is never satisfied.
+
+Warning: Guard for command 57 of module "partyA" is never satisfied.
+
+Warning: Guard for command 58 of module "partyA" is never satisfied.
+
+Warning: Guard for command 59 of module "partyA" is never satisfied.
+
+Warning: Guard for command 60 of module "partyA" is never satisfied.
+
+Warning: Guard for command 11 of module "partyB" is never satisfied.
+
+Warning: Guard for command 12 of module "partyB" is never satisfied.
+
+Warning: Guard for command 13 of module "partyB" is never satisfied.
+
+Warning: Guard for command 14 of module "partyB" is never satisfied.
+
+Warning: Guard for command 15 of module "partyB" is never satisfied.
+
+Warning: Guard for command 16 of module "partyB" is never satisfied.
+
+Warning: Guard for command 17 of module "partyB" is never satisfied.
+
+Warning: Guard for command 18 of module "partyB" is never satisfied.
+
+Warning: Guard for command 19 of module "partyB" is never satisfied.
+
+Warning: Guard for command 20 of module "partyB" is never satisfied.
+
+Warning: Guard for command 31 of module "partyB" is never satisfied.
+
+Warning: Guard for command 32 of module "partyB" is never satisfied.
+
+Warning: Guard for command 33 of module "partyB" is never satisfied.
+
+Warning: Guard for command 34 of module "partyB" is never satisfied.
+
+Warning: Guard for command 35 of module "partyB" is never satisfied.
+
+Warning: Guard for command 36 of module "partyB" is never satisfied.
+
+Warning: Guard for command 37 of module "partyB" is never satisfied.
+
+Warning: Guard for command 38 of module "partyB" is never satisfied.
+
+Warning: Guard for command 39 of module "partyB" is never satisfied.
+
+Warning: Guard for command 40 of module "partyB" is never satisfied.
+
+Warning: Guard for command 51 of module "partyB" is never satisfied.
+
+Warning: Guard for command 52 of module "partyB" is never satisfied.
+
+Warning: Guard for command 53 of module "partyB" is never satisfied.
+
+Warning: Guard for command 54 of module "partyB" is never satisfied.
+
+Warning: Guard for command 55 of module "partyB" is never satisfied.
+
+Warning: Guard for command 56 of module "partyB" is never satisfied.
+
+Warning: Guard for command 57 of module "partyB" is never satisfied.
+
+Warning: Guard for command 58 of module "partyB" is never satisfied.
+
+Warning: Guard for command 59 of module "partyB" is never satisfied.
+
+Warning: Guard for command 60 of module "partyB" is never satisfied.
+
+Computing reachable states...
+
+Reachability (BFS): 341 iterations in 1.88 seconds (average 0.005513, setup 0.00)
+
+Time for model construction: 2.285 seconds.
+
+Type:        DTMC
+States:      317718526 (1 initial)
+Transitions: 318767101
+
+Transition matrix: 120213 nodes (3 terminal), 318767101 minterms, vars: 331r/331c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.trew"...
+Time for exporting: 2828.744 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 60 warnings during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.tra:	Size of output file is 9662703574 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.lab:	Size of output file is 2450595161 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep4.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_default_egl.10-8_rep5.log
+
+```
+Command(s):
+../bin/prism  models/egl.10-8/model.prism -exportmodel out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.tra,lab,rew:precision=17
+Wallclock time: 2824.360 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:24 GMT+01:00 2026
+Hostname: r23m0206.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/egl.10-8/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Building model (engine:symbolic)...
+
+Warning: Guard for command 11 of module "partyA" is never satisfied.
+
+Warning: Guard for command 12 of module "partyA" is never satisfied.
+
+Warning: Guard for command 13 of module "partyA" is never satisfied.
+
+Warning: Guard for command 14 of module "partyA" is never satisfied.
+
+Warning: Guard for command 15 of module "partyA" is never satisfied.
+
+Warning: Guard for command 16 of module "partyA" is never satisfied.
+
+Warning: Guard for command 17 of module "partyA" is never satisfied.
+
+Warning: Guard for command 18 of module "partyA" is never satisfied.
+
+Warning: Guard for command 19 of module "partyA" is never satisfied.
+
+Warning: Guard for command 20 of module "partyA" is never satisfied.
+
+Warning: Guard for command 31 of module "partyA" is never satisfied.
+
+Warning: Guard for command 32 of module "partyA" is never satisfied.
+
+Warning: Guard for command 33 of module "partyA" is never satisfied.
+
+Warning: Guard for command 34 of module "partyA" is never satisfied.
+
+Warning: Guard for command 35 of module "partyA" is never satisfied.
+
+Warning: Guard for command 36 of module "partyA" is never satisfied.
+
+Warning: Guard for command 37 of module "partyA" is never satisfied.
+
+Warning: Guard for command 38 of module "partyA" is never satisfied.
+
+Warning: Guard for command 39 of module "partyA" is never satisfied.
+
+Warning: Guard for command 40 of module "partyA" is never satisfied.
+
+Warning: Guard for command 51 of module "partyA" is never satisfied.
+
+Warning: Guard for command 52 of module "partyA" is never satisfied.
+
+Warning: Guard for command 53 of module "partyA" is never satisfied.
+
+Warning: Guard for command 54 of module "partyA" is never satisfied.
+
+Warning: Guard for command 55 of module "partyA" is never satisfied.
+
+Warning: Guard for command 56 of module "partyA" is never satisfied.
+
+Warning: Guard for command 57 of module "partyA" is never satisfied.
+
+Warning: Guard for command 58 of module "partyA" is never satisfied.
+
+Warning: Guard for command 59 of module "partyA" is never satisfied.
+
+Warning: Guard for command 60 of module "partyA" is never satisfied.
+
+Warning: Guard for command 11 of module "partyB" is never satisfied.
+
+Warning: Guard for command 12 of module "partyB" is never satisfied.
+
+Warning: Guard for command 13 of module "partyB" is never satisfied.
+
+Warning: Guard for command 14 of module "partyB" is never satisfied.
+
+Warning: Guard for command 15 of module "partyB" is never satisfied.
+
+Warning: Guard for command 16 of module "partyB" is never satisfied.
+
+Warning: Guard for command 17 of module "partyB" is never satisfied.
+
+Warning: Guard for command 18 of module "partyB" is never satisfied.
+
+Warning: Guard for command 19 of module "partyB" is never satisfied.
+
+Warning: Guard for command 20 of module "partyB" is never satisfied.
+
+Warning: Guard for command 31 of module "partyB" is never satisfied.
+
+Warning: Guard for command 32 of module "partyB" is never satisfied.
+
+Warning: Guard for command 33 of module "partyB" is never satisfied.
+
+Warning: Guard for command 34 of module "partyB" is never satisfied.
+
+Warning: Guard for command 35 of module "partyB" is never satisfied.
+
+Warning: Guard for command 36 of module "partyB" is never satisfied.
+
+Warning: Guard for command 37 of module "partyB" is never satisfied.
+
+Warning: Guard for command 38 of module "partyB" is never satisfied.
+
+Warning: Guard for command 39 of module "partyB" is never satisfied.
+
+Warning: Guard for command 40 of module "partyB" is never satisfied.
+
+Warning: Guard for command 51 of module "partyB" is never satisfied.
+
+Warning: Guard for command 52 of module "partyB" is never satisfied.
+
+Warning: Guard for command 53 of module "partyB" is never satisfied.
+
+Warning: Guard for command 54 of module "partyB" is never satisfied.
+
+Warning: Guard for command 55 of module "partyB" is never satisfied.
+
+Warning: Guard for command 56 of module "partyB" is never satisfied.
+
+Warning: Guard for command 57 of module "partyB" is never satisfied.
+
+Warning: Guard for command 58 of module "partyB" is never satisfied.
+
+Warning: Guard for command 59 of module "partyB" is never satisfied.
+
+Warning: Guard for command 60 of module "partyB" is never satisfied.
+
+Computing reachable states...
+
+Reachability (BFS): 341 iterations in 2.15 seconds (average 0.006305, setup 0.00)
+
+Time for model construction: 2.625 seconds.
+
+Type:        DTMC
+States:      317718526 (1 initial)
+Transitions: 318767101
+
+Transition matrix: 120213 nodes (3 terminal), 318767101 minterms, vars: 331r/331c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.trew"...
+Time for exporting: 2821.17 seconds.
+
+---------------------------------------------------------------------
+
+Note: There were 60 warnings during computation.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.tra:	Size of output file is 9662703574 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.lab:	Size of output file is 2450595161 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/egl.10-8/model_rep5.trew:	File does not exist.
+```
+

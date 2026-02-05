@@ -1,0 +1,220 @@
+# Log files for modest_from-jani_to-umb_default on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+
+Parsed values: `[23495207.0, 23495207.0, 23495207.0, 23495207.0, 23495207.0]`
+
+
+
+### Log file: modest_from-jani_to-umb_default_mapk-cascade.4-30_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties.txt  -D --exhaustive
+Wallclock time: 0.158 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties.txt -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model.umb" already exists.
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model.umb:	Size of output file is 23495168 bytes
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties.txt:	Size of output file is 39 bytes
+```
+
+
+
+### Log file: modest_from-jani_to-umb_default_mapk-cascade.4-30_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep2.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep2.txt  -D --exhaustive
+Wallclock time: 1.913 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep2.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep2.txt -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 32 bytes per state.
+model.jani: info: Explored 99535 states.
+
+Peak memory usage: 130 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         32 bytes
+  States:             99535
+  Choices:            99535
+  Branches:           910872
+  Rate:               66048 states/s
+  Peak memory:        74.40 MB
+  Final size:         21.61 MB
+  Size on disk:       4.23 MB
+  Time (exploration): 1.5 s
+  Time (merging):     0.1 s
+
++ UMB export
+  Time:        0.1 s
+  File size:   22.41 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep2.umb:	Size of output file is 23495168 bytes
+Removing output file to save space for repetition #2
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep2.txt:	Size of output file is 39 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: modest_from-jani_to-umb_default_mapk-cascade.4-30_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep3.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep3.txt  -D --exhaustive
+Wallclock time: 2.216 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep3.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep3.txt -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 32 bytes per state.
+model.jani: info: Explored 99535 states.
+
+Peak memory usage: 130 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         32 bytes
+  States:             99535
+  Choices:            99535
+  Branches:           910872
+  Rate:               57237 states/s
+  Peak memory:        74.40 MB
+  Final size:         21.61 MB
+  Size on disk:       4.23 MB
+  Time (exploration): 1.8 s
+  Time (merging):     0.1 s
+
++ UMB export
+  Time:        0.1 s
+  File size:   22.41 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep3.umb:	Size of output file is 23495168 bytes
+Removing output file to save space for repetition #3
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep3.txt:	Size of output file is 39 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: modest_from-jani_to-umb_default_mapk-cascade.4-30_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep4.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep4.txt  -D --exhaustive
+Wallclock time: 1.775 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep4.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep4.txt -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 32 bytes per state.
+model.jani: info: Explored 99535 states.
+
+Peak memory usage: 130 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         32 bytes
+  States:             99535
+  Choices:            99535
+  Branches:           910872
+  Rate:               71763 states/s
+  Peak memory:        74.40 MB
+  Final size:         21.61 MB
+  Size on disk:       4.23 MB
+  Time (exploration): 1.4 s
+  Time (merging):     0.1 s
+
++ UMB export
+  Time:        0.1 s
+  File size:   22.41 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep4.umb:	Size of output file is 23495168 bytes
+Removing output file to save space for repetition #4
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep4.txt:	Size of output file is 39 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: modest_from-jani_to-umb_default_mapk-cascade.4-30_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep5.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep5.txt  -D --exhaustive
+Wallclock time: 1.858 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep5.umb out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep5.txt -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 32 bytes per state.
+model.jani: info: Explored 99535 states.
+
+Peak memory usage: 130 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         32 bytes
+  States:             99535
+  Choices:            99535
+  Branches:           910872
+  Rate:               69459 states/s
+  Peak memory:        74.40 MB
+  Final size:         21.61 MB
+  Size on disk:       4.23 MB
+  Time (exploration): 1.4 s
+  Time (merging):     0.1 s
+
++ UMB export
+  Time:        0.1 s
+  File size:   22.41 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/model_rep5.umb:	Size of output file is 23495168 bytes
+Removing output file to save space for repetition #5
+out/modest_from-jani_to-umb_default/mapk-cascade.4-30/umb.properties_rep5.txt:	Size of output file is 39 bytes
+Removing output file to save space for repetition #5
+```
+

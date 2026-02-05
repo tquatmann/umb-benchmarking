@@ -1,0 +1,204 @@
+# Log files for storm_from-drn_check_exact on model [eajs.6-300-13](../../models/eajs.6-300-13)
+
+Parsed values: `[63.994, 66.962, 53.86, 63.042, 61.331]`
+
+
+
+### Log file: storm_from-drn_check_exact_eajs.6-300-13_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Wallclock time: 63.994 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 07:59:33 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 38.184s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	11897412
+Reward Models:  utilityLocal
+State Labels: 	2 labels
+   * emptyBattery -> 28620 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): 2102306774904922316278224079/174449211009120179071170507 (approx. 12.05111082)
+Time for model checking: 23.985s.
+
+Performance statistics:
+  * peak memory usage: 10413MB
+  * CPU time: 60.236s
+  * wallclock time: 63.548s
+```
+
+
+
+### Log file: storm_from-drn_check_exact_eajs.6-300-13_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Wallclock time: 66.962 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:38:18 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 38.998s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	11897412
+Reward Models:  utilityLocal
+State Labels: 	2 labels
+   * emptyBattery -> 28620 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): 2102306774904922316278224079/174449211009120179071170507 (approx. 12.05111082)
+Time for model checking: 25.878s.
+
+Performance statistics:
+  * peak memory usage: 10413MB
+  * CPU time: 62.628s
+  * wallclock time: 66.410s
+```
+
+
+
+### Log file: storm_from-drn_check_exact_eajs.6-300-13_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Wallclock time: 53.860 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 02:50:13 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 32.617s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	11897412
+Reward Models:  utilityLocal
+State Labels: 	2 labels
+   * emptyBattery -> 28620 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): 2102306774904922316278224079/174449211009120179071170507 (approx. 12.05111082)
+Time for model checking: 19.343s.
+
+Performance statistics:
+  * peak memory usage: 10414MB
+  * CPU time: 50.358s
+  * wallclock time: 53.231s
+```
+
+
+
+### Log file: storm_from-drn_check_exact_eajs.6-300-13_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Wallclock time: 63.042 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:07 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 38.497s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	11897412
+Reward Models:  utilityLocal
+State Labels: 	2 labels
+   * emptyBattery -> 28620 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): 2102306774904922316278224079/174449211009120179071170507 (approx. 12.05111082)
+Time for model checking: 22.614s.
+
+Performance statistics:
+  * peak memory usage: 10414MB
+  * CPU time: 59.205s
+  * wallclock time: 62.517s
+```
+
+
+
+### Log file: storm_from-drn_check_exact_eajs.6-300-13_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Wallclock time: 61.331 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:36:46 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/eajs.6-300-13/storm.model.exact.drn --digits 17 --prop models/eajs.6-300-13/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 37.749s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	7901694
+Transitions: 	19722777
+Choices: 	11897412
+Reward Models:  utilityLocal
+State Labels: 	2 labels
+   * emptyBattery -> 28620 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "ExpUtil": R{"utilityLocal"}max=? [F "emptyBattery"] ...
+Result (for initial states): 2102306774904922316278224079/174449211009120179071170507 (approx. 12.05111082)
+Time for model checking: 21.743s.
+
+Performance statistics:
+  * peak memory usage: 10413MB
+  * CPU time: 57.579s
+  * wallclock time: 60.883s
+```
+

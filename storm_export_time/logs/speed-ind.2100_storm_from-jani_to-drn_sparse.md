@@ -1,0 +1,238 @@
+# Log files for storm_from-jani_to-drn_sparse on model [speed-ind.2100](../../models/speed-ind.2100)
+
+Parsed values: `[2.908, 3.403, 3.474, 2.9, 2.918]`
+
+
+
+### Log file: storm_from-jani_to-drn_sparse_speed-ind.2100_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model.drn drn --compression none
+Wallclock time: 7.776 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:28:32 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model.drn drn --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.007s.
+
+Time for model construction: 4.818s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_sparse/speed-ind.2100/model.drn'.
+Write to file out/storm_from-jani_to-drn_sparse/speed-ind.2100/model.drn.
+Time for model export: 2.908s.
+
+
+Performance statistics:
+  * peak memory usage: 327MB
+  * CPU time: 7.477s
+  * wallclock time: 7.736s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_sparse/speed-ind.2100/model.drn:	Size of output file is 230333945 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-drn_sparse_speed-ind.2100_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep2.drn drn --compression none
+Wallclock time: 9.399 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:17:35 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep2.drn drn --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.029s.
+
+Time for model construction: 5.920s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep2.drn'.
+Write to file out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep2.drn.
+Time for model export: 3.403s.
+
+
+Performance statistics:
+  * peak memory usage: 327MB
+  * CPU time: 8.987s
+  * wallclock time: 9.357s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep2.drn:	Size of output file is 230333945 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-drn_sparse_speed-ind.2100_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep3.drn drn --compression none
+Wallclock time: 9.266 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:25 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep3.drn drn --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.009s.
+
+Time for model construction: 5.699s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep3.drn'.
+Write to file out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep3.drn.
+Time for model export: 3.474s.
+
+
+Performance statistics:
+  * peak memory usage: 327MB
+  * CPU time: 8.827s
+  * wallclock time: 9.186s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep3.drn:	Size of output file is 230333945 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-drn_sparse_speed-ind.2100_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep4.drn drn --compression none
+Wallclock time: 7.780 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:29:16 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep4.drn drn --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.007s.
+
+Time for model construction: 4.835s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep4.drn'.
+Write to file out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep4.drn.
+Time for model export: 2.900s.
+
+
+Performance statistics:
+  * peak memory usage: 327MB
+  * CPU time: 7.504s
+  * wallclock time: 7.746s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep4.drn:	Size of output file is 230333945 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-drn_sparse_speed-ind.2100_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep5.drn drn --compression none
+Wallclock time: 8.015 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:15:01 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep5.drn drn --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.026s.
+
+Time for model construction: 5.026s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep5.drn'.
+Write to file out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep5.drn.
+Time for model export: 2.918s.
+
+
+Performance statistics:
+  * peak memory usage: 327MB
+  * CPU time: 7.710s
+  * wallclock time: 7.975s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_sparse/speed-ind.2100/model_rep5.drn:	Size of output file is 230333945 bytes
+Removing output file to save space for repetition #5
+```
+

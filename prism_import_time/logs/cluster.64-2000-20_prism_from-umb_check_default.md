@@ -1,0 +1,551 @@
+# Log files for prism_from-umb_check_default on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+
+Parsed values: `[26.599, 28.627, 27.862, 25.993, 25.622]`
+
+
+
+### Log file: prism_from-umb_check_default_cluster.64-2000-20_rep1.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+Wallclock time: 180.837 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 08:01:36 GMT+01:00 2026
+Hostname: n23m0401.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        CTMC
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   x
+Labels:      "minimum"
+
+Parsing properties file "models/cluster.64-2000-20/property.props"...
+
+1 property:
+(1) "qos1": P=? [ F<=2000 !"minimum" ]
+
+---------------------------------------------------------------------
+
+Model checking: "qos1": P=? [ F<=2000 !"minimum" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 12% 24% 36% 48% 60% 70% 82% 92% 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.25 seconds (average 0.001880, setup 0.00)
+
+Time for model construction: 26.599 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 25495 nodes (71 terminal), 733216 minterms, vars: 18r/18c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 36133 of 151060 (23.9%)
+
+Building hybrid MTBDD matrix... [levels=18, nodes=51088] [2.3 MB]
+Adding explicit sparse matrices... [levels=6, num=5507, compact] [839.4 KB]
+Creating vector for diagonals... [dist=1448, compact] [306.4 KB]
+Allocating iteration vectors... [3 x 1.2 MB]
+TOTAL: [6.9 MB]
+
+Uniformisation: q.t = 41.057295 x 2000.000000 = 82114.590000
+Fox-Glynn: left = 80105, right = 84548
+
+Starting iterations...
+Iteration 2793 (of 84548): max relative diff=0.000451, 5.01 sec so far
+Iteration 5586 (of 84548): max relative diff=0.000185, 10.02 sec so far
+Iteration 8389 (of 84548): max relative diff=0.000122, 15.03 sec so far
+Iteration 11201 (of 84548): max relative diff=0.000091, 20.04 sec so far
+Iteration 13999 (of 84548): max relative diff=0.000072, 25.05 sec so far
+Iteration 16805 (of 84548): max relative diff=0.000060, 30.06 sec so far
+Iteration 19603 (of 84548): max relative diff=0.000051, 35.07 sec so far
+Iteration 22411 (of 84548): max relative diff=0.000045, 40.08 sec so far
+Iteration 25221 (of 84548): max relative diff=0.000040, 45.09 sec so far
+Iteration 28031 (of 84548): max relative diff=0.000036, 50.10 sec so far
+Iteration 30844 (of 84548): max relative diff=0.000033, 55.11 sec so far
+Iteration 33585 (of 84548): max relative diff=0.000030, 60.12 sec so far
+Iteration 36375 (of 84548): max relative diff=0.000028, 65.13 sec so far
+Iteration 39169 (of 84548): max relative diff=0.000026, 70.14 sec so far
+Iteration 41977 (of 84548): max relative diff=0.000024, 75.15 sec so far
+Iteration 44791 (of 84548): max relative diff=0.000022, 80.16 sec so far
+Iteration 47595 (of 84548): max relative diff=0.000021, 85.17 sec so far
+Iteration 50400 (of 84548): max relative diff=0.000020, 90.18 sec so far
+Iteration 53201 (of 84548): max relative diff=0.000019, 95.19 sec so far
+Iteration 56012 (of 84548): max relative diff=0.000018, 100.20 sec so far
+Iteration 58816 (of 84548): max relative diff=0.000017, 105.21 sec so far
+Iteration 61621 (of 84548): max relative diff=0.000016, 110.22 sec so far
+Iteration 64434 (of 84548): max relative diff=0.000016, 115.23 sec so far
+Iteration 67168 (of 84548): max relative diff=0.000015, 120.24 sec so far
+Iteration 69921 (of 84548): max relative diff=0.000014, 125.25 sec so far
+Iteration 72733 (of 84548): max relative diff=0.000014, 130.26 sec so far
+Iteration 75535 (of 84548): max relative diff=0.000013, 135.27 sec so far
+Iteration 78351 (of 84548): max relative diff=0.000013, 140.28 sec so far
+Iteration 81118 (of 84548): max relative diff=0.000012, 145.29 sec so far
+Iteration 83819 (of 84548): max relative diff=0.000012, 150.30 sec so far
+
+Iterative method: 84548 iterations in 152.43 seconds (average 0.001794, setup 0.77)
+
+Value in the initial state: 0.0010445396729789396
+
+Time for model checking: 152.855 seconds.
+
+Result: 0.0010445396729789396
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-umb_check_default_cluster.64-2000-20_rep2.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+Wallclock time: 171.417 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:07:05 GMT+01:00 2026
+Hostname: n23m0137.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        CTMC
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   x
+Labels:      "minimum"
+
+Parsing properties file "models/cluster.64-2000-20/property.props"...
+
+1 property:
+(1) "qos1": P=? [ F<=2000 !"minimum" ]
+
+---------------------------------------------------------------------
+
+Model checking: "qos1": P=? [ F<=2000 !"minimum" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 12% 24% 34% 46% 56% 66% 76% 86% 96% 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.27 seconds (average 0.002030, setup 0.00)
+
+Time for model construction: 28.627 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 25495 nodes (71 terminal), 733216 minterms, vars: 18r/18c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 36133 of 151060 (23.9%)
+
+Building hybrid MTBDD matrix... [levels=18, nodes=51088] [2.3 MB]
+Adding explicit sparse matrices... [levels=6, num=5507, compact] [839.4 KB]
+Creating vector for diagonals... [dist=1448, compact] [306.4 KB]
+Allocating iteration vectors... [3 x 1.2 MB]
+TOTAL: [6.9 MB]
+
+Uniformisation: q.t = 41.057295 x 2000.000000 = 82114.590000
+Fox-Glynn: left = 80105, right = 84548
+
+Starting iterations...
+Iteration 3009 (of 84548): max relative diff=0.000359, 5.01 sec so far
+Iteration 6024 (of 84548): max relative diff=0.000171, 10.02 sec so far
+Iteration 9033 (of 84548): max relative diff=0.000113, 15.03 sec so far
+Iteration 12050 (of 84548): max relative diff=0.000084, 20.04 sec so far
+Iteration 15052 (of 84548): max relative diff=0.000067, 25.05 sec so far
+Iteration 18058 (of 84548): max relative diff=0.000056, 30.06 sec so far
+Iteration 21040 (of 84548): max relative diff=0.000048, 35.07 sec so far
+Iteration 24053 (of 84548): max relative diff=0.000042, 40.08 sec so far
+Iteration 27062 (of 84548): max relative diff=0.000037, 45.09 sec so far
+Iteration 30075 (of 84548): max relative diff=0.000033, 50.10 sec so far
+Iteration 33085 (of 84548): max relative diff=0.000030, 55.11 sec so far
+Iteration 36092 (of 84548): max relative diff=0.000028, 60.12 sec so far
+Iteration 39097 (of 84548): max relative diff=0.000026, 65.13 sec so far
+Iteration 42103 (of 84548): max relative diff=0.000024, 70.14 sec so far
+Iteration 45116 (of 84548): max relative diff=0.000022, 75.15 sec so far
+Iteration 48125 (of 84548): max relative diff=0.000021, 80.16 sec so far
+Iteration 51129 (of 84548): max relative diff=0.000020, 85.17 sec so far
+Iteration 54132 (of 84548): max relative diff=0.000019, 90.18 sec so far
+Iteration 57122 (of 84548): max relative diff=0.000018, 95.19 sec so far
+Iteration 60130 (of 84548): max relative diff=0.000017, 100.20 sec so far
+Iteration 63143 (of 84548): max relative diff=0.000016, 105.21 sec so far
+Iteration 66156 (of 84548): max relative diff=0.000015, 110.22 sec so far
+Iteration 69166 (of 84548): max relative diff=0.000014, 115.23 sec so far
+Iteration 72178 (of 84548): max relative diff=0.000014, 120.24 sec so far
+Iteration 75188 (of 84548): max relative diff=0.000013, 125.25 sec so far
+Iteration 78204 (of 84548): max relative diff=0.000013, 130.26 sec so far
+Iteration 81174 (of 84548): max relative diff=0.000012, 135.27 sec so far
+Iteration 84082 (of 84548): max relative diff=0.000012, 140.28 sec so far
+
+Iterative method: 84548 iterations in 141.89 seconds (average 0.001669, setup 0.81)
+
+Value in the initial state: 0.0010445396729789396
+
+Time for model checking: 142.131 seconds.
+
+Result: 0.0010445396729789396
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-umb_check_default_cluster.64-2000-20_rep3.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+Wallclock time: 201.062 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 22:08:10 GMT+01:00 2026
+Hostname: n23m0154.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        CTMC
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   x
+Labels:      "minimum"
+
+Parsing properties file "models/cluster.64-2000-20/property.props"...
+
+1 property:
+(1) "qos1": P=? [ F<=2000 !"minimum" ]
+
+---------------------------------------------------------------------
+
+Model checking: "qos1": P=? [ F<=2000 !"minimum" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 12% 22% 34% 44% 54% 66% 76% 86% 98% 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.22 seconds (average 0.001654, setup 0.00)
+
+Time for model construction: 27.862 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 25495 nodes (71 terminal), 733216 minterms, vars: 18r/18c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 36133 of 151060 (23.9%)
+
+Building hybrid MTBDD matrix... [levels=18, nodes=51088] [2.3 MB]
+Adding explicit sparse matrices... [levels=6, num=5507, compact] [839.4 KB]
+Creating vector for diagonals... [dist=1448, compact] [306.4 KB]
+Allocating iteration vectors... [3 x 1.2 MB]
+TOTAL: [6.9 MB]
+
+Uniformisation: q.t = 41.057295 x 2000.000000 = 82114.590000
+Fox-Glynn: left = 80105, right = 84548
+
+Starting iterations...
+Iteration 2613 (of 84548): max relative diff=0.000549, 5.01 sec so far
+Iteration 5245 (of 84548): max relative diff=0.000197, 10.02 sec so far
+Iteration 7757 (of 84548): max relative diff=0.000132, 15.03 sec so far
+Iteration 10276 (of 84548): max relative diff=0.000099, 20.04 sec so far
+Iteration 12780 (of 84548): max relative diff=0.000079, 25.05 sec so far
+Iteration 15300 (of 84548): max relative diff=0.000066, 30.06 sec so far
+Iteration 17824 (of 84548): max relative diff=0.000057, 35.07 sec so far
+Iteration 20403 (of 84548): max relative diff=0.000049, 40.08 sec so far
+Iteration 22926 (of 84548): max relative diff=0.000044, 45.09 sec so far
+Iteration 25445 (of 84548): max relative diff=0.000040, 50.10 sec so far
+Iteration 28064 (of 84548): max relative diff=0.000036, 55.11 sec so far
+Iteration 30664 (of 84548): max relative diff=0.000033, 60.12 sec so far
+Iteration 33261 (of 84548): max relative diff=0.000030, 65.13 sec so far
+Iteration 35811 (of 84548): max relative diff=0.000028, 70.14 sec so far
+Iteration 38313 (of 84548): max relative diff=0.000026, 75.15 sec so far
+Iteration 40857 (of 84548): max relative diff=0.000025, 80.16 sec so far
+Iteration 43380 (of 84548): max relative diff=0.000023, 85.17 sec so far
+Iteration 45892 (of 84548): max relative diff=0.000022, 90.18 sec so far
+Iteration 48412 (of 84548): max relative diff=0.000021, 95.19 sec so far
+Iteration 51005 (of 84548): max relative diff=0.000020, 100.20 sec so far
+Iteration 53664 (of 84548): max relative diff=0.000019, 105.21 sec so far
+Iteration 56338 (of 84548): max relative diff=0.000018, 110.22 sec so far
+Iteration 58885 (of 84548): max relative diff=0.000017, 115.23 sec so far
+Iteration 61425 (of 84548): max relative diff=0.000016, 120.24 sec so far
+Iteration 63921 (of 84548): max relative diff=0.000016, 125.25 sec so far
+Iteration 66420 (of 84548): max relative diff=0.000015, 130.26 sec so far
+Iteration 68926 (of 84548): max relative diff=0.000015, 135.27 sec so far
+Iteration 71480 (of 84548): max relative diff=0.000014, 140.28 sec so far
+Iteration 74038 (of 84548): max relative diff=0.000014, 145.29 sec so far
+Iteration 76627 (of 84548): max relative diff=0.000013, 150.30 sec so far
+Iteration 79151 (of 84548): max relative diff=0.000013, 155.31 sec so far
+Iteration 81611 (of 84548): max relative diff=0.000012, 160.32 sec so far
+Iteration 84048 (of 84548): max relative diff=0.000012, 165.33 sec so far
+
+Iterative method: 84548 iterations in 167.22 seconds (average 0.001968, setup 0.86)
+
+Value in the initial state: 0.0010445396729789396
+
+Time for model checking: 167.849 seconds.
+
+Result: 0.0010445396729789396
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-umb_check_default_cluster.64-2000-20_rep4.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+Wallclock time: 178.515 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:36:56 GMT+01:00 2026
+Hostname: n23m0323.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        CTMC
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   x
+Labels:      "minimum"
+
+Parsing properties file "models/cluster.64-2000-20/property.props"...
+
+1 property:
+(1) "qos1": P=? [ F<=2000 !"minimum" ]
+
+---------------------------------------------------------------------
+
+Model checking: "qos1": P=? [ F<=2000 !"minimum" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 12% 24% 36% 48% 60% 72% 84% 94% 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.24 seconds (average 0.001805, setup 0.00)
+
+Time for model construction: 25.993 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 25495 nodes (71 terminal), 733216 minterms, vars: 18r/18c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 36133 of 151060 (23.9%)
+
+Building hybrid MTBDD matrix... [levels=18, nodes=51088] [2.3 MB]
+Adding explicit sparse matrices... [levels=6, num=5507, compact] [839.4 KB]
+Creating vector for diagonals... [dist=1448, compact] [306.4 KB]
+Allocating iteration vectors... [3 x 1.2 MB]
+TOTAL: [6.9 MB]
+
+Uniformisation: q.t = 41.057295 x 2000.000000 = 82114.590000
+Fox-Glynn: left = 80105, right = 84548
+
+Starting iterations...
+Iteration 2816 (of 84548): max relative diff=0.000439, 5.01 sec so far
+Iteration 5562 (of 84548): max relative diff=0.000185, 10.02 sec so far
+Iteration 8410 (of 84548): max relative diff=0.000121, 15.03 sec so far
+Iteration 11259 (of 84548): max relative diff=0.000090, 20.04 sec so far
+Iteration 14113 (of 84548): max relative diff=0.000072, 25.05 sec so far
+Iteration 16965 (of 84548): max relative diff=0.000060, 30.06 sec so far
+Iteration 19810 (of 84548): max relative diff=0.000051, 35.07 sec so far
+Iteration 22589 (of 84548): max relative diff=0.000045, 40.08 sec so far
+Iteration 25411 (of 84548): max relative diff=0.000040, 45.09 sec so far
+Iteration 28129 (of 84548): max relative diff=0.000036, 50.10 sec so far
+Iteration 30980 (of 84548): max relative diff=0.000032, 55.11 sec so far
+Iteration 33829 (of 84548): max relative diff=0.000030, 60.12 sec so far
+Iteration 36680 (of 84548): max relative diff=0.000027, 65.13 sec so far
+Iteration 39530 (of 84548): max relative diff=0.000025, 70.14 sec so far
+Iteration 42380 (of 84548): max relative diff=0.000024, 75.15 sec so far
+Iteration 45234 (of 84548): max relative diff=0.000022, 80.16 sec so far
+Iteration 48083 (of 84548): max relative diff=0.000021, 85.17 sec so far
+Iteration 50925 (of 84548): max relative diff=0.000020, 90.18 sec so far
+Iteration 53775 (of 84548): max relative diff=0.000019, 95.19 sec so far
+Iteration 56535 (of 84548): max relative diff=0.000018, 100.20 sec so far
+Iteration 59363 (of 84548): max relative diff=0.000017, 105.21 sec so far
+Iteration 62203 (of 84548): max relative diff=0.000016, 110.22 sec so far
+Iteration 65057 (of 84548): max relative diff=0.000015, 115.23 sec so far
+Iteration 67905 (of 84548): max relative diff=0.000015, 120.24 sec so far
+Iteration 70752 (of 84548): max relative diff=0.000014, 125.25 sec so far
+Iteration 73610 (of 84548): max relative diff=0.000014, 130.26 sec so far
+Iteration 76463 (of 84548): max relative diff=0.000013, 135.27 sec so far
+Iteration 79312 (of 84548): max relative diff=0.000013, 140.28 sec so far
+Iteration 82073 (of 84548): max relative diff=0.000012, 145.29 sec so far
+
+Iterative method: 84548 iterations in 150.70 seconds (average 0.001772, setup 0.86)
+
+Value in the initial state: 0.0010445396729789396
+
+Time for model checking: 151.22 seconds.
+
+Result: 0.0010445396729789396
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-umb_check_default_cluster.64-2000-20_rep5.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+Wallclock time: 192.429 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:29:25 GMT+01:00 2026
+Hostname: n23m0331.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/cluster.64-2000-20/prism.model.umb models/cluster.64-2000-20/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        CTMC
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   x
+Labels:      "minimum"
+
+Parsing properties file "models/cluster.64-2000-20/property.props"...
+
+1 property:
+(1) "qos1": P=? [ F<=2000 !"minimum" ]
+
+---------------------------------------------------------------------
+
+Model checking: "qos1": P=? [ F<=2000 !"minimum" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 12% 24% 36% 48% 60% 72% 82% 94% 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.21 seconds (average 0.001579, setup 0.00)
+
+Time for model construction: 25.622 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 25495 nodes (71 terminal), 733216 minterms, vars: 18r/18c
+
+Computing probabilities...
+Engine: Hybrid
+
+Number of non-absorbing states: 36133 of 151060 (23.9%)
+
+Building hybrid MTBDD matrix... [levels=18, nodes=51088] [2.3 MB]
+Adding explicit sparse matrices... [levels=6, num=5507, compact] [839.4 KB]
+Creating vector for diagonals... [dist=1448, compact] [306.4 KB]
+Allocating iteration vectors... [3 x 1.2 MB]
+TOTAL: [6.9 MB]
+
+Uniformisation: q.t = 41.057295 x 2000.000000 = 82114.590000
+Fox-Glynn: left = 80105, right = 84548
+
+Starting iterations...
+Iteration 2737 (of 84548): max relative diff=0.000480, 5.01 sec so far
+Iteration 5398 (of 84548): max relative diff=0.000191, 10.02 sec so far
+Iteration 8145 (of 84548): max relative diff=0.000125, 15.03 sec so far
+Iteration 10884 (of 84548): max relative diff=0.000093, 20.04 sec so far
+Iteration 13638 (of 84548): max relative diff=0.000074, 25.05 sec so far
+Iteration 16393 (of 84548): max relative diff=0.000062, 30.06 sec so far
+Iteration 19138 (of 84548): max relative diff=0.000053, 35.07 sec so far
+Iteration 21883 (of 84548): max relative diff=0.000046, 40.08 sec so far
+Iteration 24632 (of 84548): max relative diff=0.000041, 45.09 sec so far
+Iteration 27380 (of 84548): max relative diff=0.000037, 50.10 sec so far
+Iteration 30126 (of 84548): max relative diff=0.000033, 55.11 sec so far
+Iteration 32874 (of 84548): max relative diff=0.000031, 60.12 sec so far
+Iteration 35628 (of 84548): max relative diff=0.000028, 65.13 sec so far
+Iteration 38281 (of 84548): max relative diff=0.000026, 70.14 sec so far
+Iteration 41007 (of 84548): max relative diff=0.000024, 75.15 sec so far
+Iteration 43746 (of 84548): max relative diff=0.000023, 80.16 sec so far
+Iteration 46489 (of 84548): max relative diff=0.000022, 85.17 sec so far
+Iteration 49234 (of 84548): max relative diff=0.000020, 90.18 sec so far
+Iteration 51967 (of 84548): max relative diff=0.000019, 95.19 sec so far
+Iteration 54704 (of 84548): max relative diff=0.000018, 100.20 sec so far
+Iteration 57413 (of 84548): max relative diff=0.000017, 105.21 sec so far
+Iteration 60029 (of 84548): max relative diff=0.000017, 110.22 sec so far
+Iteration 62658 (of 84548): max relative diff=0.000016, 115.23 sec so far
+Iteration 65075 (of 84548): max relative diff=0.000015, 120.24 sec so far
+Iteration 67850 (of 84548): max relative diff=0.000015, 125.25 sec so far
+Iteration 70097 (of 84548): max relative diff=0.000014, 130.26 sec so far
+Iteration 71701 (of 84548): max relative diff=0.000014, 135.27 sec so far
+Iteration 74090 (of 84548): max relative diff=0.000014, 140.28 sec so far
+Iteration 76743 (of 84548): max relative diff=0.000013, 145.29 sec so far
+Iteration 79435 (of 84548): max relative diff=0.000013, 150.30 sec so far
+Iteration 81148 (of 84548): max relative diff=0.000012, 155.31 sec so far
+Iteration 82612 (of 84548): max relative diff=0.000012, 160.32 sec so far
+
+Iterative method: 84548 iterations in 165.30 seconds (average 0.001946, setup 0.78)
+
+Value in the initial state: 0.0010445396729789396
+
+Time for model checking: 165.829 seconds.
+
+Result: 0.0010445396729789396
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+

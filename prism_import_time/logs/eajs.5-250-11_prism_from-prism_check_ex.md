@@ -1,0 +1,292 @@
+# Log files for prism_from-prism_check_ex on model [eajs.5-250-11](../../models/eajs.5-250-11)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_check_ex_eajs.5-250-11_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+Wallclock time: 37.127 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 08:01:36 GMT+01:00 2026
+Hostname: r23m0127.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.5-250-11/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 504218 1002699 1408802 1451297 1467974 1475415 1479549 1482139 1483077 1484975
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:353)
+	at simulator.Updater.processUpdatesAndAddToProduct(Updater.java:416)
+	at simulator.Updater.calculateTransitions(Updater.java:224)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_eajs.5-250-11_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+Wallclock time: 37.367 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:29:25 GMT+01:00 2026
+Hostname: r23m0051.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.5-250-11/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 512211 1026185 1408220 1447336 1465692 1475678 1479839 1482212 1483198 1484763
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:353)
+	at simulator.Updater.processUpdatesAndAddToProduct(Updater.java:416)
+	at simulator.Updater.calculateTransitions(Updater.java:224)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_eajs.5-250-11_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+Wallclock time: 37.790 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 03:02:02 GMT+01:00 2026
+Hostname: n23m0072.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.5-250-11/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 493000 985344 1367822 1442105 1463298 1475058 1479753 1482153 1483108 1485002
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:257)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_eajs.5-250-11_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+Wallclock time: 40.658 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 21:21:46 GMT+01:00 2026
+Hostname: n23m0253.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.5-250-11/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 481632 933966 1344376 1438365 1461233 1472835 1477597 1481275 1482724 1483821 1485170
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at simulator.ChoiceListFlexi.<init>(ChoiceListFlexi.java:77)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:353)
+	at simulator.Updater.calculateTransitions(Updater.java:216)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_eajs.5-250-11_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+Wallclock time: 38.067 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:12:45 GMT+01:00 2026
+Hostname: n23m0277.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/eajs.5-250-11/model.prism models/eajs.5-250-11/property.props
+
+Parsing PRISM model file "models/eajs.5-250-11/model.prism"...
+
+Type:        MDP
+Modules:     Battery Process_1 Process_2 Resources Process_3 Process_5 Process_4
+Actions:     [tick]
+Variables:   battery_load failure_1 loc_1 t_1 t_2 loc_2 boost_1 user_1 t_3 loc_3 loc_5 t_5 t_4 loc_4
+Labels:      "emptyBattery"
+Rewards:     "utilityLocal"
+
+Parsing properties file "models/eajs.5-250-11/property.props"...
+
+1 property:
+(1) "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+---------------------------------------------------------------------
+
+Model checking: "ExpUtil": R{"utilityLocal"}max=? [ F "emptyBattery" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 501304 1014195 1409444 1448601 1467079 1476489 1480659 1482714 1483817 1485320
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
+	at parser.ast.Update.update(Update.java:215)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:259)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+

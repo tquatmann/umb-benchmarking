@@ -1,0 +1,313 @@
+# Log files for modest_from-jani_to-aut_default on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+
+Parsed values: `[0.3, 0.3, 0.3, 0.3, 0.3]`
+
+
+
+### Log file: modest_from-jani_to-aut_default_mapk-cascade.4-30_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model.aut AUT  -D --exhaustive
+Wallclock time: 3.812 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model.aut AUT -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 32 bytes per state.
+model.jani: info: Explored 99535 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model.aut".
+
+Peak memory usage: 131 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         32 bytes
+  States:             99535
+  Choices:            99535
+  Branches:           910872
+  Rate:               62759 states/s
+  Peak memory:        74.40 MB
+  Final size:         21.61 MB
+  Size on disk:       4.23 MB
+  Time (exploration): 1.6 s
+  Time (merging):     0.1 s
+
++ Export to AUT
+  Time:      0.3 s
+  File size: 20.45 MB
+
++ Property activated_time
+  Value:  40.6739607295415
+  Bounds: [40.6739607295415, infinity)
+  Time:   1.5 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          99535
+    Time for min. prob. 1 states: 0.0 s
+
+  + Value iteration
+    Final error: 9.881731107657563E-07
+    Iterations:  730
+    Time:        1.5 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model.aut:	Size of output file is 21442080 bytes
+```
+
+
+
+### Log file: modest_from-jani_to-aut_default_mapk-cascade.4-30_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep2.aut AUT  -D --exhaustive
+Wallclock time: 4.072 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep2.aut AUT -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 32 bytes per state.
+model.jani: info: Explored 99535 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep2.aut".
+
+Peak memory usage: 131 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         32 bytes
+  States:             99535
+  Choices:            99535
+  Branches:           910872
+  Rate:               61252 states/s
+  Peak memory:        74.40 MB
+  Final size:         21.61 MB
+  Size on disk:       4.23 MB
+  Time (exploration): 1.6 s
+  Time (merging):     0.1 s
+
++ Export to AUT
+  Time:      0.3 s
+  File size: 20.45 MB
+
++ Property activated_time
+  Value:  40.6739607295415
+  Bounds: [40.6739607295415, infinity)
+  Time:   1.7 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          99535
+    Time for min. prob. 1 states: 0.0 s
+
+  + Value iteration
+    Final error: 9.881731107657563E-07
+    Iterations:  730
+    Time:        1.7 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep2.aut:	Size of output file is 21442080 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: modest_from-jani_to-aut_default_mapk-cascade.4-30_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep3.aut AUT  -D --exhaustive
+Wallclock time: 3.728 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep3.aut AUT -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 32 bytes per state.
+model.jani: info: Explored 99535 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep3.aut".
+
+Peak memory usage: 132 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         32 bytes
+  States:             99535
+  Choices:            99535
+  Branches:           910872
+  Rate:               63117 states/s
+  Peak memory:        74.40 MB
+  Final size:         21.61 MB
+  Size on disk:       4.23 MB
+  Time (exploration): 1.6 s
+  Time (merging):     0.1 s
+
++ Export to AUT
+  Time:      0.3 s
+  File size: 20.45 MB
+
++ Property activated_time
+  Value:  40.6739607295415
+  Bounds: [40.6739607295415, infinity)
+  Time:   1.4 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          99535
+    Time for min. prob. 1 states: 0.0 s
+
+  + Value iteration
+    Final error: 9.881731107657563E-07
+    Iterations:  730
+    Time:        1.4 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep3.aut:	Size of output file is 21442080 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: modest_from-jani_to-aut_default_mapk-cascade.4-30_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep4.aut AUT  -D --exhaustive
+Wallclock time: 4.316 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep4.aut AUT -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 32 bytes per state.
+model.jani: info: Explored 99535 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep4.aut".
+
+Peak memory usage: 133 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         32 bytes
+  States:             99535
+  Choices:            99535
+  Branches:           910872
+  Rate:               61064 states/s
+  Peak memory:        74.40 MB
+  Final size:         21.61 MB
+  Size on disk:       4.23 MB
+  Time (exploration): 1.7 s
+  Time (merging):     0.1 s
+
++ Export to AUT
+  Time:      0.3 s
+  File size: 20.45 MB
+
++ Property activated_time
+  Value:  40.6739607295415
+  Bounds: [40.6739607295415, infinity)
+  Time:   1.9 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          99535
+    Time for min. prob. 1 states: 0.0 s
+
+  + Value iteration
+    Final error: 9.881731107657563E-07
+    Iterations:  730
+    Time:        1.9 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep4.aut:	Size of output file is 21442080 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: modest_from-jani_to-aut_default_mapk-cascade.4-30_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep5.aut AUT  -D --exhaustive
+Wallclock time: 3.676 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/mapk-cascade.4-30/model.jani --statespace out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep5.aut AUT -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a CTMC model.
+model.jani: info: Need 32 bytes per state.
+model.jani: info: Explored 99535 states.
+model.jani: info: Exported state space to file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep5.aut".
+
+Peak memory usage: 133 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         32 bytes
+  States:             99535
+  Choices:            99535
+  Branches:           910872
+  Rate:               64092 states/s
+  Peak memory:        74.40 MB
+  Final size:         21.61 MB
+  Size on disk:       4.23 MB
+  Time (exploration): 1.6 s
+  Time (merging):     0.1 s
+
++ Export to AUT
+  Time:      0.3 s
+  File size: 20.45 MB
+
++ Property activated_time
+  Value:  40.6739607295415
+  Bounds: [40.6739607295415, infinity)
+  Time:   1.4 s
+
+  + Precomputations
+    Min. prob. 0 states:          0
+    Time for min. prob. 0 states: 0.0 s
+    Min. prob. 1 states:          99535
+    Time for min. prob. 1 states: 0.0 s
+
+  + Value iteration
+    Final error: 9.881731107657563E-07
+    Iterations:  730
+    Time:        1.4 s
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-aut_default/mapk-cascade.4-30/model_rep5.aut:	Size of output file is 21442080 bytes
+Removing output file to save space for repetition #5
+```
+

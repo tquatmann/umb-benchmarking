@@ -1,0 +1,219 @@
+# Log files for storm_from-umb-xz_check_sparse on model [speed-ind.2100](../../models/speed-ind.2100)
+
+Parsed values: `[81.936, 86.514, 85.286, 87.766, 78.935]`
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_speed-ind.2100_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Wallclock time: 81.936 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:57:45 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.010s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 3.269s seconds.
+Time for model construction: 3.399s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 24576 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+Result (for initial states): 0.04229449798
+Time for model checking: 78.488s.
+
+Performance statistics:
+  * peak memory usage: 754MB
+  * CPU time: 81.393s
+  * wallclock time: 81.892s
+```
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_speed-ind.2100_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Wallclock time: 86.514 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:38:21 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.012s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 3.210s seconds.
+Time for model construction: 3.343s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 24576 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+Result (for initial states): 0.04229449798
+Time for model checking: 83.123s.
+
+Performance statistics:
+  * peak memory usage: 754MB
+  * CPU time: 86.098s
+  * wallclock time: 86.477s
+```
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_speed-ind.2100_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Wallclock time: 85.286 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:29:03 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.002s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 3.755s seconds.
+Time for model construction: 3.888s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 24576 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+Result (for initial states): 0.04229449798
+Time for model checking: 79.015s.
+
+Performance statistics:
+  * peak memory usage: 753MB
+  * CPU time: 82.522s
+  * wallclock time: 82.908s
+```
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_speed-ind.2100_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Wallclock time: 87.766 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:29:01 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.015s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 3.177s seconds.
+Time for model construction: 3.316s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 24576 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+Result (for initial states): 0.04229449798
+Time for model checking: 84.407s.
+
+Performance statistics:
+  * peak memory usage: 754MB
+  * CPU time: 87.362s
+  * wallclock time: 87.728s
+```
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_speed-ind.2100_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Wallclock time: 78.935 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:25:39 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/speed-ind.2100/storm.model.umb.xz --prop models/speed-ind.2100/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.019s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 3.178s seconds.
+Time for model construction: 3.317s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 24576 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+Result (for initial states): 0.04229449798
+Time for model checking: 75.569s.
+
+Performance statistics:
+  * peak memory usage: 755MB
+  * CPU time: 78.543s
+  * wallclock time: 78.899s
+```
+

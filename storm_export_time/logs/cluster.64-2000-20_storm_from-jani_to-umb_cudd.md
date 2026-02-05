@@ -1,0 +1,303 @@
+# Log files for storm_from-jani_to-umb_cudd on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+
+Parsed values: `[0.022, 0.021, 0.021, 0.023, 0.024]`
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_cluster.64-2000-20_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.403 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 07:42:08 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.001s.
+
+Time for model construction: 0.073s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	151060 (127 nodes)
+Transitions: 	733216 (14709 nodes)
+Reward Models:  none
+Variables: 	rows: 17 meta variables (29 DD variables), columns: 17 meta variables (29 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (30 nodes)
+   * minimum
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.269s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	151060
+Transitions: 	733216
+Reward Models:  none
+State Labels: 	3 labels
+   * minimum -> 36133 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model.umb'.
+Time for model export: 0.022s.
+
+
+Performance statistics:
+  * peak memory usage: 71MB
+  * CPU time: 0.354s
+  * wallclock time: 0.368s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model.umb:	Size of output file is 14216704 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_cluster.64-2000-20_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep2.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.379 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:27:06 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep2.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 0.063s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	151060 (127 nodes)
+Transitions: 	733216 (14709 nodes)
+Reward Models:  none
+Variables: 	rows: 17 meta variables (29 DD variables), columns: 17 meta variables (29 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (30 nodes)
+   * minimum
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.246s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	151060
+Transitions: 	733216
+Reward Models:  none
+State Labels: 	3 labels
+   * minimum -> 36133 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep2.umb'.
+Time for model export: 0.021s.
+
+
+Performance statistics:
+  * peak memory usage: 70MB
+  * CPU time: 0.326s
+  * wallclock time: 0.338s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep2.umb:	Size of output file is 14216704 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_cluster.64-2000-20_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep3.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.432 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:34 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep3.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.024s.
+
+Time for model construction: 0.068s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	151060 (127 nodes)
+Transitions: 	733216 (14709 nodes)
+Reward Models:  none
+Variables: 	rows: 17 meta variables (29 DD variables), columns: 17 meta variables (29 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (30 nodes)
+   * minimum
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.247s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	151060
+Transitions: 	733216
+Reward Models:  none
+State Labels: 	3 labels
+   * minimum -> 36133 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep3.umb'.
+Time for model export: 0.021s.
+
+
+Performance statistics:
+  * peak memory usage: 70MB
+  * CPU time: 0.328s
+  * wallclock time: 0.365s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep3.umb:	Size of output file is 14216704 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_cluster.64-2000-20_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep4.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.477 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:25:55 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep4.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.027s.
+
+Time for model construction: 0.073s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	151060 (127 nodes)
+Transitions: 	733216 (14709 nodes)
+Reward Models:  none
+Variables: 	rows: 17 meta variables (29 DD variables), columns: 17 meta variables (29 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (30 nodes)
+   * minimum
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.287s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	151060
+Transitions: 	733216
+Reward Models:  none
+State Labels: 	3 labels
+   * minimum -> 36133 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep4.umb'.
+Time for model export: 0.023s.
+
+
+Performance statistics:
+  * peak memory usage: 71MB
+  * CPU time: 0.383s
+  * wallclock time: 0.416s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep4.umb:	Size of output file is 14216704 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-umb_cudd_cluster.64-2000-20_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep5.umb umb --compression none  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 0.494 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:40 2026
+Command line arguments: --timemem --buildfull --jani models/cluster.64-2000-20/model.jani --exportbuild out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep5.umb umb --compression none --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 0.081s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (symbolic)
+States: 	151060 (127 nodes)
+Transitions: 	733216 (14709 nodes)
+Reward Models:  none
+Variables: 	rows: 17 meta variables (29 DD variables), columns: 17 meta variables (29 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (30 nodes)
+   * minimum
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 0.297s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	151060
+Transitions: 	733216
+Reward Models:  none
+State Labels: 	3 labels
+   * minimum -> 36133 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep5.umb'.
+Time for model export: 0.024s.
+
+
+Performance statistics:
+  * peak memory usage: 70MB
+  * CPU time: 0.409s
+  * wallclock time: 0.412s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_cudd/cluster.64-2000-20/model_rep5.umb:	Size of output file is 14216704 bytes
+Removing output file to save space for repetition #5
+```
+

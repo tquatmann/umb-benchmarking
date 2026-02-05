@@ -1,0 +1,268 @@
+# Log files for prism_from-prism_to-umb-gz_ex on model [wlan.6-0](../../models/wlan.6-0)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_wlan.6-0_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 18.506 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:25:54 GMT+01:00 2026
+Hostname: n23m0110.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 643720 1440848 1627507 1631459 1632438
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:257)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb.gz:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_wlan.6-0_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 18.497 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:32:22 GMT+01:00 2026
+Hostname: n23m0044.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 655902 1463559 1629166 1631892 1632469
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.Integer.valueOf(Integer.java:1019)
+	at explicit.IndexedSet.add(IndexedSet.java:72)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:297)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep2.gz:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_wlan.6-0_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 26.451 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:13 GMT+01:00 2026
+Hostname: n23m0289.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 555032 1187880 1620318 1629972 1631943 1632412
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.Double.valueOf(Double.java:924)
+	at prism.Evaluator$EvaluatorDouble.add(Evaluator.java:315)
+	at prism.Evaluator$EvaluatorDouble.add(Evaluator.java:275)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:377)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep3.gz:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_wlan.6-0_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 19.124 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:32:32 GMT+01:00 2026
+Hostname: n23m0247.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 668498 1555876 1628384 1631558 1632326
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:378)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep4.gz:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_ex_wlan.6-0_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 19.844 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:26:26 GMT+01:00 2026
+Hostname: n23m0252.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 594938 1316064 1625191 1631608 1632382
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.Double.valueOf(Double.java:924)
+	at prism.Evaluator$EvaluatorDouble.evaluate(Evaluator.java:368)
+	at prism.Evaluator$EvaluatorDouble.evaluate(Evaluator.java:275)
+	at prism.Evaluator.evaluate(Evaluator.java:164)
+	at simulator.Updater.getProbabilityInState(Updater.java:333)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:359)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/wlan.6-0/model.umb_rep5.gz:	File does not exist.
+```
+

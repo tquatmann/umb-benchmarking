@@ -1,0 +1,233 @@
+# Log files for storm_from-jani_to-drn-gz_exact on model [speed-ind.2100](../../models/speed-ind.2100)
+
+Parsed values: `[11.421, 10.909, 12.265, 10.914, 10.945]`
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_speed-ind.2100_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn.gz drn --compression gzip  --exact
+Wallclock time: 102.779 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:50:30 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.009s.
+
+Time for model construction: 90.911s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn.gz'.
+Time for model export: 11.421s.
+
+
+Performance statistics:
+  * peak memory usage: 1968MB
+  * CPU time: 101.611s
+  * wallclock time: 102.528s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn.gz:	Size of output file is 48488422 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_speed-ind.2100_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep2.gz drn --compression gzip  --exact
+Wallclock time: 97.924 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:15:06 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep2.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.007s.
+
+Time for model construction: 86.689s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep2.gz'.
+Time for model export: 10.909s.
+
+
+Performance statistics:
+  * peak memory usage: 1970MB
+  * CPU time: 97.028s
+  * wallclock time: 97.746s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep2.gz:	Size of output file is 48488436 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_speed-ind.2100_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep3.gz drn --compression gzip  --exact
+Wallclock time: 111.906 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:57:51 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep3.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.021s.
+
+Time for model construction: 99.286s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep3.gz'.
+Time for model export: 12.265s.
+
+
+Performance statistics:
+  * peak memory usage: 1968MB
+  * CPU time: 110.929s
+  * wallclock time: 111.722s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep3.gz:	Size of output file is 48488438 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_speed-ind.2100_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep4.gz drn --compression gzip  --exact
+Wallclock time: 97.673 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:27:05 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep4.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.008s.
+
+Time for model construction: 86.416s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep4.gz'.
+Time for model export: 10.914s.
+
+
+Performance statistics:
+  * peak memory usage: 1970MB
+  * CPU time: 96.817s
+  * wallclock time: 97.484s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep4.gz:	Size of output file is 48488439 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_speed-ind.2100_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep5.gz drn --compression gzip  --exact
+Wallclock time: 98.935 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:37:10 2026
+Command line arguments: --timemem --buildfull --jani models/speed-ind.2100/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep5.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.012s.
+
+Time for model construction: 87.632s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 24576 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep5.gz'.
+Time for model export: 10.945s.
+
+
+Performance statistics:
+  * peak memory usage: 1968MB
+  * CPU time: 98.023s
+  * wallclock time: 98.733s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/speed-ind.2100/model.exact.drn_rep5.gz:	Size of output file is 48488434 bytes
+Removing output file to save space for repetition #5
+```
+

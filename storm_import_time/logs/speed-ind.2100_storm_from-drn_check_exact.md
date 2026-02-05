@@ -1,0 +1,199 @@
+# Log files for storm_from-drn_check_exact on model [speed-ind.2100](../../models/speed-ind.2100)
+
+Parsed values: `[28.433, 31.124, 28.363, 32.877, 39.104]`
+
+
+
+### Log file: storm_from-drn_check_exact_speed-ind.2100_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Wallclock time: 28.938 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:49:27 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 28.433s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	2 labels
+   * target -> 24576 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 1768MB
+  * CPU time: 28.066s
+  * wallclock time: 28.695s
+```
+
+
+
+### Log file: storm_from-drn_check_exact_speed-ind.2100_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Wallclock time: 31.633 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:37:22 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 31.124s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	2 labels
+   * target -> 24576 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 1767MB
+  * CPU time: 30.762s
+  * wallclock time: 31.392s
+```
+
+
+
+### Log file: storm_from-drn_check_exact_speed-ind.2100_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Wallclock time: 28.848 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 01:03:31 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 28.363s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	2 labels
+   * target -> 24576 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 1767MB
+  * CPU time: 28.031s
+  * wallclock time: 28.629s
+```
+
+
+
+### Log file: storm_from-drn_check_exact_speed-ind.2100_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Wallclock time: 33.512 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:49:55 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 32.877s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	2 labels
+   * target -> 24576 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 1768MB
+  * CPU time: 32.404s
+  * wallclock time: 33.221s
+```
+
+
+
+### Log file: storm_from-drn_check_exact_speed-ind.2100_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Wallclock time: 39.675 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:06 2026
+Command line arguments: --timemem --buildfull --explicit-drn models/speed-ind.2100/storm.model.exact.drn --digits 17 --prop models/speed-ind.2100/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model construction: 39.104s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	743424
+Transitions: 	9518080
+Reward Models:  none
+State Labels: 	2 labels
+   * target -> 24576 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "change_state": P=? [true U<=2100 "target"] ...
+ERROR (model-handling.h:1082): Property is unsupported by selected engine/settings.
+
+
+Performance statistics:
+  * peak memory usage: 1767MB
+  * CPU time: 33.891s
+  * wallclock time: 39.389s
+```
+

@@ -1,0 +1,199 @@
+# Log files for modest_from-umb_check_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+
+Parsed values: `[1.536, 3.505, 365.182, 1.265, 2.448]`
+
+
+
+### Log file: modest_from-umb_check_default_zeroconf.1000-8-false_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt  -D --exhaustive
+Wallclock time: 1.536 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt -D --exhaustive
+
+
+
+
+Peak memory usage: 153 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            1862970
+  Choices:           3431320
+  Branches:          4229631
+  Time (decompress): 0.1 s
+  Time (validate):   0.6 s
+  Time (load):       0.6 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        0.8 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        0.7 s
+
+```
+
+
+
+### Log file: modest_from-umb_check_default_zeroconf.1000-8-false_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt  -D --exhaustive
+Wallclock time: 3.505 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt -D --exhaustive
+
+
+
+
+Peak memory usage: 153 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            1862970
+  Choices:           3431320
+  Branches:          4229631
+  Time (decompress): 0.1 s
+  Time (validate):   2.5 s
+  Time (load):       2.6 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        0.8 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        0.8 s
+
+```
+
+
+
+### Log file: modest_from-umb_check_default_zeroconf.1000-8-false_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt  -D --exhaustive
+Wallclock time: 365.182 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt -D --exhaustive
+
+
+
+
+Peak memory usage: 81 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            1862970
+  Choices:           3431320
+  Branches:          4229631
+  Time (decompress): 0.0 s
+  Time (validate):   3.2 s
+  Time (load):       3.8 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        361.2 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        361.2 s
+
+```
+
+
+
+### Log file: modest_from-umb_check_default_zeroconf.1000-8-false_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt  -D --exhaustive
+Wallclock time: 1.265 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt -D --exhaustive
+
+
+
+
+Peak memory usage: 153 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            1862970
+  Choices:           3431320
+  Branches:          4229631
+  Time (decompress): 0.1 s
+  Time (validate):   0.4 s
+  Time (load):       0.5 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        0.6 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        0.6 s
+
+```
+
+
+
+### Log file: modest_from-umb_check_default_zeroconf.1000-8-false_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt  -D --exhaustive
+Wallclock time: 2.448 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/modest.model.umb models/zeroconf.1000-8-false/modest.umb.properties.txt -D --exhaustive
+
+
+
+
+Peak memory usage: 153 MB
+Analysis results for UMB
+
++ State space (UMB)
+  States:            1862970
+  Choices:           3431320
+  Branches:          4229631
+  Time (decompress): 0.1 s
+  Time (validate):   0.5 s
+  Time (load):       0.6 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        0.6 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        0.6 s
+
+```
+

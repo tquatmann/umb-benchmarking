@@ -1,0 +1,233 @@
+# Log files for storm_from-jani_to-drn-gz_sparse on model [herman.15](../../models/herman.15)
+
+Parsed values: `[6.811, 8.074, 6.863, 6.726, 7.321]`
+
+
+
+### Log file: storm_from-jani_to-drn-gz_sparse_herman.15_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn.gz drn --compression gzip
+Wallclock time: 39.427 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:28:32 2026
+Command line arguments: --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn.gz drn --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.014s.
+
+Time for model construction: 32.561s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	32768
+Transitions: 	14348908
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 32768 item(s)
+   * stable -> 30 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn.gz'.
+Time for model export: 6.811s.
+
+
+Performance statistics:
+  * peak memory usage: 859MB
+  * CPU time: 39.108s
+  * wallclock time: 39.390s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn.gz:	Size of output file is 35946779 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_sparse_herman.15_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep2.gz drn --compression gzip
+Wallclock time: 46.813 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:52 2026
+Command line arguments: --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep2.gz drn --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 38.668s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	32768
+Transitions: 	14348908
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 32768 item(s)
+   * stable -> 30 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep2.gz'.
+Time for model export: 8.074s.
+
+
+Performance statistics:
+  * peak memory usage: 859MB
+  * CPU time: 46.147s
+  * wallclock time: 46.750s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep2.gz:	Size of output file is 35946782 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_sparse_herman.15_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep3.gz drn --compression gzip
+Wallclock time: 39.348 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:15:25 2026
+Command line arguments: --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep3.gz drn --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.025s.
+
+Time for model construction: 32.414s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	32768
+Transitions: 	14348908
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 32768 item(s)
+   * stable -> 30 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep3.gz'.
+Time for model export: 6.863s.
+
+
+Performance statistics:
+  * peak memory usage: 858MB
+  * CPU time: 39.044s
+  * wallclock time: 39.305s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep3.gz:	Size of output file is 35946782 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_sparse_herman.15_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep4.gz drn --compression gzip
+Wallclock time: 39.088 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:26:01 2026
+Command line arguments: --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep4.gz drn --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 32.320s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	32768
+Transitions: 	14348908
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 32768 item(s)
+   * stable -> 30 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep4.gz'.
+Time for model export: 6.726s.
+
+
+Performance statistics:
+  * peak memory usage: 859MB
+  * CPU time: 38.799s
+  * wallclock time: 39.052s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep4.gz:	Size of output file is 35946782 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_sparse_herman.15_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep5.gz drn --compression gzip
+Wallclock time: 40.770 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:22 2026
+Command line arguments: --timemem --buildfull --jani models/herman.15/model.jani --exportbuild out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep5.gz drn --compression gzip
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 33.401s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	32768
+Transitions: 	14348908
+Reward Models:  steps
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 32768 item(s)
+   * stable -> 30 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep5.gz'.
+Time for model export: 7.321s.
+
+
+Performance statistics:
+  * peak memory usage: 858MB
+  * CPU time: 40.458s
+  * wallclock time: 40.728s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_sparse/herman.15/model.drn_rep5.gz:	Size of output file is 35946791 bytes
+Removing output file to save space for repetition #5
+```
+

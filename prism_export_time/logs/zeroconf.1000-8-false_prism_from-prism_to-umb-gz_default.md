@@ -1,0 +1,268 @@
+# Log files for prism_from-prism_to-umb-gz_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+
+Parsed values: `[5.69, 5.974, 5.549, 5.81, 5.966]`
+
+
+
+### Log file: prism_from-prism_to-umb-gz_default_zeroconf.1000-8-false_rep1.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 48.449 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:49:59 GMT+01:00 2026
+Hostname: r23m0017.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 41.65 seconds (average 0.070355, setup 0.00)
+
+Time for model construction: 42.148 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb.gz"...
+Time for exporting: 5.69 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb.gz:	Size of output file is 92113083 bytes
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_default_zeroconf.1000-8-false_rep2.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 47.789 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:49:15 GMT+01:00 2026
+Hostname: n23m0109.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 40.74 seconds (average 0.068818, setup 0.00)
+
+Time for model construction: 41.209 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep2.gz"...
+Time for exporting: 5.974 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep2.gz:	Size of output file is 92113083 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_default_zeroconf.1000-8-false_rep3.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 44.946 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:49:15 GMT+01:00 2026
+Hostname: n23m0341.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 38.38 seconds (average 0.064831, setup 0.00)
+
+Time for model construction: 38.805 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep3.gz"...
+Time for exporting: 5.549 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep3.gz:	Size of output file is 92113083 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_default_zeroconf.1000-8-false_rep4.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 46.292 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:26:44 GMT+01:00 2026
+Hostname: n23m0043.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 39.41 seconds (average 0.066571, setup 0.00)
+
+Time for model construction: 39.876 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep4.gz"...
+Time for exporting: 5.81 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep4.gz:	Size of output file is 92113083 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: prism_from-prism_to-umb-gz_default_zeroconf.1000-8-false_rep5.log
+
+```
+Command(s):
+../bin/prism  models/zeroconf.1000-8-false/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 50.454 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:13 GMT+01:00 2026
+Hostname: n23m0158.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/zeroconf.1000-8-false/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/zeroconf.1000-8-false/model.prism"...
+
+Type:        MDP
+Modules:     environment host0
+Actions:     [] [reset] [time] [send] [rec]
+Variables:   b_ip7 b_ip6 b_ip5 b_ip4 b_ip3 b_ip2 b_ip1 b_ip0 n n0 n1 b z ip_mess x y coll probes mess defend ip l
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 592 iterations in 41.22 seconds (average 0.069628, setup 0.00)
+
+Time for model construction: 41.752 seconds.
+
+Type:        MDP
+States:      1870338 (1 initial)
+Transitions: 4245554
+
+Transition matrix: 154038 nodes (6 terminal), 4245554 minterms, vars: 58r/58c/7nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep5.gz"...
+Time for exporting: 5.966 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/zeroconf.1000-8-false/model.umb_rep5.gz:	Size of output file is 92113083 bytes
+Removing output file to save space for repetition #5
+```
+

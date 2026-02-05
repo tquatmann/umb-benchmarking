@@ -1,0 +1,221 @@
+# Log files for modest_from-jani_to-umb_memory on model [pacman.100](../../models/pacman.100)
+
+Parsed values: `[3216545304.0, 3216545304.0, 3216545304.0, 3216545304.0, 3216545304.0]`
+
+
+
+### Log file: modest_from-jani_to-umb_memory_pacman.100_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties.txt -S Memory -D --exhaustive
+Wallclock time: 1.361 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[1]: info: Expanding variable "pMove" into 3 locations in automaton "arbiter".
+model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb_memory/pacman.100/model.umb" already exists.
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/pacman.100/model.umb:	Size of output file is 3216545280 bytes
+out/modest_from-jani_to-umb_memory/pacman.100/umb.properties.txt:	Size of output file is 24 bytes
+```
+
+
+
+### Log file: modest_from-jani_to-umb_memory_pacman.100_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model_rep2.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep2.txt -S Memory -D --exhaustive
+Wallclock time: 195.779 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model_rep2.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep2.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[1]: info: Expanding variable "pMove" into 3 locations in automaton "arbiter".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 79440921 states.
+
+Peak memory usage: 17799 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             79440921
+  Choices:            100215175
+  Branches:           109963876
+  Rate:               416505 states/s
+  Peak memory:        8409.09 MB
+  Final size:         615.56 MB
+  Time (exploration): 190.8 s
+  Time (merging):     2.2 s
+
++ UMB export
+  Time:        2.1 s
+  File size:   3067.54 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/pacman.100/model_rep2.umb:	Size of output file is 3216545280 bytes
+Removing output file to save space for repetition #2
+out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep2.txt:	Size of output file is 24 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: modest_from-jani_to-umb_memory_pacman.100_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model_rep3.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep3.txt -S Memory -D --exhaustive
+Wallclock time: 198.306 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model_rep3.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep3.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[1]: info: Expanding variable "pMove" into 3 locations in automaton "arbiter".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 79440921 states.
+
+Peak memory usage: 17800 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             79440921
+  Choices:            100215175
+  Branches:           109963876
+  Rate:               410925 states/s
+  Peak memory:        8409.13 MB
+  Final size:         615.56 MB
+  Time (exploration): 193.4 s
+  Time (merging):     2.3 s
+
++ UMB export
+  Time:        2.2 s
+  File size:   3067.54 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/pacman.100/model_rep3.umb:	Size of output file is 3216545280 bytes
+Removing output file to save space for repetition #3
+out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep3.txt:	Size of output file is 24 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: modest_from-jani_to-umb_memory_pacman.100_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model_rep4.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep4.txt -S Memory -D --exhaustive
+Wallclock time: 178.520 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model_rep4.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep4.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[1]: info: Expanding variable "pMove" into 3 locations in automaton "arbiter".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 79440921 states.
+
+Peak memory usage: 17800 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             79440921
+  Choices:            100215175
+  Branches:           109963876
+  Rate:               460370 states/s
+  Peak memory:        8408.81 MB
+  Final size:         615.56 MB
+  Time (exploration): 172.6 s
+  Time (merging):     2.9 s
+
++ UMB export
+  Time:        2.4 s
+  File size:   3067.54 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/pacman.100/model_rep4.umb:	Size of output file is 3216545280 bytes
+Removing output file to save space for repetition #4
+out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep4.txt:	Size of output file is 24 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: modest_from-jani_to-umb_memory_pacman.100_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model_rep5.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep5.txt -S Memory -D --exhaustive
+Wallclock time: 202.421 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb_memory/pacman.100/model_rep5.umb out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep5.txt -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[1]: info: Expanding variable "pMove" into 3 locations in automaton "arbiter".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 79440921 states.
+
+Peak memory usage: 17723 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             79440921
+  Choices:            100215175
+  Branches:           109963876
+  Rate:               402396 states/s
+  Peak memory:        7724.19 MB
+  Final size:         615.56 MB
+  Time (exploration): 197.4 s
+  Time (merging):     2.3 s
+
++ UMB export
+  Time:        2.2 s
+  File size:   3067.54 MB
+  Compression: None
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb_memory/pacman.100/model_rep5.umb:	Size of output file is 3216545280 bytes
+Removing output file to save space for repetition #5
+out/modest_from-jani_to-umb_memory/pacman.100/umb.properties_rep5.txt:	Size of output file is 24 bytes
+Removing output file to save space for repetition #5
+```
+

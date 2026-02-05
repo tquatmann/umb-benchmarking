@@ -1,0 +1,216 @@
+# Log files for modest_from-jani_to-umb-xz_memory on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+
+Parsed values: `[ERR, 18.1, 20.3, 15.4, 17.9]`
+
+
+
+### Log file: modest_from-jani_to-umb-xz_memory_resource-gathering.1300-100-100_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties.txt --umb-compress XZ -S Memory -D --exhaustive
+Wallclock time: 0.166 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties.txt --umb-compress XZ -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb.xz" already exists.
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb.xz:	Size of output file is 4044572 bytes
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties.txt:	Size of output file is 39 bytes
+```
+
+
+
+### Log file: modest_from-jani_to-umb-xz_memory_resource-gathering.1300-100-100_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep2.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep2.txt --umb-compress XZ -S Memory -D --exhaustive
+Wallclock time: 20.080 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep2.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep2.txt --umb-compress XZ -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 948693 states.
+
+Peak memory usage: 578 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             948693
+  Choices:            3050099
+  Branches:           3294923
+  Rate:               578119 states/s
+  Peak memory:        127.82 MB
+  Final size:         7.35 MB
+  Time (exploration): 1.7 s
+  Time (merging):     0.1 s
+
++ UMB export
+  Time:        18.1 s
+  File size:   3.88 MB
+  Compression: XZ (Optimal)
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep2.xz:	Size of output file is 4073304 bytes
+Removing output file to save space for repetition #2
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep2.txt:	Size of output file is 39 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: modest_from-jani_to-umb-xz_memory_resource-gathering.1300-100-100_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep3.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep3.txt --umb-compress XZ -S Memory -D --exhaustive
+Wallclock time: 22.331 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep3.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep3.txt --umb-compress XZ -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 948693 states.
+
+Peak memory usage: 576 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             948693
+  Choices:            3050099
+  Branches:           3294923
+  Rate:               557727 states/s
+  Peak memory:        127.82 MB
+  Final size:         7.35 MB
+  Time (exploration): 1.7 s
+  Time (merging):     0.1 s
+
++ UMB export
+  Time:        20.3 s
+  File size:   3.90 MB
+  Compression: XZ (Optimal)
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep3.xz:	Size of output file is 4087796 bytes
+Removing output file to save space for repetition #3
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep3.txt:	Size of output file is 39 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: modest_from-jani_to-umb-xz_memory_resource-gathering.1300-100-100_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep4.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep4.txt --umb-compress XZ -S Memory -D --exhaustive
+Wallclock time: 17.067 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep4.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep4.txt --umb-compress XZ -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 948693 states.
+
+Peak memory usage: 578 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             948693
+  Choices:            3050099
+  Branches:           3294923
+  Rate:               689959 states/s
+  Peak memory:        127.81 MB
+  Final size:         7.35 MB
+  Time (exploration): 1.4 s
+  Time (merging):     0.0 s
+
++ UMB export
+  Time:        15.4 s
+  File size:   3.84 MB
+  Compression: XZ (Optimal)
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep4.xz:	Size of output file is 4030944 bytes
+Removing output file to save space for repetition #4
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep4.txt:	Size of output file is 39 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: modest_from-jani_to-umb-xz_memory_resource-gathering.1300-100-100_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep5.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep5.txt --umb-compress XZ -S Memory -D --exhaustive
+Wallclock time: 19.558 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep5.xz out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep5.txt --umb-compress XZ -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 948693 states.
+
+Peak memory usage: 576 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             948693
+  Choices:            3050099
+  Branches:           3294923
+  Rate:               664816 states/s
+  Peak memory:        127.82 MB
+  Final size:         7.35 MB
+  Time (exploration): 1.4 s
+  Time (merging):     0.1 s
+
++ UMB export
+  Time:        17.9 s
+  File size:   3.85 MB
+  Compression: XZ (Optimal)
+
+
+############################## Output files ##############################
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/model.umb_rep5.xz:	Size of output file is 4034036 bytes
+Removing output file to save space for repetition #5
+out/modest_from-jani_to-umb-xz_memory/resource-gathering.1300-100-100/umbxz.properties_rep5.txt:	Size of output file is 39 bytes
+Removing output file to save space for repetition #5
+```
+

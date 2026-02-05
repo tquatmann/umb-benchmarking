@@ -1,0 +1,287 @@
+# Log files for prism_from-prism_to-tra_ex on model [nand.60-4](../../models/nand.60-4)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-tra_ex_nand.60-4_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/nand.60-4/model.prism -exportmodel out/prism_from-prism_to-tra_ex/nand.60-4/model.tra,lab,rew:precision=17
+Wallclock time: 21.205 seconds
+Return code: 1
+##############################
+[0.002s][warning][perf,memops] Cannot use file /tmp/hsperfdata_tq429871/307682 because it is locked by another process (errno = 11)
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:47:52 GMT+01:00 2026
+Hostname: n23m0241.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/nand.60-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/nand.60-4/model.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/nand.60-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 2110665 2918989 2984422 3001081 3009084
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.DTMCSimple.addToProbability(DTMCSimple.java:258)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:316)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/nand.60-4/model.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_nand.60-4_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/nand.60-4/model.prism -exportmodel out/prism_from-prism_to-tra_ex/nand.60-4/model_rep2.tra,lab,rew:precision=17
+Wallclock time: 24.588 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:15:08 GMT+01:00 2026
+Hostname: n23m0410.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/nand.60-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/nand.60-4/model_rep2.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/nand.60-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 1815744 2887085 2972819 2992293 3003030 3007603
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.DTMCSimple.addToProbability(DTMCSimple.java:259)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:316)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep2.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep2.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep2.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep2.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_nand.60-4_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/nand.60-4/model.prism -exportmodel out/prism_from-prism_to-tra_ex/nand.60-4/model_rep3.tra,lab,rew:precision=17
+Wallclock time: 22.078 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:38:36 GMT+01:00 2026
+Hostname: n23m0380.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/nand.60-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/nand.60-4/model_rep3.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/nand.60-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 2100449 2917061 2979783 2998350 3007496
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.TreeMap.addEntry(TreeMap.java:801)
+	at java.base/java.util.TreeMap.put(TreeMap.java:864)
+	at java.base/java.util.TreeMap.put(TreeMap.java:570)
+	at explicit.IndexedSet.add(IndexedSet.java:72)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:297)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep3.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep3.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep3.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep3.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_nand.60-4_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/nand.60-4/model.prism -exportmodel out/prism_from-prism_to-tra_ex/nand.60-4/model_rep4.tra,lab,rew:precision=17
+Wallclock time: 21.667 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:16:34 GMT+01:00 2026
+Hostname: n23m0036.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/nand.60-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/nand.60-4/model_rep4.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/nand.60-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 2099384 2920289 2984906 3001762 3008622
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:132)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep4.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep4.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep4.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep4.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_nand.60-4_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/nand.60-4/model.prism -exportmodel out/prism_from-prism_to-tra_ex/nand.60-4/model_rep5.tra,lab,rew:precision=17
+Wallclock time: 22.628 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:24:13 GMT+01:00 2026
+Hostname: n23m0249.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/nand.60-4/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/nand.60-4/model_rep5.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/nand.60-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 2021650 2914906 2983580 3002181 3010184
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.Double.valueOf(Double.java:924)
+	at prism.Evaluator$EvaluatorDouble.add(Evaluator.java:315)
+	at prism.Evaluator$EvaluatorDouble.add(Evaluator.java:275)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:377)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep5.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep5.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep5.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/nand.60-4/model_rep5.trew:	File does not exist.
+```
+

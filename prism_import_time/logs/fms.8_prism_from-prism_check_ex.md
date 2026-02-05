@@ -1,0 +1,305 @@
+# Log files for prism_from-prism_check_ex on model [fms.8](../../models/fms.8)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_check_ex_fms.8_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/fms.8/model.prism models/fms.8/property.props
+Wallclock time: 45.872 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:20:46 GMT+01:00 2026
+Hostname: n23m0275.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/fms.8/model.prism models/fms.8/property.props
+
+Parsing PRISM model file "models/fms.8/model.prism"...
+
+Type:        CTMC
+Modules:     machine1 machine2 machine3 machine12
+Actions:     [] [t1] [p1p2] [fp12] [t2] [p2p3] [t3] [t12]
+Variables:   P1 P1wM1 P1M1 P1d P1s P1wP2 M1 P2 P2wM2 P2M2 P2s P2wP1 M2 P3 P3M2 P3s P12 P12wM3 P12M3 P12s M3
+Rewards:     "productivity"
+
+Parsing properties file "models/fms.8/property.props"...
+
+1 property:
+(1) "productivity": R{"productivity"}=? [ S ]
+
+---------------------------------------------------------------------
+
+Model checking: "productivity": R{"productivity"}=? [ S ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 375409 720947 1042693 1230589 1252545 1272895 1283677 1288992 1292072 1293769 1294957 1295656 1296697
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:132)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_fms.8_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/fms.8/model.prism models/fms.8/property.props
+Wallclock time: 58.446 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 00:26:10 GMT+01:00 2026
+Hostname: n23m0379.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/fms.8/model.prism models/fms.8/property.props
+
+Parsing PRISM model file "models/fms.8/model.prism"...
+
+Type:        CTMC
+Modules:     machine1 machine2 machine3 machine12
+Actions:     [] [t1] [p1p2] [fp12] [t2] [p2p3] [t3] [t12]
+Variables:   P1 P1wM1 P1M1 P1d P1s P1wP2 M1 P2 P2wM2 P2M2 P2s P2wP1 M2 P3 P3M2 P3s P12 P12wM3 P12M3 P12s M3
+Rewards:     "productivity"
+
+Parsing properties file "models/fms.8/property.props"...
+
+1 property:
+(1) "productivity": R{"productivity"}=? [ S ]
+
+---------------------------------------------------------------------
+
+Model checking: "productivity": R{"productivity"}=? [ S ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 342602 647534 927147 1167241 1239981 1261201 1273570 1282886 1287986 1290379 1292505 1294003 1294849 1295304 1295663 1296557 1297193
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:379)
+	at simulator.Updater.calculateTransitions(Updater.java:216)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_fms.8_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/fms.8/model.prism models/fms.8/property.props
+Wallclock time: 56.838 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 00:24:41 GMT+01:00 2026
+Hostname: n23m0379.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/fms.8/model.prism models/fms.8/property.props
+
+Parsing PRISM model file "models/fms.8/model.prism"...
+
+Type:        CTMC
+Modules:     machine1 machine2 machine3 machine12
+Actions:     [] [t1] [p1p2] [fp12] [t2] [p2p3] [t3] [t12]
+Variables:   P1 P1wM1 P1M1 P1d P1s P1wP2 M1 P2 P2wM2 P2M2 P2s P2wP1 M2 P3 P3M2 P3s P12 P12wM3 P12M3 P12s M3
+Rewards:     "productivity"
+
+Parsing properties file "models/fms.8/property.props"...
+
+1 property:
+(1) "productivity": R{"productivity"}=? [ S ]
+
+---------------------------------------------------------------------
+
+Model checking: "productivity": R{"productivity"}=? [ S ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 331311 639203 922075 1176780 1242577 1263369 1277865 1285414 1289236 1291758 1293529 1294717 1295289 1295926 1296844
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at simulator.ChoiceListFlexi.<init>(ChoiceListFlexi.java:77)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:353)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_fms.8_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/fms.8/model.prism models/fms.8/property.props
+Wallclock time: 46.507 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:37:31 GMT+01:00 2026
+Hostname: r23m0211.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/fms.8/model.prism models/fms.8/property.props
+
+Parsing PRISM model file "models/fms.8/model.prism"...
+
+Type:        CTMC
+Modules:     machine1 machine2 machine3 machine12
+Actions:     [] [t1] [p1p2] [fp12] [t2] [p2p3] [t3] [t12]
+Variables:   P1 P1wM1 P1M1 P1d P1s P1wP2 M1 P2 P2wM2 P2M2 P2s P2wP1 M2 P3 P3M2 P3s P12 P12wM3 P12M3 P12s M3
+Rewards:     "productivity"
+
+Parsing properties file "models/fms.8/property.props"...
+
+1 property:
+(1) "productivity": R{"productivity"}=? [ S ]
+
+---------------------------------------------------------------------
+
+Model checking: "productivity": R{"productivity"}=? [ S ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 385316 731899 1050889 1227630 1259009 1277047 1285500 1289536 1292157 1294060 1294911 1295605 1296634 1297560
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:378)
+	at simulator.Updater.processUpdatesAndAddToProduct(Updater.java:416)
+	at simulator.Updater.calculateTransitions(Updater.java:224)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_fms.8_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/fms.8/model.prism models/fms.8/property.props
+Wallclock time: 44.655 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:36:53 GMT+01:00 2026
+Hostname: n23m0252.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/fms.8/model.prism models/fms.8/property.props
+
+Parsing PRISM model file "models/fms.8/model.prism"...
+
+Type:        CTMC
+Modules:     machine1 machine2 machine3 machine12
+Actions:     [] [t1] [p1p2] [fp12] [t2] [p2p3] [t3] [t12]
+Variables:   P1 P1wM1 P1M1 P1d P1s P1wP2 M1 P2 P2wM2 P2M2 P2s P2wP1 M2 P3 P3M2 P3s P12 P12wM3 P12M3 P12s M3
+Rewards:     "productivity"
+
+Parsing properties file "models/fms.8/property.props"...
+
+1 property:
+(1) "productivity": R{"productivity"}=? [ S ]
+
+---------------------------------------------------------------------
+
+Model checking: "productivity": R{"productivity"}=? [ S ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 382444 725812 1029950 1217516 1254336 1274286 1284432 1289335 1292466 1294579 1295511 1296211 1297151
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:133)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+

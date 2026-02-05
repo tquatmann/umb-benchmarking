@@ -1,0 +1,233 @@
+# Log files for storm_from-jani_to-umb-xz_sparse on model [crowds.6-20](../../models/crowds.6-20)
+
+Parsed values: `[12136456.0, 11999196.0, 11999192.0, 12140004.0, 11942892.0]`
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_crowds.6-20_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb.xz umb --compression xz
+Wallclock time: 100.006 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:32:30 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 30.640s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb.xz'.
+Time for model export: 69.327s.
+
+
+Performance statistics:
+  * peak memory usage: 1563MB
+  * CPU time: 99.408s
+  * wallclock time: 99.973s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb.xz:	Size of output file is 12136456 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_crowds.6-20_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep2.xz umb --compression xz
+Wallclock time: 99.307 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:24:42 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep2.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.013s.
+
+Time for model construction: 30.736s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep2.xz'.
+Time for model export: 68.508s.
+
+
+Performance statistics:
+  * peak memory usage: 1563MB
+  * CPU time: 98.745s
+  * wallclock time: 99.262s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep2.xz:	Size of output file is 11999196 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_crowds.6-20_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep3.xz umb --compression xz
+Wallclock time: 100.298 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:28:47 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep3.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.025s.
+
+Time for model construction: 32.681s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep3.xz'.
+Time for model export: 67.513s.
+
+
+Performance statistics:
+  * peak memory usage: 1563MB
+  * CPU time: 99.509s
+  * wallclock time: 100.225s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep3.xz:	Size of output file is 11999192 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_crowds.6-20_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep4.xz umb --compression xz
+Wallclock time: 96.991 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:37:15 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep4.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 31.555s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep4.xz'.
+Time for model export: 65.383s.
+
+
+Performance statistics:
+  * peak memory usage: 1563MB
+  * CPU time: 96.373s
+  * wallclock time: 96.946s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep4.xz:	Size of output file is 12140004 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-umb-xz_sparse_crowds.6-20_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep5.xz umb --compression xz
+Wallclock time: 105.155 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:18:37 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep5.xz umb --compression xz
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.021s.
+
+Time for model construction: 31.492s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep5.xz'.
+Time for model export: 73.587s.
+
+
+Performance statistics:
+  * peak memory usage: 1563MB
+  * CPU time: 104.446s
+  * wallclock time: 105.107s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-xz_sparse/crowds.6-20/model.umb_rep5.xz:	Size of output file is 11942892 bytes
+Removing output file to save space for repetition #5
+```
+

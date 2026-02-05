@@ -1,0 +1,224 @@
+# Log files for storm_from-jani_check_sparse on model [wlan.4-0](../../models/wlan.4-0)
+
+Parsed values: `[1.18, 1.129, 1.0439999999999998, 1.262, 1.134]`
+
+
+
+### Log file: storm_from-jani_check_sparse_wlan.4-0_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Wallclock time: 1.266 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:20:46 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.026s.
+
+Time for model construction: 1.154s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": Pmin>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 0.040s.
+
+Performance statistics:
+  * peak memory usage: 81MB
+  * CPU time: 1.198s
+  * wallclock time: 1.225s
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_wlan.4-0_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Wallclock time: 1.226 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 01:04:02 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.027s.
+
+Time for model construction: 1.102s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": Pmin>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 0.046s.
+
+Performance statistics:
+  * peak memory usage: 81MB
+  * CPU time: 1.152s
+  * wallclock time: 1.180s
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_wlan.4-0_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Wallclock time: 2.277 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:07 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 1.039s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": Pmin>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 0.040s.
+
+Performance statistics:
+  * peak memory usage: 80MB
+  * CPU time: 1.082s
+  * wallclock time: 1.089s
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_wlan.4-0_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Wallclock time: 1.372 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 21:21:40 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.027s.
+
+Time for model construction: 1.235s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": Pmin>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 0.056s.
+
+Performance statistics:
+  * peak memory usage: 80MB
+  * CPU time: 1.303s
+  * wallclock time: 1.324s
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_wlan.4-0_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Wallclock time: 1.226 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:05 2026
+Command line arguments: --timemem --buildfull --jani models/wlan.4-0/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 1.129s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	345000
+Transitions: 	762252
+Choices: 	440206
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "sent": Pmin>=1 [F "target"] ...
+Result (for initial states): true
+
+Time for model checking: 0.047s.
+
+Performance statistics:
+  * peak memory usage: 80MB
+  * CPU time: 1.177s
+  * wallclock time: 1.186s
+```
+

@@ -1,0 +1,228 @@
+# Log files for storm_from-jani_to-umb_sparse on model [fms.8](../../models/fms.8)
+
+Parsed values: `[0.9, 0.996, 1.073, 1.043, 0.882]`
+
+
+
+### Log file: storm_from-jani_to-umb_sparse_fms.8_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model.umb umb --compression none
+Wallclock time: 37.687 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:33:33 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model.umb umb --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 36.735s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_sparse/fms.8/model.umb'.
+Time for model export: 0.900s.
+
+
+Performance statistics:
+  * peak memory usage: 1446MB
+  * CPU time: 36.788s
+  * wallclock time: 37.649s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_sparse/fms.8/model.umb:	Size of output file is 724697088 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-umb_sparse_fms.8_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model_rep2.umb umb --compression none
+Wallclock time: 39.277 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:37:11 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model_rep2.umb umb --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 38.209s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_sparse/fms.8/model_rep2.umb'.
+Time for model export: 0.996s.
+
+
+Performance statistics:
+  * peak memory usage: 1445MB
+  * CPU time: 38.142s
+  * wallclock time: 39.221s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_sparse/fms.8/model_rep2.umb:	Size of output file is 724697088 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-umb_sparse_fms.8_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model_rep3.umb umb --compression none
+Wallclock time: 46.519 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:37 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model_rep3.umb umb --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 45.378s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_sparse/fms.8/model_rep3.umb'.
+Time for model export: 1.073s.
+
+
+Performance statistics:
+  * peak memory usage: 1446MB
+  * CPU time: 45.308s
+  * wallclock time: 46.467s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_sparse/fms.8/model_rep3.umb:	Size of output file is 724697088 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-umb_sparse_fms.8_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model_rep4.umb umb --compression none
+Wallclock time: 41.824 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:59:23 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model_rep4.umb umb --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 40.722s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_sparse/fms.8/model_rep4.umb'.
+Time for model export: 1.043s.
+
+
+Performance statistics:
+  * peak memory usage: 1446MB
+  * CPU time: 40.742s
+  * wallclock time: 41.782s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_sparse/fms.8/model_rep4.umb:	Size of output file is 724697088 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-umb_sparse_fms.8_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model_rep5.umb umb --compression none
+Wallclock time: 36.982 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:36:54 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-umb_sparse/fms.8/model_rep5.umb umb --compression none
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 36.047s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_sparse/fms.8/model_rep5.umb'.
+Time for model export: 0.882s.
+
+
+Performance statistics:
+  * peak memory usage: 1446MB
+  * CPU time: 36.089s
+  * wallclock time: 36.944s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_sparse/fms.8/model_rep5.umb:	Size of output file is 724697088 bytes
+Removing output file to save space for repetition #5
+```
+

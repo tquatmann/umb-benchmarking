@@ -1,0 +1,233 @@
+# Log files for storm_from-jani_to-umb_exact on model [crowds.6-20](../../models/crowds.6-20)
+
+Parsed values: `[1007336960.0, 1007336960.0, 1007336960.0, 1007336960.0, 1007336960.0]`
+
+
+
+### Log file: storm_from-jani_to-umb_exact_crowds.6-20_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact.umb umb --compression none  --exact
+Wallclock time: 98.733 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:48:55 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.015s.
+
+Time for model construction: 82.366s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact.umb'.
+Time for model export: 15.086s.
+
+
+Performance statistics:
+  * peak memory usage: 8385MB
+  * CPU time: 95.173s
+  * wallclock time: 98.044s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact.umb:	Size of output file is 1007336960 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-umb_exact_crowds.6-20_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep2.umb umb --compression none  --exact
+Wallclock time: 112.744 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:55 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep2.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.046s.
+
+Time for model construction: 94.108s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep2.umb'.
+Time for model export: 17.174s.
+
+
+Performance statistics:
+  * peak memory usage: 8384MB
+  * CPU time: 108.540s
+  * wallclock time: 111.959s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep2.umb:	Size of output file is 1007336960 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-umb_exact_crowds.6-20_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep3.umb umb --compression none  --exact
+Wallclock time: 108.759 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:15:26 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep3.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.017s.
+
+Time for model construction: 90.206s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep3.umb'.
+Time for model export: 17.169s.
+
+
+Performance statistics:
+  * peak memory usage: 8385MB
+  * CPU time: 104.606s
+  * wallclock time: 108.012s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep3.umb:	Size of output file is 1007336960 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-umb_exact_crowds.6-20_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep4.umb umb --compression none  --exact
+Wallclock time: 107.599 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:38:00 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep4.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.002s.
+
+Time for model construction: 89.330s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep4.umb'.
+Time for model export: 16.721s.
+
+
+Performance statistics:
+  * peak memory usage: 8385MB
+  * CPU time: 103.174s
+  * wallclock time: 106.747s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep4.umb:	Size of output file is 1007336960 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-umb_exact_crowds.6-20_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep5.umb umb --compression none  --exact
+Wallclock time: 125.627 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:25:25 2026
+Command line arguments: --timemem --buildfull --jani models/crowds.6-20/model.jani --exportbuild out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep5.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.007s.
+
+Time for model construction: 105.182s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	10633591
+Transitions: 	38261191
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 230230 item(s)
+   * target -> 352935 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep5.umb'.
+Time for model export: 18.860s.
+
+
+Performance statistics:
+  * peak memory usage: 8383MB
+  * CPU time: 120.918s
+  * wallclock time: 124.717s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/crowds.6-20/model.exact_rep5.umb:	Size of output file is 1007336960 bytes
+Removing output file to save space for repetition #5
+```
+

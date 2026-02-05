@@ -1,0 +1,136 @@
+# Log files for prism_from-prism_to-tra_ex on model [models](../../models/models)
+
+Parsed values: `[, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-tra_ex_models_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/models/model.prism -exportmodel out/prism_from-prism_to-tra_ex/models/model_rep2.tra,lab,rew:precision=17
+Wallclock time: 0.531 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:32:02 GMT+01:00 2026
+Hostname: n23m0383.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/models/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/models/model_rep2.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/models/model.prism"...
+
+Error: File "models/models/model.prism" not found.
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/models/model_rep2.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep2.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep2.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep2.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_models_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/models/model.prism -exportmodel out/prism_from-prism_to-tra_ex/models/model_rep3.tra,lab,rew:precision=17
+Wallclock time: 0.693 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:16:35 GMT+01:00 2026
+Hostname: n23m0273.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/models/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/models/model_rep3.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/models/model.prism"...
+
+Error: File "models/models/model.prism" not found.
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/models/model_rep3.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep3.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep3.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep3.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_models_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/models/model.prism -exportmodel out/prism_from-prism_to-tra_ex/models/model_rep4.tra,lab,rew:precision=17
+Wallclock time: 2.309 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:42 GMT+01:00 2026
+Hostname: n23m0227.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/models/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/models/model_rep4.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/models/model.prism"...
+
+Error: File "models/models/model.prism" not found.
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/models/model_rep4.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep4.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep4.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep4.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_models_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/models/model.prism -exportmodel out/prism_from-prism_to-tra_ex/models/model_rep5.tra,lab,rew:precision=17
+Wallclock time: 0.498 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:26:08 GMT+01:00 2026
+Hostname: n23m0351.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/models/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/models/model_rep5.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/models/model.prism"...
+
+Error: File "models/models/model.prism" not found.
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/models/model_rep5.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep5.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep5.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/models/model_rep5.trew:	File does not exist.
+```
+

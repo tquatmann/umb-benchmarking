@@ -1,0 +1,104 @@
+# Log files for storm_from-umb-xz_check_sparse on model [egl.10-8](../../models/egl.10-8)
+
+Parsed values: `[, , , , ]`
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_egl.10-8_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Wallclock time: 0.138 seconds
+Return code: 1
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:25:09 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+ERROR (UmbImport.cpp:260): The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+ERROR (storm-cli.cpp:49): An exception caused Storm to terminate. The message of the exception is: FileIoException: The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+```
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_egl.10-8_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Wallclock time: 0.044 seconds
+Return code: 1
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 21:23:58 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+ERROR (UmbImport.cpp:260): The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+ERROR (storm-cli.cpp:49): An exception caused Storm to terminate. The message of the exception is: FileIoException: The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+```
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_egl.10-8_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Wallclock time: 1.037 seconds
+Return code: 1
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:09 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+ERROR (UmbImport.cpp:260): The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+ERROR (storm-cli.cpp:49): An exception caused Storm to terminate. The message of the exception is: FileIoException: The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+```
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_egl.10-8_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Wallclock time: 0.038 seconds
+Return code: 1
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:07:58 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+ERROR (UmbImport.cpp:260): The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+ERROR (storm-cli.cpp:49): An exception caused Storm to terminate. The message of the exception is: FileIoException: The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+```
+
+
+
+### Log file: storm_from-umb-xz_check_sparse_egl.10-8_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Wallclock time: 0.062 seconds
+Return code: 1
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 02:57:25 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-8/storm.model.umb.xz --prop models/egl.10-8/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+ERROR (UmbImport.cpp:260): The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+ERROR (storm-cli.cpp:49): An exception caused Storm to terminate. The message of the exception is: FileIoException: The given path '"models/egl.10-8/storm.model.umb.xz"' does not exist.
+```
+

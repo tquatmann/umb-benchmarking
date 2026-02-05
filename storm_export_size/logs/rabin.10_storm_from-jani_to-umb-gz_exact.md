@@ -1,0 +1,119 @@
+# Log files for storm_from-jani_to-umb-gz_exact on model [rabin.10](../../models/rabin.10)
+
+Parsed values: `[MO, MO, MO, MO, MO]`
+
+
+
+### Log file: storm_from-jani_to-umb-gz_exact_rabin.10_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb.gz umb --compression gzip  --exact
+Wallclock time: 596.040 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:37:18 2026
+Command line arguments: --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb.gz umb --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.026s.
+
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb.gz:	File does not exist.
+```
+
+
+
+### Log file: storm_from-jani_to-umb-gz_exact_rabin.10_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep2.gz umb --compression gzip  --exact
+Wallclock time: 651.520 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:12:30 2026
+Command line arguments: --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep2.gz umb --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep2.gz:	File does not exist.
+```
+
+
+
+### Log file: storm_from-jani_to-umb-gz_exact_rabin.10_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep3.gz umb --compression gzip  --exact
+Wallclock time: 582.424 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:57:51 2026
+Command line arguments: --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep3.gz umb --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep3.gz:	File does not exist.
+```
+
+
+
+### Log file: storm_from-jani_to-umb-gz_exact_rabin.10_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep4.gz umb --compression gzip  --exact
+Wallclock time: 550.788 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:54:48 2026
+Command line arguments: --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep4.gz umb --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep4.gz:	File does not exist.
+```
+
+
+
+### Log file: storm_from-jani_to-umb-gz_exact_rabin.10_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep5.gz umb --compression gzip  --exact
+Wallclock time: 565.611 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:33:02 2026
+Command line arguments: --timemem --buildfull --jani models/rabin.10/model.jani --exportbuild out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep5.gz umb --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.013s.
+
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb-gz_exact/rabin.10/model.exact.umb_rep5.gz:	File does not exist.
+```
+

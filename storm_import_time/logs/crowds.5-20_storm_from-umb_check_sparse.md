@@ -1,0 +1,219 @@
+# Log files for storm_from-umb_check_sparse on model [crowds.5-20](../../models/crowds.5-20)
+
+Parsed values: `[0.235, 0.216, 0.303, 0.212, 0.199]`
+
+
+
+### Log file: storm_from-umb_check_sparse_crowds.5-20_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Wallclock time: 1.265 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:28:09 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.019s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.128s seconds.
+Time for model construction: 0.235s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	2061951
+Transitions: 	7374951
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 45628 item(s)
+   * deadlock -> 53130 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "positive": P=? [F "target"] ...
+Result (for initial states): 0.08606905444
+Time for model checking: 0.982s.
+
+Performance statistics:
+  * peak memory usage: 360MB
+  * CPU time: 1.048s
+  * wallclock time: 1.221s
+```
+
+
+
+### Log file: storm_from-umb_check_sparse_crowds.5-20_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Wallclock time: 1.317 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:37:02 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.024s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.102s seconds.
+Time for model construction: 0.216s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	2061951
+Transitions: 	7374951
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 45628 item(s)
+   * deadlock -> 53130 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "positive": P=? [F "target"] ...
+Result (for initial states): 0.08606905444
+Time for model checking: 1.001s.
+
+Performance statistics:
+  * peak memory usage: 360MB
+  * CPU time: 1.070s
+  * wallclock time: 1.225s
+```
+
+
+
+### Log file: storm_from-umb_check_sparse_crowds.5-20_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Wallclock time: 1.526 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:07:34 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.014s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.151s seconds.
+Time for model construction: 0.303s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	2061951
+Transitions: 	7374951
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 45628 item(s)
+   * deadlock -> 53130 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "positive": P=? [F "target"] ...
+Result (for initial states): 0.08606905444
+Time for model checking: 1.159s.
+
+Performance statistics:
+  * peak memory usage: 360MB
+  * CPU time: 1.263s
+  * wallclock time: 1.467s
+```
+
+
+
+### Log file: storm_from-umb_check_sparse_crowds.5-20_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Wallclock time: 1.340 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 03:16:52 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.016s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.104s seconds.
+Time for model construction: 0.212s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	2061951
+Transitions: 	7374951
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 45628 item(s)
+   * deadlock -> 53130 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "positive": P=? [F "target"] ...
+Result (for initial states): 0.08606905444
+Time for model checking: 1.072s.
+
+Performance statistics:
+  * peak memory usage: 360MB
+  * CPU time: 1.142s
+  * wallclock time: 1.299s
+```
+
+
+
+### Log file: storm_from-umb_check_sparse_crowds.5-20_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Wallclock time: 1.184 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 21:24:19 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/crowds.5-20/storm.model.umb --prop models/crowds.5-20/property.props
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.013s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 0.099s seconds.
+Time for model construction: 0.199s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	2061951
+Transitions: 	7374951
+Reward Models:  none
+State Labels: 	3 labels
+   * target -> 45628 item(s)
+   * deadlock -> 53130 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "positive": P=? [F "target"] ...
+Result (for initial states): 0.08606905444
+Time for model checking: 0.935s.
+
+Performance statistics:
+  * peak memory usage: 360MB
+  * CPU time: 0.999s
+  * wallclock time: 1.138s
+```
+

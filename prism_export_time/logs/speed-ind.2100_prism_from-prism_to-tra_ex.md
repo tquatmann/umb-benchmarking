@@ -1,0 +1,292 @@
+# Log files for prism_from-prism_to-tra_ex on model [speed-ind.2100](../../models/speed-ind.2100)
+
+Parsed values: `[10.162, 10.293, 11.826, 11.188, 11.082]`
+
+
+
+### Log file: prism_from-prism_to-tra_ex_speed-ind.2100_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/speed-ind.2100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/speed-ind.2100/model.tra,lab,rew:precision=17
+Wallclock time: 17.736 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:24:20 GMT+01:00 2026
+Hostname: n23m0110.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/speed-ind.2100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/speed-ind.2100/model.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/speed-ind.2100/model.prism"...
+
+Type:        CTMC
+Modules:     S1_def S2_def S3_def S4_def Y_def Z_def CC_def XX_def
+Actions:     []
+Variables:   S1 S2 S3 S4 Y Z CC XX
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 384508 743424 states
+Reachable states exploration and model construction done in 5.984 secs.
+Sorting reachable states list...
+
+Time for model construction: 6.937 seconds.
+
+Type:        CTMC
+States:      743424 (1 initial)
+Transitions: 9518080
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model.trew"...
+Time for exporting: 10.162 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model.tra:	Size of output file is 283178501 bytes
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model.lab:	Size of output file is 245803 bytes
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_speed-ind.2100_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/speed-ind.2100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.tra,lab,rew:precision=17
+Wallclock time: 17.214 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:37:08 GMT+01:00 2026
+Hostname: n23m0040.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/speed-ind.2100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/speed-ind.2100/model.prism"...
+
+Type:        CTMC
+Modules:     S1_def S2_def S3_def S4_def Y_def Z_def CC_def XX_def
+Actions:     []
+Variables:   S1 S2 S3 S4 Y Z CC XX
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 404038 743424 states
+Reachable states exploration and model construction done in 5.682 secs.
+Sorting reachable states list...
+
+Time for model construction: 6.307 seconds.
+
+Type:        CTMC
+States:      743424 (1 initial)
+Transitions: 9518080
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.trew"...
+Time for exporting: 10.293 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.tra:	Size of output file is 283178501 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.lab:	Size of output file is 245803 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep2.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_speed-ind.2100_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/speed-ind.2100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.tra,lab,rew:precision=17
+Wallclock time: 20.072 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:37:01 GMT+01:00 2026
+Hostname: n23m0344.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/speed-ind.2100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/speed-ind.2100/model.prism"...
+
+Type:        CTMC
+Modules:     S1_def S2_def S3_def S4_def Y_def Z_def CC_def XX_def
+Actions:     []
+Variables:   S1 S2 S3 S4 Y Z CC XX
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 344288 655241 743424 states
+Reachable states exploration and model construction done in 6.825 secs.
+Sorting reachable states list...
+
+Time for model construction: 7.543 seconds.
+
+Type:        CTMC
+States:      743424 (1 initial)
+Transitions: 9518080
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.trew"...
+Time for exporting: 11.826 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.tra:	Size of output file is 283178501 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.lab:	Size of output file is 245803 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep3.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_speed-ind.2100_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/speed-ind.2100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.tra,lab,rew:precision=17
+Wallclock time: 18.995 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:09:29 GMT+01:00 2026
+Hostname: n23m0058.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/speed-ind.2100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/speed-ind.2100/model.prism"...
+
+Type:        CTMC
+Modules:     S1_def S2_def S3_def S4_def Y_def Z_def CC_def XX_def
+Actions:     []
+Variables:   S1 S2 S3 S4 Y Z CC XX
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 355666 696180 743424 states
+Reachable states exploration and model construction done in 6.443 secs.
+Sorting reachable states list...
+
+Time for model construction: 7.121 seconds.
+
+Type:        CTMC
+States:      743424 (1 initial)
+Transitions: 9518080
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.trew"...
+Time for exporting: 11.188 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.tra:	Size of output file is 283178501 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.lab:	Size of output file is 245803 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep4.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_speed-ind.2100_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/speed-ind.2100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.tra,lab,rew:precision=17
+Wallclock time: 18.901 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:05 GMT+01:00 2026
+Hostname: n23m0375.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/speed-ind.2100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/speed-ind.2100/model.prism"...
+
+Type:        CTMC
+Modules:     S1_def S2_def S3_def S4_def Y_def Z_def CC_def XX_def
+Actions:     []
+Variables:   S1 S2 S3 S4 Y Z CC XX
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 349808 682564 743424 states
+Reachable states exploration and model construction done in 6.539 secs.
+Sorting reachable states list...
+
+Time for model construction: 7.192 seconds.
+
+Type:        CTMC
+States:      743424 (1 initial)
+Transitions: 9518080
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.trew"...
+Time for exporting: 11.082 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.tra:	Size of output file is 283178501 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.lab:	Size of output file is 245803 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/speed-ind.2100/model_rep5.trew:	File does not exist.
+```
+

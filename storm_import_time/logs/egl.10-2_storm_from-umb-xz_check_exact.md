@@ -1,0 +1,224 @@
+# Log files for storm_from-umb-xz_check_exact on model [egl.10-2](../../models/egl.10-2)
+
+Parsed values: `[37.278, 33.848, 36.582, 39.425, 34.089]`
+
+
+
+### Log file: storm_from-umb-xz_check_exact_egl.10-2_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Wallclock time: 58.762 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:57:13 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.012s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 5.997s seconds.
+Time for model construction: 37.278s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	66060286
+Transitions: 	67108861
+Reward Models:  none
+State Labels: 	4 labels
+   * knowB -> 36680703 item(s)
+   * knowA -> 40865279 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "unfairA": P=? [F ((!"knowA") & "knowB")] ...
+Result (for initial states): 1025/2048 (approx. 0.5004882812)
+Time for model checking: 19.513s.
+
+Performance statistics:
+  * peak memory usage: 20993MB
+  * CPU time: 52.911s
+  * wallclock time: 57.655s
+```
+
+
+
+### Log file: storm_from-umb-xz_check_exact_egl.10-2_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Wallclock time: 54.104 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:06 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.015s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 6.183s seconds.
+Time for model construction: 33.848s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	66060286
+Transitions: 	67108861
+Reward Models:  none
+State Labels: 	4 labels
+   * knowB -> 36680703 item(s)
+   * knowA -> 40865279 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "unfairA": P=? [F ((!"knowA") & "knowB")] ...
+Result (for initial states): 1025/2048 (approx. 0.5004882812)
+Time for model checking: 18.177s.
+
+Performance statistics:
+  * peak memory usage: 20993MB
+  * CPU time: 48.268s
+  * wallclock time: 52.917s
+```
+
+
+
+### Log file: storm_from-umb-xz_check_exact_egl.10-2_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Wallclock time: 58.794 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 01:02:00 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.013s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 6.681s seconds.
+Time for model construction: 36.582s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	66060286
+Transitions: 	67108861
+Reward Models:  none
+State Labels: 	4 labels
+   * knowB -> 36680703 item(s)
+   * knowA -> 40865279 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "unfairA": P=? [F ((!"knowA") & "knowB")] ...
+Result (for initial states): 1025/2048 (approx. 0.5004882812)
+Time for model checking: 19.918s.
+
+Performance statistics:
+  * peak memory usage: 20993MB
+  * CPU time: 52.332s
+  * wallclock time: 57.462s
+```
+
+
+
+### Log file: storm_from-umb-xz_check_exact_egl.10-2_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Wallclock time: 62.496 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 22:08:08 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.002s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 7.072s seconds.
+Time for model construction: 39.425s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	66060286
+Transitions: 	67108861
+Reward Models:  none
+State Labels: 	4 labels
+   * knowB -> 36680703 item(s)
+   * knowA -> 40865279 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "unfairA": P=? [F ((!"knowA") & "knowB")] ...
+Result (for initial states): 1025/2048 (approx. 0.5004882812)
+Time for model checking: 20.807s.
+
+Performance statistics:
+  * peak memory usage: 20993MB
+  * CPU time: 56.302s
+  * wallclock time: 61.251s
+```
+
+
+
+### Log file: storm_from-umb-xz_check_exact_egl.10-2_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Wallclock time: 54.224 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:29:03 2026
+Command line arguments: --timemem --buildfull --explicit-umb models/egl.10-2/storm.model.exact.umb.xz --prop models/egl.10-2/property.props --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+First pass: Index file loaded in 0.017s seconds.
+Index file is #1 file in the archive.
+Second pass: bin files loaded in 6.193s seconds.
+Time for model construction: 34.089s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	66060286
+Transitions: 	67108861
+Reward Models:  none
+State Labels: 	4 labels
+   * knowB -> 36680703 item(s)
+   * knowA -> 40865279 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "unfairA": P=? [F ((!"knowA") & "knowB")] ...
+Result (for initial states): 1025/2048 (approx. 0.5004882812)
+Time for model checking: 18.073s.
+
+Performance statistics:
+  * peak memory usage: 20993MB
+  * CPU time: 48.529s
+  * wallclock time: 53.042s
+```
+

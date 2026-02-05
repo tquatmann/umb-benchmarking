@@ -1,0 +1,414 @@
+# Log files for prism_from-umb_check_norewards on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+
+Parsed values: `[7.827, 29.648, 9.025, 7.48, 7.066]`
+
+
+
+### Log file: prism_from-umb_check_norewards_oscillators.8-10-0.1-1-0.1-1.0_rep1.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+Wallclock time: 7.827 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:42:41 GMT+01:00 2026
+Hostname: r23m0197.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        DTMC
+Actions:     [step]
+Variables:   x
+Labels:      "target"
+Rewards:     "time_to_synch"
+
+Parsing properties file "models/oscillators.8-10-0.1-1-0.1-1.0/property.props"...
+
+1 property:
+(1) "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 2 iterations in 0.02 seconds (average 0.010000, setup 0.00)
+
+Time for model construction: 2.081 seconds.
+
+Type:        DTMC
+States:      24311 (1 initial)
+Transitions: 76623
+
+Transition matrix: 80917 nodes (438 terminal), 76623 minterms, vars: 15r/15c
+
+Prob0: 15 iterations in 0.18 seconds (average 0.012000, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 24309
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=15, nodes=81533] [3.7 MB]
+Adding explicit sparse matrices... [levels=15, num=1, compact] [397.7 KB]
+Creating vector for diagonals... [dist=1, compact] [47.5 KB]
+Creating vector for RHS... [dist=9, compact] [47.6 KB]
+Allocating iteration vectors... [2 x 189.9 KB]
+TOTAL: [4.6 MB]
+
+Starting iterations...
+
+Jacobi: 3153 iterations in 4.81 seconds (average 0.000174, setup 4.26)
+
+Value in the initial state: 6.007026913358401
+
+Time for model checking: 5.055 seconds.
+
+Result: 6.007026913358401 (+/- 5.972365002886308E-5 estimated; rel err 9.94229772735825E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-umb_check_norewards_oscillators.8-10-0.1-1-0.1-1.0_rep2.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+Wallclock time: 29.648 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:10:18 GMT+01:00 2026
+Hostname: r23m0215.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        DTMC
+Actions:     [step]
+Variables:   x
+Labels:      "target"
+Rewards:     "time_to_synch"
+
+Parsing properties file "models/oscillators.8-10-0.1-1-0.1-1.0/property.props"...
+
+1 property:
+(1) "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 50% 82% 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 2 iterations in 0.08 seconds (average 0.040000, setup 0.00)
+
+Time for model construction: 8.639 seconds.
+
+Type:        DTMC
+States:      24311 (1 initial)
+Transitions: 76623
+
+Transition matrix: 80917 nodes (438 terminal), 76623 minterms, vars: 15r/15c
+
+Prob0: 15 iterations in 0.65 seconds (average 0.043333, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 24309
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=15, nodes=81533] [3.7 MB]
+Adding explicit sparse matrices... [levels=15, num=1, compact] [397.7 KB]
+Creating vector for diagonals... [dist=1, compact] [47.5 KB]
+Creating vector for RHS... [dist=9, compact] [47.6 KB]
+Allocating iteration vectors... [2 x 189.9 KB]
+TOTAL: [4.6 MB]
+
+Starting iterations...
+
+Jacobi: 3153 iterations in 17.74 seconds (average 0.000698, setup 15.54)
+
+Value in the initial state: 6.007026913358401
+
+Time for model checking: 18.64 seconds.
+
+Result: 6.007026913358401 (+/- 5.972365002886308E-5 estimated; rel err 9.94229772735825E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-umb_check_norewards_oscillators.8-10-0.1-1-0.1-1.0_rep3.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+Wallclock time: 9.025 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:01:30 GMT+01:00 2026
+Hostname: n23m0251.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        DTMC
+Actions:     [step]
+Variables:   x
+Labels:      "target"
+Rewards:     "time_to_synch"
+
+Parsing properties file "models/oscillators.8-10-0.1-1-0.1-1.0/property.props"...
+
+1 property:
+(1) "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 2 iterations in 0.02 seconds (average 0.010000, setup 0.00)
+
+Time for model construction: 2.123 seconds.
+
+Type:        DTMC
+States:      24311 (1 initial)
+Transitions: 76623
+
+Transition matrix: 80917 nodes (438 terminal), 76623 minterms, vars: 15r/15c
+
+Prob0: 15 iterations in 0.19 seconds (average 0.012667, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 24309
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=15, nodes=81533] [3.7 MB]
+Adding explicit sparse matrices... [levels=15, num=1, compact] [397.7 KB]
+Creating vector for diagonals... [dist=1, compact] [47.5 KB]
+Creating vector for RHS... [dist=9, compact] [47.6 KB]
+Allocating iteration vectors... [2 x 189.9 KB]
+TOTAL: [4.6 MB]
+
+Starting iterations...
+
+Jacobi: 3153 iterations in 4.38 seconds (average 0.000149, setup 3.91)
+
+Value in the initial state: 6.007026913358401
+
+Time for model checking: 4.635 seconds.
+
+Result: 6.007026913358401 (+/- 5.972365002886308E-5 estimated; rel err 9.94229772735825E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-umb_check_norewards_oscillators.8-10-0.1-1-0.1-1.0_rep4.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+Wallclock time: 7.480 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:37:31 GMT+01:00 2026
+Hostname: n23m0215.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        DTMC
+Actions:     [step]
+Variables:   x
+Labels:      "target"
+Rewards:     "time_to_synch"
+
+Parsing properties file "models/oscillators.8-10-0.1-1-0.1-1.0/property.props"...
+
+1 property:
+(1) "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 2 iterations in 0.02 seconds (average 0.010000, setup 0.00)
+
+Time for model construction: 2.021 seconds.
+
+Type:        DTMC
+States:      24311 (1 initial)
+Transitions: 76623
+
+Transition matrix: 80917 nodes (438 terminal), 76623 minterms, vars: 15r/15c
+
+Prob0: 15 iterations in 0.17 seconds (average 0.011333, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 24309
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=15, nodes=81533] [3.7 MB]
+Adding explicit sparse matrices... [levels=15, num=1, compact] [397.7 KB]
+Creating vector for diagonals... [dist=1, compact] [47.5 KB]
+Creating vector for RHS... [dist=9, compact] [47.6 KB]
+Allocating iteration vectors... [2 x 189.9 KB]
+TOTAL: [4.6 MB]
+
+Starting iterations...
+
+Jacobi: 3153 iterations in 4.46 seconds (average 0.000159, setup 3.96)
+
+Value in the initial state: 6.007026913358401
+
+Time for model checking: 4.681 seconds.
+
+Result: 6.007026913358401 (+/- 5.972365002886308E-5 estimated; rel err 9.94229772735825E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-umb_check_norewards_oscillators.8-10-0.1-1-0.1-1.0_rep5.log
+
+```
+Command(s):
+../bin/prism  -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+Wallclock time: 7.066 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 22:08:05 GMT+01:00 2026
+Hostname: r23m0140.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -importmodel models/oscillators.8-10-0.1-1-0.1-1.0/prism.model.umb models/oscillators.8-10-0.1-1-0.1-1.0/property.props
+
+Importing model from "prism.model.umb"...
+
+Type:        DTMC
+Actions:     [step]
+Variables:   x
+Labels:      "target"
+Rewards:     "time_to_synch"
+
+Parsing properties file "models/oscillators.8-10-0.1-1-0.1-1.0/property.props"...
+
+1 property:
+(1) "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "time_to_synch": R{"time_to_synch"}=? [ F "target" ]
+
+Building model (engine:symbolic)...
+Importing transitions... [ 100% ]
+
+Computing reachable states...
+
+Reachability (BFS): 2 iterations in 0.02 seconds (average 0.010000, setup 0.00)
+
+Time for model construction: 1.789 seconds.
+
+Type:        DTMC
+States:      24311 (1 initial)
+Transitions: 76623
+
+Transition matrix: 80917 nodes (438 terminal), 76623 minterms, vars: 15r/15c
+
+Prob0: 15 iterations in 0.14 seconds (average 0.009333, setup 0.00)
+
+Prob1: 1 iterations in 0.00 seconds (average 0.000000, setup 0.00)
+
+goal = 2, inf = 0, maybe = 24309
+
+Computing remaining rewards...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=15, nodes=81533] [3.7 MB]
+Adding explicit sparse matrices... [levels=15, num=1, compact] [397.7 KB]
+Creating vector for diagonals... [dist=1, compact] [47.5 KB]
+Creating vector for RHS... [dist=9, compact] [47.6 KB]
+Allocating iteration vectors... [2 x 189.9 KB]
+TOTAL: [4.6 MB]
+
+Starting iterations...
+
+Jacobi: 3153 iterations in 4.39 seconds (average 0.000149, setup 3.92)
+
+Value in the initial state: 6.007026913358401
+
+Time for model checking: 4.553 seconds.
+
+Result: 6.007026913358401 (+/- 5.972365002886308E-5 estimated; rel err 9.94229772735825E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+

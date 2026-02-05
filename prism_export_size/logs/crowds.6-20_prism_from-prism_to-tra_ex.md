@@ -1,0 +1,285 @@
+# Log files for prism_from-prism_to-tra_ex on model [crowds.6-20](../../models/crowds.6-20)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-tra_ex_crowds.6-20_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism -exportmodel out/prism_from-prism_to-tra_ex/crowds.6-20/model.tra,lab,rew:precision=17
+Wallclock time: 44.525 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:26:58 GMT+01:00 2026
+Hostname: n23m0383.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/crowds.6-20/model.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 522771 950369 1497230 1685005 1733509 1757067 1768987 1774920 1777801 1780422 1782083 1783272 1784700
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:257)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/crowds.6-20/model.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_crowds.6-20_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism -exportmodel out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep2.tra,lab,rew:precision=17
+Wallclock time: 47.423 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:21:09 GMT+01:00 2026
+Hostname: n23m0256.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep2.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 557154 1000715 1516392 1690790 1729933 1752901 1766486 1773132 1777432 1780528 1781955 1782905 1784328
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:257)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep2.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep2.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep2.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep2.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_crowds.6-20_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism -exportmodel out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep3.tra,lab,rew:precision=17
+Wallclock time: 45.647 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:26:27 GMT+01:00 2026
+Hostname: n23m0256.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep3.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 549170 927845 1476771 1682774 1725932 1752704 1766763 1773642 1777709 1780566 1781990 1783179 1784607
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:257)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep3.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep3.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep3.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep3.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_crowds.6-20_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism -exportmodel out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep4.tra,lab,rew:precision=17
+Wallclock time: 44.837 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:48:44 GMT+01:00 2026
+Hostname: r23m0205.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep4.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 514747 921556 1476245 1687593 1733181 1753968 1767310 1773715 1778023 1780879 1782304 1783489 1784680
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:132)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep4.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep4.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep4.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep4.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_crowds.6-20_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism -exportmodel out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep5.tra,lab,rew:precision=17
+Wallclock time: 57.187 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:15:07 GMT+01:00 2026
+Hostname: n23m0343.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep5.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 449697 777676 1278016 1612788 1717667 1743607 1759092 1768166 1773151 1776972 1779365 1781500 1782450 1783163 1784350
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
+	at java.base/java.lang.Double.valueOf(Double.java:924)
+	at prism.Evaluator$EvaluatorDouble.multiply(Evaluator.java:327)
+	at prism.Evaluator$EvaluatorDouble.multiply(Evaluator.java:275)
+	at simulator.ChoiceListFlexi.scaleProbabilitiesBy(ChoiceListFlexi.java:142)
+	at simulator.TransitionList.scaleProbabilitiesBy(TransitionList.java:96)
+	at simulator.Updater.calculateTransitions(Updater.java:266)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep5.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep5.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep5.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/crowds.6-20/model_rep5.trew:	File does not exist.
+```
+

@@ -1,0 +1,233 @@
+# Log files for storm_from-jani_to-umb_exact on model [nand.40-4](../../models/nand.40-4)
+
+Parsed values: `[184432128.0, 184432128.0, 184432128.0, 184432128.0, 184432128.0]`
+
+
+
+### Log file: storm_from-jani_to-umb_exact_nand.40-4_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact.umb umb --compression none  --exact
+Wallclock time: 17.161 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:36:12 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.001s.
+
+Time for model construction: 14.346s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/nand.40-4/model.exact.umb'.
+Time for model export: 2.584s.
+
+
+Performance statistics:
+  * peak memory usage: 1449MB
+  * CPU time: 16.526s
+  * wallclock time: 17.014s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/nand.40-4/model.exact.umb:	Size of output file is 184432128 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-umb_exact_nand.40-4_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep2.umb umb --compression none  --exact
+Wallclock time: 75.600 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:12:07 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep2.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 63.352s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep2.umb'.
+Time for model export: 11.461s.
+
+
+Performance statistics:
+  * peak memory usage: 1450MB
+  * CPU time: 73.057s
+  * wallclock time: 75.150s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep2.umb:	Size of output file is 184432128 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-umb_exact_nand.40-4_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep3.umb umb --compression none  --exact
+Wallclock time: 17.968 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:42:09 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep3.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.018s.
+
+Time for model construction: 14.983s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep3.umb'.
+Time for model export: 2.708s.
+
+
+Performance statistics:
+  * peak memory usage: 1448MB
+  * CPU time: 17.206s
+  * wallclock time: 17.805s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep3.umb:	Size of output file is 184432128 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-umb_exact_nand.40-4_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep4.umb umb --compression none  --exact
+Wallclock time: 16.710 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:31:00 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep4.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.017s.
+
+Time for model construction: 13.939s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep4.umb'.
+Time for model export: 2.531s.
+
+
+Performance statistics:
+  * peak memory usage: 1450MB
+  * CPU time: 16.066s
+  * wallclock time: 16.572s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep4.umb:	Size of output file is 184432128 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-umb_exact_nand.40-4_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep5.umb umb --compression none  --exact
+Wallclock time: 16.794 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:18:37 2026
+Command line arguments: --timemem --buildfull --jani models/nand.40-4/model.jani --exportbuild out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep5.umb umb --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.001s.
+
+Time for model construction: 14.004s.
+
+-------------------------------------------------------------- 
+Model type: 	DTMC (sparse)
+States: 	3999522
+Transitions: 	6288542
+Reward Models:  none
+State Labels: 	3 labels
+   * init -> 1 item(s)
+   * deadlock -> 0 item(s)
+   * target -> 4 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep5.umb'.
+Time for model export: 2.552s.
+
+
+Performance statistics:
+  * peak memory usage: 1449MB
+  * CPU time: 16.135s
+  * wallclock time: 16.646s
+
+############################## Output files ##############################
+out/storm_from-jani_to-umb_exact/nand.40-4/model.exact_rep5.umb:	Size of output file is 184432128 bytes
+Removing output file to save space for repetition #5
+```
+

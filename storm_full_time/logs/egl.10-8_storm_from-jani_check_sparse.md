@@ -1,0 +1,104 @@
+# Log files for storm_from-jani_check_sparse on model [egl.10-8](../../models/egl.10-8)
+
+Parsed values: `[MO, MO, MO, MO, MO]`
+
+
+
+### Log file: storm_from-jani_check_sparse_egl.10-8_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Wallclock time: 799.741 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:54:06 2026
+Command line arguments: --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_egl.10-8_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Wallclock time: 897.697 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:49:24 2026
+Command line arguments: --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.021s.
+
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_egl.10-8_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Wallclock time: 833.555 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:55:32 2026
+Command line arguments: --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_egl.10-8_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Wallclock time: 802.644 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:29:21 2026
+Command line arguments: --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.007s.
+
+```
+
+
+
+### Log file: storm_from-jani_check_sparse_egl.10-8_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Wallclock time: 843.803 seconds
+Return code: -9
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 21:24:33 2026
+Command line arguments: --timemem --buildfull --jani models/egl.10-8/model.jani --janiproperty
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.006s.
+
+```
+

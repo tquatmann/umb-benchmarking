@@ -1,0 +1,239 @@
+# Log files for modest_from-jani_check_memory on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+
+Parsed values: `[2.1, 2.1, 3.0, 2.0, 2.1]`
+
+
+
+### Log file: modest_from-jani_check_memory_zeroconf.1000-8-false_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+Wallclock time: 2.891 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "l" into 5 locations in automaton "host0".
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 1862970 states.
+
+Peak memory usage: 749 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             1862970
+  Choices:            3431320
+  Branches:           4229631
+  Rate:               931951 states/s
+  Peak memory:        225.53 MB
+  Final size:         14.44 MB
+  Time (exploration): 2.0 s
+  Time (merging):     0.1 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        0.6 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        0.6 s
+
+```
+
+
+
+### Log file: modest_from-jani_check_memory_zeroconf.1000-8-false_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+Wallclock time: 2.908 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "l" into 5 locations in automaton "host0".
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 1862970 states.
+
+Peak memory usage: 748 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             1862970
+  Choices:            3431320
+  Branches:           4229631
+  Rate:               940894 states/s
+  Peak memory:        225.53 MB
+  Final size:         14.44 MB
+  Time (exploration): 2.0 s
+  Time (merging):     0.1 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        0.7 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        0.7 s
+
+```
+
+
+
+### Log file: modest_from-jani_check_memory_zeroconf.1000-8-false_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+Wallclock time: 4.126 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "l" into 5 locations in automaton "host0".
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 1862970 states.
+
+Peak memory usage: 747 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             1862970
+  Choices:            3431320
+  Branches:           4229631
+  Rate:               657132 states/s
+  Peak memory:        225.53 MB
+  Final size:         14.44 MB
+  Time (exploration): 2.9 s
+  Time (merging):     0.1 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        0.9 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        0.9 s
+
+```
+
+
+
+### Log file: modest_from-jani_check_memory_zeroconf.1000-8-false_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+Wallclock time: 2.851 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "l" into 5 locations in automaton "host0".
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 1862970 states.
+
+Peak memory usage: 738 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             1862970
+  Choices:            3431320
+  Branches:           4229631
+  Rate:               972323 states/s
+  Peak memory:        205.95 MB
+  Final size:         14.44 MB
+  Time (exploration): 1.9 s
+  Time (merging):     0.1 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        0.6 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        0.6 s
+
+```
+
+
+
+### Log file: modest_from-jani_check_memory_zeroconf.1000-8-false_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+Wallclock time: 2.842 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/zeroconf.1000-8-false/model.jani -S Memory -D --exhaustive
+
+
+
+
+model.jani:model: info: model is an MDP model.
+model.jani:variables[3]: info: Expanding variable "l" into 5 locations in automaton "host0".
+model.jani: info: Need 24 bytes per state.
+model.jani: info: Explored 1862970 states.
+
+Peak memory usage: 747 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         24 bytes
+  States:             1862970
+  Choices:            3431320
+  Branches:           4229631
+  Rate:               950495 states/s
+  Peak memory:        225.53 MB
+  Final size:         14.44 MB
+  Time (exploration): 2.0 s
+  Time (merging):     0.1 s
+
++ Property correct_max
+  Probability: 4.801413635072429E-08
+  Bounds:      [4.801413635072429E-08, 1]
+  Time:        0.6 s
+
+  + Value iteration
+    Final error: 1.682816104324629E-07
+    Iterations:  26
+    Time:        0.6 s
+
+```
+

@@ -1,0 +1,277 @@
+# Log files for prism_from-prism_check_ex on model [egl.10-8](../../models/egl.10-8)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_check_ex_egl.10-8_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+Wallclock time: 22.787 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:57:45 GMT+01:00 2026
+Hostname: n23m0197.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Parsing properties file "models/egl.10-8/property.props"...
+
+1 property:
+(1) "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+---------------------------------------------------------------------
+
+Model checking: "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 340616 652053 805847 831938 835528
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.DTMCSimple.addStates(DTMCSimple.java:181)
+	at explicit.DTMCSimple.addState(DTMCSimple.java:173)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:302)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_egl.10-8_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+Wallclock time: 23.692 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 00:09:22 GMT+01:00 2026
+Hostname: n23m0294.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Parsing properties file "models/egl.10-8/property.props"...
+
+1 property:
+(1) "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+---------------------------------------------------------------------
+
+Model checking: "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 375049 730533 826104 833284 836874
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.DTMCSimple.addStates(DTMCSimple.java:181)
+	at explicit.DTMCSimple.addState(DTMCSimple.java:173)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:302)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_egl.10-8_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+Wallclock time: 19.420 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 02:49:42 GMT+01:00 2026
+Hostname: r23m0023.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Parsing properties file "models/egl.10-8/property.props"...
+
+1 property:
+(1) "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+---------------------------------------------------------------------
+
+Model checking: "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 409792 775853 830053 835438 838310
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.DTMCSimple.addStates(DTMCSimple.java:181)
+	at explicit.DTMCSimple.addState(DTMCSimple.java:173)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:302)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_egl.10-8_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+Wallclock time: 23.736 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 21:24:22 GMT+01:00 2026
+Hostname: r23m0093.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Parsing properties file "models/egl.10-8/property.props"...
+
+1 property:
+(1) "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+---------------------------------------------------------------------
+
+Model checking: "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 347795 674015 820224 832835 834630 838220
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.DTMCSimple.addToProbability(DTMCSimple.java:258)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:316)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+
+
+
+### Log file: prism_from-prism_check_ex_egl.10-8_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+Wallclock time: 21.907 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 22:08:02 GMT+01:00 2026
+Hostname: n23m0215.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/egl.10-8/model.prism models/egl.10-8/property.props
+
+Parsing PRISM model file "models/egl.10-8/model.prism"...
+
+Type:        DTMC
+Modules:     counter partyA partyB
+Actions:     [] [receiveB] [receiveA]
+Variables:   b n phase party b0 b20 b1 b21 b2 b22 b3 b23 b4 b24 b5 b25 b6 b26 b7 b27 b8 b28 b9 b29 b10 b30 b11 b31 b12 b32 b13 b33 b14 b34 b15 b35 b16 b36 b17 b37 b18 b38 b19 b39 a0 a20 a1 a21 a2 a22 a3 a23 a4 a24 a5 a25 a6 a26 a7 a27 a8 a28 a9 a29 a10 a30 a11 a31 a12 a32 a13 a33 a14 a34 a15 a35 a16 a36 a17 a37 a18 a38 a19 a39
+Labels:      "knowB" "knowA"
+
+Parsing properties file "models/egl.10-8/property.props"...
+
+1 property:
+(1) "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+---------------------------------------------------------------------
+
+Model checking: "unfairA": P=? [ F !"knowA"&"knowB" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 338033 652703 821573 833824 837055
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.Integer.valueOf(Integer.java:1019)
+	at explicit.IndexedSet.add(IndexedSet.java:72)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:297)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+```
+

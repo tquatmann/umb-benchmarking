@@ -1,0 +1,258 @@
+# Log files for prism_from-prism_to-umb_ex on model [pacman.100](../../models/pacman.100)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pacman.100_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pacman.100/model.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 48.481 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:41:33 GMT+01:00 2026
+Hostname: n23m0242.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pacman.100/model.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 160329 325843 486984 646609 807943 966767 1131471 1289194 1438616 1572853 1672421 1711437 1721582 1726186
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.Distribution.<init>(Distribution.java:75)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:287)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pacman.100/model.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pacman.100_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pacman.100/model_rep2.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 52.537 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:11 GMT+01:00 2026
+Hostname: n23m0402.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pacman.100/model_rep2.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 138796 280704 421289 564017 699458 840248 977210 1118098 1257417 1392624 1530017 1642145 1693945 1715591 1724108 1726349
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:379)
+	at simulator.Updater.calculateTransitions(Updater.java:216)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pacman.100/model_rep2.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pacman.100_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pacman.100/model_rep3.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 49.573 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:09 GMT+01:00 2026
+Hostname: n23m0153.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pacman.100/model_rep3.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 150139 306720 461238 614777 769835 922114 1071945 1227076 1377976 1528842 1642555 1701374 1720702 1724782 1726967
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.ChoiceActionsSimple.setAction(ChoiceActionsSimple.java:142)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:331)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:353)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pacman.100/model_rep3.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pacman.100_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pacman.100/model_rep4.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 47.881 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:23:11 GMT+01:00 2026
+Hostname: n23m0113.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pacman.100/model_rep4.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 155444 316250 473497 629902 789559 940548 1095221 1252428 1400143 1552612 1642175 1707114 1720746 1725964
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:378)
+	at simulator.Updater.processUpdatesAndAddToProduct(Updater.java:416)
+	at simulator.Updater.calculateTransitions(Updater.java:224)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pacman.100/model_rep4.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pacman.100_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pacman.100/model_rep5.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 45.283 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:54:18 GMT+01:00 2026
+Hostname: r23m0016.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pacman.100/model_rep5.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 171667 347333 519650 685119 857894 1024098 1198173 1367271 1530562 1645547 1706826 1722802 1726214
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.Distribution.<init>(Distribution.java:75)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:287)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pacman.100/model_rep5.umb:	File does not exist.
+```
+

@@ -1,0 +1,294 @@
+# Log files for storm_from-jani_check_cudd on model [pacman.100](../../models/pacman.100)
+
+Parsed values: `[296.892, 284.958, 327.023, 260.539, 254.729]`
+
+
+
+### Log file: storm_from-jani_check_cudd_pacman.100_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 296.892 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 02:42:09 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.051s.
+
+Time for model construction: 187.594s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	79440921 (773429 nodes)
+Transitions: 	109963876 (3803440 nodes)
+Choices: 	100215175
+Reward Models:  none
+Variables: 	rows: 15 meta variables (40 DD variables), columns: 15 meta variables (40 DD variables), nondeterminism: 9 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (41 nodes)
+   * Crash
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 57.341s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * Crash -> 3641587 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 48.166s.
+
+Performance statistics:
+  * peak memory usage: 11305MB
+  * CPU time: 293.042s
+  * wallclock time: 296.822s
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_pacman.100_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 284.958 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 20:36:47 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.025s.
+
+Time for model construction: 182.227s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	79440921 (773429 nodes)
+Transitions: 	109963876 (3803440 nodes)
+Choices: 	100215175
+Reward Models:  none
+Variables: 	rows: 15 meta variables (40 DD variables), columns: 15 meta variables (40 DD variables), nondeterminism: 9 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (41 nodes)
+   * Crash
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 52.851s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * Crash -> 3641587 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 45.182s.
+
+Performance statistics:
+  * peak memory usage: 11304MB
+  * CPU time: 280.860s
+  * wallclock time: 284.177s
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_pacman.100_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 327.023 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 00:10:52 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.063s.
+
+Time for model construction: 211.572s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	79440921 (773429 nodes)
+Transitions: 	109963876 (3803440 nodes)
+Choices: 	100215175
+Reward Models:  none
+Variables: 	rows: 15 meta variables (40 DD variables), columns: 15 meta variables (40 DD variables), nondeterminism: 9 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (41 nodes)
+   * Crash
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 57.175s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * Crash -> 3641587 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 53.887s.
+
+Performance statistics:
+  * peak memory usage: 11305MB
+  * CPU time: 322.676s
+  * wallclock time: 326.941s
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_pacman.100_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 260.539 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 02:51:46 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.057s.
+
+Time for model construction: 157.045s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	79440921 (773429 nodes)
+Transitions: 	109963876 (3803440 nodes)
+Choices: 	100215175
+Reward Models:  none
+Variables: 	rows: 15 meta variables (40 DD variables), columns: 15 meta variables (40 DD variables), nondeterminism: 9 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (41 nodes)
+   * Crash
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 53.706s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * Crash -> 3641587 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 46.152s.
+
+Performance statistics:
+  * peak memory usage: 11305MB
+  * CPU time: 256.999s
+  * wallclock time: 260.468s
+```
+
+
+
+### Log file: storm_from-jani_check_cudd_pacman.100_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty  --engine dd-to-sparse --ddlib cudd --cudd:maxmem 8192
+Wallclock time: 254.729 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 02:49:43 2026
+Command line arguments: --timemem --buildfull --jani models/pacman.100/model.jani --janiproperty --engine dd-to-sparse --ddlib cudd '--cudd:maxmem' 8192
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.046s.
+
+Time for model construction: 153.206s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (symbolic)
+States: 	79440921 (773429 nodes)
+Transitions: 	109963876 (3803440 nodes)
+Choices: 	100215175
+Reward Models:  none
+Variables: 	rows: 15 meta variables (40 DD variables), columns: 15 meta variables (40 DD variables), nondeterminism: 9 meta variables (9 DD variables)
+Labels: 	3
+   * deadlock -> 0 state(s) (1 nodes)
+   * init -> 1 state(s) (41 nodes)
+   * Crash
+-------------------------------------------------------------- 
+
+Time for model preprocessing: 51.830s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	79440921
+Transitions: 	109963876
+Choices: 	100215175
+Reward Models:  none
+State Labels: 	3 labels
+   * Crash -> 3641587 item(s)
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Model checking property "crash": Pmin=? [F "Crash"] ...
+Result (for initial states): 0.5511176225
+Time for model checking: 45.189s.
+
+Performance statistics:
+  * peak memory usage: 11302MB
+  * CPU time: 250.598s
+  * wallclock time: 253.759s
+```
+

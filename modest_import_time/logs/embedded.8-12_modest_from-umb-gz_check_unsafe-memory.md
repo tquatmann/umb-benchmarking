@@ -1,0 +1,184 @@
+# Log files for modest_from-umb-gz_check_unsafe-memory on model [embedded.8-12](../../models/embedded.8-12)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: modest_from-umb-gz_check_unsafe-memory_embedded.8-12_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+Wallclock time: 0.150 seconds
+Return code: -6
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+
+
+
+
+UMB: warning: Skipping UMB file validation as requested. This is a security vulnerability when used with UMB files from untrusted sources.
+
+##############################Output to stderr##############################
+Unhandled exception. System.Collections.Generic.KeyNotFoundException: The given key 'ap_1' was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Modest.StateSpace.StateSpace.GetAtomicProposition(String key, UnsafeBitSet& ap)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperty(StateSpace stateSpace, ReachabilityPropertyInfo prop, String avoidStatesKey, String targetStatesKey, StateSet`1 stateSet, IDisposable& previousBoundedIterationInfo, Func`3 onProbabilityNotZeroOrOne, String propertyStatusString, AnalysisDataSet info, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperties(StateSpace ss, StateSet`1 states, Boolean[] reachAndInvariantPropertyResults, String experimentStatusString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.ModelCheck(String experimentString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric[T](Network`1 network, UmbModel umbModel, Object expInfoObj, String experimentString, Object propertiesObj, Object parametersObj, ILocation documentLocation, OperationState operationState, ComponentErrorHandler ceh)
+   at invoke Modest.Exploration.Network`1__Modest.StateSpace.UnifiedBinaryFormat\.UmbState\, Modest.StateSpace\, Version=3.1.0.0\, Culture=neutral\, PublicKeyToken=null__ : Modest.StateSpace.UmbModel : System.Object : System.String : System.Object : System.Object : Modest.Modularity.ILocation : Modest.Modularity.OperationState : Modest.Modularity.ComponentErrorHandler : Modest.Modularity.AnalysisDataSet.GeneratedClass.DoInvoke(Object, Object[], MethodInfo)
+   at Modest.DirectInvoker.InvokeDirect(MethodInfo method, Object instance, Object[] parameters)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheck(IModel model, CompilationParameters compilationParams, Object parametersObj, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.Analyze(AnalysisParams analysisParameters, IModel[] models, Int32 index, Boolean isLast, Boolean useDtmcSemantics, Boolean isContinuousTimeMarkovModel, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(AP analysisParameters, IModel model, Int32 index, Boolean isLast, IExperiment[] modelParameters, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(IParameterObject analysisParameters, IModel[] models, IExperiment[][] experiments, OperationState operationState, IErrorHandler errors)
+   at Modest.Executable.ModelChecker.Run(IParameterObject parameterObj, Stopwatch time, IOutputHandler outputHandler, CancellationToken cancellationToken)
+   at Modest.Executable.Program.Main(String[] args)
+```
+
+
+
+### Log file: modest_from-umb-gz_check_unsafe-memory_embedded.8-12_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+Wallclock time: 0.233 seconds
+Return code: -6
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+
+
+
+
+UMB: warning: Skipping UMB file validation as requested. This is a security vulnerability when used with UMB files from untrusted sources.
+
+##############################Output to stderr##############################
+Unhandled exception. System.Collections.Generic.KeyNotFoundException: The given key 'ap_1' was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Modest.StateSpace.StateSpace.GetAtomicProposition(String key, UnsafeBitSet& ap)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperty(StateSpace stateSpace, ReachabilityPropertyInfo prop, String avoidStatesKey, String targetStatesKey, StateSet`1 stateSet, IDisposable& previousBoundedIterationInfo, Func`3 onProbabilityNotZeroOrOne, String propertyStatusString, AnalysisDataSet info, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperties(StateSpace ss, StateSet`1 states, Boolean[] reachAndInvariantPropertyResults, String experimentStatusString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.ModelCheck(String experimentString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric[T](Network`1 network, UmbModel umbModel, Object expInfoObj, String experimentString, Object propertiesObj, Object parametersObj, ILocation documentLocation, OperationState operationState, ComponentErrorHandler ceh)
+   at invoke Modest.Exploration.Network`1__Modest.StateSpace.UnifiedBinaryFormat\.UmbState\, Modest.StateSpace\, Version=3.1.0.0\, Culture=neutral\, PublicKeyToken=null__ : Modest.StateSpace.UmbModel : System.Object : System.String : System.Object : System.Object : Modest.Modularity.ILocation : Modest.Modularity.OperationState : Modest.Modularity.ComponentErrorHandler : Modest.Modularity.AnalysisDataSet.GeneratedClass.DoInvoke(Object, Object[], MethodInfo)
+   at Modest.DirectInvoker.InvokeDirect(MethodInfo method, Object instance, Object[] parameters)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheck(IModel model, CompilationParameters compilationParams, Object parametersObj, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.Analyze(AnalysisParams analysisParameters, IModel[] models, Int32 index, Boolean isLast, Boolean useDtmcSemantics, Boolean isContinuousTimeMarkovModel, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(AP analysisParameters, IModel model, Int32 index, Boolean isLast, IExperiment[] modelParameters, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(IParameterObject analysisParameters, IModel[] models, IExperiment[][] experiments, OperationState operationState, IErrorHandler errors)
+   at Modest.Executable.ModelChecker.Run(IParameterObject parameterObj, Stopwatch time, IOutputHandler outputHandler, CancellationToken cancellationToken)
+   at Modest.Executable.Program.Main(String[] args)
+```
+
+
+
+### Log file: modest_from-umb-gz_check_unsafe-memory_embedded.8-12_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+Wallclock time: 0.170 seconds
+Return code: -6
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+
+
+
+
+UMB: warning: Skipping UMB file validation as requested. This is a security vulnerability when used with UMB files from untrusted sources.
+
+##############################Output to stderr##############################
+Unhandled exception. System.Collections.Generic.KeyNotFoundException: The given key 'ap_1' was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Modest.StateSpace.StateSpace.GetAtomicProposition(String key, UnsafeBitSet& ap)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperty(StateSpace stateSpace, ReachabilityPropertyInfo prop, String avoidStatesKey, String targetStatesKey, StateSet`1 stateSet, IDisposable& previousBoundedIterationInfo, Func`3 onProbabilityNotZeroOrOne, String propertyStatusString, AnalysisDataSet info, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperties(StateSpace ss, StateSet`1 states, Boolean[] reachAndInvariantPropertyResults, String experimentStatusString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.ModelCheck(String experimentString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric[T](Network`1 network, UmbModel umbModel, Object expInfoObj, String experimentString, Object propertiesObj, Object parametersObj, ILocation documentLocation, OperationState operationState, ComponentErrorHandler ceh)
+   at invoke Modest.Exploration.Network`1__Modest.StateSpace.UnifiedBinaryFormat\.UmbState\, Modest.StateSpace\, Version=3.1.0.0\, Culture=neutral\, PublicKeyToken=null__ : Modest.StateSpace.UmbModel : System.Object : System.String : System.Object : System.Object : Modest.Modularity.ILocation : Modest.Modularity.OperationState : Modest.Modularity.ComponentErrorHandler : Modest.Modularity.AnalysisDataSet.GeneratedClass.DoInvoke(Object, Object[], MethodInfo)
+   at Modest.DirectInvoker.InvokeDirect(MethodInfo method, Object instance, Object[] parameters)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheck(IModel model, CompilationParameters compilationParams, Object parametersObj, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.Analyze(AnalysisParams analysisParameters, IModel[] models, Int32 index, Boolean isLast, Boolean useDtmcSemantics, Boolean isContinuousTimeMarkovModel, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(AP analysisParameters, IModel model, Int32 index, Boolean isLast, IExperiment[] modelParameters, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(IParameterObject analysisParameters, IModel[] models, IExperiment[][] experiments, OperationState operationState, IErrorHandler errors)
+   at Modest.Executable.ModelChecker.Run(IParameterObject parameterObj, Stopwatch time, IOutputHandler outputHandler, CancellationToken cancellationToken)
+   at Modest.Executable.Program.Main(String[] args)
+```
+
+
+
+### Log file: modest_from-umb-gz_check_unsafe-memory_embedded.8-12_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+Wallclock time: 0.231 seconds
+Return code: -6
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+
+
+
+
+UMB: warning: Skipping UMB file validation as requested. This is a security vulnerability when used with UMB files from untrusted sources.
+
+##############################Output to stderr##############################
+Unhandled exception. System.Collections.Generic.KeyNotFoundException: The given key 'ap_1' was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Modest.StateSpace.StateSpace.GetAtomicProposition(String key, UnsafeBitSet& ap)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperty(StateSpace stateSpace, ReachabilityPropertyInfo prop, String avoidStatesKey, String targetStatesKey, StateSet`1 stateSet, IDisposable& previousBoundedIterationInfo, Func`3 onProbabilityNotZeroOrOne, String propertyStatusString, AnalysisDataSet info, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperties(StateSpace ss, StateSet`1 states, Boolean[] reachAndInvariantPropertyResults, String experimentStatusString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.ModelCheck(String experimentString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric[T](Network`1 network, UmbModel umbModel, Object expInfoObj, String experimentString, Object propertiesObj, Object parametersObj, ILocation documentLocation, OperationState operationState, ComponentErrorHandler ceh)
+   at invoke Modest.Exploration.Network`1__Modest.StateSpace.UnifiedBinaryFormat\.UmbState\, Modest.StateSpace\, Version=3.1.0.0\, Culture=neutral\, PublicKeyToken=null__ : Modest.StateSpace.UmbModel : System.Object : System.String : System.Object : System.Object : Modest.Modularity.ILocation : Modest.Modularity.OperationState : Modest.Modularity.ComponentErrorHandler : Modest.Modularity.AnalysisDataSet.GeneratedClass.DoInvoke(Object, Object[], MethodInfo)
+   at Modest.DirectInvoker.InvokeDirect(MethodInfo method, Object instance, Object[] parameters)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheck(IModel model, CompilationParameters compilationParams, Object parametersObj, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.Analyze(AnalysisParams analysisParameters, IModel[] models, Int32 index, Boolean isLast, Boolean useDtmcSemantics, Boolean isContinuousTimeMarkovModel, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(AP analysisParameters, IModel model, Int32 index, Boolean isLast, IExperiment[] modelParameters, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(IParameterObject analysisParameters, IModel[] models, IExperiment[][] experiments, OperationState operationState, IErrorHandler errors)
+   at Modest.Executable.ModelChecker.Run(IParameterObject parameterObj, Stopwatch time, IOutputHandler outputHandler, CancellationToken cancellationToken)
+   at Modest.Executable.Program.Main(String[] args)
+```
+
+
+
+### Log file: modest_from-umb-gz_check_unsafe-memory_embedded.8-12_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+Wallclock time: 0.188 seconds
+Return code: -6
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/embedded.8-12/modest.model.umb.gz models/embedded.8-12/modest.umbgz.properties.txt -I UMB --unsafe -S Memory -D --exhaustive
+
+
+
+
+UMB: warning: Skipping UMB file validation as requested. This is a security vulnerability when used with UMB files from untrusted sources.
+
+##############################Output to stderr##############################
+Unhandled exception. System.Collections.Generic.KeyNotFoundException: The given key 'ap_1' was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Modest.StateSpace.StateSpace.GetAtomicProposition(String key, UnsafeBitSet& ap)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperty(StateSpace stateSpace, ReachabilityPropertyInfo prop, String avoidStatesKey, String targetStatesKey, StateSet`1 stateSet, IDisposable& previousBoundedIterationInfo, Func`3 onProbabilityNotZeroOrOne, String propertyStatusString, AnalysisDataSet info, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.CheckProperties(StateSpace ss, StateSet`1 states, Boolean[] reachAndInvariantPropertyResults, String experimentStatusString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.MAModelChecker`1.ModelCheck(String experimentString, OperationState operationState, ComponentErrorHandler ceh)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheckGeneric[T](Network`1 network, UmbModel umbModel, Object expInfoObj, String experimentString, Object propertiesObj, Object parametersObj, ILocation documentLocation, OperationState operationState, ComponentErrorHandler ceh)
+   at invoke Modest.Exploration.Network`1__Modest.StateSpace.UnifiedBinaryFormat\.UmbState\, Modest.StateSpace\, Version=3.1.0.0\, Culture=neutral\, PublicKeyToken=null__ : Modest.StateSpace.UmbModel : System.Object : System.String : System.Object : System.Object : Modest.Modularity.ILocation : Modest.Modularity.OperationState : Modest.Modularity.ComponentErrorHandler : Modest.Modularity.AnalysisDataSet.GeneratedClass.DoInvoke(Object, Object[], MethodInfo)
+   at Modest.DirectInvoker.InvokeDirect(MethodInfo method, Object instance, Object[] parameters)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.ModelCheck(IModel model, CompilationParameters compilationParams, Object parametersObj, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.ModelCheckingAnalysisEngine.Analyze(AnalysisParams analysisParameters, IModel[] models, Int32 index, Boolean isLast, Boolean useDtmcSemantics, Boolean isContinuousTimeMarkovModel, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(AP analysisParameters, IModel model, Int32 index, Boolean isLast, IExperiment[] modelParameters, OperationState operationState, IErrorHandler errors)
+   at Modest.ModelChecking.AnalysisEngine`1.Analyze(IParameterObject analysisParameters, IModel[] models, IExperiment[][] experiments, OperationState operationState, IErrorHandler errors)
+   at Modest.Executable.ModelChecker.Run(IParameterObject parameterObj, Stopwatch time, IOutputHandler outputHandler, CancellationToken cancellationToken)
+   at Modest.Executable.Program.Main(String[] args)
+```
+

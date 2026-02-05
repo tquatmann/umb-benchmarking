@@ -1,0 +1,273 @@
+# Log files for prism_from-prism_to-umb_norewards on model [wlan.5-0](../../models/wlan.5-0)
+
+Parsed values: `[7.532, 9.143, 7.435, 6.959, 7.742]`
+
+
+
+### Log file: prism_from-prism_to-umb_norewards_wlan.5-0_rep1.log
+
+```
+Command(s):
+../bin/prism  models/wlan.5-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.5-0/model.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 8.433 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:50:29 GMT+01:00 2026
+Hostname: r23m0135.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.5-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.5-0/model.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.5-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 170 iterations in 0.20 seconds (average 0.001176, setup 0.00)
+
+Time for model construction: 0.26 seconds.
+
+Type:        MDP
+States:      1295218 (1 initial)
+Transitions: 2929960
+
+Transition matrix: 17250 nodes (7 terminal), 2929960 minterms, vars: 45r/45c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.5-0/model.umb"...
+Model export size: 75515 Kb
+Time for exporting: 7.532 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.5-0/model.umb:	Size of output file is 77327360 bytes
+```
+
+
+
+### Log file: prism_from-prism_to-umb_norewards_wlan.5-0_rep2.log
+
+```
+Command(s):
+../bin/prism  models/wlan.5-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep2.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 11.904 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:27 GMT+01:00 2026
+Hostname: n23m0346.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.5-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep2.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.5-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 170 iterations in 0.29 seconds (average 0.001706, setup 0.00)
+
+Time for model construction: 0.381 seconds.
+
+Type:        MDP
+States:      1295218 (1 initial)
+Transitions: 2929960
+
+Transition matrix: 17250 nodes (7 terminal), 2929960 minterms, vars: 45r/45c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep2.umb"...
+Model export size: 75515 Kb
+Time for exporting: 9.143 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep2.umb:	Size of output file is 77327360 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: prism_from-prism_to-umb_norewards_wlan.5-0_rep3.log
+
+```
+Command(s):
+../bin/prism  models/wlan.5-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep3.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 8.330 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:21:40 GMT+01:00 2026
+Hostname: n23m0249.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.5-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep3.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.5-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 170 iterations in 0.19 seconds (average 0.001118, setup 0.00)
+
+Time for model construction: 0.283 seconds.
+
+Type:        MDP
+States:      1295218 (1 initial)
+Transitions: 2929960
+
+Transition matrix: 17250 nodes (7 terminal), 2929960 minterms, vars: 45r/45c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep3.umb"...
+Model export size: 75515 Kb
+Time for exporting: 7.435 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep3.umb:	Size of output file is 77327360 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: prism_from-prism_to-umb_norewards_wlan.5-0_rep4.log
+
+```
+Command(s):
+../bin/prism  models/wlan.5-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep4.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 7.647 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:39 GMT+01:00 2026
+Hostname: n23m0192.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.5-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep4.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.5-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 170 iterations in 0.18 seconds (average 0.001059, setup 0.00)
+
+Time for model construction: 0.225 seconds.
+
+Type:        MDP
+States:      1295218 (1 initial)
+Transitions: 2929960
+
+Transition matrix: 17250 nodes (7 terminal), 2929960 minterms, vars: 45r/45c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep4.umb"...
+Model export size: 75515 Kb
+Time for exporting: 6.959 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep4.umb:	Size of output file is 77327360 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: prism_from-prism_to-umb_norewards_wlan.5-0_rep5.log
+
+```
+Command(s):
+../bin/prism  models/wlan.5-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep5.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 8.916 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:43:39 GMT+01:00 2026
+Hostname: n23m0099.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.5-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep5.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.5-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 170 iterations in 0.21 seconds (average 0.001235, setup 0.00)
+
+Time for model construction: 0.293 seconds.
+
+Type:        MDP
+States:      1295218 (1 initial)
+Transitions: 2929960
+
+Transition matrix: 17250 nodes (7 terminal), 2929960 minterms, vars: 45r/45c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep5.umb"...
+Model export size: 75515 Kb
+Time for exporting: 7.742 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.5-0/model_rep5.umb:	Size of output file is 77327360 bytes
+Removing output file to save space for repetition #5
+```
+

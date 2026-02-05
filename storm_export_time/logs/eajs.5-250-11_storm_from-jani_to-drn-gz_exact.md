@@ -1,0 +1,238 @@
+# Log files for storm_from-jani_to-drn-gz_exact on model [eajs.5-250-11](../../models/eajs.5-250-11)
+
+Parsed values: `[9.094, 12.574, 9.314, 9.088, 11.96]`
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_eajs.5-250-11_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn.gz drn --compression gzip  --exact
+Wallclock time: 97.992 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Wed Jan 28 07:42:08 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 87.823s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	3049471
+Transitions: 	6977654
+Choices: 	4256193
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * emptyBattery -> 13476 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn.gz'.
+Time for model export: 9.094s.
+
+
+Performance statistics:
+  * peak memory usage: 1907MB
+  * CPU time: 96.829s
+  * wallclock time: 97.649s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn.gz:	Size of output file is 29174788 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_eajs.5-250-11_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep2.gz drn --compression gzip  --exact
+Wallclock time: 121.592 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:10:29 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep2.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.005s.
+
+Time for model construction: 107.532s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	3049471
+Transitions: 	6977654
+Choices: 	4256193
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * emptyBattery -> 13476 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep2.gz'.
+Time for model export: 12.574s.
+
+
+Performance statistics:
+  * peak memory usage: 1908MB
+  * CPU time: 120.077s
+  * wallclock time: 121.098s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep2.gz:	Size of output file is 29174797 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_eajs.5-250-11_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep3.gz drn --compression gzip  --exact
+Wallclock time: 101.121 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:24:54 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep3.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.026s.
+
+Time for model construction: 90.695s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	3049471
+Transitions: 	6977654
+Choices: 	4256193
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * emptyBattery -> 13476 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep3.gz'.
+Time for model export: 9.314s.
+
+
+Performance statistics:
+  * peak memory usage: 1908MB
+  * CPU time: 100.038s
+  * wallclock time: 100.772s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep3.gz:	Size of output file is 29174797 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_eajs.5-250-11_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep4.gz drn --compression gzip  --exact
+Wallclock time: 96.445 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:25:24 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep4.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 86.273s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	3049471
+Transitions: 	6977654
+Choices: 	4256193
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * emptyBattery -> 13476 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep4.gz'.
+Time for model export: 9.088s.
+
+
+Performance statistics:
+  * peak memory usage: 1907MB
+  * CPU time: 95.350s
+  * wallclock time: 96.092s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep4.gz:	Size of output file is 29174797 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-drn-gz_exact_eajs.5-250-11_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep5.gz drn --compression gzip  --exact
+Wallclock time: 115.522 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:19:38 2026
+Command line arguments: --timemem --buildfull --jani models/eajs.5-250-11/model.jani --exportbuild out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep5.gz drn --compression gzip --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 102.124s.
+
+-------------------------------------------------------------- 
+Model type: 	MDP (sparse)
+States: 	3049471
+Transitions: 	6977654
+Choices: 	4256193
+Reward Models:  utilityLocal
+State Labels: 	3 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+   * emptyBattery -> 13476 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep5.gz'.
+Time for model export: 11.960s.
+
+
+Performance statistics:
+  * peak memory usage: 1907MB
+  * CPU time: 114.094s
+  * wallclock time: 115.039s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn-gz_exact/eajs.5-250-11/model.exact.drn_rep5.gz:	Size of output file is 29174797 bytes
+Removing output file to save space for repetition #5
+```
+

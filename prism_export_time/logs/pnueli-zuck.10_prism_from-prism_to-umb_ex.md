@@ -1,0 +1,263 @@
+# Log files for prism_from-prism_to-umb_ex on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pnueli-zuck.10_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/pnueli-zuck.10/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 15.818 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:47:21 GMT+01:00 2026
+Hostname: r23m0141.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pnueli-zuck.10/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 241343 404834 416093 417571
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.ChoiceListFlexi.add(ChoiceListFlexi.java:133)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:380)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pnueli-zuck.10_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/pnueli-zuck.10/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep2.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 19.200 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:36:06 GMT+01:00 2026
+Hostname: n23m0043.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pnueli-zuck.10/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep2.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 204345 387710 414825 417114
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:257)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep2.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pnueli-zuck.10_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/pnueli-zuck.10/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep3.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 18.337 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:59:21 GMT+01:00 2026
+Hostname: n23m0252.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pnueli-zuck.10/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep3.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 213639 389378 413582 416896 417584
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.HashMap.entrySet(HashMap.java:1100)
+	at explicit.Distribution.equals(Distribution.java:317)
+	at explicit.MDPSimple.indexOfActionLabelledChoice(MDPSimple.java:536)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:324)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:353)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep3.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pnueli-zuck.10_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/pnueli-zuck.10/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep4.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 19.692 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:55:49 GMT+01:00 2026
+Hostname: n23m0113.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pnueli-zuck.10/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep4.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 210798 383829 412605 416434 417452
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.ConstructModel.constructModel(ConstructModel.java:287)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep4.umb:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-umb_ex_pnueli-zuck.10_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/pnueli-zuck.10/model.prism -exportmodel out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep5.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 22.246 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:17 GMT+01:00 2026
+Hostname: r23m0196.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pnueli-zuck.10/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep5.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/pnueli-zuck.10/model.prism"...
+
+Type:        MDP
+Modules:     process0 process1 process2 process3 process4 process5 process6 process7 process8 process9
+Actions:     []
+Variables:   p0 p1 p2 p3 p4 p5 p6 p7 p8 p9
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 184886 363214 407112 415428 417210
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:238)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:329)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:353)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/pnueli-zuck.10/model_rep5.umb:	File does not exist.
+```
+

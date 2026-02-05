@@ -1,0 +1,233 @@
+# Log files for storm_from-jani_to-drn_exact on model [fms.8](../../models/fms.8)
+
+Parsed values: `[20.64, 20.019, 21.046, 24.201, 24.391]`
+
+
+
+### Log file: storm_from-jani_to-drn_exact_fms.8_rep1.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact.drn drn --compression none  --exact
+Wallclock time: 240.103 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Tue Jan 27 23:37:18 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact.drn drn --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.033s.
+
+Time for model construction: 214.752s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_exact/fms.8/model.exact.drn'.
+Write to file out/storm_from-jani_to-drn_exact/fms.8/model.exact.drn.
+Time for model export: 20.640s.
+
+
+Performance statistics:
+  * peak memory usage: 7281MB
+  * CPU time: 235.081s
+  * wallclock time: 238.217s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_exact/fms.8/model.exact.drn:	Size of output file is 809125731 bytes
+```
+
+
+
+### Log file: storm_from-jani_to-drn_exact_fms.8_rep2.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep2.drn drn --compression none  --exact
+Wallclock time: 244.888 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:37:01 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep2.drn drn --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 221.433s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep2.drn'.
+Write to file out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep2.drn.
+Time for model export: 20.019s.
+
+
+Performance statistics:
+  * peak memory usage: 7282MB
+  * CPU time: 240.966s
+  * wallclock time: 243.763s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep2.drn:	Size of output file is 809125731 bytes
+Removing output file to save space for repetition #2
+```
+
+
+
+### Log file: storm_from-jani_to-drn_exact_fms.8_rep3.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep3.drn drn --compression none  --exact
+Wallclock time: 264.435 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 08:26:25 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep3.drn drn --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 239.871s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep3.drn'.
+Write to file out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep3.drn.
+Time for model export: 21.046s.
+
+
+Performance statistics:
+  * peak memory usage: 7283MB
+  * CPU time: 259.856s
+  * wallclock time: 263.277s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep3.drn:	Size of output file is 809125731 bytes
+Removing output file to save space for repetition #3
+```
+
+
+
+### Log file: storm_from-jani_to-drn_exact_fms.8_rep4.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep4.drn drn --compression none  --exact
+Wallclock time: 295.450 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 07:37:51 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep4.drn drn --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.004s.
+
+Time for model construction: 266.236s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep4.drn'.
+Write to file out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep4.drn.
+Time for model export: 24.201s.
+
+
+Performance statistics:
+  * peak memory usage: 7281MB
+  * CPU time: 285.928s
+  * wallclock time: 293.867s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep4.drn:	Size of output file is 809125731 bytes
+Removing output file to save space for repetition #4
+```
+
+
+
+### Log file: storm_from-jani_to-drn_exact_fms.8_rep5.log
+
+```
+Command(s):
+../bin/storm --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep5.drn drn --compression none  --exact
+Wallclock time: 286.927 seconds
+Return code: 0
+##############################
+Storm 1.11.1 (dev)
+
+Date: Thu Jan 29 09:15:07 2026
+Command line arguments: --timemem --buildfull --jani models/fms.8/model.jani --exportbuild out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep5.drn drn --compression none --exact
+Current working directory: /rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final
+
+Time for model input parsing: 0.003s.
+
+Time for model construction: 258.601s.
+
+-------------------------------------------------------------- 
+Model type: 	CTMC (sparse)
+States: 	4459455
+Transitions: 	38533968
+Reward Models:  productivity
+State Labels: 	2 labels
+   * deadlock -> 0 item(s)
+   * init -> 1 item(s)
+Choice Labels: 	none
+-------------------------------------------------------------- 
+
+Exporting model to 'out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep5.drn'.
+Write to file out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep5.drn.
+Time for model export: 24.391s.
+
+
+Performance statistics:
+  * peak memory usage: 7282MB
+  * CPU time: 281.678s
+  * wallclock time: 285.620s
+
+############################## Output files ##############################
+out/storm_from-jani_to-drn_exact/fms.8/model.exact_rep5.drn:	Size of output file is 809125731 bytes
+Removing output file to save space for repetition #5
+```
+

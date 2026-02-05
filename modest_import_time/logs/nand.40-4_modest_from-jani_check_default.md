@@ -1,0 +1,244 @@
+# Log files for modest_from-jani_check_default on model [nand.40-4](../../models/nand.40-4)
+
+Parsed values: `[5.1, 5.8, 5.0, 4.9, 4.9]`
+
+
+
+### Log file: modest_from-jani_check_default_nand.40-4_rep1.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani  -D --exhaustive
+Wallclock time: 5.433 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+
+Peak memory usage: 426 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               864201 states/s
+  Peak memory:        134.67 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 4.6 s
+  Time (merging):     0.5 s
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+```
+
+
+
+### Log file: modest_from-jani_check_default_nand.40-4_rep2.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani  -D --exhaustive
+Wallclock time: 6.134 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+
+Peak memory usage: 427 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               772556 states/s
+  Peak memory:        153.77 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 5.2 s
+  Time (merging):     0.6 s
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+```
+
+
+
+### Log file: modest_from-jani_check_default_nand.40-4_rep3.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani  -D --exhaustive
+Wallclock time: 5.348 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+
+Peak memory usage: 427 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               893349 states/s
+  Peak memory:        134.67 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 4.5 s
+  Time (merging):     0.5 s
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+```
+
+
+
+### Log file: modest_from-jani_check_default_nand.40-4_rep4.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani  -D --exhaustive
+Wallclock time: 5.199 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+
+Peak memory usage: 428 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               921337 states/s
+  Peak memory:        134.70 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 4.4 s
+  Time (merging):     0.5 s
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+```
+
+
+
+### Log file: modest_from-jani_check_default_nand.40-4_rep5.log
+
+```
+Command(s):
+../bin/modest mcsta models/nand.40-4/model.jani  -D --exhaustive
+Wallclock time: 5.303 seconds
+Return code: 0
+##############################
+The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
+Command: modest mcsta models/nand.40-4/model.jani -D --exhaustive
+
+
+
+
+model.jani:model: info: model is a DTMC model.
+model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
+model.jani: info: Need 16 bytes per state.
+model.jani: info: Explored 3999522 states.
+
+Peak memory usage: 427 MB
+Analysis results for model.jani
+
++ State space exploration
+  State size:         16 bytes
+  States:             3999522
+  Choices:            3999522
+  Branches:           6288542
+  Rate:               904665 states/s
+  Peak memory:        134.66 MB
+  Final size:         126.47 MB
+  Size on disk:       21.16 MB
+  Time (exploration): 4.4 s
+  Time (merging):     0.5 s
+
++ Property reliable
+  Probability: 0.6186822208151973
+  Bounds:      [0.6186822208151973, 0.6186822208151973]
+  Time:        0.1 s
+
+  + Value iteration
+    Final error: 0
+    Iterations:  2
+    Time:        0.1 s
+
+```
+

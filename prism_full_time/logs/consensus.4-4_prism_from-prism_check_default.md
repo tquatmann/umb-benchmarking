@@ -1,0 +1,407 @@
+# Log files for prism_from-prism_check_default on model [consensus.4-4](../../models/consensus.4-4)
+
+Parsed values: `[8.165, 8.868, 6.839, 8.2, 8.746]`
+
+
+
+### Log file: prism_from-prism_check_default_consensus.4-4_rep1.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism models/consensus.4-4/property.props
+Wallclock time: 8.165 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:56:12 GMT+01:00 2026
+Hostname: r23m0083.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism models/consensus.4-4/property.props
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Parsing properties file "models/consensus.4-4/property.props"...
+
+1 property:
+(1) "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+---------------------------------------------------------------------
+
+Model checking: "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.02 seconds (average 0.000103, setup 0.00)
+
+Time for model construction: 0.14 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Prob0A: 149 iterations in 0.09 seconds (average 0.000604, setup 0.00)
+
+Prob1E: 2480 iterations in 2.09 seconds (average 0.000843, setup 0.00)
+
+yes = 10872, no = 910, maybe = 31354
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=4, levels=18, nodes=6080] [285.0 KB]
+Adding sparse bits... [levels=18-18, num=4, compact=4/4] [630.2 KB]
+Creating vector for yes... [dist=2, compact] [84.3 KB]
+Allocating iteration vectors... [3 x 337.0 KB]
+TOTAL: [2.0 MB]
+
+Starting iterations...
+Iteration 6723: max relative diff=0.000001, 5.01 sec so far
+
+Iterative method: 6873 iterations in 5.13 seconds (average 0.000745, setup 0.01)
+
+Value in the initial state: 0.15605695062063785
+
+Time for model checking: 7.354 seconds.
+
+Result: 0.15605695062063785 (+/- 1.5602140768172048E-6 estimated; rel err 9.997722437944864E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_default_consensus.4-4_rep2.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism models/consensus.4-4/property.props
+Wallclock time: 8.868 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:28:52 GMT+01:00 2026
+Hostname: n23m0031.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism models/consensus.4-4/property.props
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Parsing properties file "models/consensus.4-4/property.props"...
+
+1 property:
+(1) "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+---------------------------------------------------------------------
+
+Model checking: "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.02 seconds (average 0.000103, setup 0.00)
+
+Time for model construction: 0.101 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Prob0A: 149 iterations in 0.07 seconds (average 0.000470, setup 0.00)
+
+Prob1E: 2480 iterations in 1.57 seconds (average 0.000633, setup 0.00)
+
+yes = 10872, no = 910, maybe = 31354
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=4, levels=18, nodes=6080] [285.0 KB]
+Adding sparse bits... [levels=18-18, num=4, compact=4/4] [630.2 KB]
+Creating vector for yes... [dist=2, compact] [84.3 KB]
+Allocating iteration vectors... [3 x 337.0 KB]
+TOTAL: [2.0 MB]
+
+Starting iterations...
+
+Iterative method: 6873 iterations in 4.38 seconds (average 0.000637, setup 0.00)
+
+Value in the initial state: 0.15605695062063785
+
+Time for model checking: 6.056 seconds.
+
+Result: 0.15605695062063785 (+/- 1.5602140768172048E-6 estimated; rel err 9.997722437944864E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_default_consensus.4-4_rep3.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism models/consensus.4-4/property.props
+Wallclock time: 6.839 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:38:17 GMT+01:00 2026
+Hostname: r23m0051.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism models/consensus.4-4/property.props
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Parsing properties file "models/consensus.4-4/property.props"...
+
+1 property:
+(1) "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+---------------------------------------------------------------------
+
+Model checking: "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.02 seconds (average 0.000103, setup 0.00)
+
+Time for model construction: 0.051 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Prob0A: 149 iterations in 0.10 seconds (average 0.000671, setup 0.00)
+
+Prob1E: 2480 iterations in 1.72 seconds (average 0.000694, setup 0.00)
+
+yes = 10872, no = 910, maybe = 31354
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=4, levels=18, nodes=6080] [285.0 KB]
+Adding sparse bits... [levels=18-18, num=4, compact=4/4] [630.2 KB]
+Creating vector for yes... [dist=2, compact] [84.3 KB]
+Allocating iteration vectors... [3 x 337.0 KB]
+TOTAL: [2.0 MB]
+
+Starting iterations...
+
+Iterative method: 6873 iterations in 4.39 seconds (average 0.000637, setup 0.01)
+
+Value in the initial state: 0.15605695062063785
+
+Time for model checking: 6.233 seconds.
+
+Result: 0.15605695062063785 (+/- 1.5602140768172048E-6 estimated; rel err 9.997722437944864E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_default_consensus.4-4_rep4.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism models/consensus.4-4/property.props
+Wallclock time: 8.200 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:37:03 GMT+01:00 2026
+Hostname: n23m0252.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism models/consensus.4-4/property.props
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Parsing properties file "models/consensus.4-4/property.props"...
+
+1 property:
+(1) "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+---------------------------------------------------------------------
+
+Model checking: "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.02 seconds (average 0.000103, setup 0.00)
+
+Time for model construction: 0.051 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Prob0A: 149 iterations in 0.11 seconds (average 0.000738, setup 0.00)
+
+Prob1E: 2480 iterations in 2.26 seconds (average 0.000911, setup 0.00)
+
+yes = 10872, no = 910, maybe = 31354
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=4, levels=18, nodes=6080] [285.0 KB]
+Adding sparse bits... [levels=18-18, num=4, compact=4/4] [630.2 KB]
+Creating vector for yes... [dist=2, compact] [84.3 KB]
+Allocating iteration vectors... [3 x 337.0 KB]
+TOTAL: [2.0 MB]
+
+Starting iterations...
+Iteration 6808: max relative diff=0.000001, 5.01 sec so far
+
+Iterative method: 6873 iterations in 5.06 seconds (average 0.000735, setup 0.01)
+
+Value in the initial state: 0.15605695062063785
+
+Time for model checking: 7.46 seconds.
+
+Result: 0.15605695062063785 (+/- 1.5602140768172048E-6 estimated; rel err 9.997722437944864E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+
+
+
+### Log file: prism_from-prism_check_default_consensus.4-4_rep5.log
+
+```
+Command(s):
+../bin/prism  models/consensus.4-4/model.prism models/consensus.4-4/property.props
+Wallclock time: 8.746 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:28:57 GMT+01:00 2026
+Hostname: n23m0127.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/consensus.4-4/model.prism models/consensus.4-4/property.props
+
+Parsing PRISM model file "models/consensus.4-4/model.prism"...
+
+Type:        MDP
+Modules:     process1 process2 process3 process4
+Actions:     [] [done]
+Variables:   counter pc1 coin1 pc2 coin2 pc3 coin3 pc4 coin4
+Labels:      "finished" "agree"
+
+Parsing properties file "models/consensus.4-4/property.props"...
+
+1 property:
+(1) "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+---------------------------------------------------------------------
+
+Model checking: "disagree": Pmax=? [ F "finished"&!"agree" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.02 seconds (average 0.000103, setup 0.00)
+
+Time for model construction: 0.068 seconds.
+
+Type:        MDP
+States:      43136 (1 initial)
+Transitions: 144352
+
+Transition matrix: 2336 nodes (3 terminal), 144352 minterms, vars: 18r/18c/4nd
+
+Prob0A: 149 iterations in 0.11 seconds (average 0.000738, setup 0.00)
+
+Prob1E: 2480 iterations in 2.21 seconds (average 0.000891, setup 0.00)
+
+yes = 10872, no = 910, maybe = 31354
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrices... [nm=4, levels=18, nodes=6080] [285.0 KB]
+Adding sparse bits... [levels=18-18, num=4, compact=4/4] [630.2 KB]
+Creating vector for yes... [dist=2, compact] [84.3 KB]
+Allocating iteration vectors... [3 x 337.0 KB]
+TOTAL: [2.0 MB]
+
+Starting iterations...
+Iteration 6471: max relative diff=0.000002, 5.01 sec so far
+
+Iterative method: 6873 iterations in 5.33 seconds (average 0.000774, setup 0.01)
+
+Value in the initial state: 0.15605695062063785
+
+Time for model checking: 7.698 seconds.
+
+Result: 0.15605695062063785 (+/- 1.5602140768172048E-6 estimated; rel err 9.997722437944864E-6)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+```
+

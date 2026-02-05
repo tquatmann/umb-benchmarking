@@ -1,0 +1,276 @@
+# Log files for prism_from-prism_to-tra_ex on model [pacman.100](../../models/pacman.100)
+
+Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+
+
+
+### Log file: prism_from-prism_to-tra_ex_pacman.100_rep1.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/pacman.100/model.tra,lab,rew:precision=17
+Wallclock time: 48.751 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:36:12 GMT+01:00 2026
+Hostname: n23m0099.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/pacman.100/model.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 152970 313380 468345 624312 784330 935709 1088955 1248695 1397656 1549109 1642176 1706707 1721488 1726099
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.ChoiceActionsSimple.setAction(ChoiceActionsSimple.java:142)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:331)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:353)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/pacman.100/model.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_pacman.100_rep2.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/pacman.100/model_rep2.tra,lab,rew:precision=17
+Wallclock time: 43.809 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:41:37 GMT+01:00 2026
+Hostname: n23m0063.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/pacman.100/model_rep2.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 169179 342793 512577 678373 848470 1012605 1186717 1348272 1508975 1644683 1701876 1721221 1726395
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:379)
+	at simulator.Updater.calculateTransitions(Updater.java:216)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep2.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep2.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep2.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep2.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_pacman.100_rep3.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/pacman.100/model_rep3.tra,lab,rew:precision=17
+Wallclock time: 46.033 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:37:39 GMT+01:00 2026
+Hostname: n23m0250.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/pacman.100/model_rep3.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 160579 325832 486805 646175 810326 969936 1128277 1283699 1434873 1577041 1683016 1715623 1724029 1726902
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.HashMap.resize(HashMap.java:711)
+	at java.base/java.util.HashMap.merge(HashMap.java:1372)
+	at explicit.Distribution.add(Distribution.java:152)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:327)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep3.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep3.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep3.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep3.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_pacman.100_rep4.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/pacman.100/model_rep4.tra,lab,rew:precision=17
+Wallclock time: 56.309 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:37:12 GMT+01:00 2026
+Hostname: n23m0003.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/pacman.100/model_rep4.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 128824 261255 395319 527764 653923 786508 914329 1038752 1174715 1301199 1423921 1553044 1647068 1701295 1717913 1724709 1726900
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.Integer.valueOf(Integer.java:1019)
+	at explicit.IndexedSet.add(IndexedSet.java:72)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:297)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep4.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep4.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep4.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep4.trew:	File does not exist.
+```
+
+
+
+### Log file: prism_from-prism_to-tra_ex_pacman.100_rep5.log
+
+```
+Command(s):
+../bin/prism -ex models/pacman.100/model.prism -exportmodel out/prism_from-prism_to-tra_ex/pacman.100/model_rep5.tra,lab,rew:precision=17
+Wallclock time: 44.467 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:15:27 GMT+01:00 2026
+Hostname: r23m0092.hpc.itc.rwth-aachen.de
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/pacman.100/model.prism -exportmodel 'out/prism_from-prism_to-tra_ex/pacman.100/model_rep5.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 171336 345808 518675 685515 859778 1026081 1199527 1368447 1534864 1647069 1707697 1723719 1727031
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:378)
+	at simulator.Updater.processUpdatesAndAddToProduct(Updater.java:416)
+	at simulator.Updater.calculateTransitions(Updater.java:224)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep5.tra:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep5.lab:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep5.srew:	File does not exist.
+out/prism_from-prism_to-tra_ex/pacman.100/model_rep5.trew:	File does not exist.
+```
+
