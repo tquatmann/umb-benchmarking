@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[30.734, 33.328, 27.87, 27.969, 27.617]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [30.734, 33.328, 27.87, 27.969, 27.617]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[MO, MO, MO, MO, MO]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [MO, MO, MO, MO, MO]
 
 
 

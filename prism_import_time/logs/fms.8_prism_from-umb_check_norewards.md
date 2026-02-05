@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [, , , , ]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[13.041, 13.229, 11.056, 11.715, 12.891]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [13.041, 13.229, 11.056, 11.715, 12.891]
 
 
 

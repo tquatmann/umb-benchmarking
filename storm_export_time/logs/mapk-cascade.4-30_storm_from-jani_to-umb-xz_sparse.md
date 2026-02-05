@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[3.892, 4.423, 3.694, 3.951, 4.178]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [3.892, 4.423, 3.694, 3.951, 4.178]
 
 
 

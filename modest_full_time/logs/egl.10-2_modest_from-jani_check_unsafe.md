@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[115.986, 105.701, 103.057, 111.139, 125.564]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [115.986, 105.701, 103.057, 111.139, 125.564]
 
 
 

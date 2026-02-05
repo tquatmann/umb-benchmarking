@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[16.456, 16.673, 16.908, 17.28, 16.619]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [16.456, 16.673, 16.908, 17.28, 16.619]
 
 
 

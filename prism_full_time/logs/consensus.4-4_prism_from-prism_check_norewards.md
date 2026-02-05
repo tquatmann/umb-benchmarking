@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[7.167, 6.963, 11.653, 8.297, 8.688]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [7.167, 6.963, 11.653, 8.297, 8.688]
 
 
 

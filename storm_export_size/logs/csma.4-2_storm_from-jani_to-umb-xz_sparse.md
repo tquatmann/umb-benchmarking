@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[1502328.0, 1508228.0, 1502508.0, 1512420.0, 1502324.0]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [1502328.0, 1508228.0, 1502508.0, 1512420.0, 1502324.0]
 
 
 

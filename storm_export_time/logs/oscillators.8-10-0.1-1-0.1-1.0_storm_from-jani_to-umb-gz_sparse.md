@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_sparse on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.043, 0.05, 0.042, 0.048, 0.042]`
+Tool configuration: storm_from-jani_to-umb-gz_sparse
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.043, 0.05, 0.042, 0.048, 0.042]
 
 
 

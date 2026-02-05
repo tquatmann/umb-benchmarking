@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.841, 1.98, 1.752, 1.608, 1.808]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.841, 1.98, 1.752, 1.608, 1.808]
 
 
 

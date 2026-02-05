@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[1.232, 1.16, 1.345, 1.417, 1.055]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [1.232, 1.16, 1.345, 1.417, 1.055]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[2.891, 2.908, 4.126, 2.851, 2.842]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [2.891, 2.908, 4.126, 2.851, 2.842]
 
 
 

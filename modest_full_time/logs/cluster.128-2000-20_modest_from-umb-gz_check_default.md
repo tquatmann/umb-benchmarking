@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[6988.486, TO, 6349.755, 6319.938, 6397.719]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [6988.486, TO, 6349.755, 6319.938, 6397.719]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[5.364999999999999, 5.48, 5.5120000000000005, 5.013999999999999, 5.302]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [5.364999999999999, 5.48, 5.5120000000000005, 5.013999999999999, 5.302]
 
 
 

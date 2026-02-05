@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_sparse on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[0.91, 0.899, 0.935, 0.936, 0.94]`
+Tool configuration: storm_from-umb_check_sparse
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [0.91, 0.899, 0.935, 0.936, 0.94]
 
 
 

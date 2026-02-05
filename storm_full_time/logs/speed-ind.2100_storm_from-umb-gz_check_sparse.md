@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_sparse on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[73.785, 89.086, 82.165, 95.808, 81.488]`
+Tool configuration: storm_from-umb-gz_check_sparse
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [73.785, 89.086, 82.165, 95.808, 81.488]
 
 
 

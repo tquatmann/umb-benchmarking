@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[1.611, 1.518, 1.385, 1.58, 1.379]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [1.611, 1.518, 1.385, 1.58, 1.379]
 
 
 

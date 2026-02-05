@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[3.549, 3.44, 3.792, 3.478, 3.046]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [3.549, 3.44, 3.792, 3.478, 3.046]
 
 
 

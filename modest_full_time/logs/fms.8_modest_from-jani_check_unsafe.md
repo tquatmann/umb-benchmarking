@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

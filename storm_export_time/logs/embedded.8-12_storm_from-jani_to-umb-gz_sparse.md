@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_sparse on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.022, 0.017, 0.021, 0.021, 0.02]`
+Tool configuration: storm_from-jani_to-umb-gz_sparse
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.022, 0.017, 0.021, 0.021, 0.02]
 
 
 

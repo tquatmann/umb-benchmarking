@@ -1,4 +1,4 @@
- # egl.10-8
+# egl.10-8
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

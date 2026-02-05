@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

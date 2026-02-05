@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[34.7, 47.588, 25.688, 28.874, 30.789]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [34.7, 47.588, 25.688, 28.874, 30.789]
 
 
 

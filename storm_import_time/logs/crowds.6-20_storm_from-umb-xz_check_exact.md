@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_exact on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[17.136, 17.194, 20.286, 17.216, 17.121]`
+Tool configuration: storm_from-umb-xz_check_exact
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [17.136, 17.194, 20.286, 17.216, 17.121]
 
 
 

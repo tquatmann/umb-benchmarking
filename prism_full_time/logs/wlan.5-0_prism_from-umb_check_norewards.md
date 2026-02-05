@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[233.922, 223.988, 292.609, 216.687, 242.153]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [233.922, 223.988, 292.609, 216.687, 242.153]
 
 
 

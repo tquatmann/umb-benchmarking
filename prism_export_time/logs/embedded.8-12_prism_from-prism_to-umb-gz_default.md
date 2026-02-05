@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.025, 0.023, 0.02, 0.026, 0.024]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.025, 0.023, 0.02, 0.026, 0.024]
 
 
 

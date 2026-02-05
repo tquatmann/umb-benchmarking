@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[7.7, 7.2, 7.5, 7.3, 8.1]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [7.7, 7.2, 7.5, 7.3, 8.1]
 
 
 

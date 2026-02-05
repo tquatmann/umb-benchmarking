@@ -1,4 +1,4 @@
- # pacman.100
+# pacman.100
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

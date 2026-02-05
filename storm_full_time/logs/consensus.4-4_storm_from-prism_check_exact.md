@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[5.168, 5.116, 3.939, 4.424, 4.123]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [5.168, 5.116, 3.939, 4.424, 4.123]
 
 
 

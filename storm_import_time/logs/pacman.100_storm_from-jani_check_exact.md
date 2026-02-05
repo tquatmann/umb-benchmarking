@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[879.22, 873.154, 905.641, 878.006, 883.9459999999999]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [879.22, 873.154, 905.641, 878.006, 883.9459999999999]
 
 
 

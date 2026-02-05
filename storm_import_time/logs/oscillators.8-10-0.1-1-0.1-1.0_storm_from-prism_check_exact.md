@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[124.535, 46.638, 132.96200000000002, 68.425, 49.826]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [124.535, 46.638, 132.96200000000002, 68.425, 49.826]
 
 
 

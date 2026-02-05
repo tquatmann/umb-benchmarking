@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe-memory on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[4.2, 5.300000000000001, 4.2, 4.2, 4.5]`
+Tool configuration: modest_from-umb-xz_check_unsafe-memory
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [4.2, 5.300000000000001, 4.2, 4.2, 4.5]
 
 
 

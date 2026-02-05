@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[1914.926, 1877.441, 2069.778, 2081.273, 1911.704]`
+Tool configuration: modest_from-umb-xz_check_unsafe
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [1914.926, 1877.441, 2069.778, 2081.273, 1911.704]
 
 
 

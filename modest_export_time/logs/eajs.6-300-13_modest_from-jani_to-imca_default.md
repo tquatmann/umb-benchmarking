@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[5.0, 4.5, 5.2, 5.3, 4.3]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [5.0, 4.5, 5.2, 5.3, 4.3]
 
 
 

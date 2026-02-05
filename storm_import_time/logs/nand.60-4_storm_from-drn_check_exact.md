@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[32.84, 37.159, 38.553, 39.938, 33.017]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [32.84, 37.159, 38.553, 39.938, 33.017]
 
 
 

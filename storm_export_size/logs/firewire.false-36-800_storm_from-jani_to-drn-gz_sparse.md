@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_sparse on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[2027227.0, 2027235.0, 2027235.0, 2027235.0, 2027235.0]`
+Tool configuration: storm_from-jani_to-drn-gz_sparse
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [2027227.0, 2027235.0, 2027235.0, 2027235.0, 2027235.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[1.183, 1.232, 5.569, 1.314, 1.463]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [1.183, 1.232, 5.569, 1.314, 1.463]
 
 
 

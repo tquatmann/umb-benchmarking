@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_sparse on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[43691763.0, 43691763.0, 43691763.0, 43691763.0, 43691763.0]`
+Tool configuration: storm_from-jani_to-umb-gz_sparse
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [43691763.0, 43691763.0, 43691763.0, 43691763.0, 43691763.0]
 
 
 

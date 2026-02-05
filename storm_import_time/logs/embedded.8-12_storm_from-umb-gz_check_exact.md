@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.029, 0.05, 0.042, 0.046, 0.051]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.029, 0.05, 0.042, 0.046, 0.051]
 
 
 

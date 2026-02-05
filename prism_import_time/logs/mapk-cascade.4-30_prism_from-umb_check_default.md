@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[171.87, 53.512, 57.812, 39.899, 39.867]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [171.87, 53.512, 57.812, 39.899, 39.867]
 
 
 

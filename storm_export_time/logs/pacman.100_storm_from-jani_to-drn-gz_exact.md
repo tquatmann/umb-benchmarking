@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_exact on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[99.174, 111.855, 98.091, 104.171, 98.286]`
+Tool configuration: storm_from-jani_to-drn-gz_exact
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [99.174, 111.855, 98.091, 104.171, 98.286]
 
 
 

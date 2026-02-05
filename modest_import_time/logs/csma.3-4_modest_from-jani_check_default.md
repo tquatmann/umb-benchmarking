@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[2.6, 3.0, 2.5, 2.5, 2.5]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [2.6, 3.0, 2.5, 2.5, 2.5]
 
 
 

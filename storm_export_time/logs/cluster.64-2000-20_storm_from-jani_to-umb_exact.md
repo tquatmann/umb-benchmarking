@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_exact on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[0.577, 0.476, 0.492, 0.475, 0.567]`
+Tool configuration: storm_from-jani_to-umb_exact
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [0.577, 0.476, 0.492, 0.475, 0.567]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[7.202, 4.588, 5.117, 4.62, 4.82]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [7.202, 4.588, 5.117, 4.62, 4.82]
 
 
 

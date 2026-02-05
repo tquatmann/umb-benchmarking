@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_ex on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb_ex
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

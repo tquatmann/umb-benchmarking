@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe-memory on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb-xz_check_unsafe-memory
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [, , , , ]
 
 
 

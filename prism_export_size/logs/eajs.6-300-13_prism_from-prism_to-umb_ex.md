@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_ex on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb_ex
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

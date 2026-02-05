@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[0.597, 0.709, 0.729, 0.836, 0.611]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [0.597, 0.709, 0.729, 0.836, 0.611]
 
 
 

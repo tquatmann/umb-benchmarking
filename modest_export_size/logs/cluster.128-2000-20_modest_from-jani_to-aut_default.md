@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[79333426.0, 79333426.0, 79333426.0, 79333426.0, 79333426.0]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [79333426.0, 79333426.0, 79333426.0, 79333426.0, 79333426.0]
 
 
 

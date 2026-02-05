@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[904882999.0, 904882999.0, 904882999.0, 904882999.0, 904882999.0]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [904882999.0, 904882999.0, 904882999.0, 904882999.0, 904882999.0]
 
 
 

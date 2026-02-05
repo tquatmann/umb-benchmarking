@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_memory on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[3.247, 6.413, 6.003, 6.627, 5.923]`
+Tool configuration: modest_from-umb-gz_check_memory
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [3.247, 6.413, 6.003, 6.627, 5.923]
 
 
 

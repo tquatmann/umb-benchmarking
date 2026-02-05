@@ -1,30 +1,8 @@
-# Log files for modest_from-jani_to-umb-xz_memory on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[ERR, 66.9, 71.4, 78.6, 71.6]`
-
-
-
-### Log file: modest_from-jani_to-umb-xz_memory_crowds.6-20_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/crowds.6-20/model.jani --umb out/modest_from-jani_to-umb-xz_memory/crowds.6-20/model.umb.xz out/modest_from-jani_to-umb-xz_memory/crowds.6-20/umbxz.properties.txt --umb-compress XZ -S Memory -D --exhaustive
-Wallclock time: 0.319 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/crowds.6-20/model.jani --umb out/modest_from-jani_to-umb-xz_memory/crowds.6-20/model.umb.xz out/modest_from-jani_to-umb-xz_memory/crowds.6-20/umbxz.properties.txt --umb-compress XZ -S Memory -D --exhaustive
-
-
-
-
-model.jani:model: info: model is a DTMC model.
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-xz_memory/crowds.6-20/model.umb.xz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-xz_memory/crowds.6-20/model.umb.xz:	Size of output file is 12080272 bytes
-out/modest_from-jani_to-umb-xz_memory/crowds.6-20/umbxz.properties.txt:	Size of output file is 27 bytes
-```
+Tool configuration: modest_from-jani_to-umb-xz_memory
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [, 66.9, 71.4, 78.6, 71.6]
 
 
 

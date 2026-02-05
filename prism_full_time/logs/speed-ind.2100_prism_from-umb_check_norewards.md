@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[419.966, 475.684, 388.487, 435.506, 385.212]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [419.966, 475.684, 388.487, 435.506, 385.212]
 
 
 

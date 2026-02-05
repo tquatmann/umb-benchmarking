@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[13.61, 13.851, 13.456, 14.981, 15.129]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [13.61, 13.851, 13.456, 14.981, 15.129]
 
 
 

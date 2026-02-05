@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_sparse on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[122489009.0, 122489009.0, 122489009.0, 122489008.0, 122489009.0]`
+Tool configuration: storm_from-jani_to-umb-gz_sparse
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [122489009.0, 122489009.0, 122489009.0, 122489008.0, 122489009.0]
 
 
 

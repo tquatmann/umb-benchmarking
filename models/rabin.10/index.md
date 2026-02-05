@@ -1,4 +1,4 @@
- # rabin.10
+# rabin.10
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

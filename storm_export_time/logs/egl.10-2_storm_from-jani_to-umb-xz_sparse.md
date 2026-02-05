@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[226.429, 218.427, 289.818, 242.306, 260.052]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [226.429, 218.427, 289.818, 242.306, 260.052]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[12.2, 11.4, 12.3, 10.9, 10.2]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [12.2, 11.4, 12.3, 10.9, 10.2]
 
 
 

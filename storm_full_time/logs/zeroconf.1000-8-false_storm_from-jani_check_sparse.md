@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[10.162, 10.282, 10.637, 10.478, 10.926]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [10.162, 10.282, 10.637, 10.478, 10.926]
 
 
 

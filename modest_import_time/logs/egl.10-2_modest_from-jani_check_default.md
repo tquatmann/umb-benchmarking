@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[107.89999999999999, 110.2, 107.0, 117.10000000000001, 115.4]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [107.89999999999999, 110.2, 107.0, 117.10000000000001, 115.4]
 
 
 

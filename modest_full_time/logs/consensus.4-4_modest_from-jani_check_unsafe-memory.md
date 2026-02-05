@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.97, 0.972, 0.902, 0.941, 1.065]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.97, 0.972, 0.902, 0.941, 1.065]
 
 
 

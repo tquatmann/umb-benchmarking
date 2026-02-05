@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[214051204.0, 214124576.0, 214124576.0, 214124576.0, 214124576.0]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [214051204.0, 214124576.0, 214124576.0, 214124576.0, 214124576.0]
 
 
 

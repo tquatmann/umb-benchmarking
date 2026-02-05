@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[0.113, 0.109, 0.152, 0.16, 0.145]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [0.113, 0.109, 0.152, 0.16, 0.145]
 
 
 

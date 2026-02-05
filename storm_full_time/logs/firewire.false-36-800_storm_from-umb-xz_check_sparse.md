@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[9.939, 10.481, 10.367, 11.231, 9.659]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [9.939, 10.481, 10.367, 11.231, 9.659]
 
 
 

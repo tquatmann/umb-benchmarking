@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[15.264, 15.307, 24.527, 17.198, 18.182]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [15.264, 15.307, 24.527, 17.198, 18.182]
 
 
 

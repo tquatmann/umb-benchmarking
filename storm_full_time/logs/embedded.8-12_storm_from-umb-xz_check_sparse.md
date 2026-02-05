@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.188, 0.074, 0.078, 0.077, 0.093]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.188, 0.074, 0.078, 0.077, 0.093]
 
 
 

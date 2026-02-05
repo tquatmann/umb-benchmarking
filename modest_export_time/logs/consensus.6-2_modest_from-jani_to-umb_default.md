@@ -1,36 +1,8 @@
-# Log files for modest_from-jani_to-umb_default on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[ERR, 0.2, 0.1, 0.1, 0.4]`
-
-
-
-### Log file: modest_from-jani_to-umb_default_consensus.6-2_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/consensus.6-2/model.jani --umb out/modest_from-jani_to-umb_default/consensus.6-2/model.umb out/modest_from-jani_to-umb_default/consensus.6-2/umb.properties.txt  -D --exhaustive
-Wallclock time: 0.135 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/consensus.6-2/model.jani --umb out/modest_from-jani_to-umb_default/consensus.6-2/model.umb out/modest_from-jani_to-umb_default/consensus.6-2/umb.properties.txt -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani:variables[3]: info: Expanding variable "pc1" into 4 locations in automaton "process1".
-model.jani:variables[5]: info: Expanding variable "pc2" into 4 locations in automaton "process2".
-model.jani:variables[7]: info: Expanding variable "pc3" into 4 locations in automaton "process3".
-model.jani:variables[9]: info: Expanding variable "pc4" into 4 locations in automaton "process4".
-model.jani:variables[11]: info: Expanding variable "pc5" into 4 locations in automaton "process5".
-model.jani:variables[13]: info: Expanding variable "pc6" into 4 locations in automaton "process6".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb_default/consensus.6-2/model.umb" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb_default/consensus.6-2/model.umb:	Size of output file is 150247936 bytes
-out/modest_from-jani_to-umb_default/consensus.6-2/umb.properties.txt:	Size of output file is 27 bytes
-```
+Tool configuration: modest_from-jani_to-umb_default
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [, 0.2, 0.1, 0.1, 0.4]
 
 
 

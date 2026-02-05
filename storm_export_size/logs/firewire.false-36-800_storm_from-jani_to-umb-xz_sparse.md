@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[475444.0, 446916.0, 446512.0, 475444.0, 446916.0]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [475444.0, 446916.0, 446512.0, 475444.0, 446916.0]
 
 
 

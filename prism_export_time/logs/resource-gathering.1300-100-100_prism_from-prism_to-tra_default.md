@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[1.537, 1.629, 1.781, 1.595, 1.876]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [1.537, 1.629, 1.781, 1.595, 1.876]
 
 
 

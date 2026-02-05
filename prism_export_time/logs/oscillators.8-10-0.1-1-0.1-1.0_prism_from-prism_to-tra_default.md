@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.287, 0.427, 0.388, 0.289, 0.354]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.287, 0.427, 0.388, 0.289, 0.354]
 
 
 

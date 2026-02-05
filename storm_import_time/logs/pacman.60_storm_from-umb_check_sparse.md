@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_sparse on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[1.717, 1.605, 1.627, 1.576, 1.604]`
+Tool configuration: storm_from-umb_check_sparse
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [1.717, 1.605, 1.627, 1.576, 1.604]
 
 
 

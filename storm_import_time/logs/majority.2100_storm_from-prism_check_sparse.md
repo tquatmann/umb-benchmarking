@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[0.8610000000000001, 0.885, 0.922, 0.804, 0.906]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [0.8610000000000001, 0.885, 0.922, 0.804, 0.906]
 
 
 

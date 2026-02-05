@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[151.225, 173.826, 116.56, 116.249, 165.688]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [151.225, 173.826, 116.56, 116.249, 165.688]
 
 
 

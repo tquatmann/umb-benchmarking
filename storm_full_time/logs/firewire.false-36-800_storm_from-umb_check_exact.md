@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_exact on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[93.472, 94.11, 372.774, 97.409, 92.697]`
+Tool configuration: storm_from-umb_check_exact
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [93.472, 94.11, 372.774, 97.409, 92.697]
 
 
 

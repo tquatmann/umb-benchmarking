@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[276365824.0, 276365824.0, 276365824.0, 276365824.0, 276365824.0]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [276365824.0, 276365824.0, 276365824.0, 276365824.0, 276365824.0]
 
 
 

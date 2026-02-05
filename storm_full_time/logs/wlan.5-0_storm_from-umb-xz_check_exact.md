@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_exact on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[2.878, 2.799, 2.764, 2.629, 2.647]`
+Tool configuration: storm_from-umb-xz_check_exact
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [2.878, 2.799, 2.764, 2.629, 2.647]
 
 
 

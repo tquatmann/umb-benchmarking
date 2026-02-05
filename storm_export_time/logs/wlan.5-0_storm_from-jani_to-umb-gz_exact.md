@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[3.402, 3.423, 3.636, 4.057, 3.656]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [3.402, 3.423, 3.636, 4.057, 3.656]
 
 
 

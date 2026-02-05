@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: modest_from-umb-xz_check_unsafe
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

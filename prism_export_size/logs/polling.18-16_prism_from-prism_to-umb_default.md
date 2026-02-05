@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_default on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb_default
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

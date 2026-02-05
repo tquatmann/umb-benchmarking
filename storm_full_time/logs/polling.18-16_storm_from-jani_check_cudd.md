@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[105.293, 93.26, 97.853, 98.739, 113.196]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [105.293, 93.26, 97.853, 98.739, 113.196]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[84604300.0, 84604300.0, 84604300.0, 84604300.0, 84604300.0]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [84604300.0, 84604300.0, 84604300.0, 84604300.0, 84604300.0]
 
 
 

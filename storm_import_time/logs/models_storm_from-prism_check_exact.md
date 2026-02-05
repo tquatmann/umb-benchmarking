@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

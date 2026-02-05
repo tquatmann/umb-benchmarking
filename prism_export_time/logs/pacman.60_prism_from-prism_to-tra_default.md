@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[48.029, 209.517, 51.94, 49.488, 47.387]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [48.029, 209.517, 51.94, 49.488, 47.387]
 
 
 

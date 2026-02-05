@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_exact on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[13.394, 15.433, 12.47, 12.793, 15.12]`
+Tool configuration: storm_from-umb-xz_check_exact
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [13.394, 15.433, 12.47, 12.793, 15.12]
 
 
 

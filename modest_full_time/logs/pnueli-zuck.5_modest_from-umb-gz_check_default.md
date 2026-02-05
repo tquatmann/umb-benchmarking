@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[0.627, 1.18, 0.725, 0.683, 0.734]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [0.627, 1.18, 0.725, 0.683, 0.734]
 
 
 

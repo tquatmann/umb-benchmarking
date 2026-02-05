@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

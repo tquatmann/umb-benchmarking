@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[1148.539, 2035.941, 1041.16, 1712.611, 1048.37]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [1148.539, 2035.941, 1041.16, 1712.611, 1048.37]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[20.579, 20.675, 18.681, 17.366, 19.915]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [20.579, 20.675, 18.681, 17.366, 19.915]
 
 
 

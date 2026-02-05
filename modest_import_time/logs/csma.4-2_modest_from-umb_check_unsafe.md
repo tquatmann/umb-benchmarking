@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: modest_from-umb_check_unsafe
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

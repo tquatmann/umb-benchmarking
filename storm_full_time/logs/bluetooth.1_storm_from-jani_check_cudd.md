@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[MO, MO, MO, MO, MO]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [MO, MO, MO, MO, MO]
 
 
 

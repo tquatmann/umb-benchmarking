@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[2.756, 2.641, 3.119, 2.621, 2.747]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [2.756, 2.641, 3.119, 2.621, 2.747]
 
 
 

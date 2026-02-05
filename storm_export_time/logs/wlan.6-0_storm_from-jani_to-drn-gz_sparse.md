@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_sparse on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[6.406, 6.109, 6.674, 6.158, 6.1]`
+Tool configuration: storm_from-jani_to-drn-gz_sparse
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [6.406, 6.109, 6.674, 6.158, 6.1]
 
 
 

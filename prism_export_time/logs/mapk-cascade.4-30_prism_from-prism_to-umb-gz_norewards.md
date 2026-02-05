@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.205, 1.252, 1.445, 1.264, 1.196]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.205, 1.252, 1.445, 1.264, 1.196]
 
 
 

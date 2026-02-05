@@ -1,30 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_memory on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[97456.0, 97477.0, 97467.0, 97473.0, 97475.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_memory_embedded.8-12_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/embedded.8-12/model.jani --umb out/modest_from-jani_to-umb-gz_memory/embedded.8-12/model.umb.gz out/modest_from-jani_to-umb-gz_memory/embedded.8-12/umbgz.properties.txt --umb-compress GZIP -S Memory -D --exhaustive
-Wallclock time: 0.181 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/embedded.8-12/model.jani --umb out/modest_from-jani_to-umb-gz_memory/embedded.8-12/model.umb.gz out/modest_from-jani_to-umb-gz_memory/embedded.8-12/umbgz.properties.txt --umb-compress GZIP -S Memory -D --exhaustive
-
-
-
-
-model.jani:model: info: model is a CTMC model.
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_memory/embedded.8-12/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_memory/embedded.8-12/model.umb.gz:	Size of output file is 97423 bytes
-out/modest_from-jani_to-umb-gz_memory/embedded.8-12/umbgz.properties.txt:	Size of output file is 33 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_memory
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [, 97477.0, 97467.0, 97473.0, 97475.0]
 
 
 

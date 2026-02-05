@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb_check_unsafe
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

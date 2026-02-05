@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[85897216.0, 85897216.0, 85897216.0, 85897216.0, 85897216.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [85897216.0, 85897216.0, 85897216.0, 85897216.0, 85897216.0]
 
 
 

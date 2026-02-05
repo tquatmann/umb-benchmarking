@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[116.166, 109.563, 114.364, 123.952, 112.075]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [116.166, 109.563, 114.364, 123.952, 112.075]
 
 
 

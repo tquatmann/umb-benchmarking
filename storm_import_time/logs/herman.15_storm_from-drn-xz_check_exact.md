@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[20.671, 20.506, 24.682, 22.44, 20.625]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [20.671, 20.506, 24.682, 22.44, 20.625]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[2.372, 2.415, 2.461, 2.429, 2.27]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [2.372, 2.415, 2.461, 2.429, 2.27]
 
 
 

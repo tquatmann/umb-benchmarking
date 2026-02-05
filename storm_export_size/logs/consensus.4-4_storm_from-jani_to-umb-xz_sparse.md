@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[209336.0, 210400.0, 210156.0, 210156.0, 210156.0]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [209336.0, 210400.0, 210156.0, 210156.0, 210156.0]
 
 
 

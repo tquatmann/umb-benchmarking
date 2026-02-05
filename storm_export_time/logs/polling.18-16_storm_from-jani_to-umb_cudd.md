@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[1.813, 2.241, 1.795, 1.826, 1.848]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [1.813, 2.241, 1.795, 1.826, 1.848]
 
 
 

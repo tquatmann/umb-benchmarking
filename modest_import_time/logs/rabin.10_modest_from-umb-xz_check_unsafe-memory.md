@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe-memory on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb-xz_check_unsafe-memory
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [, , , , ]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[25.101, 29.879, 24.414, 24.315, 28.093]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [25.101, 29.879, 24.414, 24.315, 28.093]
 
 
 

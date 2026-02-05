@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[1.272, 1.224, 1.226, 1.244, 1.188]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [1.272, 1.224, 1.226, 1.244, 1.188]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[4012004.0, 3871052.0, 3972292.0, 3972292.0, 3972292.0]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [4012004.0, 3871052.0, 3972292.0, 3972292.0, 3972292.0]
 
 
 

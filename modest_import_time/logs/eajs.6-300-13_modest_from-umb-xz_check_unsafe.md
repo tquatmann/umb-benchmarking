@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[4.2, 4.9, 5.2, 4.2, 5.0]`
+Tool configuration: modest_from-umb-xz_check_unsafe
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [4.2, 4.9, 5.2, 4.2, 5.0]
 
 
 

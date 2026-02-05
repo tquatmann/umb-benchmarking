@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[5.6, 5.3, 5.9, 5.4, 6.3]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [5.6, 5.3, 5.9, 5.4, 6.3]
 
 
 

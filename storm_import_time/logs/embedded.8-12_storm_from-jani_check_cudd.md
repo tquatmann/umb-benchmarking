@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.013000000000000001, 0.046, 0.019, 0.039, 0.025]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.013000000000000001, 0.046, 0.019, 0.039, 0.025]
 
 
 

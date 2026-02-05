@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[20480.0, 20480.0, 20480.0, 20480.0, 20480.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [20480.0, 20480.0, 20480.0, 20480.0, 20480.0]
 
 
 

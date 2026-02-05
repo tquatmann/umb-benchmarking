@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[175.722, 171.80200000000002, 149.542, 147.178, 178.714]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [175.722, 171.80200000000002, 149.542, 147.178, 178.714]
 
 
 

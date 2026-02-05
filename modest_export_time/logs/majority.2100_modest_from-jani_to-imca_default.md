@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[0.5, 0.5, 0.5, 0.5, 0.5]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [0.5, 0.5, 0.5, 0.5, 0.5]
 
 
 

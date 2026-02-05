@@ -1,4 +1,4 @@
- # resource-gathering.1300-100-100
+# resource-gathering.1300-100-100
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

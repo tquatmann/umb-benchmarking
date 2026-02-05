@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[0.574, 0.5840000000000001, 0.703, 0.573, 0.603]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [0.574, 0.5840000000000001, 0.703, 0.573, 0.603]
 
 
 

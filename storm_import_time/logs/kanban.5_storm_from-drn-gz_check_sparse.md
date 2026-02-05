@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[10.856, 10.378, 12.927, 11.002, 12.009]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [10.856, 10.378, 12.927, 11.002, 12.009]
 
 
 

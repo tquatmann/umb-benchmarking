@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[2.48, 2.446, 2.561, 2.35, 2.906]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [2.48, 2.446, 2.561, 2.35, 2.906]
 
 
 

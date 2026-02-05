@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[25205318.0, 25205318.0, 25205318.0, 25205318.0, 25205318.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [25205318.0, 25205318.0, 25205318.0, 25205318.0, 25205318.0]
 
 
 

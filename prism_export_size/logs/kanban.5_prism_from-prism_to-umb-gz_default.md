@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[487930887.0, 487930887.0, 487930887.0, 487930887.0, 487930887.0]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [487930887.0, 487930887.0, 487930887.0, 487930887.0, 487930887.0]
 
 
 

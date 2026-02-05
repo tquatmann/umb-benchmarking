@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[0.798, 0.661, 0.753, 0.909, 1.226]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [0.798, 0.661, 0.753, 0.909, 1.226]
 
 
 

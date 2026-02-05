@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[24.704, 32.844, 38.381, 28.865, 33.536]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [24.704, 32.844, 38.381, 28.865, 33.536]
 
 
 

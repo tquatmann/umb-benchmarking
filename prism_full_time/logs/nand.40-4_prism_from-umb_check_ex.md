@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [, , , , ]
 
 
 

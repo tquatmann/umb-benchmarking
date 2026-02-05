@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[30016360.0, 30009624.0, 30015424.0, 30009984.0, 30009092.0]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [30016360.0, 30009624.0, 30015424.0, 30009984.0, 30009092.0]
 
 
 

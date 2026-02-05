@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[1.086, 1.198, 1.0859999999999999, 1.1600000000000001, 1.178]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [1.086, 1.198, 1.0859999999999999, 1.1600000000000001, 1.178]
 
 
 

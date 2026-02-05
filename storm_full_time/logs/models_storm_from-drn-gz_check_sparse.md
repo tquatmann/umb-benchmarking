@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

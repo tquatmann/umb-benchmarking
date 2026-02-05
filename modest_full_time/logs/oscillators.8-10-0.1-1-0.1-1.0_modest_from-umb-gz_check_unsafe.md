@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb-gz_check_unsafe
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [, , , , ]
 
 
 

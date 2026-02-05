@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[0.963, 0.962, 1.055, 0.914, 0.954]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [0.963, 0.962, 1.055, 0.914, 0.954]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[9.317, 9.199, 9.222, 9.327, 9.72]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [9.317, 9.199, 9.222, 9.327, 9.72]
 
 
 

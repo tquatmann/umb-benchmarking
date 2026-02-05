@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[7.666, 7.875, 11.258, 10.467, 11.947]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [7.666, 7.875, 11.258, 10.467, 11.947]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_sparse on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[0.113, 0.108, 0.107, 0.097, 0.112]`
+Tool configuration: storm_from-umb_check_sparse
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [0.113, 0.108, 0.107, 0.097, 0.112]
 
 
 

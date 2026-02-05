@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[6853.557, TO, 6720.788, 6742.803, TO]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [6853.557, TO, 6720.788, 6742.803, TO]
 
 
 

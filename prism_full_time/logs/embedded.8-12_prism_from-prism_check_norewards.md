@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.602, 0.622, 0.585, 0.791, 0.631]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.602, 0.622, 0.585, 0.791, 0.631]
 
 
 

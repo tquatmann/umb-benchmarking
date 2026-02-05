@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[216.651, 212.572, 230.045, 233.76, 215.96200000000002]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [216.651, 212.572, 230.045, 233.76, 215.96200000000002]
 
 
 

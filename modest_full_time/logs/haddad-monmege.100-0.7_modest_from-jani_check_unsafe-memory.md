@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[1.352, 1.34, 1.467, 1.45, 1.595]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [1.352, 1.34, 1.467, 1.45, 1.595]
 
 
 

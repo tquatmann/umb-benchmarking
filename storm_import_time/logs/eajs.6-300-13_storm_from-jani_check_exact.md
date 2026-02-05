@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[295.09299999999996, 297.52299999999997, 286.28499999999997, 291.73, 269.278]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [295.09299999999996, 297.52299999999997, 286.28499999999997, 291.73, 269.278]
 
 
 

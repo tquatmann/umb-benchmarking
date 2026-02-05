@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_ex on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[4474.0, 4474.0, 4474.0, 4474.0, 4474.0]`
+Tool configuration: prism_from-prism_to-umb-gz_ex
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [4474.0, 4474.0, 4474.0, 4474.0, 4474.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[59.992, 58.981, 65.67, 279.203, 67.984]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [59.992, 58.981, 65.67, 279.203, 67.984]
 
 
 

@@ -1,31 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[17083229.0, 17083234.0, 17083204.0, 17083207.0, 17083211.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_default_zeroconf.1000-8-false_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/zeroconf.1000-8-false/model.jani --umb out/modest_from-jani_to-umb-gz_default/zeroconf.1000-8-false/model.umb.gz out/modest_from-jani_to-umb-gz_default/zeroconf.1000-8-false/umbgz.properties.txt --umb-compress GZIP  -D --exhaustive
-Wallclock time: 0.184 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/zeroconf.1000-8-false/model.jani --umb out/modest_from-jani_to-umb-gz_default/zeroconf.1000-8-false/model.umb.gz out/modest_from-jani_to-umb-gz_default/zeroconf.1000-8-false/umbgz.properties.txt --umb-compress GZIP -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani:variables[3]: info: Expanding variable "l" into 5 locations in automaton "host0".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_default/zeroconf.1000-8-false/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_default/zeroconf.1000-8-false/model.umb.gz:	Size of output file is 17083199 bytes
-out/modest_from-jani_to-umb-gz_default/zeroconf.1000-8-false/umbgz.properties.txt:	Size of output file is 30 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_default
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [, 17083234.0, 17083204.0, 17083207.0, 17083211.0]
 
 
 

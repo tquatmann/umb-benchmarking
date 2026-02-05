@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [, , , , ]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[27.419, 33.19, 33.633, 28.572, 31.292]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [27.419, 33.19, 33.633, 28.572, 31.292]
 
 
 

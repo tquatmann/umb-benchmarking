@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[1.519, 1.868, 1.788, 1.606, 1.659]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [1.519, 1.868, 1.788, 1.606, 1.659]
 
 
 

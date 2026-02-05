@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_exact on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[9.752, 10.78, 10.047, 9.627, 11.585]`
+Tool configuration: storm_from-umb_check_exact
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [9.752, 10.78, 10.047, 9.627, 11.585]
 
 
 

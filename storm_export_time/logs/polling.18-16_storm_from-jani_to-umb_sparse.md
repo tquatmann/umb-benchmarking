@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[2.054, 1.632, 1.877, 1.782, 1.621]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [2.054, 1.632, 1.877, 1.782, 1.621]
 
 
 

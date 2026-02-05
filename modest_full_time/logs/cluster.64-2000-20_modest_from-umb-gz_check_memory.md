@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_memory on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[1247.659, 1563.583, 1484.77, 1377.785, 1403.193]`
+Tool configuration: modest_from-umb-gz_check_memory
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [1247.659, 1563.583, 1484.77, 1377.785, 1403.193]
 
 
 

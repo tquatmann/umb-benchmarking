@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[3.748, 4.089, 3.657, 3.682, 4.104]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [3.748, 4.089, 3.657, 3.682, 4.104]
 
 
 

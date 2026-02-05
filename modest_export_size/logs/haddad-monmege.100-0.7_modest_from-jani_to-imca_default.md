@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[5025.0, 5025.0, 5025.0, 5025.0, 5025.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [5025.0, 5025.0, 5025.0, 5025.0, 5025.0]
 
 
 

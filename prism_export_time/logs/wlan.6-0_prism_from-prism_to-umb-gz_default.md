@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[8.281, 9.137, 9.972, 8.657, 9.03]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [8.281, 9.137, 9.972, 8.657, 9.03]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[26.132, 27.449, 29.324, 26.775, 28.047]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [26.132, 27.449, 29.324, 26.775, 28.047]
 
 
 

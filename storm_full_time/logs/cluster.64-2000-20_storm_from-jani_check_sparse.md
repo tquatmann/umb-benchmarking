@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[12.355, 11.234, 12.995, 13.591, 11.067]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [12.355, 11.234, 12.995, 13.591, 11.067]
 
 
 

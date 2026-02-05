@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[5.063, 5.128, 5.295, 5.306, 5.04]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [5.063, 5.128, 5.295, 5.306, 5.04]
 
 
 

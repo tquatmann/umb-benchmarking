@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[32.139, 29.983, 35.305, 30.546, 30.049]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [32.139, 29.983, 35.305, 30.546, 30.049]
 
 
 

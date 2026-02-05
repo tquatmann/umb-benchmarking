@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_exact on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.106, 0.109, 0.101, 0.116, 0.134]`
+Tool configuration: storm_from-umb_check_exact
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.106, 0.109, 0.101, 0.116, 0.134]
 
 
 

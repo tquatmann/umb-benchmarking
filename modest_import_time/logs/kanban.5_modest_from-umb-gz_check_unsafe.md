@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb-gz_check_unsafe
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [, , , , ]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[8.766, 9.949, 8.482, 8.397, 8.951]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [8.766, 9.949, 8.482, 8.397, 8.951]
 
 
 

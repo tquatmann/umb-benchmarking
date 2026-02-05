@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[181207347.0, 181207347.0, 181207347.0, 181207347.0, 181207347.0]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [181207347.0, 181207347.0, 181207347.0, 181207347.0, 181207347.0]
 
 
 

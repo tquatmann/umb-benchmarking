@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_sparse on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[31.376, 31.055, 31.198, 32.64, 34.271]`
+Tool configuration: storm_from-drn-xz_check_sparse
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [31.376, 31.055, 31.198, 32.64, 34.271]
 
 
 

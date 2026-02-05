@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_exact on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[0.577, 0.67, 0.582, 0.567, 0.599]`
+Tool configuration: storm_from-jani_to-umb_exact
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [0.577, 0.67, 0.582, 0.567, 0.599]
 
 
 

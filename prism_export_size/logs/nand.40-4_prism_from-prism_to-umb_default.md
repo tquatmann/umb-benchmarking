@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_default on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb_default
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

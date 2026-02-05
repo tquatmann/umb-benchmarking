@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.798, 0.66, 0.671, 0.688, 0.676]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.798, 0.66, 0.671, 0.688, 0.676]
 
 
 

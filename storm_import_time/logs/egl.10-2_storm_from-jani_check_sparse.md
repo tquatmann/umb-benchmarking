@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[361.431, 313.036, 306.147, 320.311, 307.043]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [361.431, 313.036, 306.147, 320.311, 307.043]
 
 
 

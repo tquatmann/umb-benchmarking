@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [pnueli-zuck.10](../../models/pnueli-zuck.10)
+Parsed values: [, , , , ]
 
 
 

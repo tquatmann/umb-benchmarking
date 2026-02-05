@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[61393481.0, 61393481.0, 61393481.0, 61393481.0, 61393481.0]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [61393481.0, 61393481.0, 61393481.0, 61393481.0, 61393481.0]
 
 
 

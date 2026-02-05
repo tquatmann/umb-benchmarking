@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[16.304000000000002, 13.924000000000001, 15.360999999999999, 13.852, 16.086]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [16.304000000000002, 13.924000000000001, 15.360999999999999, 13.852, 16.086]
 
 
 

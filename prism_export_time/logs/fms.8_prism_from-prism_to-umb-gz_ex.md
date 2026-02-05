@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_ex on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb-gz_ex
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

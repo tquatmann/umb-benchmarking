@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[0.461, 0.468, 0.4, 0.392, 0.429]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [0.461, 0.468, 0.4, 0.392, 0.429]
 
 
 

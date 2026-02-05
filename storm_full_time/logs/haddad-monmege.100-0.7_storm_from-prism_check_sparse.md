@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.083, 0.089, 1.107, 0.136, 0.13]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.083, 0.089, 1.107, 0.136, 0.13]
 
 
 

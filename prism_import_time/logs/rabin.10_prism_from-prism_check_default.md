@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[49.384, 52.068, 62.792, 41.962, 45.52]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [49.384, 52.068, 62.792, 41.962, 45.52]
 
 
 

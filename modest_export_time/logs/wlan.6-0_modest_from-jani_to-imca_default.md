@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[1.9, 2.0, 1.9, 1.9, 1.9]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [1.9, 2.0, 1.9, 1.9, 1.9]
 
 
 

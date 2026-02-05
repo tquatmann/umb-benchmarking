@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[71.3, 76.5, 74.1, 62.1, 66.0]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [71.3, 76.5, 74.1, 62.1, 66.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[17.97, 17.994, 17.988, 20.465, 17.728]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [17.97, 17.994, 17.988, 20.465, 17.728]
 
 
 

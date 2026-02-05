@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

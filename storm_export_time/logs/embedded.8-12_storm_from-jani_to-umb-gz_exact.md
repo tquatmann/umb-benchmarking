@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.044, 0.044, 0.046, 0.049, 0.05]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.044, 0.044, 0.046, 0.049, 0.05]
 
 
 

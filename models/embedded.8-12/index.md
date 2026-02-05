@@ -1,4 +1,4 @@
- # embedded.8-12
+# embedded.8-12
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

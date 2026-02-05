@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.078, 0.03, 0.019000000000000003, 0.022000000000000002, 0.059]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.078, 0.03, 0.019000000000000003, 0.022000000000000002, 0.059]
 
 
 

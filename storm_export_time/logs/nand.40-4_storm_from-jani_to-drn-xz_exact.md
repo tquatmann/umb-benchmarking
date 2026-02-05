@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[68.802, 57.463, 57.024, 59.841, 59.81]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [68.802, 57.463, 57.024, 59.841, 59.81]
 
 
 

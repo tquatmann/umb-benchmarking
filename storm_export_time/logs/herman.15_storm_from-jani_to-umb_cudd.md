@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[0.295, 0.295, 0.263, 0.311, 0.267]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [0.295, 0.295, 0.263, 0.311, 0.267]
 
 
 

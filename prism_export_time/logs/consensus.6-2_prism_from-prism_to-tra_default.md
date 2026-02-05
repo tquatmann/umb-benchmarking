@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[3.074, 3.47, 3.968, 3.459, 2.957]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [3.074, 3.47, 3.968, 3.459, 2.957]
 
 
 

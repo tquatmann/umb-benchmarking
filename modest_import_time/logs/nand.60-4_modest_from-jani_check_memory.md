@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[9.4, 10.6, 9.0, 9.1, 9.0]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [9.4, 10.6, 9.0, 9.1, 9.0]
 
 
 

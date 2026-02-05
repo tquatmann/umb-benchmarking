@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_sparse on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[10.006, 10.257, 11.563, 10.357, 10.925]`
+Tool configuration: storm_from-umb_check_sparse
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [10.006, 10.257, 11.563, 10.357, 10.925]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[7.199999999999999, 6.300000000000001, 6.300000000000001, 6.300000000000001, 7.4]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [7.199999999999999, 6.300000000000001, 6.300000000000001, 6.300000000000001, 7.4]
 
 
 

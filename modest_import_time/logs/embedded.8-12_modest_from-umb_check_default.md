@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_default on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: modest_from-umb_check_default
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

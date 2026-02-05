@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[11.311, 8.631, 10.333, 9.377, 7.512]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [11.311, 8.631, 10.333, 9.377, 7.512]
 
 
 

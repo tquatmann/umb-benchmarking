@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[2.703, 2.871, 2.419, 2.602, 2.283]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [2.703, 2.871, 2.419, 2.602, 2.283]
 
 
 

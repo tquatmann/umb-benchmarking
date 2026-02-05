@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[22829859.0, 22829859.0, 22829859.0, 22829859.0, 22829859.0]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [22829859.0, 22829859.0, 22829859.0, 22829859.0, 22829859.0]
 
 
 

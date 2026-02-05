@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[23.542, 27.387, 27.927, 23.324, 25.468]`
+Tool configuration: storm_from-umb_check_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [23.542, 27.387, 27.927, 23.324, 25.468]
 
 
 

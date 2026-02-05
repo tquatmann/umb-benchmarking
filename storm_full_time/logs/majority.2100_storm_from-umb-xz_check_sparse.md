@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[17.666, 15.272, 16.787, 17.68, 15.182]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [17.666, 15.272, 16.787, 17.68, 15.182]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [egl.10-8](../../models/egl.10-8)
+# Log files
 
-Parsed values: `[523.852, 478.691, 465.963, 564.321, 455.303]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [egl.10-8](../../models/egl.10-8)
+Parsed values: [523.852, 478.691, 465.963, 564.321, 455.303]
 
 
 

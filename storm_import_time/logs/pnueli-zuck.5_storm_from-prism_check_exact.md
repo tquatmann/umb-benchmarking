@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[5.337000000000001, 4.928, 5.62, 4.704, 4.879]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [5.337000000000001, 4.928, 5.62, 4.704, 4.879]
 
 
 

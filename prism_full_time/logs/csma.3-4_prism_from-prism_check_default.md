@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[31.772, 40.154, 43.301, 28.046, 31.873]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [31.772, 40.154, 43.301, 28.046, 31.873]
 
 
 

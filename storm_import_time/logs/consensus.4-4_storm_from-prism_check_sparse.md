@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.134, 0.11699999999999999, 0.126, 0.131, 0.157]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.134, 0.11699999999999999, 0.126, 0.131, 0.157]
 
 
 

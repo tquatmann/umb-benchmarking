@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.027, 0.038, 0.041, 0.044, 0.024]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.027, 0.038, 0.041, 0.044, 0.024]
 
 
 

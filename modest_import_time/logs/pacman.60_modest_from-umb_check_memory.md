@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[TO, TO, TO, 2.8, TO]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [TO, TO, TO, 2.8, TO]
 
 
 

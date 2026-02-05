@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[7.049, 6.3, 6.136, 6.081, 6.184]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [7.049, 6.3, 6.136, 6.081, 6.184]
 
 
 

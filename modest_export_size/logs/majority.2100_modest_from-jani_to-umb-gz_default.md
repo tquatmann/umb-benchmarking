@@ -1,36 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_default on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[12697031.0, 12697024.0, 12697014.0, 12697017.0, 12697019.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_default_majority.2100_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/majority.2100/model.jani --umb out/modest_from-jani_to-umb-gz_default/majority.2100/model.umb.gz out/modest_from-jani_to-umb-gz_default/majority.2100/umbgz.properties.txt --umb-compress GZIP  -D --exhaustive
-Wallclock time: 0.201 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/majority.2100/model.jani --umb out/modest_from-jani_to-umb-gz_default/majority.2100/model.umb.gz out/modest_from-jani_to-umb-gz_default/majority.2100/umbgz.properties.txt --umb-compress GZIP -D --exhaustive
-
-
-
-
-model.jani:model: info: model is a CTMC model.
-model.jani:variables[1]: info: Expanding variable "D" into 6 locations in automaton "D_def".
-model.jani:variables[2]: info: Expanding variable "Y" into 5 locations in automaton "Y_def".
-model.jani:variables[3]: info: Expanding variable "Z" into 5 locations in automaton "Z_def".
-model.jani:variables[4]: info: Expanding variable "CC" into 16 locations in automaton "CC_def".
-model.jani:variables[5]: info: Expanding variable "XX" into 5 locations in automaton "XX_def".
-model.jani:variables[6]: info: Expanding variable "EE" into 16 locations in automaton "EE_def".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_default/majority.2100/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_default/majority.2100/model.umb.gz:	Size of output file is 12696989 bytes
-out/modest_from-jani_to-umb-gz_default/majority.2100/umbgz.properties.txt:	Size of output file is 42 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_default
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [, 12697024.0, 12697014.0, 12697017.0, 12697019.0]
 
 
 

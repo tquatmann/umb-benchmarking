@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.068, 0.067, 0.071, 0.089, 0.058]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.068, 0.067, 0.071, 0.089, 0.058]
 
 
 

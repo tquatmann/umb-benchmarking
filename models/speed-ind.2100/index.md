@@ -1,4 +1,4 @@
- # speed-ind.2100
+# speed-ind.2100
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

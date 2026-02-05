@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_sparse on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[12.73, 13.376, 13.251, 13.848, 13.563]`
+Tool configuration: storm_from-umb-gz_check_sparse
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [12.73, 13.376, 13.251, 13.848, 13.563]
 
 
 

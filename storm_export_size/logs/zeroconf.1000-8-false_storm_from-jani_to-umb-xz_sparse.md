@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[7001028.0, 7001108.0, 7000424.0, 7001116.0, 7006824.0]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [7001028.0, 7001108.0, 7000424.0, 7001116.0, 7006824.0]
 
 
 

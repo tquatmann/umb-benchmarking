@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[0.799, 0.766, 0.72, 0.451, 0.238]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [0.799, 0.766, 0.72, 0.451, 0.238]
 
 
 

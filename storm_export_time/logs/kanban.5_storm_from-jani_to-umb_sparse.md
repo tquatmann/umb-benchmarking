@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[0.553, 0.881, 0.581, 0.59, 0.671]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [0.553, 0.881, 0.581, 0.59, 0.671]
 
 
 

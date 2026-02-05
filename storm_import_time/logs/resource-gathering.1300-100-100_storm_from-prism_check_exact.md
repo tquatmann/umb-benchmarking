@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[8.606, 9.959999999999999, 8.624, 8.578, 8.561]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [8.606, 9.959999999999999, 8.624, 8.578, 8.561]
 
 
 

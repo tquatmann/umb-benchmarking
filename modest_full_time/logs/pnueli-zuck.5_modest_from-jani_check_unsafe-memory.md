@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[1.778, 1.538, 1.93, 1.888, 1.949]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [1.778, 1.538, 1.93, 1.888, 1.949]
 
 
 

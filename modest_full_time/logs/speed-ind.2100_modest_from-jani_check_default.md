@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[1866.069, 1775.58, 1901.665, 1768.089, 1789.26]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [1866.069, 1775.58, 1901.665, 1768.089, 1789.26]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_exact on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[11022055.0, 11022059.0, 11022055.0, 11022059.0, 11022059.0]`
+Tool configuration: storm_from-jani_to-drn-gz_exact
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [11022055.0, 11022059.0, 11022055.0, 11022059.0, 11022059.0]
 
 
 

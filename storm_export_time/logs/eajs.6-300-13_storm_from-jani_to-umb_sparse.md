@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[0.759, 0.844, 0.874, 0.802, 0.74]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [0.759, 0.844, 0.874, 0.802, 0.74]
 
 
 

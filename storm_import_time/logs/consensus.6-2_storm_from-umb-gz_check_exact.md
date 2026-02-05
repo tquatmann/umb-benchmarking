@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[3.415, 3.057, 2.976, 2.931, 3.472]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [3.415, 3.057, 2.976, 2.931, 3.472]
 
 
 

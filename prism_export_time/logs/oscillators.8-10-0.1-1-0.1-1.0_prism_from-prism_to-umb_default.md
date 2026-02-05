@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_default on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.936, 0.781, 0.881, 0.964, 0.959]`
+Tool configuration: prism_from-prism_to-umb_default
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.936, 0.781, 0.881, 0.964, 0.959]
 
 
 

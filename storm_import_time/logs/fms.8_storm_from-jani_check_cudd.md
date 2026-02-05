@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[100.02699999999999, 108.399, 101.36, 100.71000000000001, 334.453]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [100.02699999999999, 108.399, 101.36, 100.71000000000001, 334.453]
 
 
 

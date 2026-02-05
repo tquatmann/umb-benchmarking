@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

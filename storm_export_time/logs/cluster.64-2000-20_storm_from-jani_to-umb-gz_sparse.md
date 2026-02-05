@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_sparse on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[0.294, 0.319, 0.288, 0.286, 0.288]`
+Tool configuration: storm_from-jani_to-umb-gz_sparse
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [0.294, 0.319, 0.288, 0.286, 0.288]
 
 
 

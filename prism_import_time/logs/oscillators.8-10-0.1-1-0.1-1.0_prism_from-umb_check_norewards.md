@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[2.081, 8.639, 2.123, 2.021, 1.789]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [2.081, 8.639, 2.123, 2.021, 1.789]
 
 
 

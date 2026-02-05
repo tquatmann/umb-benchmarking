@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[1576088.0, 1586540.0, 1583444.0, 1576088.0, 1576088.0]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [1576088.0, 1586540.0, 1583444.0, 1576088.0, 1576088.0]
 
 
 

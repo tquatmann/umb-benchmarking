@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[1922952.0, 1922945.0, 1922941.0, 1922952.0, 1922951.0]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [1922952.0, 1922945.0, 1922941.0, 1922952.0, 1922951.0]
 
 
 

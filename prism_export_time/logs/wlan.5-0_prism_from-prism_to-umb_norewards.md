@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_norewards on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[7.532, 9.143, 7.435, 6.959, 7.742]`
+Tool configuration: prism_from-prism_to-umb_norewards
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [7.532, 9.143, 7.435, 6.959, 7.742]
 
 
 

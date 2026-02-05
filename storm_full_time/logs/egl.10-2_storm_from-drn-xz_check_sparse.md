@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_sparse on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[2716.686, 2497.372, 2469.954, 2644.246, 2804.048]`
+Tool configuration: storm_from-drn-xz_check_sparse
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [2716.686, 2497.372, 2469.954, 2644.246, 2804.048]
 
 
 

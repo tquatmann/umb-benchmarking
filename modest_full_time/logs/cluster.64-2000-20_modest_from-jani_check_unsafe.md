@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[1306.579, 1358.761, 1274.996, 1630.289, 1493.891]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [1306.579, 1358.761, 1274.996, 1630.289, 1493.891]
 
 
 

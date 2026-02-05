@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.226, 0.208, 0.23, 0.254, 0.228]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.226, 0.208, 0.23, 0.254, 0.228]
 
 
 

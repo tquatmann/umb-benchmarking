@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[716.518, 845.256, 770.07, 779.169, 770.726]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [716.518, 845.256, 770.07, 779.169, 770.726]
 
 
 

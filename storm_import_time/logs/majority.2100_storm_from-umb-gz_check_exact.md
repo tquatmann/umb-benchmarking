@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[2.055, 2.244, 8.735, 2.179, 2.259]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [2.055, 2.244, 8.735, 2.179, 2.259]
 
 
 

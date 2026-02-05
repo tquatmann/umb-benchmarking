@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[9.412, 10.685, 9.381, 9.085, 9.299]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [9.412, 10.685, 9.381, 9.085, 9.299]
 
 
 

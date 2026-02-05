@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[0.6, 0.6, 0.6, 0.6, 0.6]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [0.6, 0.6, 0.6, 0.6, 0.6]
 
 
 

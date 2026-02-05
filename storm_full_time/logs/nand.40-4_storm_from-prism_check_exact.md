@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[32.76, 33.349, 38.973, 32.397, 34.003]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [32.76, 33.349, 38.973, 32.397, 34.003]
 
 
 

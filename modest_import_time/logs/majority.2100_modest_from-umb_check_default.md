@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_default on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[TO, TO, 8.1, TO, TO]`
+Tool configuration: modest_from-umb_check_default
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [TO, TO, 8.1, TO, TO]
 
 
 

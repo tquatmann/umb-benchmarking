@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[9182972.0, 9146124.0, 9204180.0, 9180884.0, 9181408.0]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [9182972.0, 9146124.0, 9204180.0, 9180884.0, 9181408.0]
 
 
 

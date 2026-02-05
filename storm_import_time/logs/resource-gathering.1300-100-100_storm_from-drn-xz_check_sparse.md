@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_sparse on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[1.736, 1.826, 1.478, 1.562, 1.625]`
+Tool configuration: storm_from-drn-xz_check_sparse
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [1.736, 1.826, 1.478, 1.562, 1.625]
 
 
 

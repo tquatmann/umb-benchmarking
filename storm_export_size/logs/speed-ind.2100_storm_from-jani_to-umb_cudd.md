@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[164474368.0, 164474368.0, 164474368.0, 164474368.0, 164474368.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [164474368.0, 164474368.0, 164474368.0, 164474368.0, 164474368.0]
 
 
 

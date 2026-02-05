@@ -1,4 +1,4 @@
- # nand.40-4
+# nand.40-4
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

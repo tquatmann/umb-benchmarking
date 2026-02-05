@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[1.2, 2.6, 0.9, 0.1, 1.1]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [1.2, 2.6, 0.9, 0.1, 1.1]
 
 
 

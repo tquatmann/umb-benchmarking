@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[500219423.0, 500219423.0, 500219423.0, 500219423.0, 500219423.0]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [500219423.0, 500219423.0, 500219423.0, 500219423.0, 500219423.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[20.098, 20.048, 20.948, 20.174, 19.521]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [20.098, 20.048, 20.948, 20.174, 19.521]
 
 
 

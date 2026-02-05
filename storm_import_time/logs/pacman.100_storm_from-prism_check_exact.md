@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[1167.628, 1076.787, 1070.057, 1161.635, 1308.878]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [1167.628, 1076.787, 1070.057, 1161.635, 1308.878]
 
 
 

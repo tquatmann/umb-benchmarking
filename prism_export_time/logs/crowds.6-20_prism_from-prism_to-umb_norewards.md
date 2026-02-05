@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_norewards on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb_norewards
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

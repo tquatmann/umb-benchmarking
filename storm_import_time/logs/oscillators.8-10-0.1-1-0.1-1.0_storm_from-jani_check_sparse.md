@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[141.12699999999998, 39.558, 41.004000000000005, 38.737, 41.67400000000001]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [141.12699999999998, 39.558, 41.004000000000005, 38.737, 41.67400000000001]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[209.286, 200.358, 192.018, 188.316, 185.862]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [209.286, 200.358, 192.018, 188.316, 185.862]
 
 
 

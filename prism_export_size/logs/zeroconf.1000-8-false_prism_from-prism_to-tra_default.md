@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[117194426.0, 117194426.0, 117194426.0, 117194426.0, 117194426.0]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [117194426.0, 117194426.0, 117194426.0, 117194426.0, 117194426.0]
 
 
 

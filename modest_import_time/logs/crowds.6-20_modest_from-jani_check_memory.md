@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[11.4, 13.2, 9.9, 11.8, 11.4]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [11.4, 13.2, 9.9, 11.8, 11.4]
 
 
 

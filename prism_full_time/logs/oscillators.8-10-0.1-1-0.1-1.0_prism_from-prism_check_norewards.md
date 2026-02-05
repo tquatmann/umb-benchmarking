@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[26.301, 27.077, 30.011, 25.097, 24.412]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [26.301, 27.077, 30.011, 25.097, 24.412]
 
 
 

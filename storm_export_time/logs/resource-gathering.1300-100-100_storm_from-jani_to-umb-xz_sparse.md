@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[15.886, 16.356, 19.031, 19.804, 16.996]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [15.886, 16.356, 19.031, 19.804, 16.996]
 
 
 

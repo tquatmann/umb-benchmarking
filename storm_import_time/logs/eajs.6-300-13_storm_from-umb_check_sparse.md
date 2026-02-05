@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_sparse on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[0.735, 0.626, 0.759, 0.704, 0.762]`
+Tool configuration: storm_from-umb_check_sparse
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [0.735, 0.626, 0.759, 0.704, 0.762]
 
 
 

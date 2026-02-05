@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[2.7, 2.8, 3.0, 2.8, 2.7]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [2.7, 2.8, 3.0, 2.8, 2.7]
 
 
 

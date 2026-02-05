@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [, , , , ]
 
 
 

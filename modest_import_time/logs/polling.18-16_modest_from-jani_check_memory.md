@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[35.1, 125.3, 33.6, 32.6, 41.199999999999996]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [35.1, 125.3, 33.6, 32.6, 41.199999999999996]
 
 
 

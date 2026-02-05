@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[0.103, 0.094, 0.122, 0.104, 0.121]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [0.103, 0.094, 0.122, 0.104, 0.121]
 
 
 

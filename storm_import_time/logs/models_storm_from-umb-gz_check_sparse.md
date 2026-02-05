@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_sparse on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, ERR, ERR, ERR, ERR]`
+Tool configuration: storm_from-umb-gz_check_sparse
+Benchmark: [models](../../models/models)
+Parsed values: [, ERR, ERR, ERR, ERR]
 
 
 

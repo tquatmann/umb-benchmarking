@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_sparse on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[43.302, 48.797, 42.783, 50.749, 42.969]`
+Tool configuration: storm_from-drn-xz_check_sparse
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [43.302, 48.797, 42.783, 50.749, 42.969]
 
 
 

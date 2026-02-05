@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_exact on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[0.415, 0.442, 0.405, 0.405, 1.787]`
+Tool configuration: storm_from-jani_to-umb_exact
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [0.415, 0.442, 0.405, 0.405, 1.787]
 
 
 

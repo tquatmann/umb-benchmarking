@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.207, 1.198, 1.28, 1.499, 1.268]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.207, 1.198, 1.28, 1.499, 1.268]
 
 
 

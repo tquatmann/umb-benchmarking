@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[15.035, 14.385, 12.998, 12.834000000000001, 12.986]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [15.035, 14.385, 12.998, 12.834000000000001, 12.986]
 
 
 

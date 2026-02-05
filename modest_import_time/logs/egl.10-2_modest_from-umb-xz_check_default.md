@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[26.1, 25.2, 30.1, 30.5, 25.2]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [26.1, 25.2, 30.1, 30.5, 25.2]
 
 
 

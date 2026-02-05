@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[1722870698.0, 1722870698.0, 1722870698.0, 1722870698.0, 1722870698.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [1722870698.0, 1722870698.0, 1722870698.0, 1722870698.0, 1722870698.0]
 
 
 

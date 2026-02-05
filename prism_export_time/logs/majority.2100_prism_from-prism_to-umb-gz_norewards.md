@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[1.01, 0.987, 0.987, 0.977, 1.232]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [1.01, 0.987, 0.987, 0.977, 1.232]
 
 
 

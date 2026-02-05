@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[54870951.0, 54870951.0, 54870951.0, 54870951.0, 54870951.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [54870951.0, 54870951.0, 54870951.0, 54870951.0, 54870951.0]
 
 
 

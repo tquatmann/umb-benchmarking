@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[11.047, 10.603, 10.42, 12.288, 11.56]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [11.047, 10.603, 10.42, 12.288, 11.56]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[58.751, 82.33, 61.948, 64.148, 59.618]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [58.751, 82.33, 61.948, 64.148, 59.618]
 
 
 

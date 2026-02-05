@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_sparse on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[0.498, 0.744, 0.482, 0.468, 0.506]`
+Tool configuration: storm_from-umb_check_sparse
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [0.498, 0.744, 0.482, 0.468, 0.506]
 
 
 

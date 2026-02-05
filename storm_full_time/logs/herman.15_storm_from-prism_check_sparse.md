@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[9.663, 9.601, 44.331, 11.125, 10.001]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [9.663, 9.601, 44.331, 11.125, 10.001]
 
 
 

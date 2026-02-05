@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[635052.0, 628960.0, 635736.0, 635736.0, 635736.0]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [635052.0, 628960.0, 635736.0, 635736.0, 635736.0]
 
 
 

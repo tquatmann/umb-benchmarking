@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[33.929, 44.759, 37.851, 33.835, 32.946]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [33.929, 44.759, 37.851, 33.835, 32.946]
 
 
 

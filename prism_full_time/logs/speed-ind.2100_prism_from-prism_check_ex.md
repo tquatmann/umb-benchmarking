@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[1989.103, 1794.968, 2014.648, 2308.91, 2336.721]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [1989.103, 1794.968, 2014.648, 2308.91, 2336.721]
 
 
 

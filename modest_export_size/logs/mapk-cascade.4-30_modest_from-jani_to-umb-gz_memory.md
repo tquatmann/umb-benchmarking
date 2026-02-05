@@ -1,30 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_memory on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[2650485.0, 2650489.0, 2650471.0, 2650631.0, 2650496.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_memory_mapk-cascade.4-30_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb-gz_memory/mapk-cascade.4-30/model.umb.gz out/modest_from-jani_to-umb-gz_memory/mapk-cascade.4-30/umbgz.properties.txt --umb-compress GZIP -S Memory -D --exhaustive
-Wallclock time: 0.296 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/mapk-cascade.4-30/model.jani --umb out/modest_from-jani_to-umb-gz_memory/mapk-cascade.4-30/model.umb.gz out/modest_from-jani_to-umb-gz_memory/mapk-cascade.4-30/umbgz.properties.txt --umb-compress GZIP -S Memory -D --exhaustive
-
-
-
-
-model.jani:model: info: model is a CTMC model.
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_memory/mapk-cascade.4-30/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_memory/mapk-cascade.4-30/model.umb.gz:	Size of output file is 2650446 bytes
-out/modest_from-jani_to-umb-gz_memory/mapk-cascade.4-30/umbgz.properties.txt:	Size of output file is 39 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_memory
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [, 2650489.0, 2650471.0, 2650631.0, 2650496.0]
 
 
 

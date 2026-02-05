@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[51418679.0, 51418679.0, 51418679.0, 51418679.0, 51418679.0]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [51418679.0, 51418679.0, 51418679.0, 51418679.0, 51418679.0]
 
 
 

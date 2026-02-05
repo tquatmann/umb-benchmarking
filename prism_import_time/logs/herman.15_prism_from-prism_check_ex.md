@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[20.201, 21.409, 18.825, 20.074, 19.184]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [20.201, 21.409, 18.825, 20.074, 19.184]
 
 
 

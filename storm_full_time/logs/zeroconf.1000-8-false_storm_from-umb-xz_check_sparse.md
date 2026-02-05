@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[4.471, 4.161, 5.752, 4.152, 5.108]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [4.471, 4.161, 5.752, 4.152, 5.108]
 
 
 

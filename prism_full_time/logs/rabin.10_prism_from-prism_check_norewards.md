@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[55.476, 49.001, 59.218, 55.16, 47.644]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [55.476, 49.001, 59.218, 55.16, 47.644]
 
 
 

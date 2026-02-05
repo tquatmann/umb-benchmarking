@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[7.206, 8.383, 7.049, 7.462, 7.007]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [7.206, 8.383, 7.049, 7.462, 7.007]
 
 
 

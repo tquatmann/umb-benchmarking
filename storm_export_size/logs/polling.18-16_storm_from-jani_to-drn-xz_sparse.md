@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[67183476.0, 67188208.0, 67190696.0, 67190696.0, 67190696.0]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [67183476.0, 67188208.0, 67190696.0, 67190696.0, 67190696.0]
 
 
 

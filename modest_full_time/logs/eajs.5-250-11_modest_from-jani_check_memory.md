@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[4.974, 5.143, 5.183, 5.234, 5.35]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [4.974, 5.143, 5.183, 5.234, 5.35]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_sparse on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[7.523, 6.151, 6.177, 6.246, 6.162]`
+Tool configuration: storm_from-drn_check_sparse
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [7.523, 6.151, 6.177, 6.246, 6.162]
 
 
 

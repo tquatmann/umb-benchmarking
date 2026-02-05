@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.005, 0.005, 0.004, 0.006, 0.004]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.005, 0.005, 0.004, 0.006, 0.004]
 
 
 

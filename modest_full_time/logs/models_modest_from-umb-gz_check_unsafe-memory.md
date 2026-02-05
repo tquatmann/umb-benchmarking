@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe-memory on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb-gz_check_unsafe-memory
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

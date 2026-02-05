@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[11.353, 11.605, 11.605, 12.346, 12.075]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [11.353, 11.605, 11.605, 12.346, 12.075]
 
 
 

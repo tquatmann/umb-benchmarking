@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[8.365, 8.747, 9.448, 8.308, 8.697]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [8.365, 8.747, 9.448, 8.308, 8.697]
 
 
 

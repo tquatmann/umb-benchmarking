@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[44195469.0, 44195469.0, 44195469.0, 44195469.0, 44195469.0]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [44195469.0, 44195469.0, 44195469.0, 44195469.0, 44195469.0]
 
 
 

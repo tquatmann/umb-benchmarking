@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[MO, MO, MO, MO, MO]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [MO, MO, MO, MO, MO]
 
 
 

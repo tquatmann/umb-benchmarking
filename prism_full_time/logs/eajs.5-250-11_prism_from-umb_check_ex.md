@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [, , , , ]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[4.614, 4.179, 5.491, 4.363, 4.435]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [4.614, 4.179, 5.491, 4.363, 4.435]
 
 
 

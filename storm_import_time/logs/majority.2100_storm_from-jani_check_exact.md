@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[19.195, 16.477, 16.465, 16.21, 18.103]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [19.195, 16.477, 16.465, 16.21, 18.103]
 
 
 

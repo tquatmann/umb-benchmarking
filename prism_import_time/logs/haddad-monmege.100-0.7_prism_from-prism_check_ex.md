@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.087, 0.068, 0.191, 0.026, 0.063]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.087, 0.068, 0.191, 0.026, 0.063]
 
 
 

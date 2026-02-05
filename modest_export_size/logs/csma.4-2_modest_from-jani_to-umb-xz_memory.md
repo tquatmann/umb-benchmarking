@@ -1,30 +1,8 @@
-# Log files for modest_from-jani_to-umb-xz_memory on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[1490278.0, 1492742.0, 1498146.0, 1452618.0, 1496486.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-xz_memory_csma.4-2_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/csma.4-2/model.jani --umb out/modest_from-jani_to-umb-xz_memory/csma.4-2/model.umb.xz out/modest_from-jani_to-umb-xz_memory/csma.4-2/umbxz.properties.txt --umb-compress XZ -S Memory -D --exhaustive
-Wallclock time: 0.181 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/csma.4-2/model.jani --umb out/modest_from-jani_to-umb-xz_memory/csma.4-2/model.umb.xz out/modest_from-jani_to-umb-xz_memory/csma.4-2/umbxz.properties.txt --umb-compress XZ -S Memory -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-xz_memory/csma.4-2/model.umb.xz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-xz_memory/csma.4-2/model.umb.xz:	Size of output file is 1490240 bytes
-out/modest_from-jani_to-umb-xz_memory/csma.4-2/umbxz.properties.txt:	Size of output file is 38 bytes
-```
+Tool configuration: modest_from-jani_to-umb-xz_memory
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [, 1492742.0, 1498146.0, 1452618.0, 1496486.0]
 
 
 

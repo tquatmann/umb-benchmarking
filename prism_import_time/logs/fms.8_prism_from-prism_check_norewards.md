@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[5.227, 3.069, 3.157, 4.874, 3.809]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [5.227, 3.069, 3.157, 4.874, 3.809]
 
 
 

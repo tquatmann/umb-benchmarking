@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[1.147, 0.88, 1.005, 1.119, 0.761]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [1.147, 0.88, 1.005, 1.119, 0.761]
 
 
 

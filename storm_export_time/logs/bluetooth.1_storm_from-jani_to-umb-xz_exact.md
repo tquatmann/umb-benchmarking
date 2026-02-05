@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

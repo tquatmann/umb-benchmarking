@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[150562304.0, 150562304.0, 150562304.0, 150562304.0, 150562304.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [150562304.0, 150562304.0, 150562304.0, 150562304.0, 150562304.0]
 
 
 

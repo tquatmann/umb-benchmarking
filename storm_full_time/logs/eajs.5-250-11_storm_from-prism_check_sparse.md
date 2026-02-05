@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[21.014, 26.984, 21.095, 21.175, 23.429]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [21.014, 26.984, 21.095, 21.175, 23.429]
 
 
 

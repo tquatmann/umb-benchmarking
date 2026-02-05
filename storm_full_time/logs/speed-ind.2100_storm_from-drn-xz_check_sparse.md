@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_sparse on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[82.793, 82.693, 83.257, 80.314, 102.433]`
+Tool configuration: storm_from-drn-xz_check_sparse
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [82.793, 82.693, 83.257, 80.314, 102.433]
 
 
 

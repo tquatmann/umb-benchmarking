@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[5.057, 4.952, 4.981, 4.971, 5.463]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [5.057, 4.952, 4.981, 4.971, 5.463]
 
 
 

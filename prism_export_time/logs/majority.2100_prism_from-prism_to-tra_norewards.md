@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[1.022, 1.159, 1.194, 1.017, 1.246]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [1.022, 1.159, 1.194, 1.017, 1.246]
 
 
 

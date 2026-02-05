@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_exact on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[1246.0, 1252.0, 1252.0, 1252.0, 1252.0]`
+Tool configuration: storm_from-jani_to-drn-gz_exact
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [1246.0, 1252.0, 1252.0, 1252.0, 1252.0]
 
 
 

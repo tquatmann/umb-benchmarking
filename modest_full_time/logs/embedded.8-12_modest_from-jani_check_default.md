@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[3.9, 4.179, 4.054, 4.203, 3.891]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [3.9, 4.179, 4.054, 4.203, 3.891]
 
 
 

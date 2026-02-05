@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[1.887, 1.868, 2.216, 2.273, 2.391]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [1.887, 1.868, 2.216, 2.273, 2.391]
 
 
 

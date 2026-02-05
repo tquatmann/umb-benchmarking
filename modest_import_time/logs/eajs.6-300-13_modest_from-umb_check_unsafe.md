@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: modest_from-umb_check_unsafe
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

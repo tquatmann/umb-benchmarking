@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[21198473.0, 21198461.0, 21198461.0, 21198466.0, 21198461.0]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [21198473.0, 21198461.0, 21198461.0, 21198466.0, 21198461.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe-memory on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[2.292, 2.568, 2.679, 2.35, 2.27]`
+Tool configuration: modest_from-umb-xz_check_unsafe-memory
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [2.292, 2.568, 2.679, 2.35, 2.27]
 
 
 

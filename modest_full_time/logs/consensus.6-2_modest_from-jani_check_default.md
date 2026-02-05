@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[99.363, 24.688, 21.831, 21.96, 22.689]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [99.363, 24.688, 21.831, 21.96, 22.689]
 
 
 

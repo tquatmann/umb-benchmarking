@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: modest_from-umb_check_unsafe
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

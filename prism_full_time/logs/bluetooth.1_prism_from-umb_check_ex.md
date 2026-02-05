@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [, , , , ]
 
 
 

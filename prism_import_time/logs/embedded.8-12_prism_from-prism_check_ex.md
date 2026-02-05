@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.289, 0.118, 0.112, 0.17, 0.123]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.289, 0.118, 0.112, 0.17, 0.123]
 
 
 

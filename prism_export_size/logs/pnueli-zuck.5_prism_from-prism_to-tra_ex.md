@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[41142791.0, 41142791.0, 41142791.0, 41142791.0, 41142791.0]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [41142791.0, 41142791.0, 41142791.0, 41142791.0, 41142791.0]
 
 
 

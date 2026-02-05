@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

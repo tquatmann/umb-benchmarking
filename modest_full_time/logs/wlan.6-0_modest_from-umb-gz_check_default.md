@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[16.958, 15.759, 16.859, 16.144, 18.019]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [16.958, 15.759, 16.859, 16.144, 18.019]
 
 
 

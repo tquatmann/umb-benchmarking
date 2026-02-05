@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_sparse on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[0.361, 0.369, 0.36, 0.373, 0.329]`
+Tool configuration: storm_from-umb_check_sparse
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [0.361, 0.369, 0.36, 0.373, 0.329]
 
 
 

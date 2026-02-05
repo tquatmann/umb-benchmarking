@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [egl.10-8](../../models/egl.10-8)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [egl.10-8](../../models/egl.10-8)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

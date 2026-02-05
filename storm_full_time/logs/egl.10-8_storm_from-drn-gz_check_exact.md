@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [egl.10-8](../../models/egl.10-8)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [egl.10-8](../../models/egl.10-8)
+Parsed values: [, , , , ]
 
 
 

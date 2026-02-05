@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_norewards on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[17.167, 17.108, 14.775, 15.474, 16.072]`
+Tool configuration: prism_from-prism_to-umb_norewards
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [17.167, 17.108, 14.775, 15.474, 16.072]
 
 
 

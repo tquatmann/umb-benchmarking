@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[46.811, 38.396, 83.369, 49.699, 64.138]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [46.811, 38.396, 83.369, 49.699, 64.138]
 
 
 

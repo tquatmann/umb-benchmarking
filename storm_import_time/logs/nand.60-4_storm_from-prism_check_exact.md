@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[56.440000000000005, 67.178, 55.989, 55.291000000000004, 56.661]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [56.440000000000005, 67.178, 55.989, 55.291000000000004, 56.661]
 
 
 

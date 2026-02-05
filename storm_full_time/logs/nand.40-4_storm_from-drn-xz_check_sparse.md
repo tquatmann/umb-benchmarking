@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_sparse on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[5.211, 4.899, 5.164, 18.301, 4.925]`
+Tool configuration: storm_from-drn-xz_check_sparse
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [5.211, 4.899, 5.164, 18.301, 4.925]
 
 
 

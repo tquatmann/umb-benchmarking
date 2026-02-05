@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[14.105, 16.895, 20.102, 15.028, 19.595]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [14.105, 16.895, 20.102, 15.028, 19.595]
 
 
 

@@ -1,34 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_memory on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[1897622.0, 1897620.0, 1897625.0, 1897616.0, 1897646.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_memory_firewire.false-36-800_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/firewire.false-36-800/model.jani --umb out/modest_from-jani_to-umb-gz_memory/firewire.false-36-800/model.umb.gz out/modest_from-jani_to-umb-gz_memory/firewire.false-36-800/umbgz.properties.txt --umb-compress GZIP -S Memory -D --exhaustive
-Wallclock time: 0.574 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/firewire.false-36-800/model.jani --umb out/modest_from-jani_to-umb-gz_memory/firewire.false-36-800/model.umb.gz out/modest_from-jani_to-umb-gz_memory/firewire.false-36-800/umbgz.properties.txt --umb-compress GZIP -S Memory -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani:automata[0].variables[0]: info: Expanding variable "w12" into 10 locations in automaton "wire12".
-model.jani:variables[2]: info: Expanding variable "s1" into 9 locations in automaton "node1".
-model.jani:automata[2].variables[0]: info: Expanding variable "w21" into 10 locations in automaton "wire21".
-model.jani:variables[3]: info: Expanding variable "s2" into 9 locations in automaton "node2".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_memory/firewire.false-36-800/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_memory/firewire.false-36-800/model.umb.gz:	Size of output file is 1897580 bytes
-out/modest_from-jani_to-umb-gz_memory/firewire.false-36-800/umbgz.properties.txt:	Size of output file is 42 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_memory
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [, 1897620.0, 1897625.0, 1897616.0, 1897646.0]
 
 
 

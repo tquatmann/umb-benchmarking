@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.015, 0.016, 0.016, 0.009, 0.007]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.015, 0.016, 0.016, 0.009, 0.007]
 
 
 

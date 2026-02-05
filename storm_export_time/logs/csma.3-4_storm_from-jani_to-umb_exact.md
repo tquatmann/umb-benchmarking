@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_exact on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[0.982, 1.116, 0.945, 1.038, 1.057]`
+Tool configuration: storm_from-jani_to-umb_exact
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [0.982, 1.116, 0.945, 1.038, 1.057]
 
 
 

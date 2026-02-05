@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.546, 1.911, 2.117, 1.775, 1.803]`
+Tool configuration: modest_from-umb-gz_check_unsafe
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.546, 1.911, 2.117, 1.775, 1.803]
 
 
 

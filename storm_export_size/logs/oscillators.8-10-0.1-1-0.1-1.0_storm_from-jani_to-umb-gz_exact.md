@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[203710.0, 203710.0, 203710.0, 203710.0, 203710.0]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [203710.0, 203710.0, 203710.0, 203710.0, 203710.0]
 
 
 

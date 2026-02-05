@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[85.24, 56.249, 59.505, 61.168, 57.269]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [85.24, 56.249, 59.505, 61.168, 57.269]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_exact on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[9.206, 8.316, 8.257, 8.134, 9.183]`
+Tool configuration: storm_from-jani_to-drn-gz_exact
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [9.206, 8.316, 8.257, 8.134, 9.183]
 
 
 

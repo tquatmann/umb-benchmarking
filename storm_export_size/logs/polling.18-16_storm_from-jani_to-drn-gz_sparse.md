@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_sparse on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[201001409.0, 201001418.0, 201001417.0, 201001417.0, 201001417.0]`
+Tool configuration: storm_from-jani_to-drn-gz_sparse
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [201001409.0, 201001418.0, 201001417.0, 201001417.0, 201001417.0]
 
 
 

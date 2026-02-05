@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[26.817, 27.643, 29.21, 25.922, 27.493]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [26.817, 27.643, 29.21, 25.922, 27.493]
 
 
 

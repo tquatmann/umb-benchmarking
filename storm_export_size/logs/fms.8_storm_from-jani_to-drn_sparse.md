@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[962033055.0, 962033055.0, 962033055.0, 962033055.0, 962033055.0]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [962033055.0, 962033055.0, 962033055.0, 962033055.0, 962033055.0]
 
 
 

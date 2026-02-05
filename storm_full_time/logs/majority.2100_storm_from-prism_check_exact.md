@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

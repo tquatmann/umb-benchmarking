@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_exact on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[518433281.0, 518433281.0, 518433281.0, 518433281.0, 518433281.0]`
+Tool configuration: storm_from-jani_to-drn_exact
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [518433281.0, 518433281.0, 518433281.0, 518433281.0, 518433281.0]
 
 
 

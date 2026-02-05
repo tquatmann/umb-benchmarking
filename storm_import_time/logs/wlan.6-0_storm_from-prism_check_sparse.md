@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[18.489, 17.572, 19.438, 22.214, 18.364]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [18.489, 17.572, 19.438, 22.214, 18.364]
 
 
 

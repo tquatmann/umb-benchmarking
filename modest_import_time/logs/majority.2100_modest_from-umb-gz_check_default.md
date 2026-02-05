@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[0.5, 0.30000000000000004, 0.5, 0.30000000000000004, 0.30000000000000004]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [0.5, 0.30000000000000004, 0.5, 0.30000000000000004, 0.30000000000000004]
 
 
 

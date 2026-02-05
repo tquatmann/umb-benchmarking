@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[15.429, 17.183, 19.835, 16.465, 18.128]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [15.429, 17.183, 19.835, 16.465, 18.128]
 
 
 

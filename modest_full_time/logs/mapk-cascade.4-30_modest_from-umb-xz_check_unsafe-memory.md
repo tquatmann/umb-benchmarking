@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe-memory on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.821, 1.601, 1.654, 1.808, 1.638]`
+Tool configuration: modest_from-umb-xz_check_unsafe-memory
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.821, 1.601, 1.654, 1.808, 1.638]
 
 
 

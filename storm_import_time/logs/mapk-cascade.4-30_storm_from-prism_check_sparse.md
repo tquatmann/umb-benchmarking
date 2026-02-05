@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.137, 1.029, 1.021, 1.065, 1.24]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.137, 1.029, 1.021, 1.065, 1.24]
 
 
 

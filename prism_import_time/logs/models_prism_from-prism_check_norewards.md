@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [models](../../models/models)
+Parsed values: [, ERR, ERR, ERR, ERR]
 
 
 

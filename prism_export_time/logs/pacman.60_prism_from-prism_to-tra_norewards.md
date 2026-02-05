@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[47.194, 49.938, 61.364, 47.678, 47.885]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [47.194, 49.938, 61.364, 47.678, 47.885]
 
 
 

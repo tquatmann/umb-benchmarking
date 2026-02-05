@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1408252.0, 1412168.0, 1408032.0, 1408536.0, 1409356.0]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1408252.0, 1412168.0, 1408032.0, 1408536.0, 1409356.0]
 
 
 

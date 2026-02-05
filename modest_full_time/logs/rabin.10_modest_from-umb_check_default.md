@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_default on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb_check_default
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [, , , , ]
 
 
 

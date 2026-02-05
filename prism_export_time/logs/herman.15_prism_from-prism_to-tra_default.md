@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[6.3, 6.409, 5.921, 5.932, 6.57]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [6.3, 6.409, 5.921, 5.932, 6.57]
 
 
 

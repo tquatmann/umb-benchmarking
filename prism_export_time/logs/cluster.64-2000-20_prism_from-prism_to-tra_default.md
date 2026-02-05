@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[0.4, 0.447, 0.373, 0.415, 1.758]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [0.4, 0.447, 0.373, 0.415, 1.758]
 
 
 

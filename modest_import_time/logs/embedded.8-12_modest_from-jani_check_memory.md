@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.1, 0.1, 0.1, 0.1, 0.1]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.1, 0.1, 0.1, 0.1, 0.1]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[0.4, 0.6000000000000001, 0.5, 0.6000000000000001, 0.5]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [0.4, 0.6000000000000001, 0.5, 0.6000000000000001, 0.5]
 
 
 

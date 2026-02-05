@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe-memory on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: modest_from-umb_check_unsafe-memory
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

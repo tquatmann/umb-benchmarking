@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[0.637, 0.728, 0.627, 0.695, 0.743]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [0.637, 0.728, 0.627, 0.695, 0.743]
 
 
 

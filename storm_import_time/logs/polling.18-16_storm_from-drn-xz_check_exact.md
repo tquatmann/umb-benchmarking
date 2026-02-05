@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[128.7, 114.79, 112.37, 139.662, 112.579]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [128.7, 114.79, 112.37, 139.662, 112.579]
 
 
 

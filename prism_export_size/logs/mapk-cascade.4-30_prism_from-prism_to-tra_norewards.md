@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[22842924.0, 22842924.0, 22842924.0, 22842924.0, 22842924.0]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [22842924.0, 22842924.0, 22842924.0, 22842924.0, 22842924.0]
 
 
 

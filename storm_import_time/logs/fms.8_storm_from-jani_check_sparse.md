@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[42.559999999999995, 43.636, 39.049, 39.546, 36.468]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [42.559999999999995, 43.636, 39.049, 39.546, 36.468]
 
 
 

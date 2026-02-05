@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[1.466, 1.428, 1.247, 0.992, 0.824]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [1.466, 1.428, 1.247, 0.992, 0.824]
 
 
 

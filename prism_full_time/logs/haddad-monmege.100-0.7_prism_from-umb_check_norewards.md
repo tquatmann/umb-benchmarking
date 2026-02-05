@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

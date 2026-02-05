@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[38.184, 38.998, 32.617, 38.497, 37.749]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [38.184, 38.998, 32.617, 38.497, 37.749]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_sparse on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.09, 0.061, 0.102, 0.087, 0.085]`
+Tool configuration: storm_from-drn-xz_check_sparse
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.09, 0.061, 0.102, 0.087, 0.085]
 
 
 

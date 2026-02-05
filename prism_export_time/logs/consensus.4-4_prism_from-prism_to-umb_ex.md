@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_ex on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.227, 0.299, 0.18, 0.217, 0.337]`
+Tool configuration: prism_from-prism_to-umb_ex
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.227, 0.299, 0.18, 0.217, 0.337]
 
 
 

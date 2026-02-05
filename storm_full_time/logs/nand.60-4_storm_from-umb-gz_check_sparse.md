@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_sparse on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[11.056, 11.353, 10.674, 10.904, 9.852]`
+Tool configuration: storm_from-umb-gz_check_sparse
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [11.056, 11.353, 10.674, 10.904, 9.852]
 
 
 

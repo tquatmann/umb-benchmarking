@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[10.451, 11.735, 10.315, 11.179, 10.739]`
+Tool configuration: modest_from-umb-xz_check_unsafe
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [10.451, 11.735, 10.315, 11.179, 10.739]
 
 
 

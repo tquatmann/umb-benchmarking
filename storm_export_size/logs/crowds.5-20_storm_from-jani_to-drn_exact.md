@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_exact on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[165502674.0, 165502674.0, 165502674.0, 165502674.0, 165502674.0]`
+Tool configuration: storm_from-jani_to-drn_exact
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [165502674.0, 165502674.0, 165502674.0, 165502674.0, 165502674.0]
 
 
 

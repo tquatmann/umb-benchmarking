@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[3.27, 3.751, 5.533, 3.161, 3.637]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [3.27, 3.751, 5.533, 3.161, 3.637]
 
 
 

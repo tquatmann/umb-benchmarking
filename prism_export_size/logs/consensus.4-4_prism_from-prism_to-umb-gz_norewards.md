@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[2350318.0, 2350318.0, 2350318.0, 2350318.0, 2350318.0]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [2350318.0, 2350318.0, 2350318.0, 2350318.0, 2350318.0]
 
 
 

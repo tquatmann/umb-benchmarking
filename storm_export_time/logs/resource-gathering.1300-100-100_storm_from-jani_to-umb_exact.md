@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_exact on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[1.466, 1.443, 1.691, 1.389, 1.655]`
+Tool configuration: storm_from-jani_to-umb_exact
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [1.466, 1.443, 1.691, 1.389, 1.655]
 
 
 

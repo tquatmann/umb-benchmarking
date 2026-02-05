@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[7.576, 7.336, 8.385, 7.815, 7.493]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [7.576, 7.336, 8.385, 7.815, 7.493]
 
 
 

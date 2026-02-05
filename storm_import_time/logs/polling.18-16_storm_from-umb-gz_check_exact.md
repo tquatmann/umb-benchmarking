@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[41.509, 47.774, 39.066, 39.149, 40.365]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [41.509, 47.774, 39.066, 39.149, 40.365]
 
 
 

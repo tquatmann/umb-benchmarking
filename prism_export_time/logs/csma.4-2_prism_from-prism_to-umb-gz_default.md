@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[1.158, 1.451, 1.163, 1.15, 1.44]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [1.158, 1.451, 1.163, 1.15, 1.44]
 
 
 

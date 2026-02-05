@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[138940537.0, 138940537.0, 138940537.0, 138940537.0, 138940537.0]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [138940537.0, 138940537.0, 138940537.0, 138940537.0, 138940537.0]
 
 
 

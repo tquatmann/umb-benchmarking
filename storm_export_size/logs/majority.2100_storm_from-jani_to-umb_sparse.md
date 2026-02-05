@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[34540544.0, 34540544.0, 34540544.0, 34540544.0, 34540544.0]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [34540544.0, 34540544.0, 34540544.0, 34540544.0, 34540544.0]
 
 
 

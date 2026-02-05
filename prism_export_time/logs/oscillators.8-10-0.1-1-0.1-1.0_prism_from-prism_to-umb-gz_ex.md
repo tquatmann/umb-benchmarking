@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_ex on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.413, 0.258, 0.242, 0.243, 0.227]`
+Tool configuration: prism_from-prism_to-umb-gz_ex
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.413, 0.258, 0.242, 0.243, 0.227]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[3.507, 2.915, 2.896, 2.992, 3.031]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [3.507, 2.915, 2.896, 2.992, 3.031]
 
 
 

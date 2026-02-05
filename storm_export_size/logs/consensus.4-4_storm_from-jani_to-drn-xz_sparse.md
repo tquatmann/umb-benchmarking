@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[279940.0, 280308.0, 280308.0, 280308.0, 280308.0]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [279940.0, 280308.0, 280308.0, 280308.0, 280308.0]
 
 
 

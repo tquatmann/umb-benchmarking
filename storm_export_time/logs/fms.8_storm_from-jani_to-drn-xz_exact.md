@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[498.033, 371.218, 613.829, 734.073, 395.193]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [498.033, 371.218, 613.829, 734.073, 395.193]
 
 
 

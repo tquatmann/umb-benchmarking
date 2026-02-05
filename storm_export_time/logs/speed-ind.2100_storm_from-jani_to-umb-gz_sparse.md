@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_sparse on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[5.702, 5.934, 5.562, 4.895, 5.611]`
+Tool configuration: storm_from-jani_to-umb-gz_sparse
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [5.702, 5.934, 5.562, 4.895, 5.611]
 
 
 

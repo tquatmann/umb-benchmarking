@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[TO, 1.2, 1.2, TO, TO]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [TO, 1.2, 1.2, TO, TO]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_default on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb_default
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

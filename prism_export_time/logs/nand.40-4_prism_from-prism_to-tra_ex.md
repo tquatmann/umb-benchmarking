@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

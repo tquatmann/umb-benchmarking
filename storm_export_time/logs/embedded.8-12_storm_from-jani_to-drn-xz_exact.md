@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.329, 1.454, 0.365, 0.315, 0.362]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.329, 1.454, 0.365, 0.315, 0.362]
 
 
 

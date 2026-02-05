@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[683736.0, 730784.0, 730780.0, 684212.0, 684212.0]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [683736.0, 730784.0, 730780.0, 684212.0, 684212.0]
 
 
 

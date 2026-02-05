@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [, , , , ]
 
 
 

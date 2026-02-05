@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[16861783.0, 16861783.0, 16861783.0, 16861783.0, 16861783.0]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [16861783.0, 16861783.0, 16861783.0, 16861783.0, 16861783.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[0.169, 0.32, 0.183, 0.193, 0.191]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [0.169, 0.32, 0.183, 0.193, 0.191]
 
 
 

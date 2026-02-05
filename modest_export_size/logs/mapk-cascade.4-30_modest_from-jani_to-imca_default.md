@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[12215466.0, 12215466.0, 12215466.0, 12215466.0, 12215466.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [12215466.0, 12215466.0, 12215466.0, 12215466.0, 12215466.0]
 
 
 

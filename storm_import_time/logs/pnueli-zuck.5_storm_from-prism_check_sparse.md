@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[2.275, 2.48, 2.278, 2.218, 2.883]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [2.275, 2.48, 2.278, 2.218, 2.883]
 
 
 

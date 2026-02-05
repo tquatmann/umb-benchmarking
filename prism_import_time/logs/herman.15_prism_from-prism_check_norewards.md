@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[0.014, 0.02, 0.015, 0.123, 0.07]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [0.014, 0.02, 0.015, 0.123, 0.07]
 
 
 

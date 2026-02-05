@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[0.073, 0.045, 0.072, 0.04, 0.078]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [0.073, 0.045, 0.072, 0.04, 0.078]
 
 
 

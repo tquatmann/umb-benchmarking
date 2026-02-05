@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[1.583, 1.919, 5.733, 2.318, 1.536]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [1.583, 1.919, 5.733, 2.318, 1.536]
 
 
 

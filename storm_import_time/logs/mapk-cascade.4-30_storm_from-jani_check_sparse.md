@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.202, 1.181, 1.141, 1.323, 1.111]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.202, 1.181, 1.141, 1.323, 1.111]
 
 
 

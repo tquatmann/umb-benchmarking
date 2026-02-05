@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[0.045, 0.04, 0.061, 0.042, 0.053]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [0.045, 0.04, 0.061, 0.042, 0.053]
 
 
 

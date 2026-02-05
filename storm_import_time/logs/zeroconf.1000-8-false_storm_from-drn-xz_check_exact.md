@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[5.802, 7.318, 6.793, 5.686, 5.765]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [5.802, 7.318, 6.793, 5.686, 5.765]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[1.312, 1.503, 1.517, 1.3, 1.391]`
+Tool configuration: modest_from-umb-gz_check_unsafe
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [1.312, 1.503, 1.517, 1.3, 1.391]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[2483825934.0, 2483825934.0, 2483825934.0, 2483825934.0, 2483825934.0]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [2483825934.0, 2483825934.0, 2483825934.0, 2483825934.0, 2483825934.0]
 
 
 

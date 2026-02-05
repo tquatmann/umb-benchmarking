@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

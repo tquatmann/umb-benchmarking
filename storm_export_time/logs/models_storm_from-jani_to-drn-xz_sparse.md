@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

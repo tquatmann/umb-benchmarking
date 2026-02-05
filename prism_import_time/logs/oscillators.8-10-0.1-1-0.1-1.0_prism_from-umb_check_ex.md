@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.122, 0.085, 0.075, 0.082, 0.108]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.122, 0.085, 0.075, 0.082, 0.108]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[328.698, 370.306, 379.013, 323.169, 359.424]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [328.698, 370.306, 379.013, 323.169, 359.424]
 
 
 

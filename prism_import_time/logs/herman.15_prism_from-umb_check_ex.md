@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[0.707, 0.435, 0.481, 0.63, 0.538]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [0.707, 0.435, 0.481, 0.63, 0.538]
 
 
 

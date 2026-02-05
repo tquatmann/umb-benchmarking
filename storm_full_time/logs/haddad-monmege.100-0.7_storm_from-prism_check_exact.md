@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.093, 0.081, 0.084, 0.112, 0.17]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.093, 0.081, 0.084, 0.112, 0.17]
 
 
 

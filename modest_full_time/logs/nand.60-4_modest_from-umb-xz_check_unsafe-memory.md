@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe-memory on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[3.791, 4.064, 4.181, 4.121, 3.687]`
+Tool configuration: modest_from-umb-xz_check_unsafe-memory
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [3.791, 4.064, 4.181, 4.121, 3.687]
 
 
 

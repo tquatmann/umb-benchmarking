@@ -1,34 +1,8 @@
-# Log files for modest_from-jani_to-umb_default on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[17159210.0, 17159210.0, 17159210.0, 17159210.0, 17159210.0]`
-
-
-
-### Log file: modest_from-jani_to-umb_default_firewire.false-36-800_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/firewire.false-36-800/model.jani --umb out/modest_from-jani_to-umb_default/firewire.false-36-800/model.umb out/modest_from-jani_to-umb_default/firewire.false-36-800/umb.properties.txt  -D --exhaustive
-Wallclock time: 0.193 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/firewire.false-36-800/model.jani --umb out/modest_from-jani_to-umb_default/firewire.false-36-800/model.umb out/modest_from-jani_to-umb_default/firewire.false-36-800/umb.properties.txt -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani:automata[0].variables[0]: info: Expanding variable "w12" into 10 locations in automaton "wire12".
-model.jani:variables[2]: info: Expanding variable "s1" into 9 locations in automaton "node1".
-model.jani:automata[2].variables[0]: info: Expanding variable "w21" into 10 locations in automaton "wire21".
-model.jani:variables[3]: info: Expanding variable "s2" into 9 locations in automaton "node2".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb_default/firewire.false-36-800/model.umb" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb_default/firewire.false-36-800/model.umb:	Size of output file is 17159168 bytes
-out/modest_from-jani_to-umb_default/firewire.false-36-800/umb.properties.txt:	Size of output file is 42 bytes
-```
+Tool configuration: modest_from-jani_to-umb_default
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [, 17159210.0, 17159210.0, 17159210.0, 17159210.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_norewards on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb_norewards
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

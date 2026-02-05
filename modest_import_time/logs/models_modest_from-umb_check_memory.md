@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

@@ -1,4 +1,4 @@
- # eajs.5-250-11
+# eajs.5-250-11
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_sparse on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[64.252, 50.412, 62.621, 51.489, 50.259]`
+Tool configuration: storm_from-drn-xz_check_sparse
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [64.252, 50.412, 62.621, 51.489, 50.259]
 
 
 

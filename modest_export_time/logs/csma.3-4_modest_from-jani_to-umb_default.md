@@ -1,30 +1,8 @@
-# Log files for modest_from-jani_to-umb_default on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[ERR, 0.3, 0.1, 0.1, 0.1]`
-
-
-
-### Log file: modest_from-jani_to-umb_default_csma.3-4_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/csma.3-4/model.jani --umb out/modest_from-jani_to-umb_default/csma.3-4/model.umb out/modest_from-jani_to-umb_default/csma.3-4/umb.properties.txt  -D --exhaustive
-Wallclock time: 0.219 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/csma.3-4/model.jani --umb out/modest_from-jani_to-umb_default/csma.3-4/model.umb out/modest_from-jani_to-umb_default/csma.3-4/umb.properties.txt -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb_default/csma.3-4/model.umb" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb_default/csma.3-4/model.umb:	Size of output file is 62361600 bytes
-out/modest_from-jani_to-umb_default/csma.3-4/umb.properties.txt:	Size of output file is 38 bytes
-```
+Tool configuration: modest_from-jani_to-umb_default
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [, 0.3, 0.1, 0.1, 0.1]
 
 
 

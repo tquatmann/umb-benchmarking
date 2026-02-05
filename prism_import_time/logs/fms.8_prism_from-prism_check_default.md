@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[4.359, 10.856, 3.75, 3.02, 5.819]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [4.359, 10.856, 3.75, 3.02, 5.819]
 
 
 

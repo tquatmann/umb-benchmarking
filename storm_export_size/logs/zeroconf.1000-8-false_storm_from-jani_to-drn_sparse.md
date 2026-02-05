@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[119817980.0, 119817980.0, 119817980.0, 119817980.0, 119817980.0]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [119817980.0, 119817980.0, 119817980.0, 119817980.0, 119817980.0]
 
 
 

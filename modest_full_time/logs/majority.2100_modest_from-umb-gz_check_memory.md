@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_memory on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[492.726, 487.232, 437.311, 598.718, 473.792]`
+Tool configuration: modest_from-umb-gz_check_memory
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [492.726, 487.232, 437.311, 598.718, 473.792]
 
 
 

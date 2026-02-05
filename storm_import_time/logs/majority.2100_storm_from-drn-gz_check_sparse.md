@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[0.942, 4.648, 0.943, 0.96, 0.977]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [0.942, 4.648, 0.943, 0.96, 0.977]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[NS, NS, NS, NS, NS]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [NS, NS, NS, NS, NS]
 
 
 

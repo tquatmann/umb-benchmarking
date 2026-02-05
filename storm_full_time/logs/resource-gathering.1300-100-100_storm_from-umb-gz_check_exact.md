@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[1015.461, 1011.842, 1161.846, 926.579, 928.49]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [1015.461, 1011.842, 1161.846, 926.579, 928.49]
 
 
 

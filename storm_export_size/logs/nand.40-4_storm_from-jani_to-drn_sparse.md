@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[203673259.0, 203673259.0, 203673259.0, 203673259.0, 203673259.0]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [203673259.0, 203673259.0, 203673259.0, 203673259.0, 203673259.0]
 
 
 

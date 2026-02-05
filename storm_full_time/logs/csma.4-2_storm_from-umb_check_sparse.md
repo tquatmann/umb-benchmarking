@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_sparse on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[0.586, 0.611, 0.589, 0.584, 0.608]`
+Tool configuration: storm_from-umb_check_sparse
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [0.586, 0.611, 0.589, 0.584, 0.608]
 
 
 

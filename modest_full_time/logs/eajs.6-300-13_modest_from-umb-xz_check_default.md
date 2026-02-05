@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[4.97, 5.611, 5.413, 5.679, 5.06]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [4.97, 5.611, 5.413, 5.679, 5.06]
 
 
 

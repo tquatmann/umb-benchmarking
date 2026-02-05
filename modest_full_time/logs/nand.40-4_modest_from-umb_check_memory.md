@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[23.371, 0.828, 0.721, 0.837, 0.722]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [23.371, 0.828, 0.721, 0.837, 0.722]
 
 
 

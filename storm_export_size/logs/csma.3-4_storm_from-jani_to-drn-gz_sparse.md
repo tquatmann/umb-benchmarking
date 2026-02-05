@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_sparse on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[10253689.0, 10253711.0, 10253711.0, 10253711.0, 10253711.0]`
+Tool configuration: storm_from-jani_to-drn-gz_sparse
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [10253689.0, 10253711.0, 10253711.0, 10253711.0, 10253711.0]
 
 
 

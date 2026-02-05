@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[61800448.0, 61800448.0, 61800448.0, 61800448.0, 61800448.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [61800448.0, 61800448.0, 61800448.0, 61800448.0, 61800448.0]
 
 
 

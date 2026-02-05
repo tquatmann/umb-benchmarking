@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[10.321, 10.156, 11.649, 9.945, 10.673]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [10.321, 10.156, 11.649, 9.945, 10.673]
 
 
 

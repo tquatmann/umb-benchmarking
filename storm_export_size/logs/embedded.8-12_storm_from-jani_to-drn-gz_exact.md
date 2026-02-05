@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_exact on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[149606.0, 149611.0, 149611.0, 149612.0, 149611.0]`
+Tool configuration: storm_from-jani_to-drn-gz_exact
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [149606.0, 149611.0, 149611.0, 149612.0, 149611.0]
 
 
 

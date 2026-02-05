@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[454108899.0, 454108899.0, 454108899.0, 454108899.0, 454108899.0]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [454108899.0, 454108899.0, 454108899.0, 454108899.0, 454108899.0]
 
 
 

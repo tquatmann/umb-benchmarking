@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[149.857, 145.53, 151.15, 148.598, 183.4]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [149.857, 145.53, 151.15, 148.598, 183.4]
 
 
 

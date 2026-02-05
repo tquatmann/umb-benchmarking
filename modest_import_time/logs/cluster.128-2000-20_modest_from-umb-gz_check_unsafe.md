@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[0.2, 0.2, 0.2, TO, TO]`
+Tool configuration: modest_from-umb-gz_check_unsafe
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [0.2, 0.2, 0.2, TO, TO]
 
 
 

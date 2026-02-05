@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

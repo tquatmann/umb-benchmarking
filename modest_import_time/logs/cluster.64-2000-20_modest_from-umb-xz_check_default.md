@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[0.30000000000000004, 0.30000000000000004, 1.5, 0.30000000000000004, 0.5]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [0.30000000000000004, 0.30000000000000004, 1.5, 0.30000000000000004, 0.5]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[1.042, 1.282, 1.037, 1.047, 1.189]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [1.042, 1.282, 1.037, 1.047, 1.189]
 
 
 

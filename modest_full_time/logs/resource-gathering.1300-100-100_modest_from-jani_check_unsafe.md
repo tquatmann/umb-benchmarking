@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[8.747, 10.618, 9.302, 9.89, 9.628]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [8.747, 10.618, 9.302, 9.89, 9.628]
 
 
 

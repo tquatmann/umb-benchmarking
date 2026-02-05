@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[0.795, 0.801, 0.77, 0.854, 0.923]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [0.795, 0.801, 0.77, 0.854, 0.923]
 
 
 

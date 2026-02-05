@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[129.252, 133.014, 143.302, 136.724, 131.465]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [129.252, 133.014, 143.302, 136.724, 131.465]
 
 
 

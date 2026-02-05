@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[951.62, 1459.629, 975.117, 1094.109, 1069.833]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [951.62, 1459.629, 975.117, 1094.109, 1069.833]
 
 
 

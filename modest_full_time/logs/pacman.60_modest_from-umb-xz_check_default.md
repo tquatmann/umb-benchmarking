@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[10.64, 11.119, 12.296, 11.736, 10.892]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [10.64, 11.119, 12.296, 11.736, 10.892]
 
 
 

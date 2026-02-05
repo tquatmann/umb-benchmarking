@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

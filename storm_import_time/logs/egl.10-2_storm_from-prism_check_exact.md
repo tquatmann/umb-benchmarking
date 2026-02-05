@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[907.361, 835.293, 836.835, 828.629, 819.526]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [907.361, 835.293, 836.835, 828.629, 819.526]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[5.937, 6.314, 7.255, 6.744, 6.514]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [5.937, 6.314, 7.255, 6.744, 6.514]
 
 
 

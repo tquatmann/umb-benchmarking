@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[1.5099999999999998, 1.6019999999999999, 1.51, 1.567, 1.658]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [1.5099999999999998, 1.6019999999999999, 1.51, 1.567, 1.658]
 
 
 

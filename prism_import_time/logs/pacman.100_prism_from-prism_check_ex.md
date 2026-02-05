@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[3.399, 3.343, 3.888, 3.316, 3.317]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [3.399, 3.343, 3.888, 3.316, 3.317]
 
 
 

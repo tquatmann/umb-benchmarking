@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[70029999.0, 70029999.0, 70029999.0, 70029999.0, 70029999.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [70029999.0, 70029999.0, 70029999.0, 70029999.0, 70029999.0]
 
 
 

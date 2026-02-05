@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

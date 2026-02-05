@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[TO, 68.4, TO, TO, TO]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [TO, 68.4, TO, TO, TO]
 
 
 

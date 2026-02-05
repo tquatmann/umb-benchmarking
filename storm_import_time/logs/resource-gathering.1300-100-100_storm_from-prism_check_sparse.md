@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[4.2, 4.521, 4.95, 4.273000000000001, 4.317]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [4.2, 4.521, 4.95, 4.273000000000001, 4.317]
 
 
 

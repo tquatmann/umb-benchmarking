@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_sparse on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[0.71, 0.87, 0.726, 0.739, 0.815]`
+Tool configuration: storm_from-drn_check_sparse
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [0.71, 0.87, 0.726, 0.739, 0.815]
 
 
 

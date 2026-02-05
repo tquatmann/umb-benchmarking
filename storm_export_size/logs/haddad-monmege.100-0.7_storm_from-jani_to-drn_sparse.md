@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[8343.0, 8343.0, 8343.0, 8343.0, 8343.0]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [8343.0, 8343.0, 8343.0, 8343.0, 8343.0]
 
 
 

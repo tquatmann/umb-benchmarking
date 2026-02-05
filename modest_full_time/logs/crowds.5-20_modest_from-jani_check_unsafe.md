@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[5.335, 4.679, 5.785, 4.986, 6.065]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [5.335, 4.679, 5.785, 4.986, 6.065]
 
 
 

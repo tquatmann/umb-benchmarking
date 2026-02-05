@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [pnueli-zuck.10](../../models/pnueli-zuck.10)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

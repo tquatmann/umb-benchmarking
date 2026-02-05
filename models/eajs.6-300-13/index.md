@@ -1,4 +1,4 @@
- # eajs.6-300-13
+# eajs.6-300-13
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[68.298, 66.616, 69.847, 69.695, 67.476]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [68.298, 66.616, 69.847, 69.695, 67.476]
 
 
 

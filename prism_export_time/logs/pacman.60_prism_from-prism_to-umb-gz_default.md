@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[40.936, 49.36, 53.732, 43.679, 45.018]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [40.936, 49.36, 53.732, 43.679, 45.018]
 
 
 

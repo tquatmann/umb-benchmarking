@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[0.9, 0.7, 0.9, 1.2, 0.7]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [0.9, 0.7, 0.9, 1.2, 0.7]
 
 
 

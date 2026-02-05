@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[1.213, 1.153, 1.369, 1.288, 1.43]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [1.213, 1.153, 1.369, 1.288, 1.43]
 
 
 

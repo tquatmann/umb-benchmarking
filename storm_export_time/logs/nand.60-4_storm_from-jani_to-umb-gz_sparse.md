@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_sparse on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[15.588, 16.482, 18.989, 15.674, 17.018]`
+Tool configuration: storm_from-jani_to-umb-gz_sparse
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [15.588, 16.482, 18.989, 15.674, 17.018]
 
 
 

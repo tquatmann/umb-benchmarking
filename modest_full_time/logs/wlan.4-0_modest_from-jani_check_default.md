@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[1.4, 1.289, 1.621, 1.314, 1.449]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [1.4, 1.289, 1.621, 1.314, 1.449]
 
 
 

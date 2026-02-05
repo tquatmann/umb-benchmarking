@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[0.556, 0.516, 0.55, 0.524, 0.498]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [0.556, 0.516, 0.55, 0.524, 0.498]
 
 
 

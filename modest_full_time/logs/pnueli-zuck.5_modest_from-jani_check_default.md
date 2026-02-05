@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[2.671, 2.777, 11.379, 2.737, 2.843]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [2.671, 2.777, 11.379, 2.737, 2.843]
 
 
 

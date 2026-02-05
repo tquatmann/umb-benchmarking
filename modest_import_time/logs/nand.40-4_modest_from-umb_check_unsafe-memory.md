@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe-memory on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[0.9, 0.3, 0.5, 0.6, 0.4]`
+Tool configuration: modest_from-umb_check_unsafe-memory
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [0.9, 0.3, 0.5, 0.6, 0.4]
 
 
 

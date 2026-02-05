@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[16.551, 17.772, 16.402, 16.032, 16.649]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [16.551, 17.772, 16.402, 16.032, 16.649]
 
 
 

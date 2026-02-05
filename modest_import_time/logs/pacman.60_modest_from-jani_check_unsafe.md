@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[112.10000000000001, 113.80000000000001, 105.3, 116.0, 127.30000000000001]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [112.10000000000001, 113.80000000000001, 105.3, 116.0, 127.30000000000001]
 
 
 

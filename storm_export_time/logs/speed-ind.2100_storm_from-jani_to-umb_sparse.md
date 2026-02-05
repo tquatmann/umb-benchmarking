@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[0.203, 0.239, 0.227, 0.219, 0.202]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [0.203, 0.239, 0.227, 0.219, 0.202]
 
 
 

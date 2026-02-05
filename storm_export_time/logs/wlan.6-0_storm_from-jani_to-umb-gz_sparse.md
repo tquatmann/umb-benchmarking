@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_sparse on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[9.03, 8.932, 10.353, 9.392, 8.684]`
+Tool configuration: storm_from-jani_to-umb-gz_sparse
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [9.03, 8.932, 10.353, 9.392, 8.684]
 
 
 

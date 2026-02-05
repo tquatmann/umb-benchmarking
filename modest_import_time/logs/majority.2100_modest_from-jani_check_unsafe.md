@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[1.7, 2.1, 2.1, 1.7, 1.9]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [1.7, 2.1, 2.1, 1.7, 1.9]
 
 
 

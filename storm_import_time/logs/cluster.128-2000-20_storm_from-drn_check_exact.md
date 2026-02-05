@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[12.981, 14.758, 12.968, 15.495, 14.68]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [12.981, 14.758, 12.968, 15.495, 14.68]
 
 
 

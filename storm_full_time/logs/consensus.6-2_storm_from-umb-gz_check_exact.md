@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[TO, 7103.377, 6810.757, 6733.784, TO]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [TO, 7103.377, 6810.757, 6733.784, TO]
 
 
 

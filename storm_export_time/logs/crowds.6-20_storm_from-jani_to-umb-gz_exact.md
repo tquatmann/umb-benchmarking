@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[26.896, 29.256, 32.585, 27.472, 26.941]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [26.896, 29.256, 32.585, 27.472, 26.941]
 
 
 

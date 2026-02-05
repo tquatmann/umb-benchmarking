@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [egl.10-8](../../models/egl.10-8)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [egl.10-8](../../models/egl.10-8)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_default on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[3.054, 3.257, 3.474, 4.243, 3.539]`
+Tool configuration: prism_from-prism_to-umb_default
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [3.054, 3.257, 3.474, 4.243, 3.539]
 
 
 

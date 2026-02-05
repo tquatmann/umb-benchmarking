@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[0.661, 0.558, 0.544, 0.339, 0.501]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [0.661, 0.558, 0.544, 0.339, 0.501]
 
 
 

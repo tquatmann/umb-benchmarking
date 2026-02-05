@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[1330982.0, 1330982.0, 1330982.0, 1330982.0, 1330982.0]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [1330982.0, 1330982.0, 1330982.0, 1330982.0, 1330982.0]
 
 
 

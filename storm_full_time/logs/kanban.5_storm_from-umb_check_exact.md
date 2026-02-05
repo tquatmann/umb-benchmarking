@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_exact on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[TO, MO, MO, MO, MO]`
+Tool configuration: storm_from-umb_check_exact
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [TO, MO, MO, MO, MO]
 
 
 

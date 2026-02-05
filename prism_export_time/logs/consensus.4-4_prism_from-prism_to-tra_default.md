@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.103, 0.093, 0.085, 0.082, 0.083]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.103, 0.093, 0.085, 0.082, 0.083]
 
 
 

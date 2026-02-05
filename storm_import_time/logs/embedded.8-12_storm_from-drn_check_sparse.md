@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_sparse on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.35, 0.406, 0.421, 0.432, 0.422]`
+Tool configuration: storm_from-drn_check_sparse
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.35, 0.406, 0.421, 0.432, 0.422]
 
 
 

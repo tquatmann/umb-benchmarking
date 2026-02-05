@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[835.457, 975.006, 977.441, 899.142, 839.771]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [835.457, 975.006, 977.441, 899.142, 839.771]
 
 
 

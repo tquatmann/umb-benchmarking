@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_exact on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-jani_to-drn-gz_exact
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe-memory on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[0.855, 0.938, 0.893, 0.886, 0.715]`
+Tool configuration: modest_from-umb_check_unsafe-memory
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [0.855, 0.938, 0.893, 0.886, 0.715]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_sparse on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[333484834.0, 333484843.0, 333484842.0, 333484843.0, 333484842.0]`
+Tool configuration: storm_from-jani_to-drn-gz_sparse
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [333484834.0, 333484843.0, 333484842.0, 333484843.0, 333484842.0]
 
 
 

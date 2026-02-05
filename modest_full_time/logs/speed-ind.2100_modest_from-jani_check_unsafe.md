@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[2133.373, 1980.57, 1876.427, 1747.181, 1752.703]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [2133.373, 1980.57, 1876.427, 1747.181, 1752.703]
 
 
 

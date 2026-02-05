@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[216.124, 171.399, 197.608, 193.035, 159.164]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [216.124, 171.399, 197.608, 193.035, 159.164]
 
 
 

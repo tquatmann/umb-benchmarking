@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[87.456, 87.20800000000001, 90.83500000000001, 101.225, 85.608]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [87.456, 87.20800000000001, 90.83500000000001, 101.225, 85.608]
 
 
 

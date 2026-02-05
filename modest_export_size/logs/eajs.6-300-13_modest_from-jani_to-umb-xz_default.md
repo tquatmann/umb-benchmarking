@@ -1,37 +1,8 @@
-# Log files for modest_from-jani_to-umb-xz_default on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[15183127.0, 15188959.0, 15206807.0, 15189035.0, 15306127.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-xz_default_eajs.6-300-13_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/eajs.6-300-13/model.jani --umb out/modest_from-jani_to-umb-xz_default/eajs.6-300-13/model.umb.xz out/modest_from-jani_to-umb-xz_default/eajs.6-300-13/umbxz.properties.txt --umb-compress XZ  -D --exhaustive
-Wallclock time: 0.213 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/eajs.6-300-13/model.jani --umb out/modest_from-jani_to-umb-xz_default/eajs.6-300-13/model.umb.xz out/modest_from-jani_to-umb-xz_default/eajs.6-300-13/umbxz.properties.txt --umb-compress XZ -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani:variables[3]: info: Expanding variable "loc_1" into 3 locations in automaton "Process_1".
-model.jani:variables[7]: info: Expanding variable "loc_2" into 3 locations in automaton "Process_2".
-model.jani:variables[9]: info: Expanding variable "user_1" into 7 locations in automaton "Resources".
-model.jani:variables[11]: info: Expanding variable "loc_3" into 3 locations in automaton "Process_3".
-model.jani:variables[13]: info: Expanding variable "loc_4" into 3 locations in automaton "Process_4".
-model.jani:variables[14]: info: Expanding variable "loc_6" into 3 locations in automaton "Process_6".
-model.jani:variables[17]: info: Expanding variable "loc_5" into 3 locations in automaton "Process_5".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-xz_default/eajs.6-300-13/model.umb.xz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-xz_default/eajs.6-300-13/model.umb.xz:	Size of output file is 15183096 bytes
-out/modest_from-jani_to-umb-xz_default/eajs.6-300-13/umbxz.properties.txt:	Size of output file is 31 bytes
-```
+Tool configuration: modest_from-jani_to-umb-xz_default
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [, 15188959.0, 15206807.0, 15189035.0, 15306127.0]
 
 
 

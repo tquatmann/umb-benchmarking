@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe-memory on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[1.433, 1.337, 1.334, 1.616, 1.609]`
+Tool configuration: modest_from-umb_check_unsafe-memory
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [1.433, 1.337, 1.334, 1.616, 1.609]
 
 
 

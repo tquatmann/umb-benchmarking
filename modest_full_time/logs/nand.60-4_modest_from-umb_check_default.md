@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_default on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[TO, 3210.579, TO, TO, 3845.86]`
+Tool configuration: modest_from-umb_check_default
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [TO, 3210.579, TO, TO, 3845.86]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[2.5, 2.8000000000000003, 2.6, 3.2, 2.5]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [2.5, 2.8000000000000003, 2.6, 3.2, 2.5]
 
 
 

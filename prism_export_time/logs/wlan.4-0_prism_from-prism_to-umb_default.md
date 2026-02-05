@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_default on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[2.075, 2.225, 2.487, 2.151, 2.259]`
+Tool configuration: prism_from-prism_to-umb_default
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [2.075, 2.225, 2.487, 2.151, 2.259]
 
 
 

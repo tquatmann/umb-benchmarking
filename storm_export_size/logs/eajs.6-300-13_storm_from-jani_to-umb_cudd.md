@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[574860288.0, 574860288.0, 574860288.0, 574860288.0, 574860288.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [574860288.0, 574860288.0, 574860288.0, 574860288.0, 574860288.0]
 
 
 

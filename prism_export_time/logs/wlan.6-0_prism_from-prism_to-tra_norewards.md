@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[8.218, 8.408, 9.502, 8.822, 8.25]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [8.218, 8.408, 9.502, 8.822, 8.25]
 
 
 

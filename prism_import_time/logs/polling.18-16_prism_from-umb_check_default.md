@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [, , , , ]
 
 
 

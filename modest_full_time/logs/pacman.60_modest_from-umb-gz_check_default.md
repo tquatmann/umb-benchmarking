@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[4.375, 4.458, 4.9, 4.393, 5.074]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [4.375, 4.458, 4.9, 4.393, 5.074]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[1.476, 1.41, 1.752, 1.539, 1.363]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [1.476, 1.41, 1.752, 1.539, 1.363]
 
 
 

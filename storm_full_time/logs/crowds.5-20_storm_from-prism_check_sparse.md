@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[6.382, 6.15, 6.924, 5.864, 26.918]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [6.382, 6.15, 6.924, 5.864, 26.918]
 
 
 

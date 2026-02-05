@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_norewards on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb_norewards
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

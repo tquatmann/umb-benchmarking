@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[4.591, 5.948, 5.034, 5.509, 4.795]`
+Tool configuration: modest_from-umb-gz_check_unsafe
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [4.591, 5.948, 5.034, 5.509, 4.795]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.844, 0.818, 0.787, 0.778, 0.844]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.844, 0.818, 0.787, 0.778, 0.844]
 
 
 

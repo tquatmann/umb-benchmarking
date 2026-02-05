@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_exact on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[0.974, 0.834, 0.809, 0.918, 0.922]`
+Tool configuration: storm_from-jani_to-drn_exact
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [0.974, 0.834, 0.809, 0.918, 0.922]
 
 
 

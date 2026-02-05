@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[26.599, 28.627, 27.862, 25.993, 25.622]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [26.599, 28.627, 27.862, 25.993, 25.622]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[15698447.0, 15698447.0, 15698447.0, 15698447.0, 15698447.0]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [15698447.0, 15698447.0, 15698447.0, 15698447.0, 15698447.0]
 
 
 

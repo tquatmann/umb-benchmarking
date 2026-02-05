@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[56318976.0, 56318976.0, 56318976.0, 56318976.0, 56318976.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [56318976.0, 56318976.0, 56318976.0, 56318976.0, 56318976.0]
 
 
 

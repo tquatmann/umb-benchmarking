@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.013, 0.012, 0.012, 0.006, 0.007]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.013, 0.012, 0.012, 0.006, 0.007]
 
 
 

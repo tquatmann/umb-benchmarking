@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[32457372.0, 32452584.0, 32457372.0, 32452584.0, 32452584.0]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [32457372.0, 32452584.0, 32457372.0, 32452584.0, 32452584.0]
 
 
 

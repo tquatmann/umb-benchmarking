@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.062, 0.06, 0.07, 0.064, 0.063]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.062, 0.06, 0.07, 0.064, 0.063]
 
 
 

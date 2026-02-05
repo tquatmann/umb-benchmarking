@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[14.826, 24.408, 14.322, 15.189, 14.419]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [14.826, 24.408, 14.322, 15.189, 14.419]
 
 
 

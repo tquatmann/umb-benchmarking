@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[MO, MO, MO, MO, MO]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [MO, MO, MO, MO, MO]
 
 
 

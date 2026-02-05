@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_exact on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[24717824.0, 24717824.0, 24717824.0, 24717824.0, 24717824.0]`
+Tool configuration: storm_from-jani_to-umb_exact
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [24717824.0, 24717824.0, 24717824.0, 24717824.0, 24717824.0]
 
 
 

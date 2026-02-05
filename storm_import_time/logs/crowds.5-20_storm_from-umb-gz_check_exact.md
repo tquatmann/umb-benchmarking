@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[3.319, 3.234, 3.201, 3.245, 3.659]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [3.319, 3.234, 3.201, 3.245, 3.659]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [, , , , ]
 
 
 

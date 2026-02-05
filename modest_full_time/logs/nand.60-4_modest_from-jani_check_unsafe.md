@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[22.505, 23.501, 22.607, 23.143, 25.065]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [22.505, 23.501, 22.607, 23.143, 25.065]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[14.574, 12.906, 17.582, 12.981, 12.776]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [14.574, 12.906, 17.582, 12.981, 12.776]
 
 
 

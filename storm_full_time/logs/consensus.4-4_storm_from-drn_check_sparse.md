@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_sparse on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.971, 1.117, 1.539, 0.949, 3.518]`
+Tool configuration: storm_from-drn_check_sparse
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.971, 1.117, 1.539, 0.949, 3.518]
 
 
 

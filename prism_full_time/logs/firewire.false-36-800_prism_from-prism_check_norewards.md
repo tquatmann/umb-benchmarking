@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

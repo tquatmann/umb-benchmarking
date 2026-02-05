@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[27773244.0, 27773076.0, 27773260.0, 27773260.0, 27774524.0]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [27773244.0, 27773076.0, 27773260.0, 27773260.0, 27774524.0]
 
 
 

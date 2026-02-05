@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_sparse on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[6.322, 7.351, 8.071, 6.487, 6.255]`
+Tool configuration: storm_from-drn_check_sparse
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [6.322, 7.351, 8.071, 6.487, 6.255]
 
 
 

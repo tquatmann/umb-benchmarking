@@ -1,4 +1,4 @@
- # polling.18-16
+# polling.18-16
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [, , , , ]
 
 
 

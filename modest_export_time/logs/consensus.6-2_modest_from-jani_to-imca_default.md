@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[1.2, 1.1, 1.1, 1.1, 1.3]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [1.2, 1.1, 1.1, 1.1, 1.3]
 
 
 

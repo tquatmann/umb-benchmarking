@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[2.621, 2.636, 2.698, 2.658, 11.755]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [2.621, 2.636, 2.698, 2.658, 11.755]
 
 
 

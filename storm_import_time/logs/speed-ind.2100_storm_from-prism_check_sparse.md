@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[4.3069999999999995, 4.813, 4.2250000000000005, 3.75, 4.385]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [4.3069999999999995, 4.813, 4.2250000000000005, 3.75, 4.385]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[296.34, 71.084, 76.754, 73.359, 70.597]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [296.34, 71.084, 76.754, 73.359, 70.597]
 
 
 

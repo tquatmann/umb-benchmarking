@@ -1,4 +1,4 @@
- # haddad-monmege.100-0.7
+# haddad-monmege.100-0.7
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

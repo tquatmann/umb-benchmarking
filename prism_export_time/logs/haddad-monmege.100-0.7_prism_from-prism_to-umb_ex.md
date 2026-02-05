@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_ex on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.178, 0.095, 0.102, 0.108, 0.119]`
+Tool configuration: prism_from-prism_to-umb_ex
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.178, 0.095, 0.102, 0.108, 0.119]
 
 
 

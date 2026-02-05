@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[20.32, 20.351, 20.304, 20.955, 22.182]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [20.32, 20.351, 20.304, 20.955, 22.182]
 
 
 

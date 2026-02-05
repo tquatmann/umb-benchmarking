@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[230333945.0, 230333945.0, 230333945.0, 230333945.0, 230333945.0]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [230333945.0, 230333945.0, 230333945.0, 230333945.0, 230333945.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_sparse on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[70.783, 55.122, 158.336, 57.149, 61.513]`
+Tool configuration: storm_from-umb-gz_check_sparse
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [70.783, 55.122, 158.336, 57.149, 61.513]
 
 
 

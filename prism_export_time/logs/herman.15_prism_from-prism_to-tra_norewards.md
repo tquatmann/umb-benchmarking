@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[5.927, 6.604, 5.741, 6.01, 7.391]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [5.927, 6.604, 5.741, 6.01, 7.391]
 
 
 

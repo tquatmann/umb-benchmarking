@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[7.424, 7.696, 8.56, 7.584, 7.984]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [7.424, 7.696, 8.56, 7.584, 7.984]
 
 
 

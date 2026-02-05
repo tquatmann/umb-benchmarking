@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[770632167.0, 770632167.0, 770632167.0, 770632167.0, 770632167.0]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [770632167.0, 770632167.0, 770632167.0, 770632167.0, 770632167.0]
 
 
 

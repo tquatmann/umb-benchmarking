@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[1212.0, 1212.0, 1212.0, 1212.0, 1212.0]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [1212.0, 1212.0, 1212.0, 1212.0, 1212.0]
 
 
 

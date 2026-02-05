@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[76768962.0, 76768962.0, 76768962.0, 76768962.0, 76768962.0]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [76768962.0, 76768962.0, 76768962.0, 76768962.0, 76768962.0]
 
 
 

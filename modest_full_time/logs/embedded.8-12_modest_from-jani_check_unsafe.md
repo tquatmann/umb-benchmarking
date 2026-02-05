@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[4.138, 4.011, 3.887, 4.489, 3.868]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [4.138, 4.011, 3.887, 4.489, 3.868]
 
 
 

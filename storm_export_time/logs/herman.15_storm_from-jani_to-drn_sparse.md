@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[3.922, 4.067, 3.921, 4.424, 4.219]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [3.922, 4.067, 3.921, 4.424, 4.219]
 
 
 

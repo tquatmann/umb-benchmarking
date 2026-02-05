@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[43.471, 49.379, 41.184, 40.829, 49.679]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [43.471, 49.379, 41.184, 40.829, 49.679]
 
 
 

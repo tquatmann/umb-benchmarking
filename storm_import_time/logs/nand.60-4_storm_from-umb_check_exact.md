@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_exact on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[12.918, 12.744, 12.675, 12.719, 14.731]`
+Tool configuration: storm_from-umb_check_exact
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [12.918, 12.744, 12.675, 12.719, 14.731]
 
 
 

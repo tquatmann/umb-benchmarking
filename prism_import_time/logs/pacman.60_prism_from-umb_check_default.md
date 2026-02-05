@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [, , , , ]
 
 
 

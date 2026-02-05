@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[0.201, 0.263, 0.209, 0.236, 0.227]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [0.201, 0.263, 0.209, 0.236, 0.227]
 
 
 

@@ -1,4 +1,4 @@
- # csma.3-4
+# csma.3-4
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

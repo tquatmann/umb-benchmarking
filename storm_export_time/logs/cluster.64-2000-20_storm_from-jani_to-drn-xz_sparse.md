@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[7.21, 6.721, 10.62, 11.432, 6.738]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [7.21, 6.721, 10.62, 11.432, 6.738]
 
 
 

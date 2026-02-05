@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[12.494, 13.414, 13.062, 12.304, 13.36]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [12.494, 13.414, 13.062, 12.304, 13.36]
 
 
 

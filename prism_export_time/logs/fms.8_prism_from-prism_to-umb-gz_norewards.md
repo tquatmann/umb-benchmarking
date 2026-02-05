@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[47.626, 50.459, 45.904, 52.486, 55.195]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [47.626, 50.459, 45.904, 52.486, 55.195]
 
 
 

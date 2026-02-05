@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[7.05, 6.696, 6.434, 7.86, 6.46]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [7.05, 6.696, 6.434, 7.86, 6.46]
 
 
 

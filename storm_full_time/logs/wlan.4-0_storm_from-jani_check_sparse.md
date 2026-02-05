@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[1.266, 1.226, 2.277, 1.372, 1.226]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [1.266, 1.226, 2.277, 1.372, 1.226]
 
 
 

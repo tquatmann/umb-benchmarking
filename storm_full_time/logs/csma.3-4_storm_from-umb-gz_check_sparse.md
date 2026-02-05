@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_sparse on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[1.058, 1.026, 1.087, 1.417, 1.004]`
+Tool configuration: storm_from-umb-gz_check_sparse
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [1.058, 1.026, 1.087, 1.417, 1.004]
 
 
 

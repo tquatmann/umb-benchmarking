@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[5.69, 5.974, 5.549, 5.81, 5.966]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [5.69, 5.974, 5.549, 5.81, 5.966]
 
 
 

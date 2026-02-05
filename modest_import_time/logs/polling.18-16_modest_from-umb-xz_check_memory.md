@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

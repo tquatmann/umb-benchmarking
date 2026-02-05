@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

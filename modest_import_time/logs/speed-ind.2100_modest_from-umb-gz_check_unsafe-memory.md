@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe-memory on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[1.0, 1.0, 0.8, 1.0, 0.8]`
+Tool configuration: modest_from-umb-gz_check_unsafe-memory
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [1.0, 1.0, 0.8, 1.0, 0.8]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[32.736000000000004, 36.571000000000005, 33.736, 31.34, 31.323999999999998]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [32.736000000000004, 36.571000000000005, 33.736, 31.34, 31.323999999999998]
 
 
 

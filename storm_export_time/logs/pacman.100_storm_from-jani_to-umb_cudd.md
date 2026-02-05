@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[4.248, 5.066, 4.248, 4.217, 5.091]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [4.248, 5.066, 4.248, 4.217, 5.091]
 
 
 

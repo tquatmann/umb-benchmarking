@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[17.874, TO, TO, TO, TO]`
+Tool configuration: modest_from-umb_check_unsafe
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [17.874, TO, TO, TO, TO]
 
 
 

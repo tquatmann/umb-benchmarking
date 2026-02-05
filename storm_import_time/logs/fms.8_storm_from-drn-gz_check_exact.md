@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[60.386, 60.536, 61.424, 60.962, 72.513]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [60.386, 60.536, 61.424, 60.962, 72.513]
 
 
 

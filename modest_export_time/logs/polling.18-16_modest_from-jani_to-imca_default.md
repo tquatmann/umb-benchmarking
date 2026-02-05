@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[16.3, 16.0, 14.4, 16.7, 13.3]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [16.3, 16.0, 14.4, 16.7, 13.3]
 
 
 

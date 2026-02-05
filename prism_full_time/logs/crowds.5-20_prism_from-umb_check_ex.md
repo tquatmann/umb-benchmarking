@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[2.878, 3.955, 4.494, 3.373, 2.861]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [2.878, 3.955, 4.494, 3.373, 2.861]
 
 
 

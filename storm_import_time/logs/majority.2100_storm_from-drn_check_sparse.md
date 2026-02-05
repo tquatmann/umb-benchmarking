@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_sparse on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[0.934, 1.111, 1.064, 0.93, 1.107]`
+Tool configuration: storm_from-drn_check_sparse
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [0.934, 1.111, 1.064, 0.93, 1.107]
 
 
 

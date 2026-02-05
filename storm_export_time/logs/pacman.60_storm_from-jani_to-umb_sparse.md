@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[2.315, 2.122, 2.597, 2.455, 2.983]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [2.315, 2.122, 2.597, 2.455, 2.983]
 
 
 

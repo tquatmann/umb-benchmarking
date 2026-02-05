@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[21442080.0, 21442080.0, 21442080.0, 21442080.0, 21442080.0]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [21442080.0, 21442080.0, 21442080.0, 21442080.0, 21442080.0]
 
 
 

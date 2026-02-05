@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[124261245.0, 124261245.0, 124261245.0, 124261245.0, 124261245.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [124261245.0, 124261245.0, 124261245.0, 124261245.0, 124261245.0]
 
 
 

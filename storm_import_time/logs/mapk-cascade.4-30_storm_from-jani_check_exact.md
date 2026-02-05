@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[5.024, 5.118, 5.085999999999999, 4.513, 4.617]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [5.024, 5.118, 5.085999999999999, 4.513, 4.617]
 
 
 

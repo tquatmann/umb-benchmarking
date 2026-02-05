@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[0.8, 1.0, 1.0, 0.7, 1.0]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [0.8, 1.0, 1.0, 0.7, 1.0]
 
 
 

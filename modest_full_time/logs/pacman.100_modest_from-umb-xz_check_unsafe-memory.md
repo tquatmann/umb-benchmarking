@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe-memory on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[21.251, 25.473, 22.309, 23.032, 21.06]`
+Tool configuration: modest_from-umb-xz_check_unsafe-memory
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [21.251, 25.473, 22.309, 23.032, 21.06]
 
 
 

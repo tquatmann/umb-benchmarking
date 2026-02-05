@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [, , , , ]
 
 
 

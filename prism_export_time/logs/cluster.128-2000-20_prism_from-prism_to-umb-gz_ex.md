@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_ex on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[3.615, 3.046, 2.881, 3.541, 3.215]`
+Tool configuration: prism_from-prism_to-umb-gz_ex
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [3.615, 3.046, 2.881, 3.541, 3.215]
 
 
 

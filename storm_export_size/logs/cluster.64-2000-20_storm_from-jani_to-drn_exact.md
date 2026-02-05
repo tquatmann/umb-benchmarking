@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_exact on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[16920108.0, 16920108.0, 16920108.0, 16920108.0, 16920108.0]`
+Tool configuration: storm_from-jani_to-drn_exact
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [16920108.0, 16920108.0, 16920108.0, 16920108.0, 16920108.0]
 
 
 

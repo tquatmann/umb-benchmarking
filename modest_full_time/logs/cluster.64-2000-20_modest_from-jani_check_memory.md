@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[1243.379, 1286.272, 1304.779, 1599.351, 1314.998]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [1243.379, 1286.272, 1304.779, 1599.351, 1314.998]
 
 
 

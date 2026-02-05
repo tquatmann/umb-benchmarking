@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[10.618, 10.115, 11.118, 9.27, 9.591]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [10.618, 10.115, 11.118, 9.27, 9.591]
 
 
 

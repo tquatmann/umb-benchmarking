@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[129.533, 239.057, 123.013, 124.554, 139.96]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [129.533, 239.057, 123.013, 124.554, 139.96]
 
 
 

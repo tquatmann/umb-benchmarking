@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_exact on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[6.02, 7.616, 6.107, 6.245, 7.154]`
+Tool configuration: storm_from-umb-xz_check_exact
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [6.02, 7.616, 6.107, 6.245, 7.154]
 
 
 

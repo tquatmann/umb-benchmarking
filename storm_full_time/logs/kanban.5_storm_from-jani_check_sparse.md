@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[118.412, 39.308, 32.252, 28.606, 27.951]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [118.412, 39.308, 32.252, 28.606, 27.951]
 
 
 

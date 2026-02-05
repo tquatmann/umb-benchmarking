@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[46.023, 51.966, 46.867, 47.233, 46.676]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [46.023, 51.966, 46.867, 47.233, 46.676]
 
 
 

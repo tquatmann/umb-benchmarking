@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[58489380.0, 58489380.0, 58489380.0, 58489380.0, 58489380.0]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [58489380.0, 58489380.0, 58489380.0, 58489380.0, 58489380.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[47.23, 46.455000000000005, 48.291000000000004, 47.717, 51.153000000000006]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [47.23, 46.455000000000005, 48.291000000000004, 47.717, 51.153000000000006]
 
 
 

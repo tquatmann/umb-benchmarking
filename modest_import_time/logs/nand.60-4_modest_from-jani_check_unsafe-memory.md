@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[7.800000000000001, 8.3, 7.6000000000000005, 8.2, 8.3]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [7.800000000000001, 8.3, 7.6000000000000005, 8.2, 8.3]
 
 
 

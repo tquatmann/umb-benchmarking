@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[1.233, 1.165, 1.241, 1.164, 1.451]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [1.233, 1.165, 1.241, 1.164, 1.451]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[2.517, 2.111, 2.176, 2.324, 2.035]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [2.517, 2.111, 2.176, 2.324, 2.035]
 
 
 

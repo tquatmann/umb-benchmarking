@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[24.672, 24.608, 25.283, 26.594, 23.02]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [24.672, 24.608, 25.283, 26.594, 23.02]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_memory on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[0.6000000000000001, 0.5, 0.5, 0.4, 0.4]`
+Tool configuration: modest_from-umb-gz_check_memory
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [0.6000000000000001, 0.5, 0.5, 0.4, 0.4]
 
 
 

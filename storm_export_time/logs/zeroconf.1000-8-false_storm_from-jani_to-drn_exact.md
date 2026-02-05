@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_exact on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[2.108, 1.732, 1.801, 2.195, 1.725]`
+Tool configuration: storm_from-jani_to-drn_exact
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [2.108, 1.732, 1.801, 2.195, 1.725]
 
 
 

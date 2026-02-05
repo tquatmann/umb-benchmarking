@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[49.378, 47.514, 47.354, 46.693, 48.867]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [49.378, 47.514, 47.354, 46.693, 48.867]
 
 
 

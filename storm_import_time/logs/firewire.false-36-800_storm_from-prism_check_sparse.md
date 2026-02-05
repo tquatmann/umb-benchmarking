@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[1.413, 1.345, 1.339, 1.315, 1.329]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [1.413, 1.345, 1.339, 1.315, 1.329]
 
 
 

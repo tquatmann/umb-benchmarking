@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[5298561.0, 5298561.0, 5298561.0, 5298561.0, 5298561.0]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [5298561.0, 5298561.0, 5298561.0, 5298561.0, 5298561.0]
 
 
 

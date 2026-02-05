@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[14.608, 14.777, 14.729, 19.894, 17.745]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [14.608, 14.777, 14.729, 19.894, 17.745]
 
 
 

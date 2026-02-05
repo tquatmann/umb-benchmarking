@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_exact on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[2.529, 2.534, 2.329, 2.419, 2.304]`
+Tool configuration: storm_from-umb-xz_check_exact
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [2.529, 2.534, 2.329, 2.419, 2.304]
 
 
 

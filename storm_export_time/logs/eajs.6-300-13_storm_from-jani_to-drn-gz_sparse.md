@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_sparse on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[18.602, 18.399, 16.991, 18.433, 17.61]`
+Tool configuration: storm_from-jani_to-drn-gz_sparse
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [18.602, 18.399, 16.991, 18.433, 17.61]
 
 
 

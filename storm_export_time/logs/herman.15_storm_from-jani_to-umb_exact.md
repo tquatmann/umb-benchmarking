@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_exact on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[5.857, 5.778, 6.111, 5.747, 6.425]`
+Tool configuration: storm_from-jani_to-umb_exact
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [5.857, 5.778, 6.111, 5.747, 6.425]
 
 
 

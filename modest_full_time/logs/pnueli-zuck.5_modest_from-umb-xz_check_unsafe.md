@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[0.847, 0.965, 3.691, 1.101, 0.94]`
+Tool configuration: modest_from-umb-xz_check_unsafe
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [0.847, 0.965, 3.691, 1.101, 0.94]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_default on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[1.5, TO, TO, TO, TO]`
+Tool configuration: modest_from-umb_check_default
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [1.5, TO, TO, TO, TO]
 
 
 

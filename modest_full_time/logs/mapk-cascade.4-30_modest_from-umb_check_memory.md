@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[2.937, 3943.069, 5527.244, 6876.517, 3950.713]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [2.937, 3943.069, 5527.244, 6876.517, 3950.713]
 
 
 

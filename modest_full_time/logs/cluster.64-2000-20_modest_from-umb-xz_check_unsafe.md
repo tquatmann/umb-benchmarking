@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[1579.238, 1306.823, 2372.225, 1761.436, 1413.136]`
+Tool configuration: modest_from-umb-xz_check_unsafe
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [1579.238, 1306.823, 2372.225, 1761.436, 1413.136]
 
 
 

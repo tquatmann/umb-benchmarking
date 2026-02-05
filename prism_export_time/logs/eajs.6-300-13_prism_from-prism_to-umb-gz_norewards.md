@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[32.437, 29.463, 31.125, 32.928, 31.098]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [32.437, 29.463, 31.125, 32.928, 31.098]
 
 
 

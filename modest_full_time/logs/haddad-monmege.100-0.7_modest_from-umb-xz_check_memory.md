@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[1.517, 1.48, 1.593, 1.528, 1.823]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [1.517, 1.48, 1.593, 1.528, 1.823]
 
 
 

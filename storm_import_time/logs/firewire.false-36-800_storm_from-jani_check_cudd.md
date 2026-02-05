@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[1.441, 1.42, 1.558, 1.554, 1.348]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [1.441, 1.42, 1.558, 1.554, 1.348]
 
 
 

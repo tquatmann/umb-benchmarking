@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[5.163, 4.361, 4.417, 4.577, 4.686]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [5.163, 4.361, 4.417, 4.577, 4.686]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[14.014, 12.16, 13.614, 20.217, 20.581]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [14.014, 12.16, 13.614, 20.217, 20.581]
 
 
 

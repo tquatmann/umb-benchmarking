@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[0.8, 0.9, 0.8, 0.8, 1.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [0.8, 0.9, 0.8, 0.8, 1.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[5.7, 5.6, 6.0, 5.7, 5.6]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [5.7, 5.6, 6.0, 5.7, 5.6]
 
 
 

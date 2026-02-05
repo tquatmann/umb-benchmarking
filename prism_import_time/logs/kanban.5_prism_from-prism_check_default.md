@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[0.561, 0.132, 0.121, 0.298, 0.167]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [0.561, 0.132, 0.121, 0.298, 0.167]
 
 
 

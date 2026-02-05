@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [pnueli-zuck.10](../../models/pnueli-zuck.10)
+Parsed values: [, , , , ]
 
 
 

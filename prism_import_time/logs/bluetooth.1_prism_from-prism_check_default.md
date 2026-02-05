@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[4.114, 4.688, 3.286, 3.385, 2.793]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [4.114, 4.688, 3.286, 3.385, 2.793]
 
 
 

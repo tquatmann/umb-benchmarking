@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[732672.0, 732672.0, 732672.0, 732672.0, 732672.0]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [732672.0, 732672.0, 732672.0, 732672.0, 732672.0]
 
 
 

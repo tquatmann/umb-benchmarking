@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[8.326, 8.395, 7.661, 5.858, 6.262]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [8.326, 8.395, 7.661, 5.858, 6.262]
 
 
 

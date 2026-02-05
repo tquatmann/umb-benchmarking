@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_ex on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[1246405.0, 1246405.0, 1246405.0, 1246405.0, 1246405.0]`
+Tool configuration: prism_from-prism_to-umb-gz_ex
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [1246405.0, 1246405.0, 1246405.0, 1246405.0, 1246405.0]
 
 
 

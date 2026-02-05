@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe-memory on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[3.9, 3.5, 3.9, 3.9, 3.7]`
+Tool configuration: modest_from-umb-xz_check_unsafe-memory
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [3.9, 3.5, 3.9, 3.9, 3.7]
 
 
 

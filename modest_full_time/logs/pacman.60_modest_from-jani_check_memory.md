@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[89.376, 103.238, 83.313, 86.397, 98.321]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [89.376, 103.238, 83.313, 86.397, 98.321]
 
 
 

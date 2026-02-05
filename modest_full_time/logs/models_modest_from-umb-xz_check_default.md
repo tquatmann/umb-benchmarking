@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

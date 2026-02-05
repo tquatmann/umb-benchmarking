@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[196.936, 190.754, 216.901, 186.404, 194.019]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [196.936, 190.754, 216.901, 186.404, 194.019]
 
 
 

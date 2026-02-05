@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[2.902, 2.666, 3.083, 2.753, 2.868]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [2.902, 2.666, 3.083, 2.753, 2.868]
 
 
 

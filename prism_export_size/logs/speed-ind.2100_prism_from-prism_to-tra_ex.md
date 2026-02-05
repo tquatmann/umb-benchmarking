@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[283424304.0, 283424304.0, 283424304.0, 283424304.0, 283424304.0]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [283424304.0, 283424304.0, 283424304.0, 283424304.0, 283424304.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[28.121, 21.741, 28.292, 20.437, 26.26]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [28.121, 21.741, 28.292, 20.437, 26.26]
 
 
 

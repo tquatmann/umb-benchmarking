@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.002, 0.003, 0.003, 0.003, 0.003]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.002, 0.003, 0.003, 0.003, 0.003]
 
 
 

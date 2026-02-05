@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[6.2, 6.5, 6.2, 7.3, 7.4]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [6.2, 6.5, 6.2, 7.3, 7.4]
 
 
 

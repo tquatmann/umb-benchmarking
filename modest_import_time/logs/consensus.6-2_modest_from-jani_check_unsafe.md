@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[6.9, 5.800000000000001, 6.9, 6.2, 7.2]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [6.9, 5.800000000000001, 6.9, 6.2, 7.2]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[16104682.0, 16104682.0, 16104682.0, 16104682.0, 16104682.0]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [16104682.0, 16104682.0, 16104682.0, 16104682.0, 16104682.0]
 
 
 

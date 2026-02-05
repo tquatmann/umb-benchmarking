@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_sparse on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[128.196, 144.394, 121.502, 124.76, 140.204]`
+Tool configuration: storm_from-drn_check_sparse
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [128.196, 144.394, 121.502, 124.76, 140.204]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[7082828.0, 7084216.0, 7082832.0, 7079768.0, 7082828.0]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [7082828.0, 7084216.0, 7082832.0, 7079768.0, 7082828.0]
 
 
 

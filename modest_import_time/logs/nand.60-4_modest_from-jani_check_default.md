@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[23.5, 23.6, 26.3, 22.5, 23.8]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [23.5, 23.6, 26.3, 22.5, 23.8]
 
 
 

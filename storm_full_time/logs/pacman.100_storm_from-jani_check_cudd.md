@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[296.892, 284.958, 327.023, 260.539, 254.729]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [296.892, 284.958, 327.023, 260.539, 254.729]
 
 
 

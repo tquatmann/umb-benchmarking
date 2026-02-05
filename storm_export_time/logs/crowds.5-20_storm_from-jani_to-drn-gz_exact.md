@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_exact on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[3.898, 4.358, 4.84, 3.879, 3.913]`
+Tool configuration: storm_from-jani_to-drn-gz_exact
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [3.898, 4.358, 4.84, 3.879, 3.913]
 
 
 

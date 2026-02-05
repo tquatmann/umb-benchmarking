@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[828977186.0, 828977186.0, 828977186.0, 828977186.0, 828977186.0]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [828977186.0, 828977186.0, 828977186.0, 828977186.0, 828977186.0]
 
 
 

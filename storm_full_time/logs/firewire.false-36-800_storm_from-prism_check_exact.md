@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[95.662, 93.01, 99.183, 104.652, 382.396]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [95.662, 93.01, 99.183, 104.652, 382.396]
 
 
 

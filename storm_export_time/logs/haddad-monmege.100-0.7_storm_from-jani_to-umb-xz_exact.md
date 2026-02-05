@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.008, 0.009, 0.006, 0.007, 0.008]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.008, 0.009, 0.006, 0.007, 0.008]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[5.285, 4.641, 4.883, 5.367, 4.79]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [5.285, 4.641, 4.883, 5.367, 4.79]
 
 
 

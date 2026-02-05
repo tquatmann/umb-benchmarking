@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_sparse on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[26.081, 26.286, 30.266, 28.855, 39.14]`
+Tool configuration: storm_from-umb_check_sparse
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [26.081, 26.286, 30.266, 28.855, 39.14]
 
 
 

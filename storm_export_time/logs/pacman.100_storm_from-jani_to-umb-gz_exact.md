@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[160.302, 161.336, 168.475, 192.638, 169.581]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [160.302, 161.336, 168.475, 192.638, 169.581]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [pnueli-zuck.10](../../models/pnueli-zuck.10)
+Parsed values: [, , , , ]
 
 
 

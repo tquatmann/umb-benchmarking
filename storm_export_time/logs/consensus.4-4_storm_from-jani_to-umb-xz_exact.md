@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.723, 0.853, 0.756, 0.816, 0.777]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.723, 0.853, 0.756, 0.816, 0.777]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_ex on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[230123520.0, 230123520.0, 230123520.0, 230123520.0, 230123520.0]`
+Tool configuration: prism_from-prism_to-umb_ex
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [230123520.0, 230123520.0, 230123520.0, 230123520.0, 230123520.0]
 
 
 

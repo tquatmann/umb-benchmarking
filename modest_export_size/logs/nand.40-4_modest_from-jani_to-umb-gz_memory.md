@@ -1,31 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_memory on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[15481287.0, 15481083.0, 15481210.0, 15481092.0, 15481094.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_memory_nand.40-4_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/nand.40-4/model.jani --umb out/modest_from-jani_to-umb-gz_memory/nand.40-4/model.umb.gz out/modest_from-jani_to-umb-gz_memory/nand.40-4/umbgz.properties.txt --umb-compress GZIP -S Memory -D --exhaustive
-Wallclock time: 0.181 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/nand.40-4/model.jani --umb out/modest_from-jani_to-umb-gz_memory/nand.40-4/model.umb.gz out/modest_from-jani_to-umb-gz_memory/nand.40-4/umbgz.properties.txt --umb-compress GZIP -S Memory -D --exhaustive
-
-
-
-
-model.jani:model: info: model is a DTMC model.
-model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_memory/nand.40-4/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_memory/nand.40-4/model.umb.gz:	Size of output file is 15481260 bytes
-out/modest_from-jani_to-umb-gz_memory/nand.40-4/umbgz.properties.txt:	Size of output file is 27 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_memory
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [, 15481083.0, 15481210.0, 15481092.0, 15481094.0]
 
 
 

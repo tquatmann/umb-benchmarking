@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe-memory on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[0.6, 0.6, 0.4, 0.4, 0.4]`
+Tool configuration: modest_from-umb-gz_check_unsafe-memory
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [0.6, 0.6, 0.4, 0.4, 0.4]
 
 
 

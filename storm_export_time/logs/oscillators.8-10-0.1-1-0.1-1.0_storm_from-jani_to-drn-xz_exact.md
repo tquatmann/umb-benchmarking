@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.834, 0.838, 0.839, 0.771, 0.915]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.834, 0.838, 0.839, 0.771, 0.915]
 
 
 

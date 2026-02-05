@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_sparse on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[0.9, 0.996, 1.073, 1.043, 0.882]`
+Tool configuration: storm_from-jani_to-umb_sparse
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [0.9, 0.996, 1.073, 1.043, 0.882]
 
 
 

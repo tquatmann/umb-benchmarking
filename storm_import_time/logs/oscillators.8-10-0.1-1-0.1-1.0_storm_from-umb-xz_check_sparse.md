@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.021, 0.03, 0.068, 0.027, 0.016]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.021, 0.03, 0.068, 0.027, 0.016]
 
 
 

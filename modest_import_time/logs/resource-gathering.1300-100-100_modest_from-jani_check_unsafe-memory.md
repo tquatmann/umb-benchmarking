@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[1.3, 1.7000000000000002, 1.4, 1.5, 1.6]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [1.3, 1.7000000000000002, 1.4, 1.5, 1.6]
 
 
 

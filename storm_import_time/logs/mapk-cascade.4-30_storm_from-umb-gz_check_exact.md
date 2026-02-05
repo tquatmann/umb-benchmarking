@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[0.606, 0.665, 0.617, 0.721, 0.691]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [0.606, 0.665, 0.617, 0.721, 0.691]
 
 
 

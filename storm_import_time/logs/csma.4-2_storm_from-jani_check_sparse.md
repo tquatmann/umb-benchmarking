@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [csma.4-2](../../models/csma.4-2)
+# Log files
 
-Parsed values: `[3.013, 2.956, 3.621, 3.0180000000000002, 3.549]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [csma.4-2](../../models/csma.4-2)
+Parsed values: [3.013, 2.956, 3.621, 3.0180000000000002, 3.549]
 
 
 

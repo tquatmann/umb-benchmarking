@@ -1,31 +1,8 @@
-# Log files for modest_from-jani_to-umb_default on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[ERR, 0.1, 0.1, 0.1, 0.2]`
-
-
-
-### Log file: modest_from-jani_to-umb_default_nand.40-4_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/nand.40-4/model.jani --umb out/modest_from-jani_to-umb_default/nand.40-4/model.umb out/modest_from-jani_to-umb_default/nand.40-4/umb.properties.txt  -D --exhaustive
-Wallclock time: 0.154 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/nand.40-4/model.jani --umb out/modest_from-jani_to-umb_default/nand.40-4/model.umb out/modest_from-jani_to-umb_default/nand.40-4/umb.properties.txt -D --exhaustive
-
-
-
-
-model.jani:model: info: model is a DTMC model.
-model.jani:variables[1]: info: Expanding variable "s" into 5 locations in automaton "multiplex".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb_default/nand.40-4/model.umb" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb_default/nand.40-4/model.umb:	Size of output file is 133625344 bytes
-out/modest_from-jani_to-umb_default/nand.40-4/umb.properties.txt:	Size of output file is 27 bytes
-```
+Tool configuration: modest_from-jani_to-umb_default
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [, 0.1, 0.1, 0.1, 0.2]
 
 
 

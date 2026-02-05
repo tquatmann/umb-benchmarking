@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_memory on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[0.8, TO, 6.300000000000001, ERR, TO]`
+Tool configuration: modest_from-umb_check_memory
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [0.8, TO, 6.300000000000001, ERR, TO]
 
 
 

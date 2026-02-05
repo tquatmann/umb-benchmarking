@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_exact on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: storm_from-umb-xz_check_exact
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

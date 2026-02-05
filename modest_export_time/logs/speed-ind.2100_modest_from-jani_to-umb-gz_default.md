@@ -1,38 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_default on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[ERR, 3.9, 3.0, 2.5, 3.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_default_speed-ind.2100_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/speed-ind.2100/model.jani --umb out/modest_from-jani_to-umb-gz_default/speed-ind.2100/model.umb.gz out/modest_from-jani_to-umb-gz_default/speed-ind.2100/umbgz.properties.txt --umb-compress GZIP  -D --exhaustive
-Wallclock time: 0.340 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/speed-ind.2100/model.jani --umb out/modest_from-jani_to-umb-gz_default/speed-ind.2100/model.umb.gz out/modest_from-jani_to-umb-gz_default/speed-ind.2100/umbgz.properties.txt --umb-compress GZIP -D --exhaustive
-
-
-
-
-model.jani:model: info: model is a CTMC model.
-model.jani:variables[1]: info: Expanding variable "S1" into 6 locations in automaton "S1_def".
-model.jani:variables[2]: info: Expanding variable "S2" into 11 locations in automaton "S2_def".
-model.jani:variables[3]: info: Expanding variable "S3" into 11 locations in automaton "S3_def".
-model.jani:variables[4]: info: Expanding variable "S4" into 4 locations in automaton "S4_def".
-model.jani:variables[5]: info: Expanding variable "Y" into 4 locations in automaton "Y_def".
-model.jani:variables[6]: info: Expanding variable "Z" into 4 locations in automaton "Z_def".
-model.jani:automata[6].variables[0]: info: Expanding variable "CC" into 4 locations in automaton "CC_def".
-model.jani:variables[7]: info: Expanding variable "XX" into 4 locations in automaton "XX_def".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_default/speed-ind.2100/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_default/speed-ind.2100/model.umb.gz:	Size of output file is 72262596 bytes
-out/modest_from-jani_to-umb-gz_default/speed-ind.2100/umbgz.properties.txt:	Size of output file is 42 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_default
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [, 3.9, 3.0, 2.5, 3.0]
 
 
 

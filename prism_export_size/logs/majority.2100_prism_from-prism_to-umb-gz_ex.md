@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_ex on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[53818759.0, 53818759.0, 53818759.0, 53818759.0, 53818759.0]`
+Tool configuration: prism_from-prism_to-umb-gz_ex
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [53818759.0, 53818759.0, 53818759.0, 53818759.0, 53818759.0]
 
 
 

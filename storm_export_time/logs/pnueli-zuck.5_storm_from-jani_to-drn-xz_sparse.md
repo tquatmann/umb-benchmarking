@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[22.662, 101.047, 22.742, 25.105, 30.144]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [22.662, 101.047, 22.742, 25.105, 30.144]
 
 
 

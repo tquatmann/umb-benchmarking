@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[35.268, 41.092, 39.037, 37.751, 37.063]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [35.268, 41.092, 39.037, 37.751, 37.063]
 
 
 

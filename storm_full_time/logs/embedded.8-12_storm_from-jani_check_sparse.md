@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.174, 0.134, 0.118, 0.113, 0.187]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.174, 0.134, 0.118, 0.113, 0.187]
 
 
 

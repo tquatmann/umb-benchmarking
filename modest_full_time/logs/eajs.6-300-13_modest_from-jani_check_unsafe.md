@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[19.231, 20.469, 23.1, 22.206, 19.584]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [19.231, 20.469, 23.1, 22.206, 19.584]
 
 
 

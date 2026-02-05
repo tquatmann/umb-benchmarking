@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [egl.10-8](../../models/egl.10-8)
+# Log files
 
-Parsed values: `[479.154, 465.089, 479.4, 459.191, 448.545]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [egl.10-8](../../models/egl.10-8)
+Parsed values: [479.154, 465.089, 479.4, 459.191, 448.545]
 
 
 

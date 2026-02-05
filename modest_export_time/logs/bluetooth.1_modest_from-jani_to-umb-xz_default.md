@@ -1,30 +1,8 @@
-# Log files for modest_from-jani_to-umb-xz_default on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[NS, NS, NS, NS, NS]`
-
-
-
-### Log file: modest_from-jani_to-umb-xz_default_bluetooth.1_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/bluetooth.1/model.jani --umb out/modest_from-jani_to-umb-xz_default/bluetooth.1/model.umb.xz out/modest_from-jani_to-umb-xz_default/bluetooth.1/umbxz.properties.txt --umb-compress XZ  -D --exhaustive
-Wallclock time: 0.385 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/bluetooth.1/model.jani --umb out/modest_from-jani_to-umb-xz_default/bluetooth.1/model.umb.xz out/modest_from-jani_to-umb-xz_default/bluetooth.1/umbxz.properties.txt --umb-compress XZ -D --exhaustive
-
-
-
-
-model.jani:model: info: model is a DTMC model.
-model.jani: error: Complex initial states specifications are not yet supported.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-xz_default/bluetooth.1/model.umb.xz:	File does not exist.
-out/modest_from-jani_to-umb-xz_default/bluetooth.1/umbxz.properties.txt:	File does not exist.
-```
+Tool configuration: modest_from-jani_to-umb-xz_default
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [, NS, NS, NS, NS]
 
 
 

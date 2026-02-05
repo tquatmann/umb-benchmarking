@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[65.567, 65.968, 82.798, 64.432, 64.748]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [65.567, 65.968, 82.798, 64.432, 64.748]
 
 
 

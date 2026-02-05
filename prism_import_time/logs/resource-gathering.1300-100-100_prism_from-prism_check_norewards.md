@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[0.424, 0.5, 0.49, 0.466, 0.649]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [0.424, 0.5, 0.49, 0.466, 0.649]
 
 
 

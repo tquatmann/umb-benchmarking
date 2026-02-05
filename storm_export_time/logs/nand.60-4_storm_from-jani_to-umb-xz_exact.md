@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[116.131, 117.876, 113.357, 138.005, 136.281]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [116.131, 117.876, 113.357, 138.005, 136.281]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[0.166, 0.258, 0.279, 0.204, 0.19]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [0.166, 0.258, 0.279, 0.204, 0.19]
 
 
 

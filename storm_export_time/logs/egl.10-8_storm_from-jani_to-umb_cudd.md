@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [egl.10-8](../../models/egl.10-8)
+# Log files
 
-Parsed values: `[12.877, 16.339, 11.078, 10.381, 11.572]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [egl.10-8](../../models/egl.10-8)
+Parsed values: [12.877, 16.339, 11.078, 10.381, 11.572]
 
 
 

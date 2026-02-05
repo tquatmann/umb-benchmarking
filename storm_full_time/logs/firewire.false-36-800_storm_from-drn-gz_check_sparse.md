@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[11.152, 10.091, 11.648, 11.565, 9.993]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [11.152, 10.091, 11.648, 11.565, 9.993]
 
 
 

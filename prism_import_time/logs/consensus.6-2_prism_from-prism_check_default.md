@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[0.072, 0.103, 0.073, 0.08, 0.101]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [0.072, 0.103, 0.073, 0.08, 0.101]
 
 
 

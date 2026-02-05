@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_ex on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[67875328.0, 67875328.0, 67875328.0, 67875328.0, 67875328.0]`
+Tool configuration: prism_from-prism_to-umb_ex
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [67875328.0, 67875328.0, 67875328.0, 67875328.0, 67875328.0]
 
 
 

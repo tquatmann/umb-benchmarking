@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[6.274, 6.706, 6.657, 5.802, 5.715]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [6.274, 6.706, 6.657, 5.802, 5.715]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_memory on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[6.300000000000001, 7.2, 7.3999999999999995, 7.1000000000000005, 6.4]`
+Tool configuration: modest_from-umb-gz_check_memory
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [6.300000000000001, 7.2, 7.3999999999999995, 7.1000000000000005, 6.4]
 
 
 

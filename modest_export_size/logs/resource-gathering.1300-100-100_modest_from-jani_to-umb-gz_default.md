@@ -1,30 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_default on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[11430264.0, 11430279.0, 11430305.0, 11430281.0, 11430240.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_default_resource-gathering.1300-100-100_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-gz_default/resource-gathering.1300-100-100/model.umb.gz out/modest_from-jani_to-umb-gz_default/resource-gathering.1300-100-100/umbgz.properties.txt --umb-compress GZIP  -D --exhaustive
-Wallclock time: 0.772 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/resource-gathering.1300-100-100/model.jani --umb out/modest_from-jani_to-umb-gz_default/resource-gathering.1300-100-100/model.umb.gz out/modest_from-jani_to-umb-gz_default/resource-gathering.1300-100-100/umbgz.properties.txt --umb-compress GZIP -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_default/resource-gathering.1300-100-100/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_default/resource-gathering.1300-100-100/model.umb.gz:	Size of output file is 11430225 bytes
-out/modest_from-jani_to-umb-gz_default/resource-gathering.1300-100-100/umbgz.properties.txt:	Size of output file is 39 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_default
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [, 11430279.0, 11430305.0, 11430281.0, 11430240.0]
 
 
 

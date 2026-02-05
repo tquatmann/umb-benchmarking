@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[222242748.0, 222242748.0, 222242748.0, 222242748.0, 222242748.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [222242748.0, 222242748.0, 222242748.0, 222242748.0, 222242748.0]
 
 
 

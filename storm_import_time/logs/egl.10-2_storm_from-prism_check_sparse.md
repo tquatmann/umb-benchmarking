@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[350.73900000000003, 360.81, 412.151, 329.326, 386.095]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [350.73900000000003, 360.81, 412.151, 329.326, 386.095]
 
 
 

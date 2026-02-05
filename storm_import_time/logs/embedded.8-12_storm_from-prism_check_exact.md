@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.10200000000000001, 0.122, 0.122, 0.101, 0.116]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.10200000000000001, 0.122, 0.122, 0.101, 0.116]
 
 
 

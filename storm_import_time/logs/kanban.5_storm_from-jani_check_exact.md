@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[75.157, 82.0, 81.277, 80.636, 70.68900000000001]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [75.157, 82.0, 81.277, 80.636, 70.68900000000001]
 
 
 

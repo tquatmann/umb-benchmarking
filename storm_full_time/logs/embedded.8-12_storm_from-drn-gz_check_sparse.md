@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.469, 0.428, 0.452, 0.438, 0.489]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.469, 0.428, 0.452, 0.438, 0.489]
 
 
 

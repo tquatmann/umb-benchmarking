@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[14.304, 11.749, 14.445, 12.588, 12.811]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [14.304, 11.749, 14.445, 12.588, 12.811]
 
 
 

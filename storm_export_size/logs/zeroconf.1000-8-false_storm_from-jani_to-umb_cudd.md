@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[111156224.0, 111156224.0, 111156224.0, 111156224.0, 111156224.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [111156224.0, 111156224.0, 111156224.0, 111156224.0, 111156224.0]
 
 
 

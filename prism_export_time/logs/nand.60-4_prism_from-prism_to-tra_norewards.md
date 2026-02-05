@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[15.116, 13.859, 13.983, 13.878, 15.972]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [15.116, 13.859, 13.983, 13.878, 15.972]
 
 
 

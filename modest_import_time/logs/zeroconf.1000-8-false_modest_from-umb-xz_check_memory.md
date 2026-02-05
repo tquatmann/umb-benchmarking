@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_memory on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[2.6, 2.6, 2.4000000000000004, 2.7, 2.0999999999999996]`
+Tool configuration: modest_from-umb-xz_check_memory
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [2.6, 2.6, 2.4000000000000004, 2.7, 2.0999999999999996]
 
 
 

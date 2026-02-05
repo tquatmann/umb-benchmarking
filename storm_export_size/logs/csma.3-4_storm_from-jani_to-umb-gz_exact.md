@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[8368619.0, 8368614.0, 8368623.0, 8368613.0, 8368619.0]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [8368619.0, 8368614.0, 8368623.0, 8368613.0, 8368619.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[55324.0, 55648.0, 55312.0, 55648.0, 55648.0]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [55324.0, 55648.0, 55312.0, 55648.0, 55648.0]
 
 
 

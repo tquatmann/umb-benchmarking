@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_default on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.1, 0.1, 0.2, 0.30000000000000004, 0.30000000000000004]`
+Tool configuration: modest_from-umb_check_default
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.1, 0.1, 0.2, 0.30000000000000004, 0.30000000000000004]
 
 
 

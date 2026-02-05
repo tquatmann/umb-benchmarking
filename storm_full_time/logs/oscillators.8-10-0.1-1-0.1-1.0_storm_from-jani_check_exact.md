@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[144.808, 136.636, 624.154, 147.818, 150.706]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [144.808, 136.636, 624.154, 147.818, 150.706]
 
 
 

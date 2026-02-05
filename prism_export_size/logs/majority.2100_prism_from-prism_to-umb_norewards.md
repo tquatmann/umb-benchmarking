@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_norewards on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[34511872.0, 34511872.0, 34511872.0, 34511872.0, 34511872.0]`
+Tool configuration: prism_from-prism_to-umb_norewards
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [34511872.0, 34511872.0, 34511872.0, 34511872.0, 34511872.0]
 
 
 

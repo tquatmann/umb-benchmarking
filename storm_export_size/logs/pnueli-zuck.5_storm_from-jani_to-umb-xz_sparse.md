@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[3486076.0, 3487896.0, 3486076.0, 3486476.0, 3486360.0]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [3486076.0, 3487896.0, 3486076.0, 3486476.0, 3486360.0]
 
 
 

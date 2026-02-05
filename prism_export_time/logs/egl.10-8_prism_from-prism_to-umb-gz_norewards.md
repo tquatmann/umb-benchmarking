@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [egl.10-8](../../models/egl.10-8)
+# Log files
 
-Parsed values: `[1989.073, 2317.141, 1997.699, 2134.657, 2338.727]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [egl.10-8](../../models/egl.10-8)
+Parsed values: [1989.073, 2317.141, 1997.699, 2134.657, 2338.727]
 
 
 

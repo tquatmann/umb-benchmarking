@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [csma.3-4](../../models/csma.3-4)
+# Log files
 
-Parsed values: `[5.273, 5.419, 5.689, 5.0, 5.503]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [csma.3-4](../../models/csma.3-4)
+Parsed values: [5.273, 5.419, 5.689, 5.0, 5.503]
 
 
 

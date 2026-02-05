@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[46.249, 50.487, 54.658, 46.862, 48.014]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [46.249, 50.487, 54.658, 46.862, 48.014]
 
 
 

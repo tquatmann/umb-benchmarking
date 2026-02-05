@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe-memory on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[7.222, 7.674, 6.14, 6.815, 6.702]`
+Tool configuration: modest_from-umb-gz_check_unsafe-memory
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [7.222, 7.674, 6.14, 6.815, 6.702]
 
 
 

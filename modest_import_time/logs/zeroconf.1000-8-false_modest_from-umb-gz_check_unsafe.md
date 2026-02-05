@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[0.4, 0.6, 0.4, 0.4, 0.4]`
+Tool configuration: modest_from-umb-gz_check_unsafe
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [0.4, 0.6, 0.4, 0.4, 0.4]
 
 
 

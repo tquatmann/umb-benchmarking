@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[16529760.0, 16538228.0, 16529760.0, 16529760.0, 16508244.0]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [16529760.0, 16538228.0, 16529760.0, 16529760.0, 16508244.0]
 
 
 

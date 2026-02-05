@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[1397.026, 1363.7, 1287.66, 1313.949, 1733.855]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [1397.026, 1363.7, 1287.66, 1313.949, 1733.855]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_default on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[26.934, 28.105, 30.254, 114.813, 24.737]`
+Tool configuration: prism_from-prism_to-umb_default
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [26.934, 28.105, 30.254, 114.813, 24.737]
 
 
 

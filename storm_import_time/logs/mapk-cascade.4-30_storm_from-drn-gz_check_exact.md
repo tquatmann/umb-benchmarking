@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.238, 1.529, 1.382, 5.693, 1.443]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.238, 1.529, 1.382, 5.693, 1.443]
 
 
 

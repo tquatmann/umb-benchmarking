@@ -1,31 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_default on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[483703573.0, 483703423.0, 483703391.0, 483703548.0, 483703601.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_default_pacman.100_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb-gz_default/pacman.100/model.umb.gz out/modest_from-jani_to-umb-gz_default/pacman.100/umbgz.properties.txt --umb-compress GZIP  -D --exhaustive
-Wallclock time: 0.626 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/pacman.100/model.jani --umb out/modest_from-jani_to-umb-gz_default/pacman.100/model.umb.gz out/modest_from-jani_to-umb-gz_default/pacman.100/umbgz.properties.txt --umb-compress GZIP -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani:variables[1]: info: Expanding variable "pMove" into 3 locations in automaton "arbiter".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_default/pacman.100/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_default/pacman.100/model.umb.gz:	Size of output file is 483703549 bytes
-out/modest_from-jani_to-umb-gz_default/pacman.100/umbgz.properties.txt:	Size of output file is 24 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_default
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [, 483703423.0, 483703391.0, 483703548.0, 483703601.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[260469420.0, 260469420.0, 260469420.0, 260469420.0, 260469420.0]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [260469420.0, 260469420.0, 260469420.0, 260469420.0, 260469420.0]
 
 
 

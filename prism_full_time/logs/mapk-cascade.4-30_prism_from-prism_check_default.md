@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[433.028, 297.395, 586.569, 698.837, 538.764]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [433.028, 297.395, 586.569, 698.837, 538.764]
 
 
 

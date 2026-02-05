@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[22.477, 22.344, 21.651, 21.69, 23.354]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [22.477, 22.344, 21.651, 21.69, 23.354]
 
 
 

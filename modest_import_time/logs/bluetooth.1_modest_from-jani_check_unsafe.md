@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[NS, NS, NS, NS, NS]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [NS, NS, NS, NS, NS]
 
 
 

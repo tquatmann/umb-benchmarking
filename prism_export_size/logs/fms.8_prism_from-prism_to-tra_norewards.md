@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[1197181670.0, 1197181670.0, 1197181670.0, 1197181670.0, 1197181670.0]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [1197181670.0, 1197181670.0, 1197181670.0, 1197181670.0, 1197181670.0]
 
 
 

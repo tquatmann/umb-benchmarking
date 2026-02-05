@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[2.0860000000000003, 2.676, 2.028, 2.11, 2.193]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [2.0860000000000003, 2.676, 2.028, 2.11, 2.193]
 
 
 

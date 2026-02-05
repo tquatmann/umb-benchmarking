@@ -1,4 +1,4 @@
- # crowds.6-20
+# crowds.6-20
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

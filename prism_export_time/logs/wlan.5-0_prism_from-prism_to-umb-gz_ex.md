@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_ex on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[3.161, 2.503, 2.934, 2.628, 3.065]`
+Tool configuration: prism_from-prism_to-umb-gz_ex
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [3.161, 2.503, 2.934, 2.628, 3.065]
 
 
 

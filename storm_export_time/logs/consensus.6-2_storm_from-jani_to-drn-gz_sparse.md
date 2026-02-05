@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_sparse on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[5.102, 5.957, 5.033, 6.118, 5.884]`
+Tool configuration: storm_from-jani_to-drn-gz_sparse
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [5.102, 5.957, 5.033, 6.118, 5.884]
 
 
 

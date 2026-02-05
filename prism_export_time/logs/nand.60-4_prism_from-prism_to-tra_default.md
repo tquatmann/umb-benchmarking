@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[13.82, 15.765, 16.842, 13.996, 14.085]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [13.82, 15.765, 16.842, 13.996, 14.085]
 
 
 

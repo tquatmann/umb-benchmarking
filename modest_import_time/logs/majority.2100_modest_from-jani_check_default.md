@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[2.0, 1.8, 1.8, 1.8, 1.9]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [2.0, 1.8, 1.8, 1.8, 1.9]
 
 
 

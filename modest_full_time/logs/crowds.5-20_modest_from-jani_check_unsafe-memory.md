@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[3.305, 3.145, 3.39, 3.199, 3.219]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [3.305, 3.145, 3.39, 3.199, 3.219]
 
 
 

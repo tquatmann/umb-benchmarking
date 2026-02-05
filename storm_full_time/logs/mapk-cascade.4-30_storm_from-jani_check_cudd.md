@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[26.378, 22.463, 28.556, 27.712, 26.654]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [26.378, 22.463, 28.556, 27.712, 26.654]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[10.437, 10.009, 9.484, 9.433, 9.503]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [10.437, 10.009, 9.484, 9.433, 9.503]
 
 
 

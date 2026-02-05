@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[9403185.0, 9403184.0, 9403184.0, 9403184.0, 9403184.0]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [9403185.0, 9403184.0, 9403184.0, 9403184.0, 9403184.0]
 
 
 

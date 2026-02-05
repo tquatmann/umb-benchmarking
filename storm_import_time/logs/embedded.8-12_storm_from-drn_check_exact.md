@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.415, 0.522, 0.427, 0.456, 0.466]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.415, 0.522, 0.427, 0.456, 0.466]
 
 
 

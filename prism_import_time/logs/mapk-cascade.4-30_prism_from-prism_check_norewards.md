@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.828, 3.375, 2.819, 2.22, 2.184]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.828, 3.375, 2.819, 2.22, 2.184]
 
 
 

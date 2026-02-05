@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[121.016, 145.15, 147.871, 128.374, 121.352]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [121.016, 145.15, 147.871, 128.374, 121.352]
 
 
 

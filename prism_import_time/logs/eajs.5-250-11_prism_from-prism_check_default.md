@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[0.339, 0.257, 0.298, 0.329, 0.288]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [0.339, 0.257, 0.298, 0.329, 0.288]
 
 
 

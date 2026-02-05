@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[109.572, 108.098, 110.924, 112.151, 108.477]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [109.572, 108.098, 110.924, 112.151, 108.477]
 
 
 

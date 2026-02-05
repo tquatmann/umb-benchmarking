@@ -1,4 +1,4 @@
- # bluetooth.1
+# bluetooth.1
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

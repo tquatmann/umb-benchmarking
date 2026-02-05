@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[4.045, 4.032, 4.133, 3.858, 3.861]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [4.045, 4.032, 4.133, 3.858, 3.861]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[2.4, 2.1, 1.9, 2.1, 2.3]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [2.4, 2.1, 1.9, 2.1, 2.3]
 
 
 

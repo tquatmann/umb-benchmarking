@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[13.5, 13.0, 14.4, 13.0, 11.5]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [13.5, 13.0, 14.4, 13.0, 11.5]
 
 
 

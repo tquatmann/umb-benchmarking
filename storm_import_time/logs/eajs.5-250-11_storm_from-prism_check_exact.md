@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[41.330000000000005, 38.805, 47.233, 38.797999999999995, 44.588]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [41.330000000000005, 38.805, 47.233, 38.797999999999995, 44.588]
 
 
 

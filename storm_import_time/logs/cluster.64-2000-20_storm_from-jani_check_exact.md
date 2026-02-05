@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[2.5340000000000003, 2.624, 2.423, 2.438, 2.4530000000000003]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [2.5340000000000003, 2.624, 2.423, 2.438, 2.4530000000000003]
 
 
 

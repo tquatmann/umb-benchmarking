@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[32.529, 34.74, 29.675, 36.827, 29.594]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [32.529, 34.74, 29.675, 36.827, 29.594]
 
 
 

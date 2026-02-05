@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_exact on model [eajs.6-300-13](../../models/eajs.6-300-13)
+# Log files
 
-Parsed values: `[16.029, 16.919, 16.652, 16.12, 16.356]`
+Tool configuration: storm_from-jani_to-drn_exact
+Benchmark: [eajs.6-300-13](../../models/eajs.6-300-13)
+Parsed values: [16.029, 16.919, 16.652, 16.12, 16.356]
 
 
 

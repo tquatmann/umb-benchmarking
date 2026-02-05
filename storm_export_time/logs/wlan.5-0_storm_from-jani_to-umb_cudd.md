@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[0.095, 0.119, 0.092, 0.135, 0.094]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [0.095, 0.119, 0.092, 0.135, 0.094]
 
 
 

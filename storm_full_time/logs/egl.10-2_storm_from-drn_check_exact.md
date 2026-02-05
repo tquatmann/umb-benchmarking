@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[2847.846, 2445.745, 2430.166, 2753.653, 2497.002]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [2847.846, 2445.745, 2430.166, 2753.653, 2497.002]
 
 
 

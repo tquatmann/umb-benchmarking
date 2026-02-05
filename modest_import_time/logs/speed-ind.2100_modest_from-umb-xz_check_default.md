@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[6.6000000000000005, 6.6000000000000005, 6.300000000000001, 7.199999999999999, 6.300000000000001]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [6.6000000000000005, 6.6000000000000005, 6.300000000000001, 7.199999999999999, 6.300000000000001]
 
 
 

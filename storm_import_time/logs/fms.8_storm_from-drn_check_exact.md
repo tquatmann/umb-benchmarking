@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[64.579, 58.797, 67.576, 70.491, 59.37]`
+Tool configuration: storm_from-drn_check_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [64.579, 58.797, 67.576, 70.491, 59.37]
 
 
 

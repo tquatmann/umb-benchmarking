@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[351.981, 412.871, 329.432, 332.794, 391.969]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [351.981, 412.871, 329.432, 332.794, 391.969]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[33.82, 29.159, 37.488, 33.725, 29.571]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [33.82, 29.159, 37.488, 33.725, 29.571]
 
 
 

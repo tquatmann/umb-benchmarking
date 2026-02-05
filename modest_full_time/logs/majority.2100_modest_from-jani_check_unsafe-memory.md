@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[455.763, 447.583, 432.315, 442.158, 453.137]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [455.763, 447.583, 432.315, 442.158, 453.137]
 
 
 

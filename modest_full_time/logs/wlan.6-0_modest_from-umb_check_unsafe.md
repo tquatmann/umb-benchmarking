@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[18.035, 19.188, 15.959, 16.443, 16.098]`
+Tool configuration: modest_from-umb_check_unsafe
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [18.035, 19.188, 15.959, 16.443, 16.098]
 
 
 

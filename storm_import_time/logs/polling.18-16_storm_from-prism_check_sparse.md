@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[72.279, 61.163000000000004, 62.168, 59.966, 62.319]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [72.279, 61.163000000000004, 62.168, 59.966, 62.319]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[1.003, 1.118, 0.979, 0.912, 0.962]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [1.003, 1.118, 0.979, 0.912, 0.962]
 
 
 

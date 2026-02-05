@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-imca_default on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[9940242.0, 9940242.0, 9940242.0, 9940242.0, 9940242.0]`
+Tool configuration: modest_from-jani_to-imca_default
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [9940242.0, 9940242.0, 9940242.0, 9940242.0, 9940242.0]
 
 
 

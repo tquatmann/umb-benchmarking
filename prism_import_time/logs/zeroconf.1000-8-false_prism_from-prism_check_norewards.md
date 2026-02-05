@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[45.622, 58.787, 41.789, 39.454, 39.127]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [45.622, 58.787, 41.789, 39.454, 39.127]
 
 
 

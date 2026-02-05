@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [egl.10-8](../../models/egl.10-8)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [egl.10-8](../../models/egl.10-8)
+Parsed values: [, , , , ]
 
 
 

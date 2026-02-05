@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[2803929191.0, 2803929191.0, 2803929191.0, 2803929191.0, 2803929191.0]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [2803929191.0, 2803929191.0, 2803929191.0, 2803929191.0, 2803929191.0]
 
 
 

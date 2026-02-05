@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_norewards on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[872448.0, 872448.0, 872448.0, 872448.0, 872448.0]`
+Tool configuration: prism_from-prism_to-umb_norewards
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [872448.0, 872448.0, 872448.0, 872448.0, 872448.0]
 
 
 

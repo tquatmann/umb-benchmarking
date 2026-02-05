@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[22452031.0, 22452031.0, 22452031.0, 22452031.0, 22452031.0]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [22452031.0, 22452031.0, 22452031.0, 22452031.0, 22452031.0]
 
 
 

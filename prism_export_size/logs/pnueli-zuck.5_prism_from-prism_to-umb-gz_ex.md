@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_ex on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[41045749.0, 41045749.0, 41045749.0, 41045749.0, 41045749.0]`
+Tool configuration: prism_from-prism_to-umb-gz_ex
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [41045749.0, 41045749.0, 41045749.0, 41045749.0, 41045749.0]
 
 
 

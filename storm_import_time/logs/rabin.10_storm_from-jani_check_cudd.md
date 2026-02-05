@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

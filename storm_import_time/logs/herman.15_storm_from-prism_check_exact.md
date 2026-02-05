@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[23.363, 26.992, 101.811, 22.471, 22.445]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [23.363, 26.992, 101.811, 22.471, 22.445]
 
 
 

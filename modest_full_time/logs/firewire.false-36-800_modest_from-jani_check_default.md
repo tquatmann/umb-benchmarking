@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[6.077, 6.798, 7.665, 6.043, 7.417]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [6.077, 6.798, 7.665, 6.043, 7.417]
 
 
 

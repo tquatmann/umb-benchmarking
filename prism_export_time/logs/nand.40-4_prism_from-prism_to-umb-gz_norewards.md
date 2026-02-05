@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[2.924, 2.89, 2.966, 2.884, 3.375]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [2.924, 2.89, 2.966, 2.884, 3.375]
 
 
 

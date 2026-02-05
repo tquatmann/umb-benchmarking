@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_sparse on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[430.495, 479.586, 430.154, 432.582, 434.438]`
+Tool configuration: storm_from-prism_check_sparse
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [430.495, 479.586, 430.154, 432.582, 434.438]
 
 
 

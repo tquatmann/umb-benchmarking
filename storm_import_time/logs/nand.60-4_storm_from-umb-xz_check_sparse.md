@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[2.52, 2.541, 2.762, 2.798, 3.278]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [2.52, 2.541, 2.762, 2.798, 3.278]
 
 
 

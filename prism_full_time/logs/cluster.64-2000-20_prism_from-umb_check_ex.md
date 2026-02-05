@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[461.482, 465.666, 638.911, 444.544, 483.645]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [461.482, 465.666, 638.911, 444.544, 483.645]
 
 
 

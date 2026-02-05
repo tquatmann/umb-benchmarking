@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[210.971, 183.471, 209.298, 167.266, 191.907]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [210.971, 183.471, 209.298, 167.266, 191.907]
 
 
 

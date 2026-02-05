@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[103922508.0, 103912116.0, 103912120.0, 103912116.0, 103912116.0]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [103922508.0, 103912116.0, 103912120.0, 103912116.0, 103912116.0]
 
 
 

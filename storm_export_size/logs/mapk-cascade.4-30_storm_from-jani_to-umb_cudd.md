@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[353330176.0, 353330176.0, 353330176.0, 353330176.0, 353330176.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [353330176.0, 353330176.0, 353330176.0, 353330176.0, 353330176.0]
 
 
 

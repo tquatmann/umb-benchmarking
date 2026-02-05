@@ -1,4 +1,4 @@
- # pnueli-zuck.10
+# pnueli-zuck.10
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

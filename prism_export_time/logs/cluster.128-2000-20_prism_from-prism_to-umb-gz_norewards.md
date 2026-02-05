@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [cluster.128-2000-20](../../models/cluster.128-2000-20)
+# Log files
 
-Parsed values: `[1.614, 6.379, 1.549, 1.352, 1.633]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [cluster.128-2000-20](../../models/cluster.128-2000-20)
+Parsed values: [1.614, 6.379, 1.549, 1.352, 1.633]
 
 
 

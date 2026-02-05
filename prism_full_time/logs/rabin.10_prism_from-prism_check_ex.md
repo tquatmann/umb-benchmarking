@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_memory on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[0.8, 0.7, 0.7, 0.7, 1.0]`
+Tool configuration: modest_from-jani_check_memory
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [0.8, 0.7, 0.7, 0.7, 1.0]
 
 
 

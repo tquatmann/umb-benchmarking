@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[6.92, 6.964, 6.893, 31.088, 7.638]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [6.92, 6.964, 6.893, 31.088, 7.638]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[310.456, 220.218, 275.008, 221.937, 307.343]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [310.456, 220.218, 275.008, 221.937, 307.343]
 
 
 

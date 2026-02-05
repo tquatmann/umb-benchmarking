@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[1.912, 1.785, 1.52, 1.725, 1.503]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [1.912, 1.785, 1.52, 1.725, 1.503]
 
 
 

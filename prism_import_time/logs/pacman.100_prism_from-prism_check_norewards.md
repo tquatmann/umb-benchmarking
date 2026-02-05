@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[2897.914, 3018.189, 1223.935, 1853.593, 1045.836]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [2897.914, 3018.189, 1223.935, 1853.593, 1045.836]
 
 
 

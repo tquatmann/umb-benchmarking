@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[9.154, 9.444, 9.595, 9.39, 9.701]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [9.154, 9.444, 9.595, 9.39, 9.701]
 
 
 

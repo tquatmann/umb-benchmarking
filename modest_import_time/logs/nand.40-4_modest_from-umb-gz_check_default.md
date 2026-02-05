@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[0.8, 0.6000000000000001, 0.7, 0.7, 0.6000000000000001]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [0.8, 0.6000000000000001, 0.7, 0.7, 0.6000000000000001]
 
 
 

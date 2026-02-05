@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.039, 0.05, 0.044, 0.045, 0.048]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.039, 0.05, 0.044, 0.045, 0.048]
 
 
 

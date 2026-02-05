@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_exact on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[4.845, 5.18, 5.108, 5.091, 4.546]`
+Tool configuration: storm_from-jani_to-drn_exact
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [4.845, 5.18, 5.108, 5.091, 4.546]
 
 
 

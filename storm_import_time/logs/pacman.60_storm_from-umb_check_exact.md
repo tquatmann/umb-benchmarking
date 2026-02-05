@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_exact on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[23.702, 23.068, 23.26, 23.368, 28.209]`
+Tool configuration: storm_from-umb_check_exact
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [23.702, 23.068, 23.26, 23.368, 28.209]
 
 
 

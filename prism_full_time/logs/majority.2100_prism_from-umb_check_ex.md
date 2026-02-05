@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[375.669, 380.117, 398.624, 412.174, 403.113]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [375.669, 380.117, 398.624, 412.174, 403.113]
 
 
 

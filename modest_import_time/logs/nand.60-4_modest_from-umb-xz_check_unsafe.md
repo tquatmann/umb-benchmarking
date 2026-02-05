@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[6.8, 5.9, 6.2, 7.2, 6.0]`
+Tool configuration: modest_from-umb-xz_check_unsafe
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [6.8, 5.9, 6.2, 7.2, 6.0]
 
 
 

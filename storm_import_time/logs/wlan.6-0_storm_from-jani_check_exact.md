@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[33.338, 37.769999999999996, 32.104, 37.732, 35.007000000000005]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [33.338, 37.769999999999996, 32.104, 37.732, 35.007000000000005]
 
 
 

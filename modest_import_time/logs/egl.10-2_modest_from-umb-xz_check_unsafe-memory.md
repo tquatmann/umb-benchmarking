@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe-memory on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[18.0, 17.1, 20.0, 16.7, 18.5]`
+Tool configuration: modest_from-umb-xz_check_unsafe-memory
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [18.0, 17.1, 20.0, 16.7, 18.5]
 
 
 

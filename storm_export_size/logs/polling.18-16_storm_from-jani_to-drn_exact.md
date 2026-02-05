@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_exact on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[1384941413.0, 1384941413.0, 1384941413.0, 1384941413.0, 1384941413.0]`
+Tool configuration: storm_from-jani_to-drn_exact
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [1384941413.0, 1384941413.0, 1384941413.0, 1384941413.0, 1384941413.0]
 
 
 

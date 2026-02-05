@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

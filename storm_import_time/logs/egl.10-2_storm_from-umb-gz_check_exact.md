@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[30.302, 34.303, 30.431, 30.344, 32.956]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [30.302, 34.303, 30.431, 30.344, 32.956]
 
 
 

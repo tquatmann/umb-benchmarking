@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[77.882, 76.401, 83.262, 78.94, 76.769]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [77.882, 76.401, 83.262, 78.94, 76.769]
 
 
 

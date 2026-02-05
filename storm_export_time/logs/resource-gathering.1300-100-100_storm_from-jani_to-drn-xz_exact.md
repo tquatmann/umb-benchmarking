@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_exact on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[38.361, 40.945, 48.113, 58.662, 43.502]`
+Tool configuration: storm_from-jani_to-drn-xz_exact
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [38.361, 40.945, 48.113, 58.662, 43.502]
 
 
 

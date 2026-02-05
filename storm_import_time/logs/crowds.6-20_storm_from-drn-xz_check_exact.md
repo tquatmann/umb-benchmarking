@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[77.597, 93.919, 92.825, 79.172, 76.375]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [77.597, 93.919, 92.825, 79.172, 76.375]
 
 
 

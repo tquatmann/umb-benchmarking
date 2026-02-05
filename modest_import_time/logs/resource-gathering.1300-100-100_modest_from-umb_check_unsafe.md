@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[0.7, 3.9, TO, TO, 4.3999999999999995]`
+Tool configuration: modest_from-umb_check_unsafe
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [0.7, 3.9, TO, TO, 4.3999999999999995]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_sparse on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[5.19, 1.41, 1.186, 1.199, 1.243]`
+Tool configuration: storm_from-umb-xz_check_sparse
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [5.19, 1.41, 1.186, 1.199, 1.243]
 
 
 

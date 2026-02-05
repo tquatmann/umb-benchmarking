@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.027, 0.035, 0.1, 0.033, 0.05]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.027, 0.035, 0.1, 0.033, 0.05]
 
 
 

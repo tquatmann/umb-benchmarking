@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[321.054, 358.79, 319.809, 362.397, 320.282]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [321.054, 358.79, 319.809, 362.397, 320.282]
 
 
 

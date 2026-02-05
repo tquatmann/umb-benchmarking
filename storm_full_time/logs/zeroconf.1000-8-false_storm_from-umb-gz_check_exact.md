@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-gz_check_exact on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, TO]`
+Tool configuration: storm_from-umb-gz_check_exact
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [TO, TO, TO, TO, TO]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[221.095, 220.302, 224.615, 263.779, 247.325]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [221.095, 220.302, 224.615, 263.779, 247.325]
 
 
 

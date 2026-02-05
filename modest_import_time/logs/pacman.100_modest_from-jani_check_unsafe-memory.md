@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe-memory on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[172.4, 200.7, 194.89999999999998, 171.0, 179.7]`
+Tool configuration: modest_from-jani_check_unsafe-memory
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [172.4, 200.7, 194.89999999999998, 171.0, 179.7]
 
 
 

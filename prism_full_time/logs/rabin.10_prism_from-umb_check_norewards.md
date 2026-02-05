@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [rabin.10](../../models/rabin.10)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [rabin.10](../../models/rabin.10)
+Parsed values: [, , , , ]
 
 
 

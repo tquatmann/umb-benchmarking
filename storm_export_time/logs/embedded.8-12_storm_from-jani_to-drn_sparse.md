@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn_sparse on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.018, 0.018, 0.021, 0.017, 0.018]`
+Tool configuration: storm_from-jani_to-drn_sparse
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.018, 0.018, 0.021, 0.017, 0.018]
 
 
 

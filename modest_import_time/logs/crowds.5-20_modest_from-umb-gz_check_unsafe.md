@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_unsafe on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[0.4, 0.2, 0.4, 0.30000000000000004, 0.4]`
+Tool configuration: modest_from-umb-gz_check_unsafe
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [0.4, 0.2, 0.4, 0.30000000000000004, 0.4]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [nand.40-4](../../models/nand.40-4)
+# Log files
 
-Parsed values: `[45.127, 47.822, 52.714, 57.352, 49.77]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [nand.40-4](../../models/nand.40-4)
+Parsed values: [45.127, 47.822, 52.714, 57.352, 49.77]
 
 
 

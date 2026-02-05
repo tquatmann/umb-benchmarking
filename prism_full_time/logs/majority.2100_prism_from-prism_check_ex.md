@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_ex on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[458.237, 471.677, 407.744, 422.863, 424.513]`
+Tool configuration: prism_from-prism_check_ex
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [458.237, 471.677, 407.744, 422.863, 424.513]
 
 
 

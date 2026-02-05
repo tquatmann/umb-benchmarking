@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.028, 0.024, 0.024, 0.031, 0.024]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.028, 0.024, 0.024, 0.031, 0.024]
 
 
 

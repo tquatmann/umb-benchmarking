@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[13.495, 3.046, 3.002, 2.956, 3.0359999999999996]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [13.495, 3.046, 3.002, 2.956, 3.0359999999999996]
 
 
 

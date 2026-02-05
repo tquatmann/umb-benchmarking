@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_sparse on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[1.906, 1.864, 1.858, 2.251, 1.887]`
+Tool configuration: storm_from-drn-xz_check_sparse
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [1.906, 1.864, 1.858, 2.251, 1.887]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[3.0, 3.1999999999999997, 3.4, 3.3, 3.1999999999999997]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [3.0, 3.1999999999999997, 3.4, 3.3, 3.1999999999999997]
 
 
 

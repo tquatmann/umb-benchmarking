@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_ex on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+# Log files
 
-Parsed values: `[ERR, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-umb_ex
+Benchmark: [pnueli-zuck.10](../../models/pnueli-zuck.10)
+Parsed values: [ERR, ERR, ERR, ERR, ERR]
 
 
 

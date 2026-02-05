@@ -1,28 +1,8 @@
-# Log files for modest_from-jani_to-umb_memory on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, , , , ]`
-
-
-
-### Log file: modest_from-jani_to-umb_memory_models_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/models/model.jani --umb out/modest_from-jani_to-umb_memory/models/model.umb out/modest_from-jani_to-umb_memory/models/umb.properties.txt -S Memory -D --exhaustive
-Wallclock time: 0.098 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/models/model.jani --umb out/modest_from-jani_to-umb_memory/models/model.umb out/modest_from-jani_to-umb_memory/models/umb.properties.txt -S Memory -D --exhaustive
-
-##############################Output to stderr##############################
-File "models/models/model.jani" not found.
-Run modest mcsta --help to show usage information.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb_memory/models/model.umb:	File does not exist.
-out/modest_from-jani_to-umb_memory/models/umb.properties.txt:	File does not exist.
-```
+Tool configuration: modest_from-jani_to-umb_memory
+Benchmark: [models](../../models/models)
+Parsed values: [, , , , ]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[7.632, 7.252, 7.941, 8.042, 8.037]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [7.632, 7.252, 7.941, 8.042, 8.037]
 
 
 

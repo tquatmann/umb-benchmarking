@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-gz_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[49.592, 42.639, 45.827, 42.676, 41.468]`
+Tool configuration: storm_from-jani_to-drn-gz_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [49.592, 42.639, 45.827, 42.676, 41.468]
 
 
 

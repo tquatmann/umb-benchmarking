@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+# Log files
 
-Parsed values: `[MO, MO, MO, MO, MO]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [pnueli-zuck.10](../../models/pnueli-zuck.10)
+Parsed values: [MO, MO, MO, MO, MO]
 
 
 

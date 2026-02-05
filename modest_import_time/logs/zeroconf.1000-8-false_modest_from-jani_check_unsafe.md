@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[3.9, 3.5999999999999996, 3.6999999999999997, 3.5999999999999996, 3.9]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [3.9, 3.5999999999999996, 3.6999999999999997, 3.5999999999999996, 3.9]
 
 
 

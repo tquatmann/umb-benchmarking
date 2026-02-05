@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe on model [wlan.5-0](../../models/wlan.5-0)
+# Log files
 
-Parsed values: `[2.514, 3.794, 2.655, 3.219, 2.35]`
+Tool configuration: modest_from-umb-xz_check_unsafe
+Benchmark: [wlan.5-0](../../models/wlan.5-0)
+Parsed values: [2.514, 3.794, 2.655, 3.219, 2.35]
 
 
 

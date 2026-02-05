@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [, , , , ]
 
 
 

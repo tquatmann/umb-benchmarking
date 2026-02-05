@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[117.904, 128.886, 112.307, 121.44, 135.952]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [117.904, 128.886, 112.307, 121.44, 135.952]
 
 
 

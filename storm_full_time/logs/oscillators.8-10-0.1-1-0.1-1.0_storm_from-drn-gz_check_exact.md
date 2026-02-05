@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_exact on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[71.104, 69.174, 68.798, 71.859, 328.427]`
+Tool configuration: storm_from-drn-gz_check_exact
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [71.104, 69.174, 68.798, 71.859, 328.427]
 
 
 

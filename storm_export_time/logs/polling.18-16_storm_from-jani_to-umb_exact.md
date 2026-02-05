@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_exact on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[45.799, 39.6, 45.282, 40.734, 42.312]`
+Tool configuration: storm_from-jani_to-umb_exact
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [45.799, 39.6, 45.282, 40.734, 42.312]
 
 
 

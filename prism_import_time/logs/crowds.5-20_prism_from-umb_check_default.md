@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_default on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[453.755, 471.631, 409.719, 501.857, 1865.831]`
+Tool configuration: prism_from-umb_check_default
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [453.755, 471.631, 409.719, 501.857, 1865.831]
 
 
 

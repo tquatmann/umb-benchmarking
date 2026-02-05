@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[2.189, 2.1510000000000002, 2.222, 2.143, 2.143]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [2.189, 2.1510000000000002, 2.222, 2.143, 2.143]
 
 
 

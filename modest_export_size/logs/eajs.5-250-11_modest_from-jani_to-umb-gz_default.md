@@ -1,36 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_default on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[20530551.0, 20530571.0, 20530622.0, 20530574.0, 20530612.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_default_eajs.5-250-11_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/eajs.5-250-11/model.jani --umb out/modest_from-jani_to-umb-gz_default/eajs.5-250-11/model.umb.gz out/modest_from-jani_to-umb-gz_default/eajs.5-250-11/umbgz.properties.txt --umb-compress GZIP  -D --exhaustive
-Wallclock time: 0.931 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/eajs.5-250-11/model.jani --umb out/modest_from-jani_to-umb-gz_default/eajs.5-250-11/model.umb.gz out/modest_from-jani_to-umb-gz_default/eajs.5-250-11/umbgz.properties.txt --umb-compress GZIP -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani:variables[3]: info: Expanding variable "loc_1" into 3 locations in automaton "Process_1".
-model.jani:variables[7]: info: Expanding variable "loc_2" into 3 locations in automaton "Process_2".
-model.jani:variables[9]: info: Expanding variable "user_1" into 6 locations in automaton "Resources".
-model.jani:variables[11]: info: Expanding variable "loc_3" into 3 locations in automaton "Process_3".
-model.jani:variables[12]: info: Expanding variable "loc_5" into 3 locations in automaton "Process_5".
-model.jani:variables[15]: info: Expanding variable "loc_4" into 3 locations in automaton "Process_4".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_default/eajs.5-250-11/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_default/eajs.5-250-11/model.umb.gz:	Size of output file is 20530520 bytes
-out/modest_from-jani_to-umb-gz_default/eajs.5-250-11/umbgz.properties.txt:	Size of output file is 31 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_default
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [, 20530571.0, 20530622.0, 20530574.0, 20530612.0]
 
 
 

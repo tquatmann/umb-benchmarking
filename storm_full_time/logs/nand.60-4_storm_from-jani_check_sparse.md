@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[38.342, 38.507, 36.187, 40.724, 36.252]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [38.342, 38.507, 36.187, 40.724, 36.252]
 
 
 

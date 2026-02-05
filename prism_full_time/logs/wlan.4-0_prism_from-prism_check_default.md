@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[4.784, 5.144, 8.786, 9.475, 6.022]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [4.784, 5.144, 8.786, 9.475, 6.022]
 
 
 

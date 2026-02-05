@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[429.351, 412.521, 476.834, 393.751, 397.954]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [429.351, 412.521, 476.834, 393.751, 397.954]
 
 
 

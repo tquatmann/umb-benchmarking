@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [egl.10-8](../../models/egl.10-8)
+# Log files
 
-Parsed values: `[MO, MO, MO, MO, MO]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [egl.10-8](../../models/egl.10-8)
+Parsed values: [MO, MO, MO, MO, MO]
 
 
 

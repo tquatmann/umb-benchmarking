@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+# Log files
 
-Parsed values: `[8.295, 8.241, 9.236, 8.28, 11.204]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [pnueli-zuck.10](../../models/pnueli-zuck.10)
+Parsed values: [8.295, 8.241, 9.236, 8.28, 11.204]
 
 
 

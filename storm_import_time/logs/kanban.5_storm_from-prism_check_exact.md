@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[55.195, 66.76, 58.333999999999996, 55.659000000000006, 60.253]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [55.195, 66.76, 58.333999999999996, 55.659000000000006, 60.253]
 
 
 

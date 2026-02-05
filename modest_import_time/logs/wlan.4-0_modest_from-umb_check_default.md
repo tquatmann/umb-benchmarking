@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_default on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[0.1, 1.2, 1.2, 0.9, 2.5]`
+Tool configuration: modest_from-umb_check_default
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [0.1, 1.2, 1.2, 0.9, 2.5]
 
 
 

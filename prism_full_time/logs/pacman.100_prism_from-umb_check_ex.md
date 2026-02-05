@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [pacman.100](../../models/pacman.100)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [pacman.100](../../models/pacman.100)
+Parsed values: [, , , , ]
 
 
 

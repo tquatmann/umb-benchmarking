@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_norewards on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[, , , , ]`
+Tool configuration: prism_from-umb_check_norewards
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [, , , , ]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_unsafe on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[1.273, 1.286, 1.197, 1.346, 1.501]`
+Tool configuration: modest_from-jani_check_unsafe
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [1.273, 1.286, 1.197, 1.346, 1.501]
 
 
 

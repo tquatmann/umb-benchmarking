@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[29.102, 28.727999999999998, 29.526, 28.592, 29.910999999999998]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [29.102, 28.727999999999998, 29.526, 28.592, 29.910999999999998]
 
 
 

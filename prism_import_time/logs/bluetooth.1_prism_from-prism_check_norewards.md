@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_norewards on model [bluetooth.1](../../models/bluetooth.1)
+# Log files
 
-Parsed values: `[3.7, 3.469, 5.435, 2.891, 4.834]`
+Tool configuration: prism_from-prism_check_norewards
+Benchmark: [bluetooth.1](../../models/bluetooth.1)
+Parsed values: [3.7, 3.469, 5.435, 2.891, 4.834]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_norewards on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[0.081, 0.081, 0.093, 0.101, 0.106]`
+Tool configuration: prism_from-prism_to-tra_norewards
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [0.081, 0.081, 0.093, 0.101, 0.106]
 
 
 

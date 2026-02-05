@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_default on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[27.023, 27.219, 27.684, 32.816, 27.946]`
+Tool configuration: prism_from-prism_to-umb-gz_default
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [27.023, 27.219, 27.684, 32.816, 27.946]
 
 
 

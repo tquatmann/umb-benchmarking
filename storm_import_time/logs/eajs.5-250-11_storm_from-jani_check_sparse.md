@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [eajs.5-250-11](../../models/eajs.5-250-11)
+# Log files
 
-Parsed values: `[20.603, 23.742, 22.981, 21.519, 22.270999999999997]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [eajs.5-250-11](../../models/eajs.5-250-11)
+Parsed values: [20.603, 23.742, 22.981, 21.519, 22.270999999999997]
 
 
 

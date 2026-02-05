@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_to-aut_default on model [pnueli-zuck.5](../../models/pnueli-zuck.5)
+# Log files
 
-Parsed values: `[108540556.0, 108540556.0, 108540556.0, 108540556.0, 108540556.0]`
+Tool configuration: modest_from-jani_to-aut_default
+Benchmark: [pnueli-zuck.5](../../models/pnueli-zuck.5)
+Parsed values: [108540556.0, 108540556.0, 108540556.0, 108540556.0, 108540556.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[2.71, 3.373, 2.5, 2.662, 3.327]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [2.71, 3.373, 2.5, 2.662, 3.327]
 
 
 

@@ -1,4 +1,4 @@
- # majority.2100
+# majority.2100
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [wlan.4-0](../../models/wlan.4-0)
+# Log files
 
-Parsed values: `[734816.0, 704204.0, 707684.0, 704204.0, 721660.0]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [wlan.4-0](../../models/wlan.4-0)
+Parsed values: [734816.0, 704204.0, 707684.0, 704204.0, 721660.0]
 
 
 

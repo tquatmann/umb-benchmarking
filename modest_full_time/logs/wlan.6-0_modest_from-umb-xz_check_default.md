@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[16.565, 16.327, 17.802, 19.376, 16.343]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [16.565, 16.327, 17.802, 19.376, 16.343]
 
 
 

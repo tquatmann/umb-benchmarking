@@ -1,6 +1,8 @@
-# Log files for storm_from-drn_check_sparse on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[8.988, 9.666, 9.725, 8.593, 8.736]`
+Tool configuration: storm_from-drn_check_sparse
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [8.988, 9.666, 9.725, 8.593, 8.736]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_exact on model [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+# Log files
 
-Parsed values: `[0.054, 0.071, 0.078, 0.079, 0.069]`
+Tool configuration: storm_from-umb-xz_check_exact
+Benchmark: [oscillators.8-10-0.1-1-0.1-1.0](../../models/oscillators.8-10-0.1-1-0.1-1.0)
+Parsed values: [0.054, 0.071, 0.078, 0.079, 0.069]
 
 
 

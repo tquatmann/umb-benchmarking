@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[17.855, 18.754, 17.226, 18.018, 19.138]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [17.855, 18.754, 17.226, 18.018, 19.138]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_check_default on model [crowds.5-20](../../models/crowds.5-20)
+# Log files
 
-Parsed values: `[0.281, 0.241, 0.193, 0.236, 0.175]`
+Tool configuration: prism_from-prism_check_default
+Benchmark: [crowds.5-20](../../models/crowds.5-20)
+Parsed values: [0.281, 0.241, 0.193, 0.236, 0.175]
 
 
 

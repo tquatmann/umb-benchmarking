@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+# Log files
 
-Parsed values: `[0.984, 1.057, 0.995, 1.207, 1.522]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [zeroconf.1000-8-false](../../models/zeroconf.1000-8-false)
+Parsed values: [0.984, 1.057, 0.995, 1.207, 1.522]
 
 
 

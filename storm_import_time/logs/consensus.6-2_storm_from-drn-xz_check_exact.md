@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-xz_check_exact on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[12.494, 13.308, 12.494, 12.5, 12.9]`
+Tool configuration: storm_from-drn-xz_check_exact
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [12.494, 13.308, 12.494, 12.5, 12.9]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[4.709, 4.833, 4.705, 21.319, 4.57]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [4.709, 4.833, 4.705, 21.319, 4.57]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_ex on model [models](../../models/models)
+# Log files
 
-Parsed values: `[, ERR, ERR, ERR, ERR]`
+Tool configuration: prism_from-prism_to-tra_ex
+Benchmark: [models](../../models/models)
+Parsed values: [, ERR, ERR, ERR, ERR]
 
 
 

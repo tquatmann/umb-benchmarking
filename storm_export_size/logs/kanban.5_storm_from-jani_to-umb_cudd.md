@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[453123072.0, 453123072.0, 453123072.0, 453123072.0, 453123072.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [453123072.0, 453123072.0, 453123072.0, 453123072.0, 453123072.0]
 
 
 

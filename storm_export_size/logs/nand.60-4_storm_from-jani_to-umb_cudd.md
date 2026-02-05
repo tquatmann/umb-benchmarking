@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [nand.60-4](../../models/nand.60-4)
+# Log files
 
-Parsed values: `[634035200.0, 634035200.0, 634035200.0, 634035200.0, 634035200.0]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [nand.60-4](../../models/nand.60-4)
+Parsed values: [634035200.0, 634035200.0, 634035200.0, 634035200.0, 634035200.0]
 
 
 

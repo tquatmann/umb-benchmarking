@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_exact on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[0.176, 0.217, 0.157, 0.177, 0.18200000000000002]`
+Tool configuration: storm_from-jani_check_exact
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [0.176, 0.217, 0.157, 0.177, 0.18200000000000002]
 
 
 

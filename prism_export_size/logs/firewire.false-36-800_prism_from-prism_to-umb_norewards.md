@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_norewards on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[15214080.0, 15214080.0, 15214080.0, 15214080.0, 15214080.0]`
+Tool configuration: prism_from-prism_to-umb_norewards
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [15214080.0, 15214080.0, 15214080.0, 15214080.0, 15214080.0]
 
 
 

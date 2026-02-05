@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_default on model [crowds.6-20](../../models/crowds.6-20)
+# Log files
 
-Parsed values: `[9.258, 8.265, 8.29, 8.22, 8.931]`
+Tool configuration: modest_from-umb-xz_check_default
+Benchmark: [crowds.6-20](../../models/crowds.6-20)
+Parsed values: [9.258, 8.265, 8.29, 8.22, 8.931]
 
 
 

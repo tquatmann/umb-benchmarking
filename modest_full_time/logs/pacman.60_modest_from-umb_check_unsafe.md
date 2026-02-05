@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe on model [pacman.60](../../models/pacman.60)
+# Log files
 
-Parsed values: `[TO, TO, TO, TO, 3255.986]`
+Tool configuration: modest_from-umb_check_unsafe
+Benchmark: [pacman.60](../../models/pacman.60)
+Parsed values: [TO, TO, TO, TO, 3255.986]
 
 
 

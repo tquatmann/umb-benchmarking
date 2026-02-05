@@ -1,6 +1,8 @@
-# Log files for storm_from-umb-xz_check_exact on model [cluster.64-2000-20](../../models/cluster.64-2000-20)
+# Log files
 
-Parsed values: `[0.538, 0.581, 0.552, 0.557, 0.592]`
+Tool configuration: storm_from-umb-xz_check_exact
+Benchmark: [cluster.64-2000-20](../../models/cluster.64-2000-20)
+Parsed values: [0.538, 0.581, 0.552, 0.557, 0.592]
 
 
 

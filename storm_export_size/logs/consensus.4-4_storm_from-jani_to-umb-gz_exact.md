@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_exact on model [consensus.4-4](../../models/consensus.4-4)
+# Log files
 
-Parsed values: `[513671.0, 513671.0, 513671.0, 513672.0, 513671.0]`
+Tool configuration: storm_from-jani_to-umb-gz_exact
+Benchmark: [consensus.4-4](../../models/consensus.4-4)
+Parsed values: [513671.0, 513671.0, 513671.0, 513672.0, 513671.0]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [pnueli-zuck.10](../../models/pnueli-zuck.10)
+# Log files
 
-Parsed values: `[MO, MO, MO, MO, MO]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [pnueli-zuck.10](../../models/pnueli-zuck.10)
+Parsed values: [MO, MO, MO, MO, MO]
 
 
 

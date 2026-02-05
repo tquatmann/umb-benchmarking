@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb_cudd on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[0.871, 1.025, 0.921, 0.936, 1.038]`
+Tool configuration: storm_from-jani_to-umb_cudd
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [0.871, 1.025, 0.921, 0.936, 1.038]
 
 
 

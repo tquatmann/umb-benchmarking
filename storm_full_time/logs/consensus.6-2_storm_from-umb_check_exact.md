@@ -1,6 +1,8 @@
-# Log files for storm_from-umb_check_exact on model [consensus.6-2](../../models/consensus.6-2)
+# Log files
 
-Parsed values: `[TO, TO, 6694.024, TO, TO]`
+Tool configuration: storm_from-umb_check_exact
+Benchmark: [consensus.6-2](../../models/consensus.6-2)
+Parsed values: [TO, TO, 6694.024, TO, TO]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-tra_default on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[318.267, 325.354, 349.416, 319.158, 359.674]`
+Tool configuration: prism_from-prism_to-tra_default
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [318.267, 325.354, 349.416, 319.158, 359.674]
 
 
 

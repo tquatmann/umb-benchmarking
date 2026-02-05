@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_cudd on model [speed-ind.2100](../../models/speed-ind.2100)
+# Log files
 
-Parsed values: `[408.268, 322.268, 351.191, 360.733, 346.881]`
+Tool configuration: storm_from-jani_check_cudd
+Benchmark: [speed-ind.2100](../../models/speed-ind.2100)
+Parsed values: [408.268, 322.268, 351.191, 360.733, 346.881]
 
 
 

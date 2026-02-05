@@ -1,6 +1,8 @@
-# Log files for modest_from-jani_check_default on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[1.7000000000000002, 1.8, 1.5, 2.1, 1.5]`
+Tool configuration: modest_from-jani_check_default
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [1.7000000000000002, 1.8, 1.5, 2.1, 1.5]
 
 
 

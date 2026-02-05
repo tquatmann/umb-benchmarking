@@ -1,32 +1,8 @@
-# Log files for modest_from-jani_to-umb-gz_default on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[37822590.0, 37822552.0, 37822544.0, 37822591.0, 37822584.0]`
-
-
-
-### Log file: modest_from-jani_to-umb-gz_default_wlan.6-0_rep1.log
-
-```
-Command(s):
-../bin/modest mcsta models/wlan.6-0/model.jani --umb out/modest_from-jani_to-umb-gz_default/wlan.6-0/model.umb.gz out/modest_from-jani_to-umb-gz_default/wlan.6-0/umbgz.properties.txt --umb-compress GZIP  -D --exhaustive
-Wallclock time: 0.256 seconds
-Return code: 0
-##############################
-The Modest Toolset (www.modestchecker.net), version v3.1.309-gc50f44578+35483c89e7bc88e02bb68bd8068d28d0682448b1.
-Command: modest mcsta models/wlan.6-0/model.jani --umb out/modest_from-jani_to-umb-gz_default/wlan.6-0/model.umb.gz out/modest_from-jani_to-umb-gz_default/wlan.6-0/umbgz.properties.txt --umb-compress GZIP -D --exhaustive
-
-
-
-
-model.jani:model: info: model is an MDP model.
-model.jani:variables[3]: info: Expanding variable "s1" into 12 locations in automaton "station1".
-model.jani:variables[4]: info: Expanding variable "s2" into 12 locations in automaton "station2".
-model.jani: error: UMB file "/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final/out/modest_from-jani_to-umb-gz_default/wlan.6-0/model.umb.gz" already exists.
-
-############################## Output files ##############################
-out/modest_from-jani_to-umb-gz_default/wlan.6-0/model.umb.gz:	Size of output file is 37822562 bytes
-out/modest_from-jani_to-umb-gz_default/wlan.6-0/umbgz.properties.txt:	Size of output file is 28 bytes
-```
+Tool configuration: modest_from-jani_to-umb-gz_default
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [, 37822552.0, 37822544.0, 37822591.0, 37822584.0]
 
 
 

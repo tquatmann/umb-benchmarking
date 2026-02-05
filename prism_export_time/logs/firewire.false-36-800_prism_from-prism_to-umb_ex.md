@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb_ex on model [firewire.false-36-800](../../models/firewire.false-36-800)
+# Log files
 
-Parsed values: `[0.274, 1.295, 0.354, 0.275, 0.276]`
+Tool configuration: prism_from-prism_to-umb_ex
+Benchmark: [firewire.false-36-800](../../models/firewire.false-36-800)
+Parsed values: [0.274, 1.295, 0.354, 0.275, 0.276]
 
 
 

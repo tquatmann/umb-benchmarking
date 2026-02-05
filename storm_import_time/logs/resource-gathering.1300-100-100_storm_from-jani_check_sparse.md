@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+# Log files
 
-Parsed values: `[4.992, 4.514, 5.142, 5.205, 4.556]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [resource-gathering.1300-100-100](../../models/resource-gathering.1300-100-100)
+Parsed values: [4.992, 4.514, 5.142, 5.205, 4.556]
 
 
 

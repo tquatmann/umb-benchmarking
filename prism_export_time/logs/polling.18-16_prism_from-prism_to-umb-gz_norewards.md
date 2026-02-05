@@ -1,6 +1,8 @@
-# Log files for prism_from-prism_to-umb-gz_norewards on model [polling.18-16](../../models/polling.18-16)
+# Log files
 
-Parsed values: `[27.585, 33.086, 31.612, 29.194, 33.251]`
+Tool configuration: prism_from-prism_to-umb-gz_norewards
+Benchmark: [polling.18-16](../../models/polling.18-16)
+Parsed values: [27.585, 33.086, 31.612, 29.194, 33.251]
 
 
 

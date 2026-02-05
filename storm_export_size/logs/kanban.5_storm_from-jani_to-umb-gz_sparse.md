@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-gz_sparse on model [kanban.5](../../models/kanban.5)
+# Log files
 
-Parsed values: `[79361484.0, 79361484.0, 79361483.0, 79361483.0, 79361484.0]`
+Tool configuration: storm_from-jani_to-umb-gz_sparse
+Benchmark: [kanban.5](../../models/kanban.5)
+Parsed values: [79361484.0, 79361484.0, 79361483.0, 79361483.0, 79361484.0]
 
 
 

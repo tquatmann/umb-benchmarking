@@ -1,4 +1,4 @@
- # consensus.4-4
+# consensus.4-4
        
 ##### Download
 [model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)

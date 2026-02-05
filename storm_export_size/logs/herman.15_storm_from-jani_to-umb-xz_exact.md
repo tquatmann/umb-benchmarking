@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_exact on model [herman.15](../../models/herman.15)
+# Log files
 
-Parsed values: `[1605132.0, 1605512.0, 1608816.0, 1605512.0, 1604748.0]`
+Tool configuration: storm_from-jani_to-umb-xz_exact
+Benchmark: [herman.15](../../models/herman.15)
+Parsed values: [1605132.0, 1605512.0, 1608816.0, 1605512.0, 1604748.0]
 
 
 

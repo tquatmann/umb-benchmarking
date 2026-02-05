@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-gz_check_default on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[1.352, 1.3, 1.494, 1.327, 1.882]`
+Tool configuration: modest_from-umb-gz_check_default
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [1.352, 1.3, 1.494, 1.327, 1.882]
 
 
 

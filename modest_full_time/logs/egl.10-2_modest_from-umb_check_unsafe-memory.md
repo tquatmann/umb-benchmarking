@@ -1,6 +1,8 @@
-# Log files for modest_from-umb_check_unsafe-memory on model [egl.10-2](../../models/egl.10-2)
+# Log files
 
-Parsed values: `[TO, TO, 3778.501, TO, TO]`
+Tool configuration: modest_from-umb_check_unsafe-memory
+Benchmark: [egl.10-2](../../models/egl.10-2)
+Parsed values: [TO, TO, 3778.501, TO, TO]
 
 
 

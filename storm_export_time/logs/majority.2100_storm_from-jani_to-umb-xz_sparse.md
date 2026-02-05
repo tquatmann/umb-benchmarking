@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-umb-xz_sparse on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[8.651, 8.196, 9.302, 7.682, 8.512]`
+Tool configuration: storm_from-jani_to-umb-xz_sparse
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [8.651, 8.196, 9.302, 7.682, 8.512]
 
 
 

@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_to-drn-xz_sparse on model [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+# Log files
 
-Parsed values: `[6.834, 6.99, 9.936, 7.007, 6.716]`
+Tool configuration: storm_from-jani_to-drn-xz_sparse
+Benchmark: [mapk-cascade.4-30](../../models/mapk-cascade.4-30)
+Parsed values: [6.834, 6.99, 9.936, 7.007, 6.716]
 
 
 

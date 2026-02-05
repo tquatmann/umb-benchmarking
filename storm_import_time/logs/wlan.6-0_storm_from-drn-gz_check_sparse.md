@@ -1,6 +1,8 @@
-# Log files for storm_from-drn-gz_check_sparse on model [wlan.6-0](../../models/wlan.6-0)
+# Log files
 
-Parsed values: `[4.516, 4.341, 5.061, 5.296, 4.683]`
+Tool configuration: storm_from-drn-gz_check_sparse
+Benchmark: [wlan.6-0](../../models/wlan.6-0)
+Parsed values: [4.516, 4.341, 5.061, 5.296, 4.683]
 
 
 

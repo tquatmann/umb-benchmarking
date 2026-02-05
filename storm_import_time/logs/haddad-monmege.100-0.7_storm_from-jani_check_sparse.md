@@ -1,6 +1,8 @@
-# Log files for storm_from-jani_check_sparse on model [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+# Log files
 
-Parsed values: `[0.024, 0.035, 0.028999999999999998, 0.016, 0.024]`
+Tool configuration: storm_from-jani_check_sparse
+Benchmark: [haddad-monmege.100-0.7](../../models/haddad-monmege.100-0.7)
+Parsed values: [0.024, 0.035, 0.028999999999999998, 0.016, 0.024]
 
 
 

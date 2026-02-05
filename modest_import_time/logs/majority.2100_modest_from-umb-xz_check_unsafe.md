@@ -1,6 +1,8 @@
-# Log files for modest_from-umb-xz_check_unsafe on model [majority.2100](../../models/majority.2100)
+# Log files
 
-Parsed values: `[1.0, 0.8, 0.8, 1.0, 0.8]`
+Tool configuration: modest_from-umb-xz_check_unsafe
+Benchmark: [majority.2100](../../models/majority.2100)
+Parsed values: [1.0, 0.8, 0.8, 1.0, 0.8]
 
 
 

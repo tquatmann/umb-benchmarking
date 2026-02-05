@@ -1,6 +1,8 @@
-# Log files for storm_from-prism_check_exact on model [fms.8](../../models/fms.8)
+# Log files
 
-Parsed values: `[144.649, 132.903, 137.24, 133.69799999999998, 167.07999999999998]`
+Tool configuration: storm_from-prism_check_exact
+Benchmark: [fms.8](../../models/fms.8)
+Parsed values: [144.649, 132.903, 137.24, 133.69799999999998, 167.07999999999998]
 
 
 

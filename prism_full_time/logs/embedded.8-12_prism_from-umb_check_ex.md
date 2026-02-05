@@ -1,6 +1,8 @@
-# Log files for prism_from-umb_check_ex on model [embedded.8-12](../../models/embedded.8-12)
+# Log files
 
-Parsed values: `[1.274, 1.27, 2.529, 1.317, 5.951]`
+Tool configuration: prism_from-umb_check_ex
+Benchmark: [embedded.8-12](../../models/embedded.8-12)
+Parsed values: [1.274, 1.27, 2.529, 1.317, 5.951]
 
 
 
