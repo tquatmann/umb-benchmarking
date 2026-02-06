@@ -53,6 +53,7 @@ BCG = "bcg"
 
 # tasks
 TASK_CHECK = "check"
+TASK_IMPORT = "import"
 
 # Command template placeholders (if one of these is a prefix of another, special care is needed because the order of replacement matters):
 # %modest = path to modest binary
@@ -109,21 +110,23 @@ def modest_command(input_format : str, task : str, configuration : str) -> str:
     # task / output
     if task == TASK_CHECK:
         cmd += ""
+    elif task == TASK_IMPORT:
+        cmd += " --stop-after Exploration"
     elif task == UMB:
-        cmd += " --umb %outdir/model.umb %outdir/umb.properties.txt"
+        cmd += " --umb %outdir/model.umb %outdir/umb.properties.txt --stop-after Exploration"
     elif task == UMB_XZ:
-        cmd += " --umb %outdir/model.umb.xz %outdir/umbxz.properties.txt --umb-compress XZ"
+        cmd += " --umb %outdir/model.umb.xz %outdir/umbxz.properties.txt --umb-compress XZ --stop-after Exploration"
     elif task == UMB_GZ:
-        cmd += " --umb %outdir/model.umb.gz %outdir/umbgz.properties.txt --umb-compress GZIP"
+        cmd += " --umb %outdir/model.umb.gz %outdir/umbgz.properties.txt --umb-compress GZIP --stop-after Exploration"
     elif task == AUT:
-        cmd += " --statespace %outdir/model.aut AUT"
+        cmd += " --statespace %outdir/model.aut AUT --stop-after Exploration"
     elif task == IMCA:
-        cmd += " --statespace %outdir/model.mrm IMCA"
+        cmd += " --statespace %outdir/model.mrm IMCA --stop-after Exploration"
     else:
         raise AssertionError("Unsupported task/output format: " + task)
     # configuration
     assert configuration in modest_configurations, "Unknown Modest configuration: " + configuration
-    cmd += " " + modest_configurations[configuration] + " -D --exhaustive" # -D for detailed output
+    cmd += " " + modest_configurations[configuration] + " -D -Y --exhaustive" # -D for detailed output, -Y for overwriting output
     return cmd
 
 # PRISM
@@ -155,7 +158,9 @@ def prism_command(input_format : str, task : str, configuration : str) -> str:
     else:
         raise AssertionError("Unsupported input format for PRISM: " + input_format)
     # task / output
-    if task == TASK_CHECK:
+    if task == TASK_IMPORT:
+        pass # nothing to add
+    elif task == TASK_CHECK:
         cmd += " %indir/property.props"
     elif task == UMB:
         cmd += f" -exportmodel %outdir/model.umb:states=false,obs=false,rewards={'true' if enable_rewards else 'false'},zip=false"
@@ -206,7 +211,7 @@ def storm_command(input_format : str, task : str, configuration : str) -> str:
         raise AssertionError("Unsupported input format: " + input_format)
 
     # task / output
-    if task == "":
+    if task == TASK_IMPORT:
         pass # nothing to add
     elif task == TASK_CHECK:
         if input_format == JANI:
@@ -275,7 +280,7 @@ if __name__ == "__main__":
         for s in [tool, input_format, task, configuration]:
             # we use underscores as separators, so they are not allowed in identifiers
             assert "_" not in s, "Underscores are not allowed in template identifiers. Found in '" + s + "'."
-        task_str = "no-task" if task == "" else (task if task == TASK_CHECK else "to-" + task)
+        task_str = "no-task" if task == "" else (task if task in [TASK_CHECK, TASK_IMPORT] else "to-" + task)
         template_id = f"{tool}_from-{input_format}_{task_str}_{configuration}"
         if tool == BCGIO:
             templates[template_id] = bcgio_command(input_format, task, configuration)
@@ -358,6 +363,7 @@ if __name__ == "__main__":
     for in_format in MODEST_INPUT_FORMATS:
         for cfg in modest_configurations.keys():
             add_cmd_template(modest_import_templates, MODEST, in_format, TASK_CHECK, cfg)
+            add_cmd_template(modest_import_templates, MODEST, in_format, TASK_IMPORT, cfg)
     modest_import_invs = generate_invocations(modest_import_templates)
     all_import += modest_import_invs
 
@@ -374,6 +380,7 @@ if __name__ == "__main__":
     for in_format in PRISM_INPUT_FORMATS:
         for cfg in prism_configurations.keys():
             add_cmd_template(prism_import_templates, PRISM, in_format, TASK_CHECK, cfg)
+            add_cmd_template(prism_import_templates, PRISM, in_format, TASK_IMPORT, cfg)
     prism_import_invs = generate_invocations(prism_import_templates)
     all_import += prism_import_invs
 
@@ -391,8 +398,9 @@ if __name__ == "__main__":
     storm_import_templates = OrderedDict()
     for in_format in STORM_INPUT_FORMATS:
         add_cmd_template(storm_import_templates, STORM, in_format, TASK_CHECK, "sparse")
-        add_cmd_template(storm_import_templates, STORM, in_format, TASK_CHECK, "exact")
+        add_cmd_template(storm_import_templates, STORM, in_format, TASK_IMPORT, "exact")
     add_cmd_template(storm_import_templates, STORM, JANI, TASK_CHECK, "cudd")
+    add_cmd_template(storm_import_templates, STORM, JANI, TASK_IMPORT, "cudd")
     storm_import_invs = generate_invocations(storm_import_templates)
     all_import += storm_import_invs
 
