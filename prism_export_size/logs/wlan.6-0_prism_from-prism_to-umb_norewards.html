@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log wlan.6-0_prism_from-prism_to-umb_norewards</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/wlan.6-0/index.html" target="_blank">wlan.6-0</a> and tool configuration prism_from-prism_to-umb_norewards</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[ERR, ERR, ERR, ERR, ERR]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_norewards_wlan.6-0_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.6-0/model.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 21.751 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:23:16 GMT+01:00 2026
+Hostname: n23m0133
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.6-0/model.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.29 seconds (average 0.001487, setup 0.00)
+
+Time for model construction: 0.341 seconds.
+
+Type:        MDP
+States:      5007548 (1 initial)
+Transitions: 11475748
+
+Transition matrix: 20377 nodes (8 terminal), 11475748 minterms, vars: 47r/47c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.6-0/model.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:329)
+	at symbolic.build.MTBDD2ExplicitModel.lambda$convertMDPTransitions$3(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel$$Lambda/0x0000146beb09c428.accept(Unknown Source)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at symbolic.build.MTBDD2ExplicitModel.convertMDPTransitions(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel.convertModel(MTBDD2ExplicitModel.java:104)
+	at prism.Prism.doExportBuiltModel(Prism.java:2838)
+	at prism.Prism.exportBuiltModelTask(Prism.java:2804)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2746)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.6-0/model.umb:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_norewards_wlan.6-0_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep2.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 19.454 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:05 GMT+01:00 2026
+Hostname: n23m0210
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep2.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.26 seconds (average 0.001333, setup 0.00)
+
+Time for model construction: 0.315 seconds.
+
+Type:        MDP
+States:      5007548 (1 initial)
+Transitions: 11475748
+
+Transition matrix: 20377 nodes (8 terminal), 11475748 minterms, vars: 47r/47c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep2.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:329)
+	at symbolic.build.MTBDD2ExplicitModel.lambda$convertMDPTransitions$3(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel$$Lambda/0x000015249b09c428.accept(Unknown Source)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at symbolic.build.MTBDD2ExplicitModel.convertMDPTransitions(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel.convertModel(MTBDD2ExplicitModel.java:104)
+	at prism.Prism.doExportBuiltModel(Prism.java:2838)
+	at prism.Prism.exportBuiltModelTask(Prism.java:2804)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2746)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep2.umb:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_norewards_wlan.6-0_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep3.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 20.772 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:29:30 GMT+01:00 2026
+Hostname: n23m0044
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep3.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.28 seconds (average 0.001436, setup 0.00)
+
+Time for model construction: 0.381 seconds.
+
+Type:        MDP
+States:      5007548 (1 initial)
+Transitions: 11475748
+
+Transition matrix: 20377 nodes (8 terminal), 11475748 minterms, vars: 47r/47c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep3.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:329)
+	at symbolic.build.MTBDD2ExplicitModel.lambda$convertMDPTransitions$3(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel$$Lambda/0x0000145e0b09c428.accept(Unknown Source)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at symbolic.build.MTBDD2ExplicitModel.convertMDPTransitions(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel.convertModel(MTBDD2ExplicitModel.java:104)
+	at prism.Prism.doExportBuiltModel(Prism.java:2838)
+	at prism.Prism.exportBuiltModelTask(Prism.java:2804)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2746)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep3.umb:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_norewards_wlan.6-0_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep4.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 20.311 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:27:28 GMT+01:00 2026
+Hostname: n23m0313
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep4.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.27 seconds (average 0.001385, setup 0.00)
+
+Time for model construction: 0.311 seconds.
+
+Type:        MDP
+States:      5007548 (1 initial)
+Transitions: 11475748
+
+Transition matrix: 20377 nodes (8 terminal), 11475748 minterms, vars: 47r/47c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep4.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:329)
+	at symbolic.build.MTBDD2ExplicitModel.lambda$convertMDPTransitions$3(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel$$Lambda/0x000014a85f09c428.accept(Unknown Source)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at symbolic.build.MTBDD2ExplicitModel.convertMDPTransitions(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel.convertModel(MTBDD2ExplicitModel.java:104)
+	at prism.Prism.doExportBuiltModel(Prism.java:2838)
+	at prism.Prism.exportBuiltModelTask(Prism.java:2804)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2746)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep4.umb:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_norewards_wlan.6-0_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/wlan.6-0/model.prism -exportmodel out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep5.umb:states=false,obs=false,rewards=false,zip=false
+Wallclock time: 20.615 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:27:28 GMT+01:00 2026
+Hostname: n23m0351
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/wlan.6-0/model.prism -exportmodel 'out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep5.umb:states=false,obs=false,rewards=false,zip=false'
+
+Parsing PRISM model file "models/wlan.6-0/model.prism"...
+
+Type:        MDP
+Modules:     medium station1 station2
+Actions:     [] [send1] [send2] [finish1] [finish2] [time]
+Variables:   col c1 c2 x1 s1 slot1 backoff1 bc1 x2 s2 slot2 backoff2 bc2
+Labels:      "target"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 195 iterations in 0.28 seconds (average 0.001436, setup 0.00)
+
+Time for model construction: 0.327 seconds.
+
+Type:        MDP
+States:      5007548 (1 initial)
+Transitions: 11475748
+
+Transition matrix: 20377 nodes (8 terminal), 11475748 minterms, vars: 47r/47c/7nd
+
+Exporting model in UMB format to file "out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep5.umb"...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.MDPSimple.addActionLabelledChoice(MDPSimple.java:329)
+	at symbolic.build.MTBDD2ExplicitModel.lambda$convertMDPTransitions$3(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel$$Lambda/0x000014fed309c428.accept(Unknown Source)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at symbolic.build.MTBDD2ExplicitModel.convertMDPTransitions(MTBDD2ExplicitModel.java:245)
+	at symbolic.build.MTBDD2ExplicitModel.convertModel(MTBDD2ExplicitModel.java:104)
+	at prism.Prism.doExportBuiltModel(Prism.java:2838)
+	at prism.Prism.exportBuiltModelTask(Prism.java:2804)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2746)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_norewards/wlan.6-0/model_rep5.umb:	File does not exist.
+</pre>
+</div>
+</body>
+</html>

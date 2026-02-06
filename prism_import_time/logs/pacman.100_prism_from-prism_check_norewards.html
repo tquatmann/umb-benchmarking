@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log pacman.100_prism_from-prism_check_norewards</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/pacman.100/index.html" target="_blank">pacman.100</a> and tool configuration prism_from-prism_check_norewards</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[2897.914, 3018.189, 1223.935, 1853.593, 1045.836]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_norewards_pacman.100_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/pacman.100/model.prism models/pacman.100/property.props
+Wallclock time: 6543.163 seconds
+Return code: -6
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:24:30 GMT+01:00 2026
+Hostname: r23m0212
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pacman.100/model.prism models/pacman.100/property.props
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Parsing properties file "models/pacman.100/property.props"...
+
+1 property:
+(1) "crash": Pmin=? [ F "Crash" ]
+
+---------------------------------------------------------------------
+
+Model checking: "crash": Pmin=? [ F "Crash" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 303 iterations in 95.28 seconds (average 0.314455, setup 0.00)
+
+Time for model construction: 2897.914 seconds.
+
+Type:        MDP
+States:      79440921 (1 initial)
+Transitions: 109963876
+
+Transition matrix: 3640220 nodes (44 terminal), 109963876 minterms, vars: 36r/36c/9nd
+
+Prob0E: 248 iterations in 3146.54 seconds (average 12.687661, setup 0.00)
+
+Prob1A: 71 iterations in 475.59 seconds (average 6.698451, setup 0.00)
+
+yes = 12459554, no = 23968103, maybe = 43013264
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000148e9719da74, pid=363323, tid=363404
+#
+# JRE version: OpenJDK Runtime Environment Temurin-23.0.2+7 (23.0.2+7) (build 23.0.2+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-23.0.2+7 (23.0.2+7, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libdd.so+0x32a74]  Cudd_Ref+0x4
+#
+# Core dump will be written. Default location: $PWD/core.%h.363323.%s (max size 8192 k). To ensure a full core dump, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# $PWD/hs_err_pid363323.log
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+Building hybrid MTBDD matrices... 
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_norewards_pacman.100_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/pacman.100/model.prism models/pacman.100/property.props
+Wallclock time: 6782.657 seconds
+Return code: -6
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:29:02 GMT+01:00 2026
+Hostname: n23m0250
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pacman.100/model.prism models/pacman.100/property.props
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Parsing properties file "models/pacman.100/property.props"...
+
+1 property:
+(1) "crash": Pmin=? [ F "Crash" ]
+
+---------------------------------------------------------------------
+
+Model checking: "crash": Pmin=? [ F "Crash" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 303 iterations in 103.78 seconds (average 0.342508, setup 0.00)
+
+Time for model construction: 3018.189 seconds.
+
+Type:        MDP
+States:      79440921 (1 initial)
+Transitions: 109963876
+
+Transition matrix: 3640220 nodes (44 terminal), 109963876 minterms, vars: 36r/36c/9nd
+
+Prob0E: 248 iterations in 3230.91 seconds (average 13.027863, setup 0.00)
+
+Prob1A: 71 iterations in 505.64 seconds (average 7.121690, setup 0.00)
+
+yes = 12459554, no = 23968103, maybe = 43013264
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000014df133a2a74, pid=407423, tid=407465
+#
+# JRE version: OpenJDK Runtime Environment Temurin-23.0.2+7 (23.0.2+7) (build 23.0.2+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-23.0.2+7 (23.0.2+7, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libdd.so+0x32a74]  Cudd_Ref+0x4
+#
+# Core dump will be written. Default location: $PWD/core.%h.407423.%s (max size 8192 k). To ensure a full core dump, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# $PWD/hs_err_pid407423.log
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+Building hybrid MTBDD matrices... 
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_norewards_pacman.100_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/pacman.100/model.prism models/pacman.100/property.props
+Wallclock time: 4878.275 seconds
+Return code: -6
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 03:15:50 GMT+01:00 2026
+Hostname: n23m0333
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pacman.100/model.prism models/pacman.100/property.props
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Parsing properties file "models/pacman.100/property.props"...
+
+1 property:
+(1) "crash": Pmin=? [ F "Crash" ]
+
+---------------------------------------------------------------------
+
+Model checking: "crash": Pmin=? [ F "Crash" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 303 iterations in 86.37 seconds (average 0.285050, setup 0.00)
+
+Time for model construction: 1223.935 seconds.
+
+Type:        MDP
+States:      79440921 (1 initial)
+Transitions: 109963876
+
+Transition matrix: 3640220 nodes (44 terminal), 109963876 minterms, vars: 36r/36c/9nd
+
+Prob0E: 248 iterations in 2939.48 seconds (average 11.852742, setup 0.00)
+
+Prob1A: 71 iterations in 686.41 seconds (average 9.667746, setup 0.00)
+
+yes = 12459554, no = 23968103, maybe = 43013264
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00001501a42caa74, pid=402550, tid=402586
+#
+# JRE version: OpenJDK Runtime Environment Temurin-23.0.2+7 (23.0.2+7) (build 23.0.2+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-23.0.2+7 (23.0.2+7, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libdd.so+0x32a74]  Cudd_Ref+0x4
+#
+# Core dump will be written. Default location: $PWD/core.%h.402550.%s (max size 8192 k). To ensure a full core dump, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# $PWD/hs_err_pid402550.log
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+Building hybrid MTBDD matrices... 
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_norewards_pacman.100_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/pacman.100/model.prism models/pacman.100/property.props
+Wallclock time: 5582.416 seconds
+Return code: -6
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:08:07 GMT+01:00 2026
+Hostname: r23m0214
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pacman.100/model.prism models/pacman.100/property.props
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Parsing properties file "models/pacman.100/property.props"...
+
+1 property:
+(1) "crash": Pmin=? [ F "Crash" ]
+
+---------------------------------------------------------------------
+
+Model checking: "crash": Pmin=? [ F "Crash" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 303 iterations in 102.30 seconds (average 0.337624, setup 0.00)
+
+Time for model construction: 1853.593 seconds.
+
+Type:        MDP
+States:      79440921 (1 initial)
+Transitions: 109963876
+
+Transition matrix: 3640220 nodes (44 terminal), 109963876 minterms, vars: 36r/36c/9nd
+
+Prob0E: 248 iterations in 3179.00 seconds (average 12.818548, setup 0.00)
+
+Prob1A: 71 iterations in 517.10 seconds (average 7.283099, setup 0.00)
+
+yes = 12459554, no = 23968103, maybe = 43013264
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000014c0f403fa74, pid=157574, tid=157606
+#
+# JRE version: OpenJDK Runtime Environment Temurin-23.0.2+7 (23.0.2+7) (build 23.0.2+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-23.0.2+7 (23.0.2+7, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libdd.so+0x32a74]  Cudd_Ref+0x4
+#
+# Core dump will be written. Default location: $PWD/core.%h.157574.%s (max size 8192 k). To ensure a full core dump, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# $PWD/hs_err_pid157574.log
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+Building hybrid MTBDD matrices... 
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_norewards_pacman.100_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/pacman.100/model.prism models/pacman.100/property.props
+Wallclock time: 4473.411 seconds
+Return code: -6
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 21:24:20 GMT+01:00 2026
+Hostname: n23m0300
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/pacman.100/model.prism models/pacman.100/property.props
+
+Parsing PRISM model file "models/pacman.100/model.prism"...
+
+Type:        MDP
+Modules:     arbiter ghost0 ghost1 pacman
+Actions:     [] [g0] [stop0] [g1] [stop1] [p] [left] [right] [up] [down]
+Variables:   pMove steps xG0 yG0 dG0 xG1 yG1 dG1 xP yP dP
+Labels:      "Crash"
+
+Parsing properties file "models/pacman.100/property.props"...
+
+1 property:
+(1) "crash": Pmin=? [ F "Crash" ]
+
+---------------------------------------------------------------------
+
+Model checking: "crash": Pmin=? [ F "Crash" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 303 iterations in 82.44 seconds (average 0.272079, setup 0.00)
+
+Time for model construction: 1045.836 seconds.
+
+Type:        MDP
+States:      79440921 (1 initial)
+Transitions: 109963876
+
+Transition matrix: 3640220 nodes (44 terminal), 109963876 minterms, vars: 36r/36c/9nd
+
+Prob0E: 248 iterations in 2975.28 seconds (average 11.997097, setup 0.00)
+
+Prob1A: 71 iterations in 425.00 seconds (average 5.985915, setup 0.00)
+
+yes = 12459554, no = 23968103, maybe = 43013264
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000014c5131c3a74, pid=512376, tid=512412
+#
+# JRE version: OpenJDK Runtime Environment Temurin-23.0.2+7 (23.0.2+7) (build 23.0.2+7)
+# Java VM: OpenJDK 64-Bit Server VM Temurin-23.0.2+7 (23.0.2+7, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libdd.so+0x32a74]  Cudd_Ref+0x4
+#
+# Core dump will be written. Default location: $PWD/core.%h.512376.%s (max size 8192 k). To ensure a full core dump, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# $PWD/hs_err_pid512376.log
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+Building hybrid MTBDD matrices... 
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+</body>
+</html>

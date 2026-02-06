@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log crowds.5-20_prism_from-prism_to-umb-gz_ex</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/crowds.5-20/index.html" target="_blank">crowds.5-20</a> and tool configuration prism_from-prism_to-umb-gz_ex</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[ERR, ERR, ERR, ERR, ERR]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_crowds.5-20_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.5-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 31.581 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:45:46 GMT+01:00 2026
+Hostname: n23m0393
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.5-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/crowds.5-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 492766 882552 1396617 1635904 1758926 1835951 1847100 1852167
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.DTMCSimple.addToProbability(DTMCSimple.java:259)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:316)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb.gz:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_crowds.5-20_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.5-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 34.478 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:58:20 GMT+01:00 2026
+Hostname: n23m0041
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.5-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/crowds.5-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 475911 854677 1403616 1629909 1760087 1837113 1847248 1850289
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
+	at java.base/java.lang.Double.valueOf(Double.java:924)
+	at prism.Evaluator$EvaluatorDouble.multiply(Evaluator.java:327)
+	at prism.Evaluator$EvaluatorDouble.multiply(Evaluator.java:275)
+	at simulator.ChoiceListFlexi.scaleProbabilitiesBy(ChoiceListFlexi.java:142)
+	at simulator.TransitionList.scaleProbabilitiesBy(TransitionList.java:96)
+	at simulator.Updater.calculateTransitions(Updater.java:266)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep2.gz:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_crowds.5-20_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.5-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 31.707 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:18:07 GMT+01:00 2026
+Hostname: r23m0196
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.5-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/crowds.5-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 545709 937733 1448464 1666301 1762868 1838880 1850029
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
+	at java.base/java.lang.Double.valueOf(Double.java:924)
+	at prism.Evaluator$EvaluatorDouble.multiply(Evaluator.java:327)
+	at prism.Evaluator$EvaluatorDouble.multiply(Evaluator.java:275)
+	at simulator.ChoiceListFlexi.scaleProbabilitiesBy(ChoiceListFlexi.java:142)
+	at simulator.TransitionList.scaleProbabilitiesBy(TransitionList.java:96)
+	at simulator.Updater.calculateTransitions(Updater.java:266)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep3.gz:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_crowds.5-20_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.5-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 28.918 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:48:13 GMT+01:00 2026
+Hostname: n23m0041
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.5-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/crowds.5-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 498975 878011 1403075 1641120 1775045 1839909 1850044
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.ArrayList.grow(ArrayList.java:240)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.DTMCSimple.addToProbability(DTMCSimple.java:259)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:316)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep4.gz:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_crowds.5-20_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.5-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 32.971 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:46:11 GMT+01:00 2026
+Hostname: n23m0099
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.5-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/crowds.5-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 489585 860663 1398988 1638047 1765383 1838355 1848490 1852544
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space: failed reallocation of scalar replaced objects
+	at java.base/java.lang.Double.valueOf(Double.java:924)
+	at prism.Evaluator$EvaluatorDouble.multiply(Evaluator.java:327)
+	at prism.Evaluator$EvaluatorDouble.multiply(Evaluator.java:275)
+	at simulator.ChoiceListFlexi.scaleProbabilitiesBy(ChoiceListFlexi.java:142)
+	at simulator.TransitionList.scaleProbabilitiesBy(TransitionList.java:96)
+	at simulator.Updater.calculateTransitions(Updater.java:266)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/crowds.5-20/model.umb_rep5.gz:	File does not exist.
+</pre>
+</div>
+</body>
+</html>

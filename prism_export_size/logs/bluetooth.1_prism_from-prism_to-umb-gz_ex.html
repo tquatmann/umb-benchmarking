@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log bluetooth.1_prism_from-prism_to-umb-gz_ex</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/bluetooth.1/index.html" target="_blank">bluetooth.1</a> and tool configuration prism_from-prism_to-umb-gz_ex</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[ERR, ERR, ERR, ERR, ERR]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_bluetooth.1_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 6.376 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:26:27 GMT+01:00 2026
+Hostname: r23m0131
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:explicit)...
+
+Computing reachable states...
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at parser.VarList.getAllStates(VarList.java:467)
+	at simulator.ModulesFileModelGenerator.getInitialStates(ModulesFileModelGenerator.java:492)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:255)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb.gz:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_bluetooth.1_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 6.551 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:16 GMT+01:00 2026
+Hostname: n23m0351
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:explicit)...
+
+Computing reachable states...
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at parser.VarList.getAllStates(VarList.java:467)
+	at simulator.ModulesFileModelGenerator.getInitialStates(ModulesFileModelGenerator.java:492)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:255)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep2.gz:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_bluetooth.1_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 5.865 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:29:30 GMT+01:00 2026
+Hostname: r23m0016
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:explicit)...
+
+Computing reachable states...
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at parser.VarList.getAllStates(VarList.java:467)
+	at simulator.ModulesFileModelGenerator.getInitialStates(ModulesFileModelGenerator.java:492)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:255)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep3.gz:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_bluetooth.1_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 5.800 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:24:54 GMT+01:00 2026
+Hostname: n23m0041
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:explicit)...
+
+Computing reachable states...
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at parser.VarList.getAllStates(VarList.java:467)
+	at simulator.ModulesFileModelGenerator.getInitialStates(ModulesFileModelGenerator.java:492)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:255)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep4.gz:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_ex_bluetooth.1_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/bluetooth.1/model.prism -exportmodel out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 6.792 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:17:35 GMT+01:00 2026
+Hostname: n23m0127
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/bluetooth.1/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/bluetooth.1/model.prism"...
+
+Type:        DTMC
+Modules:     receiver1 frequency1 sender_frequency replies
+Actions:     [] [time] [reply]
+Variables:   y1 receiver freq1 train1 z1 f1 t1 send freq train c rep rec
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:explicit)...
+
+Computing reachable states...
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at parser.VarList.getAllStates(VarList.java:467)
+	at simulator.ModulesFileModelGenerator.getInitialStates(ModulesFileModelGenerator.java:492)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:255)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_ex/bluetooth.1/model.umb_rep5.gz:	File does not exist.
+</pre>
+</div>
+</body>
+</html>

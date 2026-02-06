@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>haddad-monmege.100-0.7</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Benchmark haddad-monmege.100-0.7</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Download</div></div>
+<pre style="overflow:auto; padding-bottom: 0.5ex">
+<a href="model.prism" download>model.prism</a> (0.01 MB)
+<a href="property.props" download>property.props</a> (0.01 MB)
+<a href="model.jani" download>model.jani</a> (0.01 MB)
+
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Origin</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">
+Taken from <a href="https://qcomp.org/benchmarks/#haddad-monmege" target="_blank">QVBS</a> (January 2026).
+The given benchmark (including parameter instantiation and property) has been considered in QComp 2019 and QComp 2020.
+
+Original Prism model and property files have been adapted for compatibility and simplicity:
+- Constants: All open constants are now explicitly set within model.prism (no need to set them via command line)
+- Properties: The properties only refer to labels and rewards as defined in the model.prism file. No variables or constants are used in the property.
+- Formulas: some PRISM formula declarations have been renamed so that their identify does not crash with a label.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.prism</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">// Toy example on which standard value iteration yields wrong results
+// This model originates from Haddad, Monmege: Reachability in MDPs: Refining Convergence of Value Iteration
+
+dtmc
+
+const int N=100;
+const double p=0.7;
+const double q = 0.5;
+
+module main
+	x : [0..2*N] init N;
+	[] x=N -> p : (x'=N-1) + (1-p) : (x'=N+1);
+	[] x>0 & x<N -> q : (x'=x-1) + (1-q) : (x'=N);
+	[] x>N & x<2*N -> q : (x'=x+1) + (1-q) : (x'=N);
+	[] x=0 | x=2*N -> 1 : true;
+endmodule
+
+label "Target" = x=0;
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: property.props</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">// Probability to reach the target state
+"target": P=? [F "Target"];
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.jani</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">{
+    "actions": [],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- 99",
+                                    "ref": "x",
+                                    "value": 99
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "7/10",
+                                "exp": 0.7
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- 101",
+                                    "ref": "x",
+                                    "value": 101
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 7/10)",
+                                "exp": 0.3
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(x = 100)",
+                        "exp": {
+                            "left": "x",
+                            "op": "=",
+                            "right": 100
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- (x - 1)",
+                                    "ref": "x",
+                                    "value": {
+                                        "left": "x",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- 100",
+                                    "ref": "x",
+                                    "value": 100
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((x > 0) & (x < 100))",
+                        "exp": {
+                            "left": {
+                                "left": "x",
+                                "op": ">",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x",
+                                "op": "<",
+                                "right": 100
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- (x + 1)",
+                                    "ref": "x",
+                                    "value": {
+                                        "left": "x",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- 100",
+                                    "ref": "x",
+                                    "value": 100
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((x > 100) & (x < (2 * 100)))",
+                        "exp": {
+                            "left": {
+                                "left": "x",
+                                "op": ">",
+                                "right": 100
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x",
+                                "op": "<",
+                                "right": 200
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((x = 0) | (x = (2 * 100)))",
+                        "exp": {
+                            "left": {
+                                "left": "x",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∨",
+                            "right": {
+                                "left": "x",
+                                "op": "=",
+                                "right": 200
+                            }
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l",
+                    "transient-values": [
+                        {
+                            "comment": "Target <- (x = 0)",
+                            "ref": "Target",
+                            "value": {
+                                "left": "x",
+                                "op": "=",
+                                "right": 0
+                            }
+                        }
+                    ]
+                }
+            ],
+            "name": "main",
+            "variables": []
+        }
+    ],
+    "constants": [
+        {
+            "name": "N",
+            "type": "int",
+            "value": 100
+        },
+        {
+            "name": "p",
+            "type": "real",
+            "value": 0.7
+        },
+        {
+            "name": "q",
+            "type": "real",
+            "value": 0.5
+        }
+    ],
+    "features": [
+        "derived-operators"
+    ],
+    "jani-version": 1,
+    "name": "model",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "right": "Target"
+                    },
+                    "op": "Pmin"
+                }
+            },
+            "name": "target"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "main"
+            }
+        ]
+    },
+    "type": "dtmc",
+    "variables": [
+        {
+            "initial-value": false,
+            "name": "Target",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": 100,
+            "name": "x",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 200
+            }
+        }
+    ]
+}
+</pre>
+</div>
+
+</body>
+</html>

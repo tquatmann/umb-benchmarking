@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log resource-gathering.1300-100-100_prism_from-prism_to-umb_ex</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/resource-gathering.1300-100-100/index.html" target="_blank">resource-gathering.1300-100-100</a> and tool configuration prism_from-prism_to-umb_ex</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[ERR, ERR, ERR, ERR, ERR]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_ex_resource-gathering.1300-100-100_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 25.328 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:43:40 GMT+01:00 2026
+Hostname: n23m0393
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 388116 741215 958894 states
+Reachable states exploration and model construction done in 8.551 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.toArray(ArrayList.java:370)
+	at java.base/java.util.ArrayList.<init>(ArrayList.java:182)
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model.umb:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_ex_resource-gathering.1300-100-100_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep2.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 20.476 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:55:19 GMT+01:00 2026
+Hostname: n23m0379
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep2.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 477063 876148 958894 states
+Reachable states exploration and model construction done in 7.827 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep2.umb:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_ex_resource-gathering.1300-100-100_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep3.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 22.326 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:25:55 GMT+01:00 2026
+Hostname: n23m0362
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep3.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 449848 830598 958894 states
+Reachable states exploration and model construction done in 7.948 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.toArray(ArrayList.java:370)
+	at java.base/java.util.ArrayList.<init>(ArrayList.java:182)
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep3.umb:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_ex_resource-gathering.1300-100-100_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep4.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 22.203 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:17:06 GMT+01:00 2026
+Hostname: n23m0099
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep4.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 427581 798611 958894 states
+Reachable states exploration and model construction done in 8.059 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.toArray(ArrayList.java:370)
+	at java.base/java.util.ArrayList.<init>(ArrayList.java:182)
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep4.umb:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb_ex_resource-gathering.1300-100-100_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep5.umb:states=false,obs=false,rewards=true,zip=false
+Wallclock time: 20.619 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:23:12 GMT+01:00 2026
+Hostname: n23m0099
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep5.umb:states=false,obs=false,rewards=true,zip=false'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:explicit)...
+
+Computing reachable states... 440640 812147 958894 states
+Reachable states exploration and model construction done in 7.652 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.toArray(ArrayList.java:370)
+	at java.base/java.util.ArrayList.<init>(ArrayList.java:182)
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.exportBuiltModelTasks(Prism.java:2740)
+	at prism.PrismCL.doExports(PrismCL.java:868)
+	at prism.PrismCL.run(PrismCL.java:381)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb_ex/resource-gathering.1300-100-100/model_rep5.umb:	File does not exist.
+</pre>
+</div>
+</body>
+</html>

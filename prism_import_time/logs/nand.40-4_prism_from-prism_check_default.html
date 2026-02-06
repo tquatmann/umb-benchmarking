@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log nand.40-4_prism_from-prism_check_default</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/nand.40-4/index.html" target="_blank">nand.40-4</a> and tool configuration prism_from-prism_check_default</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[2.761, 3.079, 2.605, 2.667, 2.968]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_default_nand.40-4_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/nand.40-4/model.prism models/nand.40-4/property.props
+Wallclock time: 46.120 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:33:20 GMT+01:00 2026
+Hostname: r23m0206
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism models/nand.40-4/property.props
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Parsing properties file "models/nand.40-4/property.props"...
+
+1 property:
+(1) "reliable": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "reliable": P=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 2.65 seconds (average 0.001838, setup 0.00)
+
+Time for model construction: 2.761 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Prob0: 1442 iterations in 2.21 seconds (average 0.001533, setup 0.00)
+
+Prob1: 1297 iterations in 1.97 seconds (average 0.001519, setup 0.00)
+
+yes = 141, no = 375263, maybe = 3624118
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=33, nodes=65919] [3.0 MB]
+Adding explicit sparse matrices... [levels=15, num=332, compact] [622.6 KB]
+Creating vector for diagonals... [dist=1, compact] [7.6 MB]
+Creating vector for RHS... [dist=2, compact] [7.6 MB]
+Allocating iteration vectors... [2 x 30.5 MB]
+TOTAL: [79.9 MB]
+
+Starting iterations...
+Iteration 195: max relative diff=inf, 5.02 sec so far
+Iteration 391: max relative diff=inf, 10.04 sec so far
+Iteration 586: max relative diff=inf, 15.06 sec so far
+Iteration 781: max relative diff=inf, 20.07 sec so far
+Iteration 973: max relative diff=inf, 25.08 sec so far
+Iteration 1164: max relative diff=inf, 30.09 sec so far
+Iteration 1352: max relative diff=inf, 35.11 sec so far
+
+Jacobi: 1441 iterations in 38.35 seconds (average 0.025996, setup 0.89)
+
+Value in the initial state: 0.6186822208151961
+
+Time for model checking: 42.752 seconds.
+
+Result: 0.6186822208151961 (exact floating point)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_default_nand.40-4_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/nand.40-4/model.prism models/nand.40-4/property.props
+Wallclock time: 53.267 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:10:40 GMT+01:00 2026
+Hostname: n23m0111
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism models/nand.40-4/property.props
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Parsing properties file "models/nand.40-4/property.props"...
+
+1 property:
+(1) "reliable": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "reliable": P=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 2.95 seconds (average 0.002046, setup 0.00)
+
+Time for model construction: 3.079 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Prob0: 1442 iterations in 2.52 seconds (average 0.001748, setup 0.00)
+
+Prob1: 1297 iterations in 2.24 seconds (average 0.001727, setup 0.00)
+
+yes = 141, no = 375263, maybe = 3624118
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=33, nodes=65919] [3.0 MB]
+Adding explicit sparse matrices... [levels=15, num=332, compact] [622.6 KB]
+Creating vector for diagonals... [dist=1, compact] [7.6 MB]
+Creating vector for RHS... [dist=2, compact] [7.6 MB]
+Allocating iteration vectors... [2 x 30.5 MB]
+TOTAL: [79.9 MB]
+
+Starting iterations...
+Iteration 166: max relative diff=inf, 5.01 sec so far
+Iteration 331: max relative diff=inf, 10.02 sec so far
+Iteration 497: max relative diff=inf, 15.04 sec so far
+Iteration 663: max relative diff=inf, 20.06 sec so far
+Iteration 830: max relative diff=inf, 25.09 sec so far
+Iteration 997: max relative diff=inf, 30.12 sec so far
+Iteration 1163: max relative diff=inf, 35.13 sec so far
+Iteration 1329: max relative diff=inf, 40.14 sec so far
+
+Jacobi: 1441 iterations in 44.49 seconds (average 0.030215, setup 0.95)
+
+Value in the initial state: 0.6186822208151961
+
+Time for model checking: 49.53 seconds.
+
+Result: 0.6186822208151961 (exact floating point)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_default_nand.40-4_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/nand.40-4/model.prism models/nand.40-4/property.props
+Wallclock time: 46.763 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:36:54 GMT+01:00 2026
+Hostname: n23m0324
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism models/nand.40-4/property.props
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Parsing properties file "models/nand.40-4/property.props"...
+
+1 property:
+(1) "reliable": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "reliable": P=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 2.49 seconds (average 0.001727, setup 0.00)
+
+Time for model construction: 2.605 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Prob0: 1442 iterations in 2.11 seconds (average 0.001463, setup 0.00)
+
+Prob1: 1297 iterations in 1.96 seconds (average 0.001511, setup 0.00)
+
+yes = 141, no = 375263, maybe = 3624118
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=33, nodes=65919] [3.0 MB]
+Adding explicit sparse matrices... [levels=15, num=332, compact] [622.6 KB]
+Creating vector for diagonals... [dist=1, compact] [7.6 MB]
+Creating vector for RHS... [dist=2, compact] [7.6 MB]
+Allocating iteration vectors... [2 x 30.5 MB]
+TOTAL: [79.9 MB]
+
+Starting iterations...
+Iteration 194: max relative diff=inf, 5.02 sec so far
+Iteration 387: max relative diff=inf, 10.03 sec so far
+Iteration 582: max relative diff=inf, 15.05 sec so far
+Iteration 776: max relative diff=inf, 20.07 sec so far
+Iteration 971: max relative diff=inf, 25.09 sec so far
+Iteration 1166: max relative diff=inf, 30.11 sec so far
+Iteration 1360: max relative diff=inf, 35.12 sec so far
+
+Jacobi: 1441 iterations in 38.02 seconds (average 0.025822, setup 0.81)
+
+Value in the initial state: 0.6186822208151961
+
+Time for model checking: 42.302 seconds.
+
+Result: 0.6186822208151961 (exact floating point)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_default_nand.40-4_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/nand.40-4/model.prism models/nand.40-4/property.props
+Wallclock time: 51.543 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 22:08:10 GMT+01:00 2026
+Hostname: r23m0153
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism models/nand.40-4/property.props
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Parsing properties file "models/nand.40-4/property.props"...
+
+1 property:
+(1) "reliable": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "reliable": P=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 2.55 seconds (average 0.001768, setup 0.00)
+
+Time for model construction: 2.667 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Prob0: 1442 iterations in 2.13 seconds (average 0.001477, setup 0.00)
+
+Prob1: 1297 iterations in 1.89 seconds (average 0.001457, setup 0.00)
+
+yes = 141, no = 375263, maybe = 3624118
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=33, nodes=65919] [3.0 MB]
+Adding explicit sparse matrices... [levels=15, num=332, compact] [622.6 KB]
+Creating vector for diagonals... [dist=1, compact] [7.6 MB]
+Creating vector for RHS... [dist=2, compact] [7.6 MB]
+Allocating iteration vectors... [2 x 30.5 MB]
+TOTAL: [79.9 MB]
+
+Starting iterations...
+Iteration 187: max relative diff=inf, 5.03 sec so far
+Iteration 374: max relative diff=inf, 10.04 sec so far
+Iteration 562: max relative diff=inf, 15.07 sec so far
+Iteration 750: max relative diff=inf, 20.08 sec so far
+Iteration 939: max relative diff=inf, 25.11 sec so far
+Iteration 1127: max relative diff=inf, 30.12 sec so far
+Iteration 1316: max relative diff=inf, 35.15 sec so far
+
+Jacobi: 1441 iterations in 39.29 seconds (average 0.026697, setup 0.82)
+
+Value in the initial state: 0.6186822208151961
+
+Time for model checking: 43.526 seconds.
+
+Result: 0.6186822208151961 (exact floating point)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_default_nand.40-4_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/nand.40-4/model.prism models/nand.40-4/property.props
+Wallclock time: 52.657 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 22:08:08 GMT+01:00 2026
+Hostname: r23m0185
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/nand.40-4/model.prism models/nand.40-4/property.props
+
+Parsing PRISM model file "models/nand.40-4/model.prism"...
+
+Type:        DTMC
+Modules:     multiplex
+Actions:     []
+Variables:   u c s z zx zy x y
+Labels:      "target"
+
+Parsing properties file "models/nand.40-4/property.props"...
+
+1 property:
+(1) "reliable": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "reliable": P=? [ F "target" ]
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1442 iterations in 2.84 seconds (average 0.001969, setup 0.00)
+
+Time for model construction: 2.968 seconds.
+
+Type:        DTMC
+States:      3999522 (1 initial)
+Transitions: 6288542
+
+Transition matrix: 49073 nodes (493 terminal), 6288542 minterms, vars: 33r/33c
+
+Prob0: 1442 iterations in 2.40 seconds (average 0.001664, setup 0.00)
+
+Prob1: 1297 iterations in 2.12 seconds (average 0.001635, setup 0.00)
+
+yes = 141, no = 375263, maybe = 3624118
+
+Computing remaining probabilities...
+Engine: Hybrid
+
+Building hybrid MTBDD matrix... [levels=33, nodes=65919] [3.0 MB]
+Adding explicit sparse matrices... [levels=15, num=332, compact] [622.6 KB]
+Creating vector for diagonals... [dist=1, compact] [7.6 MB]
+Creating vector for RHS... [dist=2, compact] [7.6 MB]
+Allocating iteration vectors... [2 x 30.5 MB]
+TOTAL: [79.9 MB]
+
+Starting iterations...
+Iteration 175: max relative diff=inf, 5.01 sec so far
+Iteration 350: max relative diff=inf, 10.02 sec so far
+Iteration 526: max relative diff=inf, 15.03 sec so far
+Iteration 705: max relative diff=inf, 20.04 sec so far
+Iteration 887: max relative diff=inf, 25.06 sec so far
+Iteration 1069: max relative diff=inf, 30.08 sec so far
+Iteration 1250: max relative diff=inf, 35.10 sec so far
+Iteration 1430: max relative diff=1.704802, 40.12 sec so far
+
+Jacobi: 1441 iterations in 41.33 seconds (average 0.028050, setup 0.91)
+
+Value in the initial state: 0.6186822208151961
+
+Time for model checking: 46.059 seconds.
+
+Result: 0.6186822208151961 (exact floating point)
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+</pre>
+</div>
+</body>
+</html>

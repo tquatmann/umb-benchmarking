@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log resource-gathering.1300-100-100_prism_from-prism_to-tra_default</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/resource-gathering.1300-100-100/index.html" target="_blank">resource-gathering.1300-100-100</a> and tool configuration prism_from-prism_to-tra_default</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[1.537, 1.629, 1.781, 1.595, 1.876]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_default_resource-gathering.1300-100-100_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.tra,lab,rew:precision=17
+Wallclock time: 2.745 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:35:39 GMT+01:00 2026
+Hostname: n23m0112
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1215 iterations in 0.37 seconds (average 0.000305, setup 0.00)
+
+Time for model construction: 0.393 seconds.
+
+Type:        MDP
+States:      958894 (1 initial)
+Transitions: 3325526
+
+Transition matrix: 898 nodes (4 terminal), 3325526 minterms, vars: 23r/23c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.trew"...
+Time for exporting: 1.537 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.tra:	Size of output file is 84603330 bytes
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.lab:	Size of output file is 970 bytes
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model.trew:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_default_resource-gathering.1300-100-100_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.tra,lab,rew:precision=17
+Wallclock time: 2.565 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:06 GMT+01:00 2026
+Hostname: n23m0200
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1215 iterations in 0.38 seconds (average 0.000313, setup 0.00)
+
+Time for model construction: 0.404 seconds.
+
+Type:        MDP
+States:      958894 (1 initial)
+Transitions: 3325526
+
+Transition matrix: 898 nodes (4 terminal), 3325526 minterms, vars: 23r/23c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.trew"...
+Time for exporting: 1.629 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.tra:	Size of output file is 84603330 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.lab:	Size of output file is 970 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep2.trew:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_default_resource-gathering.1300-100-100_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.tra,lab,rew:precision=17
+Wallclock time: 4.142 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:23:53 GMT+01:00 2026
+Hostname: n23m0294
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1215 iterations in 0.49 seconds (average 0.000403, setup 0.00)
+
+Time for model construction: 0.58 seconds.
+
+Type:        MDP
+States:      958894 (1 initial)
+Transitions: 3325526
+
+Transition matrix: 898 nodes (4 terminal), 3325526 minterms, vars: 23r/23c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.trew"...
+Time for exporting: 1.781 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.tra:	Size of output file is 84603330 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.lab:	Size of output file is 970 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep3.trew:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_default_resource-gathering.1300-100-100_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.tra,lab,rew:precision=17
+Wallclock time: 2.613 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:13:31 GMT+01:00 2026
+Hostname: n23m0388
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1215 iterations in 0.38 seconds (average 0.000313, setup 0.00)
+
+Time for model construction: 0.407 seconds.
+
+Type:        MDP
+States:      958894 (1 initial)
+Transitions: 3325526
+
+Transition matrix: 898 nodes (4 terminal), 3325526 minterms, vars: 23r/23c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.trew"...
+Time for exporting: 1.595 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.tra:	Size of output file is 84603330 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.lab:	Size of output file is 970 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep4.trew:	File does not exist.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_default_resource-gathering.1300-100-100_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/resource-gathering.1300-100-100/model.prism -exportmodel out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.tra,lab,rew:precision=17
+Wallclock time: 3.170 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:38:37 GMT+01:00 2026
+Hostname: r23m0212
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/resource-gathering.1300-100-100/model.prism -exportmodel 'out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.tra,lab,rew:precision=17'
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 1215 iterations in 0.56 seconds (average 0.000461, setup 0.00)
+
+Time for model construction: 0.584 seconds.
+
+Type:        MDP
+States:      958894 (1 initial)
+Transitions: 3325526
+
+Transition matrix: 898 nodes (4 terminal), 3325526 minterms, vars: 23r/23c/4nd
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.lab"...
+Exporting state rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.srew"...
+Exporting transition rewards in plain text format to file "out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.trew"...
+Time for exporting: 1.876 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.tra:	Size of output file is 84603330 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.lab:	Size of output file is 970 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.srew:	File does not exist.
+out/prism_from-prism_to-tra_default/resource-gathering.1300-100-100/model_rep5.trew:	File does not exist.
+</pre>
+</div>
+</body>
+</html>

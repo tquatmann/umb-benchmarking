@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log mapk-cascade.4-30_prism_from-prism_to-tra_norewards</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/mapk-cascade.4-30/index.html" target="_blank">mapk-cascade.4-30</a> and tool configuration prism_from-prism_to-tra_norewards</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[22842924.0, 22842924.0, 22842924.0, 22842924.0, 22842924.0]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_norewards_mapk-cascade.4-30_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/mapk-cascade.4-30/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model.tra,lab:precision=17
+Wallclock time: 7.042 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Tue Jan 27 23:24:52 GMT+01:00 2026
+Hostname: n23m0281
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/mapk-cascade.4-30/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model.tra,lab:precision=17'
+
+Parsing PRISM model file "models/mapk-cascade.4-30/model.prism"...
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK
+Actions:     [a_kkk_e1] [d_kkk_e1] [k_kkk_e1] [a_kkk_e2] [d_kkk_e2] [k_kkk_e2] [a_k_ptase] [d_k_ptase] [k_k_ptase] [a_kk_ptase] [d_kk_ptase] [k_kk_ptase] [a_k_kk] [d_k_kk] [k_k_kk] [a_kk_kkk] [d_kk_kkk] [k_kk_kkk]
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 3.30 seconds (average 0.075000, setup 0.00)
+
+Time for model construction: 3.562 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+
+Rate matrix: 111563 nodes (14 terminal), 910872 minterms, vars: 58r/58c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model.lab"...
+Time for exporting: 1.341 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model.tra:	Size of output file is 22829859 bytes
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model.lab:	Size of output file is 13065 bytes
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_norewards_mapk-cascade.4-30_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/mapk-cascade.4-30/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep2.tra,lab:precision=17
+Wallclock time: 3.458 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:26:13 GMT+01:00 2026
+Hostname: n23m0036
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/mapk-cascade.4-30/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep2.tra,lab:precision=17'
+
+Parsing PRISM model file "models/mapk-cascade.4-30/model.prism"...
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK
+Actions:     [a_kkk_e1] [d_kkk_e1] [k_kkk_e1] [a_kkk_e2] [d_kkk_e2] [k_kkk_e2] [a_k_ptase] [d_k_ptase] [k_k_ptase] [a_kk_ptase] [d_kk_ptase] [k_kk_ptase] [a_k_kk] [d_k_kk] [k_k_kk] [a_kk_kkk] [d_kk_kkk] [k_kk_kkk]
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 1.64 seconds (average 0.037273, setup 0.00)
+
+Time for model construction: 1.747 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+
+Rate matrix: 111563 nodes (14 terminal), 910872 minterms, vars: 58r/58c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep2.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep2.lab"...
+Time for exporting: 1.201 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep2.tra:	Size of output file is 22829859 bytes
+Removing output file to save space for repetition #2
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep2.lab:	Size of output file is 13065 bytes
+Removing output file to save space for repetition #2
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_norewards_mapk-cascade.4-30_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/mapk-cascade.4-30/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep3.tra,lab:precision=17
+Wallclock time: 4.710 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:37:11 GMT+01:00 2026
+Hostname: n23m0149
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/mapk-cascade.4-30/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep3.tra,lab:precision=17'
+
+Parsing PRISM model file "models/mapk-cascade.4-30/model.prism"...
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK
+Actions:     [a_kkk_e1] [d_kkk_e1] [k_kkk_e1] [a_kkk_e2] [d_kkk_e2] [k_kkk_e2] [a_k_ptase] [d_k_ptase] [k_k_ptase] [a_kk_ptase] [d_kk_ptase] [k_kk_ptase] [a_k_kk] [d_k_kk] [k_k_kk] [a_kk_kkk] [d_kk_kkk] [k_kk_kkk]
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 2.53 seconds (average 0.057500, setup 0.00)
+
+Time for model construction: 2.701 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+
+Rate matrix: 111563 nodes (14 terminal), 910872 minterms, vars: 58r/58c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep3.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep3.lab"...
+Time for exporting: 1.359 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep3.tra:	Size of output file is 22829859 bytes
+Removing output file to save space for repetition #3
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep3.lab:	Size of output file is 13065 bytes
+Removing output file to save space for repetition #3
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_norewards_mapk-cascade.4-30_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/mapk-cascade.4-30/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep4.tra,lab:precision=17
+Wallclock time: 3.432 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 07:27:05 GMT+01:00 2026
+Hostname: n23m0191
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/mapk-cascade.4-30/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep4.tra,lab:precision=17'
+
+Parsing PRISM model file "models/mapk-cascade.4-30/model.prism"...
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK
+Actions:     [a_kkk_e1] [d_kkk_e1] [k_kkk_e1] [a_kkk_e2] [d_kkk_e2] [k_kkk_e2] [a_k_ptase] [d_k_ptase] [k_k_ptase] [a_kk_ptase] [d_kk_ptase] [k_kk_ptase] [a_k_kk] [d_k_kk] [k_k_kk] [a_kk_kkk] [d_kk_kkk] [k_kk_kkk]
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 1.59 seconds (average 0.036136, setup 0.00)
+
+Time for model construction: 1.705 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+
+Rate matrix: 111563 nodes (14 terminal), 910872 minterms, vars: 58r/58c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep4.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep4.lab"...
+Time for exporting: 1.215 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep4.tra:	Size of output file is 22829859 bytes
+Removing output file to save space for repetition #4
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep4.lab:	Size of output file is 13065 bytes
+Removing output file to save space for repetition #4
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-tra_norewards_mapk-cascade.4-30_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/mapk-cascade.4-30/model.prism -exportmodel out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep5.tra,lab:precision=17
+Wallclock time: 5.909 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 09:00:22 GMT+01:00 2026
+Hostname: n23m0041
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/mapk-cascade.4-30/model.prism -exportmodel 'out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep5.tra,lab:precision=17'
+
+Parsing PRISM model file "models/mapk-cascade.4-30/model.prism"...
+
+Type:        CTMC
+Modules:     E1 E2 KPTASE KKPTASE MAPK MAPKK MAPKKK
+Actions:     [a_kkk_e1] [d_kkk_e1] [k_kkk_e1] [a_kkk_e2] [d_kkk_e2] [k_kkk_e2] [a_k_ptase] [d_k_ptase] [k_k_ptase] [a_kk_ptase] [d_kk_ptase] [k_kk_ptase] [a_k_kk] [d_k_kk] [k_k_kk] [a_kk_kkk] [d_kk_kkk] [k_kk_kkk]
+Variables:   e1 e2 kptase kkptase k k_kkpp kp kp_kkpp kp_ptase kpp kpp_ptase kk kk_kkkp kkp kkp_kkkp kkp_ptase kkpp kkpp_ptase kkk kkk_e1 kkkp kkkp_e2
+Labels:      "target"
+Rewards:     "time"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 44 iterations in 3.74 seconds (average 0.085000, setup 0.00)
+
+Time for model construction: 3.968 seconds.
+
+Type:        CTMC
+States:      99535 (1 initial)
+Transitions: 910872
+
+Rate matrix: 111563 nodes (14 terminal), 910872 minterms, vars: 58r/58c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep5.tra"...
+Exporting labels and satisfying states in plain text format to file "out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep5.lab"...
+Time for exporting: 1.262 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep5.tra:	Size of output file is 22829859 bytes
+Removing output file to save space for repetition #5
+out/prism_from-prism_to-tra_norewards/mapk-cascade.4-30/model_rep5.lab:	Size of output file is 13065 bytes
+Removing output file to save space for repetition #5
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,4695 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>firewire.false-36-800</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Benchmark firewire.false-36-800</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Download</div></div>
+<pre style="overflow:auto; padding-bottom: 0.5ex">
+<a href="model.prism" download>model.prism</a> (0.01 MB)
+<a href="property.props" download>property.props</a> (0.01 MB)
+<a href="model.jani" download>model.jani</a> (0.16 MB)
+
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Origin</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">
+Taken from <a href="https://qcomp.org/benchmarks/#firewire" target="_blank">QVBS</a> (January 2026).
+The given benchmark (including parameter instantiation and property) has been considered in QComp 2019 and QComp 2020.
+
+Original Prism model and property files have been adapted for compatibility and simplicity:
+- Constants: All open constants are now explicitly set within model.prism (no need to set them via command line)
+- Properties: The properties only refer to labels and rewards as defined in the model.prism file. No variables or constants are used in the property.
+- Formulas: some PRISM formula declarations have been renamed so that their identify does not crash with a label.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.prism</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">// firewire protocol with integer semantics
+// dxp/gxn 14/06/01
+
+mdp
+
+// CLOCKS
+// x1 (x2) clock for node1 (node2)
+// y1 and y2 (z1 and z2) clocks for wire12 (wire21)
+
+// deadline
+const int deadline=800;
+
+// maximum and minimum delays
+// fast
+const int rc_fast_max = 85;
+const int rc_fast_min = 76;
+// slow
+const int rc_slow_max = 167;
+const int rc_slow_min = 159;
+// delay caused by the wire length
+const int delay = 36;
+// probability of choosing fast
+const double fast = 0.5;
+const double slow=1-fast;
+
+module wire12
+	
+	// local state
+	w12 : [0..9];
+	// 0 - empty
+	// 1 -	rec_req
+	// 2 -  rec_req_ack
+	// 3 -	rec_ack
+	// 4 -	rec_ack_idle
+	// 5 -	rec_idle
+	// 6 -	rec_idle_req
+	// 7 -	rec_ack_req
+	// 8 -	rec_req_idle
+	// 9 -	rec_idle_ack
+	
+	// clock for wire12
+	y1 : [0..delay+1];
+	y2 : [0..delay+1];
+
+	// empty
+	// do not need y1 and y2 to increase as always reset when this state is left
+	// similarly can reset y1 and y2 when we re-enter this state
+	[snd_req12]  w12=0 -> (w12'=1) & (y1'=0) & (y2'=0);
+	[snd_ack12]  w12=0 -> (w12'=3) & (y1'=0) & (y2'=0);
+	[snd_idle12] w12=0 -> (w12'=5) & (y1'=0) & (y2'=0);
+	[time]       w12=0 -> (w12'=w12);	
+	// rec_req
+	[snd_req12]  w12=1 -> (w12'=1);
+	[rec_req12]  w12=1 -> (w12'=0) & (y1'=0) & (y2'=0);
+	[snd_ack12]  w12=1 -> (w12'=2) & (y2'=0);
+	[snd_idle12] w12=1 -> (w12'=8) & (y2'=0);
+	[time]       w12=1 & y2<delay ->  (y1'=min(y1+1,delay+1)) & (y2'=min(y2+1,delay+1));
+	// rec_req_ack
+	[snd_ack12] w12=2 -> (w12'=2);
+	[rec_req12] w12=2 -> (w12'=3);
+	[time]      w12=2 & y1<delay ->  (y1'=min(y1+1,delay+1)) & (y2'=min(y2+1,delay+1));
+	// rec_ack
+	[snd_ack12]  w12=3 -> (w12'=3);
+	[rec_ack12]  w12=3 -> (w12'=0) & (y1'=0) & (y2'=0);
+	[snd_idle12] w12=3 -> (w12'=4) & (y2'=0);
+	[snd_req12]  w12=3 -> (w12'=7) & (y2'=0);
+	[time]       w12=3 & y2<delay ->  (y1'=min(y1+1,delay+1)) & (y2'=min(y2+1,delay+1));
+	// rec_ack_idle
+	[snd_idle12] w12=4 -> (w12'=4);
+	[rec_ack12]  w12=4 -> (w12'=5);
+	[time]       w12=4 & y1<delay ->  (y1'=min(y1+1,delay+1)) & (y2'=min(y2+1,delay+1));
+	// rec_idle
+	[snd_idle12] w12=5 -> (w12'=5);
+	[rec_idle12] w12=5 -> (w12'=0) & (y1'=0) & (y2'=0);
+	[snd_req12]  w12=5 -> (w12'=6) & (y2'=0);
+	[snd_ack12]  w12=5 -> (w12'=9) & (y2'=0);
+	[time]       w12=5 & y2<delay ->  (y1'=min(y1+1,delay+1)) & (y2'=min(y2+1,delay+1));
+	// rec_idle_req
+	[snd_req12]  w12=6 -> (w12'=6);
+	[rec_idle12] w12=6 -> (w12'=1);
+	[time]       w12=6 & y1<delay ->  (y1'=min(y1+1,delay+1)) & (y2'=min(y2+1,delay+1));
+	// rec_ack_req
+	[snd_req12] w12=7 -> (w12'=7);
+	[rec_ack12] w12=7 -> (w12'=1);
+	[time]      w12=7 & y1<delay ->  (y1'=min(y1+1,delay+1)) & (y2'=min(y2+1,delay+1));
+	// rec_req_idle
+	[snd_idle12] w12=8 -> (w12'=8);
+	[rec_req12]  w12=8 -> (w12'=5);
+	[time]       w12=8 & y1<delay ->  (y1'=min(y1+1,delay+1)) & (y2'=min(y2+1,delay+1));
+	// rec_idle_ack
+	[snd_ack12]  w12=9 -> (w12'=9);
+	[rec_idle12] w12=9 -> (w12'=3);
+	[time]       w12=9 & y1<delay ->  (y1'=min(y1+1,delay+1)) & (y2'=min(y2+1,delay+1));
+	
+endmodule
+
+module node1
+	
+	// clock for node1
+	x1 : [0..168];
+	
+	// local state
+	s1 : [0..8];
+	// 0 - root contention
+	// 1 - rec_idle
+	// 2 - rec_req_fast
+	// 3 - rec_req_slow
+	// 4 - rec_idle_fast
+	// 5 - rec_idle_slow
+	// 6 - snd_req
+	// 7- almost_root
+	// 8 - almost_child
+	
+	// added resets to x1 when not considered again until after rest
+	// removed root and child (using almost root and almost child)
+	
+	// root contention immediate state)
+	[snd_idle12] s1=0 -> fast : (s1'=2) & (x1'=0) +  slow : (s1'=3) & (x1'=0);
+	[rec_idle21] s1=0 -> (s1'=1);
+	// rec_idle immediate state)
+	[snd_idle12] s1=1 -> fast : (s1'=4) & (x1'=0) +  slow : (s1'=5) & (x1'=0);
+	[rec_req21]  s1=1 -> (s1'=0);
+	// rec_req_fast
+	[rec_idle21] s1=2 -> (s1'=4);	
+	[snd_ack12]  s1=2 & x1>=rc_fast_min -> (s1'=7) & (x1'=0);
+	[time]       s1=2 & x1<rc_fast_max -> (x1'=min(x1+1,168));
+	// rec_req_slow
+	[rec_idle21] s1=3 -> (s1'=5);
+	[snd_ack12]  s1=3 & x1>=rc_slow_min -> (s1'=7) & (x1'=0);
+	[time]       s1=3 & x1<rc_slow_max -> (x1'=min(x1+1,168));
+	// rec_idle_fast
+	[rec_req21] s1=4 -> (s1'=2);
+	[snd_req12] s1=4 & x1>=rc_fast_min -> (s1'=6) & (x1'=0);
+	[time]      s1=4 & x1<rc_fast_max -> (x1'=min(x1+1,168));
+	// rec_idle_slow
+	[rec_req21] s1=5 -> (s1'=3);
+	[snd_req12] s1=5 & x1>=rc_slow_min -> (s1'=6) & (x1'=0);
+	[time]      s1=5 & x1<rc_slow_max -> (x1'=min(x1+1,168));
+	// snd_req 
+	// do not use x1 until reset (in state 0 or in state 1) so do not need to increase x1
+	// also can set x1 to 0 upon entering this state
+	[rec_req21] s1=6 -> (s1'=0);
+	[rec_ack21] s1=6 -> (s1'=8);
+	[time]      s1=6 -> (s1'=s1);
+	// almost root (immediate) 
+	// loop in final states to remove deadlock
+	[] s1=7 & s2=8 -> (s1'=s1);
+	[] s1=8 & s2=7 -> (s1'=s1);
+	[time] s1=7 -> (s1'=s1);
+	[time] s1=8 -> (s1'=s1);
+	
+endmodule
+
+// construct remaining automata through renaming
+module wire21=wire12[w12=w21, y1=z1, y2=z2, 
+	snd_req12=snd_req21, snd_idle12=snd_idle21, snd_ack12=snd_ack21,
+	rec_req12=rec_req21, rec_idle12=rec_idle21, rec_ack12=rec_ack21]
+endmodule
+module node2=node1[s1=s2, s2=s1, x1=x2, 
+	rec_req21=rec_req12, rec_idle21=rec_idle12, rec_ack21=rec_ack12,
+	snd_req12=snd_req21, snd_idle12=snd_idle21, snd_ack12=snd_ack21]
+endmodule
+
+// labels
+label "done" = (s1=8 & s2=7) | (s1=7 & s2=8);
+
+// reward structures
+
+// time
+rewards "time"	
+	[time] true : 1;
+endrewards
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: property.props</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">// Minimum probability of completing within deadline
+"deadline": Pmin=? [ F^{rew{"time"}<=800} "done"];
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.jani</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">{
+    "actions": [
+        {
+            "name": "rec_ack12"
+        },
+        {
+            "name": "rec_ack21"
+        },
+        {
+            "name": "rec_idle12"
+        },
+        {
+            "name": "rec_idle21"
+        },
+        {
+            "name": "rec_req12"
+        },
+        {
+            "name": "rec_req21"
+        },
+        {
+            "name": "snd_ack12"
+        },
+        {
+            "name": "snd_ack21"
+        },
+        {
+            "name": "snd_idle12"
+        },
+        {
+            "name": "snd_idle21"
+        },
+        {
+            "name": "snd_req12"
+        },
+        {
+            "name": "snd_req21"
+        },
+        {
+            "name": "time"
+        }
+    ],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "action": "rec_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 1",
+                                    "ref": "w12",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 7)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 7
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 5",
+                                    "ref": "w12",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 4)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 0",
+                                    "ref": "w12",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y1 <- 0",
+                                    "ref": "y1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 3)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 3",
+                                    "ref": "w12",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 9)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 1",
+                                    "ref": "w12",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 6)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 0",
+                                    "ref": "w12",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y1 <- 0",
+                                    "ref": "y1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 5)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 5",
+                                    "ref": "w12",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 8)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 3",
+                                    "ref": "w12",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 2)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 0",
+                                    "ref": "w12",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y1 <- 0",
+                                    "ref": "y1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 1)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 9",
+                                    "ref": "w12",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 9)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 9",
+                                    "ref": "w12",
+                                    "value": 9
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 5)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 2",
+                                    "ref": "w12",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 2)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 3",
+                                    "ref": "w12",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 3)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 3",
+                                    "ref": "w12",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "y1 <- 0",
+                                    "ref": "y1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 0)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 2",
+                                    "ref": "w12",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 1)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 4",
+                                    "ref": "w12",
+                                    "value": 4
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 3)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 5",
+                                    "ref": "w12",
+                                    "value": 5
+                                },
+                                {
+                                    "comment": "y1 <- 0",
+                                    "ref": "y1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 0)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 8",
+                                    "ref": "w12",
+                                    "value": 8
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 1)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 5",
+                                    "ref": "w12",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 5)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 8",
+                                    "ref": "w12",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 8)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 4",
+                                    "ref": "w12",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 4)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 6",
+                                    "ref": "w12",
+                                    "value": 6
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 5)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 6",
+                                    "ref": "w12",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 6)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 7",
+                                    "ref": "w12",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 7)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 7
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 7",
+                                    "ref": "w12",
+                                    "value": 7
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 3)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 1",
+                                    "ref": "w12",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "y1 <- 0",
+                                    "ref": "y1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 0)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 1",
+                                    "ref": "w12",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 1)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- w12",
+                                    "ref": "w12",
+                                    "value": "w12"
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 0)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "y1 <- (min((y1 + 1), 37))",
+                                    "ref": "y1",
+                                    "value": {
+                                        "left": {
+                                            "left": "y1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "y2 <- (min((y2 + 1), 37))",
+                                    "ref": "y2",
+                                    "value": {
+                                        "left": {
+                                            "left": "y2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w12 = 1) & (y2 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w12",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "y2",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "y1 <- (min((y1 + 1), 37))",
+                                    "ref": "y1",
+                                    "value": {
+                                        "left": {
+                                            "left": "y1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "y2 <- (min((y2 + 1), 37))",
+                                    "ref": "y2",
+                                    "value": {
+                                        "left": {
+                                            "left": "y2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w12 = 2) & (y1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w12",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "y1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "y1 <- (min((y1 + 1), 37))",
+                                    "ref": "y1",
+                                    "value": {
+                                        "left": {
+                                            "left": "y1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "y2 <- (min((y2 + 1), 37))",
+                                    "ref": "y2",
+                                    "value": {
+                                        "left": {
+                                            "left": "y2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w12 = 3) & (y2 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w12",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "y2",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "y1 <- (min((y1 + 1), 37))",
+                                    "ref": "y1",
+                                    "value": {
+                                        "left": {
+                                            "left": "y1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "y2 <- (min((y2 + 1), 37))",
+                                    "ref": "y2",
+                                    "value": {
+                                        "left": {
+                                            "left": "y2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w12 = 4) & (y1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w12",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "y1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "y1 <- (min((y1 + 1), 37))",
+                                    "ref": "y1",
+                                    "value": {
+                                        "left": {
+                                            "left": "y1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "y2 <- (min((y2 + 1), 37))",
+                                    "ref": "y2",
+                                    "value": {
+                                        "left": {
+                                            "left": "y2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w12 = 5) & (y2 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w12",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "y2",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "y1 <- (min((y1 + 1), 37))",
+                                    "ref": "y1",
+                                    "value": {
+                                        "left": {
+                                            "left": "y1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "y2 <- (min((y2 + 1), 37))",
+                                    "ref": "y2",
+                                    "value": {
+                                        "left": {
+                                            "left": "y2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w12 = 6) & (y1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w12",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "y1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "y1 <- (min((y1 + 1), 37))",
+                                    "ref": "y1",
+                                    "value": {
+                                        "left": {
+                                            "left": "y1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "y2 <- (min((y2 + 1), 37))",
+                                    "ref": "y2",
+                                    "value": {
+                                        "left": {
+                                            "left": "y2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w12 = 7) & (y1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w12",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "y1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "y1 <- (min((y1 + 1), 37))",
+                                    "ref": "y1",
+                                    "value": {
+                                        "left": {
+                                            "left": "y1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "y2 <- (min((y2 + 1), 37))",
+                                    "ref": "y2",
+                                    "value": {
+                                        "left": {
+                                            "left": "y2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w12 = 8) & (y1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w12",
+                                "op": "=",
+                                "right": 8
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "y1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "y1 <- (min((y1 + 1), 37))",
+                                    "ref": "y1",
+                                    "value": {
+                                        "left": {
+                                            "left": "y1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "y2 <- (min((y2 + 1), 37))",
+                                    "ref": "y2",
+                                    "value": {
+                                        "left": {
+                                            "left": "y2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w12 = 9) & (y1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w12",
+                                "op": "=",
+                                "right": 9
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "y1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l",
+                    "transient-values": [
+                        {
+                            "comment": "done <- (((s1 = 8) & (s2 = 7)) | ((s1 = 7) & (s2 = 8)))",
+                            "ref": "done",
+                            "value": {
+                                "left": {
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 8
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 7
+                                    }
+                                },
+                                "op": "∨",
+                                "right": {
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 7
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 8
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "name": "wire12",
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "w12",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 9
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "y1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 37
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "y2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 37
+                    }
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- s1",
+                                    "ref": "s1",
+                                    "value": "s1"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 7) & (s2 = 8))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 8
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- s1",
+                                    "ref": "s1",
+                                    "value": "s1"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 8) & (s2 = 7))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 8
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 7
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 8",
+                                    "ref": "s1",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 6)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 1",
+                                    "ref": "s1",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 0)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 4",
+                                    "ref": "s1",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 2)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 5",
+                                    "ref": "s1",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 3)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 0",
+                                    "ref": "s1",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 1)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 2",
+                                    "ref": "s1",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 4)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 3",
+                                    "ref": "s1",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 5)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 0",
+                                    "ref": "s1",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 6)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 7",
+                                    "ref": "s1",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 2) & (x1 >= 76))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x1",
+                                "op": "≥",
+                                "right": 76
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 7",
+                                    "ref": "s1",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 3) & (x1 >= 159))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x1",
+                                "op": "≥",
+                                "right": 159
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 2",
+                                    "ref": "s1",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 3",
+                                    "ref": "s1",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 0)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 4",
+                                    "ref": "s1",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 5",
+                                    "ref": "s1",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 1)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 6",
+                                    "ref": "s1",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 4) & (x1 >= 76))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x1",
+                                "op": "≥",
+                                "right": 76
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 6",
+                                    "ref": "s1",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 5) & (x1 >= 159))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x1",
+                                "op": "≥",
+                                "right": 159
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- (min((x1 + 1), 168))",
+                                    "ref": "x1",
+                                    "value": {
+                                        "left": {
+                                            "left": "x1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 2) & (x1 < 85))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x1",
+                                "op": "<",
+                                "right": 85
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- (min((x1 + 1), 168))",
+                                    "ref": "x1",
+                                    "value": {
+                                        "left": {
+                                            "left": "x1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 3) & (x1 < 167))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x1",
+                                "op": "<",
+                                "right": 167
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- (min((x1 + 1), 168))",
+                                    "ref": "x1",
+                                    "value": {
+                                        "left": {
+                                            "left": "x1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 4) & (x1 < 85))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x1",
+                                "op": "<",
+                                "right": 85
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- (min((x1 + 1), 168))",
+                                    "ref": "x1",
+                                    "value": {
+                                        "left": {
+                                            "left": "x1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 5) & (x1 < 167))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x1",
+                                "op": "<",
+                                "right": 167
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- s1",
+                                    "ref": "s1",
+                                    "value": "s1"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 6)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- s1",
+                                    "ref": "s1",
+                                    "value": "s1"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 7)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 7
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- s1",
+                                    "ref": "s1",
+                                    "value": "s1"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 8)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "node1",
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "x1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 168
+                    }
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "action": "rec_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 1",
+                                    "ref": "w21",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 7)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 7
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 5",
+                                    "ref": "w21",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 4)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 0",
+                                    "ref": "w21",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z1 <- 0",
+                                    "ref": "z1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 3)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 3",
+                                    "ref": "w21",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 9)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 1",
+                                    "ref": "w21",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 6)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 0",
+                                    "ref": "w21",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z1 <- 0",
+                                    "ref": "z1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 5)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 5",
+                                    "ref": "w21",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 8)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 3",
+                                    "ref": "w21",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 2)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 0",
+                                    "ref": "w21",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z1 <- 0",
+                                    "ref": "z1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 1)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 9",
+                                    "ref": "w21",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 9)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 9",
+                                    "ref": "w21",
+                                    "value": 9
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 5)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 2",
+                                    "ref": "w21",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 2)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 3",
+                                    "ref": "w21",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 3)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 3",
+                                    "ref": "w21",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "z1 <- 0",
+                                    "ref": "z1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 0)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 2",
+                                    "ref": "w21",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 1)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 4",
+                                    "ref": "w21",
+                                    "value": 4
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 3)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 5",
+                                    "ref": "w21",
+                                    "value": 5
+                                },
+                                {
+                                    "comment": "z1 <- 0",
+                                    "ref": "z1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 0)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 8",
+                                    "ref": "w21",
+                                    "value": 8
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 1)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 5",
+                                    "ref": "w21",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 5)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 8",
+                                    "ref": "w21",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 8)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 4",
+                                    "ref": "w21",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 4)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 6",
+                                    "ref": "w21",
+                                    "value": 6
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 5)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 6",
+                                    "ref": "w21",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 6)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 7",
+                                    "ref": "w21",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 7)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 7
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 7",
+                                    "ref": "w21",
+                                    "value": 7
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 3)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 1",
+                                    "ref": "w21",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "z1 <- 0",
+                                    "ref": "z1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 0)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 1",
+                                    "ref": "w21",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 1)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- w21",
+                                    "ref": "w21",
+                                    "value": "w21"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 0)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "z1 <- (min((z1 + 1), 37))",
+                                    "ref": "z1",
+                                    "value": {
+                                        "left": {
+                                            "left": "z1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "z2 <- (min((z2 + 1), 37))",
+                                    "ref": "z2",
+                                    "value": {
+                                        "left": {
+                                            "left": "z2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w21 = 1) & (z2 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w21",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "z2",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "z1 <- (min((z1 + 1), 37))",
+                                    "ref": "z1",
+                                    "value": {
+                                        "left": {
+                                            "left": "z1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "z2 <- (min((z2 + 1), 37))",
+                                    "ref": "z2",
+                                    "value": {
+                                        "left": {
+                                            "left": "z2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w21 = 2) & (z1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w21",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "z1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "z1 <- (min((z1 + 1), 37))",
+                                    "ref": "z1",
+                                    "value": {
+                                        "left": {
+                                            "left": "z1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "z2 <- (min((z2 + 1), 37))",
+                                    "ref": "z2",
+                                    "value": {
+                                        "left": {
+                                            "left": "z2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w21 = 3) & (z2 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w21",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "z2",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "z1 <- (min((z1 + 1), 37))",
+                                    "ref": "z1",
+                                    "value": {
+                                        "left": {
+                                            "left": "z1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "z2 <- (min((z2 + 1), 37))",
+                                    "ref": "z2",
+                                    "value": {
+                                        "left": {
+                                            "left": "z2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w21 = 4) & (z1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w21",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "z1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "z1 <- (min((z1 + 1), 37))",
+                                    "ref": "z1",
+                                    "value": {
+                                        "left": {
+                                            "left": "z1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "z2 <- (min((z2 + 1), 37))",
+                                    "ref": "z2",
+                                    "value": {
+                                        "left": {
+                                            "left": "z2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w21 = 5) & (z2 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w21",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "z2",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "z1 <- (min((z1 + 1), 37))",
+                                    "ref": "z1",
+                                    "value": {
+                                        "left": {
+                                            "left": "z1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "z2 <- (min((z2 + 1), 37))",
+                                    "ref": "z2",
+                                    "value": {
+                                        "left": {
+                                            "left": "z2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w21 = 6) & (z1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w21",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "z1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "z1 <- (min((z1 + 1), 37))",
+                                    "ref": "z1",
+                                    "value": {
+                                        "left": {
+                                            "left": "z1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "z2 <- (min((z2 + 1), 37))",
+                                    "ref": "z2",
+                                    "value": {
+                                        "left": {
+                                            "left": "z2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w21 = 7) & (z1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w21",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "z1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "z1 <- (min((z1 + 1), 37))",
+                                    "ref": "z1",
+                                    "value": {
+                                        "left": {
+                                            "left": "z1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "z2 <- (min((z2 + 1), 37))",
+                                    "ref": "z2",
+                                    "value": {
+                                        "left": {
+                                            "left": "z2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w21 = 8) & (z1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w21",
+                                "op": "=",
+                                "right": 8
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "z1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "z1 <- (min((z1 + 1), 37))",
+                                    "ref": "z1",
+                                    "value": {
+                                        "left": {
+                                            "left": "z1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                },
+                                {
+                                    "comment": "z2 <- (min((z2 + 1), 37))",
+                                    "ref": "z2",
+                                    "value": {
+                                        "left": {
+                                            "left": "z2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 37
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((w21 = 9) & (z1 < 36))",
+                        "exp": {
+                            "left": {
+                                "left": "w21",
+                                "op": "=",
+                                "right": 9
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "z1",
+                                "op": "<",
+                                "right": 36
+                            }
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "wire21",
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "w21",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 9
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "z1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 37
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "z2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 37
+                    }
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- s2",
+                                    "ref": "s2",
+                                    "value": "s2"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 7) & (s1 = 8))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 8
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- s2",
+                                    "ref": "s2",
+                                    "value": "s2"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 8) & (s1 = 7))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 8
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 7
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 8",
+                                    "ref": "s2",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 6)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 1",
+                                    "ref": "s2",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 0)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 4",
+                                    "ref": "s2",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 2)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 5",
+                                    "ref": "s2",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 3)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 0",
+                                    "ref": "s2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 1)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 2",
+                                    "ref": "s2",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 4)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 3",
+                                    "ref": "s2",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 5)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 0",
+                                    "ref": "s2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 6)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 7",
+                                    "ref": "s2",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 2) & (x2 >= 76))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x2",
+                                "op": "≥",
+                                "right": 76
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 7",
+                                    "ref": "s2",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 3) & (x2 >= 159))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x2",
+                                "op": "≥",
+                                "right": 159
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 2",
+                                    "ref": "s2",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 3",
+                                    "ref": "s2",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 0)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 4",
+                                    "ref": "s2",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 5",
+                                    "ref": "s2",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/2)",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 1)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 6",
+                                    "ref": "s2",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 4) & (x2 >= 76))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x2",
+                                "op": "≥",
+                                "right": 76
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 6",
+                                    "ref": "s2",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 5) & (x2 >= 159))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x2",
+                                "op": "≥",
+                                "right": 159
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- (min((x2 + 1), 168))",
+                                    "ref": "x2",
+                                    "value": {
+                                        "left": {
+                                            "left": "x2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 2) & (x2 < 85))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x2",
+                                "op": "<",
+                                "right": 85
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- (min((x2 + 1), 168))",
+                                    "ref": "x2",
+                                    "value": {
+                                        "left": {
+                                            "left": "x2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 3) & (x2 < 167))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x2",
+                                "op": "<",
+                                "right": 167
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- (min((x2 + 1), 168))",
+                                    "ref": "x2",
+                                    "value": {
+                                        "left": {
+                                            "left": "x2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 4) & (x2 < 85))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x2",
+                                "op": "<",
+                                "right": 85
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- (min((x2 + 1), 168))",
+                                    "ref": "x2",
+                                    "value": {
+                                        "left": {
+                                            "left": "x2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 5) & (x2 < 167))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x2",
+                                "op": "<",
+                                "right": 167
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- s2",
+                                    "ref": "s2",
+                                    "value": "s2"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 6)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 6
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- s2",
+                                    "ref": "s2",
+                                    "value": "s2"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 7)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 7
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- s2",
+                                    "ref": "s2",
+                                    "value": "s2"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 8)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "node2",
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "x2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 168
+                    }
+                }
+            ]
+        }
+    ],
+    "constants": [
+        {
+            "name": "deadline",
+            "type": "int",
+            "value": 800
+        },
+        {
+            "name": "rc_fast_max",
+            "type": "int",
+            "value": 85
+        },
+        {
+            "name": "rc_fast_min",
+            "type": "int",
+            "value": 76
+        },
+        {
+            "name": "rc_slow_max",
+            "type": "int",
+            "value": 167
+        },
+        {
+            "name": "rc_slow_min",
+            "type": "int",
+            "value": 159
+        },
+        {
+            "name": "delay",
+            "type": "int",
+            "value": 36
+        },
+        {
+            "name": "fast",
+            "type": "real",
+            "value": 0.5
+        },
+        {
+            "name": "slow",
+            "type": "real",
+            "value": 0.5
+        }
+    ],
+    "features": [
+        "derived-operators"
+    ],
+    "jani-version": 1,
+    "name": "model",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "reward-bounds": [
+                            {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "bounds": {
+                                    "upper": 800,
+                                    "upper-exclusive": false
+                                },
+                                "exp": "time"
+                            }
+                        ],
+                        "right": "done"
+                    },
+                    "op": "Pmin"
+                }
+            },
+            "name": "deadline"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "wire12"
+            },
+            {
+                "automaton": "node1"
+            },
+            {
+                "automaton": "wire21"
+            },
+            {
+                "automaton": "node2"
+            }
+        ],
+        "syncs": [
+            {
+                "result": "rec_ack12",
+                "synchronise": [
+                    "rec_ack12",
+                    null,
+                    null,
+                    "rec_ack12"
+                ]
+            },
+            {
+                "result": "rec_ack21",
+                "synchronise": [
+                    null,
+                    "rec_ack21",
+                    "rec_ack21",
+                    null
+                ]
+            },
+            {
+                "result": "rec_idle12",
+                "synchronise": [
+                    "rec_idle12",
+                    null,
+                    null,
+                    "rec_idle12"
+                ]
+            },
+            {
+                "result": "rec_idle21",
+                "synchronise": [
+                    null,
+                    "rec_idle21",
+                    "rec_idle21",
+                    null
+                ]
+            },
+            {
+                "result": "rec_req12",
+                "synchronise": [
+                    "rec_req12",
+                    null,
+                    null,
+                    "rec_req12"
+                ]
+            },
+            {
+                "result": "rec_req21",
+                "synchronise": [
+                    null,
+                    "rec_req21",
+                    "rec_req21",
+                    null
+                ]
+            },
+            {
+                "result": "snd_ack12",
+                "synchronise": [
+                    "snd_ack12",
+                    "snd_ack12",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "snd_ack21",
+                "synchronise": [
+                    null,
+                    null,
+                    "snd_ack21",
+                    "snd_ack21"
+                ]
+            },
+            {
+                "result": "snd_idle12",
+                "synchronise": [
+                    "snd_idle12",
+                    "snd_idle12",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "snd_idle21",
+                "synchronise": [
+                    null,
+                    null,
+                    "snd_idle21",
+                    "snd_idle21"
+                ]
+            },
+            {
+                "result": "snd_req12",
+                "synchronise": [
+                    "snd_req12",
+                    "snd_req12",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "snd_req21",
+                "synchronise": [
+                    null,
+                    null,
+                    "snd_req21",
+                    "snd_req21"
+                ]
+            },
+            {
+                "result": "time",
+                "synchronise": [
+                    "time",
+                    "time",
+                    "time",
+                    "time"
+                ]
+            }
+        ]
+    },
+    "type": "mdp",
+    "variables": [
+        {
+            "initial-value": false,
+            "name": "done",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": 0.0,
+            "name": "time",
+            "transient": true,
+            "type": "real"
+        },
+        {
+            "initial-value": 0,
+            "name": "s1",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 8
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "s2",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 8
+            }
+        }
+    ]
+}
+</pre>
+</div>
+
+</body>
+</html>

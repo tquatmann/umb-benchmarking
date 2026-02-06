@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>nand.60-4</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Benchmark nand.60-4</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Download</div></div>
+<pre style="overflow:auto; padding-bottom: 0.5ex">
+<a href="model.prism" download>model.prism</a> (0.01 MB)
+<a href="property.props" download>property.props</a> (0.01 MB)
+<a href="model.jani" download>model.jani</a> (0.03 MB)
+
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Origin</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">
+Taken from <a href="https://qcomp.org/benchmarks/#nand" target="_blank">QVBS</a> (January 2026).
+The given benchmark (including parameter instantiation and property) has been considered in QComp 2019 and QComp 2020.
+
+Original Prism model and property files have been adapted for compatibility and simplicity:
+- Constants: All open constants are now explicitly set within model.prism (no need to set them via command line)
+- Properties: The properties only refer to labels and rewards as defined in the model.prism file. No variables or constants are used in the property.
+- Formulas: some PRISM formula declarations have been renamed so that their identify does not crash with a label.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.prism</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">// nand multiplex system
+// gxn/dxp 20/03/03
+
+// U (correctly) performs a random permutation of the outputs of the previous stage
+
+dtmc
+
+const int N=60; // number of inputs in each bundle
+const int K=4; // number of restorative stages
+
+const int M = 2*K+1; // total number of multiplexing units
+
+// parameters taken from the following paper
+// A system architecture solution for unreliable nanoelectric devices
+// J. Han & P. Jonker
+// IEEEE trans. on nanotechnology vol 1(4) 2002
+
+const double perr = 0.02; // probability nand works correctly
+const double prob1 = 0.9; // probability initial inputs are stimulated
+
+// model whole system as a single module by resuing variables 
+// to decrease the state space
+module multiplex
+
+	u : [1..M]; // number of stages
+	c : [0..N]; // counter (number of copies of the nand done)
+
+	s : [0..4]; // local state
+	// 0 - initial state
+	// 1 - set x inputs
+	// 2 - set y inputs
+	// 3 - set outputs
+	// 4 - done
+
+	z : [0..N]; // number of new outputs equal to 1
+	zx : [0..N]; // number of old outputs equal to 1
+	zy : [0..N]; // need second copy for y
+	// initially 9 since initially probability of stimulated state is 0.9
+
+	x : [0..1]; // value of first input
+	y : [0..1]; // value of second input
+	
+	[] s=0 & (c<N) -> (s'=1); // do next nand if have not done N yet
+	[] s=0 & (c=N) & (u<M) -> (s'=1) & (zx'=z) & (zy'=z) & (z'=0) & (u'=u+1) & (c'=0); // move on to next u if not finished
+	[] s=0 & (c=N) & (u=M) -> (s'=4) & (zx'=0) & (zy'=0) & (x'=0) & (y'=0); // finished (so reset variables not needed to reduce state space)
+
+	// choose x permute selection (have zx stimulated inputs)
+	// note only need y to be random	
+	[] s=1 & u=1  -> prob1 : (x'=1) & (s'=2) + (1-prob1) : (x'=0) & (s'=2); // initially random
+	[] s=1 & u>1 & zx>0 -> (x'=1) & (s'=2) & (zx'=zx-1);
+	[] s=1 & u>1 & zx=0 -> (x'=0) & (s'=2);
+
+	// choose x randomly from selection (have zy stimulated inputs)
+	[] s=2 & u=1 -> prob1 : (y'=1) & (s'=3) + (1-prob1) : (y'=0) & (s'=3); // initially random
+	[] s=2 & u>1 & zy<(N-c) & zy>0  -> zy/(N-c) : (y'=1) & (s'=3) & (zy'=zy-1) + 1-(zy/(N-c)) : (y'=0) & (s'=3);
+	[] s=2 & u>1 & zy=(N-c) & c<N -> 1 : (y'=1) & (s'=3) & (zy'=zy-1);
+	[] s=2 & u>1 & zy=0 -> 1 : (y'=0) & (s'=3);
+
+	// use nand gate
+	[] s=3 & z<N & c<N -> (1-perr) : (z'=z+(1-x*y)) & (s'=0) & (c'=c+1) & (x'=0) & (y'=0) // not faulty
+	         + perr    : (z'=z+(x*y))    & (s'=0) & (c'=c+1) & (x'=0) & (y'=0); // von neumann fault
+	// [] s=3 & z<N -> (1-perr) : (z'=z+(1-x*y)) & (s'=0) & (c'=c+1) & (x'=0) & (y'=0) // not faulty
+	//         + perr    : (z'=z+(x*y))    & (s'=0) & (c'=c+1) & (x'=0) & (y'=0); // von neumann fault
+	
+	[] s=4 -> true;
+	
+endmodule
+
+label "target" = s=4 & z/N<0.1;</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: property.props</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">"reliable": P=? [ F "target" ];
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.jani</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">{
+    "actions": [],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 1",
+                                    "ref": "s",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 0) & (c < 60))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "c",
+                                "op": "<",
+                                "right": 60
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "u <- (u + 1)",
+                                    "ref": "u",
+                                    "value": {
+                                        "left": "u",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "c <- 0",
+                                    "ref": "c",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s <- 1",
+                                    "ref": "s",
+                                    "value": 1
+                                },
+                                {
+                                    "comment": "z <- 0",
+                                    "ref": "z",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "zx <- z",
+                                    "ref": "zx",
+                                    "value": "z"
+                                },
+                                {
+                                    "comment": "zy <- z",
+                                    "ref": "zy",
+                                    "value": "z"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s = 0) & (c = 60)) & (u < ((2 * 4) + 1)))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s",
+                                    "op": "=",
+                                    "right": 0
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "c",
+                                    "op": "=",
+                                    "right": 60
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "u",
+                                "op": "<",
+                                "right": 9
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 4",
+                                    "ref": "s",
+                                    "value": 4
+                                },
+                                {
+                                    "comment": "zx <- 0",
+                                    "ref": "zx",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "zy <- 0",
+                                    "ref": "zy",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "x <- 0",
+                                    "ref": "x",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y <- 0",
+                                    "ref": "y",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s = 0) & (c = 60)) & (u = ((2 * 4) + 1)))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s",
+                                    "op": "=",
+                                    "right": 0
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "c",
+                                    "op": "=",
+                                    "right": 60
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "u",
+                                "op": "=",
+                                "right": 9
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "x <- 1",
+                                    "ref": "x",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "9/10",
+                                "exp": {
+                                    "left": 9.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "x <- 0",
+                                    "ref": "x",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 9/10)",
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 1) & (u = 1))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "u",
+                                "op": "=",
+                                "right": 1
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "zx <- (zx - 1)",
+                                    "ref": "zx",
+                                    "value": {
+                                        "left": "zx",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "x <- 1",
+                                    "ref": "x",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s = 1) & (u > 1)) & (zx > 0))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s",
+                                    "op": "=",
+                                    "right": 1
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "u",
+                                    "op": ">",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "zx",
+                                "op": ">",
+                                "right": 0
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 2",
+                                    "ref": "s",
+                                    "value": 2
+                                },
+                                {
+                                    "comment": "x <- 0",
+                                    "ref": "x",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s = 1) & (u > 1)) & (zx = 0))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s",
+                                    "op": "=",
+                                    "right": 1
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "u",
+                                    "op": ">",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "zx",
+                                "op": "=",
+                                "right": 0
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 3",
+                                    "ref": "s",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "y <- 1",
+                                    "ref": "y",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "9/10",
+                                "exp": {
+                                    "left": 9.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 3",
+                                    "ref": "s",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "y <- 0",
+                                    "ref": "y",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 9/10)",
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 2) & (u = 1))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "u",
+                                "op": "=",
+                                "right": 1
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 3",
+                                    "ref": "s",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "zy <- (zy - 1)",
+                                    "ref": "zy",
+                                    "value": {
+                                        "left": "zy",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "y <- 1",
+                                    "ref": "y",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(zy / (60 - c))",
+                                "exp": {
+                                    "left": "zy",
+                                    "op": "/",
+                                    "right": {
+                                        "left": 60,
+                                        "op": "-",
+                                        "right": "c"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 3",
+                                    "ref": "s",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "y <- 0",
+                                    "ref": "y",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - (zy / (60 - c)))",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "-",
+                                    "right": {
+                                        "left": "zy",
+                                        "op": "/",
+                                        "right": {
+                                            "left": 60,
+                                            "op": "-",
+                                            "right": "c"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((((s = 2) & (u > 1)) & (zy < (60 - c))) & (zy > 0))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "zy",
+                                    "op": ">",
+                                    "right": 0
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "u",
+                                    "op": ">",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "left": "zy",
+                                    "op": "<",
+                                    "right": {
+                                        "left": 60,
+                                        "op": "-",
+                                        "right": "c"
+                                    }
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "s",
+                                    "op": "=",
+                                    "right": 2
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 3",
+                                    "ref": "s",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "zy <- (zy - 1)",
+                                    "ref": "zy",
+                                    "value": {
+                                        "left": "zy",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "y <- 1",
+                                    "ref": "y",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((((s = 2) & (u > 1)) & (zy = (60 - c))) & (c < 60))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "c",
+                                    "op": "<",
+                                    "right": 60
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "u",
+                                    "op": ">",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "left": "zy",
+                                    "op": "=",
+                                    "right": {
+                                        "left": 60,
+                                        "op": "-",
+                                        "right": "c"
+                                    }
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "s",
+                                    "op": "=",
+                                    "right": 2
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s <- 3",
+                                    "ref": "s",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "y <- 0",
+                                    "ref": "y",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s = 2) & (u > 1)) & (zy = 0))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s",
+                                    "op": "=",
+                                    "right": 2
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "u",
+                                    "op": ">",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "zy",
+                                "op": "=",
+                                "right": 0
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c <- (c + 1)",
+                                    "ref": "c",
+                                    "value": {
+                                        "left": "c",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "s <- 0",
+                                    "ref": "s",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z <- (z + (1 - (x * y)))",
+                                    "ref": "z",
+                                    "value": {
+                                        "left": "z",
+                                        "op": "+",
+                                        "right": {
+                                            "left": 1,
+                                            "op": "-",
+                                            "right": {
+                                                "left": "x",
+                                                "op": "*",
+                                                "right": "y"
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "comment": "x <- 0",
+                                    "ref": "x",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y <- 0",
+                                    "ref": "y",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 1/50)",
+                                "exp": 0.98
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "c <- (c + 1)",
+                                    "ref": "c",
+                                    "value": {
+                                        "left": "c",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                },
+                                {
+                                    "comment": "s <- 0",
+                                    "ref": "s",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z <- (z + (x * y))",
+                                    "ref": "z",
+                                    "value": {
+                                        "left": "z",
+                                        "op": "+",
+                                        "right": {
+                                            "left": "x",
+                                            "op": "*",
+                                            "right": "y"
+                                        }
+                                    }
+                                },
+                                {
+                                    "comment": "x <- 0",
+                                    "ref": "x",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y <- 0",
+                                    "ref": "y",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/50",
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 50.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s = 3) & (z < 60)) & (c < 60))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s",
+                                    "op": "=",
+                                    "right": 3
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "z",
+                                    "op": "<",
+                                    "right": 60
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "c",
+                                "op": "<",
+                                "right": 60
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s = 4)",
+                        "exp": {
+                            "left": "s",
+                            "op": "=",
+                            "right": 4
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l",
+                    "transient-values": [
+                        {
+                            "comment": "target <- ((s = 4) & ((z / 60) < 1/10))",
+                            "ref": "target",
+                            "value": {
+                                "left": {
+                                    "left": "s",
+                                    "op": "=",
+                                    "right": 4
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": {
+                                        "left": "z",
+                                        "op": "/",
+                                        "right": 60
+                                    },
+                                    "op": "<",
+                                    "right": {
+                                        "left": 1.0,
+                                        "op": "/",
+                                        "right": 10.0
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "name": "multiplex",
+            "variables": [
+                {
+                    "initial-value": 1,
+                    "name": "u",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 1,
+                        "upper-bound": 9
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "c",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 60
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "zx",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 60
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "zy",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 60
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "x",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 1
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "y",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 1
+                    }
+                }
+            ]
+        }
+    ],
+    "constants": [
+        {
+            "name": "N",
+            "type": "int",
+            "value": 60
+        },
+        {
+            "name": "K",
+            "type": "int",
+            "value": 4
+        },
+        {
+            "name": "M",
+            "type": "int",
+            "value": 9
+        },
+        {
+            "name": "perr",
+            "type": "real",
+            "value": {
+                "left": 1.0,
+                "op": "/",
+                "right": 50.0
+            }
+        },
+        {
+            "name": "prob1",
+            "type": "real",
+            "value": {
+                "left": 9.0,
+                "op": "/",
+                "right": 10.0
+            }
+        }
+    ],
+    "features": [
+        "derived-operators"
+    ],
+    "jani-version": 1,
+    "name": "model",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "right": "target"
+                    },
+                    "op": "Pmin"
+                }
+            },
+            "name": "reliable"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "multiplex"
+            }
+        ]
+    },
+    "type": "dtmc",
+    "variables": [
+        {
+            "initial-value": false,
+            "name": "target",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": 0,
+            "name": "s",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 4
+            }
+        },
+        {
+            "initial-value": 0,
+            "name": "z",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 60
+            }
+        }
+    ]
+}
+</pre>
+</div>
+
+</body>
+</html>

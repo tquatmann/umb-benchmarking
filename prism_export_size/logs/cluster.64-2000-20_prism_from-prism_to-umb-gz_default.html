@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log cluster.64-2000-20_prism_from-prism_to-umb-gz_default</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/cluster.64-2000-20/index.html" target="_blank">cluster.64-2000-20</a> and tool configuration prism_from-prism_to-umb-gz_default</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[16240478.0, 16240478.0, 16240478.0, 16240478.0, 16240478.0]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_default_cluster.64-2000-20_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/cluster.64-2000-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.496 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 07:40:36 GMT+01:00 2026
+Hostname: n23m0276
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/cluster.64-2000-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/cluster.64-2000-20/model.prism"...
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n
+Labels:      "minimum"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.03 seconds (average 0.000226, setup 0.00)
+
+Time for model construction: 0.078 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 8225 nodes (71 terminal), 733216 minterms, vars: 23r/23c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb.gz"...
+Time for exporting: 0.422 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb.gz:	Size of output file is 16240478 bytes
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_default_cluster.64-2000-20_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/cluster.64-2000-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 0.906 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:41:07 GMT+01:00 2026
+Hostname: n23m0313
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/cluster.64-2000-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep2.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/cluster.64-2000-20/model.prism"...
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n
+Labels:      "minimum"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.02 seconds (average 0.000150, setup 0.00)
+
+Time for model construction: 0.039 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 8225 nodes (71 terminal), 733216 minterms, vars: 23r/23c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep2.gz"...
+Time for exporting: 0.346 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep2.gz:	Size of output file is 16240478 bytes
+Removing output file to save space for repetition #2
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_default_cluster.64-2000-20_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/cluster.64-2000-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 1.006 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:54:18 GMT+01:00 2026
+Hostname: n23m0244
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/cluster.64-2000-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep3.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/cluster.64-2000-20/model.prism"...
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n
+Labels:      "minimum"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.02 seconds (average 0.000150, setup 0.00)
+
+Time for model construction: 0.041 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 8225 nodes (71 terminal), 733216 minterms, vars: 23r/23c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep3.gz"...
+Time for exporting: 0.347 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep3.gz:	Size of output file is 16240478 bytes
+Removing output file to save space for repetition #3
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_default_cluster.64-2000-20_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/cluster.64-2000-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 0.882 seconds
+Return code: 0
+##############################
+[0.002s][warning][perf,memops] Cannot use file /tmp/hsperfdata_tq429871/90973 because it is locked by another process (errno = 11)
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:34:33 GMT+01:00 2026
+Hostname: n23m0247
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/cluster.64-2000-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep4.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/cluster.64-2000-20/model.prism"...
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n
+Labels:      "minimum"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.02 seconds (average 0.000150, setup 0.00)
+
+Time for model construction: 0.04 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 8225 nodes (71 terminal), 733216 minterms, vars: 23r/23c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep4.gz"...
+Time for exporting: 0.342 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep4.gz:	Size of output file is 16240478 bytes
+Removing output file to save space for repetition #4
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_to-umb-gz_default_cluster.64-2000-20_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism  models/cluster.64-2000-20/model.prism -exportmodel out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true
+Wallclock time: 0.992 seconds
+Return code: 0
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 08:46:11 GMT+01:00 2026
+Hostname: n23m0109
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism models/cluster.64-2000-20/model.prism -exportmodel 'out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep5.gz:states=false,obs=false,rewards=true,zip=true'
+
+Parsing PRISM model file "models/cluster.64-2000-20/model.prism"...
+
+Type:        CTMC
+Modules:     Left Right Repairman Line ToLeft ToRight
+Actions:     [] [startLeft] [repairLeft] [startRight] [repairRight] [startToLeft] [startToRight] [startLine] [repairToLeft] [repairToRight] [repairLine]
+Variables:   left_n left right_n right r line line_n toleft toleft_n toright toright_n
+Labels:      "minimum"
+
+Building model (engine:symbolic)...
+
+Computing reachable states...
+
+Reachability (BFS): 133 iterations in 0.02 seconds (average 0.000150, setup 0.00)
+
+Time for model construction: 0.044 seconds.
+
+Type:        CTMC
+States:      151060 (1 initial)
+Transitions: 733216
+
+Rate matrix: 8225 nodes (71 terminal), 733216 minterms, vars: 23r/23c
+
+Exporting model in plain text format to file "out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep5.gz"...
+Time for exporting: 0.385 seconds.
+
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+
+############################## Output files ##############################
+out/prism_from-prism_to-umb-gz_default/cluster.64-2000-20/model.umb_rep5.gz:	Size of output file is 16240478 bytes
+Removing output file to save space for repetition #5
+</pre>
+</div>
+</body>
+</html>

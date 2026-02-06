@@ -1,0 +1,4696 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>pnueli-zuck.5</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Benchmark pnueli-zuck.5</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Download</div></div>
+<pre style="overflow:auto; padding-bottom: 0.5ex">
+<a href="model.prism" download>model.prism</a> (0.01 MB)
+<a href="property.props" download>property.props</a> (0.01 MB)
+<a href="model.jani" download>model.jani</a> (0.16 MB)
+
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Origin</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">
+Taken from <a href="https://qcomp.org/benchmarks/#pnueli-zuck" target="_blank">QVBS</a> (January 2026).
+The given benchmark (including parameter instantiation and property) has been considered in QComp 2019 and QComp 2020.
+
+Original Prism model and property files have been adapted for compatibility and simplicity:
+- Constants: All open constants are now explicitly set within model.prism (no need to set them via command line)
+- Properties: The properties only refer to labels and rewards as defined in the model.prism file. No variables or constants are used in the property.
+- Formulas: some PRISM formula declarations have been renamed so that their identify does not crash with a label.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.prism</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">
+// mutual exclusion [PZ82]
+// dxp/gxn 19/12/99
+
+mdp
+
+// atomic formula
+// none in low, high, tie
+formula none_lht = 	(p1<4 | p1>13) & (p2<4 | p2>13) & (p3<4 | p3>13) & (p4<4 | p4>13);
+// some in admit
+formula some_a	 = 	(p1>=14 & p1<=15) | (p2>=14 & p2<=15) | (p3>=14 & p3<=15) | (p4>=14 & p4<=15);
+// some in high, admit
+formula some_ha	 = (p1>=4 & p1<=5) | (p1>=10 & p1<=15) | (p2>=4 & p2<=5) | (p2>=10 & p2<=15) | (p3>=4 & p3<=5) | (p3>=10 & p3<=15) | (p4>=4 & p4<=5) | (p4>=10 & p4<=15);
+// none in high, tie, admit
+formula none_hta = (p1>=0 & p1<=3) | (p1>=7 & p1<=8) | (p2>=0 & p2<=3) | (p2>=7 & p2<=8) | (p3>=0 & p3<=3) | (p3>=7 & p3<=8) | (p4>=0 & p4<=3) | (p4>=7 & p4<=8);
+// none in enter
+formula none_e	 = 	(p1<2 | p1>3) & (p2<2 | p2>3) & (p3<2 | p3>3) & (p4<2 | p4>3);
+
+// process 0
+module process0
+
+	p0: [0..15] init 1;
+	
+	[] p0=0 -> (p0'=0);
+	[] p0=0 -> (p0'=1);
+	[] p0=1 -> (p0'=2);
+	[] p0=2 &  (none_lht | some_a) -> (p0'=3);
+	[] p0=2 & !(none_lht | some_a) -> (p0'=2);
+	[] p0=3 -> (p0'=4);
+	[] p0=3 -> (p0'=7);
+	[] p0=4 &  some_ha -> (p0'=5);
+	[] p0=4 & !some_ha -> (p0'=10);
+	[] p0=5 -> (p0'=6);
+	[] p0=6 &  some_ha -> (p0'=6);
+	[] p0=6 & !some_ha -> (p0'=9);
+	[] p0=7 &  none_hta -> (p0'=8);
+	[] p0=7 & !none_hta -> (p0'=7);
+	[] p0=8  -> (p0'=9);
+	[] p0=9  -> 0.5 : (p0'=4) + 0.5 : (p0'=7);
+	[] p0=10 -> (p0'=11);
+	[] p0=11 &  none_lht -> (p0'=13);
+	[] p0=11 & !none_lht -> (p0'=12);
+	[] p0=12 -> (p0'=0);
+	[] p0=13 -> (p0'=14);
+	[] p0=14 &  none_e -> (p0'=15);
+	[] p0=14 & !none_e -> (p0'=14);
+	[] p0=15 -> (p0'=0);
+	
+endmodule
+
+// construct further modules through renaming
+
+	module process1 = process0 [p0=p1, p1=p0] endmodule
+	
+	module process2 = process0 [p0=p2, p2=p0] endmodule
+	
+	module process3 = process0 [p0=p3, p3=p0] endmodule
+	
+	module process4 = process0 [p0=p4, p4=p0] endmodule
+
+
+label "target" = (p1=10);</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: property.props</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">"live": Pmax=? [F "target"];
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.jani</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">{
+    "actions": [],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 0",
+                                    "ref": "p0",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 0)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 1",
+                                    "ref": "p0",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 0)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 2",
+                                    "ref": "p0",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 1)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 3",
+                                    "ref": "p0",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 2) & (none_lht(p1, p2, p3, p4) | some_a(p1, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "∨",
+                                "right": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "some_a",
+                                    "op": "call"
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 2",
+                                    "ref": "p0",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 2) & !((none_lht(p1, p2, p3, p4) | some_a(p1, p2, p3, p4))))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "left": {
+                                        "args": [
+                                            "p1",
+                                            "p2",
+                                            "p3",
+                                            "p4"
+                                        ],
+                                        "function": "none_lht",
+                                        "op": "call"
+                                    },
+                                    "op": "∨",
+                                    "right": {
+                                        "args": [
+                                            "p1",
+                                            "p2",
+                                            "p3",
+                                            "p4"
+                                        ],
+                                        "function": "some_a",
+                                        "op": "call"
+                                    }
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 4",
+                                    "ref": "p0",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 3)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 7",
+                                    "ref": "p0",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 3)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 5",
+                                    "ref": "p0",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 4) & some_ha(p1, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 10",
+                                    "ref": "p0",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 4) & !(some_ha(p1, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 6",
+                                    "ref": "p0",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 5)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 6",
+                                    "ref": "p0",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 6) & some_ha(p1, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 9",
+                                    "ref": "p0",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 6) & !(some_ha(p1, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 8",
+                                    "ref": "p0",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 7) & none_hta(p1, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "none_hta",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 7",
+                                    "ref": "p0",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 7) & !(none_hta(p1, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_hta",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 9",
+                                    "ref": "p0",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 8)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 4",
+                                    "ref": "p0",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 7",
+                                    "ref": "p0",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 9)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 11",
+                                    "ref": "p0",
+                                    "value": 11
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 10)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 10
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 13",
+                                    "ref": "p0",
+                                    "value": 13
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 11) & none_lht(p1, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "none_lht",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 12",
+                                    "ref": "p0",
+                                    "value": 12
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 11) & !(none_lht(p1, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 0",
+                                    "ref": "p0",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 12)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 12
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 14",
+                                    "ref": "p0",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 13)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 13
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 15",
+                                    "ref": "p0",
+                                    "value": 15
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 14) & none_e(p1, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "none_e",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 14",
+                                    "ref": "p0",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p0 = 14) & !(none_e(p1, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p0",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_e",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p0 <- 0",
+                                    "ref": "p0",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p0 = 15)",
+                        "exp": {
+                            "left": "p0",
+                            "op": "=",
+                            "right": 15
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l",
+                    "transient-values": [
+                        {
+                            "comment": "target <- (p1 = 10)",
+                            "ref": "target",
+                            "value": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 10
+                            }
+                        }
+                    ]
+                }
+            ],
+            "name": "process0",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 0",
+                                    "ref": "p1",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 0)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 1",
+                                    "ref": "p1",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 0)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 2",
+                                    "ref": "p1",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 1)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 3",
+                                    "ref": "p1",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 2) & (none_lht(p0, p2, p3, p4) | some_a(p0, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "args": [
+                                        "p0",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "∨",
+                                "right": {
+                                    "args": [
+                                        "p0",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "some_a",
+                                    "op": "call"
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 2",
+                                    "ref": "p1",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 2) & !((none_lht(p0, p2, p3, p4) | some_a(p0, p2, p3, p4))))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "left": {
+                                        "args": [
+                                            "p0",
+                                            "p2",
+                                            "p3",
+                                            "p4"
+                                        ],
+                                        "function": "none_lht",
+                                        "op": "call"
+                                    },
+                                    "op": "∨",
+                                    "right": {
+                                        "args": [
+                                            "p0",
+                                            "p2",
+                                            "p3",
+                                            "p4"
+                                        ],
+                                        "function": "some_a",
+                                        "op": "call"
+                                    }
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 4",
+                                    "ref": "p1",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 3)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 7",
+                                    "ref": "p1",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 3)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 5",
+                                    "ref": "p1",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 4) & some_ha(p0, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p0",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 10",
+                                    "ref": "p1",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 4) & !(some_ha(p0, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p0",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 6",
+                                    "ref": "p1",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 5)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 6",
+                                    "ref": "p1",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 6) & some_ha(p0, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p0",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 9",
+                                    "ref": "p1",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 6) & !(some_ha(p0, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p0",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 8",
+                                    "ref": "p1",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 7) & none_hta(p0, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p0",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "none_hta",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 7",
+                                    "ref": "p1",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 7) & !(none_hta(p0, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p0",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_hta",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 9",
+                                    "ref": "p1",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 8)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 4",
+                                    "ref": "p1",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 7",
+                                    "ref": "p1",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 9)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 11",
+                                    "ref": "p1",
+                                    "value": 11
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 10)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 10
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 13",
+                                    "ref": "p1",
+                                    "value": 13
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 11) & none_lht(p0, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p0",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "none_lht",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 12",
+                                    "ref": "p1",
+                                    "value": 12
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 11) & !(none_lht(p0, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p0",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 0",
+                                    "ref": "p1",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 12)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 12
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 14",
+                                    "ref": "p1",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 13)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 13
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 15",
+                                    "ref": "p1",
+                                    "value": 15
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 14) & none_e(p0, p2, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p0",
+                                    "p2",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "none_e",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 14",
+                                    "ref": "p1",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p1 = 14) & !(none_e(p0, p2, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p1",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p0",
+                                        "p2",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_e",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p1 <- 0",
+                                    "ref": "p1",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p1 = 15)",
+                        "exp": {
+                            "left": "p1",
+                            "op": "=",
+                            "right": 15
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "process1",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 0",
+                                    "ref": "p2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 0)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 1",
+                                    "ref": "p2",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 0)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 2",
+                                    "ref": "p2",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 1)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 3",
+                                    "ref": "p2",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 2) & (none_lht(p1, p0, p3, p4) | some_a(p1, p0, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "args": [
+                                        "p1",
+                                        "p0",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "∨",
+                                "right": {
+                                    "args": [
+                                        "p1",
+                                        "p0",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "some_a",
+                                    "op": "call"
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 2",
+                                    "ref": "p2",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 2) & !((none_lht(p1, p0, p3, p4) | some_a(p1, p0, p3, p4))))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "left": {
+                                        "args": [
+                                            "p1",
+                                            "p0",
+                                            "p3",
+                                            "p4"
+                                        ],
+                                        "function": "none_lht",
+                                        "op": "call"
+                                    },
+                                    "op": "∨",
+                                    "right": {
+                                        "args": [
+                                            "p1",
+                                            "p0",
+                                            "p3",
+                                            "p4"
+                                        ],
+                                        "function": "some_a",
+                                        "op": "call"
+                                    }
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 4",
+                                    "ref": "p2",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 3)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 7",
+                                    "ref": "p2",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 3)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 5",
+                                    "ref": "p2",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 4) & some_ha(p1, p0, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p0",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 10",
+                                    "ref": "p2",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 4) & !(some_ha(p1, p0, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p0",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 6",
+                                    "ref": "p2",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 5)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 6",
+                                    "ref": "p2",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 6) & some_ha(p1, p0, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p0",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 9",
+                                    "ref": "p2",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 6) & !(some_ha(p1, p0, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p0",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 8",
+                                    "ref": "p2",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 7) & none_hta(p1, p0, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p0",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "none_hta",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 7",
+                                    "ref": "p2",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 7) & !(none_hta(p1, p0, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p0",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_hta",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 9",
+                                    "ref": "p2",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 8)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 4",
+                                    "ref": "p2",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 7",
+                                    "ref": "p2",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 9)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 11",
+                                    "ref": "p2",
+                                    "value": 11
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 10)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 10
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 13",
+                                    "ref": "p2",
+                                    "value": 13
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 11) & none_lht(p1, p0, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p0",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "none_lht",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 12",
+                                    "ref": "p2",
+                                    "value": 12
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 11) & !(none_lht(p1, p0, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p0",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 0",
+                                    "ref": "p2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 12)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 12
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 14",
+                                    "ref": "p2",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 13)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 13
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 15",
+                                    "ref": "p2",
+                                    "value": 15
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 14) & none_e(p1, p0, p3, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p0",
+                                    "p3",
+                                    "p4"
+                                ],
+                                "function": "none_e",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 14",
+                                    "ref": "p2",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p2 = 14) & !(none_e(p1, p0, p3, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p2",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p0",
+                                        "p3",
+                                        "p4"
+                                    ],
+                                    "function": "none_e",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p2 <- 0",
+                                    "ref": "p2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p2 = 15)",
+                        "exp": {
+                            "left": "p2",
+                            "op": "=",
+                            "right": 15
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "process2",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 0",
+                                    "ref": "p3",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 0)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 1",
+                                    "ref": "p3",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 0)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 2",
+                                    "ref": "p3",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 1)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 3",
+                                    "ref": "p3",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 2) & (none_lht(p1, p2, p0, p4) | some_a(p1, p2, p0, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p0",
+                                        "p4"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "∨",
+                                "right": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p0",
+                                        "p4"
+                                    ],
+                                    "function": "some_a",
+                                    "op": "call"
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 2",
+                                    "ref": "p3",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 2) & !((none_lht(p1, p2, p0, p4) | some_a(p1, p2, p0, p4))))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "left": {
+                                        "args": [
+                                            "p1",
+                                            "p2",
+                                            "p0",
+                                            "p4"
+                                        ],
+                                        "function": "none_lht",
+                                        "op": "call"
+                                    },
+                                    "op": "∨",
+                                    "right": {
+                                        "args": [
+                                            "p1",
+                                            "p2",
+                                            "p0",
+                                            "p4"
+                                        ],
+                                        "function": "some_a",
+                                        "op": "call"
+                                    }
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 4",
+                                    "ref": "p3",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 3)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 7",
+                                    "ref": "p3",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 3)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 5",
+                                    "ref": "p3",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 4) & some_ha(p1, p2, p0, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p0",
+                                    "p4"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 10",
+                                    "ref": "p3",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 4) & !(some_ha(p1, p2, p0, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p0",
+                                        "p4"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 6",
+                                    "ref": "p3",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 5)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 6",
+                                    "ref": "p3",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 6) & some_ha(p1, p2, p0, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p0",
+                                    "p4"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 9",
+                                    "ref": "p3",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 6) & !(some_ha(p1, p2, p0, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p0",
+                                        "p4"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 8",
+                                    "ref": "p3",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 7) & none_hta(p1, p2, p0, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p0",
+                                    "p4"
+                                ],
+                                "function": "none_hta",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 7",
+                                    "ref": "p3",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 7) & !(none_hta(p1, p2, p0, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p0",
+                                        "p4"
+                                    ],
+                                    "function": "none_hta",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 9",
+                                    "ref": "p3",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 8)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 4",
+                                    "ref": "p3",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 7",
+                                    "ref": "p3",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 9)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 11",
+                                    "ref": "p3",
+                                    "value": 11
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 10)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 10
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 13",
+                                    "ref": "p3",
+                                    "value": 13
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 11) & none_lht(p1, p2, p0, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p0",
+                                    "p4"
+                                ],
+                                "function": "none_lht",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 12",
+                                    "ref": "p3",
+                                    "value": 12
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 11) & !(none_lht(p1, p2, p0, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p0",
+                                        "p4"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 0",
+                                    "ref": "p3",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 12)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 12
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 14",
+                                    "ref": "p3",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 13)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 13
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 15",
+                                    "ref": "p3",
+                                    "value": 15
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 14) & none_e(p1, p2, p0, p4))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p0",
+                                    "p4"
+                                ],
+                                "function": "none_e",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 14",
+                                    "ref": "p3",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p3 = 14) & !(none_e(p1, p2, p0, p4)))",
+                        "exp": {
+                            "left": {
+                                "left": "p3",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p0",
+                                        "p4"
+                                    ],
+                                    "function": "none_e",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p3 <- 0",
+                                    "ref": "p3",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p3 = 15)",
+                        "exp": {
+                            "left": "p3",
+                            "op": "=",
+                            "right": 15
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "process3",
+            "variables": []
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 0",
+                                    "ref": "p4",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 0)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 1",
+                                    "ref": "p4",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 0)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 2",
+                                    "ref": "p4",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 1)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 3",
+                                    "ref": "p4",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 2) & (none_lht(p1, p2, p3, p0) | some_a(p1, p2, p3, p0)))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p0"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "∨",
+                                "right": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p0"
+                                    ],
+                                    "function": "some_a",
+                                    "op": "call"
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 2",
+                                    "ref": "p4",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 2) & !((none_lht(p1, p2, p3, p0) | some_a(p1, p2, p3, p0))))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "left": {
+                                        "args": [
+                                            "p1",
+                                            "p2",
+                                            "p3",
+                                            "p0"
+                                        ],
+                                        "function": "none_lht",
+                                        "op": "call"
+                                    },
+                                    "op": "∨",
+                                    "right": {
+                                        "args": [
+                                            "p1",
+                                            "p2",
+                                            "p3",
+                                            "p0"
+                                        ],
+                                        "function": "some_a",
+                                        "op": "call"
+                                    }
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 4",
+                                    "ref": "p4",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 3)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 7",
+                                    "ref": "p4",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 3)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 5",
+                                    "ref": "p4",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 4) & some_ha(p1, p2, p3, p0))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p0"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 10",
+                                    "ref": "p4",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 4) & !(some_ha(p1, p2, p3, p0)))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p0"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 6",
+                                    "ref": "p4",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 5)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 6",
+                                    "ref": "p4",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 6) & some_ha(p1, p2, p3, p0))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p0"
+                                ],
+                                "function": "some_ha",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 9",
+                                    "ref": "p4",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 6) & !(some_ha(p1, p2, p3, p0)))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p0"
+                                    ],
+                                    "function": "some_ha",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 8",
+                                    "ref": "p4",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 7) & none_hta(p1, p2, p3, p0))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p0"
+                                ],
+                                "function": "none_hta",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 7",
+                                    "ref": "p4",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 7) & !(none_hta(p1, p2, p3, p0)))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p0"
+                                    ],
+                                    "function": "none_hta",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 9",
+                                    "ref": "p4",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 8)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 8
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 4",
+                                    "ref": "p4",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 7",
+                                    "ref": "p4",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "1/2",
+                                "exp": 0.5
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 9)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 11",
+                                    "ref": "p4",
+                                    "value": 11
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 10)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 10
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 13",
+                                    "ref": "p4",
+                                    "value": 13
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 11) & none_lht(p1, p2, p3, p0))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p0"
+                                ],
+                                "function": "none_lht",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 12",
+                                    "ref": "p4",
+                                    "value": 12
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 11) & !(none_lht(p1, p2, p3, p0)))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 11
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p0"
+                                    ],
+                                    "function": "none_lht",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 0",
+                                    "ref": "p4",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 12)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 12
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 14",
+                                    "ref": "p4",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 13)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 13
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 15",
+                                    "ref": "p4",
+                                    "value": 15
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 14) & none_e(p1, p2, p3, p0))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "p1",
+                                    "p2",
+                                    "p3",
+                                    "p0"
+                                ],
+                                "function": "none_e",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 14",
+                                    "ref": "p4",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((p4 = 14) & !(none_e(p1, p2, p3, p0)))",
+                        "exp": {
+                            "left": {
+                                "left": "p4",
+                                "op": "=",
+                                "right": 14
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": {
+                                    "args": [
+                                        "p1",
+                                        "p2",
+                                        "p3",
+                                        "p0"
+                                    ],
+                                    "function": "none_e",
+                                    "op": "call"
+                                },
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "p4 <- 0",
+                                    "ref": "p4",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(p4 = 15)",
+                        "exp": {
+                            "left": "p4",
+                            "op": "=",
+                            "right": 15
+                        }
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "process4",
+            "variables": []
+        }
+    ],
+    "constants": [],
+    "features": [
+        "derived-operators",
+        "functions"
+    ],
+    "functions": [
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "left": "some_a__param__p4",
+                            "op": "≥",
+                            "right": 14
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": "some_a__param__p4",
+                            "op": "≤",
+                            "right": 15
+                        }
+                    },
+                    "op": "∨",
+                    "right": {
+                        "left": {
+                            "left": "some_a__param__p2",
+                            "op": "≥",
+                            "right": 14
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": "some_a__param__p2",
+                            "op": "≤",
+                            "right": 15
+                        }
+                    }
+                },
+                "op": "∨",
+                "right": {
+                    "left": {
+                        "left": {
+                            "left": "some_a__param__p3",
+                            "op": "≥",
+                            "right": 14
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": "some_a__param__p3",
+                            "op": "≤",
+                            "right": 15
+                        }
+                    },
+                    "op": "∨",
+                    "right": {
+                        "left": {
+                            "left": "some_a__param__p1",
+                            "op": "≥",
+                            "right": 14
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": "some_a__param__p1",
+                            "op": "≤",
+                            "right": 15
+                        }
+                    }
+                }
+            },
+            "name": "some_a",
+            "parameters": [
+                {
+                    "name": "some_a__param__p1",
+                    "type": "int"
+                },
+                {
+                    "name": "some_a__param__p2",
+                    "type": "int"
+                },
+                {
+                    "name": "some_a__param__p3",
+                    "type": "int"
+                },
+                {
+                    "name": "some_a__param__p4",
+                    "type": "int"
+                }
+            ],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "left": "none_lht__param__p4",
+                            "op": "<",
+                            "right": 4
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": "none_lht__param__p4",
+                            "op": ">",
+                            "right": 13
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": {
+                            "left": "none_lht__param__p2",
+                            "op": "<",
+                            "right": 4
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": "none_lht__param__p2",
+                            "op": ">",
+                            "right": 13
+                        }
+                    }
+                },
+                "op": "∧",
+                "right": {
+                    "left": {
+                        "left": {
+                            "left": "none_lht__param__p3",
+                            "op": "<",
+                            "right": 4
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": "none_lht__param__p3",
+                            "op": ">",
+                            "right": 13
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": {
+                            "left": "none_lht__param__p1",
+                            "op": "<",
+                            "right": 4
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": "none_lht__param__p1",
+                            "op": ">",
+                            "right": 13
+                        }
+                    }
+                }
+            },
+            "name": "none_lht",
+            "parameters": [
+                {
+                    "name": "none_lht__param__p1",
+                    "type": "int"
+                },
+                {
+                    "name": "none_lht__param__p2",
+                    "type": "int"
+                },
+                {
+                    "name": "none_lht__param__p3",
+                    "type": "int"
+                },
+                {
+                    "name": "none_lht__param__p4",
+                    "type": "int"
+                }
+            ],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "left": {
+                                "left": "some_ha__param__p4",
+                                "op": "≥",
+                                "right": 10
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "some_ha__param__p4",
+                                "op": "≤",
+                                "right": 15
+                            }
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": {
+                                "left": "some_ha__param__p1",
+                                "op": "≥",
+                                "right": 10
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "some_ha__param__p1",
+                                "op": "≤",
+                                "right": 15
+                            }
+                        }
+                    },
+                    "op": "∨",
+                    "right": {
+                        "left": {
+                            "left": {
+                                "left": "some_ha__param__p3",
+                                "op": "≥",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "some_ha__param__p3",
+                                "op": "≤",
+                                "right": 5
+                            }
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": {
+                                "left": "some_ha__param__p2",
+                                "op": "≥",
+                                "right": 10
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "some_ha__param__p2",
+                                "op": "≤",
+                                "right": 15
+                            }
+                        }
+                    }
+                },
+                "op": "∨",
+                "right": {
+                    "left": {
+                        "left": {
+                            "left": {
+                                "left": "some_ha__param__p4",
+                                "op": "≥",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "some_ha__param__p4",
+                                "op": "≤",
+                                "right": 5
+                            }
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": {
+                                "left": "some_ha__param__p1",
+                                "op": "≥",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "some_ha__param__p1",
+                                "op": "≤",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "op": "∨",
+                    "right": {
+                        "left": {
+                            "left": {
+                                "left": "some_ha__param__p3",
+                                "op": "≥",
+                                "right": 10
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "some_ha__param__p3",
+                                "op": "≤",
+                                "right": 15
+                            }
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": {
+                                "left": "some_ha__param__p2",
+                                "op": "≥",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "some_ha__param__p2",
+                                "op": "≤",
+                                "right": 5
+                            }
+                        }
+                    }
+                }
+            },
+            "name": "some_ha",
+            "parameters": [
+                {
+                    "name": "some_ha__param__p1",
+                    "type": "int"
+                },
+                {
+                    "name": "some_ha__param__p2",
+                    "type": "int"
+                },
+                {
+                    "name": "some_ha__param__p3",
+                    "type": "int"
+                },
+                {
+                    "name": "some_ha__param__p4",
+                    "type": "int"
+                }
+            ],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "left": {
+                                "left": "none_hta__param__p4",
+                                "op": "≥",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "none_hta__param__p4",
+                                "op": "≤",
+                                "right": 8
+                            }
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": {
+                                "left": "none_hta__param__p1",
+                                "op": "≥",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "none_hta__param__p1",
+                                "op": "≤",
+                                "right": 8
+                            }
+                        }
+                    },
+                    "op": "∨",
+                    "right": {
+                        "left": {
+                            "left": {
+                                "left": "none_hta__param__p3",
+                                "op": "≥",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "none_hta__param__p3",
+                                "op": "≤",
+                                "right": 3
+                            }
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": {
+                                "left": "none_hta__param__p2",
+                                "op": "≥",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "none_hta__param__p2",
+                                "op": "≤",
+                                "right": 8
+                            }
+                        }
+                    }
+                },
+                "op": "∨",
+                "right": {
+                    "left": {
+                        "left": {
+                            "left": {
+                                "left": "none_hta__param__p4",
+                                "op": "≥",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "none_hta__param__p4",
+                                "op": "≤",
+                                "right": 3
+                            }
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": {
+                                "left": "none_hta__param__p1",
+                                "op": "≥",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "none_hta__param__p1",
+                                "op": "≤",
+                                "right": 3
+                            }
+                        }
+                    },
+                    "op": "∨",
+                    "right": {
+                        "left": {
+                            "left": {
+                                "left": "none_hta__param__p3",
+                                "op": "≥",
+                                "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "none_hta__param__p3",
+                                "op": "≤",
+                                "right": 8
+                            }
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": {
+                                "left": "none_hta__param__p2",
+                                "op": "≥",
+                                "right": 0
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "none_hta__param__p2",
+                                "op": "≤",
+                                "right": 3
+                            }
+                        }
+                    }
+                }
+            },
+            "name": "none_hta",
+            "parameters": [
+                {
+                    "name": "none_hta__param__p1",
+                    "type": "int"
+                },
+                {
+                    "name": "none_hta__param__p2",
+                    "type": "int"
+                },
+                {
+                    "name": "none_hta__param__p3",
+                    "type": "int"
+                },
+                {
+                    "name": "none_hta__param__p4",
+                    "type": "int"
+                }
+            ],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "left": "none_e__param__p4",
+                            "op": "<",
+                            "right": 2
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": "none_e__param__p4",
+                            "op": ">",
+                            "right": 3
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": {
+                            "left": "none_e__param__p2",
+                            "op": "<",
+                            "right": 2
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": "none_e__param__p2",
+                            "op": ">",
+                            "right": 3
+                        }
+                    }
+                },
+                "op": "∧",
+                "right": {
+                    "left": {
+                        "left": {
+                            "left": "none_e__param__p3",
+                            "op": "<",
+                            "right": 2
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": "none_e__param__p3",
+                            "op": ">",
+                            "right": 3
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": {
+                            "left": "none_e__param__p1",
+                            "op": "<",
+                            "right": 2
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": "none_e__param__p1",
+                            "op": ">",
+                            "right": 3
+                        }
+                    }
+                }
+            },
+            "name": "none_e",
+            "parameters": [
+                {
+                    "name": "none_e__param__p1",
+                    "type": "int"
+                },
+                {
+                    "name": "none_e__param__p2",
+                    "type": "int"
+                },
+                {
+                    "name": "none_e__param__p3",
+                    "type": "int"
+                },
+                {
+                    "name": "none_e__param__p4",
+                    "type": "int"
+                }
+            ],
+            "type": "bool"
+        }
+    ],
+    "jani-version": 1,
+    "name": "model",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "right": "target"
+                    },
+                    "op": "Pmax"
+                }
+            },
+            "name": "live"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "process0"
+            },
+            {
+                "automaton": "process1"
+            },
+            {
+                "automaton": "process2"
+            },
+            {
+                "automaton": "process3"
+            },
+            {
+                "automaton": "process4"
+            }
+        ]
+    },
+    "type": "mdp",
+    "variables": [
+        {
+            "initial-value": false,
+            "name": "target",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": 1,
+            "name": "p0",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 15
+            }
+        },
+        {
+            "initial-value": 1,
+            "name": "p1",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 15
+            }
+        },
+        {
+            "initial-value": 1,
+            "name": "p2",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 15
+            }
+        },
+        {
+            "initial-value": 1,
+            "name": "p3",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 15
+            }
+        },
+        {
+            "initial-value": 1,
+            "name": "p4",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 15
+            }
+        }
+    ]
+}
+</pre>
+</div>
+
+</body>
+</html>

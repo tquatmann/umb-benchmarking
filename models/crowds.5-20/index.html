@@ -1,0 +1,3622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>crowds.5-20</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Benchmark crowds.5-20</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Download</div></div>
+<pre style="overflow:auto; padding-bottom: 0.5ex">
+<a href="model.prism" download>model.prism</a> (0.01 MB)
+<a href="property.props" download>property.props</a> (0.01 MB)
+<a href="model.jani" download>model.jani</a> (0.13 MB)
+
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Origin</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">
+Taken from <a href="https://qcomp.org/benchmarks/#crowds" target="_blank">QVBS</a> (January 2026).
+The given benchmark (including parameter instantiation and property) has been considered in QComp 2019 and QComp 2020.
+
+Original Prism model and property files have been adapted for compatibility and simplicity:
+- Constants: All open constants are now explicitly set within model.prism (no need to set them via command line)
+- Properties: The properties only refer to labels and rewards as defined in the model.prism file. No variables or constants are used in the property.
+- Formulas: some PRISM formula declarations have been renamed so that their identify does not crash with a label.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.prism</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">// CROWDS [Reiter,Rubin]
+// Vitaly Shmatikov, 2002
+
+// Note:
+// Change everything marked CWDSIZ when changing the size of the crowd
+// Change everything marked CWDMAX when increasing max size of the crowd
+
+dtmc
+
+// Probability of forwarding
+const double PF = 0.8;
+
+// Probability that a crowd member is bad
+const double  badC = 0.091;
+// const double  badC = 0.167;
+
+const int TotalRuns = 5; // Total number of protocol runs to analyze
+const int CrowdSize = 20; // CWDSIZ: actual number of good crowd members
+const int MaxGood=20; // CWDMAX: maximum number of good crowd members
+
+// Process definitions
+module crowds
+
+	// Auxiliary variables
+	launch:   bool init true;       // Start modeling?
+	new:      bool init false;      // Initialize a new protocol instance?
+	runCount: [0..TotalRuns] init TotalRuns;   // Counts protocol instances
+	start:    bool init false;      // Start the protocol?
+	run:      bool init false;      // Run the protocol?
+	lastSeen: [0..MaxGood] init MaxGood;   // Last crowd member to touch msg
+	good:     bool init false;      // Crowd member is good?
+	bad:      bool init false;      //              ... bad?
+	recordLast: bool init false;    // Record last seen crowd member?
+	badObserve: bool init false;    // Bad members observes who sent msg?
+	deliver:  bool init false;      // Deliver message to destination?
+	done:     bool init false;      // Protocol instance finished?
+
+	// Counters for attackers' observations
+	// CWDMAX: 1 counter per each good crowd member
+	observe0:  [0..TotalRuns] init 0;
+	observe1:  [0..TotalRuns] init 0;
+	observe2:  [0..TotalRuns] init 0;
+	observe3:  [0..TotalRuns] init 0;
+	observe4:  [0..TotalRuns] init 0;
+	observe5:  [0..TotalRuns] init 0;
+	observe6:  [0..TotalRuns] init 0;
+	observe7:  [0..TotalRuns] init 0;
+	observe8:  [0..TotalRuns] init 0;
+	observe9:  [0..TotalRuns] init 0;
+	observe10: [0..TotalRuns] init 0;
+	observe11: [0..TotalRuns] init 0;
+	observe12: [0..TotalRuns] init 0;
+	observe13: [0..TotalRuns] init 0;
+	observe14: [0..TotalRuns] init 0;
+	observe15: [0..TotalRuns] init 0;
+	observe16: [0..TotalRuns] init 0;
+	observe17: [0..TotalRuns] init 0;
+	observe18: [0..TotalRuns] init 0;
+	observe19: [0..TotalRuns] init 0;
+	
+	[] launch -> (new'=true) & (runCount'=TotalRuns) & (launch'=false);
+	// Set up a new protocol instance
+	[] new & runCount>0 -> (runCount'=runCount-1) & (new'=false) & (start'=true);
+	
+	// SENDER
+	// Start the protocol
+	[] start -> (lastSeen'=0) & (run'=true) & (deliver'=false) & (start'=false);
+	
+	// CROWD MEMBERS
+	// Good or bad crowd member?
+	[] !good & !bad & !deliver & run ->
+	             1-badC : (good'=true) & (recordLast'=true) & (run'=false) +
+	               badC : (bad'=true)  & (badObserve'=true) & (run'=false);
+
+	// GOOD MEMBERS
+	// Forward with probability PF, else deliver
+	[] good & !deliver & run -> PF : (good'=false) + 1-PF : (deliver'=true);
+	// Record the last crowd member who touched the msg;
+	// all good members may appear with equal probability
+	//    Note: This is backward.  In the real protocol, each honest
+	//          forwarder randomly chooses the next forwarder.
+	//          Here, the identity of an honest forwarder is randomly
+	//          chosen *after* it has forwarded the message.
+	[] recordLast & CrowdSize=2 ->
+	        1/2 : (lastSeen'=0) & (recordLast'=false) & (run'=true) +
+	        1/2 : (lastSeen'=1) & (recordLast'=false) & (run'=true);
+	[] recordLast & CrowdSize=4 ->
+	        1/4 : (lastSeen'=0) & (recordLast'=false) & (run'=true) +
+	        1/4 : (lastSeen'=1) & (recordLast'=false) & (run'=true) +
+	        1/4 : (lastSeen'=2) & (recordLast'=false) & (run'=true) +
+	        1/4 : (lastSeen'=3) & (recordLast'=false) & (run'=true);
+	[] recordLast & CrowdSize=5 ->
+	        1/5 : (lastSeen'=0) & (recordLast'=false) & (run'=true) +
+	        1/5 : (lastSeen'=1) & (recordLast'=false) & (run'=true) +
+	        1/5 : (lastSeen'=2) & (recordLast'=false) & (run'=true) +
+	        1/5 : (lastSeen'=3) & (recordLast'=false) & (run'=true) +
+	        1/5 : (lastSeen'=4) & (recordLast'=false) & (run'=true);
+	[] recordLast & CrowdSize=10 ->
+	        1/10 : (lastSeen'=0) & (recordLast'=false) & (run'=true) +
+	        1/10 : (lastSeen'=1) & (recordLast'=false) & (run'=true) +
+	        1/10 : (lastSeen'=2) & (recordLast'=false) & (run'=true) +
+	        1/10 : (lastSeen'=3) & (recordLast'=false) & (run'=true) +
+	        1/10 : (lastSeen'=4) & (recordLast'=false) & (run'=true) +
+	        1/10 : (lastSeen'=5) & (recordLast'=false) & (run'=true) +
+	        1/10 : (lastSeen'=6) & (recordLast'=false) & (run'=true) +
+	        1/10 : (lastSeen'=7) & (recordLast'=false) & (run'=true) +
+	        1/10 : (lastSeen'=8) & (recordLast'=false) & (run'=true) +
+	        1/10 : (lastSeen'=9) & (recordLast'=false) & (run'=true);
+	[] recordLast & CrowdSize=15 ->
+	        1/15 : (lastSeen'=0)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=1)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=2)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=3)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=4)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=5)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=6)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=7)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=8)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=9)  & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=10) & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=11) & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=12) & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=13) & (recordLast'=false) & (run'=true) +
+	        1/15 : (lastSeen'=14) & (recordLast'=false) & (run'=true);
+	[] recordLast & CrowdSize=20 ->
+	        1/20 : (lastSeen'=0)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=1)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=2)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=3)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=4)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=5)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=6)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=7)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=8)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=9)  & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=10) & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=11) & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=12) & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=13) & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=14) & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=15) & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=16) & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=17) & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=18) & (recordLast'=false) & (run'=true) +
+	        1/20 : (lastSeen'=19) & (recordLast'=false) & (run'=true);
+	
+	// BAD MEMBERS
+	// Remember from whom the message was received and deliver
+	// CWDMAX: 1 rule per each good crowd member
+	[] lastSeen=0  & badObserve & observe0 <TotalRuns -> (observe0' =observe0 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=1  & badObserve & observe1 <TotalRuns -> (observe1' =observe1 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=2  & badObserve & observe2 <TotalRuns -> (observe2' =observe2 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=3  & badObserve & observe3 <TotalRuns -> (observe3' =observe3 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=4  & badObserve & observe4 <TotalRuns -> (observe4' =observe4 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=5  & badObserve & observe5 <TotalRuns -> (observe5' =observe5 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=6  & badObserve & observe6 <TotalRuns -> (observe6' =observe6 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=7  & badObserve & observe7 <TotalRuns -> (observe7' =observe7 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=8  & badObserve & observe8 <TotalRuns -> (observe8' =observe8 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=9  & badObserve & observe9 <TotalRuns -> (observe9' =observe9 +1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=10 & badObserve & observe10<TotalRuns -> (observe10'=observe10+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=11 & badObserve & observe11<TotalRuns -> (observe11'=observe11+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=12 & badObserve & observe12<TotalRuns -> (observe12'=observe12+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=13 & badObserve & observe13<TotalRuns -> (observe13'=observe13+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=14 & badObserve & observe14<TotalRuns -> (observe14'=observe14+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=15 & badObserve & observe15<TotalRuns -> (observe15'=observe15+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=16 & badObserve & observe16<TotalRuns -> (observe16'=observe16+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=17 & badObserve & observe17<TotalRuns -> (observe17'=observe17+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=18 & badObserve & observe18<TotalRuns -> (observe18'=observe18+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+	[] lastSeen=19 & badObserve & observe19<TotalRuns -> (observe19'=observe19+1) & (deliver'=true) & (run'=true) & (badObserve'=false);
+
+	// RECIPIENT
+	// Delivery to destination
+	[] deliver & run -> (done'=true) & (deliver'=false) & (run'=false) & (good'=false) & (bad'=false);
+	// Start a new instance
+	[] done -> (new'=true) & (done'=false) & (run'=false) & (lastSeen'=MaxGood);
+	
+endmodule
+
+label "target" = observe0>1;
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: property.props</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">"positive": P=? [ F "target"  ];
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.jani</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">{
+    "actions": [],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "launch <- false",
+                                    "ref": "launch",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "new <- true",
+                                    "ref": "new",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "runCount <- 5",
+                                    "ref": "runCount",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "launch",
+                        "exp": "launch"
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "new <- false",
+                                    "ref": "new",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "start <- true",
+                                    "ref": "start",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "runCount <- (runCount - 1)",
+                                    "ref": "runCount",
+                                    "value": {
+                                        "left": "runCount",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(new & (runCount > 0))",
+                        "exp": {
+                            "left": "new",
+                            "op": "∧",
+                            "right": {
+                                "left": "runCount",
+                                "op": ">",
+                                "right": 0
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "start <- false",
+                                    "ref": "start",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "deliver <- false",
+                                    "ref": "deliver",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 0",
+                                    "ref": "lastSeen",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "start",
+                        "exp": "start"
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- false",
+                                    "ref": "run",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "good <- true",
+                                    "ref": "good",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- true",
+                                    "ref": "recordLast",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 91/1000)",
+                                "exp": {
+                                    "left": 909.0,
+                                    "op": "/",
+                                    "right": 1000.0
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- false",
+                                    "ref": "run",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "bad <- true",
+                                    "ref": "bad",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- true",
+                                    "ref": "badObserve",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "91/1000",
+                                "exp": 0.091
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((!(good) & !(bad)) & !(deliver)) & run)",
+                        "exp": {
+                            "left": {
+                                "left": "run",
+                                "op": "∧",
+                                "right": {
+                                    "exp": "bad",
+                                    "op": "¬"
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "exp": "deliver",
+                                    "op": "¬"
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "exp": "good",
+                                    "op": "¬"
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "good <- false",
+                                    "ref": "good",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "4/5",
+                                "exp": {
+                                    "left": 4.0,
+                                    "op": "/",
+                                    "right": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 - 4/5)",
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 5.0
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((good & !(deliver)) & run)",
+                        "exp": {
+                            "left": {
+                                "left": "good",
+                                "op": "∧",
+                                "right": {
+                                    "exp": "deliver",
+                                    "op": "¬"
+                                }
+                            },
+                            "op": "∧",
+                            "right": "run"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 0",
+                                    "ref": "lastSeen",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 2)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 2
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 1",
+                                    "ref": "lastSeen",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 2)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 2
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(recordLast & (20 = 2))",
+                        "exp": false
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 0",
+                                    "ref": "lastSeen",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 4)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 4
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 1",
+                                    "ref": "lastSeen",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 4)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 4
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 2",
+                                    "ref": "lastSeen",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 4)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 4
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 3",
+                                    "ref": "lastSeen",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 4)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 4
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(recordLast & (20 = 4))",
+                        "exp": false
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 0",
+                                    "ref": "lastSeen",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 5)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 5
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 1",
+                                    "ref": "lastSeen",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 5)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 5
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 2",
+                                    "ref": "lastSeen",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 5)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 5
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 3",
+                                    "ref": "lastSeen",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 5)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 5
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 4",
+                                    "ref": "lastSeen",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 5)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 5
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(recordLast & (20 = 5))",
+                        "exp": false
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 0",
+                                    "ref": "lastSeen",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 1",
+                                    "ref": "lastSeen",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 2",
+                                    "ref": "lastSeen",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 3",
+                                    "ref": "lastSeen",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 4",
+                                    "ref": "lastSeen",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 5",
+                                    "ref": "lastSeen",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 6",
+                                    "ref": "lastSeen",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 7",
+                                    "ref": "lastSeen",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 8",
+                                    "ref": "lastSeen",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 9",
+                                    "ref": "lastSeen",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 10)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 10
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(recordLast & (20 = 10))",
+                        "exp": false
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 0",
+                                    "ref": "lastSeen",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 1",
+                                    "ref": "lastSeen",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 2",
+                                    "ref": "lastSeen",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 3",
+                                    "ref": "lastSeen",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 4",
+                                    "ref": "lastSeen",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 5",
+                                    "ref": "lastSeen",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 6",
+                                    "ref": "lastSeen",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 7",
+                                    "ref": "lastSeen",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 8",
+                                    "ref": "lastSeen",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 9",
+                                    "ref": "lastSeen",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 10",
+                                    "ref": "lastSeen",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 11",
+                                    "ref": "lastSeen",
+                                    "value": 11
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 12",
+                                    "ref": "lastSeen",
+                                    "value": 12
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 13",
+                                    "ref": "lastSeen",
+                                    "value": 13
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 14",
+                                    "ref": "lastSeen",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 15)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 15
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(recordLast & (20 = 15))",
+                        "exp": false
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 0",
+                                    "ref": "lastSeen",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 1",
+                                    "ref": "lastSeen",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 2",
+                                    "ref": "lastSeen",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 3",
+                                    "ref": "lastSeen",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 4",
+                                    "ref": "lastSeen",
+                                    "value": 4
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 5",
+                                    "ref": "lastSeen",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 6",
+                                    "ref": "lastSeen",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 7",
+                                    "ref": "lastSeen",
+                                    "value": 7
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 8",
+                                    "ref": "lastSeen",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 9",
+                                    "ref": "lastSeen",
+                                    "value": 9
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 10",
+                                    "ref": "lastSeen",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 11",
+                                    "ref": "lastSeen",
+                                    "value": 11
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 12",
+                                    "ref": "lastSeen",
+                                    "value": 12
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 13",
+                                    "ref": "lastSeen",
+                                    "value": 13
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 14",
+                                    "ref": "lastSeen",
+                                    "value": 14
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 15",
+                                    "ref": "lastSeen",
+                                    "value": 15
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 16",
+                                    "ref": "lastSeen",
+                                    "value": 16
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 17",
+                                    "ref": "lastSeen",
+                                    "value": 17
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 18",
+                                    "ref": "lastSeen",
+                                    "value": 18
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        },
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "recordLast <- false",
+                                    "ref": "recordLast",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 19",
+                                    "ref": "lastSeen",
+                                    "value": 19
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 20)",
+                                "exp": {
+                                    "left": 1,
+                                    "op": "/",
+                                    "right": 20
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(recordLast & (20 = 20))",
+                        "exp": "recordLast"
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe0 <- (observe0 + 1)",
+                                    "ref": "observe0",
+                                    "value": {
+                                        "left": "observe0",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 0) & badObserve) & (observe0 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 0
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe0",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe1 <- (observe1 + 1)",
+                                    "ref": "observe1",
+                                    "value": {
+                                        "left": "observe1",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 1) & badObserve) & (observe1 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 1
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe1",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe2 <- (observe2 + 1)",
+                                    "ref": "observe2",
+                                    "value": {
+                                        "left": "observe2",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 2) & badObserve) & (observe2 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 2
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe2",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe3 <- (observe3 + 1)",
+                                    "ref": "observe3",
+                                    "value": {
+                                        "left": "observe3",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 3) & badObserve) & (observe3 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 3
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe3",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe4 <- (observe4 + 1)",
+                                    "ref": "observe4",
+                                    "value": {
+                                        "left": "observe4",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 4) & badObserve) & (observe4 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 4
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe4",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe5 <- (observe5 + 1)",
+                                    "ref": "observe5",
+                                    "value": {
+                                        "left": "observe5",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 5) & badObserve) & (observe5 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 5
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe5",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe6 <- (observe6 + 1)",
+                                    "ref": "observe6",
+                                    "value": {
+                                        "left": "observe6",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 6) & badObserve) & (observe6 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 6
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe6",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe7 <- (observe7 + 1)",
+                                    "ref": "observe7",
+                                    "value": {
+                                        "left": "observe7",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 7) & badObserve) & (observe7 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 7
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe7",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe8 <- (observe8 + 1)",
+                                    "ref": "observe8",
+                                    "value": {
+                                        "left": "observe8",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 8) & badObserve) & (observe8 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 8
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe8",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe9 <- (observe9 + 1)",
+                                    "ref": "observe9",
+                                    "value": {
+                                        "left": "observe9",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 9) & badObserve) & (observe9 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 9
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe9",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe10 <- (observe10 + 1)",
+                                    "ref": "observe10",
+                                    "value": {
+                                        "left": "observe10",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 10) & badObserve) & (observe10 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 10
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe10",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe11 <- (observe11 + 1)",
+                                    "ref": "observe11",
+                                    "value": {
+                                        "left": "observe11",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 11) & badObserve) & (observe11 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 11
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe11",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe12 <- (observe12 + 1)",
+                                    "ref": "observe12",
+                                    "value": {
+                                        "left": "observe12",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 12) & badObserve) & (observe12 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 12
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe12",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe13 <- (observe13 + 1)",
+                                    "ref": "observe13",
+                                    "value": {
+                                        "left": "observe13",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 13) & badObserve) & (observe13 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 13
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe13",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe14 <- (observe14 + 1)",
+                                    "ref": "observe14",
+                                    "value": {
+                                        "left": "observe14",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 14) & badObserve) & (observe14 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 14
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe14",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe15 <- (observe15 + 1)",
+                                    "ref": "observe15",
+                                    "value": {
+                                        "left": "observe15",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 15) & badObserve) & (observe15 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 15
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe15",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe16 <- (observe16 + 1)",
+                                    "ref": "observe16",
+                                    "value": {
+                                        "left": "observe16",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 16) & badObserve) & (observe16 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 16
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe16",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe17 <- (observe17 + 1)",
+                                    "ref": "observe17",
+                                    "value": {
+                                        "left": "observe17",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 17) & badObserve) & (observe17 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 17
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe17",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe18 <- (observe18 + 1)",
+                                    "ref": "observe18",
+                                    "value": {
+                                        "left": "observe18",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 18) & badObserve) & (observe18 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 18
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe18",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- true",
+                                    "ref": "run",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "badObserve <- false",
+                                    "ref": "badObserve",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- true",
+                                    "ref": "deliver",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "observe19 <- (observe19 + 1)",
+                                    "ref": "observe19",
+                                    "value": {
+                                        "left": "observe19",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((lastSeen = 19) & badObserve) & (observe19 < 5))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "lastSeen",
+                                    "op": "=",
+                                    "right": 19
+                                },
+                                "op": "∧",
+                                "right": "badObserve"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "observe19",
+                                "op": "<",
+                                "right": 5
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "run <- false",
+                                    "ref": "run",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "good <- false",
+                                    "ref": "good",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "bad <- false",
+                                    "ref": "bad",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "deliver <- false",
+                                    "ref": "deliver",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "done <- true",
+                                    "ref": "done",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(deliver & run)",
+                        "exp": {
+                            "left": "deliver",
+                            "op": "∧",
+                            "right": "run"
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "new <- true",
+                                    "ref": "new",
+                                    "value": true
+                                },
+                                {
+                                    "comment": "run <- false",
+                                    "ref": "run",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "done <- false",
+                                    "ref": "done",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "lastSeen <- 20",
+                                    "ref": "lastSeen",
+                                    "value": 20
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "done",
+                        "exp": "done"
+                    },
+                    "location": "l"
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l",
+                    "transient-values": [
+                        {
+                            "comment": "target <- (observe0 > 1)",
+                            "ref": "target",
+                            "value": {
+                                "left": "observe0",
+                                "op": ">",
+                                "right": 1
+                            }
+                        }
+                    ]
+                }
+            ],
+            "name": "crowds",
+            "variables": [
+                {
+                    "initial-value": 5,
+                    "name": "runCount",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 20,
+                    "name": "lastSeen",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 20
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe3",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe4",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe5",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe6",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe7",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe8",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe9",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe10",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe11",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe12",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe13",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe14",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe15",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe16",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe17",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe18",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "observe19",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 5
+                    }
+                },
+                {
+                    "initial-value": true,
+                    "name": "launch",
+                    "type": "bool"
+                },
+                {
+                    "initial-value": false,
+                    "name": "new",
+                    "type": "bool"
+                },
+                {
+                    "initial-value": false,
+                    "name": "start",
+                    "type": "bool"
+                },
+                {
+                    "initial-value": false,
+                    "name": "run",
+                    "type": "bool"
+                },
+                {
+                    "initial-value": false,
+                    "name": "good",
+                    "type": "bool"
+                },
+                {
+                    "initial-value": false,
+                    "name": "bad",
+                    "type": "bool"
+                },
+                {
+                    "initial-value": false,
+                    "name": "recordLast",
+                    "type": "bool"
+                },
+                {
+                    "initial-value": false,
+                    "name": "badObserve",
+                    "type": "bool"
+                },
+                {
+                    "initial-value": false,
+                    "name": "deliver",
+                    "type": "bool"
+                },
+                {
+                    "initial-value": false,
+                    "name": "done",
+                    "type": "bool"
+                }
+            ]
+        }
+    ],
+    "constants": [
+        {
+            "name": "PF",
+            "type": "real",
+            "value": {
+                "left": 4.0,
+                "op": "/",
+                "right": 5.0
+            }
+        },
+        {
+            "name": "badC",
+            "type": "real",
+            "value": 0.091
+        },
+        {
+            "name": "TotalRuns",
+            "type": "int",
+            "value": 5
+        },
+        {
+            "name": "CrowdSize",
+            "type": "int",
+            "value": 20
+        },
+        {
+            "name": "MaxGood",
+            "type": "int",
+            "value": 20
+        }
+    ],
+    "features": [
+        "derived-operators"
+    ],
+    "jani-version": 1,
+    "name": "model",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "right": "target"
+                    },
+                    "op": "Pmin"
+                }
+            },
+            "name": "positive"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "crowds"
+            }
+        ]
+    },
+    "type": "dtmc",
+    "variables": [
+        {
+            "initial-value": false,
+            "name": "target",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": 0,
+            "name": "observe0",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 5
+            }
+        }
+    ]
+}
+</pre>
+</div>
+
+</body>
+</html>

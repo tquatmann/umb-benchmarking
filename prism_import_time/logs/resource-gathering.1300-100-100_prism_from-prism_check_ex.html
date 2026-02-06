@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log resource-gathering.1300-100-100_prism_from-prism_check_ex</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/resource-gathering.1300-100-100/index.html" target="_blank">resource-gathering.1300-100-100</a> and tool configuration prism_from-prism_check_ex</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[ERR, ERR, ERR, ERR, ERR]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_resource-gathering.1300-100-100_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+Wallclock time: 20.909 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:49:58 GMT+01:00 2026
+Hostname: r23m0197
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Parsing properties file "models/resource-gathering.1300-100-100/property.props"...
+
+1 property:
+(1) "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+---------------------------------------------------------------------
+
+Model checking: "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 446846 834639 958894 states
+Reachable states exploration and model construction done in 7.827 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.toArray(ArrayList.java:370)
+	at java.base/java.util.ArrayList.<init>(ArrayList.java:182)
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_resource-gathering.1300-100-100_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+Wallclock time: 22.594 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 03:04:04 GMT+01:00 2026
+Hostname: n23m0333
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Parsing properties file "models/resource-gathering.1300-100-100/property.props"...
+
+1 property:
+(1) "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+---------------------------------------------------------------------
+
+Model checking: "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 445959 832005 958894 states
+Reachable states exploration and model construction done in 7.969 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.toArray(ArrayList.java:370)
+	at java.base/java.util.ArrayList.<init>(ArrayList.java:182)
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_resource-gathering.1300-100-100_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+Wallclock time: 25.661 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 22:08:10 GMT+01:00 2026
+Hostname: n23m0144
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Parsing properties file "models/resource-gathering.1300-100-100/property.props"...
+
+1 property:
+(1) "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+---------------------------------------------------------------------
+
+Model checking: "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 501735 909632 958894 states
+Reachable states exploration and model construction done in 7.26 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_resource-gathering.1300-100-100_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+Wallclock time: 23.991 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:11:13 GMT+01:00 2026
+Hostname: n23m0333
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Parsing properties file "models/resource-gathering.1300-100-100/property.props"...
+
+1 property:
+(1) "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+---------------------------------------------------------------------
+
+Model checking: "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 444031 820369 958894 states
+Reachable states exploration and model construction done in 8.16 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_resource-gathering.1300-100-100_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+Wallclock time: 22.762 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:29:01 GMT+01:00 2026
+Hostname: r23m0104
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/resource-gathering.1300-100-100/model.prism models/resource-gathering.1300-100-100/property.props
+
+Parsing PRISM model file "models/resource-gathering.1300-100-100/model.prism"...
+
+Type:        MDP
+Modules:     robot goldcounter gemcounter
+Actions:     [right] [left] [top] [down]
+Variables:   gold gem attacked x y required_gold required_gem
+Labels:      "success"
+
+Parsing properties file "models/resource-gathering.1300-100-100/property.props"...
+
+1 property:
+(1) "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+---------------------------------------------------------------------
+
+Model checking: "prgoldgem": Pmax=? [ F<=1300 "success" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 464628 855895 958894 states
+Reachable states exploration and model construction done in 7.289 secs.
+Sorting reachable states list...
+
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at explicit.ChoiceActionsSimple.<init>(ChoiceActionsSimple.java:95)
+	at explicit.MDPSparse.<init>(MDPSparse.java:305)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:447)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+</body>
+</html>

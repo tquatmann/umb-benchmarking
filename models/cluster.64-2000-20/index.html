@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cluster.64-2000-20</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Benchmark cluster.64-2000-20</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Download</div></div>
+<pre style="overflow:auto; padding-bottom: 0.5ex">
+<a href="model.prism" download>model.prism</a> (0.01 MB)
+<a href="property.props" download>property.props</a> (0.01 MB)
+<a href="model.jani" download>model.jani</a> (0.05 MB)
+
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Origin</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">
+Taken from <a href="https://qcomp.org/benchmarks/#cluster" target="_blank">QVBS</a> (January 2026).
+The given benchmark (including parameter instantiation and property) has been considered in QComp 2019 and QComp 2020.
+
+Original Prism model and property files have been adapted for compatibility and simplicity:
+- Constants: All open constants are now explicitly set within model.prism (no need to set them via command line)
+- Properties: The properties only refer to labels and rewards as defined in the model.prism file. No variables or constants are used in the property.
+- Formulas: some PRISM formula declarations have been renamed so that their identify does not crash with a label.
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.prism</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">// Workstation cluster [HHK00]
+// dxp/gxn 11/01/00
+
+ctmc
+
+const int N = 64; // Number of workstations in each cluster
+const double T = 2000;
+const double t = 20;
+
+const int left_mx = N; // Number of work stations in left cluster
+const int right_mx = N; // Number of work stations in right cluster
+
+// Failure rates
+const double ws_fail = 1/500; // Single workstation: average time to fail = 500 hrs
+const double switch_fail = 1/4000; // Switch: average time to fail = 4000 hrs
+const double line_fail = 1/5000; // Backbone: average time to fail = 5000 hrs
+
+// Left cluster
+module Left 
+	
+	left_n : [0..left_mx] init left_mx; // Number of workstations operational
+	left : bool; // Being repaired?
+	
+	[startLeft] !left & (left_n<left_mx) -> 1 : (left'=true);
+	[repairLeft] left & (left_n<left_mx) -> 1 : (left'=false) & (left_n'=left_n+1);
+	[] (left_n>0) -> ws_fail*left_n : (left_n'=left_n-1);
+	
+endmodule
+
+// Right cluster
+module Right = Left[left_n=right_n,
+                    left=right,
+                    left_mx=right_mx,
+                    startLeft=startRight,
+                    repairLeft=repairRight ]
+endmodule
+
+// Repair unit
+module Repairman
+	
+	r : bool; // Repairing?
+	
+	[startLeft]    !r -> 10 : (r'=true); // Inspect Left 
+	[startRight]   !r -> 10 : (r'=true); // Inspect Right 
+	[startToLeft]  !r -> 10 : (r'=true); // Inspect ToLeft
+	[startToRight] !r -> 10 : (r'=true); // Inspect ToRight 
+	[startLine]    !r -> 10 : (r'=true); // Inspect Line 
+	
+	[repairLeft]    r -> 2     : (r'=false); // Repair Left 
+	[repairRight]   r -> 2     : (r'=false); // Repair Right
+	[repairToLeft]  r -> 0.25  : (r'=false); // Repair ToLeft
+	[repairToRight] r -> 0.25  : (r'=false); // Repair ToRight
+	[repairLine]    r -> 0.125 : (r'=false); // Repair Line
+	
+endmodule
+
+// Line/backbone
+module Line 
+	
+	line :   bool; // Being repaired?
+	line_n : bool init true; // Working?
+	
+	[startLine] !line & !line_n -> 1 : (line'=true);
+	[repairLine] line & !line_n -> 1 : (line'=false) & (line_n'=true);
+	[] line_n -> line_fail : (line_n'=false);
+	
+endmodule
+
+// Left switch
+module ToLeft = Line[line=toleft,
+                     line_n=toleft_n,
+                     line_fail=switch_fail,
+                     startLine=startToLeft,
+                     repairLine=repairToLeft ]
+endmodule
+
+// Right switch
+module ToRight = Line[line=toright,
+                      line_n=toright_n,
+                      line_fail=switch_fail,
+                      startLine=startToRight,
+                      repairLine=repairToRight ]
+endmodule
+
+// Formulas + labels
+
+// Minimum QoS requires 3/4 connected workstations operational
+const int k = floor(0.75*N);
+// left_operational_i : left_n>=i & toleft_n
+// right_operational_i : right_n>=i & toright_n
+// operational_i : (left_n+right_n)>=i & toleft_n & line_n & toright_n
+// minimum_k : left_operational_k | right_operational_k | operational_k
+label "minimum" = (left_n>=k & toleft_n) | (right_n>=k & toright_n) | ((left_n+right_n)>=k & toleft_n & line_n & toright_n);
+
+
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: property.props</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">"qos1": P=? [ F<=2000 !"minimum" ];
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: model.jani</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">{
+    "actions": [
+        {
+            "name": "repairLeft"
+        },
+        {
+            "name": "repairLine"
+        },
+        {
+            "name": "repairRight"
+        },
+        {
+            "name": "repairToLeft"
+        },
+        {
+            "name": "repairToRight"
+        },
+        {
+            "name": "startLeft"
+        },
+        {
+            "name": "startLine"
+        },
+        {
+            "name": "startRight"
+        },
+        {
+            "name": "startToLeft"
+        },
+        {
+            "name": "startToRight"
+        }
+    ],
+    "automata": [
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "left_n <- (left_n - 1)",
+                                    "ref": "left_n",
+                                    "value": {
+                                        "left": "left_n",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(((1 / 500) * left_n) / ((1 / 500) * left_n))",
+                                "exp": {
+                                    "left": {
+                                        "left": {
+                                            "left": 1,
+                                            "op": "/",
+                                            "right": 500
+                                        },
+                                        "op": "*",
+                                        "right": "left_n"
+                                    },
+                                    "op": "/",
+                                    "right": {
+                                        "left": {
+                                            "left": 1,
+                                            "op": "/",
+                                            "right": 500
+                                        },
+                                        "op": "*",
+                                        "right": "left_n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(left_n > 0)",
+                        "exp": {
+                            "left": "left_n",
+                            "op": ">",
+                            "right": 0
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "((1 / 500) * left_n)",
+                        "exp": {
+                            "left": {
+                                "left": 1,
+                                "op": "/",
+                                "right": 500
+                            },
+                            "op": "*",
+                            "right": "left_n"
+                        }
+                    }
+                },
+                {
+                    "action": "repairLeft",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "left <- false",
+                                    "ref": "left",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "left_n <- (left_n + 1)",
+                                    "ref": "left_n",
+                                    "value": {
+                                        "left": "left_n",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(left & (left_n < 64))",
+                        "exp": {
+                            "left": "left",
+                            "op": "∧",
+                            "right": {
+                                "left": "left_n",
+                                "op": "<",
+                                "right": 64
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                },
+                {
+                    "action": "startLeft",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "left <- true",
+                                    "ref": "left",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(!(left) & (left_n < 64))",
+                        "exp": {
+                            "left": {
+                                "exp": "left",
+                                "op": "¬"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "left_n",
+                                "op": "<",
+                                "right": 64
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l",
+                    "transient-values": [
+                        {
+                            "comment": "minimum <- ((((left_n >= 48) & toleft_n) | ((right_n >= 48) & toright_n)) | (((((left_n + right_n) >= 48) & toleft_n) & line_n) & toright_n))",
+                            "ref": "minimum",
+                            "value": {
+                                "left": {
+                                    "left": {
+                                        "left": {
+                                            "left": "left_n",
+                                            "op": "≥",
+                                            "right": 48
+                                        },
+                                        "op": "∧",
+                                        "right": "toleft_n"
+                                    },
+                                    "op": "∨",
+                                    "right": {
+                                        "left": {
+                                            "left": "right_n",
+                                            "op": "≥",
+                                            "right": 48
+                                        },
+                                        "op": "∧",
+                                        "right": "toright_n"
+                                    }
+                                },
+                                "op": "∨",
+                                "right": {
+                                    "left": {
+                                        "left": "toright_n",
+                                        "op": "∧",
+                                        "right": "toleft_n"
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "line_n",
+                                        "op": "∧",
+                                        "right": {
+                                            "left": {
+                                                "left": "left_n",
+                                                "op": "+",
+                                                "right": "right_n"
+                                            },
+                                            "op": "≥",
+                                            "right": 48
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ],
+            "name": "Left",
+            "variables": [
+                {
+                    "initial-value": false,
+                    "name": "left",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "right_n <- (right_n - 1)",
+                                    "ref": "right_n",
+                                    "value": {
+                                        "left": "right_n",
+                                        "op": "-",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(((1 / 500) * right_n) / ((1 / 500) * right_n))",
+                                "exp": {
+                                    "left": {
+                                        "left": {
+                                            "left": 1,
+                                            "op": "/",
+                                            "right": 500
+                                        },
+                                        "op": "*",
+                                        "right": "right_n"
+                                    },
+                                    "op": "/",
+                                    "right": {
+                                        "left": {
+                                            "left": 1,
+                                            "op": "/",
+                                            "right": 500
+                                        },
+                                        "op": "*",
+                                        "right": "right_n"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(right_n > 0)",
+                        "exp": {
+                            "left": "right_n",
+                            "op": ">",
+                            "right": 0
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "((1 / 500) * right_n)",
+                        "exp": {
+                            "left": {
+                                "left": 1,
+                                "op": "/",
+                                "right": 500
+                            },
+                            "op": "*",
+                            "right": "right_n"
+                        }
+                    }
+                },
+                {
+                    "action": "repairRight",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "right <- false",
+                                    "ref": "right",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "right_n <- (right_n + 1)",
+                                    "ref": "right_n",
+                                    "value": {
+                                        "left": "right_n",
+                                        "op": "+",
+                                        "right": 1
+                                    }
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(right & (right_n < 64))",
+                        "exp": {
+                            "left": "right",
+                            "op": "∧",
+                            "right": {
+                                "left": "right_n",
+                                "op": "<",
+                                "right": 64
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                },
+                {
+                    "action": "startRight",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "right <- true",
+                                    "ref": "right",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(!(right) & (right_n < 64))",
+                        "exp": {
+                            "left": {
+                                "exp": "right",
+                                "op": "¬"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "right_n",
+                                "op": "<",
+                                "right": 64
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "Right",
+            "variables": [
+                {
+                    "initial-value": false,
+                    "name": "right",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "action": "repairLeft",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- false",
+                                    "ref": "r",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(2 / 2)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "r",
+                        "exp": "r"
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "2",
+                        "exp": 2
+                    }
+                },
+                {
+                    "action": "repairLine",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- false",
+                                    "ref": "r",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1/8 / 1/8)",
+                                "exp": 1.0
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "r",
+                        "exp": "r"
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1/8",
+                        "exp": 0.125
+                    }
+                },
+                {
+                    "action": "repairRight",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- false",
+                                    "ref": "r",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(2 / 2)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "r",
+                        "exp": "r"
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "2",
+                        "exp": 2
+                    }
+                },
+                {
+                    "action": "repairToLeft",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- false",
+                                    "ref": "r",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1/4 / 1/4)",
+                                "exp": 1.0
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "r",
+                        "exp": "r"
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1/4",
+                        "exp": 0.25
+                    }
+                },
+                {
+                    "action": "repairToRight",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- false",
+                                    "ref": "r",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1/4 / 1/4)",
+                                "exp": 1.0
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "r",
+                        "exp": "r"
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1/4",
+                        "exp": 0.25
+                    }
+                },
+                {
+                    "action": "startLeft",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- true",
+                                    "ref": "r",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(10 / 10)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "!(r)",
+                        "exp": {
+                            "exp": "r",
+                            "op": "¬"
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "10",
+                        "exp": 10
+                    }
+                },
+                {
+                    "action": "startLine",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- true",
+                                    "ref": "r",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(10 / 10)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "!(r)",
+                        "exp": {
+                            "exp": "r",
+                            "op": "¬"
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "10",
+                        "exp": 10
+                    }
+                },
+                {
+                    "action": "startRight",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- true",
+                                    "ref": "r",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(10 / 10)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "!(r)",
+                        "exp": {
+                            "exp": "r",
+                            "op": "¬"
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "10",
+                        "exp": 10
+                    }
+                },
+                {
+                    "action": "startToLeft",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- true",
+                                    "ref": "r",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(10 / 10)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "!(r)",
+                        "exp": {
+                            "exp": "r",
+                            "op": "¬"
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "10",
+                        "exp": 10
+                    }
+                },
+                {
+                    "action": "startToRight",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "r <- true",
+                                    "ref": "r",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(10 / 10)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "!(r)",
+                        "exp": {
+                            "exp": "r",
+                            "op": "¬"
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "10",
+                        "exp": 10
+                    }
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "Repairman",
+            "variables": [
+                {
+                    "initial-value": false,
+                    "name": "r",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "line_n <- false",
+                                    "ref": "line_n",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "((1 / 5000) / (1 / 5000))",
+                                "exp": {
+                                    "left": {
+                                        "left": 1,
+                                        "op": "/",
+                                        "right": 5000
+                                    },
+                                    "op": "/",
+                                    "right": {
+                                        "left": 1,
+                                        "op": "/",
+                                        "right": 5000
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "line_n",
+                        "exp": "line_n"
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "(1 / 5000)",
+                        "exp": {
+                            "left": 1,
+                            "op": "/",
+                            "right": 5000
+                        }
+                    }
+                },
+                {
+                    "action": "repairLine",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "line <- false",
+                                    "ref": "line",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "line_n <- true",
+                                    "ref": "line_n",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(line & !(line_n))",
+                        "exp": {
+                            "left": "line",
+                            "op": "∧",
+                            "right": {
+                                "exp": "line_n",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                },
+                {
+                    "action": "startLine",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "line <- true",
+                                    "ref": "line",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(!(line) & !(line_n))",
+                        "exp": {
+                            "left": {
+                                "exp": "line",
+                                "op": "¬"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "line_n",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "Line",
+            "variables": [
+                {
+                    "initial-value": false,
+                    "name": "line",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "toleft_n <- false",
+                                    "ref": "toleft_n",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "((1 / 4000) / (1 / 4000))",
+                                "exp": {
+                                    "left": {
+                                        "left": 1,
+                                        "op": "/",
+                                        "right": 4000
+                                    },
+                                    "op": "/",
+                                    "right": {
+                                        "left": 1,
+                                        "op": "/",
+                                        "right": 4000
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "toleft_n",
+                        "exp": "toleft_n"
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "(1 / 4000)",
+                        "exp": {
+                            "left": 1,
+                            "op": "/",
+                            "right": 4000
+                        }
+                    }
+                },
+                {
+                    "action": "repairToLeft",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "toleft <- false",
+                                    "ref": "toleft",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "toleft_n <- true",
+                                    "ref": "toleft_n",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(toleft & !(toleft_n))",
+                        "exp": {
+                            "left": "toleft",
+                            "op": "∧",
+                            "right": {
+                                "exp": "toleft_n",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                },
+                {
+                    "action": "startToLeft",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "toleft <- true",
+                                    "ref": "toleft",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(!(toleft) & !(toleft_n))",
+                        "exp": {
+                            "left": {
+                                "exp": "toleft",
+                                "op": "¬"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "toleft_n",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "ToLeft",
+            "variables": [
+                {
+                    "initial-value": false,
+                    "name": "toleft",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "edges": [
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "toright_n <- false",
+                                    "ref": "toright_n",
+                                    "value": false
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "((1 / 4000) / (1 / 4000))",
+                                "exp": {
+                                    "left": {
+                                        "left": 1,
+                                        "op": "/",
+                                        "right": 4000
+                                    },
+                                    "op": "/",
+                                    "right": {
+                                        "left": 1,
+                                        "op": "/",
+                                        "right": 4000
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "toright_n",
+                        "exp": "toright_n"
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "(1 / 4000)",
+                        "exp": {
+                            "left": 1,
+                            "op": "/",
+                            "right": 4000
+                        }
+                    }
+                },
+                {
+                    "action": "repairToRight",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "toright <- false",
+                                    "ref": "toright",
+                                    "value": false
+                                },
+                                {
+                                    "comment": "toright_n <- true",
+                                    "ref": "toright_n",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(toright & !(toright_n))",
+                        "exp": {
+                            "left": "toright",
+                            "op": "∧",
+                            "right": {
+                                "exp": "toright_n",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                },
+                {
+                    "action": "startToRight",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "toright <- true",
+                                    "ref": "toright",
+                                    "value": true
+                                }
+                            ],
+                            "location": "l",
+                            "probability": {
+                                "comment": "(1 / 1)",
+                                "exp": 1
+                            }
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(!(toright) & !(toright_n))",
+                        "exp": {
+                            "left": {
+                                "exp": "toright",
+                                "op": "¬"
+                            },
+                            "op": "∧",
+                            "right": {
+                                "exp": "toright_n",
+                                "op": "¬"
+                            }
+                        }
+                    },
+                    "location": "l",
+                    "rate": {
+                        "comment": "1",
+                        "exp": 1
+                    }
+                }
+            ],
+            "initial-locations": [
+                "l"
+            ],
+            "locations": [
+                {
+                    "name": "l"
+                }
+            ],
+            "name": "ToRight",
+            "variables": [
+                {
+                    "initial-value": false,
+                    "name": "toright",
+                    "type": "bool"
+                }
+            ]
+        }
+    ],
+    "constants": [
+        {
+            "name": "N",
+            "type": "int",
+            "value": 64
+        },
+        {
+            "name": "T",
+            "type": "real",
+            "value": 2000
+        },
+        {
+            "name": "t",
+            "type": "real",
+            "value": 20
+        },
+        {
+            "name": "left_mx",
+            "type": "int",
+            "value": 64
+        },
+        {
+            "name": "right_mx",
+            "type": "int",
+            "value": 64
+        },
+        {
+            "name": "ws_fail",
+            "type": "real",
+            "value": {
+                "left": 1,
+                "op": "/",
+                "right": 500
+            }
+        },
+        {
+            "name": "switch_fail",
+            "type": "real",
+            "value": {
+                "left": 1,
+                "op": "/",
+                "right": 4000
+            }
+        },
+        {
+            "name": "line_fail",
+            "type": "real",
+            "value": {
+                "left": 1,
+                "op": "/",
+                "right": 5000
+            }
+        },
+        {
+            "name": "k",
+            "type": "int",
+            "value": 48
+        }
+    ],
+    "features": [
+        "derived-operators"
+    ],
+    "jani-version": 1,
+    "name": "model",
+    "properties": [
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "exp": {
+                        "left": true,
+                        "op": "U",
+                        "right": {
+                            "exp": "minimum",
+                            "op": "¬"
+                        },
+                        "time-bounds": {
+                            "upper": 2000,
+                            "upper-exclusive": false
+                        }
+                    },
+                    "op": "Pmin"
+                }
+            },
+            "name": "qos1"
+        }
+    ],
+    "restrict-initial": {
+        "exp": true
+    },
+    "system": {
+        "elements": [
+            {
+                "automaton": "Left"
+            },
+            {
+                "automaton": "Right"
+            },
+            {
+                "automaton": "Repairman"
+            },
+            {
+                "automaton": "Line"
+            },
+            {
+                "automaton": "ToLeft"
+            },
+            {
+                "automaton": "ToRight"
+            }
+        ],
+        "syncs": [
+            {
+                "result": "repairLeft",
+                "synchronise": [
+                    "repairLeft",
+                    null,
+                    "repairLeft",
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "repairLine",
+                "synchronise": [
+                    null,
+                    null,
+                    "repairLine",
+                    "repairLine",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "repairRight",
+                "synchronise": [
+                    null,
+                    "repairRight",
+                    "repairRight",
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "repairToLeft",
+                "synchronise": [
+                    null,
+                    null,
+                    "repairToLeft",
+                    null,
+                    "repairToLeft",
+                    null
+                ]
+            },
+            {
+                "result": "repairToRight",
+                "synchronise": [
+                    null,
+                    null,
+                    "repairToRight",
+                    null,
+                    null,
+                    "repairToRight"
+                ]
+            },
+            {
+                "result": "startLeft",
+                "synchronise": [
+                    "startLeft",
+                    null,
+                    "startLeft",
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "startLine",
+                "synchronise": [
+                    null,
+                    null,
+                    "startLine",
+                    "startLine",
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "startRight",
+                "synchronise": [
+                    null,
+                    "startRight",
+                    "startRight",
+                    null,
+                    null,
+                    null
+                ]
+            },
+            {
+                "result": "startToLeft",
+                "synchronise": [
+                    null,
+                    null,
+                    "startToLeft",
+                    null,
+                    "startToLeft",
+                    null
+                ]
+            },
+            {
+                "result": "startToRight",
+                "synchronise": [
+                    null,
+                    null,
+                    "startToRight",
+                    null,
+                    null,
+                    "startToRight"
+                ]
+            }
+        ]
+    },
+    "type": "ctmc",
+    "variables": [
+        {
+            "initial-value": false,
+            "name": "minimum",
+            "transient": true,
+            "type": "bool"
+        },
+        {
+            "initial-value": 64,
+            "name": "left_n",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 64
+            }
+        },
+        {
+            "initial-value": 64,
+            "name": "right_n",
+            "type": {
+                "base": "int",
+                "kind": "bounded",
+                "lower-bound": 0,
+                "upper-bound": 64
+            }
+        },
+        {
+            "initial-value": true,
+            "name": "line_n",
+            "type": "bool"
+        },
+        {
+            "initial-value": true,
+            "name": "toleft_n",
+            "type": "bool"
+        },
+        {
+            "initial-value": true,
+            "name": "toright_n",
+            "type": "bool"
+        }
+    ]
+}
+</pre>
+</div>
+
+</body>
+</html>

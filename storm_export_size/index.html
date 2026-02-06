@@ -1,55 +1,55 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="UTF-8">
-      <title>Benchmark results</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>storm_export_size Results</title>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
 
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
 
-      <script>
-        $(document).ready(function() {
-          // Set correct file
-          $("#content").load("data.html");
-        } );
+  <script>
+    $(document).ready(function() {
+      // Set correct file
+      $("#content").load("data.html");
+    } );
 
-        function updateBest(table) {
-          // Remove old best ones
-          table.cells().every( function() {
-            $(this.node()).removeClass("best");
-          });
-          table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
-              var bestValue = -1
-              var bestIndex = -1
-              $.each( this.data(), function( index, value ){
-                if (index >= 1 && table.column(index).visible()) {
-    			    var text = $(value).text()
-    	            if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
-    				    var number = parseFloat(text);
-    	                if (bestValue == -1 || bestValue > number) {
-    	                  // New best value
-    	                  bestValue = number;
-    	                  bestIndex = index;
-    	                }
-    				  }
-    			  }
-              });
-              // Set new best
-              if (bestIndex >= 0) {
-                $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+    function updateBest(table) {
+      // Remove old best ones
+      table.cells().every( function() {
+        $(this.node()).removeClass("best");
+      });
+      table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+          var bestValue = -1
+          var bestIndex = -1
+          $.each( this.data(), function( index, value ){
+            if (index >= 1 && table.column(index).visible()) {
+                var text = $(value).text()
+                if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
+                    var number = parseFloat(text);
+                    if (bestValue == -1 || bestValue > number) {
+                      // New best value
+                      bestValue = number;
+                      bestIndex = index;
+                    }
+                  }
               }
-          } );
-      }
-      </script>
-    </head>
-    <body>
+          });
+          // Set new best
+          if (bestIndex >= 0) {
+            $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+          }
+      } );
+  }
+  </script>
+</head>
+<body>
 <div>
 	<table id="table" class="display">
 		<thead>
@@ -72,7 +72,7 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td><a href="../models/bluetooth.1" target="_blank">bluetooth.1</a></td>
+				<td><a href="../models/bluetooth.1/index.html" target="_blank">bluetooth.1</a></td>
 				<td><a href="logs/bluetooth.1_storm_from-jani_to-drn-gz_exact.html" target="_blank" class='timeout'>TO</a></td>
 				<td><a href="logs/bluetooth.1_storm_from-jani_to-drn-gz_sparse.html" target="_blank" class='timeout'>TO</a></td>
 				<td><a href="logs/bluetooth.1_storm_from-jani_to-drn-xz_exact.html" target="_blank" class='timeout'>TO</a></td>
@@ -88,7 +88,7 @@
 				<td><a href="logs/bluetooth.1_storm_from-jani_to-umb_sparse.html" target="_blank" class='timeout'>TO</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/cluster.128-2000-20" target="_blank">cluster.128-2000-20</a></td>
+				<td><a href="../models/cluster.128-2000-20/index.html" target="_blank">cluster.128-2000-20</a></td>
 				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-drn-gz_exact.html" target="_blank" >10.51 MB</a></td>
 				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >10.26 MB</a></td>
 				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-drn-xz_exact.html" target="_blank" >5.52 MB</a></td>
@@ -104,7 +104,7 @@
 				<td><a href="logs/cluster.128-2000-20_storm_from-jani_to-umb_sparse.html" target="_blank" >53.71 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/cluster.64-2000-20" target="_blank">cluster.64-2000-20</a></td>
+				<td><a href="../models/cluster.64-2000-20/index.html" target="_blank">cluster.64-2000-20</a></td>
 				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-drn-gz_exact.html" target="_blank" >2.61 MB</a></td>
 				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >2.56 MB</a></td>
 				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-drn-xz_exact.html" target="_blank" >1.41 MB</a></td>
@@ -120,7 +120,7 @@
 				<td><a href="logs/cluster.64-2000-20_storm_from-jani_to-umb_sparse.html" target="_blank" >13.56 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/consensus.4-4" target="_blank">consensus.4-4</a></td>
+				<td><a href="../models/consensus.4-4/index.html" target="_blank">consensus.4-4</a></td>
 				<td><a href="logs/consensus.4-4_storm_from-jani_to-drn-gz_exact.html" target="_blank" >0.53 MB</a></td>
 				<td><a href="logs/consensus.4-4_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >0.53 MB</a></td>
 				<td><a href="logs/consensus.4-4_storm_from-jani_to-drn-xz_exact.html" target="_blank" >0.27 MB</a></td>
@@ -136,7 +136,7 @@
 				<td><a href="logs/consensus.4-4_storm_from-jani_to-umb_sparse.html" target="_blank" >3.45 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/consensus.6-2" target="_blank">consensus.6-2</a></td>
+				<td><a href="../models/consensus.6-2/index.html" target="_blank">consensus.6-2</a></td>
 				<td><a href="logs/consensus.6-2_storm_from-jani_to-drn-gz_exact.html" target="_blank" >21.59 MB</a></td>
 				<td><a href="logs/consensus.6-2_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >21.67 MB</a></td>
 				<td><a href="logs/consensus.6-2_storm_from-jani_to-drn-xz_exact.html" target="_blank" >10.40 MB</a></td>
@@ -152,7 +152,7 @@
 				<td><a href="logs/consensus.6-2_storm_from-jani_to-umb_sparse.html" target="_blank" >143.59 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/crowds.5-20" target="_blank">crowds.5-20</a></td>
+				<td><a href="../models/crowds.5-20/index.html" target="_blank">crowds.5-20</a></td>
 				<td><a href="logs/crowds.5-20_storm_from-jani_to-drn-gz_exact.html" target="_blank" >13.42 MB</a></td>
 				<td><a href="logs/crowds.5-20_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >13.31 MB</a></td>
 				<td><a href="logs/crowds.5-20_storm_from-jani_to-drn-xz_exact.html" target="_blank" >4.37 MB (±1%)</a></td>
@@ -168,7 +168,7 @@
 				<td><a href="logs/crowds.5-20_storm_from-jani_to-umb_sparse.html" target="_blank" >129.01 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/crowds.6-20" target="_blank">crowds.6-20</a></td>
+				<td><a href="../models/crowds.6-20/index.html" target="_blank">crowds.6-20</a></td>
 				<td><a href="logs/crowds.6-20_storm_from-jani_to-drn-gz_exact.html" target="_blank" >70.11 MB</a></td>
 				<td><a href="logs/crowds.6-20_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >69.53 MB</a></td>
 				<td><a href="logs/crowds.6-20_storm_from-jani_to-drn-xz_exact.html" target="_blank" >22.31 MB (±1%)</a></td>
@@ -184,7 +184,7 @@
 				<td><a href="logs/crowds.6-20_storm_from-jani_to-umb_sparse.html" target="_blank" >668.76 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/csma.3-4" target="_blank">csma.3-4</a></td>
+				<td><a href="../models/csma.3-4/index.html" target="_blank">csma.3-4</a></td>
 				<td><a href="logs/csma.3-4_storm_from-jani_to-drn-gz_exact.html" target="_blank" >9.78 MB</a></td>
 				<td><a href="logs/csma.3-4_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >9.78 MB</a></td>
 				<td><a href="logs/csma.3-4_storm_from-jani_to-drn-xz_exact.html" target="_blank" >2.45 MB</a></td>
@@ -200,7 +200,7 @@
 				<td><a href="logs/csma.3-4_storm_from-jani_to-umb_sparse.html" target="_blank" >59.64 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/csma.4-2" target="_blank">csma.4-2</a></td>
+				<td><a href="../models/csma.4-2/index.html" target="_blank">csma.4-2</a></td>
 				<td><a href="logs/csma.4-2_storm_from-jani_to-drn-gz_exact.html" target="_blank" >5.31 MB</a></td>
 				<td><a href="logs/csma.4-2_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >5.26 MB</a></td>
 				<td><a href="logs/csma.4-2_storm_from-jani_to-drn-xz_exact.html" target="_blank" >2.06 MB</a></td>
@@ -216,7 +216,7 @@
 				<td><a href="logs/csma.4-2_storm_from-jani_to-umb_sparse.html" target="_blank" >32.74 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/eajs.5-250-11" target="_blank">eajs.5-250-11</a></td>
+				<td><a href="../models/eajs.5-250-11/index.html" target="_blank">eajs.5-250-11</a></td>
 				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-drn-gz_exact.html" target="_blank" >27.82 MB</a></td>
 				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >28.97 MB</a></td>
 				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-drn-xz_exact.html" target="_blank" >9.88 MB</a></td>
@@ -232,7 +232,7 @@
 				<td><a href="logs/eajs.5-250-11_storm_from-jani_to-umb_sparse.html" target="_blank" >195.78 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/eajs.6-300-13" target="_blank">eajs.6-300-13</a></td>
+				<td><a href="../models/eajs.6-300-13/index.html" target="_blank">eajs.6-300-13</a></td>
 				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-drn-gz_exact.html" target="_blank" >78.60 MB</a></td>
 				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >81.94 MB</a></td>
 				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-drn-xz_exact.html" target="_blank" >24.92 MB</a></td>
@@ -248,7 +248,7 @@
 				<td><a href="logs/eajs.6-300-13_storm_from-jani_to-umb_sparse.html" target="_blank" >545.61 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/egl.10-2" target="_blank">egl.10-2</a></td>
+				<td><a href="../models/egl.10-2/index.html" target="_blank">egl.10-2</a></td>
 				<td><a href="logs/egl.10-2_storm_from-jani_to-drn-gz_exact.html" target="_blank" >318.04 MB</a></td>
 				<td><a href="logs/egl.10-2_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >318.04 MB</a></td>
 				<td><a href="logs/egl.10-2_storm_from-jani_to-drn-xz_exact.html" target="_blank" >42.25 MB (±1%)</a></td>
@@ -264,7 +264,7 @@
 				<td><a href="logs/egl.10-2_storm_from-jani_to-umb_sparse.html" target="_blank" >1559.51 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/egl.10-8" target="_blank">egl.10-8</a></td>
+				<td><a href="../models/egl.10-8/index.html" target="_blank">egl.10-8</a></td>
 				<td><a href="logs/egl.10-8_storm_from-jani_to-drn-gz_exact.html" target="_blank" class='memout'>MO</a></td>
 				<td><a href="logs/egl.10-8_storm_from-jani_to-drn-gz_sparse.html" target="_blank" class='memout'>MO</a></td>
 				<td><a href="logs/egl.10-8_storm_from-jani_to-drn-xz_exact.html" target="_blank" class='memout'>MO</a></td>
@@ -280,7 +280,7 @@
 				<td><a href="logs/egl.10-8_storm_from-jani_to-umb_sparse.html" target="_blank" class='memout'>MO</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/embedded.8-12" target="_blank">embedded.8-12</a></td>
+				<td><a href="../models/embedded.8-12/index.html" target="_blank">embedded.8-12</a></td>
 				<td><a href="logs/embedded.8-12_storm_from-jani_to-drn-gz_exact.html" target="_blank" >0.14 MB</a></td>
 				<td><a href="logs/embedded.8-12_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >0.14 MB</a></td>
 				<td><a href="logs/embedded.8-12_storm_from-jani_to-drn-xz_exact.html" target="_blank" >0.08 MB</a></td>
@@ -296,7 +296,7 @@
 				<td><a href="logs/embedded.8-12_storm_from-jani_to-umb_sparse.html" target="_blank" >0.70 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/firewire.false-36-800" target="_blank">firewire.false-36-800</a></td>
+				<td><a href="../models/firewire.false-36-800/index.html" target="_blank">firewire.false-36-800</a></td>
 				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-drn-gz_exact.html" target="_blank" >1.93 MB</a></td>
 				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >1.93 MB</a></td>
 				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-drn-xz_exact.html" target="_blank" >0.61 MB (±1%)</a></td>
@@ -312,7 +312,7 @@
 				<td><a href="logs/firewire.false-36-800_storm_from-jani_to-umb_sparse.html" target="_blank" >16.36 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/fms.8" target="_blank">fms.8</a></td>
+				<td><a href="../models/fms.8/index.html" target="_blank">fms.8</a></td>
 				<td><a href="logs/fms.8_storm_from-jani_to-drn-gz_exact.html" target="_blank" >137.64 MB</a></td>
 				<td><a href="logs/fms.8_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >148.64 MB</a></td>
 				<td><a href="logs/fms.8_storm_from-jani_to-drn-xz_exact.html" target="_blank" >64.92 MB</a></td>
@@ -328,7 +328,7 @@
 				<td><a href="logs/fms.8_storm_from-jani_to-umb_sparse.html" target="_blank" >691.12 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/haddad-monmege.100-0.7" target="_blank">haddad-monmege.100-0.7</a></td>
+				<td><a href="../models/haddad-monmege.100-0.7/index.html" target="_blank">haddad-monmege.100-0.7</a></td>
 				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-drn-gz_exact.html" target="_blank" >0.00 MB</a></td>
 				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >0.00 MB</a></td>
 				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-drn-xz_exact.html" target="_blank" >0.00 MB (±5%)</a></td>
@@ -344,7 +344,7 @@
 				<td><a href="logs/haddad-monmege.100-0.7_storm_from-jani_to-umb_sparse.html" target="_blank" >0.02 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/herman.15" target="_blank">herman.15</a></td>
+				<td><a href="../models/herman.15/index.html" target="_blank">herman.15</a></td>
 				<td><a href="logs/herman.15_storm_from-jani_to-drn-gz_exact.html" target="_blank" >31.21 MB</a></td>
 				<td><a href="logs/herman.15_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >34.28 MB</a></td>
 				<td><a href="logs/herman.15_storm_from-jani_to-drn-xz_exact.html" target="_blank" >3.55 MB</a></td>
@@ -360,7 +360,7 @@
 				<td><a href="logs/herman.15_storm_from-jani_to-umb_sparse.html" target="_blank" >219.47 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/kanban.5" target="_blank">kanban.5</a></td>
+				<td><a href="../models/kanban.5/index.html" target="_blank">kanban.5</a></td>
 				<td><a href="logs/kanban.5_storm_from-jani_to-drn-gz_exact.html" target="_blank" >81.95 MB</a></td>
 				<td><a href="logs/kanban.5_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >79.97 MB</a></td>
 				<td><a href="logs/kanban.5_storm_from-jani_to-drn-xz_exact.html" target="_blank" >43.96 MB</a></td>
@@ -376,7 +376,7 @@
 				<td><a href="logs/kanban.5_storm_from-jani_to-umb_sparse.html" target="_blank" >432.13 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/majority.2100" target="_blank">majority.2100</a></td>
+				<td><a href="../models/majority.2100/index.html" target="_blank">majority.2100</a></td>
 				<td><a href="logs/majority.2100_storm_from-jani_to-drn-gz_exact.html" target="_blank" >10.06 MB</a></td>
 				<td><a href="logs/majority.2100_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >7.19 MB</a></td>
 				<td><a href="logs/majority.2100_storm_from-jani_to-drn-xz_exact.html" target="_blank" >4.83 MB</a></td>
@@ -392,7 +392,7 @@
 				<td><a href="logs/majority.2100_storm_from-jani_to-umb_sparse.html" target="_blank" >32.94 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/mapk-cascade.4-30" target="_blank">mapk-cascade.4-30</a></td>
+				<td><a href="../models/mapk-cascade.4-30/index.html" target="_blank">mapk-cascade.4-30</a></td>
 				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-drn-gz_exact.html" target="_blank" >2.64 MB</a></td>
 				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >2.64 MB</a></td>
 				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-drn-xz_exact.html" target="_blank" >1.62 MB</a></td>
@@ -408,7 +408,7 @@
 				<td><a href="logs/mapk-cascade.4-30_storm_from-jani_to-umb_sparse.html" target="_blank" >16.23 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/models" target="_blank">models</a></td>
+				<td><a href="../models/models/index.html" target="_blank">models</a></td>
 				<td><a href="logs/models_storm_from-jani_to-drn-gz_exact.html" target="_blank" >-</a></td>
 				<td><a href="logs/models_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >-</a></td>
 				<td><a href="logs/models_storm_from-jani_to-drn-xz_exact.html" target="_blank" >-</a></td>
@@ -424,7 +424,7 @@
 				<td><a href="logs/models_storm_from-jani_to-umb_sparse.html" target="_blank" >-</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/nand.40-4" target="_blank">nand.40-4</a></td>
+				<td><a href="../models/nand.40-4/index.html" target="_blank">nand.40-4</a></td>
 				<td><a href="logs/nand.40-4_storm_from-jani_to-drn-gz_exact.html" target="_blank" >26.71 MB</a></td>
 				<td><a href="logs/nand.40-4_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >26.74 MB</a></td>
 				<td><a href="logs/nand.40-4_storm_from-jani_to-drn-xz_exact.html" target="_blank" >7.53 MB</a></td>
@@ -440,7 +440,7 @@
 				<td><a href="logs/nand.40-4_storm_from-jani_to-umb_sparse.html" target="_blank" >127.91 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/nand.60-4" target="_blank">nand.60-4</a></td>
+				<td><a href="../models/nand.60-4/index.html" target="_blank">nand.60-4</a></td>
 				<td><a href="logs/nand.60-4_storm_from-jani_to-drn-gz_exact.html" target="_blank" >126.11 MB</a></td>
 				<td><a href="logs/nand.60-4_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >125.59 MB</a></td>
 				<td><a href="logs/nand.60-4_storm_from-jani_to-drn-xz_exact.html" target="_blank" >35.38 MB</a></td>
@@ -456,7 +456,7 @@
 				<td><a href="logs/nand.60-4_storm_from-jani_to-umb_sparse.html" target="_blank" >604.66 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/oscillators.8-10-0.1-1-0.1-1.0" target="_blank">oscillators.8-10-0.1-1-0.1-1.0</a></td>
+				<td><a href="../models/oscillators.8-10-0.1-1-0.1-1.0/index.html" target="_blank">oscillators.8-10-0.1-1-0.1-1.0</a></td>
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-drn-gz_exact.html" target="_blank" >0.29 MB</a></td>
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >0.28 MB</a></td>
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-drn-xz_exact.html" target="_blank" >0.15 MB</a></td>
@@ -472,7 +472,7 @@
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-jani_to-umb_sparse.html" target="_blank" >1.56 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/pacman.100" target="_blank">pacman.100</a></td>
+				<td><a href="../models/pacman.100/index.html" target="_blank">pacman.100</a></td>
 				<td><a href="logs/pacman.100_storm_from-jani_to-drn-gz_exact.html" target="_blank" >540.33 MB</a></td>
 				<td><a href="logs/pacman.100_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >538.70 MB</a></td>
 				<td><a href="logs/pacman.100_storm_from-jani_to-drn-xz_exact.html" target="_blank" >204.11 MB</a></td>
@@ -488,7 +488,7 @@
 				<td><a href="logs/pacman.100_storm_from-jani_to-umb_sparse.html" target="_blank" >3077.00 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/pacman.60" target="_blank">pacman.60</a></td>
+				<td><a href="../models/pacman.60/index.html" target="_blank">pacman.60</a></td>
 				<td><a href="logs/pacman.60_storm_from-jani_to-drn-gz_exact.html" target="_blank" >263.11 MB</a></td>
 				<td><a href="logs/pacman.60_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >262.37 MB</a></td>
 				<td><a href="logs/pacman.60_storm_from-jani_to-drn-xz_exact.html" target="_blank" >99.10 MB</a></td>
@@ -504,7 +504,7 @@
 				<td><a href="logs/pacman.60_storm_from-jani_to-umb_sparse.html" target="_blank" >1501.69 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/pnueli-zuck.10" target="_blank">pnueli-zuck.10</a></td>
+				<td><a href="../models/pnueli-zuck.10/index.html" target="_blank">pnueli-zuck.10</a></td>
 				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-drn-gz_exact.html" target="_blank" class='memout'>MO</a></td>
 				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-drn-gz_sparse.html" target="_blank" class='memout'>MO</a></td>
 				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-drn-xz_exact.html" target="_blank" class='memout'>MO</a></td>
@@ -520,7 +520,7 @@
 				<td><a href="logs/pnueli-zuck.10_storm_from-jani_to-umb_sparse.html" target="_blank" class='memout'>MO</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/pnueli-zuck.5" target="_blank">pnueli-zuck.5</a></td>
+				<td><a href="../models/pnueli-zuck.5/index.html" target="_blank">pnueli-zuck.5</a></td>
 				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-drn-gz_exact.html" target="_blank" >8.54 MB</a></td>
 				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >8.54 MB</a></td>
 				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-drn-xz_exact.html" target="_blank" >3.79 MB (±3%)</a></td>
@@ -536,7 +536,7 @@
 				<td><a href="logs/pnueli-zuck.5_storm_from-jani_to-umb_sparse.html" target="_blank" >58.94 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/polling.18-16" target="_blank">polling.18-16</a></td>
+				<td><a href="../models/polling.18-16/index.html" target="_blank">polling.18-16</a></td>
 				<td><a href="logs/polling.18-16_storm_from-jani_to-drn-gz_exact.html" target="_blank" >185.29 MB</a></td>
 				<td><a href="logs/polling.18-16_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >191.69 MB</a></td>
 				<td><a href="logs/polling.18-16_storm_from-jani_to-drn-xz_exact.html" target="_blank" >62.90 MB</a></td>
@@ -552,7 +552,7 @@
 				<td><a href="logs/polling.18-16_storm_from-jani_to-umb_sparse.html" target="_blank" >1173.39 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/rabin.10" target="_blank">rabin.10</a></td>
+				<td><a href="../models/rabin.10/index.html" target="_blank">rabin.10</a></td>
 				<td><a href="logs/rabin.10_storm_from-jani_to-drn-gz_exact.html" target="_blank" class='memout'>MO</a></td>
 				<td><a href="logs/rabin.10_storm_from-jani_to-drn-gz_sparse.html" target="_blank" class='memout'>MO</a></td>
 				<td><a href="logs/rabin.10_storm_from-jani_to-drn-xz_exact.html" target="_blank" class='memout'>MO</a></td>
@@ -568,7 +568,7 @@
 				<td><a href="logs/rabin.10_storm_from-jani_to-umb_sparse.html" target="_blank" class='memout'>MO</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/resource-gathering.1300-100-100" target="_blank">resource-gathering.1300-100-100</a></td>
+				<td><a href="../models/resource-gathering.1300-100-100/index.html" target="_blank">resource-gathering.1300-100-100</a></td>
 				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-drn-gz_exact.html" target="_blank" >11.29 MB</a></td>
 				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >11.26 MB</a></td>
 				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-drn-xz_exact.html" target="_blank" >5.48 MB</a></td>
@@ -584,7 +584,7 @@
 				<td><a href="logs/resource-gathering.1300-100-100_storm_from-jani_to-umb_sparse.html" target="_blank" >81.92 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/speed-ind.2100" target="_blank">speed-ind.2100</a></td>
+				<td><a href="../models/speed-ind.2100/index.html" target="_blank">speed-ind.2100</a></td>
 				<td><a href="logs/speed-ind.2100_storm_from-jani_to-drn-gz_exact.html" target="_blank" >46.24 MB</a></td>
 				<td><a href="logs/speed-ind.2100_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >33.35 MB</a></td>
 				<td><a href="logs/speed-ind.2100_storm_from-jani_to-drn-xz_exact.html" target="_blank" >26.49 MB</a></td>
@@ -600,7 +600,7 @@
 				<td><a href="logs/speed-ind.2100_storm_from-jani_to-umb_sparse.html" target="_blank" >156.85 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/wlan.4-0" target="_blank">wlan.4-0</a></td>
+				<td><a href="../models/wlan.4-0/index.html" target="_blank">wlan.4-0</a></td>
 				<td><a href="logs/wlan.4-0_storm_from-jani_to-drn-gz_exact.html" target="_blank" >2.90 MB</a></td>
 				<td><a href="logs/wlan.4-0_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >2.90 MB</a></td>
 				<td><a href="logs/wlan.4-0_storm_from-jani_to-drn-xz_exact.html" target="_blank" >0.65 MB (±7%)</a></td>
@@ -616,7 +616,7 @@
 				<td><a href="logs/wlan.4-0_storm_from-jani_to-umb_sparse.html" target="_blank" >17.76 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/wlan.5-0" target="_blank">wlan.5-0</a></td>
+				<td><a href="../models/wlan.5-0/index.html" target="_blank">wlan.5-0</a></td>
 				<td><a href="logs/wlan.5-0_storm_from-jani_to-drn-gz_exact.html" target="_blank" >11.17 MB</a></td>
 				<td><a href="logs/wlan.5-0_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >11.23 MB</a></td>
 				<td><a href="logs/wlan.5-0_storm_from-jani_to-drn-xz_exact.html" target="_blank" >2.45 MB (±4%)</a></td>
@@ -632,7 +632,7 @@
 				<td><a href="logs/wlan.5-0_storm_from-jani_to-umb_sparse.html" target="_blank" >67.62 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/wlan.6-0" target="_blank">wlan.6-0</a></td>
+				<td><a href="../models/wlan.6-0/index.html" target="_blank">wlan.6-0</a></td>
 				<td><a href="logs/wlan.6-0_storm_from-jani_to-drn-gz_exact.html" target="_blank" >44.16 MB</a></td>
 				<td><a href="logs/wlan.6-0_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >44.54 MB</a></td>
 				<td><a href="logs/wlan.6-0_storm_from-jani_to-drn-xz_exact.html" target="_blank" >8.88 MB (±12%)</a></td>
@@ -648,7 +648,7 @@
 				<td><a href="logs/wlan.6-0_storm_from-jani_to-umb_sparse.html" target="_blank" >263.56 MB</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/zeroconf.1000-8-false" target="_blank">zeroconf.1000-8-false</a></td>
+				<td><a href="../models/zeroconf.1000-8-false/index.html" target="_blank">zeroconf.1000-8-false</a></td>
 				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-drn-gz_exact.html" target="_blank" >17.86 MB</a></td>
 				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-drn-gz_sparse.html" target="_blank" >17.88 MB</a></td>
 				<td><a href="logs/zeroconf.1000-8-false_storm_from-jani_to-drn-xz_exact.html" target="_blank" >9.25 MB</a></td>

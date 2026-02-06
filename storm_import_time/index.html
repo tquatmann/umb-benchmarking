@@ -1,55 +1,55 @@
 <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="UTF-8">
-      <title>Benchmark results</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>storm_import_time Results</title>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
 
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
 
-      <script>
-        $(document).ready(function() {
-          // Set correct file
-          $("#content").load("data.html");
-        } );
+  <script>
+    $(document).ready(function() {
+      // Set correct file
+      $("#content").load("data.html");
+    } );
 
-        function updateBest(table) {
-          // Remove old best ones
-          table.cells().every( function() {
-            $(this.node()).removeClass("best");
-          });
-          table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
-              var bestValue = -1
-              var bestIndex = -1
-              $.each( this.data(), function( index, value ){
-                if (index >= 1 && table.column(index).visible()) {
-    			    var text = $(value).text()
-    	            if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
-    				    var number = parseFloat(text);
-    	                if (bestValue == -1 || bestValue > number) {
-    	                  // New best value
-    	                  bestValue = number;
-    	                  bestIndex = index;
-    	                }
-    				  }
-    			  }
-              });
-              // Set new best
-              if (bestIndex >= 0) {
-                $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+    function updateBest(table) {
+      // Remove old best ones
+      table.cells().every( function() {
+        $(this.node()).removeClass("best");
+      });
+      table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+          var bestValue = -1
+          var bestIndex = -1
+          $.each( this.data(), function( index, value ){
+            if (index >= 1 && table.column(index).visible()) {
+                var text = $(value).text()
+                if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
+                    var number = parseFloat(text);
+                    if (bestValue == -1 || bestValue > number) {
+                      // New best value
+                      bestValue = number;
+                      bestIndex = index;
+                    }
+                  }
               }
-          } );
-      }
-      </script>
-    </head>
-    <body>
+          });
+          // Set new best
+          if (bestIndex >= 0) {
+            $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+          }
+      } );
+  }
+  </script>
+</head>
+<body>
 <div>
 	<table id="table" class="display">
 		<thead>
@@ -76,7 +76,7 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td><a href="../models/bluetooth.1" target="_blank">bluetooth.1</a></td>
+				<td><a href="../models/bluetooth.1/index.html" target="_blank">bluetooth.1</a></td>
 				<td><a href="logs/bluetooth.1_storm_from-drn-gz_check_exact.html" target="_blank" >-</a></td>
 				<td><a href="logs/bluetooth.1_storm_from-drn-gz_check_sparse.html" target="_blank" >-</a></td>
 				<td><a href="logs/bluetooth.1_storm_from-drn-xz_check_exact.html" target="_blank" >-</a></td>
@@ -96,7 +96,7 @@
 				<td><a href="logs/bluetooth.1_storm_from-umb_check_sparse.html" target="_blank" >-</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/cluster.128-2000-20" target="_blank">cluster.128-2000-20</a></td>
+				<td><a href="../models/cluster.128-2000-20/index.html" target="_blank">cluster.128-2000-20</a></td>
 				<td><a href="logs/cluster.128-2000-20_storm_from-drn-gz_check_exact.html" target="_blank" >15.20 (±2.11)</a></td>
 				<td><a href="logs/cluster.128-2000-20_storm_from-drn-gz_check_sparse.html" target="_blank" >9.21 (±0.25)</a></td>
 				<td><a href="logs/cluster.128-2000-20_storm_from-drn-xz_check_exact.html" target="_blank" >13.56 (±2.94)</a></td>
@@ -116,7 +116,7 @@
 				<td><a href="logs/cluster.128-2000-20_storm_from-umb_check_sparse.html" target="_blank" >0.16 (±0.04)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/cluster.64-2000-20" target="_blank">cluster.64-2000-20</a></td>
+				<td><a href="../models/cluster.64-2000-20/index.html" target="_blank">cluster.64-2000-20</a></td>
 				<td><a href="logs/cluster.64-2000-20_storm_from-drn-gz_check_exact.html" target="_blank" >3.29 (±0.11)</a></td>
 				<td><a href="logs/cluster.64-2000-20_storm_from-drn-gz_check_sparse.html" target="_blank" >2.44 (±0.46)</a></td>
 				<td><a href="logs/cluster.64-2000-20_storm_from-drn-xz_check_exact.html" target="_blank" >3.40 (±0.61)</a></td>
@@ -136,7 +136,7 @@
 				<td><a href="logs/cluster.64-2000-20_storm_from-umb_check_sparse.html" target="_blank" >0.08 (±0.04)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/consensus.4-4" target="_blank">consensus.4-4</a></td>
+				<td><a href="../models/consensus.4-4/index.html" target="_blank">consensus.4-4</a></td>
 				<td><a href="logs/consensus.4-4_storm_from-drn-gz_check_exact.html" target="_blank" >0.68 (±0.12)</a></td>
 				<td><a href="logs/consensus.4-4_storm_from-drn-gz_check_sparse.html" target="_blank" >0.60 (±0.15)</a></td>
 				<td><a href="logs/consensus.4-4_storm_from-drn-xz_check_exact.html" target="_blank" >0.71 (±0.08)</a></td>
@@ -156,7 +156,7 @@
 				<td><a href="logs/consensus.4-4_storm_from-umb_check_sparse.html" target="_blank" >0.04 (±0.02)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/consensus.6-2" target="_blank">consensus.6-2</a></td>
+				<td><a href="../models/consensus.6-2/index.html" target="_blank">consensus.6-2</a></td>
 				<td><a href="logs/consensus.6-2_storm_from-drn-gz_check_exact.html" target="_blank" >14.18 (±2.08)</a></td>
 				<td><a href="logs/consensus.6-2_storm_from-drn-gz_check_sparse.html" target="_blank" >8.77 (±1.15)</a></td>
 				<td><a href="logs/consensus.6-2_storm_from-drn-xz_check_exact.html" target="_blank" >12.50 (±0.81)</a></td>
@@ -176,7 +176,7 @@
 				<td><a href="logs/consensus.6-2_storm_from-umb_check_sparse.html" target="_blank" >0.24 (±0.04)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/crowds.5-20" target="_blank">crowds.5-20</a></td>
+				<td><a href="../models/crowds.5-20/index.html" target="_blank">crowds.5-20</a></td>
 				<td><a href="logs/crowds.5-20_storm_from-drn-gz_check_exact.html" target="_blank" >13.85 (±1.28)</a></td>
 				<td><a href="logs/crowds.5-20_storm_from-drn-gz_check_sparse.html" target="_blank" >7.83 (±0.71)</a></td>
 				<td><a href="logs/crowds.5-20_storm_from-drn-xz_check_exact.html" target="_blank" >13.74 (±0.40)</a></td>
@@ -196,7 +196,7 @@
 				<td><a href="logs/crowds.5-20_storm_from-umb_check_sparse.html" target="_blank" >0.22 (±0.09)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/crowds.6-20" target="_blank">crowds.6-20</a></td>
+				<td><a href="../models/crowds.6-20/index.html" target="_blank">crowds.6-20</a></td>
 				<td><a href="logs/crowds.6-20_storm_from-drn-gz_check_exact.html" target="_blank" >77.50 (±274.11)</a></td>
 				<td><a href="logs/crowds.6-20_storm_from-drn-gz_check_sparse.html" target="_blank" >44.03 (±3.85)</a></td>
 				<td><a href="logs/crowds.6-20_storm_from-drn-xz_check_exact.html" target="_blank" >79.17 (±14.75)</a></td>
@@ -216,7 +216,7 @@
 				<td><a href="logs/crowds.6-20_storm_from-umb_check_sparse.html" target="_blank" >0.86 (±0.13)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/csma.3-4" target="_blank">csma.3-4</a></td>
+				<td><a href="../models/csma.3-4/index.html" target="_blank">csma.3-4</a></td>
 				<td><a href="logs/csma.3-4_storm_from-drn-gz_check_exact.html" target="_blank" >2.64 (±0.30)</a></td>
 				<td><a href="logs/csma.3-4_storm_from-drn-gz_check_sparse.html" target="_blank" >1.04 (±0.19)</a></td>
 				<td><a href="logs/csma.3-4_storm_from-drn-xz_check_exact.html" target="_blank" >2.72 (±0.36)</a></td>
@@ -236,7 +236,7 @@
 				<td><a href="logs/csma.3-4_storm_from-umb_check_sparse.html" target="_blank" >0.14 (±0.01)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/csma.4-2" target="_blank">csma.4-2</a></td>
+				<td><a href="../models/csma.4-2/index.html" target="_blank">csma.4-2</a></td>
 				<td><a href="logs/csma.4-2_storm_from-drn-gz_check_exact.html" target="_blank" >1.73 (±5.08)</a></td>
 				<td><a href="logs/csma.4-2_storm_from-drn-gz_check_sparse.html" target="_blank" >0.77 (±0.05)</a></td>
 				<td><a href="logs/csma.4-2_storm_from-drn-xz_check_exact.html" target="_blank" >1.73 (±0.18)</a></td>
@@ -256,7 +256,7 @@
 				<td><a href="logs/csma.4-2_storm_from-umb_check_sparse.html" target="_blank" >0.12 (±0.01)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/eajs.5-250-11" target="_blank">eajs.5-250-11</a></td>
+				<td><a href="../models/eajs.5-250-11/index.html" target="_blank">eajs.5-250-11</a></td>
 				<td><a href="logs/eajs.5-250-11_storm_from-drn-gz_check_exact.html" target="_blank" >11.83 (±0.82)</a></td>
 				<td><a href="logs/eajs.5-250-11_storm_from-drn-gz_check_sparse.html" target="_blank" >6.71 (±0.93)</a></td>
 				<td><a href="logs/eajs.5-250-11_storm_from-drn-xz_check_exact.html" target="_blank" >12.15 (±1.00)</a></td>
@@ -276,7 +276,7 @@
 				<td><a href="logs/eajs.5-250-11_storm_from-umb_check_sparse.html" target="_blank" >0.27 (±0.07)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/eajs.6-300-13" target="_blank">eajs.6-300-13</a></td>
+				<td><a href="../models/eajs.6-300-13/index.html" target="_blank">eajs.6-300-13</a></td>
 				<td><a href="logs/eajs.6-300-13_storm_from-drn-gz_check_exact.html" target="_blank" >33.27 (±2.24)</a></td>
 				<td><a href="logs/eajs.6-300-13_storm_from-drn-gz_check_sparse.html" target="_blank" >16.77 (±1.29)</a></td>
 				<td><a href="logs/eajs.6-300-13_storm_from-drn-xz_check_exact.html" target="_blank" >39.54 (±119.39)</a></td>
@@ -296,7 +296,7 @@
 				<td><a href="logs/eajs.6-300-13_storm_from-umb_check_sparse.html" target="_blank" >0.73 (±0.11)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/egl.10-2" target="_blank">egl.10-2</a></td>
+				<td><a href="../models/egl.10-2/index.html" target="_blank">egl.10-2</a></td>
 				<td><a href="logs/egl.10-2_storm_from-drn-gz_check_exact.html" target="_blank" >2711.69 (±142.70)</a></td>
 				<td><a href="logs/egl.10-2_storm_from-drn-gz_check_sparse.html" target="_blank" >2580.68 (±196.25)</a></td>
 				<td><a href="logs/egl.10-2_storm_from-drn-xz_check_exact.html" target="_blank" >2439.55 (±247.27)</a></td>
@@ -316,7 +316,7 @@
 				<td><a href="logs/egl.10-2_storm_from-umb_check_sparse.html" target="_blank" >1.67 (±0.27)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/egl.10-8" target="_blank">egl.10-8</a></td>
+				<td><a href="../models/egl.10-8/index.html" target="_blank">egl.10-8</a></td>
 				<td><a href="logs/egl.10-8_storm_from-drn-gz_check_exact.html" target="_blank" >-</a></td>
 				<td><a href="logs/egl.10-8_storm_from-drn-gz_check_sparse.html" target="_blank" >-</a></td>
 				<td><a href="logs/egl.10-8_storm_from-drn-xz_check_exact.html" target="_blank" >-</a></td>
@@ -336,7 +336,7 @@
 				<td><a href="logs/egl.10-8_storm_from-umb_check_sparse.html" target="_blank" >7.78 (±1.33)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/embedded.8-12" target="_blank">embedded.8-12</a></td>
+				<td><a href="../models/embedded.8-12/index.html" target="_blank">embedded.8-12</a></td>
 				<td><a href="logs/embedded.8-12_storm_from-drn-gz_check_exact.html" target="_blank" >0.45 (±0.08)</a></td>
 				<td><a href="logs/embedded.8-12_storm_from-drn-gz_check_sparse.html" target="_blank" >0.39 (±0.03)</a></td>
 				<td><a href="logs/embedded.8-12_storm_from-drn-xz_check_exact.html" target="_blank" >0.46 (±0.03)</a></td>
@@ -356,7 +356,7 @@
 				<td><a href="logs/embedded.8-12_storm_from-umb_check_sparse.html" target="_blank" >0.03 (±0.02)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/firewire.false-36-800" target="_blank">firewire.false-36-800</a></td>
+				<td><a href="../models/firewire.false-36-800/index.html" target="_blank">firewire.false-36-800</a></td>
 				<td><a href="logs/firewire.false-36-800_storm_from-drn-gz_check_exact.html" target="_blank" >0.96 (±0.11)</a></td>
 				<td><a href="logs/firewire.false-36-800_storm_from-drn-gz_check_sparse.html" target="_blank" >0.48 (±0.09)</a></td>
 				<td><a href="logs/firewire.false-36-800_storm_from-drn-xz_check_exact.html" target="_blank" >0.96 (±0.09)</a></td>
@@ -376,7 +376,7 @@
 				<td><a href="logs/firewire.false-36-800_storm_from-umb_check_sparse.html" target="_blank" >0.09 (±0.02)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/fms.8" target="_blank">fms.8</a></td>
+				<td><a href="../models/fms.8/index.html" target="_blank">fms.8</a></td>
 				<td><a href="logs/fms.8_storm_from-drn-gz_check_exact.html" target="_blank" >60.96 (±11.55)</a></td>
 				<td><a href="logs/fms.8_storm_from-drn-gz_check_sparse.html" target="_blank" >17.99 (±2.48)</a></td>
 				<td><a href="logs/fms.8_storm_from-drn-xz_check_exact.html" target="_blank" >74.77 (±10.79)</a></td>
@@ -396,7 +396,7 @@
 				<td><a href="logs/fms.8_storm_from-umb_check_sparse.html" target="_blank" >0.94 (±0.04)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/haddad-monmege.100-0.7" target="_blank">haddad-monmege.100-0.7</a></td>
+				<td><a href="../models/haddad-monmege.100-0.7/index.html" target="_blank">haddad-monmege.100-0.7</a></td>
 				<td><a href="logs/haddad-monmege.100-0.7_storm_from-drn-gz_check_exact.html" target="_blank" >0.02 (±0.02)</a></td>
 				<td><a href="logs/haddad-monmege.100-0.7_storm_from-drn-gz_check_sparse.html" target="_blank" >0.01 (±0.00)</a></td>
 				<td><a href="logs/haddad-monmege.100-0.7_storm_from-drn-xz_check_exact.html" target="_blank" >0.01 (±0.00)</a></td>
@@ -416,7 +416,7 @@
 				<td><a href="logs/haddad-monmege.100-0.7_storm_from-umb_check_sparse.html" target="_blank" >0.02 (±0.02)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/herman.15" target="_blank">herman.15</a></td>
+				<td><a href="../models/herman.15/index.html" target="_blank">herman.15</a></td>
 				<td><a href="logs/herman.15_storm_from-drn-gz_check_exact.html" target="_blank" >21.43 (±1.49)</a></td>
 				<td><a href="logs/herman.15_storm_from-drn-gz_check_sparse.html" target="_blank" >7.47 (±0.98)</a></td>
 				<td><a href="logs/herman.15_storm_from-drn-xz_check_exact.html" target="_blank" >20.67 (±4.01)</a></td>
@@ -436,7 +436,7 @@
 				<td><a href="logs/herman.15_storm_from-umb_check_sparse.html" target="_blank" >0.38 (±0.04)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/kanban.5" target="_blank">kanban.5</a></td>
+				<td><a href="../models/kanban.5/index.html" target="_blank">kanban.5</a></td>
 				<td><a href="logs/kanban.5_storm_from-drn-gz_check_exact.html" target="_blank" >40.91 (±5.53)</a></td>
 				<td><a href="logs/kanban.5_storm_from-drn-gz_check_sparse.html" target="_blank" >11.00 (±1.92)</a></td>
 				<td><a href="logs/kanban.5_storm_from-drn-xz_check_exact.html" target="_blank" >43.47 (±6.21)</a></td>
@@ -456,7 +456,7 @@
 				<td><a href="logs/kanban.5_storm_from-umb_check_sparse.html" target="_blank" >0.60 (±0.02)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/majority.2100" target="_blank">majority.2100</a></td>
+				<td><a href="../models/majority.2100/index.html" target="_blank">majority.2100</a></td>
 				<td><a href="logs/majority.2100_storm_from-drn-gz_check_exact.html" target="_blank" >6.27 (±0.56)</a></td>
 				<td><a href="logs/majority.2100_storm_from-drn-gz_check_sparse.html" target="_blank" >0.96 (±3.69)</a></td>
 				<td><a href="logs/majority.2100_storm_from-drn-xz_check_exact.html" target="_blank" >6.66 (±0.79)</a></td>
@@ -476,7 +476,7 @@
 				<td><a href="logs/majority.2100_storm_from-umb_check_sparse.html" target="_blank" >0.11 (±0.01)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/mapk-cascade.4-30" target="_blank">mapk-cascade.4-30</a></td>
+				<td><a href="../models/mapk-cascade.4-30/index.html" target="_blank">mapk-cascade.4-30</a></td>
 				<td><a href="logs/mapk-cascade.4-30_storm_from-drn-gz_check_exact.html" target="_blank" >1.44 (±4.25)</a></td>
 				<td><a href="logs/mapk-cascade.4-30_storm_from-drn-gz_check_sparse.html" target="_blank" >0.52 (±0.03)</a></td>
 				<td><a href="logs/mapk-cascade.4-30_storm_from-drn-xz_check_exact.html" target="_blank" >1.53 (±4.48)</a></td>
@@ -496,7 +496,7 @@
 				<td><a href="logs/mapk-cascade.4-30_storm_from-umb_check_sparse.html" target="_blank" >0.08 (±0.04)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/models" target="_blank">models</a></td>
+				<td><a href="../models/models/index.html" target="_blank">models</a></td>
 				<td><a href="logs/models_storm_from-drn-gz_check_exact.html" target="_blank" >-</a></td>
 				<td><a href="logs/models_storm_from-drn-gz_check_sparse.html" target="_blank" >-</a></td>
 				<td><a href="logs/models_storm_from-drn-xz_check_exact.html" target="_blank" >-</a></td>
@@ -516,7 +516,7 @@
 				<td><a href="logs/models_storm_from-umb_check_sparse.html" target="_blank" class='error'>ERR</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/nand.40-4" target="_blank">nand.40-4</a></td>
+				<td><a href="../models/nand.40-4/index.html" target="_blank">nand.40-4</a></td>
 				<td><a href="logs/nand.40-4_storm_from-drn-gz_check_exact.html" target="_blank" >7.31 (±1.30)</a></td>
 				<td><a href="logs/nand.40-4_storm_from-drn-gz_check_sparse.html" target="_blank" >2.86 (±0.34)</a></td>
 				<td><a href="logs/nand.40-4_storm_from-drn-xz_check_exact.html" target="_blank" >7.64 (±1.41)</a></td>
@@ -536,7 +536,7 @@
 				<td><a href="logs/nand.40-4_storm_from-umb_check_sparse.html" target="_blank" >0.27 (±0.05)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/nand.60-4" target="_blank">nand.60-4</a></td>
+				<td><a href="../models/nand.60-4/index.html" target="_blank">nand.60-4</a></td>
 				<td><a href="logs/nand.60-4_storm_from-drn-gz_check_exact.html" target="_blank" >37.31 (±121.03)</a></td>
 				<td><a href="logs/nand.60-4_storm_from-drn-gz_check_sparse.html" target="_blank" >14.04 (±2.41)</a></td>
 				<td><a href="logs/nand.60-4_storm_from-drn-xz_check_exact.html" target="_blank" >37.39 (±6.76)</a></td>
@@ -556,7 +556,7 @@
 				<td><a href="logs/nand.60-4_storm_from-umb_check_sparse.html" target="_blank" >0.71 (±0.09)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/oscillators.8-10-0.1-1-0.1-1.0" target="_blank">oscillators.8-10-0.1-1-0.1-1.0</a></td>
+				<td><a href="../models/oscillators.8-10-0.1-1-0.1-1.0/index.html" target="_blank">oscillators.8-10-0.1-1-0.1-1.0</a></td>
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-drn-gz_check_exact.html" target="_blank" >0.20 (±0.58)</a></td>
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-drn-gz_check_sparse.html" target="_blank" >0.08 (±0.05)</a></td>
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-drn-xz_check_exact.html" target="_blank" >0.23 (±0.03)</a></td>
@@ -576,7 +576,7 @@
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_storm_from-umb_check_sparse.html" target="_blank" >0.04 (±0.01)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/pacman.100" target="_blank">pacman.100</a></td>
+				<td><a href="../models/pacman.100/index.html" target="_blank">pacman.100</a></td>
 				<td><a href="logs/pacman.100_storm_from-drn-gz_check_exact.html" target="_blank" >300.56 (±5.85)</a></td>
 				<td><a href="logs/pacman.100_storm_from-drn-gz_check_sparse.html" target="_blank" >248.96 (±928.31)</a></td>
 				<td><a href="logs/pacman.100_storm_from-drn-xz_check_exact.html" target="_blank" >316.27 (±41.56)</a></td>
@@ -596,7 +596,7 @@
 				<td><a href="logs/pacman.100_storm_from-umb_check_sparse.html" target="_blank" >3.15 (±0.45)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/pacman.60" target="_blank">pacman.60</a></td>
+				<td><a href="../models/pacman.60/index.html" target="_blank">pacman.60</a></td>
 				<td><a href="logs/pacman.60_storm_from-drn-gz_check_exact.html" target="_blank" >158.32 (±19.45)</a></td>
 				<td><a href="logs/pacman.60_storm_from-drn-gz_check_sparse.html" target="_blank" >127.75 (±19.68)</a></td>
 				<td><a href="logs/pacman.60_storm_from-drn-xz_check_exact.html" target="_blank" >161.33 (±8.47)</a></td>
@@ -616,7 +616,7 @@
 				<td><a href="logs/pacman.60_storm_from-umb_check_sparse.html" target="_blank" >1.60 (±0.11)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/pnueli-zuck.10" target="_blank">pnueli-zuck.10</a></td>
+				<td><a href="../models/pnueli-zuck.10/index.html" target="_blank">pnueli-zuck.10</a></td>
 				<td><a href="logs/pnueli-zuck.10_storm_from-drn-gz_check_exact.html" target="_blank" >-</a></td>
 				<td><a href="logs/pnueli-zuck.10_storm_from-drn-gz_check_sparse.html" target="_blank" >-</a></td>
 				<td><a href="logs/pnueli-zuck.10_storm_from-drn-xz_check_exact.html" target="_blank" >-</a></td>
@@ -636,7 +636,7 @@
 				<td><a href="logs/pnueli-zuck.10_storm_from-umb_check_sparse.html" target="_blank" >-</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/pnueli-zuck.5" target="_blank">pnueli-zuck.5</a></td>
+				<td><a href="../models/pnueli-zuck.5/index.html" target="_blank">pnueli-zuck.5</a></td>
 				<td><a href="logs/pnueli-zuck.5_storm_from-drn-gz_check_exact.html" target="_blank" >2.68 (±9.39)</a></td>
 				<td><a href="logs/pnueli-zuck.5_storm_from-drn-gz_check_sparse.html" target="_blank" >1.46 (±0.21)</a></td>
 				<td><a href="logs/pnueli-zuck.5_storm_from-drn-xz_check_exact.html" target="_blank" >2.92 (±0.44)</a></td>
@@ -656,7 +656,7 @@
 				<td><a href="logs/pnueli-zuck.5_storm_from-umb_check_sparse.html" target="_blank" >0.12 (±0.01)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/polling.18-16" target="_blank">polling.18-16</a></td>
+				<td><a href="../models/polling.18-16/index.html" target="_blank">polling.18-16</a></td>
 				<td><a href="logs/polling.18-16_storm_from-drn-gz_check_exact.html" target="_blank" >114.36 (±9.59)</a></td>
 				<td><a href="logs/polling.18-16_storm_from-drn-gz_check_sparse.html" target="_blank" >45.46 (±146.86)</a></td>
 				<td><a href="logs/polling.18-16_storm_from-drn-xz_check_exact.html" target="_blank" >114.79 (±24.87)</a></td>
@@ -676,7 +676,7 @@
 				<td><a href="logs/polling.18-16_storm_from-umb_check_sparse.html" target="_blank" >1.55 (±0.10)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/rabin.10" target="_blank">rabin.10</a></td>
+				<td><a href="../models/rabin.10/index.html" target="_blank">rabin.10</a></td>
 				<td><a href="logs/rabin.10_storm_from-drn-gz_check_exact.html" target="_blank" >-</a></td>
 				<td><a href="logs/rabin.10_storm_from-drn-gz_check_sparse.html" target="_blank" >-</a></td>
 				<td><a href="logs/rabin.10_storm_from-drn-xz_check_exact.html" target="_blank" >-</a></td>
@@ -696,7 +696,7 @@
 				<td><a href="logs/rabin.10_storm_from-umb_check_sparse.html" target="_blank" >-</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/resource-gathering.1300-100-100" target="_blank">resource-gathering.1300-100-100</a></td>
+				<td><a href="../models/resource-gathering.1300-100-100/index.html" target="_blank">resource-gathering.1300-100-100</a></td>
 				<td><a href="logs/resource-gathering.1300-100-100_storm_from-drn-gz_check_exact.html" target="_blank" >2.82 (±0.07)</a></td>
 				<td><a href="logs/resource-gathering.1300-100-100_storm_from-drn-gz_check_sparse.html" target="_blank" >1.37 (±4.10)</a></td>
 				<td><a href="logs/resource-gathering.1300-100-100_storm_from-drn-xz_check_exact.html" target="_blank" >3.38 (±0.39)</a></td>
@@ -716,7 +716,7 @@
 				<td><a href="logs/resource-gathering.1300-100-100_storm_from-umb_check_sparse.html" target="_blank" >0.17 (±0.04)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/speed-ind.2100" target="_blank">speed-ind.2100</a></td>
+				<td><a href="../models/speed-ind.2100/index.html" target="_blank">speed-ind.2100</a></td>
 				<td><a href="logs/speed-ind.2100_storm_from-drn-gz_check_exact.html" target="_blank" >28.97 (±5.45)</a></td>
 				<td><a href="logs/speed-ind.2100_storm_from-drn-gz_check_sparse.html" target="_blank" >5.03 (±0.22)</a></td>
 				<td><a href="logs/speed-ind.2100_storm_from-drn-xz_check_exact.html" target="_blank" >30.55 (±4.76)</a></td>
@@ -736,7 +736,7 @@
 				<td><a href="logs/speed-ind.2100_storm_from-umb_check_sparse.html" target="_blank" >0.33 (±0.07)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/wlan.4-0" target="_blank">wlan.4-0</a></td>
+				<td><a href="../models/wlan.4-0/index.html" target="_blank">wlan.4-0</a></td>
 				<td><a href="logs/wlan.4-0_storm_from-drn-gz_check_exact.html" target="_blank" >0.80 (±0.12)</a></td>
 				<td><a href="logs/wlan.4-0_storm_from-drn-gz_check_sparse.html" target="_blank" >0.33 (±0.03)</a></td>
 				<td><a href="logs/wlan.4-0_storm_from-drn-xz_check_exact.html" target="_blank" >0.87 (±0.07)</a></td>
@@ -756,7 +756,7 @@
 				<td><a href="logs/wlan.4-0_storm_from-umb_check_sparse.html" target="_blank" >0.09 (±0.03)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/wlan.5-0" target="_blank">wlan.5-0</a></td>
+				<td><a href="../models/wlan.5-0/index.html" target="_blank">wlan.5-0</a></td>
 				<td><a href="logs/wlan.5-0_storm_from-drn-gz_check_exact.html" target="_blank" >2.99 (±0.56)</a></td>
 				<td><a href="logs/wlan.5-0_storm_from-drn-gz_check_sparse.html" target="_blank" >1.14 (±0.07)</a></td>
 				<td><a href="logs/wlan.5-0_storm_from-drn-xz_check_exact.html" target="_blank" >3.03 (±0.10)</a></td>
@@ -776,7 +776,7 @@
 				<td><a href="logs/wlan.5-0_storm_from-umb_check_sparse.html" target="_blank" >0.15 (±0.02)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/wlan.6-0" target="_blank">wlan.6-0</a></td>
+				<td><a href="../models/wlan.6-0/index.html" target="_blank">wlan.6-0</a></td>
 				<td><a href="logs/wlan.6-0_storm_from-drn-gz_check_exact.html" target="_blank" >11.77 (±0.63)</a></td>
 				<td><a href="logs/wlan.6-0_storm_from-drn-gz_check_sparse.html" target="_blank" >4.68 (±0.61)</a></td>
 				<td><a href="logs/wlan.6-0_storm_from-drn-xz_check_exact.html" target="_blank" >11.58 (±0.57)</a></td>
@@ -796,7 +796,7 @@
 				<td><a href="logs/wlan.6-0_storm_from-umb_check_sparse.html" target="_blank" >0.45 (±0.17)</a></td>
 			</tr>
 			<tr>
-				<td><a href="../models/zeroconf.1000-8-false" target="_blank">zeroconf.1000-8-false</a></td>
+				<td><a href="../models/zeroconf.1000-8-false/index.html" target="_blank">zeroconf.1000-8-false</a></td>
 				<td><a href="logs/zeroconf.1000-8-false_storm_from-drn-gz_check_exact.html" target="_blank" >5.64 (±0.76)</a></td>
 				<td><a href="logs/zeroconf.1000-8-false_storm_from-drn-gz_check_sparse.html" target="_blank" >2.75 (±0.37)</a></td>
 				<td><a href="logs/zeroconf.1000-8-false_storm_from-drn-xz_check_exact.html" target="_blank" >5.80 (±1.52)</a></td>

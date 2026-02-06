@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log crowds.6-20_prism_from-prism_check_ex</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model <a href="../../models/crowds.6-20/index.html" target="_blank">crowds.6-20</a> and tool configuration prism_from-prism_check_ex</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">[ERR, ERR, ERR, ERR, ERR]</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_crowds.6-20_rep1.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+Wallclock time: 59.702 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 02:48:56 GMT+01:00 2026
+Hostname: n23m0174
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Parsing properties file "models/crowds.6-20/property.props"...
+
+1 property:
+(1) "positive": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "positive": P=? [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 424544 770869 1279375 1595052 1706295 1737217 1755549 1766043 1772455 1776267 1778671 1780807 1781992 1782945 1783896 1784844
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:238)
+	at java.base/java.util.ArrayList.grow(ArrayList.java:245)
+	at java.base/java.util.ArrayList.add(ArrayList.java:484)
+	at java.base/java.util.ArrayList.add(ArrayList.java:497)
+	at explicit.DTMCSimple.addToProbability(DTMCSimple.java:259)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:316)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_crowds.6-20_rep2.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+Wallclock time: 49.394 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 01:00:58 GMT+01:00 2026
+Hostname: n23m0143
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Parsing properties file "models/crowds.6-20/property.props"...
+
+1 property:
+(1) "positive": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "positive": P=? [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 465644 831443 1401303 1613779 1713575 1743257 1761353 1770898 1775648 1778777 1781154 1782337 1783522 1784713
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:257)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_crowds.6-20_rep3.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+Wallclock time: 43.395 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:38:11 GMT+01:00 2026
+Hostname: n23m0267
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Parsing properties file "models/crowds.6-20/property.props"...
+
+1 property:
+(1) "positive": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "positive": P=? [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 551533 985369 1523335 1700776 1739820 1760526 1771262 1776258 1779611 1781982 1783403 1784832
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:257)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_crowds.6-20_rep4.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+Wallclock time: 47.950 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Thu Jan 29 02:58:58 GMT+01:00 2026
+Hostname: n23m0031
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Parsing properties file "models/crowds.6-20/property.props"...
+
+1 property:
+(1) "positive": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "positive": P=? [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 513442 915398 1469323 1681190 1726276 1752721 1766061 1772952 1777248 1779640 1781540 1782728 1783914
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.lang.Double.valueOf(Double.java:924)
+	at prism.Evaluator$EvaluatorDouble.evaluate(Evaluator.java:368)
+	at prism.Evaluator$EvaluatorDouble.evaluate(Evaluator.java:275)
+	at prism.Evaluator.evaluate(Evaluator.java:164)
+	at simulator.Updater.getProbabilityInState(Updater.java:333)
+	at simulator.Updater.processUpdatesAndCreateNewChoice(Updater.java:359)
+	at simulator.Updater.calculateTransitions(Updater.java:196)
+	at simulator.ModulesFileModelGenerator.getTransitionListScalars(ModulesFileModelGenerator.java:827)
+	at simulator.ModulesFileModelGenerator.getTransitionList(ModulesFileModelGenerator.java:814)
+	at simulator.ModulesFileModelGenerator.getNumChoices(ModulesFileModelGenerator.java:513)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:273)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: prism_from-prism_check_ex_crowds.6-20_rep5.log</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">Command(s):
+../bin/prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+Wallclock time: 44.092 seconds
+Return code: 1
+##############################
+PRISM
+=====
+
+Version: 4.9.dev
+Date: Wed Jan 28 20:29:02 GMT+01:00 2026
+Hostname: r23m0166
+Memory limits: cudd=1g, java(heap)=1g
+Command line: prism -ex models/crowds.6-20/model.prism models/crowds.6-20/property.props
+
+Parsing PRISM model file "models/crowds.6-20/model.prism"...
+
+Type:        DTMC
+Modules:     crowds
+Actions:     []
+Variables:   launch new runCount start run lastSeen good bad recordLast badObserve deliver done observe0 observe1 observe2 observe3 observe4 observe5 observe6 observe7 observe8 observe9 observe10 observe11 observe12 observe13 observe14 observe15 observe16 observe17 observe18 observe19
+Labels:      "target"
+
+Parsing properties file "models/crowds.6-20/property.props"...
+
+1 property:
+(1) "positive": P=? [ F "target" ]
+
+---------------------------------------------------------------------
+
+Model checking: "positive": P=? [ F "target" ]
+
+Building model (engine:explicit)...
+
+Computing reachable states... 559563 963449 1523058 1694877 1738145 1759091 1769827 1775045 1778648 1781326 1782450 1783636 1784964
+##############################Output to stderr##############################
+Picked up JAVA_TOOL_OPTIONS: -Xmx32g
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+	at parser.State.<init>(State.java:50)
+	at parser.State.<init>(State.java:59)
+	at simulator.ChoiceListFlexi.computeTarget(ChoiceListFlexi.java:257)
+	at simulator.ModulesFileModelGenerator.computeTransitionTarget(ModulesFileModelGenerator.java:664)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:295)
+	at explicit.ConstructModel.constructModel(ConstructModel.java:150)
+	at prism.Prism.doBuildModel(Prism.java:2303)
+	at prism.Prism.buildModelIfRequired(Prism.java:2199)
+	at prism.Prism.modelCheck(Prism.java:3398)
+	at prism.PrismCL.run(PrismCL.java:426)
+	at prism.PrismCL.go(PrismCL.java:227)
+	at prism.PrismCL.main(PrismCL.java:3040)
+</pre>
+</div>
+</body>
+</html>
