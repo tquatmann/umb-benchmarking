@@ -133,7 +133,7 @@ prism_configurations["default"] = ""
 prism_configurations["ex"] = "-ex"
 prism_configurations["norewards"] = ""
 
-PRISM_INPUT_FORMATS = [PRISM_LANGUAGE, UMB]
+PRISM_INPUT_FORMATS = [PRISM_LANGUAGE, UMB, TRA]
 PRISM_OUTPUT_FORMATS = [UMB, UMB_GZ, TRA]
 
 def prism_command(input_format : str, task : str, configuration : str) -> str:
@@ -347,7 +347,7 @@ if __name__ == "__main__":
     for out_format in MODEST_OUTPUT_FORMATS:
         add_cmd_template(modest_exprt_templates, MODEST, JANI, out_format, "default")
     for cfg in [ "memory" ]:
-        for out_format in [UMB, UMB_XZ, UMB_GZ]:
+        for out_format in [UMB]:
             add_cmd_template(modest_exprt_templates, MODEST, JANI, out_format, cfg)
 
     modest_exprt_invs = generate_invocations(modest_exprt_templates)
