@@ -31,7 +31,7 @@
           $.each( this.data(), function( index, value ){
             if (index >= 1 && table.column(index).visible()) {
                 var text = $(value).text()
-                if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
+                if (["TO", "ERR", "INC", "MO", "NS", "", "-"].indexOf(text) < 0) {
                     var number = parseFloat(text);
                     if (bestValue == -1 || bestValue > number) {
                       // New best value
@@ -56,6 +56,9 @@
 		<thead>
 			<tr>
 				<th>Model</th>
+				<th>modest_bcgio_aut-to-bcg-gz_default</th>
+				<th>modest_bcgio_aut-to-bcg-xz_default</th>
+				<th>modest_bcgio_aut-to-bcg_default</th>
 				<th>modest_from-jani_to-aut_default</th>
 				<th>modest_from-jani_to-imca_default</th>
 				<th>modest_from-jani_to-umb-gz_default</th>
@@ -69,6 +72,9 @@
 		<tbody>
 			<tr>
 				<td><a href="../models/bluetooth.1/index.html" target="_blank">bluetooth.1</a></td>
+				<td><a href="logs/bluetooth.1_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/bluetooth.1_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/bluetooth.1_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/bluetooth.1_modest_from-jani_to-aut_default.html" target="_blank" class='unsupported'>NS</a></td>
 				<td><a href="logs/bluetooth.1_modest_from-jani_to-imca_default.html" target="_blank" class='unsupported'>NS</a></td>
 				<td><a href="logs/bluetooth.1_modest_from-jani_to-umb-gz_default.html" target="_blank" class='unsupported'>NS</a></td>
@@ -80,6 +86,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/cluster.128-2000-20/index.html" target="_blank">cluster.128-2000-20</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/cluster.128-2000-20_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-aut_default.html" target="_blank" class='timeout'>0.80 (±0.10) & TO</a></td>
 				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-imca_default.html" target="_blank" class='timeout'>0.60 (±0.00) & TO</a></td>
 				<td><a href="logs/cluster.128-2000-20_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.60 (±0.10)</a></td>
@@ -91,6 +100,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/cluster.64-2000-20/index.html" target="_blank">cluster.64-2000-20</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/cluster.64-2000-20_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-aut_default.html" target="_blank" >0.20 (±0.00)</a></td>
 				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-imca_default.html" target="_blank" >0.20 (±9.30)</a></td>
 				<td><a href="logs/cluster.64-2000-20_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.20 (±0.00)</a></td>
@@ -102,6 +114,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/consensus.4-4/index.html" target="_blank">consensus.4-4</a></td>
+				<td><a href="logs/consensus.4-4_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/consensus.4-4_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/consensus.4-4_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/consensus.4-4_modest_from-jani_to-aut_default.html" target="_blank" >0.10 (±0.00)</a></td>
 				<td><a href="logs/consensus.4-4_modest_from-jani_to-imca_default.html" target="_blank" >0.10 (±0.00)</a></td>
 				<td><a href="logs/consensus.4-4_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.10 (±0.00)</a></td>
@@ -113,6 +128,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/consensus.6-2/index.html" target="_blank">consensus.6-2</a></td>
+				<td><a href="logs/consensus.6-2_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/consensus.6-2_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/consensus.6-2_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/consensus.6-2_modest_from-jani_to-aut_default.html" target="_blank" >1.60 (±0.70)</a></td>
 				<td><a href="logs/consensus.6-2_modest_from-jani_to-imca_default.html" target="_blank" >1.10 (±0.20)</a></td>
 				<td><a href="logs/consensus.6-2_modest_from-jani_to-umb-gz_default.html" target="_blank" >2.45 (±11.25)</a></td>
@@ -124,6 +142,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/crowds.5-20/index.html" target="_blank">crowds.5-20</a></td>
+				<td><a href="logs/crowds.5-20_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/crowds.5-20_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/crowds.5-20_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/crowds.5-20_modest_from-jani_to-aut_default.html" target="_blank" >1.30 (±0.20)</a></td>
 				<td><a href="logs/crowds.5-20_modest_from-jani_to-imca_default.html" target="_blank" >1.30 (±0.20)</a></td>
 				<td><a href="logs/crowds.5-20_modest_from-jani_to-umb-gz_default.html" target="_blank" >1.05 (±0.05)</a></td>
@@ -135,6 +156,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/crowds.6-20/index.html" target="_blank">crowds.6-20</a></td>
+				<td><a href="logs/crowds.6-20_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/crowds.6-20_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/crowds.6-20_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/crowds.6-20_modest_from-jani_to-aut_default.html" target="_blank" >6.50 (±0.90)</a></td>
 				<td><a href="logs/crowds.6-20_modest_from-jani_to-imca_default.html" target="_blank" >5.90 (±1.00)</a></td>
 				<td><a href="logs/crowds.6-20_modest_from-jani_to-umb-gz_default.html" target="_blank" >5.55 (±0.25)</a></td>
@@ -146,6 +170,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/csma.3-4/index.html" target="_blank">csma.3-4</a></td>
+				<td><a href="logs/csma.3-4_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/csma.3-4_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/csma.3-4_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/csma.3-4_modest_from-jani_to-aut_default.html" target="_blank" >0.80 (±0.10)</a></td>
 				<td><a href="logs/csma.3-4_modest_from-jani_to-imca_default.html" target="_blank" >0.50 (±0.10)</a></td>
 				<td><a href="logs/csma.3-4_modest_from-jani_to-umb-gz_default.html" target="_blank" >1.20 (±0.20)</a></td>
@@ -157,6 +184,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/csma.4-2/index.html" target="_blank">csma.4-2</a></td>
+				<td><a href="logs/csma.4-2_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/csma.4-2_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/csma.4-2_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/csma.4-2_modest_from-jani_to-aut_default.html" target="_blank" >0.50 (±1.00)</a></td>
 				<td><a href="logs/csma.4-2_modest_from-jani_to-imca_default.html" target="_blank" >0.30 (±0.00)</a></td>
 				<td><a href="logs/csma.4-2_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.60 (±0.10)</a></td>
@@ -168,6 +198,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/eajs.5-250-11/index.html" target="_blank">eajs.5-250-11</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/eajs.5-250-11_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-aut_default.html" target="_blank" >2.40 (±6.50)</a></td>
 				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-imca_default.html" target="_blank" >1.80 (±0.20)</a></td>
 				<td><a href="logs/eajs.5-250-11_modest_from-jani_to-umb-gz_default.html" target="_blank" >2.65 (±0.25)</a></td>
@@ -179,6 +212,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/eajs.6-300-13/index.html" target="_blank">eajs.6-300-13</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/eajs.6-300-13_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-aut_default.html" target="_blank" >5.90 (±1.10)</a></td>
 				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-imca_default.html" target="_blank" >5.00 (±0.70)</a></td>
 				<td><a href="logs/eajs.6-300-13_modest_from-jani_to-umb-gz_default.html" target="_blank" >7.15 (±0.95)</a></td>
@@ -190,6 +226,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/egl.10-2/index.html" target="_blank">egl.10-2</a></td>
+				<td><a href="logs/egl.10-2_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/egl.10-2_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/egl.10-2_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/egl.10-2_modest_from-jani_to-aut_default.html" target="_blank" >13.00 (±1.50)</a></td>
 				<td><a href="logs/egl.10-2_modest_from-jani_to-imca_default.html" target="_blank" >13.90 (±2.00)</a></td>
 				<td><a href="logs/egl.10-2_modest_from-jani_to-umb-gz_default.html" target="_blank" >33.10 (±4.20)</a></td>
@@ -201,17 +240,23 @@
 			</tr>
 			<tr>
 				<td><a href="../models/egl.10-8/index.html" target="_blank">egl.10-8</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_to-aut_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_to-imca_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-gz_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-gz_memory.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-xz_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-xz_memory.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_to-umb_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_to-umb_memory.html" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/egl.10-8_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/egl.10-8_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/egl.10-8_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-aut_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-imca_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-gz_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-gz_memory.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-xz_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb-xz_memory.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_to-umb_memory.html" target="_blank" class='memout'>MO</a></td>
 			</tr>
 			<tr>
 				<td><a href="../models/embedded.8-12/index.html" target="_blank">embedded.8-12</a></td>
+				<td><a href="logs/embedded.8-12_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/embedded.8-12_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/embedded.8-12_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/embedded.8-12_modest_from-jani_to-aut_default.html" target="_blank" >0.10 (±0.00)</a></td>
 				<td><a href="logs/embedded.8-12_modest_from-jani_to-imca_default.html" target="_blank" >0.00</a></td>
 				<td><a href="logs/embedded.8-12_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.10 (±0.00)</a></td>
@@ -223,6 +268,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/firewire.false-36-800/index.html" target="_blank">firewire.false-36-800</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/firewire.false-36-800_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-aut_default.html" target="_blank" >0.20 (±0.00)</a></td>
 				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-imca_default.html" target="_blank" >0.20 (±0.00)</a></td>
 				<td><a href="logs/firewire.false-36-800_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.30 (±0.00)</a></td>
@@ -234,6 +282,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/fms.8/index.html" target="_blank">fms.8</a></td>
+				<td><a href="logs/fms.8_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/fms.8_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/fms.8_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/fms.8_modest_from-jani_to-aut_default.html" target="_blank" class='error'>ERR</a></td>
 				<td><a href="logs/fms.8_modest_from-jani_to-imca_default.html" target="_blank" class='error'>ERR</a></td>
 				<td><a href="logs/fms.8_modest_from-jani_to-umb-gz_default.html" target="_blank" class='error'>ERR</a></td>
@@ -245,6 +296,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/haddad-monmege.100-0.7/index.html" target="_blank">haddad-monmege.100-0.7</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/haddad-monmege.100-0.7_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-aut_default.html" target="_blank" >0.00</a></td>
 				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-imca_default.html" target="_blank" >0.00</a></td>
 				<td><a href="logs/haddad-monmege.100-0.7_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.00</a></td>
@@ -256,6 +310,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/herman.15/index.html" target="_blank">herman.15</a></td>
+				<td><a href="logs/herman.15_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/herman.15_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/herman.15_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/herman.15_modest_from-jani_to-aut_default.html" target="_blank" class='unsupported'>NS</a></td>
 				<td><a href="logs/herman.15_modest_from-jani_to-imca_default.html" target="_blank" class='unsupported'>NS</a></td>
 				<td><a href="logs/herman.15_modest_from-jani_to-umb-gz_default.html" target="_blank" class='unsupported'>NS</a></td>
@@ -267,6 +324,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/kanban.5/index.html" target="_blank">kanban.5</a></td>
+				<td><a href="logs/kanban.5_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/kanban.5_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/kanban.5_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/kanban.5_modest_from-jani_to-aut_default.html" target="_blank" class='error'>ERR</a></td>
 				<td><a href="logs/kanban.5_modest_from-jani_to-imca_default.html" target="_blank" class='error'>ERR</a></td>
 				<td><a href="logs/kanban.5_modest_from-jani_to-umb-gz_default.html" target="_blank" class='error'>ERR</a></td>
@@ -278,6 +338,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/majority.2100/index.html" target="_blank">majority.2100</a></td>
+				<td><a href="logs/majority.2100_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/majority.2100_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/majority.2100_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/majority.2100_modest_from-jani_to-aut_default.html" target="_blank" >0.60 (±0.10)</a></td>
 				<td><a href="logs/majority.2100_modest_from-jani_to-imca_default.html" target="_blank" >0.50 (±0.00)</a></td>
 				<td><a href="logs/majority.2100_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.50 (±0.10)</a></td>
@@ -289,6 +352,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/mapk-cascade.4-30/index.html" target="_blank">mapk-cascade.4-30</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/mapk-cascade.4-30_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-aut_default.html" target="_blank" >0.30 (±0.00)</a></td>
 				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-imca_default.html" target="_blank" >0.20 (±0.00)</a></td>
 				<td><a href="logs/mapk-cascade.4-30_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.30 (±0.10)</a></td>
@@ -300,6 +366,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/models/index.html" target="_blank">models</a></td>
+				<td></td>
+				<td></td>
+				<td></td>
 				<td><a href="logs/models_modest_from-jani_to-aut_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/models_modest_from-jani_to-imca_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/models_modest_from-jani_to-umb-gz_default.html" target="_blank" >-</a></td>
@@ -311,6 +380,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/nand.40-4/index.html" target="_blank">nand.40-4</a></td>
+				<td><a href="logs/nand.40-4_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/nand.40-4_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/nand.40-4_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/nand.40-4_modest_from-jani_to-aut_default.html" target="_blank" >1.50 (±3.60)</a></td>
 				<td><a href="logs/nand.40-4_modest_from-jani_to-imca_default.html" target="_blank" >1.40 (±0.20)</a></td>
 				<td><a href="logs/nand.40-4_modest_from-jani_to-umb-gz_default.html" target="_blank" >1.90 (±0.20)</a></td>
@@ -322,6 +394,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/nand.60-4/index.html" target="_blank">nand.60-4</a></td>
+				<td><a href="logs/nand.60-4_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/nand.60-4_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/nand.60-4_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/nand.60-4_modest_from-jani_to-aut_default.html" target="_blank" >5.40 (±0.80)</a></td>
 				<td><a href="logs/nand.60-4_modest_from-jani_to-imca_default.html" target="_blank" >5.60 (±0.70)</a></td>
 				<td><a href="logs/nand.60-4_modest_from-jani_to-umb-gz_default.html" target="_blank" >9.40 (±0.40)</a></td>
@@ -333,6 +408,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/oscillators.8-10-0.1-1-0.1-1.0/index.html" target="_blank">oscillators.8-10-0.1-1-0.1-1.0</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-aut_default.html" target="_blank" class='error'>ERR</a></td>
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-imca_default.html" target="_blank" class='error'>ERR</a></td>
 				<td><a href="logs/oscillators.8-10-0.1-1-0.1-1.0_modest_from-jani_to-umb-gz_default.html" target="_blank" class='error'>ERR</a></td>
@@ -344,6 +422,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/pacman.100/index.html" target="_blank">pacman.100</a></td>
+				<td><a href="logs/pacman.100_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/pacman.100_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/pacman.100_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/pacman.100_modest_from-jani_to-aut_default.html" target="_blank" >34.30 (±7.50)</a></td>
 				<td><a href="logs/pacman.100_modest_from-jani_to-imca_default.html" target="_blank" >20.80 (±1.70)</a></td>
 				<td><a href="logs/pacman.100_modest_from-jani_to-umb-gz_default.html" target="_blank" >61.65 (±11.05)</a></td>
@@ -355,6 +436,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/pacman.60/index.html" target="_blank">pacman.60</a></td>
+				<td><a href="logs/pacman.60_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/pacman.60_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/pacman.60_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/pacman.60_modest_from-jani_to-aut_default.html" target="_blank" >16.00 (±2.80)</a></td>
 				<td><a href="logs/pacman.60_modest_from-jani_to-imca_default.html" target="_blank" >11.40 (±1.20)</a></td>
 				<td><a href="logs/pacman.60_modest_from-jani_to-umb-gz_default.html" target="_blank" >32.50 (±1.90)</a></td>
@@ -366,17 +450,23 @@
 			</tr>
 			<tr>
 				<td><a href="../models/pnueli-zuck.10/index.html" target="_blank">pnueli-zuck.10</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-aut_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-imca_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-gz_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-gz_memory.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-xz_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-xz_memory.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb_memory.html" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-aut_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-imca_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-gz_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-gz_memory.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-xz_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb-xz_memory.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_to-umb_memory.html" target="_blank" class='memout'>MO</a></td>
 			</tr>
 			<tr>
 				<td><a href="../models/pnueli-zuck.5/index.html" target="_blank">pnueli-zuck.5</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/pnueli-zuck.5_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-aut_default.html" target="_blank" >0.80 (±0.20)</a></td>
 				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-imca_default.html" target="_blank" >0.60 (±0.00)</a></td>
 				<td><a href="logs/pnueli-zuck.5_modest_from-jani_to-umb-gz_default.html" target="_blank" >1.15 (±8.45)</a></td>
@@ -388,6 +478,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/polling.18-16/index.html" target="_blank">polling.18-16</a></td>
+				<td><a href="logs/polling.18-16_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/polling.18-16_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/polling.18-16_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/polling.18-16_modest_from-jani_to-aut_default.html" target="_blank" >18.30 (±2.70)</a></td>
 				<td><a href="logs/polling.18-16_modest_from-jani_to-imca_default.html" target="_blank" >16.00 (±2.70)</a></td>
 				<td><a href="logs/polling.18-16_modest_from-jani_to-umb-gz_default.html" target="_blank" >12.30 (±40.00)</a></td>
@@ -399,17 +492,23 @@
 			</tr>
 			<tr>
 				<td><a href="../models/rabin.10/index.html" target="_blank">rabin.10</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_to-aut_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_to-imca_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_to-umb-gz_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_to-umb-gz_memory.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_to-umb-xz_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_to-umb-xz_memory.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_to-umb_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_to-umb_memory.html" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/rabin.10_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/rabin.10_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-aut_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-imca_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb-gz_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb-gz_memory.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb-xz_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb-xz_memory.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_to-umb_memory.html" target="_blank" class='memout'>MO</a></td>
 			</tr>
 			<tr>
 				<td><a href="../models/resource-gathering.1300-100-100/index.html" target="_blank">resource-gathering.1300-100-100</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/resource-gathering.1300-100-100_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-aut_default.html" target="_blank" >1.00 (±0.20)</a></td>
 				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-imca_default.html" target="_blank" >0.70 (±1.90)</a></td>
 				<td><a href="logs/resource-gathering.1300-100-100_modest_from-jani_to-umb-gz_default.html" target="_blank" >1.30 (±0.20)</a></td>
@@ -421,6 +520,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/speed-ind.2100/index.html" target="_blank">speed-ind.2100</a></td>
+				<td><a href="logs/speed-ind.2100_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/speed-ind.2100_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/speed-ind.2100_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/speed-ind.2100_modest_from-jani_to-aut_default.html" target="_blank" >2.60 (±0.30)</a></td>
 				<td><a href="logs/speed-ind.2100_modest_from-jani_to-imca_default.html" target="_blank" >2.10 (±0.30)</a></td>
 				<td><a href="logs/speed-ind.2100_modest_from-jani_to-umb-gz_default.html" target="_blank" >3.00 (±0.90)</a></td>
@@ -432,6 +534,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/wlan.4-0/index.html" target="_blank">wlan.4-0</a></td>
+				<td><a href="logs/wlan.4-0_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/wlan.4-0_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/wlan.4-0_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/wlan.4-0_modest_from-jani_to-aut_default.html" target="_blank" >0.30 (±0.00)</a></td>
 				<td><a href="logs/wlan.4-0_modest_from-jani_to-imca_default.html" target="_blank" >0.20 (±0.00)</a></td>
 				<td><a href="logs/wlan.4-0_modest_from-jani_to-umb-gz_default.html" target="_blank" >0.35 (±0.15)</a></td>
@@ -443,6 +548,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/wlan.5-0/index.html" target="_blank">wlan.5-0</a></td>
+				<td><a href="logs/wlan.5-0_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/wlan.5-0_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/wlan.5-0_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/wlan.5-0_modest_from-jani_to-aut_default.html" target="_blank" >0.80 (±0.00)</a></td>
 				<td><a href="logs/wlan.5-0_modest_from-jani_to-imca_default.html" target="_blank" >0.60 (±0.10)</a></td>
 				<td><a href="logs/wlan.5-0_modest_from-jani_to-umb-gz_default.html" target="_blank" >1.30 (±0.20)</a></td>
@@ -454,6 +562,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/wlan.6-0/index.html" target="_blank">wlan.6-0</a></td>
+				<td><a href="logs/wlan.6-0_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/wlan.6-0_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/wlan.6-0_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/wlan.6-0_modest_from-jani_to-aut_default.html" target="_blank" >2.90 (±9.00)</a></td>
 				<td><a href="logs/wlan.6-0_modest_from-jani_to-imca_default.html" target="_blank" >1.90 (±0.10)</a></td>
 				<td><a href="logs/wlan.6-0_modest_from-jani_to-umb-gz_default.html" target="_blank" >5.20 (±0.30)</a></td>
@@ -465,6 +576,9 @@
 			</tr>
 			<tr>
 				<td><a href="../models/zeroconf.1000-8-false/index.html" target="_blank">zeroconf.1000-8-false</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_bcgio_aut-to-bcg-gz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_bcgio_aut-to-bcg-xz_default.html" target="_blank" >-</a></td>
+				<td><a href="logs/zeroconf.1000-8-false_modest_bcgio_aut-to-bcg_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-aut_default.html" target="_blank" >1.10 (±0.30)</a></td>
 				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-imca_default.html" target="_blank" >0.80 (±0.20)</a></td>
 				<td><a href="logs/zeroconf.1000-8-false_modest_from-jani_to-umb-gz_default.html" target="_blank" >1.95 (±0.35)</a></td>
@@ -519,16 +633,28 @@
 				columns: [8],
 			},
 			{
+				extend: "columnsToggle",
+				columns: [9],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [10],
+			},
+			{
+				extend: "columnsToggle",
+				columns: [11],
+			},
+			{
 				extend: "colvisGroup",
 				text: "Show all",
-				show: [1, 2, 3, 4, 5, 6, 7, 8],
+				show: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
 				hide: []
 			},
 			{
 				extend: "colvisGroup",
 				text: "Hide all",
 				show: [],
-				hide: [1, 2, 3, 4, 5, 6, 7, 8]
+				hide: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 			},
 		],
 	});

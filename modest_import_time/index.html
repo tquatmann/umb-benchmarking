@@ -31,7 +31,7 @@
           $.each( this.data(), function( index, value ){
             if (index >= 1 && table.column(index).visible()) {
                 var text = $(value).text()
-                if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
+                if (["TO", "ERR", "INC", "MO", "NS", "", "-"].indexOf(text) < 0) {
                     var number = parseFloat(text);
                     if (bestValue == -1 || bestValue > number) {
                       // New best value
@@ -305,10 +305,10 @@
 			</tr>
 			<tr>
 				<td><a href="../models/egl.10-8/index.html" target="_blank">egl.10-8</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_check_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_check_memory.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_check_unsafe.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/egl.10-8_modest_from-jani_check_unsafe-memory.html" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_check_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_check_memory.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_check_unsafe.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/egl.10-8_modest_from-jani_check_unsafe-memory.html" target="_blank" class='memout'>MO</a></td>
 				<td><a href="logs/egl.10-8_modest_from-umb-gz_check_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/egl.10-8_modest_from-umb-gz_check_memory.html" target="_blank" >-</a></td>
 				<td><a href="logs/egl.10-8_modest_from-umb-gz_check_unsafe.html" target="_blank" >-</a></td>
@@ -590,10 +590,10 @@
 			</tr>
 			<tr>
 				<td><a href="../models/pnueli-zuck.10/index.html" target="_blank">pnueli-zuck.10</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_check_default.html" target="_blank" class='timeout'>ERR, TO</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_check_memory.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_check_unsafe.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/pnueli-zuck.10_modest_from-jani_check_unsafe-memory.html" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_check_default.html" target="_blank" class='timeout'>MO, TO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_check_memory.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_check_unsafe.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/pnueli-zuck.10_modest_from-jani_check_unsafe-memory.html" target="_blank" class='memout'>MO</a></td>
 				<td><a href="logs/pnueli-zuck.10_modest_from-umb-gz_check_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/pnueli-zuck.10_modest_from-umb-gz_check_memory.html" target="_blank" >-</a></td>
 				<td><a href="logs/pnueli-zuck.10_modest_from-umb-gz_check_unsafe.html" target="_blank" >-</a></td>
@@ -647,10 +647,10 @@
 			</tr>
 			<tr>
 				<td><a href="../models/rabin.10/index.html" target="_blank">rabin.10</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_check_default.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_check_memory.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_check_unsafe.html" target="_blank" class='error'>ERR</a></td>
-				<td><a href="logs/rabin.10_modest_from-jani_check_unsafe-memory.html" target="_blank" class='error'>ERR</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_check_default.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_check_memory.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_check_unsafe.html" target="_blank" class='memout'>MO</a></td>
+				<td><a href="logs/rabin.10_modest_from-jani_check_unsafe-memory.html" target="_blank" class='memout'>MO</a></td>
 				<td><a href="logs/rabin.10_modest_from-umb-gz_check_default.html" target="_blank" >-</a></td>
 				<td><a href="logs/rabin.10_modest_from-umb-gz_check_memory.html" target="_blank" >-</a></td>
 				<td><a href="logs/rabin.10_modest_from-umb-gz_check_unsafe.html" target="_blank" >-</a></td>

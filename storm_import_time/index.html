@@ -31,7 +31,7 @@
           $.each( this.data(), function( index, value ){
             if (index >= 1 && table.column(index).visible()) {
                 var text = $(value).text()
-                if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
+                if (["TO", "ERR", "INC", "MO", "NS", "", "-"].indexOf(text) < 0) {
                     var number = parseFloat(text);
                     if (bestValue == -1 || bestValue > number) {
                       // New best value
