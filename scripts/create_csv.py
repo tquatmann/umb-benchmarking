@@ -91,7 +91,11 @@ def is_timeout(log : str):
 
 def is_memout(log : str):
     messages = [
-        "Return code: -9" # storm
+        "error: Out of memory.", # mcsta
+        "java.lang.OutOfMemoryError: Java heap space", # prism
+        "Return code: -9", # storm
+        "Maximum memory exceeded.", #storm
+        "std::bad_alloc" #storm
     ]
     return any(m in log for m in messages)
 
@@ -105,6 +109,11 @@ def is_input_file_not_found(log : str):
     # mcsta
     pos = log.find("##############################Output to stderr##############################\nFile \"models/")
     if pos != -1 and "not found" in log[pos:]:
+        return True
+    # bcgio
+    if "Size of output file is 0 bytes" in log:
+        return True
+    if "File does not exist." in log and "bcg_io" in log:
         return True
     # storm
     if "Unable to read from non-existing file " in log:
@@ -155,6 +164,8 @@ def parse_modest_log(log : str, what : str):
         importtime += parse_float_or_zero(sublog, "Time (load): ", " s")
         return importtime
     elif what == EXPORT_TIME:
+        if "bcg_io" in log:
+            return ""
         start_pos = log.find("+ UMB export")
         if start_pos == -1:
             start_pos = log.find("+ Export to ")
@@ -210,9 +221,10 @@ def create_csv(log_dir : str, what : str):
         src_format = parts[1]
         task = parts[2]
         cfg = parts[3]
-        if what in [IMPORT_TIME, FULL_TIME] and task.startswith("to-"):
+        is_export_task = (task.startswith("to-") or task.startswith("aut-to-bcg"))
+        if what in [IMPORT_TIME, FULL_TIME] and is_export_task:
             continue
-        if what in [EXPORT_TIME, EXPORT_SIZE] and not task.startswith("to-"):
+        if what in [EXPORT_TIME, EXPORT_SIZE] and not is_export_task:
             continue
         column = "_".join(parts[0:4])
         row = parts[4]

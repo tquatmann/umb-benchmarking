@@ -151,7 +151,7 @@ def prism_command(input_format : str, task : str, configuration : str) -> str:
     elif input_format == UMB_GZ:
         cmd += " -importmodel %indir/prism.model.umb.gz:format=umb"
     elif input_format == TRA:
-        cmd += f" -importmodel %indir/prism.model.tra.tar:format=explicit"
+        cmd += f" -importmodel %indir/prism.model.tradir/model.all"
     else:
         raise AssertionError("Unsupported input format for PRISM: " + input_format)
     # task / output
@@ -214,7 +214,7 @@ def storm_command(input_format : str, task : str, configuration : str) -> str:
         else:
             cmd += "--prop %indir/property.props"
     elif task == JANI:
-        cmd += "--prop %indir/property.props --tojani %outdir/model.jani --compactjson"
+        cmd += "--prop %indir/property.props --tojani %outdir/model.jani"
     elif task == UMB:
         cmd += f"--exportbuild %outdir/model{exact}.umb umb --compression none "
     elif task == UMB_XZ:

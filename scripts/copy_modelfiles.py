@@ -54,7 +54,7 @@ if __name__ == "__main__":
             cfgs.append(cfg)
 
     def file_exists(path):
-        return os.path.exists(path) and os.path.getsize(path) > 0
+        return os.path.exists(path) and (os.path.isdir(path) or os.path.getsize(path) > 0)
 
 
     for model in os.listdir(model_dir):
@@ -70,18 +70,18 @@ if __name__ == "__main__":
                 file_path = os.path.join(source_path, file_name)
                 if file_exists(file_path):
                     if file_name == "model.tra":
-                        file_name = "model.tra.tar"
+                        file_name = "model.tradir"
                     dest_path = os.path.join(model_dir, model, tool + "." + file_name)
                     if not file_exists(dest_path):
-                        if file_name == "model.tra.tar":
-                            print("Creating tar archive for {} to ".format(file_path, dest_path))
-                            with tarfile.open(dest_path, "w") as tar:
-                                tar.add(file_path, arcname="model.tra")
-                                tar.add(file_path[:-3] + "lab", arcname="model.lab")
-                                if file_exists(file_path[:-3] + "srew"):
-                                    tar.add(file_path[:-3] + "srew", arcname="model.srew")
-                                if file_exists(file_path[:-3] + "trew"):
-                                    tar.add(file_path[:-3] + "trew", arcname="model.trew")
+                        if file_name == "model.tradir":
+                            print("Creating tra directory for {} in ".format(file_path, dest_path))
+                            os.makedirs(dest_path, exist_ok=True)
+                            shutil.copyfile(file_path, os.path.join(dest_path, "model.tra"))
+                            shutil.copyfile(file_path[:-3] + "lab", os.path.join(dest_path, "model.lab"))
+                            if file_exists(file_path[:-3] + "srew"):
+                                shutil.copyfile(file_path[:-3] + "srew", os.path.join(dest_path, "model.srew"))
+                            if file_exists(file_path[:-3] + "trew"):
+                                shutil.copyfile(file_path[:-3] + "trew", os.path.join(dest_path, "model.trew"))
                         else:
                             print("Copying {} to {}".format(file_path, dest_path))
                             shutil.copyfile(file_path, dest_path)

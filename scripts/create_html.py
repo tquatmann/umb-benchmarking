@@ -53,123 +53,164 @@ def create_model_page(dir : str):
         assert os.path.exists(os.path.join(dir, f)), "Error: File {} not found.".format(os.path.join(dir, f))
     benchmark_name = os.path.basename(dir)
     model_name = benchmark_name.split(".")[0]
-    with open(os.path.join(dir, "model.prism"), 'r') as f:
-        prism_file = f.read()
-    with open(os.path.join(dir, "property.props"), 'r') as f:
-        property_file = f.read()
-    with open(os.path.join(dir, "index.md"), 'w') as mdfile:
-        mdfile.write(r""" # %%%benchmark_name%%%
-       
-##### Download
-[model.prism](model.prism) [property.props](property.props) [model.jani](model.jani)
 
-##### Origin
+    download_links = ""
+    file_contents = ""
+    for f in ["model.prism", "property.props", "model.jani"]:
+        assert os.path.exists(os.path.join(dir, f)), "Error: File {} not found.".format(os.path.join(dir, f))
+        size_in_mb = os.path.getsize(os.path.join(dir, f)) / 1024 / 1024
+        download_links += "<a href=\"{}\" download>{}</a> ({:.2f} MB)\n".format(f, f, max(0.01, size_in_mb))
+        if size_in_mb <= 0.3: # don't show large files
+            with open(os.path.join(dir, f), 'r') as infile:
+                content = infile.read()
+        else:
+            content = "File too large to display (size: {:.2f} MB).".format(size_in_mb)
+        file_contents += """<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Contents of file: {}</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">{}</pre>
+</div>
+""".format(f, content)
 
-Taken from [QVBS](https://qcomp.org/benchmarks/#%%%model_name%%%) (January 2026).
-The provided parameter instantiation and property have been considered in QComp 2019 and QComp 2020.
+
+    with open(os.path.join(dir, "index.html"), 'w') as mdfile:
+        mdfile.write(r"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>%%%benchmark_name%%%</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Benchmark %%%benchmark_name%%%</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Download</div></div>
+<pre style="overflow:auto; padding-bottom: 0.5ex">
+%%%download_links%%%
+</pre>
+</div>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Origin</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">
+Taken from <a href="https://qcomp.org/benchmarks/#%%%model_name%%%" target="_blank">QVBS</a> (January 2026).
+The given benchmark (including parameter instantiation and property) has been considered in QComp 2019 and QComp 2020.
 
 Original Prism model and property files have been adapted for compatibility and simplicity:
 - Constants: All open constants are now explicitly set within model.prism (no need to set them via command line)
 - Properties: The properties only refer to labels and rewards as defined in the model.prism file. No variables or constants are used in the property.
 - Formulas: some PRISM formula declarations have been renamed so that their identify does not crash with a label.
+</pre>
+</div>
+%%%file_contents%%%
+</body>
+</html>
+""".replace("%%%benchmark_name%%%", benchmark_name).replace("%%%model_name%%%", model_name).replace("%%%download_links%%%", download_links).replace("%%%file_contents%%%", file_contents))
 
 
-##### model.prism
-
-```
-%%%model.prism%%%
-``` 
-
-##### property.props
-
-```
-%%%property.props%%%
-```
-""".replace("%%%benchmark_name%%%", benchmark_name).replace("%%%model_name%%%", model_name).replace("%%%model.prism%%%", prism_file).replace("%%%property.props%%%", property_file))
 
 def create_logpage(row: str, column: str, values, logs_dir: str, out_dir: str):
-    outfile_name = "{}_{}.md".format(row, column)
-    outfile_path = os.path.join(out_dir, outfile_name)
+    outfile_name = "{}_{}".format(row, column)
+    outfile_path = os.path.join(out_dir, outfile_name + ".html")
     infile_names = sorted([f for f in os.listdir(logs_dir) if f.startswith("{}_{}".format(column, row))])
     if len(infile_names) == 0:
         return None
+    modelpage_link = "<a href=\"../../models/{}/index.html\" target=\"_blank\">{}</a>".format(row, row)
+    config = column
     with open(outfile_path, 'w') as outfile:
-        modelpage_link = "[{}](../../models/{})".format(row, row)
-        outfile.write("# Log files for {} on model {}\n\nParsed values: `{}`\n\n".format(column, modelpage_link,values))
+        outfile.write(r"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log %%%outfile_name%%%</title>
+<link rel="stylesheet" type="text/css" href=../../style.css>
+</head>
+<body>
+<h3>Log files for model %%%modelpage_link%%% and tool configuration %%%config%%%</h3>
+<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Parsed values</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">%%%values%%%</pre>
+</div>
+""".replace("%%%outfile_name%%%", outfile_name).replace("%%%config%%%", config).replace("%%%modelpage_link%%%", modelpage_link).replace("%%%values%%%", values))
         for infile_name in infile_names:
             infile_path = os.path.join(logs_dir, infile_name)
-            outfile.write("\n\n### Log file: {}\n\n```\n".format(infile_name))
             with open(infile_path, 'r') as infile:
-                outfile.write(infile.read())
-            outfile.write("```\n\n")
-    return outfile_name
+                log = infile.read()
+            log = log.replace("/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final", "$PWD").replace(".hpc.itc.rwth-aachen.de", "")
+            outfile.write("""<div class="box">
+<div class="boxlabelo"><div class="boxlabelc">Log file: {}</div></div>
+<pre style="overflow:auto; padding-bottom: 1.5ex">{}</pre>
+</div>
+""".format(infile_name, log))
+        outfile.write("</body>\n</html>")
+    return outfile_name + ".html"
 
 def generate_table(content : OrderedDict, header : list, logs_dir: str, out_dir: str, data_type: str):
     ensure_directory(out_dir)
     logs_out_dir = os.path.join(out_dir, "logs")
     ensure_directory(logs_out_dir)
+    table_name = os.path.basename(out_dir)
 
     first_data_col = 1
     num_cols = len(header)
     with open (os.path.join(out_dir, "index.html"), 'w') as tablefile:
         tablefile.write(r"""<!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="UTF-8">
-      <title>Benchmark results</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>%%%table_name%%% Results</title>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.1.2/css/fixedHeader.dataTables.min.css">
 
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
-      <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/fixedheader/3.1.2/js/dataTables.fixedHeader.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" language="javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.colVis.min.js"></script>
 
-      <script>
-        $(document).ready(function() {
-          // Set correct file
-          $("#content").load("data.html");
-        } );
+  <script>
+    $(document).ready(function() {
+      // Set correct file
+      $("#content").load("data.html");
+    } );
 
-        function updateBest(table) {
-          // Remove old best ones
-          table.cells().every( function() {
-            $(this.node()).removeClass("best");
-          });
-          table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
-              var bestValue = -1
-              var bestIndex = -1
-              $.each( this.data(), function( index, value ){
-                if (index >= %%%first_data_col%%% && table.column(index).visible()) {
-    			    var text = $(value).text()
-    	            if (["TO", "ERR", "INC", "MO", "NS", ""].indexOf(text) < 0) {
-    				    var number = parseFloat(text);
-    	                if (bestValue == -1 || bestValue > number) {
-    	                  // New best value
-    	                  bestValue = number;
-    	                  bestIndex = index;
-    	                }
-    				  }
-    			  }
-              });
-              // Set new best
-              if (bestIndex >= 0) {
-                $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+    function updateBest(table) {
+      // Remove old best ones
+      table.cells().every( function() {
+        $(this.node()).removeClass("best");
+      });
+      table.rows().every( function ( rowIdx, tableLoop, rowLoop ) {
+          var bestValue = -1
+          var bestIndex = -1
+          $.each( this.data(), function( index, value ){
+            if (index >= %%%first_data_col%%% && table.column(index).visible()) {
+                var text = $(value).text()
+                if (["TO", "ERR", "INC", "MO", "NS", "", "-"].indexOf(text) < 0) {
+                    var number = parseFloat(text);
+                    if (bestValue == -1 || bestValue > number) {
+                      // New best value
+                      bestValue = number;
+                      bestIndex = index;
+                    }
+                  }
               }
-          } );
-      }
-      </script>
-    </head>
-    """.replace("%%%first_data_col%%%", str(first_data_col)))
+          });
+          // Set new best
+          if (bestIndex >= 0) {
+            $(table.cell(rowIdx, bestIndex).node()).addClass("best");
+          }
+      } );
+  }
+  </script>
+</head>
+""".replace("%%%table_name%%%", table_name).replace("%%%first_data_col%%%", str(first_data_col)))
         indention = 0
         def write_lines(content):
             for l in content.split("\n"):
                 tablefile.write("\t"*indention + l.strip() + "\n")
         write_lines("<body>\n<div>")
         indention +=1
+        write_lines("<h1>Benchmark Results: {}</h1>".format(table_name))
         write_lines('<table id="table" class="display">')
         indention += 1
         write_lines('<thead>')
@@ -187,7 +228,7 @@ def generate_table(content : OrderedDict, header : list, logs_dir: str, out_dir:
         for row in content:
             write_lines('<tr>')
             indention += 1
-            modelpage_link = "<a href=\"../models/{}\" target=\"_blank\">{}</a>".format(row, row)
+            modelpage_link = "<a href=\"../models/{}/index.html\" target=\"_blank\">{}</a>".format(row, row)
             write_lines('<td>{}</td>'.format(modelpage_link))
             for column in header[1:]:
                 assert column in content[row], "Error: missing data for model '{}' and column '{}'.".format(row, column)
@@ -280,58 +321,58 @@ def generate_table(content : OrderedDict, header : list, logs_dir: str, out_dir:
         indention -= 1
         write_lines("</div>\n</body>\n</html>")
 
-    with open (os.path.join(out_dir, "style.css"), 'w') as stylefile:
+def write_style_file():
+    with open("style.css", 'w') as stylefile:
         stylefile.write(r"""
+.best {
+    background-color: lightgreen;
+}
+.error {
+    font-weight: bold;
+    background-color: lightcoral;
+}
+.incorrect {
+    background-color: orange;
+    font-weight: bold;
+}
+.timeout {
+    background-color: lightgray;
+}
+.memout {
+    background-color: lightgray;
+}
+.unsupported {
+    background-color: yellow;
+}
+.ignored {
+    background-color: blue;
+}
 
-    .best {
-        background-color: lightgreen;
-    }
-    .error {
-    	font-weight: bold;
-    	background-color: lightcoral;
-    }
-    .incorrect {
-        background-color: orange;
-    	font-weight: bold;
-    }
-    .timeout {
-        background-color: lightgray;
-    }
-    .memout {
-        background-color: lightgray;
-    }
-    .unsupported {
-        background-color: yellow;
-    }
-    .ignored {
-        background-color: blue;
-    }
+h1 {
+    font-size: 28px; font-weight: bold;
+    color: #000000;
+    padding: 1px; margin-top: 20px; margin-bottom: 1ex;
+}
 
-    h1 {
-    	font-size: 28px; font-weight: bold;
-    	color: #000000;
-    	padding: 1px; margin-top: 20px; margin-bottom: 1ex;
-    }
+tt, .tt {
+    font-family: 'Courier New', monospace; line-height: 1.3;
+}
 
-    tt, .tt {
-    	font-family: 'Courier New', monospace; line-height: 1.3;
-    }
+.box {
+    margin: 2.5ex 0ex 1ex 0ex; border: 1px solid #D0D0D0; padding: 1.6ex 1.5ex 1ex 1.5ex; position: relative;
+}
 
-    .box {
-    	margin: 2.5ex 0ex 1ex 0ex; border: 1px solid #D0D0D0; padding: 1.6ex 1.5ex 1ex 1.5ex; position: relative;
-    }
+.boxlabelo {
+    position: absolute; pointer-events: none; margin-bottom: 0.5ex;
+}
 
-    .boxlabelo {
-    	position: absolute; pointer-events: none; margin-bottom: 0.5ex;
-    }
-
-    .boxlabel {
-    	position: relative; top: -3.35ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;
-    }
-    .boxlabelc {
-    	position: relative; top: -3.17ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;
-    }
-    """)
+.boxlabel {
+    position: relative; top: -3.35ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;
+}
+.boxlabelc {
+    position: relative; top: -3.17ex; left: -0.5ex; padding: 0px 0.5ex; background-color: #FFFFFF; display: inline-block;
+}
+""")
 
 
 if __name__ == "__main__":
@@ -341,6 +382,7 @@ if __name__ == "__main__":
         sys.exit(1)
     csv_dir, logs_dir, models_dir  = sys.argv[1:]
 
+    write_style_file()
     print("Creating model pages ")
     ensure_directory(os.path.join("models"))
     for model_dir in os.listdir(models_dir):
@@ -368,12 +410,15 @@ if __name__ == "__main__":
             else:
                 raise AssertionError("Unexpected csv name: {}".format(csv_name))
             content, header = load_csv(csv_file, prefix)
-            out_dir = os.path.join(prefix, csv_name)
+            out_dir = prefix + csv_name
             generate_table(content, header, logs_dir, out_dir, data_type)
             out_dirs.append(out_dir)
-    with open(os.path.join("index.md"), 'w') as indexfile:
+    with open("index.md", 'w') as indexfile:
         indexfile.write("# Benchmark results\n\n")
         for out_dir in out_dirs:
             indexfile.write("- [{}](./{}/index.html)\n".format(out_dir, out_dir))
+
+    with open("_config.yml", 'w') as cfgfile:
+        cfgfile.write("name: UMB Experiments\ntitle: null")
 
 
