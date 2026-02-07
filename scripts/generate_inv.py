@@ -188,7 +188,7 @@ def storm_command(input_format : str, task : str, configuration : str) -> str:
     else:
         cmd = "%storm "
         # other options
-        cmd += "--timemem --buildfull " # additional time and memory output
+        cmd += "--timemem --buildfull " # additional time and memory output, build full model exhaustively
     exact = ".exact" if configuration == "exact" else ""
     # input
     if input_format == PRISM_LANGUAGE:
@@ -391,7 +391,7 @@ if __name__ == "__main__":
         if out_format == JANI: continue
         add_cmd_template(storm_exprt_templates, STORM, JANI, out_format, "sparse")
         add_cmd_template(storm_exprt_templates, STORM, JANI, out_format, "exact")
-    add_cmd_template(storm_exprt_templates, STORM, JANI, UMB, "cudd")
+        add_cmd_template(storm_exprt_templates, STORM, JANI, out_format, "cudd")
     storm_exprt_invs = generate_invocations(storm_exprt_templates)
     all_export += storm_exprt_invs
 
