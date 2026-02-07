@@ -12,7 +12,8 @@ def load_csv(path : str, prefix = None, delim='\t'):
     with open(path, 'r') as csv_file:
         table = list(csv.reader(csv_file, delimiter=delim))
     # file should have at least header row and one row of content
-    assert len(table) > 1, "Error: CSV file '{}' seems to be empty.".format(path)
+    if len(table) <= 1: # empty table
+        return None, None
     header = table[0]
     header_indices = OrderedDict([(header[i], i) for i in range(len(header))])
     if prefix is not None:
@@ -410,6 +411,9 @@ if __name__ == "__main__":
             else:
                 raise AssertionError("Unexpected csv name: {}".format(csv_name))
             content, header = load_csv(csv_file, prefix)
+            if content is None:
+                print("Warning: CSV file '{}' is empty. Skipping.".format(csv_file))
+                continue
             out_dir = prefix + csv_name
             generate_table(content, header, logs_dir, out_dir, data_type)
             out_dirs.append(out_dir)

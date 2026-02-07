@@ -379,6 +379,7 @@ if __name__ == "__main__":
     prism_import_templates = OrderedDict()
     for in_format in PRISM_INPUT_FORMATS:
         for cfg in prism_configurations.keys():
+            if cfg == "norewards": continue
             add_cmd_template(prism_import_templates, PRISM, in_format, TASK_CHECK, cfg)
             add_cmd_template(prism_import_templates, PRISM, in_format, TASK_IMPORT, cfg)
     prism_import_invs = generate_invocations(prism_import_templates)

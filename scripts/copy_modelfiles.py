@@ -74,7 +74,7 @@ if __name__ == "__main__":
                     dest_path = os.path.join(model_dir, model, tool + "." + file_name)
                     if not file_exists(dest_path):
                         if file_name == "model.tradir":
-                            print("Creating tra directory for {} in ".format(file_path, dest_path))
+                            print("Creating tra directory for {} in {}".format(file_path, dest_path))
                             os.makedirs(dest_path, exist_ok=True)
                             shutil.copyfile(file_path, os.path.join(dest_path, "model.tra"))
                             shutil.copyfile(file_path[:-3] + "lab", os.path.join(dest_path, "model.lab"))

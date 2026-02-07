@@ -100,8 +100,10 @@ def is_memout(log : str):
     return any(m in log for m in messages)
 
 def is_not_supported(log : str):
+
     messages = [
-        "Complex initial states specifications are not yet supported" # mcsta
+        "Complex initial states specifications are not yet supported", # mcsta
+        "Error: Syntax error" # prism
     ]
     return any(m in log for m in messages)
 
@@ -121,8 +123,16 @@ def is_input_file_not_found(log : str):
     pos = log.find("The given path '\"models/")
     if pos != -1 and "does not exist." in log[pos:log.find("\n",pos)]:
         return True
+    if "Lzma library error:  No progress is possible." in log or "truncated gzip input" in log:
+        return True
     # prism
     if "Error: Error importing from UMB: Could not open UMB file:" in log:
+        return True
+    pos = log.find("Error: File \"models/")
+    if pos != -1 and "\" not found." in log[pos:log.find("\n",pos)]:
+        return True
+    pos = log.find("Parsing PRISM model file \"models/")
+    if pos != -1 and "/property.props\"..." in log[pos:log.find("\n",pos)]:
         return True
     return False
 
@@ -138,6 +148,8 @@ def parse_prism_log(log : str, what : str):
     elif what == EXPORT_TIME:
         return parse_float(log, "Time for exporting: ", "seconds.")
     elif what == EXPORT_SIZE:
+        if parse_prism_log(log, EXPORT_TIME) is None:
+            return None
         sublog = log
         size = 0
         while "Size of output file is " in sublog:
@@ -151,7 +163,7 @@ def parse_modest_log(log : str, what : str):
         if pos1 != -1 and log.find("Time", pos1) != -1:
             return parse_walltime(log)
     elif what == IMPORT_TIME:
-        start_pos = log.find("+ State space")
+        start_pos = log.find("State space")
         if start_pos == -1:
             return None
         sublog = log[start_pos:]
@@ -159,8 +171,8 @@ def parse_modest_log(log : str, what : str):
         assert "Time" in sublog, "Unexpected modest log format: {}".format(log)
         importtime = parse_float_or_zero(sublog, "Time (exploration): ", " s")
         importtime += parse_float_or_zero(sublog, "Time (merging): ", " s")
-        importtime += parse_float_or_zero(sublog, "Time (decompress): ", " s")
-        importtime += parse_float_or_zero(sublog, "Time (validate): ", " s")
+        # importtime += parse_float_or_zero(sublog, "Time (decompress): ", " s")
+        # importtime += parse_float_or_zero(sublog, "Time (validate): ", " s")
         importtime += parse_float_or_zero(sublog, "Time (load): ", " s")
         return importtime
     elif what == EXPORT_TIME:
@@ -175,6 +187,8 @@ def parse_modest_log(log : str, what : str):
         exporttime = parse_float(sublog, "Time: ", " s")
         return exporttime
     elif what == EXPORT_SIZE:
+        if parse_modest_log(log, EXPORT_TIME) is None:
+            return None
         sublog = log
         size = 0
         while "Size of output file is " in sublog:
@@ -199,6 +213,8 @@ def parse_storm_log(log : str, what : str):
     elif what == EXPORT_TIME:
         return export
     elif what == EXPORT_SIZE:
+        if parse_storm_log(log, EXPORT_TIME) is None:
+            return None
         sublog = log
         size = 0
         while "Size of output file is " in sublog:
