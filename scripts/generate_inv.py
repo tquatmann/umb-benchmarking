@@ -398,12 +398,12 @@ if __name__ == "__main__":
     print("\n" + "#" * 40 + "\nGenerating Storm import invocations...\n" + "#" * 40)
     storm_import_templates = OrderedDict()
     for in_format in STORM_INPUT_FORMATS:
-        #add_cmd_template(storm_import_templates, STORM, in_format, TASK_CHECK, "sparse")
+        add_cmd_template(storm_import_templates, STORM, in_format, TASK_CHECK, "sparse")
         add_cmd_template(storm_import_templates, STORM, in_format, TASK_IMPORT, "sparse")
         add_cmd_template(storm_import_templates, STORM, in_format, TASK_CHECK, "exact")
-        #add_cmd_template(storm_import_templates, STORM, in_format, TASK_IMPORT, "exact")
-    #add_cmd_template(storm_import_templates, STORM, JANI, TASK_CHECK, "cudd")
-    #add_cmd_template(storm_import_templates, STORM, JANI, TASK_IMPORT, "cudd")
+        add_cmd_template(storm_import_templates, STORM, in_format, TASK_IMPORT, "exact")
+    add_cmd_template(storm_import_templates, STORM, JANI, TASK_CHECK, "cudd")
+    add_cmd_template(storm_import_templates, STORM, JANI, TASK_IMPORT, "cudd")
     storm_import_invs = generate_invocations(storm_import_templates)
     all_import += storm_import_invs
 
