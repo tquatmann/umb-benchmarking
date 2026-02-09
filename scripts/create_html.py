@@ -135,7 +135,7 @@ def create_logpage(row: str, column: str, values, logs_dir: str, out_dir: str):
             infile_path = os.path.join(logs_dir, infile_name)
             with open(infile_path, 'r') as infile:
                 log = infile.read()
-            log = log.replace("/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-final", "$PWD").replace(".hpc.itc.rwth-aachen.de", "")
+            log = log.replace("/rwthfs/rz/cluster/hpcwork/rwth1632/umb-benchmarking/experiments-26-02-06", "$PWD").replace(".hpc.itc.rwth-aachen.de", "")
             outfile.write("""<div class="box">
 <div class="boxlabelo"><div class="boxlabelc">Log file: {}</div></div>
 <pre style="overflow:auto; padding-bottom: 1.5ex">{}</pre>

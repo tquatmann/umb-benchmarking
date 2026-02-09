@@ -240,6 +240,8 @@ def create_csv(log_dir : str, what : str):
         is_export_task = (task.startswith("to-") or task.startswith("aut-to-bcg"))
         if what in [IMPORT_TIME, FULL_TIME] and is_export_task:
             continue
+        if what == FULL_TIME and task == "import":
+            continue
         if what in [EXPORT_TIME, EXPORT_SIZE] and not is_export_task:
             continue
         column = "_".join(parts[0:4])
