@@ -73,9 +73,9 @@ def bcgio_command(input_format : str, task : str, configuration : str) -> str:
 MODEST = "modest"
 modest_configurations = OrderedDict()
 modest_configurations["default"] = ""
-modest_configurations["unsafe"] = "--unsafe"
-modest_configurations["memory"] = "-S Memory"
-modest_configurations["unsafe-memory"] = "--unsafe -S Memory"
+# modest_configurations["unsafe"] = "--unsafe"
+# modest_configurations["memory"] = "-S Memory"
+# modest_configurations["unsafe-memory"] = "--unsafe -S Memory"
 
 MODEST_INPUT_FORMATS = [JANI, UMB, UMB_XZ, UMB_GZ]
 MODEST_OUTPUT_FORMATS = [UMB, UMB_XZ, UMB_GZ, AUT, IMCA]
@@ -120,7 +120,7 @@ PRISM = "prism"
 prism_configurations = OrderedDict()
 prism_configurations["default"] = ""
 prism_configurations["ex"] = "-ex"
-prism_configurations["norewards"] = ""
+# prism_configurations["norewards"] = ""
 
 PRISM_INPUT_FORMATS = [PRISM_LANGUAGE, UMB, TRA]
 PRISM_OUTPUT_FORMATS = [UMB, UMB_GZ, TRA]
@@ -298,8 +298,13 @@ if __name__ == "__main__":
                     infiles = []
                     for infilestring in command.split("%indir/")[1:]:
                         infilename = infilestring.split(" ")[0].split(":")[0]
-                        if infilename not in infiles:
-                            infiles.append(infilename)
+                        if infilename.endswith(".all"):
+                            infiles.append(infilename[:-3] + "tra")
+                            infiles.append(infilename[:-3] + "lab")
+                            infiles.append(infilename[:-3] + "srew")
+                            infiles.append(infilename[:-3] + "trew")
+                        else:
+                            if infilename not in infiles: infiles.append(infilename)
                     invocation["input-files"] = infiles
                 if "%outdir" in command:
                     ensure_directory(model_output_dir)
@@ -345,9 +350,9 @@ if __name__ == "__main__":
     modest_exprt_templates = OrderedDict()
     for out_format in MODEST_OUTPUT_FORMATS:
         add_cmd_template(modest_exprt_templates, MODEST, JANI, out_format, "default")
-    for cfg in [ "memory" ]:
-        for out_format in [UMB]:
-            add_cmd_template(modest_exprt_templates, MODEST, JANI, out_format, cfg)
+    # for cfg in [ "memory" ]:
+    #     for out_format in [UMB]:
+    #         add_cmd_template(modest_exprt_templates, MODEST, JANI, out_format, cfg)
 
     modest_exprt_invs = generate_invocations(modest_exprt_templates)
     all_export += modest_exprt_invs
@@ -385,7 +390,7 @@ if __name__ == "__main__":
         if out_format == JANI: continue
         add_cmd_template(storm_exprt_templates, STORM, JANI, out_format, "sparse")
         add_cmd_template(storm_exprt_templates, STORM, JANI, out_format, "exact")
-        add_cmd_template(storm_exprt_templates, STORM, JANI, out_format, "cudd")
+        # add_cmd_template(storm_exprt_templates, STORM, JANI, out_format, "cudd")
     storm_exprt_invs = generate_invocations(storm_exprt_templates)
     all_export += storm_exprt_invs
 

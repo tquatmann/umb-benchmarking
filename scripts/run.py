@@ -101,11 +101,14 @@ def run_invocation(inv : json, overwrite_time_limit = None):
     time_limits = [overwrite_time_limit if overwrite_time_limit is not None else inv["time-limit"]] * len(commands)
     tmp_indir = TemporaryDirectory(suffix=inv["id"] + "_tmp_indir_", ignore_cleanup_errors=True)
     tmp_outdir = TemporaryDirectory(suffix=inv["id"] + "_tmp_outdir_", ignore_cleanup_errors=True)
+    log = ""
     for infile in inv["input-files"]:
-        shutil.copy(os.path.join(inv["input-directory"], infile), os.path.join(tmp_indir.name, infile))
-    processed_commands = [c.replace("%indir", tmp_indir.name).replace("%outdir", tmp_outdir.name) for c in commands]
-    output, walltime, ret = execute_command_lines(processed_commands, time_limits)
-    log = "Command(s):\n{}\nWallclock time: {:.3f} seconds\nReturn code: {}{}\n".format("\n".join(commands), walltime, ret, " (timeout)" if ret is None else "")
+        infile_path = os.path.join(inv["input-directory"], infile)
+        if os.path.exists(infile_path):
+            shutil.copy(infile_path, os.path.join(tmp_indir.name, infile))
+    tmp_commands = [c.replace("%indir", tmp_indir.name).replace("%outdir", tmp_outdir.name) for c in commands]
+    output, walltime, ret = execute_command_lines(tmp_commands, time_limits)
+    log += "Command(s):\n{}\nWallclock time: {:.3f} seconds\nReturn code: {}{}\n".format("\n".join(commands), walltime, ret, " (timeout)" if ret is None else "")
     log += "#"*30 + "\n" + output
     if "output-files" in inv:
         log += "\n" + "#"*30 + " Output files " + "#"*30 + "\n"
