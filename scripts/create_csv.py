@@ -176,7 +176,7 @@ def parse_modest_log(log : str, what : str):
         importtime += parse_float_or_zero(sublog, "Time (load): ", " s")
         return importtime
     elif what == EXPORT_TIME:
-        if "bcg_io" in log:
+        if "bcgio_from-aut_to-bcg" in log:
             return ""
         start_pos = log.find("+ UMB export")
         if start_pos == -1:

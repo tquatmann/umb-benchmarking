@@ -11,20 +11,6 @@ def save_invjson(inv_json : json, repetitions : int, path : str):
             inv_copy = i.copy()
             inv_copy["log"] = f"{i['id']}_rep{r+1}.log"
             inv_copy["repetition"] = r + 1
-            if "output-files" in i and r > 0: # only rename output files for repetitions > 1
-                new_output_files = dict()
-                for outfile in i["output-files"]:
-                    outfile_base, outfile_ext = os.path.splitext(outfile)
-                    new_outfile = f"{outfile_base}_rep{r+1}{outfile_ext}"
-                    new_output_files[new_outfile] = outfile
-                new_commands = []
-                for cmd in i["commands"]:
-                    new_cmd = cmd
-                    for new_outfile in new_output_files.keys():
-                        new_cmd = new_cmd.replace(new_output_files[new_outfile], new_outfile)
-                    new_commands.append(new_cmd)
-                inv_copy["output-files"] = [ f for f in new_output_files.keys()]
-                inv_copy["commands"] = new_commands
             output.append(inv_copy)
     # shuffle output to avoid any ordering effects
     random.seed(55) # fixed seed for reproducibility
@@ -301,18 +287,26 @@ if __name__ == "__main__":
                 model_output_dir = os.path.join(output_directory, cmd_id, model)
                 invocation_id = f"{cmd_id}_{model}"
                 command = cmd_templates[cmd_id]
-                command = command.replace("%indir", model_input_dir)
+                # command = command.replace("%indir", model_input_dir)
                 invocation = OrderedDict()
                 invocation["id"] = invocation_id
                 invocation["time-limit"] = time_limit
                 invocation["log-dir"] = logs_directory
                 invocation["log"] = f"{invocation_id}.log"
+                if "%indir" in command:
+                    invocation["input-directory"] = model_input_dir
+                    infiles = []
+                    for infilestring in command.split("%indir/")[1:]:
+                        infilename = infilestring.split(" ")[0].split(":")[0]
+                        if infilename not in infiles:
+                            infiles.append(infilename)
+                    invocation["input-files"] = infiles
                 if "%outdir" in command:
                     ensure_directory(model_output_dir)
+                    invocation["output-directory"] = model_output_dir
                     outfiles = []
                     for outfilestring in command.split("%outdir/")[1:]:
                         outfilename = outfilestring.split(" ")[0].split(":")[0]
-                        outfilename = os.path.join(model_output_dir, outfilename)
                         if "tra,lab,rew" in outfilename:
                             outfiles.append(outfilename.replace("tra,lab,rew", "tra"))
                             outfiles.append(outfilename.replace("tra,lab,rew", "lab"))
@@ -324,7 +318,7 @@ if __name__ == "__main__":
                         elif outfilename not in outfiles:
                             outfiles.append(outfilename)
                     invocation["output-files"] = outfiles
-                    command = command.replace("%outdir", model_output_dir)
+                    # command = command.replace("%outdir", model_output_dir)
                 command = command.replace("%modest", os.path.join(bin_directory, MODEST))
                 command = command.replace("%prism", os.path.join(bin_directory, PRISM))
                 command = command.replace("%storm-conv", os.path.join(bin_directory, STORM + "-conv"))

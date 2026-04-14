@@ -1,6 +1,7 @@
-import os, sys, subprocess, threading, time, signal, json, traceback
+import os, sys, subprocess, threading, time, signal, json, traceback, shutil
 from collections import OrderedDict
 from datetime import datetime
+from tempfile import TemporaryDirectory
 
 def load_json(path : str):
     with open(path, 'r', encoding='utf-8-sig') as json_file:
@@ -98,19 +99,23 @@ def execute_command_lines(command_lines, time_limits):
 def run_invocation(inv : json, overwrite_time_limit = None):
     commands = inv["commands"]
     time_limits = [overwrite_time_limit if overwrite_time_limit is not None else inv["time-limit"]] * len(commands)
-    output, walltime, ret = execute_command_lines(commands, time_limits)
+    tmp_indir = TemporaryDirectory(suffix=inv["id"] + "_tmp_indir_", ignore_cleanup_errors=True)
+    tmp_outdir = TemporaryDirectory(suffix=inv["id"] + "_tmp_outdir_", ignore_cleanup_errors=True)
+    for infile in inv["input-files"]:
+        shutil.copy(os.path.join(inv["input-directory"], infile), os.path.join(tmp_indir.name, infile))
+    processed_commands = [c.replace("%indir", tmp_indir.name).replace("%outdir", tmp_outdir.name) for c in commands]
+    output, walltime, ret = execute_command_lines(processed_commands, time_limits)
     log = "Command(s):\n{}\nWallclock time: {:.3f} seconds\nReturn code: {}{}\n".format("\n".join(commands), walltime, ret, " (timeout)" if ret is None else "")
     log += "#"*30 + "\n" + output
     if "output-files" in inv:
         log += "\n" + "#"*30 + " Output files " + "#"*30 + "\n"
         for outfile in inv["output-files"]:
             log += f"{outfile}:\t"
-            if os.path.exists(outfile):
-                log += "Size of output file is {} bytes\n".format(os.path.getsize(outfile))
-                if inv["repetition"] > 1:
-                    # remove output file to save space
-                    log += "Removing output file to save space for repetition #{}\n".format(inv["repetition"])
-                    os.remove(outfile)
+            if os.path.exists(os.path.join(tmp_outdir.name, outfile)):
+                log += "Size of output file is {} bytes\n".format(os.path.getsize(os.path.join(tmp_outdir.name, outfile)))
+                if inv["repetition"] == 1:
+                    # copy output file to non-temp directory for the first repetition
+                    shutil.copy(os.path.join(tmp_outdir.name, outfile), os.path.join(inv["output-directory"], outfile))
             else:
                 log += "File does not exist.\n"
     # save logfile
